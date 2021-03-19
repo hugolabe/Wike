@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <menu id="menu">
+    <section>
+      <attribute name="display-hint">horizontal-buttons</attribute>
+      <item>
+        <attribute name="label" translatable="yes">Wikipedia Main Page</attribute>
+        <attribute name="verb-icon">go-home-symbolic</attribute>
+        <attribute name="action">win.main_page</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">Random article</attribute>
+        <attribute name="verb-icon">wike-bulb-symbolic</attribute>
+        <attribute name="action">win.random_article</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">Recent Articles</attribute>
+        <attribute name="verb-icon">document-open-recent-symbolic</attribute>
+        <attribute name="action">win.show_historic</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">Reload Page</attribute>
+        <attribute name="verb-icon">view-refresh-symbolic</attribute>
+        <attribute name="action">win.reload_page</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">Search Text in Page</attribute>
+        <attribute name="action">win.search_text</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">Open Wikipedia Page in Browser</attribute>
+        <attribute name="action">win.open_browser</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">Copy Wikipedia URL to Clipboard</attribute>
+        <attribute name="action">win.copy_url</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">Preferences</attribute>
+        <attribute name="action">app.prefs</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">Keyboard Shortcuts</attribute>
+        <attribute name="action">app.shortcuts</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">About Wike</attribute>
+        <attribute name="action">app.about</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>
+

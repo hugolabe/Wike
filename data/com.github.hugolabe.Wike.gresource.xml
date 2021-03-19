@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/com/github/hugolabe/Wike">
+    <file>languages/languages.min.json</file>
+    <file>styles/view.min.css</file>
+    <file>ui/about.ui</file>
+    <file>ui/bookmarks.ui</file>
+    <file>ui/bookmarks-row.ui</file>
+    <file>ui/header.ui</file>
+    <file>ui/header-spinner.ui</file>
+    <file>ui/langlinks.ui</file>
+    <file>ui/langlinks-row.ui</file>
+    <file>ui/menu.ui</file>
+    <file>ui/prefs.ui</file>
+    <file>ui/prefs-row.ui</file>
+    <file>ui/search.ui</file>
+    <file>ui/search-row.ui</file>
+    <file>ui/search-settings.ui</file>
+    <file>ui/shortcuts.ui</file>
+    <file>ui/window.ui</file>
+  </gresource>
+</gresources>

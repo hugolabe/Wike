@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2021 Hugo Olabera <hugolabe@gmail.com> -->
+<component type="desktop-application">
+  <id>com.github.hugolabe.Wike</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <name>Wike</name>
+  <summary>Wikipedia Reader</summary>
+
+  <description>
+    <p>
+      Wike is a Wikipedia reader for the GNOME Desktop.
+      Provides access to all the content of this online encyclopedia in a native application,
+      with a simpler and distraction-free view of articles.
+    </p>
+    <p>
+      Features:
+    </p>
+    <ul>
+      <li>Multiple languages</li>
+      <li>Search suggestions</li>
+      <li>List of recent articles</li>
+      <li>Simple bookmarks management</li>
+      <li>Text search in articles</li>
+      <li>Article table of contents</li>
+      <li>View article in other languages</li>
+    </ul>
+  </description>
+
+  <launchable type="desktop-id">com.github.hugolabe.Wike.desktop</launchable>
+  <translation type="gettext">wike</translation>
+
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/hugolabe/wike/master/data/screenshots/wike-01-main.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/hugolabe/wike/master/data/screenshots/wike-02-languages.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/hugolabe/wike/master/data/screenshots/wike-03-toc.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/hugolabe/wike/master/data/screenshots/wike-04-bookmarks.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/hugolabe/wike/master/data/screenshots/wike-05-text.png</image>
+    </screenshot>
+  </screenshots>
+
+  <releases>
+    <release version="1.0.0" date="2021-03-19">
+      <description>
+        <p>Initial release.</p>
+      </description>
+    </release>
+  </releases>
+
+  <url type="homepage">https://github.com/hugolabe/Wike</url>
+  <developer_name>Hugo Olabera</developer_name>
+  <update_contact>hugolabe@gmail.com</update_contact>
+</component>
+

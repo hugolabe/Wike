@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Wike
+Comment=Wikipedia Reader
+Icon=com.github.hugolabe.Wike
+Exec=wike
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;Internet;
+Keywords=Wikipedia;Encyclopedia;
+StartupNotify=true

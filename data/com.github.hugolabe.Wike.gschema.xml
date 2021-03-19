@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="wike">
+  <schema id="com.github.hugolabe.Wike" path="/com/github/hugolabe/Wike/">
+
+    <key name="search-language" type="s">
+      <default>"en"</default>
+      <summary>Default search language</summary>
+    </key>
+
+    <key name="last-uri" type="s">
+      <default>""</default>
+      <summary>Last Wikipedia uri loaded</summary>
+    </key>
+
+    <key name="on-start-load" type="s">
+      <default>"last"</default>
+      <summary>When Wike starts load this page</summary>
+    </key>
+
+    <key name="search-suggestions" type="b">
+      <default>true</default>
+      <summary>Show search suggestions</summary>
+    </key>
+
+    <key name="keep-historic" type="b">
+      <default>true</default>
+      <summary>Keep a list of recent articles</summary>
+    </key>
+
+    <key name="clear-bookmarks" type="b">
+      <default>false</default>
+      <summary>Clear bookmarks list on exit</summary>
+    </key>
+
+    <key name="font-size" type="i">
+      <default>16</default>
+      <summary>Base font size in pixels</summary>
+    </key>
+
+    <key name="window-width" type="i">
+      <default>900</default>
+      <summary>Horizontal size of window</summary>
+    </key>
+
+    <key name="window-height" type="i">
+      <default>700</default>
+      <summary>Vertical size of window</summary>
+    </key>
+
+    <key name="window-max" type="b">
+      <default>false</default>
+      <summary>Window is maximized</summary>
+    </key>
+
+  </schema>
+</schemalist>

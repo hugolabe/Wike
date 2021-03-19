@@ -1,0 +1,34 @@
+data/com.github.hugolabe.Wike.desktop.in
+data/com.github.hugolabe.Wike.metainfo.xml.in
+
+# Glade
+
+data/ui/about.ui
+data/ui/bookmarks.ui
+data/ui/bookmarks-row.ui
+data/ui/header.ui
+data/ui/header-spinner.ui
+data/ui/langlinks.ui
+data/ui/langlinks-row.ui
+data/ui/menu.ui
+data/ui/prefs.ui
+data/ui/prefs-row.ui
+data/ui/search.ui
+data/ui/search-row.ui
+data/ui/search-settings.ui
+data/ui/shortcuts.ui
+data/ui/window.ui
+
+# Source
+
+src/application.py
+src/bookmarks.py
+src/data.py
+src/header.py
+src/langlinks.py
+src/prefs.py
+src/search.py
+src/toc.py
+src/view.py
+src/wikipedia.py
+src/window.py

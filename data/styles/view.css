@@ -85,6 +85,10 @@ h1 {
   display: none !important;
 }
 
+.mwe-popups {
+  display: none !important;
+}
+
 /* Local Wikipedias (es) */
 
 .noprint.caja {

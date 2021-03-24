@@ -29,6 +29,7 @@
 
   <launchable type="desktop-id">com.github.hugolabe.Wike.desktop</launchable>
   <translation type="gettext">wike</translation>
+  <content_rating type="oars-1.1" />
 
   <screenshots>
     <screenshot type="default">
@@ -49,6 +50,13 @@
   </screenshots>
 
   <releases>
+    <release version="1.0.2" date="2021-03-24">
+      <description>
+        <ul>
+          <li>Fix content rating missed in metainfo.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0.1" date="2021-03-24">
       <description>
         <ul>

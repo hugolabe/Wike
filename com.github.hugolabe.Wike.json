@@ -7,17 +7,10 @@
   "finish-args" : [
     "--share=network",
     "--share=ipc",
-    "--socket=x11",
+    "--socket=fallback-x11",
     "--socket=wayland",
     "--socket=pulseaudio"
   ],
-  "build-options" : {
-    "cflags" : "-O2 -g",
-    "cxxflags" : "-O2 -g",
-    "env" : {
-      "V" : "1"
-    }
-  },
   "cleanup" : [
     "/include",
     "/lib/pkgconfig",
@@ -34,9 +27,6 @@
     {
       "name" : "wike",
       "buildsystem" : "meson",
-      "config-opts" : [
-        "--libdir=lib"
-      ],
       "builddir" : true,
       "sources" : [
         {

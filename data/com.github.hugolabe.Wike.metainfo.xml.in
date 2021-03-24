@@ -49,6 +49,14 @@
   </screenshots>
 
   <releases>
+    <release version="1.0.1" date="2021-03-24">
+      <description>
+        <ul>
+          <li>CSS style tweaks.</li>
+          <li>Changes in app distribution files.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0.0" date="2021-03-19">
       <description>
         <p>Initial release.</p>
@@ -57,6 +65,7 @@
   </releases>
 
   <url type="homepage">https://github.com/hugolabe/Wike</url>
+  <url type="translate">https://poeditor.com/join/project?hash=kNgJu4MAum</url>
   <developer_name>Hugo Olabera</developer_name>
   <update_contact>hugolabe@gmail.com</update_contact>
 </component>

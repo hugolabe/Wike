@@ -15,6 +15,12 @@ Provides access to all the content of this online encyclopedia in a native appli
 - Article table of contents
 - View article in other languages
 
+## Install
+
+You can install *Wike* from Flathub.org
+
+<a href='https://flathub.org/apps/details/com.github.hugolabe.Wike'><img width='240' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-i-en.png'/></a>
+
 ## Build
 
 *Wike* can be built and run with [GNOME Builder](https://wiki.gnome.org/Apps/Builder).

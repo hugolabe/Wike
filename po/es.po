@@ -55,7 +55,7 @@ msgstr ""
 "<b>Sin marcadores</b>\n"
 "\n"
 "<small>Utiliza el botón <i>Añadir marcador</i>\n"
-"o pulsa un enlace con el botón derecho del ratón\n"
+"o pulsa un enlace con el botón central del ratón\n"
 "para añadir marcadores a la lista</small>"
 
 #: ../src/bookmarks.py:137

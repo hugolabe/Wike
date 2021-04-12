@@ -50,6 +50,14 @@
   </screenshots>
 
   <releases>
+    <release version="1.1.0" date="2021-04-12">
+      <description>
+        <ul>
+          <li>Improved text search bar, with prev/next buttons and match counter.</li>
+          <li>Correction in spanish translation.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0.2" date="2021-03-24">
       <description>
         <ul>

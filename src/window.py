@@ -37,6 +37,9 @@ class Window(Gtk.ApplicationWindow):
   box = Gtk.Template.Child()
   search_bar = Gtk.Template.Child()
   textsearch_entry = Gtk.Template.Child()
+  textsearch_prev_button = Gtk.Template.Child()
+  textsearch_next_button = Gtk.Template.Child()
+  textsearch_matches_label = Gtk.Template.Child()
   notification = Gtk.Template.Child()
   notification_label = Gtk.Template.Child()
   notification_close_button = Gtk.Template.Child()
@@ -77,6 +80,7 @@ class Window(Gtk.ApplicationWindow):
 
     find_controller = wikiview.get_find_controller()
     nav_list = wikiview.get_back_forward_list()
+    self.search_bar.connect_entry(self.textsearch_entry)
 
     wikiview.connect('load-wiki', self._wikiview_load_wiki_cb)
     wikiview.connect('load-changed', self._wikiview_load_changed_cb)
@@ -84,7 +88,11 @@ class Window(Gtk.ApplicationWindow):
     wikiview.connect('add-bookmark', self._wikiview_add_bookmark_cb)
     self.textsearch_entry.connect('changed', self._textsearch_entry_changed_cb, find_controller)
     self.textsearch_entry.connect('activate', self._textsearch_entry_activate_cb, find_controller)
+    self.textsearch_prev_button.connect('clicked', self._textsearch_prev_button_clicked_cb, find_controller)
+    self.textsearch_next_button.connect('clicked', self._textsearch_next_button_clicked_cb, find_controller)
+    find_controller.connect('found-text', self._find_controller_found_cb)
     find_controller.connect('failed-to-find-text', self._find_controller_not_found_cb)
+    find_controller.connect('counted-matches', self._find_controller_matches_cb)
     nav_list.connect('changed', self._nav_list_changed_cb)
     self.notification_close_button.connect('clicked', self._hide_notification_cb)
 
@@ -135,22 +143,52 @@ class Window(Gtk.ApplicationWindow):
 
   def _textsearch_entry_changed_cb(self, textsearch_entry, find_controller):
     text_length = textsearch_entry.get_text_length()
-    if text_length > 1:
-      find_controller.search(textsearch_entry.get_text(), WebKit2.FindOptions.CASE_INSENSITIVE | WebKit2.FindOptions.WRAP_AROUND, 1000000)
+    if text_length > 2:
+      text = textsearch_entry.get_text()
+      find_controller.count_matches(text, WebKit2.FindOptions.WRAP_AROUND | WebKit2.FindOptions.CASE_INSENSITIVE, 9999)
+      find_controller.search(text, WebKit2.FindOptions.WRAP_AROUND | WebKit2.FindOptions.CASE_INSENSITIVE, 9999)
     else:
+      self.textsearch_matches_label.set_label('')
+      self.textsearch_prev_button.set_sensitive(False)
+      self.textsearch_next_button.set_sensitive(False)
       find_controller.search_finish()
 
-  # Next ocurrence of text in article
+  # On entry activated search next match
 
   def _textsearch_entry_activate_cb(self, textsearch_entry, find_controller):
     text_length = textsearch_entry.get_text_length()
-    if text_length > 1:
+    if text_length > 2:
       find_controller.search_next()
+
+  # On text search prev button clicked search previous match
+
+  def _textsearch_prev_button_clicked_cb(self, textsearch_prev_button, find_controller):
+    find_controller.search_previous()
+
+  # On text search next button clicked search next match
+
+  def _textsearch_next_button_clicked_cb(self, textsearch_next_button, find_controller):
+    find_controller.search_next()
+
+  # Found text in article
+
+  def _find_controller_found_cb(self, find_controller, match_count):
+    self.textsearch_prev_button.set_sensitive(True)
+    self.textsearch_next_button.set_sensitive(True)
 
   # Not found text in article
 
   def _find_controller_not_found_cb(self, find_controller):
+    self.textsearch_matches_label.set_markup('<span foreground="red">' + str(0) + '</span>')
+    self.textsearch_prev_button.set_sensitive(False)
+    self.textsearch_next_button.set_sensitive(False)
+    find_controller.search_finish()
     Gdk.beep()
+
+  # Show text search matches found
+
+  def _find_controller_matches_cb(self, find_controller, match_count):
+    self.textsearch_matches_label.set_label(str(match_count))
 
   # Refresh navbox state on navlist changed
 

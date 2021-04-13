@@ -5,6 +5,6 @@ Icon=com.github.hugolabe.Wike
 Exec=wike
 Terminal=false
 Type=Application
-Categories=GNOME;GTK;Internet;
+Categories=Network;GTK;
 Keywords=Wikipedia;Encyclopedia;
 StartupNotify=true

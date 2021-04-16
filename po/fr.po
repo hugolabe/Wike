@@ -48,7 +48,9 @@ msgid "<b>No bookmarks</b>\n"
 "to add bookmarks to the list</small>"
 msgstr "<b>Aucun signet</b>\n"
 "\n"
-"<small>Utilisez le bouton <i>Ajouter unsignet</i> ou cliquez sur un lien avec le bouton central de la souris pour ajouter des signets à la liste</small>"
+"<small>Utilisez le bouton <i>Ajouter un signet</i>\n"
+"ou cliquez sur un lien avec le bouton central de la souris\n"
+"pour ajouter des signets à la liste</small>"
 
 #: ../src/bookmarks.py:137
 msgid "Clear Bookmarks List?"

@@ -21,7 +21,8 @@ import threading
 
 import gi
 gi.require_version('Gtk', '3.0')
-from gi.repository import Gio, Gtk
+gi.require_version('Handy', '1')
+from gi.repository import Gio, Gtk, Handy
 
 from wike.data import settings, languages
 
@@ -30,7 +31,7 @@ from wike.data import settings, languages
 # Manage application preferences
 
 @Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/prefs.ui')
-class PrefsWindow(Gtk.Window):
+class PrefsWindow(Handy.PreferencesWindow):
 
   __gtype_name__ = 'PrefsWindow'
 
@@ -48,9 +49,10 @@ class PrefsWindow(Gtk.Window):
     super().__init__()
 
     self._languages_changed = False
+    self._populate_on_start_combo()
     self._populate_languages_list()
 
-    settings.bind('on-start-load', self.on_start_combo, 'active-id', Gio.SettingsBindFlags.DEFAULT)
+    settings.bind('on-start-load', self.on_start_combo, 'selected-index', Gio.SettingsBindFlags.DEFAULT)
     settings.bind('keep-historic', self.historic_switch, 'active', Gio.SettingsBindFlags.DEFAULT)
     settings.bind('clear-bookmarks', self.clear_bookmarks_switch, 'active', Gio.SettingsBindFlags.DEFAULT)
     settings.bind('font-size', self.font_size_spin, 'value', Gio.SettingsBindFlags.DEFAULT)
@@ -60,9 +62,17 @@ class PrefsWindow(Gtk.Window):
     self.select_none_button.connect('clicked', self._select_none_button_cb)
 
     self.connect('delete-event', self._window_delete_cb)
-    self.connect('key-press-event', self._key_press_cb)
 
     self.show_all()
+
+  # Populate list of available options for start page
+
+  def _populate_on_start_combo(self):
+    model = Gio.ListStore.new(Handy.ValueObject)
+    options = (_('Wikipedia main page'), _('Random article'), _('Last article'))
+    for index, option in enumerate(options):
+      model.insert(index, Handy.ValueObject.new(option))
+    self.on_start_combo.bind_name_model(model, Handy.ValueObject.dup_string)
 
   # Populate list of available languages
 
@@ -91,13 +101,6 @@ class PrefsWindow(Gtk.Window):
       window.headerbar.refresh_langs()
 
     return False
-
-  # Manage ESC key
-
-  def _key_press_cb(self, entry, event):
-    print(event.keyval)
-    if event.keyval == 65307:
-        self.close()
 
   # On row selected set language check button
 
@@ -137,7 +140,8 @@ class LanguageBoxRow(Gtk.ListBoxRow):
 
   __gtype_name__ = 'LanguageBoxRow'
 
-  lang_label = Gtk.Template.Child()
+  lang_name_label = Gtk.Template.Child()
+  lang_id_label = Gtk.Template.Child()
   lang_check = Gtk.Template.Child()
 
   # Set row values
@@ -147,6 +151,7 @@ class LanguageBoxRow(Gtk.ListBoxRow):
 
     self.lang_name = lang_name
     self.lang_id = lang_id
-    self.lang_label.set_label(lang_name + ' (' + lang_id + ')')
+    self.lang_name_label.set_label(lang_name)
+    self.lang_id_label.set_label(lang_id)
     self.lang_check.set_active(checked)
 

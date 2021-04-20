@@ -7,15 +7,15 @@
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <child>
-          <object class="GtkLabel" id="lang_label">
+          <object class="GtkLabel" id="lang_name_label">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="halign">start</property>
             <property name="valign">center</property>
-            <property name="margin_left">6</property>
+            <property name="margin_left">12</property>
             <property name="margin_right">6</property>
-            <property name="margin_top">3</property>
-            <property name="margin_bottom">3</property>
+            <property name="margin_top">4</property>
+            <property name="margin_bottom">4</property>
             <property name="hexpand">True</property>
           </object>
           <packing>
@@ -25,21 +25,38 @@
           </packing>
         </child>
         <child>
-          <object class="GtkCheckButton" id="lang_check">
+          <object class="GtkLabel" id="lang_id_label">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="halign">end</property>
             <property name="valign">center</property>
             <property name="margin_left">6</property>
             <property name="margin_right">6</property>
-            <property name="margin_top">3</property>
-            <property name="margin_bottom">3</property>
-            <property name="draw_indicator">True</property>
+            <property name="margin_top">4</property>
+            <property name="margin_bottom">4</property>
           </object>
           <packing>
             <property name="expand">False</property>
             <property name="fill">True</property>
             <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkCheckButton" id="lang_check">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="halign">end</property>
+            <property name="valign">center</property>
+            <property name="margin_left">12</property>
+            <property name="margin_right">18</property>
+            <property name="margin_top">4</property>
+            <property name="margin_bottom">4</property>
+            <property name="draw_indicator">True</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
           </packing>
         </child>
       </object>

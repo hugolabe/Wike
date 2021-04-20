@@ -98,9 +98,9 @@ class Window(Handy.ApplicationWindow):
     nav_list.connect('changed', self._nav_list_changed_cb)
     self.notification_close_button.connect('clicked', self._hide_notification_cb)
 
-    if settings.get_string('on-start-load') == 'main':
+    if settings.get_int('on-start-load') == 0:
       wikiview.load_main()
-    elif settings.get_string('on-start-load') == 'random':
+    elif settings.get_int('on-start-load') == 1:
       wikiview.load_random()
     else:
       if settings.get_string('last-uri'):

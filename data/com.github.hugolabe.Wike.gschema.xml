@@ -12,9 +12,9 @@
       <summary>Last Wikipedia uri loaded</summary>
     </key>
 
-    <key name="on-start-load" type="s">
-      <default>"last"</default>
-      <summary>When Wike starts load this page</summary>
+    <key name="on-start-load" type="i">
+      <default>2</default>
+      <summary>On start load this page (0-Main, 1-Random, 2-Last)</summary>
     </key>
 
     <key name="search-suggestions" type="b">

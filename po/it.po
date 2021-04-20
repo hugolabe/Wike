@@ -2,10 +2,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wike\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-17 17:56+0100\n"
+"POT-Creation-Date: 2021-04-20 14:31+0200\n"
 "PO-Revision-Date: 2021-04-12 20:30+0100\n"
 "Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Albano Battistella <albano_battistella@hotmail.com>\n"
+"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -30,13 +31,25 @@ msgstr "Controlla la tua connessione Internet e riprova"
 msgid "Recent articles"
 msgstr "Articoli recenti"
 
-#: ../src/window.py:131 ../src/window.py:206
+#: ../src/window.py:141 ../src/window.py:246
 msgid "New bookmark: "
 msgstr "Nuovo segnalibro: "
 
-#: ../src/window.py:264
+#: ../src/window.py:304
 msgid "Wikipedia URL copied to clipboard"
 msgstr "URL di Wikipedia copiato negli appunti"
+
+#: ../src/prefs.py:72
+msgid "Wikipedia main page"
+msgstr "Pagina principale di Wikipedia"
+
+#: ../src/prefs.py:72 ../data/ui/menu.ui:13
+msgid "Random article"
+msgstr "Articolo casuale"
+
+#: ../src/prefs.py:72
+msgid "Last article"
+msgstr "Ultimo articolo"
 
 #: ../src/search.py:249
 msgid "Default search language: "
@@ -64,7 +77,7 @@ msgstr "Cancellare l'elenco dei segnalibri?"
 msgid "All bookmarks in the list will be removed permanently."
 msgstr "Tutti i segnalibri nell'elenco verranno rimossi definitivamente."
 
-#: ../src/bookmarks.py:139 ../data/ui/bookmarks.ui:74
+#: ../src/bookmarks.py:139 ../data/ui/bookmarks.ui:70
 msgid "Clear List"
 msgstr "Cancella elenco"
 
@@ -87,7 +100,7 @@ msgstr ""
 msgid "translator-credits"
 msgstr "Albano Battistella"
 
-#: ../data/ui/bookmarks.ui:62
+#: ../data/ui/bookmarks.ui:58
 msgid "Add Bookmark"
 msgstr "Aggiungi Segnalibro"
 
@@ -191,93 +204,85 @@ msgctxt "shortcut window"
 msgid "Add bookmark"
 msgstr "Aggiungi segnalibro"
 
-#: ../data/ui/menu.ui:7 ../data/ui/prefs.ui:111
+#: ../data/ui/menu.ui:8
 msgid "Wikipedia Main Page"
 msgstr "Pagina principale di Wikipedia"
 
-#: ../data/ui/menu.ui:12 ../data/ui/prefs.ui:112
-msgid "Random article"
-msgstr "Articolo casuale"
-
-#: ../data/ui/menu.ui:17
+#: ../data/ui/menu.ui:18
 msgid "Recent Articles"
 msgstr "Articoli recenti"
 
-#: ../data/ui/menu.ui:22
+#: ../data/ui/menu.ui:23
 msgid "Reload Page"
 msgstr "Ricarica la pagina"
 
-#: ../data/ui/menu.ui:29
+#: ../data/ui/menu.ui:30
 msgid "Search Text in Page"
 msgstr "Cerca testo nella pagina"
 
-#: ../data/ui/menu.ui:35
+#: ../data/ui/menu.ui:36
 msgid "Open Wikipedia Page in Browser"
 msgstr "Apri la pagina Wikipedia nel browser"
 
-#: ../data/ui/menu.ui:39
+#: ../data/ui/menu.ui:40
 msgid "Copy Wikipedia URL to Clipboard"
 msgstr "Copia l'URL di Wikipedia negli Appunti"
 
-#: ../data/ui/menu.ui:45
+#: ../data/ui/menu.ui:46
 msgid "Preferences"
 msgstr "Preferenze"
 
-#: ../data/ui/menu.ui:51
+#: ../data/ui/menu.ui:52
 msgid "Keyboard Shortcuts"
 msgstr "Scorciatoie da tastiera"
 
-#: ../data/ui/menu.ui:55
+#: ../data/ui/menu.ui:56
 msgid "About Wike"
 msgstr "A proposito di Wike"
 
-#: ../data/ui/prefs.ui:50
-msgid "Behavior"
-msgstr "Comportamento"
-
-#: ../data/ui/prefs.ui:74
-msgid "When Wike starts load"
-msgstr "Quando Wike inizia a caricare"
-
-#: ../data/ui/prefs.ui:86
-msgid "Keep a list of recent articles"
-msgstr "Tieni un elenco degli articoli recenti"
-
-#: ../data/ui/prefs.ui:98
-msgid "Clear bookmarks list on exit"
-msgstr "Cancella l'elenco dei segnalibri all'uscita"
-
-#: ../data/ui/prefs.ui:113
-msgid "Last article"
-msgstr "Ultimo articolo"
-
-#: ../data/ui/prefs.ui:159
-msgid "Appearance"
-msgstr "Aspetto"
-
-#: ../data/ui/prefs.ui:183
-msgid "Font size for articles"
-msgstr "Dimensione del carattere per gli articoli"
-
-#: ../data/ui/prefs.ui:213
+#: ../data/ui/prefs.ui:14
 msgid "General"
 msgstr "Generale"
 
-#: ../data/ui/prefs.ui:231
+#: ../data/ui/prefs.ui:20
+msgid "Behavior"
+msgstr "Comportamento"
+
+#: ../data/ui/prefs.ui:23
+msgid "When Wike starts load"
+msgstr "Quando Wike inizia a caricare"
+
+#: ../data/ui/prefs.ui:29
+msgid "Keep a list of recent articles"
+msgstr "Tieni un elenco degli articoli recenti"
+
+#: ../data/ui/prefs.ui:43
+msgid "Clear bookmarks list on exit"
+msgstr "Cancella l'elenco dei segnalibri all'uscita"
+
+#: ../data/ui/prefs.ui:61
+msgid "Appearance"
+msgstr "Aspetto"
+
+#: ../data/ui/prefs.ui:64
+msgid "Font size for articles"
+msgstr "Dimensione del carattere per gli articoli"
+
+#: ../data/ui/prefs.ui:89
+msgid "Languages"
+msgstr "Lingue"
+
+#: ../data/ui/prefs.ui:95
 msgid "Filter available languages"
 msgstr "Filtra le lingue disponibili"
 
-#: ../data/ui/prefs.ui:274
+#: ../data/ui/prefs.ui:129
 msgid "Select all"
 msgstr "Seleziona tutto"
 
-#: ../data/ui/prefs.ui:286
+#: ../data/ui/prefs.ui:141
 msgid "Select none"
 msgstr "Non selezionare niente"
-
-#: ../data/ui/prefs.ui:306
-msgid "Languages"
-msgstr "Lingue"
 
 #: ../data/ui/header-spinner.ui:23
 msgid "Loading Article"
@@ -302,8 +307,14 @@ msgid "Wikipedia;Encyclopedia;"
 msgstr "Wikipedia; Enciclopedia;"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:11
-msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
-msgstr "Wike è un lettore di Wikipedia per il desktop GNOME. Fornisce accesso a tutto il contenuto di questa enciclopedia online in un'applicazione nativa, con una visualizzazione degli articoli più semplice e priva di distrazioni."
+msgid ""
+"Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the "
+"content of this online encyclopedia in a native application, with a simpler "
+"and distraction-free view of articles."
+msgstr ""
+"Wike è un lettore di Wikipedia per il desktop GNOME. Fornisce accesso a "
+"tutto il contenuto di questa enciclopedia online in un'applicazione nativa, "
+"con una visualizzazione degli articoli più semplice e priva di distrazioni."
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
 msgid "Features:"
@@ -333,10 +344,7 @@ msgstr "Indice dei contenuti dell'articolo"
 msgid "View article in other languages"
 msgstr "Visualizza l'articolo in altre lingue"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:54
-msgid "Initial release."
-msgstr "Versione iniziale."
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:60
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:94
 msgid "Hugo Olabera"
 msgstr "Hugo Olabera"
+

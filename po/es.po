@@ -2,15 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wike\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-17 17:56+0100\n"
-"PO-Revision-Date: 2021-03-18 17:21+0100\n"
+"POT-Creation-Date: 2021-04-20 14:31+0200\n"
+"PO-Revision-Date: 2021-04-20 14:42+0200\n"
 "Last-Translator: Hugo Olabera <hugolabe@gmail.com>\n"
 "Language-Team: Hugo Olabera <hugolabe@gmail.com>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
 
 #: ../src/view.py:115
 msgid "Article not found"
@@ -32,13 +31,25 @@ msgstr "Comprueba tu conexión a Internet e inténtalo de nuevo"
 msgid "Recent articles"
 msgstr "Artículos recientes"
 
-#: ../src/window.py:131 ../src/window.py:206
+#: ../src/window.py:141 ../src/window.py:246
 msgid "New bookmark: "
 msgstr "Nuevo marcador: "
 
-#: ../src/window.py:264
+#: ../src/window.py:304
 msgid "Wikipedia URL copied to clipboard"
 msgstr "URL de Wikipedia copiada al portapapeles"
+
+#: ../src/prefs.py:72
+msgid "Wikipedia main page"
+msgstr "Portada de Wikipedia"
+
+#: ../src/prefs.py:72 ../data/ui/menu.ui:13
+msgid "Random article"
+msgstr "Artículo aleatorio"
+
+#: ../src/prefs.py:72
+msgid "Last article"
+msgstr "Último artículo"
 
 #: ../src/search.py:249
 msgid "Default search language: "
@@ -66,7 +77,7 @@ msgstr "¿Borrar lista de marcadores?"
 msgid "All bookmarks in the list will be removed permanently."
 msgstr "Todos los marcadores de la lista se eliminarán de forma permanente."
 
-#: ../src/bookmarks.py:139 ../data/ui/bookmarks.ui:74
+#: ../src/bookmarks.py:139 ../data/ui/bookmarks.ui:70
 msgid "Clear List"
 msgstr "Borrar lista"
 
@@ -89,7 +100,7 @@ msgstr ""
 msgid "translator-credits"
 msgstr "Hugo Olabera <hugolabe@gmail.com>"
 
-#: ../data/ui/bookmarks.ui:62
+#: ../data/ui/bookmarks.ui:58
 msgid "Add Bookmark"
 msgstr "Añadir marcador"
 
@@ -193,93 +204,85 @@ msgctxt "shortcut window"
 msgid "Add bookmark"
 msgstr "Añadir marcador"
 
-#: ../data/ui/menu.ui:7 ../data/ui/prefs.ui:111
+#: ../data/ui/menu.ui:8
 msgid "Wikipedia Main Page"
 msgstr "Portada de Wikipedia"
 
-#: ../data/ui/menu.ui:12 ../data/ui/prefs.ui:112
-msgid "Random article"
-msgstr "Artículo aleatorio"
-
-#: ../data/ui/menu.ui:17
+#: ../data/ui/menu.ui:18
 msgid "Recent Articles"
 msgstr "Artículos recientes"
 
-#: ../data/ui/menu.ui:22
+#: ../data/ui/menu.ui:23
 msgid "Reload Page"
 msgstr "Recargar página"
 
-#: ../data/ui/menu.ui:29
+#: ../data/ui/menu.ui:30
 msgid "Search Text in Page"
 msgstr "Buscar texto en la página"
 
-#: ../data/ui/menu.ui:35
+#: ../data/ui/menu.ui:36
 msgid "Open Wikipedia Page in Browser"
 msgstr "Abrir página de Wikipedia en el navegador"
 
-#: ../data/ui/menu.ui:39
+#: ../data/ui/menu.ui:40
 msgid "Copy Wikipedia URL to Clipboard"
 msgstr "Copiar URL de Wikipedia al portapapeles"
 
-#: ../data/ui/menu.ui:45
+#: ../data/ui/menu.ui:46
 msgid "Preferences"
 msgstr "Preferencias"
 
-#: ../data/ui/menu.ui:51
+#: ../data/ui/menu.ui:52
 msgid "Keyboard Shortcuts"
 msgstr "Atajos de teclado"
 
-#: ../data/ui/menu.ui:55
+#: ../data/ui/menu.ui:56
 msgid "About Wike"
 msgstr "Acerca de Wike"
 
-#: ../data/ui/prefs.ui:50
-msgid "Behavior"
-msgstr "Comportamiento"
-
-#: ../data/ui/prefs.ui:74
-msgid "When Wike starts load"
-msgstr "Al iniciar Wike cargar"
-
-#: ../data/ui/prefs.ui:86
-msgid "Keep a list of recent articles"
-msgstr "Lista de artículos recientes"
-
-#: ../data/ui/prefs.ui:98
-msgid "Clear bookmarks list on exit"
-msgstr "Borrar marcadores al salir"
-
-#: ../data/ui/prefs.ui:113
-msgid "Last article"
-msgstr "Último artículo"
-
-#: ../data/ui/prefs.ui:159
-msgid "Appearance"
-msgstr "Apariencia"
-
-#: ../data/ui/prefs.ui:183
-msgid "Font size for articles"
-msgstr "Tamaño de fuente"
-
-#: ../data/ui/prefs.ui:213
+#: ../data/ui/prefs.ui:14
 msgid "General"
 msgstr "General"
 
-#: ../data/ui/prefs.ui:231
+#: ../data/ui/prefs.ui:20
+msgid "Behavior"
+msgstr "Comportamiento"
+
+#: ../data/ui/prefs.ui:23
+msgid "When Wike starts load"
+msgstr "Al iniciar Wike cargar"
+
+#: ../data/ui/prefs.ui:29
+msgid "Keep a list of recent articles"
+msgstr "Lista de artículos recientes"
+
+#: ../data/ui/prefs.ui:43
+msgid "Clear bookmarks list on exit"
+msgstr "Borrar marcadores al salir"
+
+#: ../data/ui/prefs.ui:61
+msgid "Appearance"
+msgstr "Apariencia"
+
+#: ../data/ui/prefs.ui:64
+msgid "Font size for articles"
+msgstr "Tamaño de fuente"
+
+#: ../data/ui/prefs.ui:89
+msgid "Languages"
+msgstr "Lenguajes"
+
+#: ../data/ui/prefs.ui:95
 msgid "Filter available languages"
 msgstr "Filtrar lenguajes disponibles"
 
-#: ../data/ui/prefs.ui:274
+#: ../data/ui/prefs.ui:129
 msgid "Select all"
 msgstr "Seleccionar todo"
 
-#: ../data/ui/prefs.ui:286
+#: ../data/ui/prefs.ui:141
 msgid "Select none"
 msgstr "Seleccionar nada"
-
-#: ../data/ui/prefs.ui:306
-msgid "Languages"
-msgstr "Lenguajes"
 
 #: ../data/ui/header-spinner.ui:23
 msgid "Loading Article"
@@ -341,10 +344,7 @@ msgstr "Tabla de contenidos del artículo"
 msgid "View article in other languages"
 msgstr "Ver artículo en otros idiomas"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:54
-msgid "Initial release."
-msgstr "Versión inicial."
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:60
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:94
 msgid "Hugo Olabera"
 msgstr "Hugo Olabera"
+

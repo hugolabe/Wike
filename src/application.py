@@ -22,8 +22,9 @@ import sys
 
 import gi
 gi.require_version('Gtk', '3.0')
+gi.require_version('Handy', '1')
 gi.require_version('WebKit2', '4.0')
-from gi.repository import Gio, GLib, Gtk, WebKit2
+from gi.repository import Gio, GLib, Gtk, Handy, WebKit2
 
 from wike.data import settings, languages, historic, bookmarks
 from wike.prefs import PrefsWindow
@@ -47,6 +48,8 @@ class Application(Gtk.Application):
 
   def do_startup(self):
     Gtk.Application.do_startup(self)
+
+    Handy.init()
 
     web_context = WebKit2.WebContext.get_default()
     web_context.set_cache_model(WebKit2.CacheModel.WEB_BROWSER)

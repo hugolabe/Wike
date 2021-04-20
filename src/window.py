@@ -19,7 +19,8 @@
 
 import gi
 gi.require_version('Gtk', '3.0')
-from gi.repository import Gio, GLib, Gdk, Gtk, WebKit2
+gi.require_version('Handy', '1')
+from gi.repository import Gio, GLib, Gdk, Gtk, Handy, WebKit2
 
 from wike.data import settings, historic
 from wike.header import HeaderBar
@@ -30,11 +31,12 @@ from wike.view import wikiview
 # Contains a webview, a search bar and a headerbar
 
 @Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/window.ui')
-class Window(Gtk.ApplicationWindow):
+class Window(Handy.ApplicationWindow):
 
   __gtype_name__ = 'Window'
 
-  box = Gtk.Template.Child()
+  window_box = Gtk.Template.Child()
+  content_box = Gtk.Template.Child()
   search_bar = Gtk.Template.Child()
   textsearch_entry = Gtk.Template.Child()
   textsearch_prev_button = Gtk.Template.Child()
@@ -52,10 +54,10 @@ class Window(Gtk.ApplicationWindow):
     self.set_default_size(settings.get_int('window-width'), settings.get_int('window-height'))
     if settings.get_boolean('window-max'): self.maximize()
 
-    self.box.pack_end(wikiview, True, True, 0)
+    self.content_box.pack_end(wikiview, True, True, 0)
 
     self.headerbar = HeaderBar()
-    self.set_titlebar(self.headerbar)
+    self.window_box.pack_start(self.headerbar, False, True, 0)
 
     actions = [ ('prev_page', self._prev_page_cb, ('<Alt>Left',)),
                 ('next_page', self._next_page_cb, ('<Alt>Right',)),

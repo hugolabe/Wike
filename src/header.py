@@ -19,7 +19,8 @@
 
 import gi
 gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk
+gi.require_version('Handy', '1')
+from gi.repository import Gtk, Handy
 
 from wike.data import settings, historic
 from wike.bookmarks import BookmarksPopover
@@ -33,7 +34,7 @@ from wike.view import wikiview
 # Contains widgets for manage searchs, navigation and popovers
 
 @Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/header.ui')
-class HeaderBar(Gtk.HeaderBar):
+class HeaderBar(Handy.HeaderBar):
 
   __gtype_name__ = 'HeaderBar'
 
@@ -144,7 +145,7 @@ class HeaderBar(Gtk.HeaderBar):
 
   def _menu_button_cb(self, menu_button):
     if menu_button.get_active():
-      window = self.get_parent()
+      window = self.get_toplevel()
       show_historic_action = window.lookup_action('show_historic')
       open_browser_action = window.lookup_action('open_browser')
       copy_url_action = window.lookup_action('copy_url')

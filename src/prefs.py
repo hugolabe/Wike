@@ -17,8 +17,6 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 
-import threading
-
 import gi
 gi.require_version('Gtk', '3.0')
 gi.require_version('Handy', '1')
@@ -115,21 +113,16 @@ class PrefsWindow(Handy.PreferencesWindow):
   # On button click check all languages in new thread
 
   def _select_all_button_cb(self, select_all_button):
-    t = threading.Thread(target=self._set_languages_check, args=(True, ))
-    t.start()
+    rows = self.languages_list.get_children()
+    for row in rows:
+      row.lang_check.set_active(True)
 
   # On button click uncheck all languages in new thread
 
   def _select_none_button_cb(self, select_none_button):
-    t = threading.Thread(target=self._set_languages_check, args=(False, ))
-    t.start()
-
-  # Check or uncheck all languages
-
-  def _set_languages_check(self, checked):
     rows = self.languages_list.get_children()
     for row in rows:
-      row.lang_check.set_active(checked)
+      row.lang_check.set_active(False)
 
 
 # Class for row in languages list

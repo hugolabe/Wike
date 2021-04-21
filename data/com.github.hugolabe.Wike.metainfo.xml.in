@@ -50,6 +50,16 @@
   </screenshots>
 
   <releases>
+    <release version="1.2.0" date="2021-04-21">
+      <description>
+        <ul>
+          <li>Correction in French translation.</li>
+          <li>Switch to GNOME Platform 40 runtime.</li>
+          <li>Rounded corners in main window.</li>
+          <li>Revamped preferences window.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.1.1" date="2021-04-14">
       <description>
         <ul>

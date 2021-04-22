@@ -103,7 +103,7 @@ msgstr ""
 
 #: ../data/ui/about.ui:13
 msgid "translator-credits"
-msgstr "Übersetzung von"
+msgstr "Jan Krings <liquidksky42@gmail.com>"
 
 #: ../data/ui/bookmarks.ui:58
 msgid "Add Bookmark"

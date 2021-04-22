@@ -50,6 +50,13 @@
   </screenshots>
 
   <releases>
+    <release version="1.2.1" date="2021-04-22">
+      <description>
+        <ul>
+          <li>Added German translation.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.2.0" date="2021-04-21">
       <description>
         <ul>

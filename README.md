@@ -1,3 +1,5 @@
+[![Please do not theme this app](https://stopthemingmy.app/badge.svg)](https://stopthemingmy.app)
+
 # Wike
 
 ![](data/screenshots/wike-01-main.png)

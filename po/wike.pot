@@ -1,9 +1,8 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Wike\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-20 14:31+0200\n"
+"POT-Creation-Date: 2021-04-27 19:06+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,23 +11,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/view.py:115
+#: ../src/view.py:127
 msgid "Article not found"
 msgstr ""
 
-#: ../src/view.py:116
+#: ../src/view.py:128
 msgid "Can't find any results for requested query"
 msgstr ""
 
-#: ../src/view.py:118
+#: ../src/view.py:130
 msgid "Can't access Wikipedia"
 msgstr ""
 
-#: ../src/view.py:119
+#: ../src/view.py:131
 msgid "Check your Internet connection and try again"
 msgstr ""
 
-#: ../src/view.py:191
+#: ../src/view.py:203
 msgid "Recent articles"
 msgstr ""
 
@@ -40,15 +39,15 @@ msgstr ""
 msgid "Wikipedia URL copied to clipboard"
 msgstr ""
 
-#: ../src/prefs.py:72
+#: ../src/prefs.py:75
 msgid "Wikipedia main page"
 msgstr ""
 
-#: ../src/prefs.py:72 ../data/ui/menu.ui:13
+#: ../src/prefs.py:75 ../data/ui/menu.ui:13
 msgid "Random article"
 msgstr ""
 
-#: ../src/prefs.py:72
+#: ../src/prefs.py:75
 msgid "Last article"
 msgstr ""
 
@@ -261,19 +260,23 @@ msgstr ""
 msgid "Font size for articles"
 msgstr ""
 
-#: ../data/ui/prefs.ui:89
+#: ../data/ui/prefs.ui:81
+msgid "Use custom font for articles"
+msgstr ""
+
+#: ../data/ui/prefs.ui:99
 msgid "Languages"
 msgstr ""
 
-#: ../data/ui/prefs.ui:95
+#: ../data/ui/prefs.ui:105
 msgid "Filter available languages"
 msgstr ""
 
-#: ../data/ui/prefs.ui:129
+#: ../data/ui/prefs.ui:139
 msgid "Select all"
 msgstr ""
 
-#: ../data/ui/prefs.ui:141
+#: ../data/ui/prefs.ui:151
 msgid "Select none"
 msgstr ""
 
@@ -331,6 +334,6 @@ msgstr ""
 msgid "View article in other languages"
 msgstr ""
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:94
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:111
 msgid "Hugo Olabera"
 msgstr ""

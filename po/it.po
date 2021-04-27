@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wike\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-20 14:31+0200\n"
-"PO-Revision-Date: 2021-04-12 20:30+0100\n"
+"POT-Creation-Date: 2021-04-27 19:06+0200\n"
+"PO-Revision-Date: 2021-04-27 19:32+0200\n"
 "Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language: it\n"
@@ -11,23 +11,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/view.py:115
+#: ../src/view.py:127
 msgid "Article not found"
 msgstr "Articolo non trovato"
 
-#: ../src/view.py:116
+#: ../src/view.py:128
 msgid "Can't find any results for requested query"
 msgstr "Impossibile trovare risultati per la domanda richiesta"
 
-#: ../src/view.py:118
+#: ../src/view.py:130
 msgid "Can't access Wikipedia"
 msgstr "Impossibile accedere a Wikipedia"
 
-#: ../src/view.py:119
+#: ../src/view.py:131
 msgid "Check your Internet connection and try again"
 msgstr "Controlla la tua connessione Internet e riprova"
 
-#: ../src/view.py:191
+#: ../src/view.py:203
 msgid "Recent articles"
 msgstr "Articoli recenti"
 
@@ -39,15 +39,15 @@ msgstr "Nuovo segnalibro: "
 msgid "Wikipedia URL copied to clipboard"
 msgstr "URL di Wikipedia copiato negli appunti"
 
-#: ../src/prefs.py:72
+#: ../src/prefs.py:75
 msgid "Wikipedia main page"
 msgstr "Pagina principale di Wikipedia"
 
-#: ../src/prefs.py:72 ../data/ui/menu.ui:13
+#: ../src/prefs.py:75 ../data/ui/menu.ui:13
 msgid "Random article"
 msgstr "Articolo casuale"
 
-#: ../src/prefs.py:72
+#: ../src/prefs.py:75
 msgid "Last article"
 msgstr "Ultimo articolo"
 
@@ -268,19 +268,23 @@ msgstr "Aspetto"
 msgid "Font size for articles"
 msgstr "Dimensione del carattere per gli articoli"
 
-#: ../data/ui/prefs.ui:89
+#: ../data/ui/prefs.ui:81
+msgid "Use custom font for articles"
+msgstr ""
+
+#: ../data/ui/prefs.ui:99
 msgid "Languages"
 msgstr "Lingue"
 
-#: ../data/ui/prefs.ui:95
+#: ../data/ui/prefs.ui:105
 msgid "Filter available languages"
 msgstr "Filtra le lingue disponibili"
 
-#: ../data/ui/prefs.ui:129
+#: ../data/ui/prefs.ui:139
 msgid "Select all"
 msgstr "Seleziona tutto"
 
-#: ../data/ui/prefs.ui:141
+#: ../data/ui/prefs.ui:151
 msgid "Select none"
 msgstr "Non selezionare niente"
 
@@ -344,7 +348,6 @@ msgstr "Indice dei contenuti dell'articolo"
 msgid "View article in other languages"
 msgstr "Visualizza l'articolo in altre lingue"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:94
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:111
 msgid "Hugo Olabera"
 msgstr "Hugo Olabera"
-

@@ -45,6 +45,8 @@ class WikiView(WebKit2.WebView):
     web_settings = self.get_settings()
     web_settings.set_default_font_size(settings.get_int('font-size'))
     settings.connect('changed::font-size', self._settings_font_size_changed_cb, web_settings)
+    settings.connect('changed::custom-font', self._settings_custom_font_changed_cb)
+    settings.connect('changed::font-family', self._settings_custom_font_changed_cb)
 
     self._set_style()
 
@@ -52,6 +54,11 @@ class WikiView(WebKit2.WebView):
 
   def _settings_font_size_changed_cb(self, settings, key, web_settings):
     web_settings.set_default_font_size(settings.get_int('font-size'))
+
+  # Settings custom font changed event
+
+  def _settings_custom_font_changed_cb(self, settings, key):
+    self._set_style()
 
   # Inyect stylesheet for customize article view
 
@@ -66,10 +73,15 @@ class WikiView(WebKit2.WebView):
       print('Can\'t load css file from resources')
       return
     else:
-      style = gfile_contents[1].decode('utf-8')
+      css_view = gfile_contents[1].decode('utf-8')
 
-    user_style = WebKit2.UserStyleSheet(style, WebKit2.UserContentInjectedFrames.ALL_FRAMES, WebKit2.UserStyleLevel.USER, None, None)
-    user_content.add_style_sheet(user_style)
+    style_view = WebKit2.UserStyleSheet(css_view, WebKit2.UserContentInjectedFrames.ALL_FRAMES, WebKit2.UserStyleLevel.USER, None, None)
+    user_content.add_style_sheet(style_view)
+
+    if settings.get_boolean('custom-font'):
+      css_font = 'body,h1,h2{font-family:"' + settings.get_string('font-family') + '"!important}'
+      style_font = WebKit2.UserStyleSheet(css_font, WebKit2.UserContentInjectedFrames.ALL_FRAMES, WebKit2.UserStyleLevel.USER, None, None)
+      user_content.add_style_sheet(style_font)
 
   # Check connection and load Wikipedia article by URI
 

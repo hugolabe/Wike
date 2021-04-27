@@ -37,6 +37,8 @@ class PrefsWindow(Handy.PreferencesWindow):
   historic_switch = Gtk.Template.Child()
   clear_bookmarks_switch = Gtk.Template.Child()
   font_size_spin = Gtk.Template.Child()
+  custom_font_switch = Gtk.Template.Child()
+  custom_font_combo = Gtk.Template.Child()
   languages_list = Gtk.Template.Child()
   select_all_button = Gtk.Template.Child()
   select_none_button = Gtk.Template.Child()
@@ -48,13 +50,16 @@ class PrefsWindow(Handy.PreferencesWindow):
 
     self._languages_changed = False
     self._populate_on_start_combo()
+    self._populate_custom_font_combo()
     self._populate_languages_list()
 
     settings.bind('on-start-load', self.on_start_combo, 'selected-index', Gio.SettingsBindFlags.DEFAULT)
     settings.bind('keep-historic', self.historic_switch, 'active', Gio.SettingsBindFlags.DEFAULT)
     settings.bind('clear-bookmarks', self.clear_bookmarks_switch, 'active', Gio.SettingsBindFlags.DEFAULT)
     settings.bind('font-size', self.font_size_spin, 'value', Gio.SettingsBindFlags.DEFAULT)
+    settings.bind('custom-font', self.custom_font_switch, 'active', Gio.SettingsBindFlags.DEFAULT)
 
+    self.custom_font_combo.connect('notify::selected-index', self._custom_font_combo_selected_cb)
     self.languages_list.connect('row-activated', self._languages_list_selected_cb)
     self.select_all_button.connect('clicked', self._select_all_button_cb)
     self.select_none_button.connect('clicked', self._select_none_button_cb)
@@ -71,6 +76,23 @@ class PrefsWindow(Handy.PreferencesWindow):
     for index, option in enumerate(options):
       model.insert(index, Handy.ValueObject.new(option))
     self.on_start_combo.bind_name_model(model, Handy.ValueObject.dup_string)
+
+  # Populate font list for custom font combo
+
+  def _populate_custom_font_combo(self):
+    model = Gio.ListStore.new(Handy.ValueObject)
+    fonts = []
+    custom_font = settings.get_string('font-family')
+    pango_context = self.get_pango_context()
+    for font_familie in pango_context.list_families():
+      fonts.append(font_familie.get_name())
+    fonts.sort(key=str.lower)
+    selected = 0
+    for index, font in enumerate(fonts):
+      model.insert(index, Handy.ValueObject.new(font))
+      if font == custom_font: selected = index
+    self.custom_font_combo.bind_name_model(model, Handy.ValueObject.dup_string)
+    self.custom_font_combo.set_selected_index(selected)
 
   # Populate list of available languages
 
@@ -100,6 +122,14 @@ class PrefsWindow(Handy.PreferencesWindow):
 
     return False
 
+  # On custom font selected update settings
+
+  def _custom_font_combo_selected_cb(self, custom_font_combo, value):
+    model = custom_font_combo.get_model()
+    index = custom_font_combo.get_selected_index()
+    font = model.get_item(index).dup_string()
+    settings.set_string('font-family', font)
+
   # On row selected set language check button
 
   def _languages_list_selected_cb(self, languages_list, row):
@@ -110,14 +140,14 @@ class PrefsWindow(Handy.PreferencesWindow):
   def _language_checkbutton_cb(self, check_button):
     if not self._languages_changed: self._languages_changed = True
 
-  # On button click check all languages in new thread
+  # On button click check all languages
 
   def _select_all_button_cb(self, select_all_button):
     rows = self.languages_list.get_children()
     for row in rows:
       row.lang_check.set_active(True)
 
-  # On button click uncheck all languages in new thread
+  # On button click uncheck all languages
 
   def _select_none_button_cb(self, select_none_button):
     rows = self.languages_list.get_children()

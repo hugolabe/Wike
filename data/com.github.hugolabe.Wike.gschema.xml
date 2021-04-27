@@ -37,6 +37,16 @@
       <summary>Base font size in pixels</summary>
     </key>
 
+    <key name="custom-font" type="b">
+      <default>false</default>
+      <summary>Use custom font in article view</summary>
+    </key>
+
+    <key name="font-family" type="s">
+      <default>"Sans"</default>
+      <summary>Font family for custom font</summary>
+    </key>
+
     <key name="window-width" type="i">
       <default>900</default>
       <summary>Horizontal size of window</summary>

@@ -1,15 +1,11 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Wike\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-27 19:06+0200\n"
-"PO-Revision-Date: \n"
-"Last-Translator: Florian R\n"
-"Language-Team: fr\n"
-"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Wike\n"
+"Language: fr\n"
 
 #: ../src/view.py:127
 msgid "Article not found"
@@ -39,31 +35,18 @@ msgstr "Nouveau signet : "
 msgid "Wikipedia URL copied to clipboard"
 msgstr "URL de Wikipédia copiée dans le presse-papiers"
 
-#: ../src/prefs.py:75
-msgid "Wikipedia main page"
-msgstr "Page principale de Wikipédia"
-
-#: ../src/prefs.py:75 ../data/ui/menu.ui:13
-msgid "Random article"
-msgstr "Article aléatoire"
-
-#: ../src/prefs.py:75
-msgid "Last article"
-msgstr "Dernier article"
-
 #: ../src/search.py:249
 msgid "Default search language: "
 msgstr "Langue de recherche par défault : "
 
+#. Don't remove format tags!
 #: ../src/bookmarks.py:46
-msgid ""
-"<b>No bookmarks</b>\n"
+msgid "<b>No bookmarks</b>\n"
 "\n"
 "<small>Use the <i>Add Bookmark</i> button\n"
 "or click a link with the middle mouse button\n"
 "to add bookmarks to the list</small>"
-msgstr ""
-"<b>Aucun signet</b>\n"
+msgstr "<b>Aucun signet</b>\n"
 "\n"
 "<small>Utilisez le bouton <i>Ajouter un signet</i>\n"
 "ou cliquez sur un lien avec le bouton central de la souris\n"
@@ -87,15 +70,16 @@ msgid "Search suggestions"
 msgstr "Suggestions de recherche"
 
 #: ../data/ui/about.ui:8
-msgid ""
-"Search and read Wikipedia articles\n"
+msgid "Search and read Wikipedia articles\n"
 "All content from Wikipedia.org\n"
 "and available under CC BY-SA 3.0 unless otherwise noted"
-msgstr ""
-"Rechercher et lire des articles de Wikipédia\n"
+msgstr "Rechercher et lire des articles de Wikipédia\n"
 "Tout le contenu provient de Wikipedia.org\n"
 "et disponible sous CC BY-SA 3.0, sauf mention contraire."
 
+#. Add your name like this:
+#. 
+#. Hugo Olabera <hugolabe@gmail.com>
 #: ../data/ui/about.ui:13
 msgid "translator-credits"
 msgstr "Florian R"
@@ -122,7 +106,7 @@ msgstr "Voir l'article dans d'autres langues"
 #: ../data/ui/shortcuts.ui:32
 msgctxt "shortcut window"
 msgid "Search text in page"
-msgstr "Rechercher texte dans la page"
+msgstr "Rechercher dans la page"
 
 #: ../data/ui/shortcuts.ui:39
 msgctxt "shortcut window"
@@ -208,6 +192,10 @@ msgstr "Ajouter aux signets"
 msgid "Wikipedia Main Page"
 msgstr "Page principale de Wikipédia"
 
+#: ../src/prefs.py:75 ../data/ui/menu.ui:13
+msgid "Random article"
+msgstr "Article aléatoire"
+
 #: ../data/ui/menu.ui:18
 msgid "Recent Articles"
 msgstr "Articles récents"
@@ -240,10 +228,6 @@ msgstr "Raccourcis clavier"
 msgid "About Wike"
 msgstr "À propos de Wike"
 
-#: ../data/ui/prefs.ui:14
-msgid "General"
-msgstr "Général"
-
 #: ../data/ui/prefs.ui:20
 msgid "Behavior"
 msgstr "Comportement"
@@ -260,6 +244,10 @@ msgstr "Conserver une liste des articles récents"
 msgid "Clear bookmarks list on exit"
 msgstr "Effacer la liste des signets à la fermeture"
 
+#: ../src/prefs.py:75
+msgid "Last article"
+msgstr "Dernier article"
+
 #: ../data/ui/prefs.ui:61
 msgid "Appearance"
 msgstr "Apparence"
@@ -268,13 +256,9 @@ msgstr "Apparence"
 msgid "Font size for articles"
 msgstr "Taille de police des articles"
 
-#: ../data/ui/prefs.ui:81
-msgid "Use custom font for articles"
-msgstr ""
-
-#: ../data/ui/prefs.ui:99
-msgid "Languages"
-msgstr "Langues"
+#: ../data/ui/prefs.ui:14
+msgid "General"
+msgstr "Général"
 
 #: ../data/ui/prefs.ui:105
 msgid "Filter available languages"
@@ -288,10 +272,15 @@ msgstr "Tout sélectionner"
 msgid "Select none"
 msgstr "Ne rien sélectionner"
 
+#: ../data/ui/prefs.ui:99
+msgid "Languages"
+msgstr "Langues"
+
 #: ../data/ui/header-spinner.ui:23
 msgid "Loading Article"
 msgstr "Chargement de l'article"
 
+#. Don't translate app name!
 #: ../data/com.github.hugolabe.Wike.desktop.in:3
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:7
 msgid "Wike"
@@ -302,27 +291,19 @@ msgstr "Wike"
 msgid "Wikipedia Reader"
 msgstr "Lecteur Wikipédia"
 
+#. Don't translate!
 #: ../data/com.github.hugolabe.Wike.desktop.in:5
 msgid "com.github.hugolabe.Wike"
 msgstr "com.github.hugolabe.Wike"
 
+#. Don't remove semicolons!
 #: ../data/com.github.hugolabe.Wike.desktop.in:10
 msgid "Wikipedia;Encyclopedia;"
 msgstr "Wikipedia;Encyclopédie;"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:11
-msgid ""
-"Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the "
-"content of this online encyclopedia in a native application, with a simpler "
-"and distraction-free view of articles."
-msgstr ""
-"Wike est un lecteur de Wikipedia pour le bureau GNOME. Il permet d'accéder à "
-"tout le contenu de cette encyclopédie en ligne dans une application native, "
-"avec une vue simple et sans distraction des articles."
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
-msgid "Features:"
-msgstr "Fonctionnalités : "
+msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
+msgstr "Wike est un lecteur de Wikipedia pour le bureau GNOME. Il permet d'accéder à tout le contenu de cette encyclopédie en ligne dans une application native, avec une vue simple et sans distraction des articles."
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
 msgid "Multiple languages"
@@ -348,6 +329,20 @@ msgstr "Sommaire de l'article"
 msgid "View article in other languages"
 msgstr "Voir l'article dans d'autres langues"
 
+#. Don't translate
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:111
 msgid "Hugo Olabera"
 msgstr "Hugo Olabera"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
+msgid "Features:"
+msgstr "Fonctionnalités : "
+
+#: ../src/prefs.py:75
+msgid "Wikipedia main page"
+msgstr "Page principale de Wikipédia"
+
+#: ../data/ui/prefs.ui:81
+msgid "Use custom font for articles"
+msgstr "Utiliser une police personnalisée"
+

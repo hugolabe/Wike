@@ -65,11 +65,28 @@ h1 {
   font-size: 2em !important;
 }
 
+.section-heading {
+  border-bottom: none !important;
+  margin-top: 0.5em !important;
+  margin-bottom: 0 !important;
+  font-family: inherit !important;
+}
+
+.section-heading .mw-ui-icon {
+  display: none !important;
+}
+
+.hatnote, .rellink, .dablink {
+  background-color: transparent !important;
+  padding-left: 0 !important;
+  font-style: italic !important;
+}
+
 #toc, .toc {
   display: none !important;
 }
 
-.mw-editsection, .cleanup, .ambox, .asbox {
+.mw-editsection, .mw-editsection-like, .cleanup, .ambox, .asbox {
   display: none !important;
 }
 

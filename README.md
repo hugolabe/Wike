@@ -23,6 +23,13 @@ You can install *Wike* from Flathub.org
 
 <a href='https://flathub.org/apps/details/com.github.hugolabe.Wike'><img width='240' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-i-en.png'/></a>
 
+### Other installation methods
+
+|Distro|Package Name/Link|Maintainer|
+|:----:|:----:|:----:|
+| Arch Linux (AUR) | [`wike`](https://aur.archlinux.org/packages/wike/) | [Mark Wagie](https://github.com/yochananmarqos) |
+| Ubuntu (PPA) | [`wike`](https://launchpad.net/~apandada1/+archive/ubuntu/wike) | [Archisman Panigrahi](https://github.com/apandada1) |
+
 ## Build
 
 *Wike* can be built and run with [GNOME Builder](https://wiki.gnome.org/Apps/Builder).

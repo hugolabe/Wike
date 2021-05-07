@@ -171,8 +171,8 @@
   </template>
   <object class="GtkAdjustment" id="font_size_adjustment">
     <property name="lower">12</property>
-    <property name="upper">20</property>
+    <property name="upper">32</property>
     <property name="step_increment">1</property>
-    <property name="page_increment">10</property>
+    <property name="page_increment">5</property>
   </object>
 </interface>

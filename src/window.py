@@ -64,7 +64,7 @@ class Window(Handy.ApplicationWindow):
 
     actions = [ ('prev_page', self._prev_page_cb, ('<Alt>Left',)),
                 ('next_page', self._next_page_cb, ('<Alt>Right',)),
-                ('show_search', self._show_search_cb, ('F2',)),
+                ('show_search', self._show_search_cb, ('F2', '<Ctrl>K',)),
                 ('show_bookmarks', self._show_bookmarks_cb, ('<Ctrl>B',)),
                 ('add_bookmark', self._add_bookmark_cb, ('<Ctrl>D',)),
                 ('show_langlinks', self._show_langlinks_cb, ('<Ctrl>L',)),

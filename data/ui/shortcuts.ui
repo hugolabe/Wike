@@ -85,7 +85,7 @@
               <object class="GtkShortcutsShortcut">
                 <property name="visible">True</property>
                 <property name="title" translatable="yes" context="shortcut window">Search articles</property>
-                <property name="accelerator">F2</property>
+                <property name="accelerator">F2 &lt;Primary&gt;K</property>
               </object>
             </child>
             <child>

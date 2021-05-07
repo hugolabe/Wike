@@ -1,0 +1,26 @@
+Source: wike
+Section: gnome
+Priority: optional
+Maintainer: Hugo Olabera <hugolabe@gmail.com>
+Build-Depends: debhelper-compat(=10),
+	desktop-file-utils,
+	gettext,
+	meson (>= 0.50),
+	pkg-config,
+	libglib2.0-dev,
+	appstream
+Standards-Version: 4.5.0
+Rules-Requires-Root: no
+Homepage: https://github.com/hugolabe/Wike
+Vcs-Browser: https://github.com/hugolabe/Wike
+Vcs-Git: https://github.com/hugolabe/Wike.git
+
+Package: wike
+Architecture: all
+Depends: ${misc:Depends},
+	gir1.2-webkit2-4.0,
+	gir1.2-handy-1,
+	python3
+Description: Wikipedia reader for the GNOME Desktop
+ Wike provides access to all the content of this online encyclopedia in a
+ native application, with a simpler and distraction-free view of articles.

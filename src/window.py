@@ -51,6 +51,9 @@ class Window(Handy.ApplicationWindow):
   def __init__(self, app):
     super().__init__(title='Wike', application=app)
 
+    # Set default window icon name for XFCE, LXQt, MATE
+    self.set_default_icon_name('com.github.hugolabe.Wike')
+
     self.set_default_size(settings.get_int('window-width'), settings.get_int('window-height'))
     if settings.get_boolean('window-max'): self.maximize()
 

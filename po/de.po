@@ -1,15 +1,20 @@
+#
+# Jan <liquidsky42@gmail.com>, 2021.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Wike\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-27 19:06+0200\n"
-"PO-Revision-Date: 2021-04-27 19:31+0200\n"
-"Last-Translator: Jan Krings <liquidksky42@gmail.com>\n"
-"Language-Team: de\n"
+"PO-Revision-Date: 2021-05-08 12:00+0200\n"
+"Last-Translator: Jan <liquidsky42@gmail.com>\n"
+"Language-Team: German <->\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Generator: Gtranslator 40.0\n"
 
 #: ../src/view.py:127
 msgid "Article not found"
@@ -270,7 +275,7 @@ msgstr "Schriftgröße der Artikel"
 
 #: ../data/ui/prefs.ui:81
 msgid "Use custom font for articles"
-msgstr ""
+msgstr "Verwende benutzerdefinierte Schriftart für Artikel"
 
 #: ../data/ui/prefs.ui:99
 msgid "Languages"
@@ -300,7 +305,7 @@ msgstr "Wike"
 #: ../data/com.github.hugolabe.Wike.desktop.in:4
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
 msgid "Wikipedia Reader"
-msgstr "Wikipedialeser"
+msgstr "Wikipediabetrachter"
 
 #: ../data/com.github.hugolabe.Wike.desktop.in:5
 msgid "com.github.hugolabe.Wike"
@@ -316,9 +321,9 @@ msgid ""
 "content of this online encyclopedia in a native application, with a simpler "
 "and distraction-free view of articles."
 msgstr ""
-"Wike ist ein Wikipedialeser für die GNOME Oberfläche. Er bietet Zugang zum "
-"kompletten Inhalt der Onlineenzyklopädie in einem nativen Programm mit einem "
-"einfachen und ablenkungesfreien Ansicht auf die Artikel."
+"Wike ist ein Wikipediabetrachter für die GNOME Oberfläche. Er bietet Zugang "
+"zum kompletten Inhalt der Onlineenzyklopädie in einem nativen Programm mit "
+"einem einfachen und ablenkungesfreien Ansicht auf die Artikel."
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
 msgid "Features:"

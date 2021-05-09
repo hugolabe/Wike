@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-27 19:06+0200\n"
-"PO-Revision-Date: 2021-04-27 19:32+0200\n"
+"PO-Revision-Date: 2021-05-09 09:32+0100\n"
 "Last-Translator: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Albano Battistella <albano_battistella@hotmail.com>\n"
 "Language: it\n"
@@ -270,7 +270,7 @@ msgstr "Dimensione del carattere per gli articoli"
 
 #: ../data/ui/prefs.ui:81
 msgid "Use custom font for articles"
-msgstr ""
+msgstr "Usa caratteri personalizzati per gli articoli"
 
 #: ../data/ui/prefs.ui:99
 msgid "Languages"

@@ -62,5 +62,10 @@
       <summary>Window is maximized</summary>
     </key>
 
+    <key name="dark-mode" type="b">
+      <default>false</default>
+      <summary>Choose dark mode theme</summary>
+    </key>
+
   </schema>
 </schemalist>

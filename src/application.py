@@ -58,15 +58,23 @@ class Application(Gtk.Application):
     cookie_manager.set_accept_policy(WebKit2.CookieAcceptPolicy.ALWAYS)
     cookie_manager.set_persistent_storage(cookies_file_path, WebKit2.CookiePersistentStorage.TEXT)
 
-    actions = [ ('prefs', self._prefs_cb, ('<Ctrl>E',)),
-                ('shortcuts', self._shortcuts_cb, ('<Ctrl>F1',)),
-                ('about', self._about_cb, None) ]
+    action = Gio.SimpleAction.new('prefs', None)
+    action.connect('activate', self._prefs_cb)
+    self.add_action(action)
+    self.set_accels_for_action('app.prefs', ('<Ctrl>E',))
 
-    for action, callback, accel in actions:
-      simple_action = Gio.SimpleAction.new(action, None)
-      simple_action.connect('activate', callback)
-      self.add_action(simple_action)
-      if accel: self.set_accels_for_action('app.' + action, accel)
+    action = Gio.SimpleAction.new_stateful('dark_mode', None, GLib.Variant.new_boolean(settings.get_boolean('dark-mode')))
+    action.connect('change-state', self._dark_mode)
+    self.add_action(action)
+
+    action = Gio.SimpleAction.new('shortcuts', None)
+    action.connect('activate', self._shortcuts_cb)
+    self.add_action(action)
+    self.set_accels_for_action('app.shortcuts', ('<Ctrl>F1',))
+
+    action = Gio.SimpleAction.new('about', None)
+    action.connect('activate', self._about_cb)
+    self.add_action(action)
 
   # Create main window and connect delete event
 
@@ -74,6 +82,8 @@ class Application(Gtk.Application):
     if not self._window:
       self._window = Window(self)
       self._window.connect('delete-event',self._window_delete_cb)
+      self._gtk_settings = Gtk.Settings.get_default()
+      if settings.get_boolean('dark-mode'): self._gtk_settings.set_property('gtk-application-prefer-dark-theme', True)
       self._window.show_all()
     else:
       self._window.present()
@@ -84,6 +94,14 @@ class Application(Gtk.Application):
     prefs_window = PrefsWindow()
     prefs_window.set_transient_for(self._window)
     prefs_window.show()
+
+  # Set/unset dark mode for UI and view
+
+  def _dark_mode(self, action, parameter):
+    action.set_state(parameter)
+    settings.set_boolean('dark-mode', parameter)
+    self._gtk_settings.set_property('gtk-application-prefer-dark-theme', parameter)
+    wikiview.set_style()
 
   # Show Shortcuts window
 

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wike\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-27 19:06+0200\n"
+"POT-Creation-Date: 2021-05-21 15:51+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11,31 +11,31 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/view.py:127
+#: ../src/view.py:143
 msgid "Article not found"
 msgstr ""
 
-#: ../src/view.py:128
+#: ../src/view.py:144
 msgid "Can't find any results for requested query"
 msgstr ""
 
-#: ../src/view.py:130
+#: ../src/view.py:146
 msgid "Can't access Wikipedia"
 msgstr ""
 
-#: ../src/view.py:131
+#: ../src/view.py:147
 msgid "Check your Internet connection and try again"
 msgstr ""
 
-#: ../src/view.py:203
+#: ../src/view.py:219
 msgid "Recent articles"
 msgstr ""
 
-#: ../src/window.py:141 ../src/window.py:246
+#: ../src/window.py:144 ../src/window.py:249
 msgid "New bookmark: "
 msgstr ""
 
-#: ../src/window.py:304
+#: ../src/window.py:307
 msgid "Wikipedia URL copied to clipboard"
 msgstr ""
 
@@ -224,11 +224,15 @@ msgstr ""
 msgid "Preferences"
 msgstr ""
 
-#: ../data/ui/menu.ui:52
-msgid "Keyboard Shortcuts"
+#: ../data/ui/menu.ui:50
+msgid "Dark Mode"
 msgstr ""
 
 #: ../data/ui/menu.ui:56
+msgid "Keyboard Shortcuts"
+msgstr ""
+
+#: ../data/ui/menu.ui:60
 msgid "About Wike"
 msgstr ""
 
@@ -334,6 +338,7 @@ msgstr ""
 msgid "View article in other languages"
 msgstr ""
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:111
-msgid "Hugo Olabera"
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
+msgid "Dark mode"
 msgstr ""
+

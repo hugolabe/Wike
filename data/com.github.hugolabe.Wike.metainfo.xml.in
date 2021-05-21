@@ -24,6 +24,7 @@
       <li>Text search in articles</li>
       <li>Article table of contents</li>
       <li>View article in other languages</li>
+      <li>Dark mode</li>
     </ul>
   </description>
 
@@ -46,6 +47,9 @@
     </screenshot>
     <screenshot>
       <image>https://raw.githubusercontent.com/hugolabe/wike/master/data/screenshots/wike-05-text.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/hugolabe/wike/master/data/screenshots/wike-06-dark.png</image>
     </screenshot>
   </screenshots>
 

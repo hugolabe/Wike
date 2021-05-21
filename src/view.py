@@ -48,7 +48,25 @@ class WikiView(WebKit2.WebView):
     settings.connect('changed::custom-font', self._settings_custom_font_changed_cb)
     settings.connect('changed::font-family', self._settings_custom_font_changed_cb)
 
-    self._set_style()
+    gfile = Gio.File.new_for_uri('resource:///com/github/hugolabe/Wike/styles/view.min.css')
+    try:
+      gfile_contents = gfile.load_contents(None)
+    except:
+      print('Can\'t load view css file from resources')
+      self._css_view = ''
+    else:
+      self._css_view = gfile_contents[1].decode('utf-8')
+
+    gfile = Gio.File.new_for_uri('resource:///com/github/hugolabe/Wike/styles/dark.min.css')
+    try:
+      gfile_contents = gfile.load_contents(None)
+    except:
+      print('Can\'t load dark css file from resources')
+      self._css_dark = ''
+    else:
+      self._css_dark = gfile_contents[1].decode('utf-8')
+
+    self.set_style()
 
   # Settings font-size changed event
 
@@ -58,25 +76,23 @@ class WikiView(WebKit2.WebView):
   # Settings custom font changed event
 
   def _settings_custom_font_changed_cb(self, settings, key):
-    self._set_style()
+    self.set_style()
 
   # Inyect stylesheet for customize article view
 
-  def _set_style(self):
+  def set_style(self):
     user_content =  self.get_user_content_manager()
     user_content.remove_all_style_sheets()
 
-    gfile = Gio.File.new_for_uri('resource:///com/github/hugolabe/Wike/styles/view.min.css')
-    try:
-      gfile_contents = gfile.load_contents(None)
-    except:
-      print('Can\'t load css file from resources')
-      return
-    else:
-      css_view = gfile_contents[1].decode('utf-8')
-
-    style_view = WebKit2.UserStyleSheet(css_view, WebKit2.UserContentInjectedFrames.ALL_FRAMES, WebKit2.UserStyleLevel.USER, None, None)
+    style_view = WebKit2.UserStyleSheet(self._css_view, WebKit2.UserContentInjectedFrames.ALL_FRAMES, WebKit2.UserStyleLevel.USER, None, None)
     user_content.add_style_sheet(style_view)
+
+    if settings.get_boolean('dark-mode'):
+      self.set_background_color(Gdk.RGBA(0.1, 0.1, 0.1, 1))
+      style_dark = WebKit2.UserStyleSheet(self._css_dark, WebKit2.UserContentInjectedFrames.ALL_FRAMES, WebKit2.UserStyleLevel.USER, None, None)
+      user_content.add_style_sheet(style_dark)
+    else:
+      self.set_background_color(Gdk.RGBA(1, 1, 1, 1))
 
     if settings.get_boolean('custom-font'):
       css_font = 'body,h1,h2{font-family:"' + settings.get_string('font-family') + '"!important}'

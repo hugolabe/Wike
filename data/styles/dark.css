@@ -1,0 +1,94 @@
+/*
+dark.css
+
+This file is part of Wike, a Wikipedia Reader for the GNOME Desktop.
+Copyright 2021 Hugo Olabera <hugolabe@gmail.com>.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+
+/* General */
+
+h1 {
+  color: #2aa !important;
+}
+
+a:not(.image-details a, .drawer a, .wikitable a, .infobox a, .infobox_v2 a, .infobox_v3 a) {
+  color: #630 !important;
+}
+
+a.new:not(.image-details a, .wikitable a, .infobox a, .infobox_v2 a, .infobox_v3 a) {
+  color: #066 !important;
+}
+
+#mw-mf-page-center {
+  background-color: #1b1b1b !important;
+}
+
+.mw-body {
+  background-color: #e4e4e4 !important;
+  filter: invert(100%);
+}
+
+/* Images */
+
+.thumb img {
+  background-color: #ccc !important;
+}
+
+.gallerybox .thumb {
+  background-color: #333 !important;
+  border-color: #111 !important;
+}
+
+img:not(.mwe-math-fallback-image-inline, .mwe-math-fallback-image-display, .leaflet-marker-icon, .wikitable img, .infobox img, .infobox_v2 img, .infobox_v3 img) {
+  filter: invert(100%);
+}
+
+/* Tables and Infobox */
+
+.wikitable, .infobox, .infobox_v2, .infobox_v3 {
+  background-color: #ccc !important;
+  filter: invert(100%);
+}
+
+/* Other */
+
+.color_swatch, .legend-color {
+  filter: invert(100%);
+}
+
+.PieChartTemplate, .PieChartTemplate .thumbcaption {
+  filter: invert(100%);
+}
+
+/* Wike local pages */
+
+.wike-body {
+  background: #1b1b1b;
+  color: #dedede;
+}
+
+#wike-message h1 {
+  color: #d65451 !important;
+}
+
+#wike-historic h3 {
+  border-bottom: 1px solid #444;
+}
+
+#wike-historic a {
+  color: #a1cdff !important;
+}
+

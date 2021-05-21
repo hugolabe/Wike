@@ -3,6 +3,7 @@
   <gresource prefix="/com/github/hugolabe/Wike">
     <file>languages/languages.min.json</file>
     <file>styles/view.min.css</file>
+    <file>styles/dark.min.css</file>
     <file>ui/about.ui</file>
     <file>ui/bookmarks.ui</file>
     <file>ui/bookmarks-row.ui</file>

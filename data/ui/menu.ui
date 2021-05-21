@@ -46,6 +46,10 @@
         <attribute name="label" translatable="yes">Preferences</attribute>
         <attribute name="action">app.prefs</attribute>
       </item>
+      <item>
+        <attribute name="label" translatable="yes">Dark Mode</attribute>
+        <attribute name="action">app.dark_mode</attribute>
+      </item>
     </section>
     <section>
       <item>

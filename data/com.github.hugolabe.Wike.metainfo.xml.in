@@ -54,6 +54,15 @@
   </screenshots>
 
   <releases>
+    <release version="1.4.1" date="2021-05-28">
+      <description>
+        <ul>
+          <li>Added Dutch translation.</li>
+          <li>Updated French translation.</li>
+          <li>Updated Portuguese (BR) translation.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.4.0" date="2021-05-21">
       <description>
         <ul>

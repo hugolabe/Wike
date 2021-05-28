@@ -5,33 +5,33 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: POEditor.com\n"
 "Project-Id-Version: Wike\n"
-"Language: pt_BR\n"
+"Language: pt-br\n"
 
-#: ../src/view.py:127
+#: ../src/view.py:143
 msgid "Article not found"
 msgstr "Artigo não encontrado"
 
-#: ../src/view.py:128
+#: ../src/view.py:144
 msgid "Can't find any results for requested query"
 msgstr "Nenhun resultado para a busca"
 
-#: ../src/view.py:130
+#: ../src/view.py:146
 msgid "Can't access Wikipedia"
 msgstr "Sem acesso à Wikipedia"
 
-#: ../src/view.py:131
+#: ../src/view.py:147
 msgid "Check your Internet connection and try again"
 msgstr "Verifique sua conexão de internet e tente novamente"
 
-#: ../src/view.py:203
+#: ../src/view.py:219
 msgid "Recent articles"
 msgstr "Artigos recentes"
 
-#: ../src/window.py:141 ../src/window.py:246
+#: ../src/window.py:144 ../src/window.py:249
 msgid "New bookmark: "
 msgstr "Novo marcador: "
 
-#: ../src/window.py:304
+#: ../src/window.py:307
 msgid "Wikipedia URL copied to clipboard"
 msgstr "URL da Wikipedua copiada"
 
@@ -74,7 +74,7 @@ msgstr "Pesquisar e ler artigos da Wikipedia\n"
 "e disponível pela CC BY-SA 3.0 se não mencionado explicitamente"
 
 #. Add your name like this:
-#.
+#. 
 #. Hugo Olabera <hugolabe@gmail.com>
 #: ../data/ui/about.ui:13
 msgid "translator-credits"
@@ -216,11 +216,11 @@ msgstr "Copiar URL para área de transferência"
 msgid "Preferences"
 msgstr "Preferências"
 
-#: ../data/ui/menu.ui:52
+#: ../data/ui/menu.ui:56
 msgid "Keyboard Shortcuts"
 msgstr "Atalhos de teclado"
 
-#: ../data/ui/menu.ui:56
+#: ../data/ui/menu.ui:60
 msgid "About Wike"
 msgstr "Sobre o Wike"
 
@@ -325,11 +325,6 @@ msgstr "Artigo tabela de conteúdos"
 msgid "View article in other languages"
 msgstr "Ver artigo em outras linguagens"
 
-#. Don't translate
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:111
-msgid "Hugo Olabera"
-msgstr "Hugo Olabera"
-
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
 msgid "Features:"
 msgstr "Características:"
@@ -341,4 +336,12 @@ msgstr "Página principal da Wikipedia"
 #: ../data/ui/prefs.ui:81
 msgid "Use custom font for articles"
 msgstr "Usar fonte customizada nos artigos"
+
+#: ../data/ui/menu.ui:50
+msgid "Dark Mode"
+msgstr "Modo escuro"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
+msgid "Dark mode"
+msgstr "Modo escuro"
 

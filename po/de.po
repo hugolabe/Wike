@@ -1,74 +1,52 @@
-#
-# Jan <liquidsky42@gmail.com>, 2021.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: Wike\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-27 19:06+0200\n"
-"PO-Revision-Date: 2021-05-08 12:00+0200\n"
-"Last-Translator: Jan <liquidsky42@gmail.com>\n"
-"Language-Team: German <->\n"
-"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Gtranslator 40.0\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Wike\n"
+"Language: de\n"
 
-#: ../src/view.py:127
+#: ../src/view.py:143
 msgid "Article not found"
 msgstr "Artikel nicht gefunden"
 
-#: ../src/view.py:128
+#: ../src/view.py:144
 msgid "Can't find any results for requested query"
 msgstr "Keine Ergebnisse zur Suchanfrage gefunden"
 
-#: ../src/view.py:130
+#: ../src/view.py:146
 msgid "Can't access Wikipedia"
 msgstr "Wikipedia nicht erreichbar"
 
-#: ../src/view.py:131
+#: ../src/view.py:147
 msgid "Check your Internet connection and try again"
 msgstr "Internetverbindung überprüfen oder noch einmal versuchen"
 
-#: ../src/view.py:203
+#: ../src/view.py:219
 msgid "Recent articles"
 msgstr "Letzte Artikel"
 
-#: ../src/window.py:141 ../src/window.py:246
+#: ../src/window.py:144 ../src/window.py:249
 msgid "New bookmark: "
 msgstr "Neues Lesezeichen:"
 
-#: ../src/window.py:304
+#: ../src/window.py:307
 msgid "Wikipedia URL copied to clipboard"
 msgstr "Wikipedia URL wurde in die Zwischenablage kopiert"
-
-#: ../src/prefs.py:75
-msgid "Wikipedia main page"
-msgstr "Wikipedia Hauptseite"
-
-#: ../src/prefs.py:75 ../data/ui/menu.ui:13
-msgid "Random article"
-msgstr "Zufälliger Artikel"
-
-#: ../src/prefs.py:75
-msgid "Last article"
-msgstr "Letzter Artikel"
 
 #: ../src/search.py:249
 msgid "Default search language: "
 msgstr "Standardsprache für Suche:"
 
+#. Don't remove format tags!
 #: ../src/bookmarks.py:46
-msgid ""
-"<b>No bookmarks</b>\n"
+msgid "<b>No bookmarks</b>\n"
 "\n"
 "<small>Use the <i>Add Bookmark</i> button\n"
 "or click a link with the middle mouse button\n"
 "to add bookmarks to the list</small>"
-msgstr ""
-"<b>Keine Lesezeichen</b>\n"
+msgstr "<b>Keine Lesezeichen</b>\n"
 "\n"
 "<small>Verwenden Sie den <i>Lesezeichen hinzufügen</i> Knopf \n"
 "oder klicken Sie mit einem Mittelklick um das Lesezeichen\n"
@@ -92,15 +70,16 @@ msgid "Search suggestions"
 msgstr "Suchvorschläge"
 
 #: ../data/ui/about.ui:8
-msgid ""
-"Search and read Wikipedia articles\n"
+msgid "Search and read Wikipedia articles\n"
 "All content from Wikipedia.org\n"
 "and available under CC BY-SA 3.0 unless otherwise noted"
-msgstr ""
-"Suche und lese Wikipediaartikel\n"
+msgstr "Suche und lese Wikipediaartikel\n"
 "Alle Inhalte von Wikipedia.org\n"
 "und verfügbar unter CC BY-SA 3.0 außer anders vermerkt"
 
+#. Add your name like this:
+#. 
+#. Hugo Olabera <hugolabe@gmail.com>
 #: ../data/ui/about.ui:13
 msgid "translator-credits"
 msgstr "Jan Krings <liquidksky42@gmail.com>"
@@ -213,6 +192,10 @@ msgstr "Lesezeichen hinzufügen"
 msgid "Wikipedia Main Page"
 msgstr "Wikipedia Hauptseite"
 
+#: ../src/prefs.py:75 ../data/ui/menu.ui:13
+msgid "Random article"
+msgstr "Zufälliger Artikel"
+
 #: ../data/ui/menu.ui:18
 msgid "Recent Articles"
 msgstr "Letzte Artikel"
@@ -237,17 +220,13 @@ msgstr "Kopiere Wikipedia URL in die Zwischenablage"
 msgid "Preferences"
 msgstr "Einstellungen"
 
-#: ../data/ui/menu.ui:52
+#: ../data/ui/menu.ui:56
 msgid "Keyboard Shortcuts"
 msgstr "Tastenkombinationen"
 
-#: ../data/ui/menu.ui:56
+#: ../data/ui/menu.ui:60
 msgid "About Wike"
 msgstr "Über Wike"
-
-#: ../data/ui/prefs.ui:14
-msgid "General"
-msgstr "Allgemein"
 
 #: ../data/ui/prefs.ui:20
 msgid "Behavior"
@@ -265,6 +244,10 @@ msgstr "Liste zuletzt aufgerufener Artikel anlegen"
 msgid "Clear bookmarks list on exit"
 msgstr "Lesezeichenliste beim beenden löschen"
 
+#: ../src/prefs.py:75
+msgid "Last article"
+msgstr "Letzter Artikel"
+
 #: ../data/ui/prefs.ui:61
 msgid "Appearance"
 msgstr "Aussehen"
@@ -273,13 +256,9 @@ msgstr "Aussehen"
 msgid "Font size for articles"
 msgstr "Schriftgröße der Artikel"
 
-#: ../data/ui/prefs.ui:81
-msgid "Use custom font for articles"
-msgstr "Verwende benutzerdefinierte Schriftart für Artikel"
-
-#: ../data/ui/prefs.ui:99
-msgid "Languages"
-msgstr "Sprachen"
+#: ../data/ui/prefs.ui:14
+msgid "General"
+msgstr "Allgemein"
 
 #: ../data/ui/prefs.ui:105
 msgid "Filter available languages"
@@ -293,10 +272,15 @@ msgstr "Alles auswählen"
 msgid "Select none"
 msgstr "Nichts auswählen"
 
+#: ../data/ui/prefs.ui:99
+msgid "Languages"
+msgstr "Sprachen"
+
 #: ../data/ui/header-spinner.ui:23
 msgid "Loading Article"
 msgstr "Artikel wird geladen"
 
+#. Don't translate app name!
 #: ../data/com.github.hugolabe.Wike.desktop.in:3
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:7
 msgid "Wike"
@@ -305,29 +289,21 @@ msgstr "Wike"
 #: ../data/com.github.hugolabe.Wike.desktop.in:4
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
 msgid "Wikipedia Reader"
-msgstr "Wikipediabetrachter"
+msgstr "Wikipedialeser"
 
+#. Don't translate!
 #: ../data/com.github.hugolabe.Wike.desktop.in:5
 msgid "com.github.hugolabe.Wike"
 msgstr "com.github.hugolabe.Wike"
 
+#. Don't remove semicolons!
 #: ../data/com.github.hugolabe.Wike.desktop.in:10
 msgid "Wikipedia;Encyclopedia;"
 msgstr "Wikipedia;Enzyklopädie;"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:11
-msgid ""
-"Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the "
-"content of this online encyclopedia in a native application, with a simpler "
-"and distraction-free view of articles."
-msgstr ""
-"Wike ist ein Wikipediabetrachter für die GNOME Oberfläche. Er bietet Zugang "
-"zum kompletten Inhalt der Onlineenzyklopädie in einem nativen Programm mit "
-"einem einfachen und ablenkungesfreien Ansicht auf die Artikel."
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
-msgid "Features:"
-msgstr "Merkmale:"
+msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
+msgstr "Wike ist ein Wikipedialeser für die GNOME Oberfläche. Er bietet Zugang zum kompletten Inhalt der Onlineenzyklopädie in einem nativen Programm mit einem einfachen und ablenkungesfreien Ansicht auf die Artikel."
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
 msgid "Multiple languages"
@@ -353,6 +329,23 @@ msgstr "Inhaltsverzeichnis in Artikeln"
 msgid "View article in other languages"
 msgstr "Artikel in anderer Sprache ansehen"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:111
-msgid "Hugo Olabera"
-msgstr "Hugo Olabera"
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
+msgid "Features:"
+msgstr "Merkmale:"
+
+#: ../src/prefs.py:75
+msgid "Wikipedia main page"
+msgstr "Wikipedia Hauptseite"
+
+#: ../data/ui/prefs.ui:81
+msgid "Use custom font for articles"
+msgstr "Verwende benutzerdefinierte Schriftart für Artikel"
+
+#: ../data/ui/menu.ui:50
+msgid "Dark Mode"
+msgstr "Dunkler Modus"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
+msgid "Dark mode"
+msgstr "Dunkler Modus"
+

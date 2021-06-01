@@ -7,31 +7,31 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: el\n"
 
-#: ../src/view.py:127
+#: ../src/view.py:143
 msgid "Article not found"
 msgstr "Το άρθρο δεν βρέθηκε"
 
-#: ../src/view.py:128
+#: ../src/view.py:144
 msgid "Can't find any results for requested query"
 msgstr "Δεν βρέθηκαν αποτελέσματα"
 
-#: ../src/view.py:130
+#: ../src/view.py:146
 msgid "Can't access Wikipedia"
 msgstr "Αδύνατη η πρόσβαση στη Βικιπαίδεια"
 
-#: ../src/view.py:131
+#: ../src/view.py:147
 msgid "Check your Internet connection and try again"
 msgstr "Ελέγξτε τη σύνδεσή σας στο διαδίκτυο και ξαναπροσπαθήστε"
 
-#: ../src/view.py:203
+#: ../src/view.py:219
 msgid "Recent articles"
 msgstr "Πρόσφατα άρθρα"
 
-#: ../src/window.py:141 ../src/window.py:246
+#: ../src/window.py:144 ../src/window.py:249
 msgid "New bookmark: "
 msgstr "Νέος σελιδοείκτης: "
 
-#: ../src/window.py:304
+#: ../src/window.py:307
 msgid "Wikipedia URL copied to clipboard"
 msgstr "Επιτυχής αντιγραφή διεύθυνσης URL"
 
@@ -226,11 +226,11 @@ msgstr "Αντιγραφή διεύθυνσης URL άρθρου"
 msgid "Preferences"
 msgstr "Προτιμήσεις"
 
-#: ../data/ui/menu.ui:52
+#: ../data/ui/menu.ui:56
 msgid "Keyboard Shortcuts"
 msgstr "Συντομεύσεις πληκτρολογίου"
 
-#: ../data/ui/menu.ui:56
+#: ../data/ui/menu.ui:60
 msgid "About Wike"
 msgstr "Σχετικά με το Wike"
 
@@ -335,11 +335,6 @@ msgstr "Περιεχόμενα άρθρου"
 msgid "View article in other languages"
 msgstr "Προβολή άρθρου σε άλλη γλώσσα"
 
-#. Don't translate
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:111
-msgid "Hugo Olabera"
-msgstr "Hugo Olabera"
-
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
 msgid "Features:"
 msgstr "Χαρακτηριστικά"
@@ -351,4 +346,12 @@ msgstr "Αρχική σελίδα"
 #: ../data/ui/prefs.ui:81
 msgid "Use custom font for articles"
 msgstr "Χρήση άλλης γραμματοσειράς"
+
+#: ../data/ui/menu.ui:50
+msgid "Dark Mode"
+msgstr "Σκούρο θέμα"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
+msgid "Dark mode"
+msgstr "Σκούρο θέμα"
 

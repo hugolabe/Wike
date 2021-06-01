@@ -1,0 +1,351 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Wike\n"
+"Language: ia\n"
+
+#: ../src/view.py:143
+msgid "Article not found"
+msgstr "Articulo non trovate"
+
+#: ../src/view.py:144
+msgid "Can't find any results for requested query"
+msgstr ""
+
+#: ../src/view.py:146
+msgid "Can't access Wikipedia"
+msgstr ""
+
+#: ../src/view.py:147
+msgid "Check your Internet connection and try again"
+msgstr ""
+
+#: ../src/view.py:219
+msgid "Recent articles"
+msgstr "Articulos recente"
+
+#: ../src/window.py:144 ../src/window.py:249
+msgid "New bookmark: "
+msgstr "Nove marcapagina: "
+
+#: ../src/window.py:307
+msgid "Wikipedia URL copied to clipboard"
+msgstr "URL de Wikipedia copiate al area de transferentia"
+
+#: ../src/search.py:249
+msgid "Default search language: "
+msgstr "Lingua predefinite de recerca: "
+
+#. Don't remove format tags!
+#: ../src/bookmarks.py:46
+msgid "<b>No bookmarks</b>\n"
+"\n"
+"<small>Use the <i>Add Bookmark</i> button\n"
+"or click a link with the middle mouse button\n"
+"to add bookmarks to the list</small>"
+msgstr "<b>Sin marcapaginas</b>\n"
+"\n"
+"<small>Usa le button <i>Adder marcapagina</i> o \n"
+"clicca le ligamine con le button medie del mouse\n"
+"pro adder marcapaginas al lista</small>"
+
+#: ../src/bookmarks.py:137
+msgid "Clear Bookmarks List?"
+msgstr "Vacuar le lista de marcapaginas?"
+
+#: ../src/bookmarks.py:138
+msgid "All bookmarks in the list will be removed permanently."
+msgstr "Tote le marcapaginas in le lista essera removite permanentemente."
+
+#: ../src/bookmarks.py:139 ../data/ui/bookmarks.ui:70
+msgid "Clear List"
+msgstr "Vacuar lista"
+
+#: ../data/ui/search-settings.ui:61
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:21
+msgid "Search suggestions"
+msgstr "Cercar suggestiones"
+
+#: ../data/ui/about.ui:8
+msgid "Search and read Wikipedia articles\n"
+"All content from Wikipedia.org\n"
+"and available under CC BY-SA 3.0 unless otherwise noted"
+msgstr "Cerca e lege articulos de WIkipedia\n"
+"Tote le contento de Wikipedia.org\n"
+"e disponibile sub le licentia CC BY-SA 3.0 a minus que illo es note de altere maniera"
+
+#. Add your name like this:
+#. 
+#. Hugo Olabera <hugolabe@gmail.com>
+#: ../data/ui/about.ui:13
+msgid "translator-credits"
+msgstr "SoftInterlingua <softinterlingua@gmail.com>"
+
+#: ../data/ui/bookmarks.ui:58
+msgid "Add Bookmark"
+msgstr "Adder marcapaginas"
+
+#: ../data/ui/shortcuts.ui:14
+msgctxt "shortcut window"
+msgid "General"
+msgstr "General"
+
+#: ../data/ui/shortcuts.ui:18
+msgctxt "shortcut window"
+msgid "Table of contents"
+msgstr "Tabula del contentos"
+
+#: ../data/ui/shortcuts.ui:25
+msgctxt "shortcut window"
+msgid "View article in other languages"
+msgstr "Vider articulo in altere linguas"
+
+#: ../data/ui/shortcuts.ui:32
+msgctxt "shortcut window"
+msgid "Search text in page"
+msgstr "Cercar texto in pagina"
+
+#: ../data/ui/shortcuts.ui:39
+msgctxt "shortcut window"
+msgid "Preferences"
+msgstr "Parametros"
+
+#: ../data/ui/shortcuts.ui:46
+msgctxt "shortcut window"
+msgid "Select all"
+msgstr "Seliger toto"
+
+#: ../data/ui/shortcuts.ui:53
+msgctxt "shortcut window"
+msgid "Copy selection"
+msgstr "Copiar selection"
+
+#: ../data/ui/shortcuts.ui:60
+msgctxt "shortcut window"
+msgid "Copy Wikipedia URL"
+msgstr "Copiar URL de Wikipedia"
+
+#: ../data/ui/shortcuts.ui:67
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Quitar"
+
+#: ../data/ui/shortcuts.ui:74
+msgctxt "shortcut window"
+msgid "Keyboard shortcuts"
+msgstr "Claves de accesso directe"
+
+#: ../data/ui/shortcuts.ui:83
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Navigation"
+
+#: ../data/ui/shortcuts.ui:87
+msgctxt "shortcut window"
+msgid "Search articles"
+msgstr "Cercar articulos"
+
+#: ../data/ui/shortcuts.ui:94
+msgctxt "shortcut window"
+msgid "Wikipedia main page"
+msgstr "Pagina principal de Wikipedia"
+
+#: ../data/ui/shortcuts.ui:101
+msgctxt "shortcut window"
+msgid "Show recent articles"
+msgstr "Monstrar le articulos recente"
+
+#: ../data/ui/shortcuts.ui:108
+msgctxt "shortcut window"
+msgid "Previous page"
+msgstr "Pagina previe"
+
+#: ../data/ui/shortcuts.ui:115
+msgctxt "shortcut window"
+msgid "Next page"
+msgstr "Pagina sequente"
+
+#: ../data/ui/shortcuts.ui:122
+msgctxt "shortcut window"
+msgid "Reload page"
+msgstr "Recargar pagina"
+
+#: ../data/ui/shortcuts.ui:131
+msgctxt "shortcut window"
+msgid "Bookmarks"
+msgstr "Marcapaginas"
+
+#: ../data/ui/shortcuts.ui:135
+msgctxt "shortcut window"
+msgid "Show bookmarks"
+msgstr "Monstrar marcapaginas"
+
+#: ../data/ui/shortcuts.ui:142
+msgctxt "shortcut window"
+msgid "Add bookmark"
+msgstr "Adder marcapagina"
+
+#: ../data/ui/menu.ui:8
+msgid "Wikipedia Main Page"
+msgstr "Pagina principal de Wikipedia"
+
+#: ../src/prefs.py:75 ../data/ui/menu.ui:13
+msgid "Random article"
+msgstr "Articulo aleatori"
+
+#: ../data/ui/menu.ui:18
+msgid "Recent Articles"
+msgstr "Articulos recente"
+
+#: ../data/ui/menu.ui:23
+msgid "Reload Page"
+msgstr "Recargar le pagina"
+
+#: ../data/ui/menu.ui:30
+msgid "Search Text in Page"
+msgstr "Cercar texto in pagina"
+
+#: ../data/ui/menu.ui:36
+msgid "Open Wikipedia Page in Browser"
+msgstr "Aperir pagina de Wikipedia in le navigator"
+
+#: ../data/ui/menu.ui:40
+msgid "Copy Wikipedia URL to Clipboard"
+msgstr "Copiar URL de Wikipedia al area de transferentia"
+
+#: ../data/ui/menu.ui:46
+msgid "Preferences"
+msgstr "Parametros"
+
+#: ../data/ui/menu.ui:56
+msgid "Keyboard Shortcuts"
+msgstr "Claves de accesso directe"
+
+#: ../data/ui/menu.ui:60
+msgid "About Wike"
+msgstr "A proposito de Wike"
+
+#: ../data/ui/prefs.ui:20
+msgid "Behavior"
+msgstr "Comportamento"
+
+#: ../data/ui/prefs.ui:23
+msgid "When Wike starts load"
+msgstr "Al initio de Wike cargar"
+
+#: ../data/ui/prefs.ui:29
+msgid "Keep a list of recent articles"
+msgstr "Mantener un lista de articulos recente"
+
+#: ../data/ui/prefs.ui:43
+msgid "Clear bookmarks list on exit"
+msgstr "Vacuar le lista de marcapaginas al sortita"
+
+#: ../src/prefs.py:75
+msgid "Last article"
+msgstr "Ultime articulo"
+
+#: ../data/ui/prefs.ui:61
+msgid "Appearance"
+msgstr "Apparentia"
+
+#: ../data/ui/prefs.ui:64
+msgid "Font size for articles"
+msgstr "Dimension de typo de litteras pro articulos"
+
+#: ../data/ui/prefs.ui:14
+msgid "General"
+msgstr "General"
+
+#: ../data/ui/prefs.ui:105
+msgid "Filter available languages"
+msgstr "Filtrar le linguas disponibile"
+
+#: ../data/ui/prefs.ui:139
+msgid "Select all"
+msgstr "Seliger toto"
+
+#: ../data/ui/prefs.ui:151
+msgid "Select none"
+msgstr "Seliger nulle"
+
+#: ../data/ui/prefs.ui:99
+msgid "Languages"
+msgstr "Linguas"
+
+#: ../data/ui/header-spinner.ui:23
+msgid "Loading Article"
+msgstr "Cargante articulo"
+
+#. Don't translate app name!
+#: ../data/com.github.hugolabe.Wike.desktop.in:3
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:7
+msgid "Wike"
+msgstr "Wike"
+
+#: ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
+msgid "Wikipedia Reader"
+msgstr "Lector de Wikipedia"
+
+#. Don't translate!
+#: ../data/com.github.hugolabe.Wike.desktop.in:5
+msgid "com.github.hugolabe.Wike"
+msgstr "com.github.hugolabe.Wike"
+
+#. Don't remove semicolons!
+#: ../data/com.github.hugolabe.Wike.desktop.in:10
+msgid "Wikipedia;Encyclopedia;"
+msgstr ""
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:11
+msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
+msgstr ""
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
+msgid "Multiple languages"
+msgstr "Multiple linguas"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:22
+msgid "List of recent articles"
+msgstr "Lista de articulos recente"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:23
+msgid "Simple bookmarks management"
+msgstr "Gestion simple de marcapaginas"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:24
+msgid "Text search in articles"
+msgstr "Recerca de texto in articulos"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:25
+msgid "Article table of contents"
+msgstr "Tabula del contentos de articulo"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
+msgid "View article in other languages"
+msgstr "Vider le articulo in altere linguas"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
+msgid "Features:"
+msgstr "Characteristicas:"
+
+#: ../src/prefs.py:75
+msgid "Wikipedia main page"
+msgstr "Pagina principal de Wikipedia"
+
+#: ../data/ui/prefs.ui:81
+msgid "Use custom font for articles"
+msgstr "Usar typo de litteras personalisate pro articulos"
+
+#: ../data/ui/menu.ui:50
+msgid "Dark Mode"
+msgstr "Modo Obscur"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
+msgid "Dark mode"
+msgstr "Modo obscur"
+

@@ -93,7 +93,7 @@ class Application(Gtk.Application):
   def _prefs_cb(self, action, parameter):
     prefs_window = PrefsWindow()
     prefs_window.set_transient_for(self._window)
-    prefs_window.show()
+    prefs_window.show_all()
 
   # Set/unset dark mode for UI and view
 

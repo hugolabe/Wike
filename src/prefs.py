@@ -66,8 +66,6 @@ class PrefsWindow(Handy.PreferencesWindow):
 
     self.connect('delete-event', self._window_delete_cb)
 
-    self.show_all()
-
   # Populate list of available options for start page
 
   def _populate_on_start_combo(self):

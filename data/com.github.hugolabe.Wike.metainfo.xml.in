@@ -54,6 +54,17 @@
   </screenshots>
 
   <releases>
+    <release version="1.4.2" date="2021-06-04">
+      <description>
+        <ul>
+          <li>Added Interlingua translation.</li>
+          <li>Updated German translation.</li>
+          <li>Updated Greek translation.</li>
+          <li>Updated Italian translation.</li>
+          <li>Bug fixes.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.4.1" date="2021-05-28">
       <description>
         <ul>

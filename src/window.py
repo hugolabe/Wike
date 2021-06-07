@@ -48,7 +48,7 @@ class Window(Handy.ApplicationWindow):
 
   # Initialize window, set actions and connect signals
 
-  def __init__(self, app):
+  def __init__(self, app, launch_uri):
     super().__init__(title='Wike', application=app)
 
     # Set default window icon name for XFCE, LXQt, MATE
@@ -101,15 +101,18 @@ class Window(Handy.ApplicationWindow):
     nav_list.connect('changed', self._nav_list_changed_cb)
     self.notification_close_button.connect('clicked', self._hide_notification_cb)
 
-    if settings.get_int('on-start-load') == 0:
-      wikiview.load_main()
-    elif settings.get_int('on-start-load') == 1:
-      wikiview.load_random()
+    if launch_uri != '':
+      wikiview.load_wiki(launch_uri)
     else:
-      if settings.get_string('last-uri'):
-        wikiview.load_wiki(settings.get_string('last-uri'))
-      else:
+      if settings.get_int('on-start-load') == 0:
         wikiview.load_main()
+      elif settings.get_int('on-start-load') == 1:
+        wikiview.load_random()
+      else:
+        if settings.get_string('last-uri'):
+          wikiview.load_wiki(settings.get_string('last-uri'))
+        else:
+          wikiview.load_main()
 
   # Show spinner on wikiview load started
 

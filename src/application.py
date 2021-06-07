@@ -40,9 +40,12 @@ class Application(Gtk.Application):
   # Initialize app
 
   def __init__(self):
-    super().__init__(application_id='com.github.hugolabe.Wike', flags=Gio.ApplicationFlags.FLAGS_NONE)
+    super().__init__(application_id='com.github.hugolabe.Wike', flags=Gio.ApplicationFlags.HANDLES_COMMAND_LINE)
 
     self._window = None
+    self._launch_uri = ''
+
+    self.add_main_option('url', b'u', GLib.OptionFlags.NONE, GLib.OptionArg.STRING, 'Wikipedia URL to open', None)
 
   # Initialize webcontext with cookie manager and set actions
 
@@ -76,11 +79,25 @@ class Application(Gtk.Application):
     action.connect('activate', self._about_cb)
     self.add_action(action)
 
+  # Manage command line options
+
+  def do_command_line(self, command_line):
+    options = command_line.get_options_dict().end().unpack()
+
+    if 'url' in options:
+      self._launch_uri = options['url']
+
+    if self._window:
+      wikiview.load_wiki(self._launch_uri)
+
+    self.activate()
+    return 0
+
   # Create main window and connect delete event
 
   def do_activate(self):
     if not self._window:
-      self._window = Window(self)
+      self._window = Window(self, self._launch_uri)
       self._window.connect('delete-event',self._window_delete_cb)
       self._gtk_settings = Gtk.Settings.get_default()
       if settings.get_boolean('dark-mode'): self._gtk_settings.set_property('gtk-application-prefer-dark-theme', True)

@@ -1,15 +1,17 @@
-conf = configuration_data()
-conf.set('PYTHON', python.find_installation().path())
-conf.set('VERSION', meson.project_version())
-conf.set('localedir', join_paths(get_option('prefix'), get_option('localedir')))
-conf.set('pkgdatadir', pkgdatadir)
-
 configure_file(
   input: 'wike.in',
   output: 'wike',
   configuration: conf,
   install: true,
   install_dir: get_option('bindir')
+)
+
+configure_file(
+  input: 'wike-sp.in',
+  output: 'wike-sp',
+  configuration: conf,
+  install: true,
+  install_dir: pkgdatadir
 )
 
 wike_sources = [

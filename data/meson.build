@@ -48,6 +48,19 @@ if compile_schemas.found()
   )
 endif
 
+install_data(
+  'com.github.hugolabe.Wike.SearchProvider.ini',
+  install_dir: join_paths(get_option('prefix'), get_option('datadir'), 'gnome-shell', 'search-providers')
+)
+
+configure_file(
+  input: 'com.github.hugolabe.Wike.SearchProvider.service.in',
+  output: 'com.github.hugolabe.Wike.SearchProvider.service',
+  configuration: conf,
+  install: true,
+  install_dir: join_paths(get_option('prefix'), get_option('datadir'), 'dbus-1', 'services')
+)
+
 icondir = join_paths(get_option('prefix'), get_option('datadir'), 'icons', 'hicolor')
 install_data('icons/com.github.hugolabe.Wike.svg', install_dir: join_paths(icondir, 'scalable/apps'))
 install_data('icons/com.github.hugolabe.Wike-symbolic.svg', install_dir: join_paths(icondir, 'symbolic/apps'))

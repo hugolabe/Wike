@@ -1,0 +1,128 @@
+#!@PYTHON@
+
+# wike-sp.in
+#
+# This file is part of Wike, a Wikipedia Reader for the GNOME Desktop.
+# Copyright 2021 Hugo Olabera <hugolabe@gmail.com>.
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+
+from threading import Thread
+
+import dbus
+import dbus.service
+from dbus.mainloop.glib import DBusGMainLoop
+
+from gi.repository import GLib, Gio
+
+from wike import wikipedia
+from wike.data import settings
+
+
+sbn = dict(dbus_interface='org.gnome.Shell.SearchProvider2')
+
+
+# Search provider service class
+# Add D-Bus service for integration with GNOME Shell search
+
+class WikeSearchService(dbus.service.Object):
+
+  # Initialize D-Bus service and objects
+
+  def __init__(self):
+    bus_name = dbus.service.BusName('com.github.hugolabe.Wike.SearchProvider', bus=dbus.SessionBus())
+    dbus.service.Object.__init__(self, bus_name, '/com/github/hugolabe/Wike/SearchProvider')
+
+    self._results = dict()
+    self._search_thread = None
+
+    if settings.get_string('search-language') != 'en':
+      wikipedia.set_lang(settings.get_string('search-language'))
+    settings.connect('changed::search-language', self._search_lang_changed_cb)
+
+  # Get results for first search
+
+  @dbus.service.method(in_signature='as', out_signature='as', **sbn)
+  def GetInitialResultSet(self, terms):
+    text = ' '.join(terms)
+    self._results.clear()
+
+    if len(text) > 2:
+      self._get_results(text)
+
+    return self._results.keys()
+
+  # Get results for next searchs
+
+  @dbus.service.method(in_signature='asas', out_signature='as', **sbn)
+  def GetSubsearchResultSet(self, previous_results, new_terms):
+    return self.GetInitialResultSet(new_terms)
+
+  # Get detailed information for results
+
+  @dbus.service.method(in_signature='as', out_signature='aa{sv}', **sbn)
+  def GetResultMetas(self, ids):
+    metas = []
+    for item in ids:
+      if item in self._results:
+        meta = dict(id=item, name=self._results[item])
+        metas.append(meta)
+
+    return metas
+
+  # Open clicked result in Wike app
+
+  @dbus.service.method(in_signature='sasu', **sbn)
+  def ActivateResult(self, id, terms, timestamp):
+    GLib.spawn_async_with_pipes( None, ['@BIN@', '--url', id], None, GLib.SpawnFlags.SEARCH_PATH, None )
+
+  # Open Wike app on its current page
+
+  @dbus.service.method(in_signature='asu', terms='as', timestamp='u', **sbn)
+  def LaunchSearch(self, terms, timestamp):
+    GLib.spawn_async_with_pipes( None, ['@BIN@'], None, GLib.SpawnFlags.SEARCH_PATH, None )
+
+  # Run Wikipedia search in new thread
+
+  def _get_results(self, text):
+    if self._search_thread: self._search_thread.join()
+    self._search_thread = Thread(target=self._search_wikipedia, args=(text, ))
+    self._search_thread.start()
+    self._search_thread.join()
+    self._search_thread = None
+
+  # Search text in Wikipedia and load results dict
+
+  def _search_wikipedia(self, text):
+    try:
+      found = wikipedia.search(text.lower(), 5)
+    except:
+      found = None
+    if found:
+      for title, url in zip(found[0], found[1]):
+        self._results[url] = title
+
+  # Search language changed in app settings
+
+  def _search_lang_changed_cb(self, settings, key):
+    search_lang = settings.get_string('search-language')
+    wikipedia.set_lang(search_lang)
+
+
+if __name__ == "__main__":
+  DBusGMainLoop(set_as_default=True)
+  WikeSearchService()
+  GLib.MainLoop().run()
+

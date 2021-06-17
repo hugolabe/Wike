@@ -122,13 +122,13 @@ class SearchEntry(Gtk.SearchEntry):
       try:
         result = wikipedia.search(text.lower(), 1)
       except:
-        wikiview.load_message('error')
+        wikiview.load_message('notfound', None)
       else:
         if result != None:
           uri = result[1][0]
           wikiview.load_wiki(uri)
         else:
-          wikiview.load_message('notfound')
+          wikiview.load_message('notfound', None)
 
 
 # Popover class for search suggestions

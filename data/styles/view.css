@@ -131,6 +131,24 @@ h1 {
   text-align: center;
 }
 
+#wike-message p {
+  margin-bottom: 32px;
+}
+
+#wike-message a.btn {
+  padding: 8px 16px;
+  color: #222;
+  background-color: #f8f8f8;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: background-color .3s;
+}
+
+#wike-message a.btn:hover {
+  background-color: #eee;
+}
+
 #wike-historic {
   margin: 2em auto;
   width: 80%;

@@ -137,7 +137,7 @@ class Window(Handy.ApplicationWindow):
 
   def _wikiview_load_failed_cb(self, wikiview, event, uri, error):
     if not wikiview.is_loading():
-      wikiview.load_message('error')
+      wikiview.load_message('error', uri)
     return True
 
   # On webview bookmark added show notification

@@ -132,11 +132,11 @@ class WikiView(WebKit2.WebView):
       uri = wikipedia.get_random()
       self.load_wiki(uri)
     except:
-      self.load_message('notfound')
+      self.load_message('notfound', None)
 
   # Create and load html for message page
 
-  def load_message(self, message_type):
+  def load_message(self, message_type, fail_uri):
     self.emit('load-wiki')
 
     if message_type == 'notfound':
@@ -146,8 +146,13 @@ class WikiView(WebKit2.WebView):
       title = _('Can\'t access Wikipedia')
       message = _('Check your Internet connection and try again')
 
+    if fail_uri:
+      button = '<a href="' + fail_uri + '" class="btn">' + _('Try again') + '</a>\n'
+    else:
+      button = ''
+
     html = '<!DOCTYPE html>\n<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />\n<title>Wike</title>\n</head>\n\
-<body class="wike-body">\n<div id="wike-message">\n<h1>:-(</h1>\n<h3>' + title + '</h3>\n<p>' + message + '</p>\n</div>\n</body>\n</html>\n'
+<body class="wike-body">\n<div id="wike-message">\n<h1>:-(</h1>\n<h3>' + title + '</h3>\n<p>' + message + '</p>\n' + button + '</div>\n</body>\n</html>\n'
 
     uri = 'about:' + message_type
     self.load_html(html, uri)
@@ -188,8 +193,6 @@ class WikiView(WebKit2.WebView):
       uri_path = uri_elements[2]
       if uri_path == 'historic':
         self.load_historic()
-      else:
-        self.load_message(uri_path)
     else:
       self.emit('load-wiki')
       self.reload_bypass_cache()
@@ -283,7 +286,7 @@ class WikiView(WebKit2.WebView):
       uri_path = uri_elements[2]
       uri_fragment = uri_elements[5]
       if nav_type == WebKit2.NavigationType.LINK_CLICKED:
-        if uri_netloc.endswith('.wikipedia.org') and uri_path.startswith('/wiki/'):
+        if uri_netloc.endswith('.wikipedia.org') and (uri_path.startswith('/wiki/') or uri_path == '/'):
           base_uri_elements = (uri_elements[0], uri_elements[1].replace('.m.', '.'), uri_elements[2], '', '', '')
           base_uri = urllib.parse.urlunparse(base_uri_elements)
           if mouse_button == 2:
@@ -302,11 +305,8 @@ class WikiView(WebKit2.WebView):
           decision.ignore()
           Gtk.show_uri(None, uri, Gdk.CURRENT_TIME)
       elif nav_type == WebKit2.NavigationType.RELOAD or nav_type == WebKit2.NavigationType.BACK_FORWARD:
-        if uri_scheme == 'about':
-          if uri_path == 'historic':
-            self.load_historic()
-          else:
-            self.load_message(uri_path)
+        if uri_scheme == 'about' and uri_path == 'historic':
+          self.load_historic()
       elif nav_type == WebKit2.NavigationType.OTHER:
         if uri_netloc.startswith('upload.'): decision.ignore()
     return True

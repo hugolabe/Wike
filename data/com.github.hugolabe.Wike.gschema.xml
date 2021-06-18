@@ -47,6 +47,11 @@
       <summary>Font family for custom font</summary>
     </key>
 
+    <key name="preview-popups" type="b">
+      <default>false</default>
+      <summary>Show preview popups in article links</summary>
+    </key>
+
     <key name="window-width" type="i">
       <default>900</default>
       <summary>Horizontal size of window</summary>

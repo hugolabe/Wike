@@ -39,6 +39,7 @@ class PrefsWindow(Handy.PreferencesWindow):
   font_size_spin = Gtk.Template.Child()
   custom_font_switch = Gtk.Template.Child()
   custom_font_combo = Gtk.Template.Child()
+  preview_popups_switch = Gtk.Template.Child()
   languages_list = Gtk.Template.Child()
   select_all_button = Gtk.Template.Child()
   select_none_button = Gtk.Template.Child()
@@ -58,6 +59,7 @@ class PrefsWindow(Handy.PreferencesWindow):
     settings.bind('clear-bookmarks', self.clear_bookmarks_switch, 'active', Gio.SettingsBindFlags.DEFAULT)
     settings.bind('font-size', self.font_size_spin, 'value', Gio.SettingsBindFlags.DEFAULT)
     settings.bind('custom-font', self.custom_font_switch, 'active', Gio.SettingsBindFlags.DEFAULT)
+    settings.bind('preview-popups', self.preview_popups_switch, 'active', Gio.SettingsBindFlags.DEFAULT)
 
     self.custom_font_combo.connect('notify::selected-index', self._custom_font_combo_selected_cb)
     self.languages_list.connect('row-activated', self._languages_list_selected_cb)

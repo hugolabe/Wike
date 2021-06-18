@@ -102,7 +102,12 @@ h1 {
   display: none !important;
 }
 
-.mwe-popups {
+.mwe-popups .mwe-popups-extract {
+  text-decoration: none !important;
+  color: #202122 !important;
+}
+
+.mwe-popups .mwe-popups-settings-icon {
   display: none !important;
 }
 

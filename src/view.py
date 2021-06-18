@@ -47,6 +47,7 @@ class WikiView(WebKit2.WebView):
     settings.connect('changed::font-size', self._settings_font_size_changed_cb, web_settings)
     settings.connect('changed::custom-font', self._settings_custom_font_changed_cb)
     settings.connect('changed::font-family', self._settings_custom_font_changed_cb)
+    settings.connect('changed::preview-popups', self._settings_preview_popups_changed_cb)
 
     gfile = Gio.File.new_for_uri('resource:///com/github/hugolabe/Wike/styles/view.min.css')
     try:
@@ -78,6 +79,11 @@ class WikiView(WebKit2.WebView):
   def _settings_custom_font_changed_cb(self, settings, key):
     self.set_style()
 
+  # Settings preview popups changed event
+
+  def _settings_preview_popups_changed_cb(self, settings, key):
+    self.set_style()
+
   # Inyect stylesheet for customize article view
 
   def set_style(self):
@@ -98,6 +104,11 @@ class WikiView(WebKit2.WebView):
       css_font = 'body,h1,h2{font-family:"' + settings.get_string('font-family') + '"!important}'
       style_font = WebKit2.UserStyleSheet(css_font, WebKit2.UserContentInjectedFrames.ALL_FRAMES, WebKit2.UserStyleLevel.USER, None, None)
       user_content.add_style_sheet(style_font)
+
+    if not settings.get_boolean('preview-popups'):
+      css_previews = '.mwe-popups{display:none!important}'
+      style_previews = WebKit2.UserStyleSheet(css_previews, WebKit2.UserContentInjectedFrames.ALL_FRAMES, WebKit2.UserStyleLevel.USER, None, None)
+      user_content.add_style_sheet(style_previews)
 
   # Check connection and load Wikipedia article by URI
 

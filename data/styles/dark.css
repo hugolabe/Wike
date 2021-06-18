@@ -41,9 +41,13 @@ a.new:not(.image-details a, .wikitable a, .infobox a, .infobox_v2 a, .infobox_v3
   filter: invert(100%);
 }
 
+.mwe-popups {
+  filter: invert(100%);
+}
+
 /* Images */
 
-.thumb img {
+.thumb img, .mwe-popups-thumbnail {
   background-color: #ccc !important;
 }
 

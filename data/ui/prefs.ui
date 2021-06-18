@@ -3,7 +3,7 @@
   <requires lib="gtk+" version="3.24"/>
   <requires lib="libhandy" version="1.0"/>
   <template class="PrefsWindow" parent="HdyPreferencesWindow">
-    <property name="default_height">480</property>
+    <property name="default_height">520</property>
     <property name="default_width">480</property>
     <property name="modal">True</property>
     <property name="window_position">center-on-parent</property>
@@ -82,6 +82,20 @@
                 <property name="visible">True</property>
                 <child type="prefix">
                   <object class="GtkSwitch" id="custom_font_switch">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="valign">center</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="HdyActionRow">
+                <property name="title" translatable="yes">Show preview popups in article links</property>
+                <property name="visible">True</property>
+                <property name="activatable_widget">preview_popups_switch</property>
+                <child>
+                  <object class="GtkSwitch" id="preview_popups_switch">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="valign">center</property>

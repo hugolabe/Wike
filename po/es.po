@@ -7,31 +7,31 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: es\n"
 
-#: ../src/view.py:143
+#: ../src/view.py:154
 msgid "Article not found"
 msgstr "Artículo no encontrado"
 
-#: ../src/view.py:144
+#: ../src/view.py:155
 msgid "Can't find any results for requested query"
 msgstr "No se han encontrado resultados para la búsqueda solicitada"
 
-#: ../src/view.py:146
+#: ../src/view.py:157
 msgid "Can't access Wikipedia"
 msgstr "No se puede acceder a Wikipedia"
 
-#: ../src/view.py:147
+#: ../src/view.py:158
 msgid "Check your Internet connection and try again"
 msgstr "Comprueba tu conexión a Internet e inténtalo de nuevo"
 
-#: ../src/view.py:219
+#: ../src/view.py:233
 msgid "Recent articles"
 msgstr "Artículos recientes"
 
-#: ../src/window.py:144 ../src/window.py:249
+#: ../src/window.py:147 ../src/window.py:252
 msgid "New bookmark: "
 msgstr "Nuevo marcador: "
 
-#: ../src/window.py:307
+#: ../src/window.py:310
 msgid "Wikipedia URL copied to clipboard"
 msgstr "URL de Wikipedia copiada al portapapeles"
 
@@ -260,19 +260,19 @@ msgstr "Tamaño de fuente"
 msgid "General"
 msgstr "General"
 
-#: ../data/ui/prefs.ui:105
+#: ../data/ui/prefs.ui:119
 msgid "Filter available languages"
 msgstr "Filtrar lenguajes disponibles"
 
-#: ../data/ui/prefs.ui:139
+#: ../data/ui/prefs.ui:153
 msgid "Select all"
 msgstr "Seleccionar todo"
 
-#: ../data/ui/prefs.ui:151
+#: ../data/ui/prefs.ui:165
 msgid "Select none"
 msgstr "Seleccionar nada"
 
-#: ../data/ui/prefs.ui:99
+#: ../data/ui/prefs.ui:113
 msgid "Languages"
 msgstr "Lenguajes"
 
@@ -290,11 +290,6 @@ msgstr "Wike"
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
 msgid "Wikipedia Reader"
 msgstr "Lector de Wikipedia"
-
-#. Don't translate!
-#: ../data/com.github.hugolabe.Wike.desktop.in:5
-msgid "com.github.hugolabe.Wike"
-msgstr "com.github.hugolabe.Wike"
 
 #. Don't remove semicolons!
 #: ../data/com.github.hugolabe.Wike.desktop.in:10
@@ -345,7 +340,19 @@ msgstr "Usar tipografía personalizada"
 msgid "Dark Mode"
 msgstr "Modo oscuro"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
 msgid "Dark mode"
 msgstr "Modo oscuro"
+
+#: ../src/view.py:161
+msgid "Try again"
+msgstr "Intentar de nuevo"
+
+#: ../data/ui/prefs.ui:94
+msgid "Show preview popups in article links"
+msgstr "Mostrar previsualizaciones en los enlaces"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
+msgid "GNOME Shell search integration"
+msgstr "Integración con la búsqueda de GNOME Shell"
 

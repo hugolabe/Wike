@@ -16,6 +16,8 @@ Provides access to all the content of this online encyclopedia in a native appli
 - Text search in articles
 - Article table of contents
 - View article in other languages
+- GNOME Shell search integration
+- Dark mode
 
 ## Install
 

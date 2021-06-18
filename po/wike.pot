@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wike\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-21 15:51+0200\n"
+"POT-Creation-Date: 2021-06-18 10:57+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -11,31 +11,39 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/view.py:143
+#: ../src/view.py:154
 msgid "Article not found"
 msgstr ""
 
-#: ../src/view.py:144
+#: ../src/view.py:155
 msgid "Can't find any results for requested query"
 msgstr ""
 
-#: ../src/view.py:146
+#: ../src/view.py:157
 msgid "Can't access Wikipedia"
 msgstr ""
 
-#: ../src/view.py:147
+#: ../src/view.py:158
 msgid "Check your Internet connection and try again"
 msgstr ""
 
-#: ../src/view.py:219
+#: ../src/view.py:161
+msgid "Try again"
+msgstr ""
+
+#: ../src/view.py:233
 msgid "Recent articles"
 msgstr ""
 
-#: ../src/window.py:144 ../src/window.py:249
+#: ../src/search.py:249
+msgid "Default search language: "
+msgstr ""
+
+#: ../src/window.py:147 ../src/window.py:252
 msgid "New bookmark: "
 msgstr ""
 
-#: ../src/window.py:307
+#: ../src/window.py:310
 msgid "Wikipedia URL copied to clipboard"
 msgstr ""
 
@@ -49,10 +57,6 @@ msgstr ""
 
 #: ../src/prefs.py:75
 msgid "Last article"
-msgstr ""
-
-#: ../src/search.py:249
-msgid "Default search language: "
 msgstr ""
 
 #: ../src/bookmarks.py:46
@@ -76,24 +80,8 @@ msgstr ""
 msgid "Clear List"
 msgstr ""
 
-#: ../data/ui/search-settings.ui:61
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:21
-msgid "Search suggestions"
-msgstr ""
-
-#: ../data/ui/about.ui:8
-msgid ""
-"Search and read Wikipedia articles\n"
-"All content from Wikipedia.org\n"
-"and available under CC BY-SA 3.0 unless otherwise noted"
-msgstr ""
-
-#: ../data/ui/about.ui:13
-msgid "translator-credits"
-msgstr ""
-
-#: ../data/ui/bookmarks.ui:58
-msgid "Add Bookmark"
+#: ../data/ui/header-spinner.ui:23
+msgid "Loading Article"
 msgstr ""
 
 #: ../data/ui/shortcuts.ui:14
@@ -196,6 +184,74 @@ msgctxt "shortcut window"
 msgid "Add bookmark"
 msgstr ""
 
+#: ../data/ui/about.ui:8
+msgid ""
+"Search and read Wikipedia articles\n"
+"All content from Wikipedia.org\n"
+"and available under CC BY-SA 3.0 unless otherwise noted"
+msgstr ""
+
+#: ../data/ui/about.ui:13
+msgid "translator-credits"
+msgstr ""
+
+#: ../data/ui/search-settings.ui:61
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:21
+msgid "Search suggestions"
+msgstr ""
+
+#: ../data/ui/prefs.ui:14
+msgid "General"
+msgstr ""
+
+#: ../data/ui/prefs.ui:20
+msgid "Behavior"
+msgstr ""
+
+#: ../data/ui/prefs.ui:23
+msgid "When Wike starts load"
+msgstr ""
+
+#: ../data/ui/prefs.ui:29
+msgid "Keep a list of recent articles"
+msgstr ""
+
+#: ../data/ui/prefs.ui:43
+msgid "Clear bookmarks list on exit"
+msgstr ""
+
+#: ../data/ui/prefs.ui:61
+msgid "Appearance"
+msgstr ""
+
+#: ../data/ui/prefs.ui:64
+msgid "Font size for articles"
+msgstr ""
+
+#: ../data/ui/prefs.ui:81
+msgid "Use custom font for articles"
+msgstr ""
+
+#: ../data/ui/prefs.ui:94
+msgid "Show preview popups in article links"
+msgstr ""
+
+#: ../data/ui/prefs.ui:113
+msgid "Languages"
+msgstr ""
+
+#: ../data/ui/prefs.ui:119
+msgid "Filter available languages"
+msgstr ""
+
+#: ../data/ui/prefs.ui:153
+msgid "Select all"
+msgstr ""
+
+#: ../data/ui/prefs.ui:165
+msgid "Select none"
+msgstr ""
+
 #: ../data/ui/menu.ui:8
 msgid "Wikipedia Main Page"
 msgstr ""
@@ -236,56 +292,8 @@ msgstr ""
 msgid "About Wike"
 msgstr ""
 
-#: ../data/ui/prefs.ui:14
-msgid "General"
-msgstr ""
-
-#: ../data/ui/prefs.ui:20
-msgid "Behavior"
-msgstr ""
-
-#: ../data/ui/prefs.ui:23
-msgid "When Wike starts load"
-msgstr ""
-
-#: ../data/ui/prefs.ui:29
-msgid "Keep a list of recent articles"
-msgstr ""
-
-#: ../data/ui/prefs.ui:43
-msgid "Clear bookmarks list on exit"
-msgstr ""
-
-#: ../data/ui/prefs.ui:61
-msgid "Appearance"
-msgstr ""
-
-#: ../data/ui/prefs.ui:64
-msgid "Font size for articles"
-msgstr ""
-
-#: ../data/ui/prefs.ui:81
-msgid "Use custom font for articles"
-msgstr ""
-
-#: ../data/ui/prefs.ui:99
-msgid "Languages"
-msgstr ""
-
-#: ../data/ui/prefs.ui:105
-msgid "Filter available languages"
-msgstr ""
-
-#: ../data/ui/prefs.ui:139
-msgid "Select all"
-msgstr ""
-
-#: ../data/ui/prefs.ui:151
-msgid "Select none"
-msgstr ""
-
-#: ../data/ui/header-spinner.ui:23
-msgid "Loading Article"
+#: ../data/ui/bookmarks.ui:58
+msgid "Add Bookmark"
 msgstr ""
 
 #: ../data/com.github.hugolabe.Wike.desktop.in:3
@@ -296,10 +304,6 @@ msgstr ""
 #: ../data/com.github.hugolabe.Wike.desktop.in:4
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
 msgid "Wikipedia Reader"
-msgstr ""
-
-#: ../data/com.github.hugolabe.Wike.desktop.in:5
-msgid "com.github.hugolabe.Wike"
 msgstr ""
 
 #: ../data/com.github.hugolabe.Wike.desktop.in:10
@@ -339,6 +343,10 @@ msgid "View article in other languages"
 msgstr ""
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
+msgid "GNOME Shell search integration"
+msgstr ""
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
 msgid "Dark mode"
 msgstr ""
 

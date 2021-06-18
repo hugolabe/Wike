@@ -55,6 +55,16 @@
   </screenshots>
 
   <releases>
+    <release version="1.5.0" date="2021-06-18">
+      <description>
+        <ul>
+          <li>GNOME Shell search integration.</li>
+          <li>Added an option in preferences to show preview popups in article links.</li>
+          <li>Added retry button in view when page fails to load.</li>
+          <li>Updated Spanish translation.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.4.2" date="2021-06-04">
       <description>
         <ul>

@@ -7,31 +7,31 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: nl\n"
 
-#: ../src/view.py:143
+#: ../src/view.py:154
 msgid "Article not found"
 msgstr "Het artikel kan niet worden gevonden"
 
-#: ../src/view.py:144
+#: ../src/view.py:155
 msgid "Can't find any results for requested query"
 msgstr "Er zijn geen resultaten gevonden voor uw zoekopdracht"
 
-#: ../src/view.py:146
+#: ../src/view.py:157
 msgid "Can't access Wikipedia"
 msgstr "Geen Wikipedia-toegang"
 
-#: ../src/view.py:147
+#: ../src/view.py:158
 msgid "Check your Internet connection and try again"
 msgstr "Controleer uw internetverbinding en probeer het opnieuw"
 
-#: ../src/view.py:219
+#: ../src/view.py:233
 msgid "Recent articles"
 msgstr "Recente artikelen"
 
-#: ../src/window.py:144 ../src/window.py:249
+#: ../src/window.py:147 ../src/window.py:252
 msgid "New bookmark: "
 msgstr "Nieuwe bladwijzer: "
 
-#: ../src/window.py:307
+#: ../src/window.py:310
 msgid "Wikipedia URL copied to clipboard"
 msgstr "De Wikipedia-url is gekopieerd naar het klembord"
 
@@ -261,19 +261,19 @@ msgstr "Tekstgrootte van artikelen"
 msgid "General"
 msgstr "Algemeen"
 
-#: ../data/ui/prefs.ui:105
+#: ../data/ui/prefs.ui:119
 msgid "Filter available languages"
 msgstr "Beschikbare talen filteren"
 
-#: ../data/ui/prefs.ui:139
+#: ../data/ui/prefs.ui:153
 msgid "Select all"
 msgstr "Alles selecteren"
 
-#: ../data/ui/prefs.ui:151
+#: ../data/ui/prefs.ui:165
 msgid "Select none"
 msgstr "Niets selecteren"
 
-#: ../data/ui/prefs.ui:99
+#: ../data/ui/prefs.ui:113
 msgid "Languages"
 msgstr "Talen"
 
@@ -291,11 +291,6 @@ msgstr "Wike"
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
 msgid "Wikipedia Reader"
 msgstr "Wikipedia-leeshulpmiddel"
-
-#. Don't translate!
-#: ../data/com.github.hugolabe.Wike.desktop.in:5
-msgid "com.github.hugolabe.Wike"
-msgstr "com.github.hugolabe.Wike"
 
 #. Don't remove semicolons!
 #: ../data/com.github.hugolabe.Wike.desktop.in:10
@@ -346,7 +341,19 @@ msgstr "Eigen lettertype gebruiken"
 msgid "Dark Mode"
 msgstr "Donker thema"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
 msgid "Dark mode"
 msgstr "Donker thema"
+
+#: ../src/view.py:161
+msgid "Try again"
+msgstr "Opnieuw proberen"
+
+#: ../data/ui/prefs.ui:94
+msgid "Show preview popups in article links"
+msgstr "Voorvertoning tonen na aanwijzen van artikellink"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
+msgid "GNOME Shell search integration"
+msgstr "GNOME Shell-zoekintegratie"
 

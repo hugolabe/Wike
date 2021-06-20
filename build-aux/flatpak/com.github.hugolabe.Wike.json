@@ -14,16 +14,16 @@
     "--own-name=com.github.hugolabe.Wike.SearchProvider"
   ],
   "modules" : [
-  	"python3-dbus-python.json",
-  	"python3-requests.json",
+    "python3-dbus-python.json",
+    "python3-requests.json",
     {
       "name" : "wike",
       "buildsystem" : "meson",
       "builddir" : true,
       "sources" : [
         {
-          "type" : "git",
-          "url" : "https://github.com/hugolabe/Wike.git"
+          "type" : "dir",
+          "path" : "../../."
         }
       ]
     }

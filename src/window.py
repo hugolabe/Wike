@@ -101,18 +101,21 @@ class Window(Handy.ApplicationWindow):
     nav_list.connect('changed', self._nav_list_changed_cb)
     self.notification_close_button.connect('clicked', self._hide_notification_cb)
 
-    if launch_uri != '':
-      wikiview.load_wiki(launch_uri)
+    if launch_uri == 'notfound':
+      wikiview.load_message(launch_uri, None)
     else:
-      if settings.get_int('on-start-load') == 0:
-        wikiview.load_main()
-      elif settings.get_int('on-start-load') == 1:
-        wikiview.load_random()
+      if launch_uri != '':
+        wikiview.load_wiki(launch_uri)
       else:
-        if settings.get_string('last-uri'):
-          wikiview.load_wiki(settings.get_string('last-uri'))
-        else:
+        if settings.get_int('on-start-load') == 0:
           wikiview.load_main()
+        elif settings.get_int('on-start-load') == 1:
+          wikiview.load_random()
+        else:
+          if settings.get_string('last-uri'):
+            wikiview.load_wiki(settings.get_string('last-uri'))
+          else:
+            wikiview.load_main()
 
   # Show spinner on wikiview load started
 

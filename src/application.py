@@ -88,7 +88,10 @@ class Application(Gtk.Application):
       self._launch_uri = options['url']
 
     if self._window:
-      wikiview.load_wiki(self._launch_uri)
+      if self._launch_uri == 'notfound':
+        wikiview.load_message(self._launch_uri, None)
+      else:
+        wikiview.load_wiki(self._launch_uri)
 
     self.activate()
     return 0

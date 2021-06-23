@@ -30,5 +30,6 @@ src/prefs.py
 src/search.py
 src/toc.py
 src/view.py
+src/wike-sp.in
 src/wikipedia.py
 src/window.py

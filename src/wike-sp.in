@@ -19,6 +19,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 
+import gettext
 from threading import Thread
 
 import dbus
@@ -30,6 +31,9 @@ from gi.repository import GLib, Gio
 from wike import wikipedia
 from wike.data import settings
 
+
+localedir = '@localedir@'
+gettext.install('wike', localedir)
 
 sbn = dict(dbus_interface='org.gnome.Shell.SearchProvider2')
 
@@ -60,7 +64,12 @@ class WikeSearchService(dbus.service.Object):
     self._results.clear()
 
     if len(text) > 2:
-      self._get_results(text)
+      if settings.get_boolean('search-desktop'):
+        self._get_results(text)
+      else:
+        key = 'search:' + text
+        value = _('Search «%s» in Wikipedia') % text
+        self._results[key] = value
 
     return self._results.keys()
 
@@ -86,7 +95,18 @@ class WikeSearchService(dbus.service.Object):
 
   @dbus.service.method(in_signature='sasu', **sbn)
   def ActivateResult(self, id, terms, timestamp):
-    GLib.spawn_async_with_pipes( None, ['@BIN@', '--url', id], None, GLib.SpawnFlags.SEARCH_PATH, None )
+    if id.startswith('search'):
+      self._results.clear()
+      text = id.replace('search:', '', 1)
+      self._get_results(text)
+      if len(self._results) > 0:
+        uri = list(self._results.keys())[0]
+      else:
+        uri = 'notfound'
+    else:
+      uri = id
+
+    GLib.spawn_async_with_pipes( None, ['@BIN@', '--url', uri], None, GLib.SpawnFlags.SEARCH_PATH, None )
 
   # Open Wike app on its current page
 

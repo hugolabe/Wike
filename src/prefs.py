@@ -34,12 +34,13 @@ class PrefsWindow(Handy.PreferencesWindow):
   __gtype_name__ = 'PrefsWindow'
 
   on_start_combo = Gtk.Template.Child()
-  historic_switch = Gtk.Template.Child()
   clear_bookmarks_switch = Gtk.Template.Child()
   font_size_spin = Gtk.Template.Child()
   custom_font_switch = Gtk.Template.Child()
   custom_font_combo = Gtk.Template.Child()
   preview_popups_switch = Gtk.Template.Child()
+  desktop_search_switch = Gtk.Template.Child()
+  historic_switch = Gtk.Template.Child()
   languages_list = Gtk.Template.Child()
   select_all_button = Gtk.Template.Child()
   select_none_button = Gtk.Template.Child()
@@ -55,11 +56,12 @@ class PrefsWindow(Handy.PreferencesWindow):
     self._populate_languages_list()
 
     settings.bind('on-start-load', self.on_start_combo, 'selected-index', Gio.SettingsBindFlags.DEFAULT)
-    settings.bind('keep-historic', self.historic_switch, 'active', Gio.SettingsBindFlags.DEFAULT)
     settings.bind('clear-bookmarks', self.clear_bookmarks_switch, 'active', Gio.SettingsBindFlags.DEFAULT)
     settings.bind('font-size', self.font_size_spin, 'value', Gio.SettingsBindFlags.DEFAULT)
     settings.bind('custom-font', self.custom_font_switch, 'active', Gio.SettingsBindFlags.DEFAULT)
     settings.bind('preview-popups', self.preview_popups_switch, 'active', Gio.SettingsBindFlags.DEFAULT)
+    settings.bind('search-desktop', self.desktop_search_switch, 'active', Gio.SettingsBindFlags.DEFAULT)
+    settings.bind('keep-historic', self.historic_switch, 'active', Gio.SettingsBindFlags.DEFAULT)
 
     self.custom_font_combo.connect('notify::selected-index', self._custom_font_combo_selected_cb)
     self.languages_list.connect('row-activated', self._languages_list_selected_cb)

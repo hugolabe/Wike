@@ -136,8 +136,16 @@
                 <property name="subtitle" translatable="yes">Wike will remember the history of visited articles</property>
                 <property name="visible">True</property>
                 <property name="activatable_widget">historic_switch</property>
-                <child>
+                <child type="prefix">
                   <object class="GtkSwitch" id="historic_switch">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="valign">center</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton" id="clear_historic_button">
+                    <property name="label" translatable="yes">Clear</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="valign">center</property>

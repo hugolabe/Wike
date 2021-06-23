@@ -22,7 +22,7 @@ gi.require_version('Gtk', '3.0')
 gi.require_version('Handy', '1')
 from gi.repository import Gio, Gtk, Handy
 
-from wike.data import settings, languages
+from wike.data import settings, languages, historic
 
 
 # Preferences window
@@ -41,6 +41,7 @@ class PrefsWindow(Handy.PreferencesWindow):
   preview_popups_switch = Gtk.Template.Child()
   desktop_search_switch = Gtk.Template.Child()
   historic_switch = Gtk.Template.Child()
+  clear_historic_button = Gtk.Template.Child()
   languages_list = Gtk.Template.Child()
   select_all_button = Gtk.Template.Child()
   select_none_button = Gtk.Template.Child()
@@ -64,6 +65,7 @@ class PrefsWindow(Handy.PreferencesWindow):
     settings.bind('keep-historic', self.historic_switch, 'active', Gio.SettingsBindFlags.DEFAULT)
 
     self.custom_font_combo.connect('notify::selected-index', self._custom_font_combo_selected_cb)
+    self.clear_historic_button.connect('clicked', self._clear_historic_button_cb)
     self.languages_list.connect('row-activated', self._languages_list_selected_cb)
     self.select_all_button.connect('clicked', self._select_all_button_cb)
     self.select_none_button.connect('clicked', self._select_none_button_cb)
@@ -131,6 +133,25 @@ class PrefsWindow(Handy.PreferencesWindow):
     index = custom_font_combo.get_selected_index()
     font = model.get_item(index).dup_string()
     settings.set_string('font-family', font)
+
+  # On button click clear history of visited articles
+
+  def _clear_historic_button_cb(self, clear_historic_button):
+    clear_dialog = Gtk.MessageDialog(self,
+                                     Gtk.DialogFlags.MODAL,
+                                     Gtk.MessageType.WARNING,
+                                     Gtk.ButtonsType.CANCEL,
+                                     _('Clear Historic?'))
+    clear_dialog.set_property('secondary-text', _('The history of visited articles will be deleted permanently.'))
+    clear_dialog.add_buttons(_('Clear Historic'), Gtk.ResponseType.YES)
+
+    response = clear_dialog.run()
+    clear_dialog.destroy()
+    if response == Gtk.ResponseType.CANCEL:
+      return
+
+    historic.clear()
+    historic.save()
 
   # On row selected set language check button
 

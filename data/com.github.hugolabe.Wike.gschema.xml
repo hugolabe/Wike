@@ -22,6 +22,11 @@
       <summary>Show search suggestions</summary>
     </key>
 
+    <key name="search-desktop" type="b">
+      <default>false</default>
+      <summary>Allow live search on desktop</summary>
+    </key>
+
     <key name="keep-historic" type="b">
       <default>true</default>
       <summary>Keep a list of recent articles</summary>

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wike\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-18 10:57+0200\n"
+"POT-Creation-Date: 2021-06-24 11:32+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,24 +39,48 @@ msgstr ""
 msgid "Default search language: "
 msgstr ""
 
-#: ../src/window.py:147 ../src/window.py:252
+#: ../src/window.py:150 ../src/window.py:255
 msgid "New bookmark: "
 msgstr ""
 
-#: ../src/window.py:310
+#: ../src/window.py:313
 msgid "Wikipedia URL copied to clipboard"
 msgstr ""
 
-#: ../src/prefs.py:75
+#: ../src/prefs.py:81
 msgid "Wikipedia main page"
 msgstr ""
 
-#: ../src/prefs.py:75 ../data/ui/menu.ui:13
+#: ../src/prefs.py:81 ../data/ui/menu.ui:13
 msgid "Random article"
 msgstr ""
 
-#: ../src/prefs.py:75
+#: ../src/prefs.py:81
 msgid "Last article"
+msgstr ""
+
+#: ../src/prefs.py:146
+msgid "Clear Historic?"
+msgstr ""
+
+#: ../src/prefs.py:147
+msgid "The history of visited articles will be deleted permanently."
+msgstr ""
+
+#: ../src/prefs.py:148
+msgid "Clear Historic"
+msgstr ""
+
+#: ../src/prefs.py:165
+msgid "Clear Personal Data?"
+msgstr ""
+
+#: ../src/prefs.py:166
+msgid "Cookies and cache data will be deleted permanently."
+msgstr ""
+
+#: ../src/prefs.py:167
+msgid "Clear Data"
 msgstr ""
 
 #: ../src/bookmarks.py:46
@@ -78,6 +102,11 @@ msgstr ""
 
 #: ../src/bookmarks.py:139 ../data/ui/bookmarks.ui:70
 msgid "Clear List"
+msgstr ""
+
+#: ../src/wike-sp.in:71
+#, python-format
+msgid "Search «%s» in Wikipedia"
 msgstr ""
 
 #: ../data/ui/header-spinner.ui:23
@@ -209,46 +238,102 @@ msgid "Behavior"
 msgstr ""
 
 #: ../data/ui/prefs.ui:23
-msgid "When Wike starts load"
+msgid "Home page"
 msgstr ""
 
-#: ../data/ui/prefs.ui:29
-msgid "Keep a list of recent articles"
+#: ../data/ui/prefs.ui:24
+msgid "The page that will be displayed when Wike starts"
 msgstr ""
 
-#: ../data/ui/prefs.ui:43
-msgid "Clear bookmarks list on exit"
+#: ../data/ui/prefs.ui:30
+msgid "Clear bookmarks on exit"
 msgstr ""
 
-#: ../data/ui/prefs.ui:61
-msgid "Appearance"
+#: ../data/ui/prefs.ui:31
+msgid "The bookmarks list will be cleared when exiting Wike"
 msgstr ""
 
-#: ../data/ui/prefs.ui:64
-msgid "Font size for articles"
+#: ../data/ui/prefs.ui:49
+msgid "Article View"
 msgstr ""
 
-#: ../data/ui/prefs.ui:81
-msgid "Use custom font for articles"
+#: ../data/ui/prefs.ui:52
+msgid "Font size"
 msgstr ""
 
-#: ../data/ui/prefs.ui:94
-msgid "Show preview popups in article links"
+#: ../data/ui/prefs.ui:53
+msgid "Font size for article view (default is 16)"
+msgstr ""
+
+#: ../data/ui/prefs.ui:70
+msgid "Use custom font"
+msgstr ""
+
+#: ../data/ui/prefs.ui:71
+msgid "Choose a font for the article view"
+msgstr ""
+
+#: ../data/ui/prefs.ui:84
+msgid "Preview popups in article links"
+msgstr ""
+
+#: ../data/ui/prefs.ui:85
+msgid "Show a preview of the article when hovering over a link"
+msgstr ""
+
+#: ../data/ui/prefs.ui:104
+msgid "Privacy"
+msgstr ""
+
+#: ../data/ui/prefs.ui:110
+msgid "Search"
 msgstr ""
 
 #: ../data/ui/prefs.ui:113
+msgid "Allow live search on desktop"
+msgstr ""
+
+#: ../data/ui/prefs.ui:114
+msgid "Warning: all desktop searches will be sent to Wikipedia"
+msgstr ""
+
+#: ../data/ui/prefs.ui:132
+msgid "Personal Data"
+msgstr ""
+
+#: ../data/ui/prefs.ui:135
+msgid "Keep a list of recent articles"
+msgstr ""
+
+#: ../data/ui/prefs.ui:136
+msgid "Wike will remember the history of visited articles"
+msgstr ""
+
+#: ../data/ui/prefs.ui:148 ../data/ui/prefs.ui:163
+msgid "Clear"
+msgstr ""
+
+#: ../data/ui/prefs.ui:158
+msgid "Clear personal data"
+msgstr ""
+
+#: ../data/ui/prefs.ui:159
+msgid "Cookies and cache data will be deleted"
+msgstr ""
+
+#: ../data/ui/prefs.ui:178
 msgid "Languages"
 msgstr ""
 
-#: ../data/ui/prefs.ui:119
+#: ../data/ui/prefs.ui:184
 msgid "Filter available languages"
 msgstr ""
 
-#: ../data/ui/prefs.ui:153
+#: ../data/ui/prefs.ui:218
 msgid "Select all"
 msgstr ""
 
-#: ../data/ui/prefs.ui:165
+#: ../data/ui/prefs.ui:230
 msgid "Select none"
 msgstr ""
 

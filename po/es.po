@@ -27,11 +27,11 @@ msgstr "Comprueba tu conexión a Internet e inténtalo de nuevo"
 msgid "Recent articles"
 msgstr "Artículos recientes"
 
-#: ../src/window.py:147 ../src/window.py:252
+#: ../src/window.py:150 ../src/window.py:255
 msgid "New bookmark: "
 msgstr "Nuevo marcador: "
 
-#: ../src/window.py:310
+#: ../src/window.py:313
 msgid "Wikipedia URL copied to clipboard"
 msgstr "URL de Wikipedia copiada al portapapeles"
 
@@ -78,7 +78,7 @@ msgstr "Buscar y leer artículos de Wikipedia\n"
 "y disponible bajo licencia CC BY-SA 3.0 salvo que se indique lo contrario"
 
 #. Add your name like this:
-#.
+#. 
 #. Hugo Olabera <hugolabe@gmail.com>
 #: ../data/ui/about.ui:13
 msgid "translator-credits"
@@ -192,7 +192,7 @@ msgstr "Añadir marcador"
 msgid "Wikipedia Main Page"
 msgstr "Portada de Wikipedia"
 
-#: ../src/prefs.py:75 ../data/ui/menu.ui:13
+#: ../src/prefs.py:81 ../data/ui/menu.ui:13
 msgid "Random article"
 msgstr "Artículo aleatorio"
 
@@ -232,47 +232,31 @@ msgstr "Acerca de Wike"
 msgid "Behavior"
 msgstr "Comportamiento"
 
-#: ../data/ui/prefs.ui:23
-msgid "When Wike starts load"
-msgstr "Al iniciar Wike cargar"
-
-#: ../data/ui/prefs.ui:29
+#: ../data/ui/prefs.ui:135
 msgid "Keep a list of recent articles"
 msgstr "Lista de artículos recientes"
 
-#: ../data/ui/prefs.ui:43
-msgid "Clear bookmarks list on exit"
-msgstr "Borrar marcadores al salir"
-
-#: ../src/prefs.py:75
+#: ../src/prefs.py:81
 msgid "Last article"
 msgstr "Último artículo"
-
-#: ../data/ui/prefs.ui:61
-msgid "Appearance"
-msgstr "Apariencia"
-
-#: ../data/ui/prefs.ui:64
-msgid "Font size for articles"
-msgstr "Tamaño de fuente"
 
 #: ../data/ui/prefs.ui:14
 msgid "General"
 msgstr "General"
 
-#: ../data/ui/prefs.ui:119
+#: ../data/ui/prefs.ui:184
 msgid "Filter available languages"
 msgstr "Filtrar lenguajes disponibles"
 
-#: ../data/ui/prefs.ui:153
+#: ../data/ui/prefs.ui:218
 msgid "Select all"
 msgstr "Seleccionar todo"
 
-#: ../data/ui/prefs.ui:165
+#: ../data/ui/prefs.ui:230
 msgid "Select none"
 msgstr "Seleccionar nada"
 
-#: ../data/ui/prefs.ui:113
+#: ../data/ui/prefs.ui:178
 msgid "Languages"
 msgstr "Lenguajes"
 
@@ -328,13 +312,9 @@ msgstr "Ver artículo en otros idiomas"
 msgid "Features:"
 msgstr "Características:"
 
-#: ../src/prefs.py:75
+#: ../src/prefs.py:81
 msgid "Wikipedia main page"
 msgstr "Portada de Wikipedia"
-
-#: ../data/ui/prefs.ui:81
-msgid "Use custom font for articles"
-msgstr "Usar tipografía personalizada"
 
 #: ../data/ui/menu.ui:50
 msgid "Dark Mode"
@@ -348,11 +328,116 @@ msgstr "Modo oscuro"
 msgid "Try again"
 msgstr "Intentar de nuevo"
 
-#: ../data/ui/prefs.ui:94
-msgid "Show preview popups in article links"
-msgstr "Mostrar previsualizaciones en los enlaces"
-
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
 msgid "GNOME Shell search integration"
 msgstr "Integración con la búsqueda de GNOME Shell"
+
+#: ../src/prefs.py:146
+msgid "Clear Historic?"
+msgstr "¿Borrar el historial?"
+
+#: ../src/prefs.py:147
+msgid "The history of visited articles will be deleted permanently."
+msgstr "Se borrará el historial de artículos visitados de forma permanente."
+
+#: ../src/prefs.py:148
+msgid "Clear Historic"
+msgstr "Borrar historial"
+
+#: ../src/prefs.py:165
+msgid "Clear Personal Data?"
+msgstr "¿Borrar datos personales?"
+
+#: ../src/prefs.py:166
+msgid "Cookies and cache data will be deleted permanently."
+msgstr "Se borrarán las cookies y datos de la caché de forma permanente."
+
+#: ../src/prefs.py:167
+msgid "Clear Data"
+msgstr "Borrar datos"
+
+#. Don't remove %s tag!
+#: ../src/wike-sp.in:71
+msgid "Search «%s» in Wikipedia"
+msgstr "Buscar «%s» en Wikipedia"
+
+#: ../data/ui/prefs.ui:23
+msgid "Home page"
+msgstr "Página de inicio"
+
+#: ../data/ui/prefs.ui:24
+msgid "The page that will be displayed when Wike starts"
+msgstr "La página que se mostrará al iniciar Wike"
+
+#: ../data/ui/prefs.ui:30
+msgid "Clear bookmarks on exit"
+msgstr "Borrar marcadores al salir"
+
+#: ../data/ui/prefs.ui:31
+msgid "The bookmarks list will be cleared when exiting Wike"
+msgstr "Se vaciará la lista de marcadores al salir de Wike"
+
+#: ../data/ui/prefs.ui:49
+msgid "Article View"
+msgstr "Vista de artículos"
+
+#: ../data/ui/prefs.ui:52
+msgid "Font size"
+msgstr "Tamaño de la fuente"
+
+#: ../data/ui/prefs.ui:53
+msgid "Font size for article view (default is 16)"
+msgstr "Tamaño de la fuente para los artículos (predeterminado: 16)"
+
+#: ../data/ui/prefs.ui:70
+msgid "Use custom font"
+msgstr "Utilizar tipografía personalizada"
+
+#: ../data/ui/prefs.ui:71
+msgid "Choose a font for the article view"
+msgstr "Elegir una tipografía para la vista de artículos"
+
+#: ../data/ui/prefs.ui:84
+msgid "Preview popups in article links"
+msgstr "Previsualizaciones en los enlaces de artículos"
+
+#: ../data/ui/prefs.ui:85
+msgid "Show a preview of the article when hovering over a link"
+msgstr "Mostrar una previsualización del artículo en los enlaces"
+
+#: ../data/ui/prefs.ui:104
+msgid "Privacy"
+msgstr "Privacidad"
+
+#: ../data/ui/prefs.ui:110
+msgid "Search"
+msgstr "Búsqueda"
+
+#: ../data/ui/prefs.ui:113
+msgid "Allow live search on desktop"
+msgstr "Permitir búsqueda en vivo en el escritorio"
+
+#: ../data/ui/prefs.ui:114
+msgid "Warning: all desktop searches will be sent to Wikipedia"
+msgstr "Aviso: todas las búsquedas del escritorio se enviarán a Wikipedia"
+
+#: ../data/ui/prefs.ui:132
+msgid "Personal Data"
+msgstr "Datos personales"
+
+#: ../data/ui/prefs.ui:136
+msgid "Wike will remember the history of visited articles"
+msgstr "Wike recordará el historial de artículos visitados"
+
+#: ../data/ui/prefs.ui:148 ../data/ui/prefs.ui:163
+msgid "Clear"
+msgstr "Borrar"
+
+#: ../data/ui/prefs.ui:158
+msgid "Clear personal data"
+msgstr "Borrar datos personales"
+
+#: ../data/ui/prefs.ui:159
+msgid "Cookies and cache data will be deleted"
+msgstr "Se borrarán las cookies y los datos de la caché"
 

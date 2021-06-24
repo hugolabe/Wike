@@ -20,7 +20,7 @@
 import gi
 gi.require_version('Gtk', '3.0')
 gi.require_version('Handy', '1')
-from gi.repository import Gio, Gtk, Handy
+from gi.repository import Gio, Gtk, Handy, WebKit2
 
 from wike.data import settings, languages, historic
 
@@ -42,6 +42,7 @@ class PrefsWindow(Handy.PreferencesWindow):
   desktop_search_switch = Gtk.Template.Child()
   historic_switch = Gtk.Template.Child()
   clear_historic_button = Gtk.Template.Child()
+  clear_data_button = Gtk.Template.Child()
   languages_list = Gtk.Template.Child()
   select_all_button = Gtk.Template.Child()
   select_none_button = Gtk.Template.Child()
@@ -66,6 +67,7 @@ class PrefsWindow(Handy.PreferencesWindow):
 
     self.custom_font_combo.connect('notify::selected-index', self._custom_font_combo_selected_cb)
     self.clear_historic_button.connect('clicked', self._clear_historic_button_cb)
+    self.clear_data_button.connect('clicked', self._clear_data_button_cb)
     self.languages_list.connect('row-activated', self._languages_list_selected_cb)
     self.select_all_button.connect('clicked', self._select_all_button_cb)
     self.select_none_button.connect('clicked', self._select_none_button_cb)
@@ -152,6 +154,26 @@ class PrefsWindow(Handy.PreferencesWindow):
 
     historic.clear()
     historic.save()
+
+  # On button click clear personal data
+
+  def _clear_data_button_cb(self, clear_data_button):
+    clear_dialog = Gtk.MessageDialog(self,
+                                     Gtk.DialogFlags.MODAL,
+                                     Gtk.MessageType.WARNING,
+                                     Gtk.ButtonsType.CANCEL,
+                                     _('Clear Personal Data?'))
+    clear_dialog.set_property('secondary-text', _('Cookies and cache data will be deleted permanently.'))
+    clear_dialog.add_buttons(_('Clear Data'), Gtk.ResponseType.YES)
+
+    response = clear_dialog.run()
+    clear_dialog.destroy()
+    if response == Gtk.ResponseType.CANCEL:
+      return
+
+    web_context = WebKit2.WebContext.get_default()
+    data_manager = web_context.get_website_data_manager()
+    data_manager.clear(WebKit2.WebsiteDataTypes.ALL, 0, None, None, None)
 
   # On row selected set language check button
 

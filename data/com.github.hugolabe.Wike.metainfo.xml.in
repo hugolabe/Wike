@@ -55,6 +55,14 @@
   </screenshots>
 
   <releases>
+    <release version="1.5.1" date="2021-06-25">
+      <description>
+        <ul>
+          <li>Improvements in privacy management.</li>
+          <li>Updated translations: Dutch, French, Portuguese (BR) and Spanish.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.5.0" date="2021-06-18">
       <description>
         <ul>

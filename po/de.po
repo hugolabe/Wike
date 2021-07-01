@@ -7,31 +7,31 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: de\n"
 
-#: ../src/view.py:143
+#: ../src/view.py:154
 msgid "Article not found"
 msgstr "Artikel nicht gefunden"
 
-#: ../src/view.py:144
+#: ../src/view.py:155
 msgid "Can't find any results for requested query"
 msgstr "Keine Ergebnisse zur Suchanfrage gefunden"
 
-#: ../src/view.py:146
+#: ../src/view.py:157
 msgid "Can't access Wikipedia"
 msgstr "Wikipedia nicht erreichbar"
 
-#: ../src/view.py:147
+#: ../src/view.py:158
 msgid "Check your Internet connection and try again"
 msgstr "Internetverbindung überprüfen oder noch einmal versuchen"
 
-#: ../src/view.py:219
+#: ../src/view.py:233
 msgid "Recent articles"
 msgstr "Letzte Artikel"
 
-#: ../src/window.py:144 ../src/window.py:249
+#: ../src/window.py:150 ../src/window.py:255
 msgid "New bookmark: "
 msgstr "Neues Lesezeichen:"
 
-#: ../src/window.py:307
+#: ../src/window.py:313
 msgid "Wikipedia URL copied to clipboard"
 msgstr "Wikipedia URL wurde in die Zwischenablage kopiert"
 
@@ -151,7 +151,7 @@ msgstr "Suche Artikel"
 #: ../data/ui/shortcuts.ui:94
 msgctxt "shortcut window"
 msgid "Wikipedia main page"
-msgstr "Wikipedia Hauptseite"
+msgstr "Wikipedia-Hauptseite"
 
 #: ../data/ui/shortcuts.ui:101
 msgctxt "shortcut window"
@@ -190,9 +190,9 @@ msgstr "Lesezeichen hinzufügen"
 
 #: ../data/ui/menu.ui:8
 msgid "Wikipedia Main Page"
-msgstr "Wikipedia Hauptseite"
+msgstr "Wikipedia-Hauptseite"
 
-#: ../src/prefs.py:75 ../data/ui/menu.ui:13
+#: ../src/prefs.py:81 ../data/ui/menu.ui:13
 msgid "Random article"
 msgstr "Zufälliger Artikel"
 
@@ -232,47 +232,31 @@ msgstr "Über Wike"
 msgid "Behavior"
 msgstr "Verhalten"
 
-#: ../data/ui/prefs.ui:23
-msgid "When Wike starts load"
-msgstr "Beim starten von Wike"
-
-#: ../data/ui/prefs.ui:29
+#: ../data/ui/prefs.ui:135
 msgid "Keep a list of recent articles"
 msgstr "Liste zuletzt aufgerufener Artikel anlegen"
 
-#: ../data/ui/prefs.ui:43
-msgid "Clear bookmarks list on exit"
-msgstr "Lesezeichenliste beim beenden löschen"
-
-#: ../src/prefs.py:75
+#: ../src/prefs.py:81
 msgid "Last article"
 msgstr "Letzter Artikel"
-
-#: ../data/ui/prefs.ui:61
-msgid "Appearance"
-msgstr "Aussehen"
-
-#: ../data/ui/prefs.ui:64
-msgid "Font size for articles"
-msgstr "Schriftgröße der Artikel"
 
 #: ../data/ui/prefs.ui:14
 msgid "General"
 msgstr "Allgemein"
 
-#: ../data/ui/prefs.ui:105
+#: ../data/ui/prefs.ui:184
 msgid "Filter available languages"
 msgstr "Filter verfügbarer Sprachen"
 
-#: ../data/ui/prefs.ui:139
+#: ../data/ui/prefs.ui:218
 msgid "Select all"
 msgstr "Alles auswählen"
 
-#: ../data/ui/prefs.ui:151
+#: ../data/ui/prefs.ui:230
 msgid "Select none"
 msgstr "Nichts auswählen"
 
-#: ../data/ui/prefs.ui:99
+#: ../data/ui/prefs.ui:178
 msgid "Languages"
 msgstr "Sprachen"
 
@@ -291,19 +275,14 @@ msgstr "Wike"
 msgid "Wikipedia Reader"
 msgstr "Wikipedialeser"
 
-#. Don't translate!
-#: ../data/com.github.hugolabe.Wike.desktop.in:5
-msgid "com.github.hugolabe.Wike"
-msgstr "com.github.hugolabe.Wike"
-
 #. Don't remove semicolons!
 #: ../data/com.github.hugolabe.Wike.desktop.in:10
 msgid "Wikipedia;Encyclopedia;"
-msgstr "Wikipedia;Enzyklopädie;"
+msgstr "Wikipedia;Enzyklopädie;Lexikon;WP;"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:11
 msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
-msgstr "Wike ist ein Wikipedialeser für die GNOME Oberfläche. Er bietet Zugang zum kompletten Inhalt der Onlineenzyklopädie in einem nativen Programm mit einem einfachen und ablenkungesfreien Ansicht auf die Artikel."
+msgstr "Wike ist eine Wikipedia-Anwendung für die GNOME Oberfläche. Er bietet Zugang zum kompletten Inhalt der Onlineenzyklopädie in einem nativen Programm mit einem einfachen und ablenkungesfreien Ansicht auf die Artikel."
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
 msgid "Multiple languages"
@@ -333,19 +312,132 @@ msgstr "Artikel in anderer Sprache ansehen"
 msgid "Features:"
 msgstr "Merkmale:"
 
-#: ../src/prefs.py:75
+#: ../src/prefs.py:81
 msgid "Wikipedia main page"
 msgstr "Wikipedia Hauptseite"
-
-#: ../data/ui/prefs.ui:81
-msgid "Use custom font for articles"
-msgstr "Verwende benutzerdefinierte Schriftart für Artikel"
 
 #: ../data/ui/menu.ui:50
 msgid "Dark Mode"
 msgstr "Dunkler Modus"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
 msgid "Dark mode"
 msgstr "Dunkler Modus"
+
+#: ../src/view.py:161
+msgid "Try again"
+msgstr "erneut versuchen"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
+msgid "GNOME Shell search integration"
+msgstr "Integration in die Suche der GNOME Shell"
+
+#: ../src/prefs.py:146
+msgid "Clear Historic?"
+msgstr "Verlauf löschen?"
+
+#: ../src/prefs.py:147
+msgid "The history of visited articles will be deleted permanently."
+msgstr "Der Verlauf der angesehenen Artikel wird dauerhaft gelöscht werden."
+
+#: ../src/prefs.py:148
+msgid "Clear Historic"
+msgstr "Verlauf löschen"
+
+#: ../src/prefs.py:165
+msgid "Clear Personal Data?"
+msgstr "Persönliche Daten tatsächlich löschen?"
+
+#: ../src/prefs.py:166
+msgid "Cookies and cache data will be deleted permanently."
+msgstr "Cookies werden dauerhaft gelöscht werden und der Cache geleert."
+
+#: ../src/prefs.py:167
+msgid "Clear Data"
+msgstr "Daten löschen"
+
+#. Don't remove %s tag!
+#: ../src/wike-sp.in:71
+msgid "Search «%s» in Wikipedia"
+msgstr "bei Wikipedia nach „%s“ suchen"
+
+#: ../data/ui/prefs.ui:23
+msgid "Home page"
+msgstr "Startseite"
+
+#: ../data/ui/prefs.ui:24
+msgid "The page that will be displayed when Wike starts"
+msgstr "diese Seite wird angezeigt, wenn Wike gestartet wird"
+
+#: ../data/ui/prefs.ui:30
+msgid "Clear bookmarks on exit"
+msgstr "Lesezeichen beim Schließen entfernen"
+
+#: ../data/ui/prefs.ui:31
+msgid "The bookmarks list will be cleared when exiting Wike"
+msgstr "alle Lesezeichen werden beim Beenden von Wike gelöscht"
+
+#: ../data/ui/prefs.ui:49
+msgid "Article View"
+msgstr "Artikelansicht"
+
+#: ../data/ui/prefs.ui:52
+msgid "Font size"
+msgstr "Schriftgröße"
+
+#: ../data/ui/prefs.ui:53
+msgid "Font size for article view (default is 16)"
+msgstr "Schriftgröße innerhalb der Artikel (Standardwert: 16)"
+
+#: ../data/ui/prefs.ui:70
+msgid "Use custom font"
+msgstr "benutzerdefinierte Schriftart benutzen"
+
+#: ../data/ui/prefs.ui:71
+msgid "Choose a font for the article view"
+msgstr "eine Schriftart wählen für die Artikelansicht"
+
+#: ../data/ui/prefs.ui:84
+msgid "Preview popups in article links"
+msgstr "Seitenvorschau anzeigen"
+
+#: ../data/ui/prefs.ui:85
+msgid "Show a preview of the article when hovering over a link"
+msgstr "eine Vorschaubox eines Artikels zeigen, wenn die Maus über einem Link schwebt"
+
+#: ../data/ui/prefs.ui:104
+msgid "Privacy"
+msgstr "Privatsphäre"
+
+#: ../data/ui/prefs.ui:110
+msgid "Search"
+msgstr "Suche"
+
+#: ../data/ui/prefs.ui:113
+msgid "Allow live search on desktop"
+msgstr "direkte Suche vom Desktop zulassen"
+
+#: ../data/ui/prefs.ui:114
+msgid "Warning: all desktop searches will be sent to Wikipedia"
+msgstr "Warnung: alle Sucheingaben werden direkt zu WIkipedia übermittelt"
+
+#: ../data/ui/prefs.ui:132
+msgid "Personal Data"
+msgstr "Persönliche Daten"
+
+#: ../data/ui/prefs.ui:136
+msgid "Wike will remember the history of visited articles"
+msgstr "Wike wird den Verlauf der besuchten Artikel speichern"
+
+#: ../data/ui/prefs.ui:148 ../data/ui/prefs.ui:163
+msgid "Clear"
+msgstr "löschen"
+
+#: ../data/ui/prefs.ui:158
+msgid "Clear personal data"
+msgstr "Persönliche Daten löschen"
+
+#: ../data/ui/prefs.ui:159
+msgid "Cookies and cache data will be deleted"
+msgstr "Cookies werden gelöscht und der Cache geleert"
 

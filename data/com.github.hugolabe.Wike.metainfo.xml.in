@@ -55,6 +55,14 @@
   </screenshots>
 
   <releases>
+    <release version="1.5.2" date="2021-07-05">
+      <description>
+        <ul>
+          <li>Added Czech and Russian translations.</li>
+          <li>Updated German translation.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.5.1" date="2021-06-25">
       <description>
         <ul>

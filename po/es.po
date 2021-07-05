@@ -399,11 +399,11 @@ msgstr "Elegir una tipografía para la vista de artículos"
 
 #: ../data/ui/prefs.ui:84
 msgid "Preview popups in article links"
-msgstr "Previsualizaciones en los enlaces de artículos"
+msgstr "Previsualizaciones de artículos"
 
 #: ../data/ui/prefs.ui:85
 msgid "Show a preview of the article when hovering over a link"
-msgstr "Mostrar una previsualización del artículo en los enlaces"
+msgstr "Se mostrará una vista previa al posicionarse sobre un enlace"
 
 #: ../data/ui/prefs.ui:104
 msgid "Privacy"

@@ -82,7 +82,7 @@ msgstr "Ищите и читайте статьи в Википедии\n"
 #. Hugo Olabera <hugolabe@gmail.com>
 #: ../data/ui/about.ui:13
 msgid "translator-credits"
-msgstr "Информация о переводчике"
+msgstr "Евгений Буря"
 
 #: ../data/ui/bookmarks.ui:58
 msgid "Add Bookmark"

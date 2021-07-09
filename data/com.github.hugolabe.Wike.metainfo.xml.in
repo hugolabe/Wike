@@ -55,6 +55,14 @@
   </screenshots>
 
   <releases>
+    <release version="1.5.3" date="2021-07-09">
+      <description>
+        <ul>
+          <li>Added Finnish translation.</li>
+          <li>Updated Russian translation.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.5.2" date="2021-07-05">
       <description>
         <ul>

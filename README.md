@@ -31,6 +31,7 @@ You can install *Wike* from Flathub.org
 |:----:|:----:|:----:|
 | Arch Linux (AUR) | [`wike`](https://aur.archlinux.org/packages/wike/) | [Mark Wagie](https://github.com/yochananmarqos) |
 | Ubuntu (PPA) | [`wike`](https://launchpad.net/~apandada1/+archive/ubuntu/wike) | [Archisman Panigrahi](https://github.com/apandada1) |
+| Fedora Linux (Copr) | [`wike`](https://copr.fedorainfracloud.org/coprs/xfgusta/wike) | [Gustavo Costa](https://github.com/xfgusta) |
 
 ## Build
 

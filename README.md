@@ -19,6 +19,12 @@ Provides access to all the content of this online encyclopedia in a native appli
 - GNOME Shell search integration
 - Dark mode
 
+## GNOME Circle
+
+Wike is part of GNOME Circle.
+
+<a href="https://circle.gnome.org"><img width="200" alt="GNOME Circle" src="https://gitlab.gnome.org/Teams/Circle/-/raw/master/assets/button/circle-button-fullcolor.svg"></a>
+
 ## Install
 
 You can install *Wike* from Flathub.org

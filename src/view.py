@@ -180,14 +180,15 @@ class WikiView(WebKit2.WebView):
 
     html_body = ''
     for date in sorted(historic.items, reverse=True):
-      html_body = html_body + '<h3>' + date + '</h3>\n'
+      html_body = html_body + '<h3>' + date + '</h3>\n<table>\n'
       historic_item = historic.items[date]
       for uri in sorted(historic_item, key=historic_item.get, reverse=True):
         time = historic_item[uri][0]
         title = historic_item[uri][1]
         lang = historic_item[uri][2]
         if lang in languages.wikilangs: lang = languages.wikilangs[lang].capitalize()
-        html_body = html_body + '<div class="wike-hist-item">' + time.rsplit(':', 1)[0] + '<a href="' + uri + '">' + title + '</a><span class="wike-hist-lang">' + lang + '</span></div>\n'
+        html_body = html_body + '<tr>\n<td class="wike-hist-time">' + time.rsplit(':', 1)[0] + '</td>\n<td class="wike-hist-link">' + '<a href="' + uri + '">' + title + '</a></td>\n<td class="wike-hist-lang">' + lang + '</td>\n</tr>\n'
+      html_body = html_body + '</table>\n'
 
     html = html_top + html_body + html_bottom
 

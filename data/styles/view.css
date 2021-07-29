@@ -158,33 +158,43 @@ h1 {
   margin: 2em auto;
   width: 80%;
   max-width: 900px;
+  line-height: 1.5em;
 }
 
 #wike-historic h3 {
   margin-bottom: .5em;
   padding-bottom: .5em;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ccc;
   font-size: 1.1em;
 }
 
+#wike-historic table {
+  width: 100%;
+}
+
+#wike-historic td {
+  max-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#wike-historic td.wike-hist-time {
+  width: 15%;
+}
+
+#wike-historic td.wike-hist-lang {
+  width: 20%;
+  text-align: right;
+}
+
 #wike-historic a {
-  padding-left: 5em;
-  text-decoration: none;
+  padding: 0 1em;
   color: #3366cc;
+  text-decoration: none;
 }
 
 #wike-historic a:hover {
   text-decoration: underline;
-}
-
-#wike-historic .wike-hist-item {
-  margin-bottom: -1px;
-  padding: 6px 12px;
-}
-
-#wike-historic .wike-hist-lang {
-  float: right;
-  font-style: italic;
-  font-size: .9em;
 }
 

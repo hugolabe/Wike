@@ -55,6 +55,14 @@
   </screenshots>
 
   <releases>
+    <release version="1.5.4" date="2021-08-10">
+      <description>
+        <ul>
+          <li>Fix alignment issues in Historic view.</li>
+          <li>Added Indonesian translation.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.5.3" date="2021-07-09">
       <description>
         <ul>

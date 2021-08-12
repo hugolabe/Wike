@@ -323,12 +323,6 @@ class WikiView(WebKit2.WebView):
         if uri_netloc.startswith('upload.'): decision.ignore()
     return True
 
-  # Deactivate webview context menu
-
-  def do_context_menu(self, menu, event, hit_test_result):
-    return True
-
-
 # Create wikiview global object
 
 wikiview = WikiView()

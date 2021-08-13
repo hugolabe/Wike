@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wike\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-24 11:32+0200\n"
+"POT-Creation-Date: 2021-08-13 20:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,11 +28,11 @@ msgid "Check your Internet connection and try again"
 msgstr ""
 
 #: ../src/view.py:161
-msgid "Try again"
+msgid "Try Again"
 msgstr ""
 
-#: ../src/view.py:233
-msgid "Recent articles"
+#: ../src/view.py:234 ../data/ui/menu.ui:18
+msgid "Recent Articles"
 msgstr ""
 
 #: ../src/search.py:249
@@ -47,16 +47,16 @@ msgstr ""
 msgid "Wikipedia URL copied to clipboard"
 msgstr ""
 
-#: ../src/prefs.py:81
-msgid "Wikipedia main page"
+#: ../src/prefs.py:81 ../data/ui/menu.ui:8
+msgid "Wikipedia Main Page"
 msgstr ""
 
 #: ../src/prefs.py:81 ../data/ui/menu.ui:13
-msgid "Random article"
+msgid "Random Article"
 msgstr ""
 
 #: ../src/prefs.py:81
-msgid "Last article"
+msgid "Last Article"
 msgstr ""
 
 #: ../src/prefs.py:146
@@ -85,7 +85,7 @@ msgstr ""
 
 #: ../src/bookmarks.py:46
 msgid ""
-"<b>No bookmarks</b>\n"
+"<b>No Bookmarks</b>\n"
 "\n"
 "<small>Use the <i>Add Bookmark</i> button\n"
 "or click a link with the middle mouse button\n"
@@ -326,23 +326,15 @@ msgid "Languages"
 msgstr ""
 
 #: ../data/ui/prefs.ui:184
-msgid "Filter available languages"
+msgid "Filter Available Languages"
 msgstr ""
 
 #: ../data/ui/prefs.ui:218
-msgid "Select all"
+msgid "Select All"
 msgstr ""
 
 #: ../data/ui/prefs.ui:230
-msgid "Select none"
-msgstr ""
-
-#: ../data/ui/menu.ui:8
-msgid "Wikipedia Main Page"
-msgstr ""
-
-#: ../data/ui/menu.ui:18
-msgid "Recent Articles"
+msgid "Select None"
 msgstr ""
 
 #: ../data/ui/menu.ui:23

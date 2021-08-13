@@ -158,7 +158,7 @@ class WikiView(WebKit2.WebView):
       message = _('Check your Internet connection and try again')
 
     if fail_uri:
-      button = '<a href="' + fail_uri + '" class="btn">' + _('Try again') + '</a>\n'
+      button = '<a href="' + fail_uri + '" class="btn">' + _('Try Again') + '</a>\n'
     else:
       button = ''
 
@@ -231,7 +231,7 @@ class WikiView(WebKit2.WebView):
 
     if uri_scheme == 'about':
       if uri_path == 'historic':
-        return _('Recent articles')
+        return _('Recent Articles')
       else:
         return 'Wike'
     else:

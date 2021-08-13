@@ -78,7 +78,7 @@ class PrefsWindow(Handy.PreferencesWindow):
 
   def _populate_on_start_combo(self):
     model = Gio.ListStore.new(Handy.ValueObject)
-    options = (_('Wikipedia main page'), _('Random article'), _('Last article'))
+    options = (_('Wikipedia Main Page'), _('Random Article'), _('Last Article'))
     for index, option in enumerate(options):
       model.insert(index, Handy.ValueObject.new(option))
     self.on_start_combo.bind_name_model(model, Handy.ValueObject.dup_string)

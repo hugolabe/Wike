@@ -10,7 +10,7 @@
         <attribute name="action">win.main_page</attribute>
       </item>
       <item>
-        <attribute name="label" translatable="yes">Random article</attribute>
+        <attribute name="label" translatable="yes">Random Article</attribute>
         <attribute name="verb-icon">wike-bulb-symbolic</attribute>
         <attribute name="action">win.random_article</attribute>
       </item>

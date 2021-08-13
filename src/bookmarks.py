@@ -43,7 +43,7 @@ class BookmarksPopover(Gtk.Popover):
   def __init__(self):
     super().__init__()
 
-    placeholder_text = _("<b>No bookmarks</b>\n\n<small>Use the <i>Add Bookmark</i> button\nor click a link with the middle mouse button\nto add bookmarks to the list</small>")
+    placeholder_text = _("<b>No Bookmarks</b>\n\n<small>Use the <i>Add Bookmark</i> button\nor click a link with the middle mouse button\nto add bookmarks to the list</small>")
     self.placeholder_label.set_markup(placeholder_text)
 
     self.bookmarks_list.set_sort_func(self._sort_list)

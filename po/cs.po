@@ -3,6 +3,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
 "Project-Id-Version: Wike\n"
 "Language: cs\n"
 
@@ -22,18 +23,6 @@ msgstr "Nezdařilo se připojit k serveru Wikipedie"
 msgid "Check your Internet connection and try again"
 msgstr "Zkontrolujte své připojení k internetu a zkuste to znovu"
 
-#: ../src/view.py:161
-msgid "Try again"
-msgstr "Zkusit znovu"
-
-#: ../src/view.py:233
-msgid "Recent articles"
-msgstr "Poslední články"
-
-#: ../src/search.py:249
-msgid "Default search language: "
-msgstr "Výchozí vyhledávač: "
-
 #: ../src/window.py:150 ../src/window.py:255
 msgid "New bookmark: "
 msgstr "Nová záložka: "
@@ -42,55 +31,9 @@ msgstr "Nová záložka: "
 msgid "Wikipedia URL copied to clipboard"
 msgstr "URL článku zkopírováno do schránky"
 
-#: ../src/prefs.py:81
-msgid "Wikipedia main page"
-msgstr "Hlavní stránka Wikipedie"
-
-#: ../src/prefs.py:81 ../data/ui/menu.ui:13
-msgid "Random article"
-msgstr "Náhodný článek"
-
-#: ../src/prefs.py:81
-msgid "Last article"
-msgstr "Poslední článek"
-
-#: ../src/prefs.py:146
-msgid "Clear Historic?"
-msgstr "Vymazat historii?"
-
-#: ../src/prefs.py:147
-msgid "The history of visited articles will be deleted permanently."
-msgstr "Historie navštívených článků bude trvale smazána"
-
-#: ../src/prefs.py:148
-msgid "Clear Historic"
-msgstr "Vymazat historii"
-
-#: ../src/prefs.py:165
-msgid "Clear Personal Data?"
-msgstr "Vymazat osobní data?"
-
-#: ../src/prefs.py:166
-msgid "Cookies and cache data will be deleted permanently."
-msgstr "Cookies a cache budou trvale smazány."
-
-#: ../src/prefs.py:167
-msgid "Clear Data"
-msgstr "Smazat data"
-
-#: ../src/bookmarks.py:46
-msgid ""
-"<b>No bookmarks</b>\n"
-"\n"
-"<small>Use the <i>Add Bookmark</i> button\n"
-"or click a link with the middle mouse button\n"
-"to add bookmarks to the list</small>"
-msgstr ""
-"<b>Žádné uložené záložky</b>\n"
-"\n"
-"<small>Použijte tlačítko <i>Uložit záložku</i>\n"
-"nebo stiskněte prostřední tlačítko myši\n"
-"pro uložení stránky mezi záložky</small>"
+#: ../src/search.py:249
+msgid "Default search language: "
+msgstr "Výchozí vyhledávač: "
 
 #: ../src/bookmarks.py:137
 msgid "Clear Bookmarks List?"
@@ -104,14 +47,27 @@ msgstr "Všechny záložky budou trvale smazány."
 msgid "Clear List"
 msgstr "Vyprázdnit"
 
-#: ../src/wike-sp.in:71
-#, python-format
-msgid "Search «%s» in Wikipedia"
-msgstr "Hledat «%s» na Wikipedii"
+#: ../data/ui/search-settings.ui:61
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:21
+msgid "Search suggestions"
+msgstr "Návrhy při hledání"
 
-#: ../data/ui/header-spinner.ui:23
-msgid "Loading Article"
-msgstr "Načítání článku"
+#: ../data/ui/about.ui:8
+msgid "Search and read Wikipedia articles\n"
+"All content from Wikipedia.org\n"
+"and available under CC BY-SA 3.0 unless otherwise noted"
+msgstr ""
+
+#. Add your name like this:
+#. 
+#. Hugo Olabera <hugolabe@gmail.com>
+#: ../data/ui/about.ui:13
+msgid "translator-credits"
+msgstr "Šimon Rataj <https://github.com/ratajs>"
+
+#: ../data/ui/bookmarks.ui:58
+msgid "Add Bookmark"
+msgstr "Uložit záložku"
 
 #: ../data/ui/shortcuts.ui:14
 msgctxt "shortcut window"
@@ -213,31 +169,150 @@ msgctxt "shortcut window"
 msgid "Add bookmark"
 msgstr "Uložit záložku"
 
-#: ../data/ui/about.ui:8
-msgid ""
-"Search and read Wikipedia articles\n"
-"All content from Wikipedia.org\n"
-"and available under CC BY-SA 3.0 unless otherwise noted"
-msgstr ""
+#: ../src/prefs.py:81 ../data/ui/menu.ui:8
+msgid "Wikipedia Main Page"
+msgstr "Hlavní strana Wikipedie"
 
+#: ../src/view.py:234 ../data/ui/menu.ui:18
+msgid "Recent Articles"
+msgstr "Poslední články"
 
-#: ../data/ui/about.ui:13
-msgctxt "Add your names here, do not remove previous names!"
-msgid "translator-credits"
-msgstr "Šimon Rataj <https://github.com/ratajs>"
+#: ../data/ui/menu.ui:23
+msgid "Reload Page"
+msgstr "Znovu načíst stránku"
 
-#: ../data/ui/search-settings.ui:61
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:21
-msgid "Search suggestions"
-msgstr "Návrhy při hledání"
+#: ../data/ui/menu.ui:30
+msgid "Search Text in Page"
+msgstr "Hledat ve stránce"
+
+#: ../data/ui/menu.ui:36
+msgid "Open Wikipedia Page in Browser"
+msgstr "Otevřít stránku Wikipedie v prohlížeči"
+
+#: ../data/ui/menu.ui:40
+msgid "Copy Wikipedia URL to Clipboard"
+msgstr "Zkopírovat URL článku na Wikipedii do schránky"
+
+#: ../data/ui/menu.ui:46
+msgid "Preferences"
+msgstr "Nastavení"
+
+#: ../data/ui/menu.ui:56
+msgid "Keyboard Shortcuts"
+msgstr "Klávesové zkratky"
+
+#: ../data/ui/menu.ui:60
+msgid "About Wike"
+msgstr "O projektu Wike"
+
+#: ../data/ui/prefs.ui:20
+msgid "Behavior"
+msgstr "Chování"
+
+#: ../data/ui/prefs.ui:135
+msgid "Keep a list of recent articles"
+msgstr "Uchovat poslední články"
 
 #: ../data/ui/prefs.ui:14
 msgid "General"
 msgstr "Obecné"
 
-#: ../data/ui/prefs.ui:20
-msgid "Behavior"
-msgstr "Chování"
+#: ../data/ui/prefs.ui:178
+msgid "Languages"
+msgstr "Jazyky"
+
+#: ../data/ui/header-spinner.ui:23
+msgid "Loading Article"
+msgstr "Načítání článku"
+
+#. Don't translate app name!
+#: ../data/com.github.hugolabe.Wike.desktop.in:3
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:7
+msgid "Wike"
+msgstr "Wike"
+
+#: ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
+msgid "Wikipedia Reader"
+msgstr "Čtečka Wikipedie"
+
+#. Don't remove semicolons!
+#: ../data/com.github.hugolabe.Wike.desktop.in:10
+msgid "Wikipedia;Encyclopedia;"
+msgstr "Wikipedia;Encyclopedia;Wikipedie;Encyklopedie"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:11
+msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
+msgstr "Wike je čtečka Wikipedie pro prostření GNOME Desktop. Umožňuje čtení veškerého obsahu této online encyklopedie v samostatné aplikaci, s jednoduším a nerušivým zobrazením článků."
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
+msgid "Multiple languages"
+msgstr "Několik jazyků"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:22
+msgid "List of recent articles"
+msgstr "Seznam posledních článků"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:23
+msgid "Simple bookmarks management"
+msgstr "Jednoduchá správa záložek"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:24
+msgid "Text search in articles"
+msgstr "Vyhledávání v článcích"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:25
+msgid "Article table of contents"
+msgstr "Obsah článku"
+
+#: ../data/ui/header.ui:136 ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
+msgid "View article in other languages"
+msgstr "Zobrazení článku v jiných jazycích"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
+msgid "Features:"
+msgstr "Funkce:"
+
+#: ../data/ui/menu.ui:50
+msgid "Dark Mode"
+msgstr "Tmavý režim"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
+msgid "Dark mode"
+msgstr "Tmavý režim"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
+msgid "GNOME Shell search integration"
+msgstr "Integrace vyhledávání GNOME Shell"
+
+#: ../src/prefs.py:146
+msgid "Clear Historic?"
+msgstr "Vymazat historii?"
+
+#: ../src/prefs.py:147
+msgid "The history of visited articles will be deleted permanently."
+msgstr "Historie navštívených článků bude trvale smazána"
+
+#: ../src/prefs.py:148
+msgid "Clear Historic"
+msgstr "Vymazat historii"
+
+#: ../src/prefs.py:165
+msgid "Clear Personal Data?"
+msgstr "Vymazat osobní data?"
+
+#: ../src/prefs.py:166
+msgid "Cookies and cache data will be deleted permanently."
+msgstr "Cookies a cache budou trvale smazány."
+
+#: ../src/prefs.py:167
+msgid "Clear Data"
+msgstr "Smazat data"
+
+#. Don't remove %s tag!
+#: ../src/wike-sp.in:71
+msgid "Search «%s» in Wikipedia"
+msgstr "Hledat «%s» na Wikipedii"
 
 #: ../data/ui/prefs.ui:23
 msgid "Home page"
@@ -303,10 +378,6 @@ msgstr "Varování: veškeré hledání bude odesláno Wikipedii"
 msgid "Personal Data"
 msgstr "Osobní údaje"
 
-#: ../data/ui/prefs.ui:135
-msgid "Keep a list of recent articles"
-msgstr "Uchovat poslední články"
-
 #: ../data/ui/prefs.ui:136
 msgid "Wike will remember the history of visited articles"
 msgstr "Wike si zapamatuje historii navštívených článků"
@@ -323,116 +394,51 @@ msgstr "Smazat osobní údaje"
 msgid "Cookies and cache data will be deleted"
 msgstr "Cookies a cache budou odstraněny"
 
-#: ../data/ui/prefs.ui:178
-msgid "Languages"
-msgstr "Jazyky"
+#: ../src/view.py:161
+msgid "Try Again"
+msgstr "Zkusit znovu"
+
+#: ../src/prefs.py:81 ../data/ui/menu.ui:13
+msgid "Random Article"
+msgstr "Náhodný článek"
+
+#: ../src/prefs.py:81
+msgid "Last Article"
+msgstr "Poslední článek"
+
+#: ../src/bookmarks.py:46
+msgid "<b>No Bookmarks</b>\n"
+"\n"
+"<small>Use the <i>Add Bookmark</i> button\n"
+"or click a link with the middle mouse button\n"
+"to add bookmarks to the list</small>"
+msgstr "<b>Žádné uložené záložky</b>\n"
+"\n"
+"<small>Použijte tlačítko <i>Uložit záložku</i>\n"
+"nebo stiskněte prostřední tlačítko myši\n"
+"pro uložení stránky mezi záložky</small>"
+
+#: ../data/ui/header.ui:61
+msgid "Search articles"
+msgstr "Prohledat články"
+
+#: ../data/ui/header.ui:95
+msgid "Bookmarks"
+msgstr "Záložky"
+
+#: ../data/ui/header.ui:117
+msgid "Table of contents"
+msgstr "Obsah"
 
 #: ../data/ui/prefs.ui:184
-msgid "Filter available languages"
+msgid "Filter Available Languages"
 msgstr "Hledejte mezi dostupnými jazyky"
 
 #: ../data/ui/prefs.ui:218
-msgid "Select all"
+msgid "Select All"
 msgstr "Vybrat vše"
 
 #: ../data/ui/prefs.ui:230
-msgid "Select none"
+msgid "Select None"
 msgstr "Zrušit výběr"
 
-#: ../data/ui/menu.ui:8
-msgid "Wikipedia Main Page"
-msgstr "Hlavní strana Wikipedie"
-
-#: ../data/ui/menu.ui:18
-msgid "Recent Articles"
-msgstr "Poslední články"
-
-#: ../data/ui/menu.ui:23
-msgid "Reload Page"
-msgstr "Znovu načíst stránku"
-
-#: ../data/ui/menu.ui:30
-msgid "Search Text in Page"
-msgstr "Hledat ve stránce"
-
-#: ../data/ui/menu.ui:36
-msgid "Open Wikipedia Page in Browser"
-msgstr "Otevřít stránku Wikipedie v prohlížeči"
-
-#: ../data/ui/menu.ui:40
-msgid "Copy Wikipedia URL to Clipboard"
-msgstr "Zkopírovat URL článku na Wikipedii do schránky"
-
-#: ../data/ui/menu.ui:46
-msgid "Preferences"
-msgstr "Nastavení"
-
-#: ../data/ui/menu.ui:50
-msgid "Dark Mode"
-msgstr "Tmavý režim"
-
-#: ../data/ui/menu.ui:56
-msgid "Keyboard Shortcuts"
-msgstr "Klávesové zkratky"
-
-#: ../data/ui/menu.ui:60
-msgid "About Wike"
-msgstr "O projektu Wike"
-
-#: ../data/ui/bookmarks.ui:58
-msgid "Add Bookmark"
-msgstr "Uložit záložku"
-
-#: ../data/com.github.hugolabe.Wike.desktop.in:3
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:7
-msgid "Wike"
-msgstr "Wike"
-
-#: ../data/com.github.hugolabe.Wike.desktop.in:4
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
-msgid "Wikipedia Reader"
-msgstr "Čtečka Wikipedie"
-
-#: ../data/com.github.hugolabe.Wike.desktop.in:10
-msgid "Wikipedia;Encyclopedia;"
-msgstr "Wikipedia;Encyclopedia;Wikipedie;Encyklopedie"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:11
-msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
-msgstr "Wike je čtečka Wikipedie pro prostření GNOME Desktop. Umožňuje čtení veškerého obsahu této online encyklopedie v samostatné aplikaci, s jednoduším a nerušivým zobrazením článků."
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
-msgid "Features:"
-msgstr "Funkce:"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
-msgid "Multiple languages"
-msgstr "Několik jazyků"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:22
-msgid "List of recent articles"
-msgstr "Seznam posledních článků"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:23
-msgid "Simple bookmarks management"
-msgstr "Jednoduchá správa záložek"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:24
-msgid "Text search in articles"
-msgstr "Vyhledávání v článcích"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:25
-msgid "Article table of contents"
-msgstr "Obsah článku"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
-msgid "View article in other languages"
-msgstr "Zobrazení článku v jiných jazycích"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
-msgid "GNOME Shell search integration"
-msgstr "Integrace vyhledávání GNOME Shell"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
-msgid "Dark mode"
-msgstr "Tmavý režim"

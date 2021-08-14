@@ -23,10 +23,6 @@ msgstr "Нет доступа к Википедии"
 msgid "Check your Internet connection and try again"
 msgstr "Проверьте ваше интернет соединение и попробуйте еще раз"
 
-#: ../src/view.py:233
-msgid "Recent articles"
-msgstr "Недавние статьи"
-
 #: ../src/window.py:150 ../src/window.py:255
 msgid "New bookmark: "
 msgstr "Новая закладка: "
@@ -38,19 +34,6 @@ msgstr "Ссылка на Википедию скопирована в буфе�
 #: ../src/search.py:249
 msgid "Default search language: "
 msgstr "Язык поиска по умолчанию: "
-
-#. Don't remove format tags!
-#: ../src/bookmarks.py:46
-msgid "<b>No bookmarks</b>\n"
-"\n"
-"<small>Use the <i>Add Bookmark</i> button\n"
-"or click a link with the middle mouse button\n"
-"to add bookmarks to the list</small>"
-msgstr "<b>Закладки отсутствуют</b>\n"
-"\n"
-"<small>Воспользуйтесь кнопкой <i>Добавить закладку</i>\n"
-"или нажмите на ссылку с помощью средней кнопки мыши\n"
-"для добавления закладок в список</small>"
 
 #: ../src/bookmarks.py:137
 msgid "Clear Bookmarks List?"
@@ -188,15 +171,11 @@ msgctxt "shortcut window"
 msgid "Add bookmark"
 msgstr "Добавить закладку"
 
-#: ../data/ui/menu.ui:8
+#: ../src/prefs.py:81 ../data/ui/menu.ui:8
 msgid "Wikipedia Main Page"
 msgstr "Главная страница Википедии"
 
-#: ../src/prefs.py:81 ../data/ui/menu.ui:13
-msgid "Random article"
-msgstr "Случайная статья"
-
-#: ../data/ui/menu.ui:18
+#: ../src/view.py:234 ../data/ui/menu.ui:18
 msgid "Recent Articles"
 msgstr "Недавние статьи"
 
@@ -236,25 +215,9 @@ msgstr "Поведение"
 msgid "Keep a list of recent articles"
 msgstr "Сохранять список недавних статей"
 
-#: ../src/prefs.py:81
-msgid "Last article"
-msgstr "Последняя статья"
-
 #: ../data/ui/prefs.ui:14
 msgid "General"
 msgstr "Основные"
-
-#: ../data/ui/prefs.ui:184
-msgid "Filter available languages"
-msgstr "Отфильтровать доступные языки"
-
-#: ../data/ui/prefs.ui:218
-msgid "Select all"
-msgstr "Выделить все"
-
-#: ../data/ui/prefs.ui:230
-msgid "Select none"
-msgstr "Снять выделение"
 
 #: ../data/ui/prefs.ui:178
 msgid "Languages"
@@ -304,17 +267,13 @@ msgstr "Текстовый поиск в статьях"
 msgid "Article table of contents"
 msgstr "Содержание статьи"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
+#: ../data/ui/header.ui:136 ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
 msgid "View article in other languages"
 msgstr "Просмотр статьи на других языках"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
 msgid "Features:"
 msgstr "Возможности:"
-
-#: ../src/prefs.py:81
-msgid "Wikipedia main page"
-msgstr "Главная страница Википедии"
 
 #: ../data/ui/menu.ui:50
 msgid "Dark Mode"
@@ -323,10 +282,6 @@ msgstr "Темный режим"
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
 msgid "Dark mode"
 msgstr "Темный режим"
-
-#: ../src/view.py:161
-msgid "Try again"
-msgstr "Попробуйте еще раз"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
 msgid "GNOME Shell search integration"
@@ -440,4 +395,52 @@ msgstr "Очистить личные данные"
 #: ../data/ui/prefs.ui:159
 msgid "Cookies and cache data will be deleted"
 msgstr "Файлы cookie и данные кеша будут удалены"
+
+#: ../src/view.py:161
+msgid "Try Again"
+msgstr "Попробуйте еще раз"
+
+#: ../src/prefs.py:81 ../data/ui/menu.ui:13
+msgid "Random Article"
+msgstr "Случайная статья"
+
+#: ../src/prefs.py:81
+msgid "Last Article"
+msgstr "Последняя статья"
+
+#: ../src/bookmarks.py:46
+msgid "<b>No Bookmarks</b>\n"
+"\n"
+"<small>Use the <i>Add Bookmark</i> button\n"
+"or click a link with the middle mouse button\n"
+"to add bookmarks to the list</small>"
+msgstr "<b>Закладки отсутствуют</b>\n"
+"\n"
+"<small>Воспользуйтесь кнопкой <i>Добавить закладку</i>\n"
+"или нажмите на ссылку с помощью средней кнопки мыши\n"
+"для добавления закладок в список</small>"
+
+#: ../data/ui/header.ui:61
+msgid "Search articles"
+msgstr "Поиск статей"
+
+#: ../data/ui/header.ui:95
+msgid "Bookmarks"
+msgstr "Закладки"
+
+#: ../data/ui/header.ui:117
+msgid "Table of contents"
+msgstr "Содержание"
+
+#: ../data/ui/prefs.ui:184
+msgid "Filter Available Languages"
+msgstr "Отфильтровать доступные языки"
+
+#: ../data/ui/prefs.ui:218
+msgid "Select All"
+msgstr "Выделить все"
+
+#: ../data/ui/prefs.ui:230
+msgid "Select None"
+msgstr "Снять выделение"
 

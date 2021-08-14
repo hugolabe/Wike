@@ -23,10 +23,6 @@ msgstr "No se puede acceder a Wikipedia"
 msgid "Check your Internet connection and try again"
 msgstr "Comprueba tu conexión a Internet e inténtalo de nuevo"
 
-#: ../src/view.py:233
-msgid "Recent articles"
-msgstr "Artículos recientes"
-
 #: ../src/window.py:150 ../src/window.py:255
 msgid "New bookmark: "
 msgstr "Nuevo marcador: "
@@ -38,19 +34,6 @@ msgstr "URL de Wikipedia copiada al portapapeles"
 #: ../src/search.py:249
 msgid "Default search language: "
 msgstr "Lenguaje de búsqueda predeterminado: "
-
-#. Don't remove format tags!
-#: ../src/bookmarks.py:46
-msgid "<b>No bookmarks</b>\n"
-"\n"
-"<small>Use the <i>Add Bookmark</i> button\n"
-"or click a link with the middle mouse button\n"
-"to add bookmarks to the list</small>"
-msgstr "<b>Sin marcadores</b>\n"
-"\n"
-"<small>Utiliza el botón <i>Añadir marcador</i>\n"
-"o pulsa un enlace con el botón central del ratón\n"
-"para añadir marcadores a la lista</small>"
 
 #: ../src/bookmarks.py:137
 msgid "Clear Bookmarks List?"
@@ -188,15 +171,11 @@ msgctxt "shortcut window"
 msgid "Add bookmark"
 msgstr "Añadir marcador"
 
-#: ../data/ui/menu.ui:8
+#: ../src/prefs.py:81 ../data/ui/menu.ui:8
 msgid "Wikipedia Main Page"
 msgstr "Portada de Wikipedia"
 
-#: ../src/prefs.py:81 ../data/ui/menu.ui:13
-msgid "Random article"
-msgstr "Artículo aleatorio"
-
-#: ../data/ui/menu.ui:18
+#: ../src/view.py:234 ../data/ui/menu.ui:18
 msgid "Recent Articles"
 msgstr "Artículos recientes"
 
@@ -236,25 +215,9 @@ msgstr "Comportamiento"
 msgid "Keep a list of recent articles"
 msgstr "Lista de artículos recientes"
 
-#: ../src/prefs.py:81
-msgid "Last article"
-msgstr "Último artículo"
-
 #: ../data/ui/prefs.ui:14
 msgid "General"
 msgstr "General"
-
-#: ../data/ui/prefs.ui:184
-msgid "Filter available languages"
-msgstr "Filtrar lenguajes disponibles"
-
-#: ../data/ui/prefs.ui:218
-msgid "Select all"
-msgstr "Seleccionar todo"
-
-#: ../data/ui/prefs.ui:230
-msgid "Select none"
-msgstr "Seleccionar nada"
 
 #: ../data/ui/prefs.ui:178
 msgid "Languages"
@@ -304,17 +267,13 @@ msgstr "Búsqueda de texto en el artículo"
 msgid "Article table of contents"
 msgstr "Tabla de contenidos del artículo"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
+#: ../data/ui/header.ui:136 ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
 msgid "View article in other languages"
 msgstr "Ver artículo en otros idiomas"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
 msgid "Features:"
 msgstr "Características:"
-
-#: ../src/prefs.py:81
-msgid "Wikipedia main page"
-msgstr "Portada de Wikipedia"
 
 #: ../data/ui/menu.ui:50
 msgid "Dark Mode"
@@ -323,10 +282,6 @@ msgstr "Modo oscuro"
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
 msgid "Dark mode"
 msgstr "Modo oscuro"
-
-#: ../src/view.py:161
-msgid "Try again"
-msgstr "Intentar de nuevo"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
 msgid "GNOME Shell search integration"
@@ -440,4 +395,52 @@ msgstr "Borrar datos personales"
 #: ../data/ui/prefs.ui:159
 msgid "Cookies and cache data will be deleted"
 msgstr "Se borrarán las cookies y los datos de la caché"
+
+#: ../src/view.py:161
+msgid "Try Again"
+msgstr "Intentar de nuevo"
+
+#: ../src/prefs.py:81 ../data/ui/menu.ui:13
+msgid "Random Article"
+msgstr "Artículo aleatorio"
+
+#: ../src/prefs.py:81
+msgid "Last Article"
+msgstr "Último artículo"
+
+#: ../src/bookmarks.py:46
+msgid "<b>No Bookmarks</b>\n"
+"\n"
+"<small>Use the <i>Add Bookmark</i> button\n"
+"or click a link with the middle mouse button\n"
+"to add bookmarks to the list</small>"
+msgstr "<b>Sin marcadores</b>\n"
+"\n"
+"<small>Utiliza el botón <i>Añadir marcador</i>\n"
+"o pulsa un enlace con el botón central del ratón\n"
+"para añadir marcadores a la lista</small>"
+
+#: ../data/ui/header.ui:61
+msgid "Search articles"
+msgstr "Buscar artículos"
+
+#: ../data/ui/header.ui:95
+msgid "Bookmarks"
+msgstr "Marcadores"
+
+#: ../data/ui/header.ui:117
+msgid "Table of contents"
+msgstr "Tabla de contenidos"
+
+#: ../data/ui/prefs.ui:184
+msgid "Filter Available Languages"
+msgstr "Filtrar lenguajes disponibles"
+
+#: ../data/ui/prefs.ui:218
+msgid "Select All"
+msgstr "Seleccionar todo"
+
+#: ../data/ui/prefs.ui:230
+msgid "Select None"
+msgstr "Seleccionar nada"
 

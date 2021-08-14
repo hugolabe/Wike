@@ -23,10 +23,6 @@ msgstr "Ei pääsyä Wikipediaan"
 msgid "Check your Internet connection and try again"
 msgstr "Tarkista internetyhteys ja yritä uudelleen"
 
-#: ../src/view.py:233
-msgid "Recent articles"
-msgstr "Viimeisimmät artikkelit"
-
 #: ../src/window.py:150 ../src/window.py:255
 msgid "New bookmark: "
 msgstr "Uusi kirjanmerkki: "
@@ -38,19 +34,6 @@ msgstr "Wikipedia-osoite kopioitu leikepöydälle"
 #: ../src/search.py:249
 msgid "Default search language: "
 msgstr "Haun oletuskieli: "
-
-#. Don't remove format tags!
-#: ../src/bookmarks.py:46
-msgid "<b>No bookmarks</b>\n"
-"\n"
-"<small>Use the <i>Add Bookmark</i> button\n"
-"or click a link with the middle mouse button\n"
-"to add bookmarks to the list</small>"
-msgstr "<b>Ei kirjanmerkkejä</b>\n"
-"\n"
-"<small>Napsauta <i>Lisää Kirjanmerkki</i> -painiketta\n"
-"tai napsauta linkkiä hiiren keskimmäisellä painikkeella\n"
-"lisätäksesi kirjanmerkin luetteloon</small>"
 
 #: ../src/bookmarks.py:137
 msgid "Clear Bookmarks List?"
@@ -188,15 +171,11 @@ msgctxt "shortcut window"
 msgid "Add bookmark"
 msgstr "Lisää kirjanmerkki"
 
-#: ../data/ui/menu.ui:8
+#: ../src/prefs.py:81 ../data/ui/menu.ui:8
 msgid "Wikipedia Main Page"
 msgstr "Wikipedian etusivu"
 
-#: ../src/prefs.py:81 ../data/ui/menu.ui:13
-msgid "Random article"
-msgstr "Satunnainen artikkeli"
-
-#: ../data/ui/menu.ui:18
+#: ../src/view.py:234 ../data/ui/menu.ui:18
 msgid "Recent Articles"
 msgstr "Viimeisimmät artikkelit"
 
@@ -236,25 +215,9 @@ msgstr "Toiminta"
 msgid "Keep a list of recent articles"
 msgstr "Pidä luetteloa viimeisimmistä artikkeleista"
 
-#: ../src/prefs.py:81
-msgid "Last article"
-msgstr "Viimeisin artikkeli"
-
 #: ../data/ui/prefs.ui:14
 msgid "General"
 msgstr "Yleiset"
-
-#: ../data/ui/prefs.ui:184
-msgid "Filter available languages"
-msgstr "Suodata saatavilla olevia kieliä"
-
-#: ../data/ui/prefs.ui:218
-msgid "Select all"
-msgstr "Valitse kaikki"
-
-#: ../data/ui/prefs.ui:230
-msgid "Select none"
-msgstr "Älä valitse mitään"
 
 #: ../data/ui/prefs.ui:178
 msgid "Languages"
@@ -304,17 +267,13 @@ msgstr "Etsi tekstiä artikkeleista"
 msgid "Article table of contents"
 msgstr "Artikkelin sisällysluettelo"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
+#: ../data/ui/header.ui:136 ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
 msgid "View article in other languages"
 msgstr "Lue artikkeli eri kielillä"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
 msgid "Features:"
 msgstr "Ominaisuudet:"
-
-#: ../src/prefs.py:81
-msgid "Wikipedia main page"
-msgstr "Wikipedian etusivu"
 
 #: ../data/ui/menu.ui:50
 msgid "Dark Mode"
@@ -323,10 +282,6 @@ msgstr "Tumma tila"
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
 msgid "Dark mode"
 msgstr "Tumma tila"
-
-#: ../src/view.py:161
-msgid "Try again"
-msgstr "Yritä uudelleen"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
 msgid "GNOME Shell search integration"
@@ -440,4 +395,52 @@ msgstr "Tyhjennä henkilökohtaiset tiedot"
 #: ../data/ui/prefs.ui:159
 msgid "Cookies and cache data will be deleted"
 msgstr "Evästeet ja välimuisti tyhjennetään"
+
+#: ../src/view.py:161
+msgid "Try Again"
+msgstr "Yritä uudelleen"
+
+#: ../src/prefs.py:81 ../data/ui/menu.ui:13
+msgid "Random Article"
+msgstr "Satunnainen artikkeli"
+
+#: ../src/prefs.py:81
+msgid "Last Article"
+msgstr "Viimeisin artikkeli"
+
+#: ../src/bookmarks.py:46
+msgid "<b>No Bookmarks</b>\n"
+"\n"
+"<small>Use the <i>Add Bookmark</i> button\n"
+"or click a link with the middle mouse button\n"
+"to add bookmarks to the list</small>"
+msgstr "<b>Ei kirjanmerkkejä</b>\n"
+"\n"
+"<small>Napsauta <i>Lisää Kirjanmerkki</i> -painiketta\n"
+"tai napsauta linkkiä hiiren keskimmäisellä painikkeella\n"
+"lisätäksesi kirjanmerkin luetteloon</small>"
+
+#: ../data/ui/header.ui:61
+msgid "Search articles"
+msgstr "Etsi artikkeleja"
+
+#: ../data/ui/header.ui:95
+msgid "Bookmarks"
+msgstr "Kirjanmerkit"
+
+#: ../data/ui/header.ui:117
+msgid "Table of contents"
+msgstr "Sisällysluettelo"
+
+#: ../data/ui/prefs.ui:184
+msgid "Filter Available Languages"
+msgstr "Suodata saatavilla olevia kieliä"
+
+#: ../data/ui/prefs.ui:218
+msgid "Select All"
+msgstr "Valitse kaikki"
+
+#: ../data/ui/prefs.ui:230
+msgid "Select None"
+msgstr "Älä valitse mitään"
 

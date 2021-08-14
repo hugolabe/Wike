@@ -1,18 +1,10 @@
-# Wike Indonesian translation
-# Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2021.
 msgid ""
 msgstr ""
-"Project-Id-Version: Wike\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-24 11:32+0200\n"
-"PO-Revision-Date: 2021-08-09 15:44+0700\n"
-"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
-"Last-Translator: Kukuh Syafaat <kukuhsyafaat@gnome.org>\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Wike\n"
 "Language: id\n"
 
 #: ../src/view.py:154
@@ -31,18 +23,6 @@ msgstr "Tidak dapat mengakses Wikipedia"
 msgid "Check your Internet connection and try again"
 msgstr "Periksa sambungan Internet Anda, lalu coba kembali"
 
-#: ../src/view.py:161
-msgid "Try again"
-msgstr "Coba lagi"
-
-#: ../src/view.py:233
-msgid "Recent articles"
-msgstr "Artikel terbaru"
-
-#: ../src/search.py:249
-msgid "Default search language: "
-msgstr "Bahasa pencarian bawaan: "
-
 #: ../src/window.py:150 ../src/window.py:255
 msgid "New bookmark: "
 msgstr "Markah baru: "
@@ -51,55 +31,9 @@ msgstr "Markah baru: "
 msgid "Wikipedia URL copied to clipboard"
 msgstr "URL Wikipedia disalin ke papan klip"
 
-#: ../src/prefs.py:81
-msgid "Wikipedia main page"
-msgstr "Halaman utama Wikipedia"
-
-#: ../src/prefs.py:81 ../data/ui/menu.ui:13
-msgid "Random article"
-msgstr "Artikel acak"
-
-#: ../src/prefs.py:81
-msgid "Last article"
-msgstr "Artikel terakhir"
-
-#: ../src/prefs.py:146
-msgid "Clear Historic?"
-msgstr "Bersihkan Riwayat?"
-
-#: ../src/prefs.py:147
-msgid "The history of visited articles will be deleted permanently."
-msgstr "Riwayat artikel yang dikunjungi akan dihapus secara permanen."
-
-#: ../src/prefs.py:148
-msgid "Clear Historic"
-msgstr "Bersihkan Riwayat"
-
-#: ../src/prefs.py:165
-msgid "Clear Personal Data?"
-msgstr "Bersihkan Data Pribadi?"
-
-#: ../src/prefs.py:166
-msgid "Cookies and cache data will be deleted permanently."
-msgstr "Kuki dan data singgahan akan dihapus secara permanen."
-
-#: ../src/prefs.py:167
-msgid "Clear Data"
-msgstr "Bersihkan Data"
-
-#: ../src/bookmarks.py:46
-msgid ""
-"<b>No bookmarks</b>\n"
-"\n"
-"<small>Use the <i>Add Bookmark</i> button\n"
-"or click a link with the middle mouse button\n"
-"to add bookmarks to the list</small>"
-msgstr ""
-"<b>Tidak ada markah</b>\n"
-"\n"
-"<small>Gunakan tombol <i>Tambahkan Markah</i>\n"
-"atau klik tautan dengan tombol tengah tetikus\n"
-"untuk menambahkan markah ke daftar</small>"
+#: ../src/search.py:249
+msgid "Default search language: "
+msgstr "Bahasa pencarian bawaan: "
 
 #: ../src/bookmarks.py:137
 msgid "Clear Bookmarks List?"
@@ -113,14 +47,29 @@ msgstr "Semua markah dalam daftar akan dihapus secara permanen."
 msgid "Clear List"
 msgstr "Bersihkan Daftar"
 
-#: ../src/wike-sp.in:71
-#, python-format
-msgid "Search «%s» in Wikipedia"
-msgstr "Cari «%s» di Wikipedia"
+#: ../data/ui/search-settings.ui:61
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:21
+msgid "Search suggestions"
+msgstr "Saran Pencarian"
 
-#: ../data/ui/header-spinner.ui:23
-msgid "Loading Article"
-msgstr "Memuat Artikel"
+#: ../data/ui/about.ui:8
+msgid "Search and read Wikipedia articles\n"
+"All content from Wikipedia.org\n"
+"and available under CC BY-SA 3.0 unless otherwise noted"
+msgstr "Cari dan baca artikel Wikipedia\n"
+"Semua konten dari Wikipedia.org\n"
+"dan tersedia di bawah CC BY-SA 3.0 kecuali dinyatakan lain"
+
+#. Add your name like this:
+#. 
+#. Hugo Olabera <hugolabe@gmail.com>
+#: ../data/ui/about.ui:13
+msgid "translator-credits"
+msgstr "Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2021."
+
+#: ../data/ui/bookmarks.ui:58
+msgid "Add Bookmark"
+msgstr "Tambah Markah"
 
 #: ../data/ui/shortcuts.ui:14
 msgctxt "shortcut window"
@@ -222,32 +171,150 @@ msgctxt "shortcut window"
 msgid "Add bookmark"
 msgstr "Tambah markah"
 
-#: ../data/ui/about.ui:8
-msgid ""
-"Search and read Wikipedia articles\n"
-"All content from Wikipedia.org\n"
-"and available under CC BY-SA 3.0 unless otherwise noted"
-msgstr ""
-"Cari dan baca artikel Wikipedia\n"
-"Semua konten dari Wikipedia.org\n"
-"dan tersedia di bawah CC BY-SA 3.0 kecuali dinyatakan lain"
+#: ../src/prefs.py:81 ../data/ui/menu.ui:8
+msgid "Wikipedia Main Page"
+msgstr "Halaman Utama Wikipedia"
 
-#: ../data/ui/about.ui:13
-msgid "translator-credits"
-msgstr "Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2021."
+#: ../src/view.py:234 ../data/ui/menu.ui:18
+msgid "Recent Articles"
+msgstr "Artikel Terbaru"
 
-#: ../data/ui/search-settings.ui:61
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:21
-msgid "Search suggestions"
-msgstr "Saran Pencarian"
+#: ../data/ui/menu.ui:23
+msgid "Reload Page"
+msgstr "Muat Ulang Halaman"
+
+#: ../data/ui/menu.ui:30
+msgid "Search Text in Page"
+msgstr "Cari Teks di Halaman"
+
+#: ../data/ui/menu.ui:36
+msgid "Open Wikipedia Page in Browser"
+msgstr "Buka Halaman Wikipedia di Peramban"
+
+#: ../data/ui/menu.ui:40
+msgid "Copy Wikipedia URL to Clipboard"
+msgstr "Salin URL Wikipedia ke Papan klip"
+
+#: ../data/ui/menu.ui:46
+msgid "Preferences"
+msgstr "Preferensi"
+
+#: ../data/ui/menu.ui:56
+msgid "Keyboard Shortcuts"
+msgstr "Pintasan Papan Tik"
+
+#: ../data/ui/menu.ui:60
+msgid "About Wike"
+msgstr "Tentang Wike"
+
+#: ../data/ui/prefs.ui:20
+msgid "Behavior"
+msgstr "Perilaku"
+
+#: ../data/ui/prefs.ui:135
+msgid "Keep a list of recent articles"
+msgstr "Menyimpan daftar artikel terbaru"
 
 #: ../data/ui/prefs.ui:14
 msgid "General"
 msgstr "Umum"
 
-#: ../data/ui/prefs.ui:20
-msgid "Behavior"
-msgstr "Perilaku"
+#: ../data/ui/prefs.ui:178
+msgid "Languages"
+msgstr "Bahasa"
+
+#: ../data/ui/header-spinner.ui:23
+msgid "Loading Article"
+msgstr "Memuat Artikel"
+
+#. Don't translate app name!
+#: ../data/com.github.hugolabe.Wike.desktop.in:3
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:7
+msgid "Wike"
+msgstr "Wike"
+
+#: ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
+msgid "Wikipedia Reader"
+msgstr "Pembaca Wikipedia"
+
+#. Don't remove semicolons!
+#: ../data/com.github.hugolabe.Wike.desktop.in:10
+msgid "Wikipedia;Encyclopedia;"
+msgstr "Wikipedia; Ensiklopedia;"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:11
+msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
+msgstr "Wike adalah pembaca Wikipedia untuk Destop GNOME. Menyediakan akses ke semua konten ensiklopedia luring ini dalam aplikasi asli, dengan tampilan artikel yang lebih sederhana dan bebas gangguan."
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
+msgid "Multiple languages"
+msgstr "Multi Bahasa"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:22
+msgid "List of recent articles"
+msgstr "Daftar artikel terbaru"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:23
+msgid "Simple bookmarks management"
+msgstr "Pengelola markah sederhana"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:24
+msgid "Text search in articles"
+msgstr "Pencarian teks dalam artikel"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:25
+msgid "Article table of contents"
+msgstr "Daftar isi artikel"
+
+#: ../data/ui/header.ui:136 ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
+msgid "View article in other languages"
+msgstr "Tampilkan artikel dalam bahasa lain"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
+msgid "Features:"
+msgstr "Fitur:"
+
+#: ../data/ui/menu.ui:50
+msgid "Dark Mode"
+msgstr "Mode Gelap"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
+msgid "Dark mode"
+msgstr "Mode gelap"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
+msgid "GNOME Shell search integration"
+msgstr "Integrasi pencarian Shell GNOME"
+
+#: ../src/prefs.py:146
+msgid "Clear Historic?"
+msgstr "Bersihkan Riwayat?"
+
+#: ../src/prefs.py:147
+msgid "The history of visited articles will be deleted permanently."
+msgstr "Riwayat artikel yang dikunjungi akan dihapus secara permanen."
+
+#: ../src/prefs.py:148
+msgid "Clear Historic"
+msgstr "Bersihkan Riwayat"
+
+#: ../src/prefs.py:165
+msgid "Clear Personal Data?"
+msgstr "Bersihkan Data Pribadi?"
+
+#: ../src/prefs.py:166
+msgid "Cookies and cache data will be deleted permanently."
+msgstr "Kuki dan data singgahan akan dihapus secara permanen."
+
+#: ../src/prefs.py:167
+msgid "Clear Data"
+msgstr "Bersihkan Data"
+
+#. Don't remove %s tag!
+#: ../src/wike-sp.in:71
+msgid "Search «%s» in Wikipedia"
+msgstr "Cari «%s» di Wikipedia"
 
 #: ../data/ui/prefs.ui:23
 msgid "Home page"
@@ -313,10 +380,6 @@ msgstr "Peringatan: semua pencarian destop akan dikirim ke Wikipedia"
 msgid "Personal Data"
 msgstr "Data Pribadi"
 
-#: ../data/ui/prefs.ui:135
-msgid "Keep a list of recent articles"
-msgstr "Menyimpan daftar artikel terbaru"
-
 #: ../data/ui/prefs.ui:136
 msgid "Wike will remember the history of visited articles"
 msgstr "Wike akan mengingat riwayat artikel yang dikunjungi"
@@ -333,122 +396,51 @@ msgstr "Bersihkan data pribadi"
 msgid "Cookies and cache data will be deleted"
 msgstr "Kuki dan data singgahan akan dihapus"
 
-#: ../data/ui/prefs.ui:178
-msgid "Languages"
-msgstr "Bahasa"
+#: ../src/view.py:161
+msgid "Try Again"
+msgstr "Coba lagi"
+
+#: ../src/prefs.py:81 ../data/ui/menu.ui:13
+msgid "Random Article"
+msgstr "Artikel acak"
+
+#: ../src/prefs.py:81
+msgid "Last Article"
+msgstr "Artikel terakhir"
+
+#: ../src/bookmarks.py:46
+msgid "<b>No Bookmarks</b>\n"
+"\n"
+"<small>Use the <i>Add Bookmark</i> button\n"
+"or click a link with the middle mouse button\n"
+"to add bookmarks to the list</small>"
+msgstr "<b>Tidak ada markah</b>\n"
+"\n"
+"<small>Gunakan tombol <i>Tambahkan Markah</i>\n"
+"atau klik tautan dengan tombol tengah tetikus\n"
+"untuk menambahkan markah ke daftar</small>"
+
+#: ../data/ui/header.ui:61
+msgid "Search articles"
+msgstr "Cari artikel"
+
+#: ../data/ui/header.ui:95
+msgid "Bookmarks"
+msgstr "Markah"
+
+#: ../data/ui/header.ui:117
+msgid "Table of contents"
+msgstr "Daftar isi"
 
 #: ../data/ui/prefs.ui:184
-msgid "Filter available languages"
+msgid "Filter Available Languages"
 msgstr "Saring bahasa yang tersedia"
 
 #: ../data/ui/prefs.ui:218
-msgid "Select all"
+msgid "Select All"
 msgstr "Pilih semua"
 
 #: ../data/ui/prefs.ui:230
-msgid "Select none"
+msgid "Select None"
 msgstr "Pilih tak satupun"
 
-#: ../data/ui/menu.ui:8
-msgid "Wikipedia Main Page"
-msgstr "Halaman Utama Wikipedia"
-
-#: ../data/ui/menu.ui:18
-msgid "Recent Articles"
-msgstr "Artikel Terbaru"
-
-#: ../data/ui/menu.ui:23
-msgid "Reload Page"
-msgstr "Muat Ulang Halaman"
-
-#: ../data/ui/menu.ui:30
-msgid "Search Text in Page"
-msgstr "Cari Teks di Halaman"
-
-#: ../data/ui/menu.ui:36
-msgid "Open Wikipedia Page in Browser"
-msgstr "Buka Halaman Wikipedia di Peramban"
-
-#: ../data/ui/menu.ui:40
-msgid "Copy Wikipedia URL to Clipboard"
-msgstr "Salin URL Wikipedia ke Papan klip"
-
-#: ../data/ui/menu.ui:46
-msgid "Preferences"
-msgstr "Preferensi"
-
-#: ../data/ui/menu.ui:50
-msgid "Dark Mode"
-msgstr "Mode Gelap"
-
-#: ../data/ui/menu.ui:56
-msgid "Keyboard Shortcuts"
-msgstr "Pintasan Papan Tik"
-
-#: ../data/ui/menu.ui:60
-msgid "About Wike"
-msgstr "Tentang Wike"
-
-#: ../data/ui/bookmarks.ui:58
-msgid "Add Bookmark"
-msgstr "Tambah Markah"
-
-#: ../data/com.github.hugolabe.Wike.desktop.in:3
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:7
-msgid "Wike"
-msgstr "Wike"
-
-#: ../data/com.github.hugolabe.Wike.desktop.in:4
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
-msgid "Wikipedia Reader"
-msgstr "Pembaca Wikipedia"
-
-#: ../data/com.github.hugolabe.Wike.desktop.in:10
-msgid "Wikipedia;Encyclopedia;"
-msgstr "Wikipedia; Ensiklopedia;"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:11
-msgid ""
-"Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the "
-"content of this online encyclopedia in a native application, with a simpler "
-"and distraction-free view of articles."
-msgstr ""
-"Wike adalah pembaca Wikipedia untuk Destop GNOME. Menyediakan akses ke semua "
-"konten ensiklopedia luring ini dalam aplikasi asli, dengan tampilan artikel "
-"yang lebih sederhana dan bebas gangguan."
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
-msgid "Features:"
-msgstr "Fitur:"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
-msgid "Multiple languages"
-msgstr "Multi Bahasa"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:22
-msgid "List of recent articles"
-msgstr "Daftar artikel terbaru"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:23
-msgid "Simple bookmarks management"
-msgstr "Pengelola markah sederhana"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:24
-msgid "Text search in articles"
-msgstr "Pencarian teks dalam artikel"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:25
-msgid "Article table of contents"
-msgstr "Daftar isi artikel"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
-msgid "View article in other languages"
-msgstr "Tampilkan artikel dalam bahasa lain"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
-msgid "GNOME Shell search integration"
-msgstr "Integrasi pencarian Shell GNOME"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
-msgid "Dark mode"
-msgstr "Mode gelap"

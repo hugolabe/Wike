@@ -58,6 +58,7 @@
       <object class="GtkToggleButton" id="search_button">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
+        <property name="tooltip-text" translatable="yes">Search articles</property>
         <child>
           <object class="GtkImage">
             <property name="visible">True</property>
@@ -91,6 +92,7 @@
       <object class="GtkMenuButton" id="bookmarks_button">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
+        <property name="tooltip-text" translatable="yes">Bookmarks</property>
         <child>
           <object class="GtkImage">
             <property name="visible">True</property>
@@ -112,6 +114,7 @@
           <object class="GtkMenuButton" id="toc_button">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="tooltip-text" translatable="yes">Table of contents</property>
             <child>
               <object class="GtkImage">
                 <property name="visible">True</property>
@@ -130,6 +133,7 @@
           <object class="GtkMenuButton" id="langlinks_button">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="tooltip-text" translatable="yes">View article in other languages</property>
             <child>
               <object class="GtkImage">
                 <property name="visible">True</property>

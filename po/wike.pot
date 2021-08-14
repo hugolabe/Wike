@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wike\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-13 20:31+0200\n"
+"POT-Creation-Date: 2021-08-14 12:27+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -229,6 +229,22 @@ msgstr ""
 msgid "Search suggestions"
 msgstr ""
 
+#: ../data/ui/header.ui:61
+msgid "Search articles"
+msgstr ""
+
+#: ../data/ui/header.ui:95
+msgid "Bookmarks"
+msgstr ""
+
+#: ../data/ui/header.ui:117
+msgid "Table of contents"
+msgstr ""
+
+#: ../data/ui/header.ui:136 ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
+msgid "View article in other languages"
+msgstr ""
+
 #: ../data/ui/prefs.ui:14
 msgid "General"
 msgstr ""
@@ -413,10 +429,6 @@ msgstr ""
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:25
 msgid "Article table of contents"
-msgstr ""
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
-msgid "View article in other languages"
 msgstr ""
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:27

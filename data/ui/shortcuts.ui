@@ -64,6 +64,13 @@
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">True</property>
+                <property name="title" translatable="yes" context="shortcut window">Bookmark the page</property>
+                <property name="accelerator">&lt;Primary&gt;D</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">True</property>
                 <property name="title" translatable="yes" context="shortcut window">Quit</property>
                 <property name="accelerator">&lt;Primary&gt;Q</property>
               </object>

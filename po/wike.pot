@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wike\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-14 12:27+0200\n"
+"POT-Creation-Date: 2021-08-30 17:59+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -106,7 +106,7 @@ msgstr ""
 
 #: ../src/wike-sp.in:71
 #, python-format
-msgid "Search «%s» in Wikipedia"
+msgid "Search “%s” on Wikipedia"
 msgstr ""
 
 #: ../data/ui/header-spinner.ui:23

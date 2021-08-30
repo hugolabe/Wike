@@ -314,7 +314,7 @@ msgstr "Rimuovi dati"
 
 #. Don't remove %s tag!
 #: ../src/wike-sp.in:71
-msgid "Search «%s» in Wikipedia"
+msgid "Search “%s” on Wikipedia"
 msgstr "Cerca «%s» su Wikipedia"
 
 #: ../data/ui/prefs.ui:23

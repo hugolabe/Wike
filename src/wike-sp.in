@@ -68,7 +68,7 @@ class WikeSearchService(dbus.service.Object):
         self._get_results(text)
       else:
         key = 'search:' + text
-        value = _('Search «%s» in Wikipedia') % text
+        value = _('Search “%s” on Wikipedia') % text
         self._results[key] = value
 
     return self._results.keys()

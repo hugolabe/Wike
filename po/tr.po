@@ -3,15 +3,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: POEditor.com\n"
 "Project-Id-Version: Wike\n"
-"Language: tr_TR\n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: \n"
-"Language-Team: Ümit Solmaz , u2slmz@pm.me\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-SourceCharset: UTF-8\n"
+"Language: tr\n"
 
 #: ../src/view.py:154
 msgid "Article not found"
@@ -59,17 +53,15 @@ msgid "Search suggestions"
 msgstr "Arama Önerilenleri"
 
 #: ../data/ui/about.ui:8
-msgid ""
-"Search and read Wikipedia articles\n"
+msgid "Search and read Wikipedia articles\n"
 "All content from Wikipedia.org\n"
 "and available under CC BY-SA 3.0 unless otherwise noted"
-msgstr ""
-"Vikipedia makalelerini arayın ve okuyun\n"
+msgstr "Vikipedia makalelerini arayın ve okuyun\n"
 "Tüm içerikler Wikipedia.org\n"
 "ve aksi belirtilmediği sürece CC BY-SA 3.0 kapsamında kullanılabilir"
 
 #. Add your name like this:
-#.
+#. 
 #. Hugo Olabera <hugolabe@gmail.com>
 #: ../data/ui/about.ui:13
 msgid "translator-credits"
@@ -321,7 +313,7 @@ msgstr "Veri Temizle"
 
 #. Don't remove %s tag!
 #: ../src/wike-sp.in:71
-msgid "Search «%s» in Wikipedia"
+msgid "Search “%s” on Wikipedia"
 msgstr "Vikipedia «%s» içinde Ara"
 
 #: ../data/ui/prefs.ui:23
@@ -417,14 +409,12 @@ msgid "Last Article"
 msgstr "Son Makale"
 
 #: ../src/bookmarks.py:46
-msgid ""
-"<b>No Bookmarks</b>\n"
+msgid "<b>No Bookmarks</b>\n"
 "\n"
 "<small>Use the <i>Add Bookmark</i> button\n"
 "or click a link with the middle mouse button\n"
 "to add bookmarks to the list</small>"
-msgstr ""
-"<b>Yerimleri Yok</b>\n"
+msgstr "<b>Yerimleri Yok</b>\n"
 "\n"
 "<small>Yerimini<i>Kullan</i> tuşunu\n"
 "veya orta fare tuşuyla bir bağlantıya tıklayın\n"
@@ -453,3 +443,4 @@ msgstr "Tümünü Seç"
 #: ../data/ui/prefs.ui:230
 msgid "Select None"
 msgstr "Hiçbirini Seçme"
+

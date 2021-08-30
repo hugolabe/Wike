@@ -293,7 +293,7 @@ msgstr ""
 
 #: ../src/prefs.py:147
 msgid "The history of visited articles will be deleted permanently."
-msgstr ""
+msgstr "Le chronologia del articulos visitate essera delite permanentemente."
 
 #: ../src/prefs.py:148
 msgid "Clear Historic"
@@ -309,24 +309,24 @@ msgstr ""
 
 #: ../src/prefs.py:167
 msgid "Clear Data"
-msgstr ""
+msgstr "Vacuar datos"
 
 #. Don't remove %s tag!
 #: ../src/wike-sp.in:71
-msgid "Search «%s» in Wikipedia"
+msgid "Search “%s” on Wikipedia"
 msgstr ""
 
 #: ../data/ui/prefs.ui:23
 msgid "Home page"
-msgstr ""
+msgstr "Pagina de initio"
 
 #: ../data/ui/prefs.ui:24
 msgid "The page that will be displayed when Wike starts"
-msgstr ""
+msgstr "Le pagina essera monstrate al initio de Wike"
 
 #: ../data/ui/prefs.ui:30
 msgid "Clear bookmarks on exit"
-msgstr ""
+msgstr "Vacuar marcapaginas al sortita"
 
 #: ../data/ui/prefs.ui:31
 msgid "The bookmarks list will be cleared when exiting Wike"
@@ -334,7 +334,7 @@ msgstr ""
 
 #: ../data/ui/prefs.ui:49
 msgid "Article View"
-msgstr ""
+msgstr "Vista de articulo"
 
 #: ../data/ui/prefs.ui:52
 msgid "Font size"
@@ -362,11 +362,11 @@ msgstr ""
 
 #: ../data/ui/prefs.ui:104
 msgid "Privacy"
-msgstr ""
+msgstr "Privacitate"
 
 #: ../data/ui/prefs.ui:110
 msgid "Search"
-msgstr ""
+msgstr "Cerca"
 
 #: ../data/ui/prefs.ui:113
 msgid "Allow live search on desktop"
@@ -378,19 +378,19 @@ msgstr ""
 
 #: ../data/ui/prefs.ui:132
 msgid "Personal Data"
-msgstr ""
+msgstr "Datos personal"
 
 #: ../data/ui/prefs.ui:136
 msgid "Wike will remember the history of visited articles"
-msgstr ""
+msgstr "Wike rememorara le chronologia del articulos visitate"
 
 #: ../data/ui/prefs.ui:148 ../data/ui/prefs.ui:163
 msgid "Clear"
-msgstr ""
+msgstr "Vacuar"
 
 #: ../data/ui/prefs.ui:158
 msgid "Clear personal data"
-msgstr ""
+msgstr "Vacuar le datos personal"
 
 #: ../data/ui/prefs.ui:159
 msgid "Cookies and cache data will be deleted"

@@ -66,4 +66,5 @@ install_data('icons/com.github.hugolabe.Wike.svg', install_dir: join_paths(icond
 install_data('icons/com.github.hugolabe.Wike-symbolic.svg', install_dir: join_paths(icondir, 'symbolic/apps'))
 install_data('icons/wike-dice-symbolic.svg', install_dir: join_paths(icondir, 'scalable/actions'))
 install_data('icons/wike-flag-symbolic.svg', install_dir: join_paths(icondir, 'scalable/actions'))
+install_data('icons/wike-language-symbolic.svg', install_dir: join_paths(icondir, 'scalable/actions'))
 

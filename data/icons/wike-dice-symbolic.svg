@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   id="svg7384"
+   width="16"
+   height="16"
+   version="1.1"
+   sodipodi:docname="wike-dice-symbolic.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title819">Wike</title>
+  <defs
+     id="defs12" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     id="namedview10"
+     showgrid="false"
+     inkscape:zoom="14.75"
+     inkscape:cx="-5.2542373"
+     inkscape:cy="8"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg7384"
+     showborder="true"
+     inkscape:showpageshadow="false"
+     inkscape:pagecheckerboard="1" />
+  <metadata
+     id="metadata90">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Wike</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     id="path3757"
+     style="display:inline;fill:#2e3436;fill-opacity:1;stroke-width:4;stop-color:#000000"
+     d="M 2.89819,0.032 C 1.93247,0.032 1.155,0.80947 1.155,1.77519 v 12.44917 c 0,0.96572 0.77747,1.74319 1.74319,1.74319 h 10.20333 c 0.96572,0 1.74319,-0.77747 1.74319,-1.74319 V 1.77519 c 0,-0.96572 -0.77747,-1.74319 -1.74319,-1.74319 z m 0.74919,1.96875 h 8.70495 c 0.0457,0 0.0918,0.005 0.13477,0.0137 0.043,0.009 0.0836,0.0205 0.12305,0.0371 0.0395,0.0166 0.0762,0.0388 0.11132,0.0625 0.0351,0.0237 0.0679,0.0503 0.0977,0.0801 0.0298,0.0298 0.0564,0.0626 0.0801,0.0977 0.0237,0.0351 0.0459,0.0718 0.0625,0.11132 0.0166,0.0395 0.0283,0.08 0.0371,0.12305 0.009,0.043 0.0137,0.0891 0.0137,0.13477 v 7.67968 c 0,0.0457 -0.005,0.0918 -0.0137,0.13477 -0.009,0.043 -0.0205,0.0836 -0.0371,0.12305 -0.0166,0.0395 -0.0388,0.0762 -0.0625,0.11132 -0.0237,0.0351 -0.0503,0.0679 -0.0801,0.0977 -0.0298,0.0298 -0.0626,0.0564 -0.0977,0.0801 -0.0351,0.0237 -0.0718,0.0459 -0.11132,0.0625 -0.0395,0.0166 -0.08,0.0283 -0.12305,0.0371 -0.043,0.009 -0.0891,0.0137 -0.13477,0.0137 H 3.64738 c -0.0457,0 -0.0918,-0.005 -0.13477,-0.0137 -0.043,-0.009 -0.0836,-0.0205 -0.12305,-0.0371 -0.0395,-0.0166 -0.0762,-0.0388 -0.11132,-0.0625 -0.0351,-0.0237 -0.0679,-0.0503 -0.0977,-0.0801 -0.0298,-0.0298 -0.0564,-0.0626 -0.0801,-0.0977 -0.0237,-0.0351 -0.0459,-0.0718 -0.0625,-0.11132 -0.0166,-0.0395 -0.0283,-0.08 -0.0371,-0.12305 -0.009,-0.043 -0.0137,-0.0891 -0.0137,-0.13477 V 2.66099 c 0,-0.0457 0.005,-0.0918 0.0137,-0.13477 0.009,-0.043 0.0205,-0.0836 0.0371,-0.12305 0.0166,-0.0395 0.0388,-0.0762 0.0625,-0.11132 0.0237,-0.0351 0.0503,-0.0679 0.0801,-0.0977 0.0298,-0.0298 0.0626,-0.0564 0.0977,-0.0801 0.0351,-0.0237 0.0718,-0.0459 0.11132,-0.0625 0.0395,-0.0166 0.08,-0.0283 0.12305,-0.0371 0.043,-0.009 0.0891,-0.0137 0.13477,-0.0137 z m 1.33984,1 c -0.554,0 -1,0.446 -1,1 0,0.554 0.446,1 1,1 0.554,0 1,-0.446 1,-1 0,-0.554 -0.446,-1 -1,-1 z m 6.02527,0 c -0.554,0 -1,0.446 -1,1 0,0.554 0.446,1 1,1 0.554,0 1,-0.446 1,-1 0,-0.554 -0.446,-1 -1,-1 z m -6.02527,5 c -0.554,0 -1,0.446 -1,1 0,0.554 0.446,1 1,1 0.554,0 1,-0.446 1,-1 0,-0.554 -0.446,-1 -1,-1 z m 6.02527,0 c -0.554,0 -1,0.446 -1,1 0,0.554 0.446,1 1,1 0.554,0 1,-0.446 1,-1 0,-0.554 -0.446,-1 -1,-1 z m -2.99103,4.74023 c 0.554,0 1,0.34118 1,0.76368 0,0.42249 -0.446,0.76171 -1,0.76171 -0.554,0 -1,-0.33922 -1,-0.76171 0,-0.4225 0.446,-0.76368 1,-0.76368 z"
+     sodipodi:nodetypes="ssssssssssscssssscsscssssscsscssssscsscssssscssssssssssssssssssssssssss" />
+</svg>

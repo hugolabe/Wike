@@ -11,7 +11,7 @@
       </item>
       <item>
         <attribute name="label" translatable="yes">Random Article</attribute>
-        <attribute name="verb-icon">wike-bulb-symbolic</attribute>
+        <attribute name="verb-icon">wike-dice-symbolic</attribute>
         <attribute name="action">win.random_article</attribute>
       </item>
       <item>

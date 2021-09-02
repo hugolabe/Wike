@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wike\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-30 17:59+0200\n"
+"POT-Creation-Date: 2021-09-02 11:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,11 +39,11 @@ msgstr ""
 msgid "Default search language: "
 msgstr ""
 
-#: ../src/window.py:150 ../src/window.py:255
+#: ../src/window.py:151 ../src/window.py:261
 msgid "New bookmark: "
 msgstr ""
 
-#: ../src/window.py:313
+#: ../src/window.py:319
 msgid "Wikipedia URL copied to clipboard"
 msgstr ""
 
@@ -120,95 +120,100 @@ msgstr ""
 
 #: ../data/ui/shortcuts.ui:18
 msgctxt "shortcut window"
-msgid "Table of contents"
+msgid "Main menu"
 msgstr ""
 
 #: ../data/ui/shortcuts.ui:25
 msgctxt "shortcut window"
-msgid "View article in other languages"
+msgid "Table of contents"
 msgstr ""
 
 #: ../data/ui/shortcuts.ui:32
 msgctxt "shortcut window"
-msgid "Search text in page"
+msgid "View article in other languages"
 msgstr ""
 
 #: ../data/ui/shortcuts.ui:39
 msgctxt "shortcut window"
-msgid "Preferences"
+msgid "Search text in page"
 msgstr ""
 
 #: ../data/ui/shortcuts.ui:46
 msgctxt "shortcut window"
-msgid "Select all"
+msgid "Preferences"
 msgstr ""
 
 #: ../data/ui/shortcuts.ui:53
 msgctxt "shortcut window"
-msgid "Copy selection"
+msgid "Select all"
 msgstr ""
 
 #: ../data/ui/shortcuts.ui:60
 msgctxt "shortcut window"
-msgid "Copy Wikipedia URL"
+msgid "Copy selection"
 msgstr ""
 
 #: ../data/ui/shortcuts.ui:67
 msgctxt "shortcut window"
-msgid "Quit"
+msgid "Copy Wikipedia URL"
 msgstr ""
 
 #: ../data/ui/shortcuts.ui:74
 msgctxt "shortcut window"
+msgid "Quit"
+msgstr ""
+
+#: ../data/ui/shortcuts.ui:81
+msgctxt "shortcut window"
 msgid "Keyboard shortcuts"
 msgstr ""
 
-#: ../data/ui/shortcuts.ui:83
+#: ../data/ui/shortcuts.ui:90
 msgctxt "shortcut window"
 msgid "Navigation"
 msgstr ""
 
-#: ../data/ui/shortcuts.ui:87
+#: ../data/ui/shortcuts.ui:94
 msgctxt "shortcut window"
 msgid "Search articles"
 msgstr ""
 
-#: ../data/ui/shortcuts.ui:94
+#: ../data/ui/shortcuts.ui:101
 msgctxt "shortcut window"
 msgid "Wikipedia main page"
 msgstr ""
 
-#: ../data/ui/shortcuts.ui:101
+#: ../data/ui/shortcuts.ui:108
 msgctxt "shortcut window"
 msgid "Show recent articles"
 msgstr ""
 
-#: ../data/ui/shortcuts.ui:108
+#: ../data/ui/shortcuts.ui:115
 msgctxt "shortcut window"
 msgid "Previous page"
 msgstr ""
 
-#: ../data/ui/shortcuts.ui:115
+#: ../data/ui/shortcuts.ui:122
 msgctxt "shortcut window"
 msgid "Next page"
 msgstr ""
 
-#: ../data/ui/shortcuts.ui:122
+#: ../data/ui/shortcuts.ui:129
 msgctxt "shortcut window"
 msgid "Reload page"
 msgstr ""
 
-#: ../data/ui/shortcuts.ui:131
+#: ../data/ui/shortcuts.ui:138
 msgctxt "shortcut window"
 msgid "Bookmarks"
 msgstr ""
 
-#: ../data/ui/shortcuts.ui:135
+#: ../data/ui/shortcuts.ui:142
 msgctxt "shortcut window"
 msgid "Show bookmarks"
 msgstr ""
 
-#: ../data/ui/shortcuts.ui:142
+#: ../data/ui/shortcuts.ui:149
 msgctxt "shortcut window"
 msgid "Add bookmark"
 msgstr ""

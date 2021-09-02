@@ -15,6 +15,13 @@
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">True</property>
+                <property name="title" translatable="yes" context="shortcut window">Main menu</property>
+                <property name="accelerator">F10</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">True</property>
                 <property name="title" translatable="yes" context="shortcut window">Table of contents</property>
                 <property name="accelerator">&lt;Primary&gt;T</property>
               </object>
@@ -72,7 +79,7 @@
               <object class="GtkShortcutsShortcut">
                 <property name="visible">True</property>
                 <property name="title" translatable="yes" context="shortcut window">Keyboard shortcuts</property>
-                <property name="accelerator">&lt;Primary&gt;F1</property>
+                <property name="accelerator">&lt;Primary&gt;question</property>
               </object>
             </child>
           </object>
@@ -120,7 +127,7 @@
               <object class="GtkShortcutsShortcut">
                 <property name="visible">True</property>
                 <property name="title" translatable="yes" context="shortcut window">Reload page</property>
-                <property name="accelerator">F5</property>
+                <property name="accelerator">F5 &lt;Primary&gt;R</property>
               </object>
             </child>
           </object>

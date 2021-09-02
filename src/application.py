@@ -73,7 +73,7 @@ class Application(Gtk.Application):
     action = Gio.SimpleAction.new('shortcuts', None)
     action.connect('activate', self._shortcuts_cb)
     self.add_action(action)
-    self.set_accels_for_action('app.shortcuts', ('<Ctrl>F1',))
+    self.set_accels_for_action('app.shortcuts', ('<Ctrl>question',))
 
     action = Gio.SimpleAction.new('about', None)
     action.connect('activate', self._about_cb)

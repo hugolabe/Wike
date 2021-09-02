@@ -65,6 +65,7 @@ class Window(Handy.ApplicationWindow):
     actions = [ ('prev_page', self._prev_page_cb, ('<Alt>Left',)),
                 ('next_page', self._next_page_cb, ('<Alt>Right',)),
                 ('show_search', self._show_search_cb, ('F2', '<Ctrl>K',)),
+                ('show_menu', self._show_menu_cb, ('F10',)),
                 ('show_bookmarks', self._show_bookmarks_cb, ('<Ctrl>B',)),
                 ('add_bookmark', self._add_bookmark_cb, ('<Ctrl>D',)),
                 ('show_langlinks', self._show_langlinks_cb, ('<Ctrl>L',)),
@@ -72,7 +73,7 @@ class Window(Handy.ApplicationWindow):
                 ('main_page', self._main_page_cb, ('<Alt>Home',)),
                 ('random_article', self._random_article_cb, None),
                 ('show_historic', self._show_historic_cb, ('<Ctrl>H',)),
-                ('reload_page', self._reload_page_cb, ('F5',)),
+                ('reload_page', self._reload_page_cb, ('F5', '<Ctrl>R',)),
                 ('search_text', self._search_text_cb, ('<Ctrl>F',)),
                 ('open_browser', self._open_browser_cb, None),
                 ('copy_url', self._copy_url_cb, ('<Ctrl>U',)) ]
@@ -234,6 +235,11 @@ class Window(Handy.ApplicationWindow):
 
   def _show_search_cb(self, action, parameter):
     self.headerbar.search_button.set_active(not self.headerbar.search_button.get_active())
+
+  # Show main menu
+
+  def _show_menu_cb(self, action, parameter):
+    self.headerbar.menu_button.set_active(not self.headerbar.menu_button.get_active())
 
   # Show bookmarks popover
 

@@ -23,11 +23,11 @@ msgstr "Não é possível acessar a Wikipédia"
 msgid "Check your Internet connection and try again"
 msgstr "Verifique sua conexão de internet e tente novamente"
 
-#: ../src/window.py:150 ../src/window.py:255
+#: ../src/window.py:151 ../src/window.py:261
 msgid "New bookmark: "
 msgstr "Novo marcador: "
 
-#: ../src/window.py:313
+#: ../src/window.py:319
 msgid "Wikipedia URL copied to clipboard"
 msgstr "URL da Wikipédia copiado para a área de transferência"
 
@@ -56,7 +56,7 @@ msgstr "Pesquisar sugestões"
 msgid "Search and read Wikipedia articles\n"
 "All content from Wikipedia.org\n"
 "and available under CC BY-SA 3.0 unless otherwise noted"
-msgstr "Pesquisar e ler artigos da Wikipédia\n"
+msgstr "Pesquise e leia artigos da Wikipédia\n"
 "Todo conteúdo do Wikipedia.org\n"
 "e disponível pela CC BY-SA 3.0 se não mencionado explicitamente"
 
@@ -77,97 +77,97 @@ msgctxt "shortcut window"
 msgid "General"
 msgstr "Geral"
 
-#: ../data/ui/shortcuts.ui:18
+#: ../data/ui/shortcuts.ui:25
 msgctxt "shortcut window"
 msgid "Table of contents"
 msgstr "Índice"
 
-#: ../data/ui/shortcuts.ui:25
+#: ../data/ui/shortcuts.ui:32
 msgctxt "shortcut window"
 msgid "View article in other languages"
 msgstr "Veja artigos noutras línguas"
 
-#: ../data/ui/shortcuts.ui:32
+#: ../data/ui/shortcuts.ui:39
 msgctxt "shortcut window"
 msgid "Search text in page"
 msgstr "Pesquisa texto na página"
 
-#: ../data/ui/shortcuts.ui:39
+#: ../data/ui/shortcuts.ui:46
 msgctxt "shortcut window"
 msgid "Preferences"
 msgstr "Preferências"
 
-#: ../data/ui/shortcuts.ui:46
+#: ../data/ui/shortcuts.ui:53
 msgctxt "shortcut window"
 msgid "Select all"
 msgstr "Seleciona todos"
 
-#: ../data/ui/shortcuts.ui:53
+#: ../data/ui/shortcuts.ui:60
 msgctxt "shortcut window"
 msgid "Copy selection"
 msgstr "Copia seleção"
 
-#: ../data/ui/shortcuts.ui:60
+#: ../data/ui/shortcuts.ui:67
 msgctxt "shortcut window"
 msgid "Copy Wikipedia URL"
 msgstr "Copia o URL da Wikipédia"
 
-#: ../data/ui/shortcuts.ui:67
+#: ../data/ui/shortcuts.ui:74
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Fechar"
 
-#: ../data/ui/shortcuts.ui:74
+#: ../data/ui/shortcuts.ui:81
 msgctxt "shortcut window"
 msgid "Keyboard shortcuts"
 msgstr "Atalhos de teclado"
 
-#: ../data/ui/shortcuts.ui:83
+#: ../data/ui/shortcuts.ui:90
 msgctxt "shortcut window"
 msgid "Navigation"
 msgstr "Navegação"
 
-#: ../data/ui/shortcuts.ui:87
+#: ../data/ui/shortcuts.ui:94
 msgctxt "shortcut window"
 msgid "Search articles"
 msgstr "Pesquisa artigos"
 
-#: ../data/ui/shortcuts.ui:94
+#: ../data/ui/shortcuts.ui:101
 msgctxt "shortcut window"
 msgid "Wikipedia main page"
 msgstr "Página principal da Wikipédia"
 
-#: ../data/ui/shortcuts.ui:101
+#: ../data/ui/shortcuts.ui:108
 msgctxt "shortcut window"
 msgid "Show recent articles"
 msgstr "Mostra artigos recentes"
 
-#: ../data/ui/shortcuts.ui:108
+#: ../data/ui/shortcuts.ui:115
 msgctxt "shortcut window"
 msgid "Previous page"
 msgstr "Página anterior"
 
-#: ../data/ui/shortcuts.ui:115
+#: ../data/ui/shortcuts.ui:122
 msgctxt "shortcut window"
 msgid "Next page"
 msgstr "Próxima página"
 
-#: ../data/ui/shortcuts.ui:122
+#: ../data/ui/shortcuts.ui:129
 msgctxt "shortcut window"
 msgid "Reload page"
 msgstr "Recarregar página"
 
-#: ../data/ui/shortcuts.ui:131
+#: ../data/ui/shortcuts.ui:138
 msgctxt "shortcut window"
 msgid "Bookmarks"
 msgstr "Marcadores"
 
-#: ../data/ui/shortcuts.ui:135
+#: ../data/ui/shortcuts.ui:142
 msgctxt "shortcut window"
 msgid "Show bookmarks"
 msgstr "Mostra marcadores"
 
-#: ../data/ui/shortcuts.ui:142
+#: ../data/ui/shortcuts.ui:149
 msgctxt "shortcut window"
 msgid "Add bookmark"
 msgstr "Adiciona marcador"
@@ -444,4 +444,9 @@ msgstr "Selecionar todos"
 #: ../data/ui/prefs.ui:230
 msgid "Select None"
 msgstr "Selecionar nenhum"
+
+#: ../data/ui/shortcuts.ui:18
+msgctxt "shortcut window"
+msgid "Main menu"
+msgstr "Menu principal"
 

@@ -43,6 +43,7 @@ class PrefsWindow(Handy.PreferencesWindow):
   historic_switch = Gtk.Template.Child()
   clear_historic_button = Gtk.Template.Child()
   clear_data_button = Gtk.Template.Child()
+  languages_entry = Gtk.Template.Child()
   languages_list = Gtk.Template.Child()
   select_all_button = Gtk.Template.Child()
   select_none_button = Gtk.Template.Child()
@@ -57,6 +58,8 @@ class PrefsWindow(Handy.PreferencesWindow):
     self._populate_custom_font_combo()
     self._populate_languages_list()
 
+    self.languages_list.set_filter_func(self._filter_list)
+
     settings.bind('on-start-load', self.on_start_combo, 'selected-index', Gio.SettingsBindFlags.DEFAULT)
     settings.bind('clear-bookmarks', self.clear_bookmarks_switch, 'active', Gio.SettingsBindFlags.DEFAULT)
     settings.bind('font-size', self.font_size_spin, 'value', Gio.SettingsBindFlags.DEFAULT)
@@ -68,6 +71,7 @@ class PrefsWindow(Handy.PreferencesWindow):
     self.custom_font_combo.connect('notify::selected-index', self._custom_font_combo_selected_cb)
     self.clear_historic_button.connect('clicked', self._clear_historic_button_cb)
     self.clear_data_button.connect('clicked', self._clear_data_button_cb)
+    self.languages_entry.connect('search-changed', self._languages_entry_changed_cb)
     self.languages_list.connect('row-activated', self._languages_list_selected_cb)
     self.select_all_button.connect('clicked', self._select_all_button_cb)
     self.select_none_button.connect('clicked', self._select_none_button_cb)
@@ -100,6 +104,18 @@ class PrefsWindow(Handy.PreferencesWindow):
     self.custom_font_combo.bind_name_model(model, Handy.ValueObject.dup_string)
     self.custom_font_combo.set_selected_index(selected)
 
+  # Filter languages list for languages entry content
+
+  def _filter_list(self, row):
+    text = self.languages_entry.get_text()
+    if text == '':
+      return True
+
+    if row.lang_name.lower().startswith(text.lower()) or row.lang_id.lower().startswith(text.lower()):
+      return True
+    else:
+      return False
+
   # Populate list of available languages
 
   def _populate_languages_list(self):
@@ -111,6 +127,11 @@ class PrefsWindow(Handy.PreferencesWindow):
         row = LanguageBoxRow(lang_name, lang_id, False)
       self.languages_list.add(row)
       row.lang_check.connect('toggled', self._language_checkbutton_cb)
+
+  # Refresh languages list on languages entry changed
+
+  def _languages_entry_changed_cb(self, languages_entry):
+    self.languages_list.invalidate_filter()
 
   # On window close refresh languages list (if changed)
 
@@ -188,6 +209,7 @@ class PrefsWindow(Handy.PreferencesWindow):
   # On button click check all languages
 
   def _select_all_button_cb(self, select_all_button):
+    self.languages_entry.set_text('')
     rows = self.languages_list.get_children()
     for row in rows:
       row.lang_check.set_active(True)
@@ -195,6 +217,7 @@ class PrefsWindow(Handy.PreferencesWindow):
   # On button click uncheck all languages
 
   def _select_none_button_cb(self, select_none_button):
+    self.languages_entry.set_text('')
     rows = self.languages_list.get_children()
     for row in rows:
       row.lang_check.set_active(False)

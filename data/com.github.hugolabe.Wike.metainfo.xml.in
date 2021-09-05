@@ -55,6 +55,16 @@
   </screenshots>
 
   <releases>
+    <release version="1.5.5" date="2021-09-05">
+      <description>
+        <ul>
+          <li>Small UI tweaks.</li>
+          <li>Fixed some texts.</li>
+          <li>Added Turkish and Swedish translations.</li>
+          <li>Updated several translations.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.5.4" date="2021-08-10">
       <description>
         <ul>

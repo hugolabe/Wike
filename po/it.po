@@ -278,7 +278,7 @@ msgstr "Caratteristiche:"
 
 #: ../data/ui/menu.ui:50
 msgid "Dark Mode"
-msgstr "Modalità scura"
+msgstr "Modalità Scura"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
 msgid "Dark mode"

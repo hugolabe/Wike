@@ -55,6 +55,14 @@
   </screenshots>
 
   <releases>
+    <release version="1.5.6" date="2021-09-09">
+      <description>
+        <ul>
+          <li>Updated French and Italian translations.</li>
+          <li>Bug fixes.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.5.5" date="2021-09-05">
       <description>
         <ul>

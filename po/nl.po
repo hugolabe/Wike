@@ -236,8 +236,8 @@ msgstr "Wike"
 
 #: ../data/com.github.hugolabe.Wike.desktop.in:4
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
-msgid "Wikipedia Reader"
-msgstr "Wikipedia-leeshulpmiddel"
+msgid "Search and read Wikipedia articles"
+msgstr "Zoek naar en lees Wikipedia-artikelen"
 
 #. Don't remove semicolons!
 #: ../data/com.github.hugolabe.Wike.desktop.in:10

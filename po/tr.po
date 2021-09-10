@@ -23,11 +23,11 @@ msgstr "Vikipedi'ye erişilemiyor"
 msgid "Check your Internet connection and try again"
 msgstr "İnternet bağlantınızı kontrol edin ve tekrar deneyin"
 
-#: ../src/window.py:150 ../src/window.py:255
+#: ../src/window.py:151 ../src/window.py:261
 msgid "New bookmark: "
 msgstr "Yeni yerimi: "
 
-#: ../src/window.py:313
+#: ../src/window.py:319
 msgid "Wikipedia URL copied to clipboard"
 msgstr "Vikipedi Bağlantısı panoya kopyalandı"
 
@@ -76,97 +76,97 @@ msgctxt "shortcut window"
 msgid "General"
 msgstr "Genel"
 
-#: ../data/ui/shortcuts.ui:18
+#: ../data/ui/shortcuts.ui:25
 msgctxt "shortcut window"
 msgid "Table of contents"
 msgstr "İçindekiler"
 
-#: ../data/ui/shortcuts.ui:25
+#: ../data/ui/shortcuts.ui:32
 msgctxt "shortcut window"
 msgid "View article in other languages"
 msgstr "Makaleyi diğer dillerde görüntüle"
 
-#: ../data/ui/shortcuts.ui:32
+#: ../data/ui/shortcuts.ui:39
 msgctxt "shortcut window"
 msgid "Search text in page"
 msgstr "Sayfadaki metni ara"
 
-#: ../data/ui/shortcuts.ui:39
+#: ../data/ui/shortcuts.ui:46
 msgctxt "shortcut window"
 msgid "Preferences"
 msgstr "Tercihler"
 
-#: ../data/ui/shortcuts.ui:46
+#: ../data/ui/shortcuts.ui:53
 msgctxt "shortcut window"
 msgid "Select all"
 msgstr "Tümünü Seç"
 
-#: ../data/ui/shortcuts.ui:53
+#: ../data/ui/shortcuts.ui:60
 msgctxt "shortcut window"
 msgid "Copy selection"
 msgstr "Seç Kopyala"
 
-#: ../data/ui/shortcuts.ui:60
+#: ../data/ui/shortcuts.ui:67
 msgctxt "shortcut window"
 msgid "Copy Wikipedia URL"
 msgstr "Vikipedia Bağlantısını Kopyala"
 
-#: ../data/ui/shortcuts.ui:67
+#: ../data/ui/shortcuts.ui:74
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Çık"
 
-#: ../data/ui/shortcuts.ui:74
+#: ../data/ui/shortcuts.ui:81
 msgctxt "shortcut window"
 msgid "Keyboard shortcuts"
 msgstr "Klavye kısayolları"
 
-#: ../data/ui/shortcuts.ui:83
+#: ../data/ui/shortcuts.ui:90
 msgctxt "shortcut window"
 msgid "Navigation"
 msgstr "Gezinti"
 
-#: ../data/ui/shortcuts.ui:87
+#: ../data/ui/shortcuts.ui:94
 msgctxt "shortcut window"
 msgid "Search articles"
 msgstr "Makale ara"
 
-#: ../data/ui/shortcuts.ui:94
+#: ../data/ui/shortcuts.ui:101
 msgctxt "shortcut window"
 msgid "Wikipedia main page"
 msgstr "Vikipedia ana sayfa"
 
-#: ../data/ui/shortcuts.ui:101
+#: ../data/ui/shortcuts.ui:108
 msgctxt "shortcut window"
 msgid "Show recent articles"
 msgstr "Son makaleleri göster"
 
-#: ../data/ui/shortcuts.ui:108
+#: ../data/ui/shortcuts.ui:115
 msgctxt "shortcut window"
 msgid "Previous page"
 msgstr "Önceki sayfa"
 
-#: ../data/ui/shortcuts.ui:115
+#: ../data/ui/shortcuts.ui:122
 msgctxt "shortcut window"
 msgid "Next page"
 msgstr "Sonraki sayfa"
 
-#: ../data/ui/shortcuts.ui:122
+#: ../data/ui/shortcuts.ui:129
 msgctxt "shortcut window"
 msgid "Reload page"
 msgstr "Sayfayı yeniden yükle"
 
-#: ../data/ui/shortcuts.ui:131
+#: ../data/ui/shortcuts.ui:138
 msgctxt "shortcut window"
 msgid "Bookmarks"
 msgstr "Yerimleri"
 
-#: ../data/ui/shortcuts.ui:135
+#: ../data/ui/shortcuts.ui:142
 msgctxt "shortcut window"
 msgid "Show bookmarks"
 msgstr "Yerimlerini göster"
 
-#: ../data/ui/shortcuts.ui:142
+#: ../data/ui/shortcuts.ui:149
 msgctxt "shortcut window"
 msgid "Add bookmark"
 msgstr "Yerimi ekle"
@@ -235,8 +235,8 @@ msgstr "Wike"
 
 #: ../data/com.github.hugolabe.Wike.desktop.in:4
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
-msgid "Wikipedia Reader"
-msgstr "Vikipedi Okuyucu"
+msgid "Search and read Wikipedia articles"
+msgstr "Vikipedia makalelerini arayın ve okuyun"
 
 #. Don't remove semicolons!
 #: ../data/com.github.hugolabe.Wike.desktop.in:10
@@ -443,4 +443,9 @@ msgstr "Tümünü Seç"
 #: ../data/ui/prefs.ui:230
 msgid "Select None"
 msgstr "Hiçbirini Seçme"
+
+#: ../data/ui/shortcuts.ui:18
+msgctxt "shortcut window"
+msgid "Main menu"
+msgstr ""
 

@@ -401,7 +401,7 @@ msgstr ""
 
 #: ../data/com.github.hugolabe.Wike.desktop.in:4
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
-msgid "Wikipedia Reader"
+msgid "Search and read Wikipedia articles"
 msgstr ""
 
 #: ../data/com.github.hugolabe.Wike.desktop.in:10

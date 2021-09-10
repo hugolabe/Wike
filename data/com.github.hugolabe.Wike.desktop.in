@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Wike
-Comment=Wikipedia Reader
+Comment=Search and read Wikipedia articles
 Icon=com.github.hugolabe.Wike
 Exec=wike
 Terminal=false

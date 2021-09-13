@@ -24,7 +24,7 @@ from gi.repository import Gio, GLib, Gdk, Gtk, Handy, WebKit2
 
 from wike.data import settings, historic
 from wike.header import HeaderBar
-from wike.view import wikiview
+from wike.view import WikiView
 
 
 # Application main window
@@ -57,9 +57,10 @@ class Window(Handy.ApplicationWindow):
     self.set_default_size(settings.get_int('window-width'), settings.get_int('window-height'))
     if settings.get_boolean('window-max'): self.maximize()
 
-    self.content_box.pack_end(wikiview, True, True, 0)
+    self.wikiview = WikiView()
+    self.content_box.pack_end(self.wikiview, True, True, 0)
 
-    self.headerbar = HeaderBar()
+    self.headerbar = HeaderBar(self)
     self.window_box.pack_start(self.headerbar, False, True, 0)
 
     actions = [ ('prev_page', self._prev_page_cb, ('<Alt>Left',)),
@@ -84,14 +85,14 @@ class Window(Handy.ApplicationWindow):
       self.add_action(simple_action)
       if accel: app.set_accels_for_action('win.' + action, accel)
 
-    find_controller = wikiview.get_find_controller()
-    nav_list = wikiview.get_back_forward_list()
+    find_controller = self.wikiview.get_find_controller()
+    nav_list = self.wikiview.get_back_forward_list()
     self.search_bar.connect_entry(self.textsearch_entry)
 
-    wikiview.connect('load-wiki', self._wikiview_load_wiki_cb)
-    wikiview.connect('load-changed', self._wikiview_load_changed_cb)
-    wikiview.connect('load-failed', self._wikiview_load_failed_cb)
-    wikiview.connect('add-bookmark', self._wikiview_add_bookmark_cb)
+    self.wikiview.connect('load-wiki', self._wikiview_load_wiki_cb)
+    self.wikiview.connect('load-changed', self._wikiview_load_changed_cb)
+    self.wikiview.connect('load-failed', self._wikiview_load_failed_cb)
+    self.wikiview.connect('add-bookmark', self._wikiview_add_bookmark_cb)
     self.textsearch_entry.connect('changed', self._textsearch_entry_changed_cb, find_controller)
     self.textsearch_entry.connect('activate', self._textsearch_entry_activate_cb, find_controller)
     self.textsearch_prev_button.connect('clicked', self._textsearch_prev_button_clicked_cb, find_controller)
@@ -103,20 +104,20 @@ class Window(Handy.ApplicationWindow):
     self.notification_close_button.connect('clicked', self._hide_notification_cb)
 
     if launch_uri == 'notfound':
-      wikiview.load_message(launch_uri, None)
+      self.wikiview.load_message(launch_uri, None)
     else:
       if launch_uri != '':
-        wikiview.load_wiki(launch_uri)
+        self.wikiview.load_wiki(launch_uri)
       else:
         if settings.get_int('on-start-load') == 0:
-          wikiview.load_main()
+          self.wikiview.load_main()
         elif settings.get_int('on-start-load') == 1:
-          wikiview.load_random()
+          self.wikiview.load_random()
         else:
           if settings.get_string('last-uri'):
-            wikiview.load_wiki(settings.get_string('last-uri'))
+            self.wikiview.load_wiki(settings.get_string('last-uri'))
           else:
-            wikiview.load_main()
+            self.wikiview.load_main()
 
   # Show spinner on wikiview load started
 
@@ -131,9 +132,10 @@ class Window(Handy.ApplicationWindow):
       self.headerbar.toc_button.set_sensitive(False)
       self.headerbar.langlinks_button.set_sensitive(False)
     elif event == WebKit2.LoadEvent.FINISHED:
+      wikiview.set_props()
       self.headerbar.hide_spinner()
-      props = wikiview.get_props()
-      self.headerbar.set_page_menus(props)
+      self.headerbar.set_toc(wikiview.sections)
+      self.headerbar.set_langlinks(wikiview.langlinks)
       if settings.get_boolean('keep-historic') and not wikiview.is_local():
         historic.add(wikiview.get_base_uri(), wikiview.get_title(), wikiview.get_lang())
 
@@ -208,11 +210,11 @@ class Window(Handy.ApplicationWindow):
     prev_page_action = self.lookup_action('prev_page')
     next_page_action = self.lookup_action('next_page')
 
-    if wikiview.can_go_back():
+    if self.wikiview.can_go_back():
       prev_page_action.set_enabled(True)
     else:
       prev_page_action.set_enabled(False)
-    if wikiview.can_go_forward():
+    if self.wikiview.can_go_forward():
       next_page_action.set_enabled(True)
     else:
       next_page_action.set_enabled(False)
@@ -220,15 +222,15 @@ class Window(Handy.ApplicationWindow):
   # Go to previous page
 
   def _prev_page_cb(self, action, parameter):
-    if wikiview.can_go_back():
-      wikiview.go_back()
+    if self.wikiview.can_go_back():
+      self.wikiview.go_back()
       self.headerbar.hide_spinner()
 
   # Go to next page
 
   def _next_page_cb(self, action, parameter):
-    if wikiview.can_go_forward():
-      wikiview.go_forward()
+    if self.wikiview.can_go_forward():
+      self.wikiview.go_forward()
       self.headerbar.hide_spinner()
 
   # Show search entry
@@ -250,10 +252,10 @@ class Window(Handy.ApplicationWindow):
   # Add current page to bookmarks
 
   def _add_bookmark_cb(self, action, parameter):
-    if not wikiview.is_local():
-      uri = wikiview.get_base_uri()
-      title = wikiview.get_title()
-      lang = wikiview.get_lang()
+    if not self.wikiview.is_local():
+      uri = self.wikiview.get_base_uri()
+      title = self.wikiview.get_title()
+      lang = self.wikiview.get_lang()
       if self.headerbar.bookmarks_popover.add_bookmark(uri, title, lang):
         if self.headerbar.bookmarks_popover.is_visible():
           self.headerbar.bookmarks_popover.bookmarks_list.show_all()
@@ -278,22 +280,22 @@ class Window(Handy.ApplicationWindow):
   # Show Wikipedia main page
 
   def _main_page_cb(self, action, parameter):
-    wikiview.load_main()
+    self.wikiview.load_main()
 
   # Show Wikipedia random article
 
   def _random_article_cb(self, action, parameter):
-    wikiview.load_random()
+    self.wikiview.load_random()
 
   # Show historic
 
   def _show_historic_cb(self, action, parameter):
-    wikiview.load_historic()
+    self.wikiview.load_historic()
 
   # Reload article view
 
   def _reload_page_cb(self, action, parameter):
-    wikiview.reload()
+    self.wikiview.reload()
 
   # Show text search bar
 
@@ -306,13 +308,13 @@ class Window(Handy.ApplicationWindow):
   # Open article in external browser
 
   def _open_browser_cb(self, action, parameter):
-    uri = wikiview.get_base_uri()
+    uri = self.wikiview.get_base_uri()
     Gtk.show_uri(None, uri, Gdk.CURRENT_TIME)
 
   # Copy article URL to clipboard
 
   def _copy_url_cb(self, action, parameter):
-    uri = wikiview.get_base_uri()
+    uri = self.wikiview.get_base_uri()
     clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
     clipboard.set_text(uri, -1)
 

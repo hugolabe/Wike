@@ -22,7 +22,6 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
 
 from wike.data import languages, bookmarks
-from wike.view import wikiview
 
 
 # Popover class for bookmarks
@@ -40,8 +39,10 @@ class BookmarksPopover(Gtk.Popover):
 
   # Initialize popover and connect signals
 
-  def __init__(self):
+  def __init__(self, window):
     super().__init__()
+
+    self._window = window
 
     placeholder_text = _("<b>No Bookmarks</b>\n\n<small>Use the <i>Add Bookmark</i> button\nor click a link with the middle mouse button\nto add bookmarks to the list</small>")
     self.placeholder_label.set_markup(placeholder_text)
@@ -99,7 +100,7 @@ class BookmarksPopover(Gtk.Popover):
       self.clear_button.set_sensitive(False)
     else:
       self.clear_button.set_sensitive(True)
-    if wikiview.get_base_uri() in bookmarks.items or wikiview.is_local():
+    if self._window.wikiview.get_base_uri() in bookmarks.items or self._window.wikiview.is_local():
       self.add_button.set_sensitive(False)
     else:
       self.add_button.set_sensitive(True)
@@ -121,9 +122,9 @@ class BookmarksPopover(Gtk.Popover):
   # Add item on button clicked
 
   def _add_button_clicked_cb(self, add_button):
-    uri = wikiview.get_base_uri()
-    title = wikiview.get_title()
-    lang = wikiview.get_lang()
+    uri = self._window.wikiview.get_base_uri()
+    title = self._window.wikiview.get_title()
+    lang = self._window.wikiview.get_lang()
     if self.add_bookmark(uri, title, lang):
       self.bookmarks_list.show_all()
 
@@ -152,7 +153,7 @@ class BookmarksPopover(Gtk.Popover):
 
   def _list_activated_cb(self, bookmarks_list, row):
     self.hide()
-    wikiview.load_wiki(row.uri)
+    self._window.wikiview.load_wiki(row.uri)
 
   # Refresh buttons state on list changed
 

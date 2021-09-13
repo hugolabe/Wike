@@ -24,11 +24,11 @@ import gi
 gi.require_version('Gtk', '3.0')
 gi.require_version('Handy', '1')
 gi.require_version('WebKit2', '4.0')
-from gi.repository import Gio, GLib, Gtk, Handy, WebKit2
+from gi.repository import Gio, GLib, Gtk, Handy
 
 from wike.data import settings, languages, historic, bookmarks
 from wike.prefs import PrefsWindow
-from wike.view import wikiview
+from wike.view import view_settings
 from wike.window import Window
 
 
@@ -47,19 +47,12 @@ class Application(Gtk.Application):
 
     self.add_main_option('url', b'u', GLib.OptionFlags.NONE, GLib.OptionArg.STRING, 'Wikipedia URL to open', None)
 
-  # Initialize webcontext with cookie manager and set actions
+  # Initialize libhandy and set actions
 
   def do_startup(self):
     Gtk.Application.do_startup(self)
 
     Handy.init()
-
-    web_context = WebKit2.WebContext.get_default()
-    web_context.set_cache_model(WebKit2.CacheModel.WEB_BROWSER)
-    cookies_file_path = GLib.get_user_data_dir() + '/cookies'
-    cookie_manager = WebKit2.WebContext.get_cookie_manager(web_context)
-    cookie_manager.set_accept_policy(WebKit2.CookieAcceptPolicy.ALWAYS)
-    cookie_manager.set_persistent_storage(cookies_file_path, WebKit2.CookiePersistentStorage.TEXT)
 
     action = Gio.SimpleAction.new('prefs', None)
     action.connect('activate', self._prefs_cb)
@@ -89,9 +82,9 @@ class Application(Gtk.Application):
 
     if self._window:
       if self._launch_uri == 'notfound':
-        wikiview.load_message(self._launch_uri, None)
+        self._window.wikiview.load_message(self._launch_uri, None)
       else:
-        wikiview.load_wiki(self._launch_uri)
+        self._window.wikiview.load_wiki(self._launch_uri)
 
     self.activate()
     return 0
@@ -121,7 +114,7 @@ class Application(Gtk.Application):
     action.set_state(parameter)
     settings.set_boolean('dark-mode', parameter)
     self._gtk_settings.set_property('gtk-application-prefer-dark-theme', parameter)
-    wikiview.set_style()
+    view_settings.set_style()
 
   # Show Shortcuts window
 
@@ -153,10 +146,10 @@ class Application(Gtk.Application):
       settings.set_int('window-width', size[0])
       settings.set_int('window-height', size[1])
 
-    if wikiview.is_local():
+    if window.wikiview.is_local():
       settings.set_string('last-uri', '')
     else:
-      settings.set_string('last-uri', wikiview.get_base_uri())
+      settings.set_string('last-uri', window.wikiview.get_base_uri())
 
     settings.sync()
     languages.save()

@@ -22,32 +22,34 @@ import urllib.parse
 import gi
 gi.require_version('Gtk', '3.0')
 gi.require_version('WebKit2', '4.0')
-from gi.repository import Gio, GObject, Gdk, Gtk, WebKit2
+from gi.repository import Gio, GLib, GObject, Gdk, Gtk, WebKit2
 
 from wike import wikipedia
-from wike.data import settings, languages, historic, bookmarks
+from wike.data import settings, languages, historic
 
 
-# Webview class for Wikipedia view
-# Show Wikipedia pages with custom css and manage decision policy
+# Initialize webcontext with cookie manager
 
-class WikiView(WebKit2.WebView):
+web_context = WebKit2.WebContext.get_default()
+web_context.set_cache_model(WebKit2.CacheModel.WEB_BROWSER)
+cookies_file_path = GLib.get_user_data_dir() + '/cookies'
+cookie_manager = WebKit2.WebContext.get_cookie_manager(web_context)
+cookie_manager.set_accept_policy(WebKit2.CookieAcceptPolicy.ALWAYS)
+cookie_manager.set_persistent_storage(cookies_file_path, WebKit2.CookiePersistentStorage.TEXT)
 
-  __gsignals__ = { 'load-wiki': (GObject.SIGNAL_RUN_FIRST, None, ()),
-                   'add-bookmark': (GObject.SIGNAL_RUN_FIRST, None, (str, str, str,)) }
 
-  # Initialize view with user content and web settings
+# Settings class for Wikipedia views
+# Create settings and user content with custom css for wikiviews
+
+class ViewSettings:
+
+  web_settings = WebKit2.Settings()
+  user_content = WebKit2.UserContentManager()
+
+  # Load custom css and connect view settings signals
 
   def __init__(self):
-    user_content = WebKit2.UserContentManager()
-    super().__init__(user_content_manager=user_content)
-
-    web_settings = self.get_settings()
-    web_settings.set_default_font_size(settings.get_int('font-size'))
-    settings.connect('changed::font-size', self._settings_font_size_changed_cb, web_settings)
-    settings.connect('changed::custom-font', self._settings_custom_font_changed_cb)
-    settings.connect('changed::font-family', self._settings_custom_font_changed_cb)
-    settings.connect('changed::preview-popups', self._settings_preview_popups_changed_cb)
+    self.web_settings.set_default_font_size(settings.get_int('font-size'))
 
     gfile = Gio.File.new_for_uri('resource:///com/github/hugolabe/Wike/styles/view.min.css')
     try:
@@ -69,10 +71,15 @@ class WikiView(WebKit2.WebView):
 
     self.set_style()
 
+    settings.connect('changed::font-size', self._settings_font_size_changed_cb)
+    settings.connect('changed::custom-font', self._settings_custom_font_changed_cb)
+    settings.connect('changed::font-family', self._settings_custom_font_changed_cb)
+    settings.connect('changed::preview-popups', self._settings_preview_popups_changed_cb)
+
   # Settings font-size changed event
 
-  def _settings_font_size_changed_cb(self, settings, key, web_settings):
-    web_settings.set_default_font_size(settings.get_int('font-size'))
+  def _settings_font_size_changed_cb(self, settings, key):
+    self.web_settings.set_default_font_size(settings.get_int('font-size'))
 
   # Settings custom font changed event
 
@@ -87,28 +94,52 @@ class WikiView(WebKit2.WebView):
   # Inyect stylesheet for customize article view
 
   def set_style(self):
-    user_content =  self.get_user_content_manager()
-    user_content.remove_all_style_sheets()
+    self.user_content.remove_all_style_sheets()
 
     style_view = WebKit2.UserStyleSheet(self._css_view, WebKit2.UserContentInjectedFrames.ALL_FRAMES, WebKit2.UserStyleLevel.USER, None, None)
-    user_content.add_style_sheet(style_view)
+    self.user_content.add_style_sheet(style_view)
 
     if settings.get_boolean('dark-mode'):
-      self.set_background_color(Gdk.RGBA(0.1, 0.1, 0.1, 1))
       style_dark = WebKit2.UserStyleSheet(self._css_dark, WebKit2.UserContentInjectedFrames.ALL_FRAMES, WebKit2.UserStyleLevel.USER, None, None)
-      user_content.add_style_sheet(style_dark)
-    else:
-      self.set_background_color(Gdk.RGBA(1, 1, 1, 1))
+      self.user_content.add_style_sheet(style_dark)
 
     if settings.get_boolean('custom-font'):
       css_font = 'body,h1,h2{font-family:"' + settings.get_string('font-family') + '"!important}'
       style_font = WebKit2.UserStyleSheet(css_font, WebKit2.UserContentInjectedFrames.ALL_FRAMES, WebKit2.UserStyleLevel.USER, None, None)
-      user_content.add_style_sheet(style_font)
+      self.user_content.add_style_sheet(style_font)
 
     if not settings.get_boolean('preview-popups'):
       css_previews = '.mwe-popups{display:none!important}'
       style_previews = WebKit2.UserStyleSheet(css_previews, WebKit2.UserContentInjectedFrames.ALL_FRAMES, WebKit2.UserStyleLevel.USER, None, None)
-      user_content.add_style_sheet(style_previews)
+      self.user_content.add_style_sheet(style_previews)
+
+
+# Create view_settings object
+
+view_settings = ViewSettings()
+
+
+# Webview class for Wikipedia views
+# Show Wikipedia pages and manage decision policy
+
+class WikiView(WebKit2.WebView):
+
+  __gsignals__ = { 'load-wiki': (GObject.SIGNAL_RUN_FIRST, None, ()),
+                   'add-bookmark': (GObject.SIGNAL_RUN_FIRST, None, (str, str, str,)) }
+
+  _title = None
+  sections = None
+  langlinks = None
+
+  # Initialize view with user content and web settings
+
+  def __init__(self):
+    super().__init__(settings=view_settings.web_settings, user_content_manager=view_settings.user_content)
+
+    if settings.get_boolean('dark-mode'):
+      self.set_background_color(Gdk.RGBA(0.1, 0.1, 0.1, 1))
+    else:
+      self.set_background_color(Gdk.RGBA(1, 1, 1, 1))
 
   # Check connection and load Wikipedia article by URI
 
@@ -224,6 +255,9 @@ class WikiView(WebKit2.WebView):
   # Get title for current article
 
   def get_title(self):
+    if self._title:
+      return self._title
+
     uri = self.get_uri()
     uri_elements = urllib.parse.urlparse(uri)
     uri_scheme = uri_elements[0]
@@ -254,23 +288,31 @@ class WikiView(WebKit2.WebView):
 
   # Get table of contents and langlinks for current article
 
-  def get_props(self):
+  def set_props(self):
     uri = self.get_uri()
     uri_elements = urllib.parse.urlparse(uri)
     uri_scheme = uri_elements[0]
     uri_netloc = uri_elements[1]
     uri_path = uri_elements[2]
 
-    if uri_scheme == 'about':
-      return None
-    else:
+    if uri_scheme != 'about':
       page = uri_path.replace('/wiki/', '', 1)
       lang = uri_netloc.split('.', 1)[0]
       try:
         props = wikipedia.get_properties(page, lang)
       except:
         props = None
-      return props
+    else:
+      props = None
+
+    if props:
+      self._title = props['title']
+      self.sections = props['sections']
+      self.langlinks = props['langlinks']
+    else:
+      self._title = None
+      self.sections = None
+      self.langlinks = None
 
   # Check if current page is local (message page or historic)
 
@@ -327,9 +369,4 @@ class WikiView(WebKit2.WebView):
 
   def do_context_menu(self, menu, event, hit_test_result):
     return True
-
-
-# Create wikiview global object
-
-wikiview = WikiView()
 

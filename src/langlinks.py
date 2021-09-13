@@ -22,7 +22,6 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import GLib, Gtk
 
 from wike.data import languages
-from wike.view import wikiview
 
 
 # Popover class for langlinks
@@ -38,8 +37,10 @@ class LanglinksPopover(Gtk.Popover):
 
   # Set list filter function for entry content and connect signals
 
-  def __init__(self):
+  def __init__(self, window):
     super().__init__()
+
+    self._window = window
 
     self._langlinks = None
     self.langlinks_list.set_filter_func(self._filter_list, self.filter_entry)
@@ -108,7 +109,7 @@ class LanglinksPopover(Gtk.Popover):
 
   def _list_activated_cb(self, langlinks_list, row):
     self.hide()
-    wikiview.load_wiki(row.uri)
+    self._window.wikiview.load_wiki(row.uri)
 
   # Refresh list on filter entry changed
 

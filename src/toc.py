@@ -21,8 +21,6 @@ import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gio, GLib, Gtk
 
-from wike.view import wikiview
-
 
 # Popover class for TOC
 # Show table of contents for current page
@@ -31,9 +29,11 @@ class TocPopover(Gtk.Popover):
 
   # Initialize popover and set actions
 
-  def __init__(self):
+  def __init__(self, window):
     super().__init__()
     self.set_size_request(300, -1)
+
+    self._window = window
 
     actions = Gio.SimpleActionGroup()
     action = Gio.SimpleAction.new('section', GLib.VariantType('s'))
@@ -92,5 +92,5 @@ class TocPopover(Gtk.Popover):
   def _section_activate_cb(self, action, parameter):
     index = int(parameter.unpack())
     anchor = self._toc[index]['anchor']
-    wikiview.load_section(anchor)
+    self._window.wikiview.load_section(anchor)
 

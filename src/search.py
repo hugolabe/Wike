@@ -25,7 +25,6 @@ from gi.repository import Gio, GLib, GObject, Gtk
 
 from wike import wikipedia
 from wike.data import settings, languages
-from wike.view import wikiview
 
 
 # Search entry class
@@ -38,8 +37,10 @@ class SearchEntry(Gtk.SearchEntry):
 
   # Create suggestions list and connect search entry events
 
-  def __init__(self, search_button):
+  def __init__(self, search_button, window):
     super().__init__()
+
+    self.window = window
 
     self.settings_popover = SettingsPopover(self)
     self.suggestions_popover = SuggestionsPopover(self)
@@ -122,13 +123,13 @@ class SearchEntry(Gtk.SearchEntry):
       try:
         result = wikipedia.search(text.lower(), 1)
       except:
-        wikiview.load_message('notfound', None)
+        self.window.wikiview.load_message('notfound', None)
       else:
         if result != None:
           uri = result[1][0]
-          wikiview.load_wiki(uri)
+          self.window.wikiview.load_wiki(uri)
         else:
-          wikiview.load_message('notfound', None)
+          self.window.wikiview.load_message('notfound', None)
 
 
 # Popover class for search suggestions
@@ -143,6 +144,8 @@ class SuggestionsPopover(Gtk.Popover):
     self.set_relative_to(search_entry)
     self.set_size_request(360, -1)
     self.set_modal(False)
+
+    self._window = search_entry.window
 
     self._results_menu = Gio.Menu()
     self.bind_model(self._results_menu, None)
@@ -176,7 +179,7 @@ class SuggestionsPopover(Gtk.Popover):
     index = int(parameter.unpack())
     search_entry = self.get_relative_to()
     uri = search_entry.results_list[1][index]
-    wikiview.load_wiki(uri)
+    self._window.wikiview.load_wiki(uri)
 
 
 # Popover class for search settings
@@ -196,6 +199,8 @@ class SettingsPopover(Gtk.Popover):
   def __init__(self, search_entry):
     super().__init__()
     self.set_relative_to(search_entry)
+
+    self._window = search_entry.window
 
     self.languages_list.set_filter_func(self._filter_list)
     self.languages_list.set_header_func(self._set_row_separator)
@@ -247,8 +252,7 @@ class SettingsPopover(Gtk.Popover):
     wikipedia.set_lang(row.lang_id)
     self.hide()
     message = _('Default search language: ') + row.lang_name
-    window = self.get_toplevel()
-    window.show_notification(message)
+    self._window.show_notification(message)
     self.populate_list()
 
   # Refresh languages list on filter entry changed

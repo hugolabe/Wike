@@ -27,7 +27,6 @@ from wike.bookmarks import BookmarksPopover
 from wike.langlinks import LanglinksPopover
 from wike.search import SearchEntry
 from wike.toc import TocPopover
-from wike.view import wikiview
 
 
 # Headerbar for main window
@@ -46,8 +45,10 @@ class HeaderBar(Handy.HeaderBar):
 
   # Set main menu and connect signals and actions
 
-  def __init__(self):
+  def __init__(self, window):
     super().__init__()
+
+    self._window = window
 
     builder_menu = Gtk.Builder()
     builder_menu.add_from_resource("/com/github/hugolabe/Wike/ui/menu.ui")
@@ -58,10 +59,10 @@ class HeaderBar(Handy.HeaderBar):
     self._spinner_box = builder_spinner.get_object("spinner_box")
     self._spinner = builder_spinner.get_object("spinner")
 
-    self.search_entry = SearchEntry(self.search_button)
-    self.bookmarks_popover = BookmarksPopover()
-    self.langlinks_popover = LanglinksPopover()
-    self.toc_popover = TocPopover()
+    self.search_entry = SearchEntry(self.search_button, self._window)
+    self.bookmarks_popover = BookmarksPopover(self._window)
+    self.langlinks_popover = LanglinksPopover(self._window)
+    self.toc_popover = TocPopover(self._window)
 
     self.menu_button.set_menu_model(menu)
     self.menu_button.get_popover().set_size_request(280, -1)
@@ -88,30 +89,32 @@ class HeaderBar(Handy.HeaderBar):
       self.search_button.set_active(False)
     self.search_button.set_sensitive(True)
     self._spinner.stop()
-    self.set_title(wikiview.get_title())
+    self.set_title(self._window.wikiview.get_title())
     self.set_custom_title(None)
 
-  # Set menus for toc and langlinks
+  # Populate toc popover
 
-  def set_page_menus(self, props):
-    if props == None:
+  def set_toc(self, sections):
+    if sections == None:
       self.toc_popover.populate(None)
-      self.langlinks_popover.populate(None)
     else:
-      sections = props['sections']
-      langlinks = props['langlinks']
       if len(sections) > 0:
         self.toc_popover.populate(sections)
         self.toc_button.set_sensitive(True)
       else:
         self.toc_popover.populate(None)
+
+  # Populate langlinks popover
+
+  def set_langlinks(self, langlinks):
+    if langlinks == None:
+      self.langlinks_popover.populate(None)
+    else:
       if len(langlinks) > 0:
         if self.langlinks_popover.populate(langlinks):
           self.langlinks_button.set_sensitive(True)
       else:
         self.langlinks_popover.populate(None)
-      if len(props['redirects']) > 0:
-        self.set_title(props['title'])
 
   # Refresh_languages for settings and langlinks popovers
 
@@ -145,12 +148,11 @@ class HeaderBar(Handy.HeaderBar):
 
   def _menu_button_cb(self, menu_button):
     if menu_button.get_active():
-      window = self.get_toplevel()
-      show_historic_action = window.lookup_action('show_historic')
-      open_browser_action = window.lookup_action('open_browser')
-      copy_url_action = window.lookup_action('copy_url')
+      show_historic_action = self._window.lookup_action('show_historic')
+      open_browser_action = self._window.lookup_action('open_browser')
+      copy_url_action = self._window.lookup_action('copy_url')
 
-      if wikiview.is_local():
+      if self._window.wikiview.is_local():
         open_browser_action.set_enabled(False)
         copy_url_action.set_enabled(False)
       else:

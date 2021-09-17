@@ -419,7 +419,7 @@ msgstr "<b>Keine Lesezeichen</b>\n"
 "\n"
 "<small>Verwenden Sie den <i>Lesezeichen hinzufügen</i> Knopf \n"
 "oder klicken Sie mit einem Mittelklick um das Lesezeichen\n"
-"der Liste hinzuzufügen."
+"der Liste hinzuzufügen.</small>"
 
 #: ../data/ui/header.ui:61
 msgid "Search articles"

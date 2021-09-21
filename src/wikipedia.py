@@ -81,7 +81,7 @@ def get_properties(page, lang):
 def _request(params):
   global _session
   global _api
-  headers = { 'User-Agent': 'Wike/1.5.6 (https://github.com/hugolabe)' }
+  headers = { 'User-Agent': 'Wike/1.5.7 (https://github.com/hugolabe)' }
 
   if type(params) is dict:
     response = _session.get(url=_api, params=params, headers=headers, timeout=(4, 12))

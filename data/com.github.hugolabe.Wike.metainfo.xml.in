@@ -55,6 +55,13 @@
   </screenshots>
 
   <releases>
+    <release version="1.5.7" date="2021-09-21">
+      <description>
+        <ul>
+          <li>Added Croatian and Galician translations.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.5.6" date="2021-09-09">
       <description>
         <ul>

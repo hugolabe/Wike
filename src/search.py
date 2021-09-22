@@ -21,7 +21,7 @@ from threading import Thread
 
 import gi
 gi.require_version('Gtk', '3.0')
-from gi.repository import Gio, GLib, GObject, Gtk
+from gi.repository import Gio, GLib, Gtk
 
 from wike import wikipedia
 from wike.data import settings, languages
@@ -66,17 +66,23 @@ class SearchEntry(Gtk.SearchEntry):
   # When entry show add timeout function
 
   def _entry_show_cb(self, entry):
-    if self.suggestions_popover.is_visible(): self.suggestions_popover.hide()
-    if settings.get_boolean('search-suggestions'): GLib.timeout_add(250, self._timeout_cb)
+    if self.suggestions_popover.is_visible():
+      self.suggestions_popover.hide()
+
+    if settings.get_boolean('search-suggestions'):
+      GLib.timeout_add(250, self._timeout_cb)
 
   # Timeout function which show search results in popover
 
   def _timeout_cb(self):
-    if not self.is_visible(): return False
+    if not self.is_visible():
+      return False
+
     if self._results_changed:
       if self.results_list != None:
         self.suggestions_popover.populate(self.results_list)
-        if not self.suggestions_popover.is_visible(): self.suggestions_popover.show_all()
+        if not self.suggestions_popover.is_visible():
+          self.suggestions_popover.show_all()
       else:
         self.suggestions_popover.hide()
       self._results_changed = False
@@ -123,13 +129,13 @@ class SearchEntry(Gtk.SearchEntry):
       try:
         result = wikipedia.search(text.lower(), 1)
       except:
-        self.window.wikiview.load_message('notfound', None)
+        self.window.page.wikiview.load_message('notfound', None)
       else:
         if result != None:
           uri = result[1][0]
-          self.window.wikiview.load_wiki(uri)
+          self.window.page.wikiview.load_wiki(uri)
         else:
-          self.window.wikiview.load_message('notfound', None)
+          self.window.page.wikiview.load_message('notfound', None)
 
 
 # Popover class for search suggestions
@@ -179,7 +185,7 @@ class SuggestionsPopover(Gtk.Popover):
     index = int(parameter.unpack())
     search_entry = self.get_relative_to()
     uri = search_entry.results_list[1][index]
-    self._window.wikiview.load_wiki(uri)
+    self._window.page.wikiview.load_wiki(uri)
 
 
 # Popover class for search settings

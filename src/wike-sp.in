@@ -117,7 +117,8 @@ class WikeSearchService(dbus.service.Object):
   # Run Wikipedia search in new thread
 
   def _get_results(self, text):
-    if self._search_thread: self._search_thread.join()
+    if self._search_thread:
+      self._search_thread.join()
     self._search_thread = Thread(target=self._search_wikipedia, args=(text, ))
     self._search_thread.start()
     self._search_thread.join()

@@ -20,6 +20,7 @@
 import gi
 gi.require_version('Gtk', '3.0')
 gi.require_version('Handy', '1')
+gi.require_version('WebKit2', '4.0')
 from gi.repository import Gio, Gtk, Handy, WebKit2
 
 from wike.data import settings, languages, historic
@@ -96,7 +97,8 @@ class PrefsWindow(Handy.PreferencesWindow):
     selected = 0
     for index, font in enumerate(fonts):
       model.insert(index, Handy.ValueObject.new(font))
-      if font == custom_font: selected = index
+      if font == custom_font:
+        selected = index
     self.custom_font_combo.bind_name_model(model, Handy.ValueObject.dup_string)
     self.custom_font_combo.set_selected_index(selected)
 
@@ -119,9 +121,11 @@ class PrefsWindow(Handy.PreferencesWindow):
       languages.clear()
       rows = self.languages_list.get_children()
       for row in rows:
-        if row.lang_check.get_active(): languages.items[row.lang_id] = row.lang_name
+        if row.lang_check.get_active():
+          languages.items[row.lang_id] = row.lang_name
 
-      if len(languages.items) == 0: languages.items['en'] = 'English'
+      if len(languages.items) == 0:
+        languages.items['en'] = 'English'
 
       window = self.get_transient_for()
       window.headerbar.refresh_langs()
@@ -144,6 +148,7 @@ class PrefsWindow(Handy.PreferencesWindow):
                                      Gtk.MessageType.WARNING,
                                      Gtk.ButtonsType.CANCEL,
                                      _('Clear Historic?'))
+
     clear_dialog.set_property('secondary-text', _('The history of visited articles will be deleted permanently.'))
     clear_dialog.add_buttons(_('Clear Historic'), Gtk.ResponseType.YES)
 
@@ -163,6 +168,7 @@ class PrefsWindow(Handy.PreferencesWindow):
                                      Gtk.MessageType.WARNING,
                                      Gtk.ButtonsType.CANCEL,
                                      _('Clear Personal Data?'))
+
     clear_dialog.set_property('secondary-text', _('Cookies and cache data will be deleted permanently.'))
     clear_dialog.add_buttons(_('Clear Data'), Gtk.ResponseType.YES)
 
@@ -183,7 +189,8 @@ class PrefsWindow(Handy.PreferencesWindow):
   # Set languages changed variable on check button changed
 
   def _language_checkbutton_cb(self, check_button):
-    if not self._languages_changed: self._languages_changed = True
+    if not self._languages_changed:
+      self._languages_changed = True
 
   # On button click check all languages
 

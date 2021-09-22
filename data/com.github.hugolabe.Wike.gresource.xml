@@ -8,10 +8,10 @@
     <file>ui/bookmarks.ui</file>
     <file>ui/bookmarks-row.ui</file>
     <file>ui/header.ui</file>
-    <file>ui/header-spinner.ui</file>
     <file>ui/langlinks.ui</file>
     <file>ui/langlinks-row.ui</file>
     <file>ui/menu.ui</file>
+    <file>ui/page.ui</file>
     <file>ui/prefs.ui</file>
     <file>ui/prefs-row.ui</file>
     <file>ui/search.ui</file>

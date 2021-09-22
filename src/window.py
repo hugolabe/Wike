@@ -20,15 +20,15 @@
 import gi
 gi.require_version('Gtk', '3.0')
 gi.require_version('Handy', '1')
-from gi.repository import Gio, GLib, Gdk, Gtk, Handy, WebKit2
+from gi.repository import Gio, GLib, Gdk, Gtk, Handy
 
-from wike.data import settings, historic
+from wike.data import settings
 from wike.header import HeaderBar
-from wike.view import WikiView
+from wike.page import PageBox
 
 
 # Application main window
-# Contains a webview, a search bar and a headerbar
+# Contains a page and a headerbar
 
 @Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/window.ui')
 class Window(Handy.ApplicationWindow):
@@ -36,12 +36,8 @@ class Window(Handy.ApplicationWindow):
   __gtype_name__ = 'Window'
 
   window_box = Gtk.Template.Child()
-  content_box = Gtk.Template.Child()
-  search_bar = Gtk.Template.Child()
-  textsearch_entry = Gtk.Template.Child()
-  textsearch_prev_button = Gtk.Template.Child()
-  textsearch_next_button = Gtk.Template.Child()
-  textsearch_matches_label = Gtk.Template.Child()
+  tabbar = Gtk.Template.Child()
+  tabview = Gtk.Template.Child()
   notification = Gtk.Template.Child()
   notification_label = Gtk.Template.Child()
   notification_close_button = Gtk.Template.Child()
@@ -55,16 +51,21 @@ class Window(Handy.ApplicationWindow):
     self.set_default_icon_name('com.github.hugolabe.Wike')
 
     self.set_default_size(settings.get_int('window-width'), settings.get_int('window-height'))
-    if settings.get_boolean('window-max'): self.maximize()
+    if settings.get_boolean('window-max'):
+      self.maximize()
 
-    self.wikiview = WikiView()
-    self.content_box.pack_end(self.wikiview, True, True, 0)
+    self.page = PageBox(self)
+    tabpage = self.tabview.append(self.page)
 
     self.headerbar = HeaderBar(self)
     self.window_box.pack_start(self.headerbar, False, True, 0)
 
     actions = [ ('prev_page', self._prev_page_cb, ('<Alt>Left',)),
                 ('next_page', self._next_page_cb, ('<Alt>Right',)),
+                ('new_tab', self._new_tab_cb, ('<Ctrl>N',)),
+                ('close_tab', self._close_tab_cb, ('<Ctrl>W',)),
+                ('next_tab', self._next_tab_cb, ('<Ctrl>Tab',)),
+                ('prev_tab', self._prev_tab_cb, ('<Shift><Ctrl>Tab',)),
                 ('show_search', self._show_search_cb, ('F2', '<Ctrl>K',)),
                 ('show_menu', self._show_menu_cb, ('F10',)),
                 ('show_bookmarks', self._show_bookmarks_cb, ('<Ctrl>B',)),
@@ -83,155 +84,116 @@ class Window(Handy.ApplicationWindow):
       simple_action = Gio.SimpleAction.new(action, None)
       simple_action.connect('activate', callback)
       self.add_action(simple_action)
-      if accel: app.set_accels_for_action('win.' + action, accel)
+      if accel:
+        app.set_accels_for_action('win.' + action, accel)
 
-    find_controller = self.wikiview.get_find_controller()
-    nav_list = self.wikiview.get_back_forward_list()
-    self.search_bar.connect_entry(self.textsearch_entry)
-
-    self.wikiview.connect('load-wiki', self._wikiview_load_wiki_cb)
-    self.wikiview.connect('load-changed', self._wikiview_load_changed_cb)
-    self.wikiview.connect('load-failed', self._wikiview_load_failed_cb)
-    self.wikiview.connect('add-bookmark', self._wikiview_add_bookmark_cb)
-    self.textsearch_entry.connect('changed', self._textsearch_entry_changed_cb, find_controller)
-    self.textsearch_entry.connect('activate', self._textsearch_entry_activate_cb, find_controller)
-    self.textsearch_prev_button.connect('clicked', self._textsearch_prev_button_clicked_cb, find_controller)
-    self.textsearch_next_button.connect('clicked', self._textsearch_next_button_clicked_cb, find_controller)
-    find_controller.connect('found-text', self._find_controller_found_cb)
-    find_controller.connect('failed-to-find-text', self._find_controller_not_found_cb)
-    find_controller.connect('counted-matches', self._find_controller_matches_cb)
-    nav_list.connect('changed', self._nav_list_changed_cb)
+    self.tabview.connect('notify::selected-page', self._tabview_selected_page_cb)
+    self.tabview.connect('close-page', self._tabview_close_page_cb)
     self.notification_close_button.connect('clicked', self._hide_notification_cb)
 
     if launch_uri == 'notfound':
-      self.wikiview.load_message(launch_uri, None)
+      self.page.wikiview.load_message(launch_uri, None)
     else:
       if launch_uri != '':
-        self.wikiview.load_wiki(launch_uri)
+        self.page.wikiview.load_wiki(launch_uri)
       else:
         if settings.get_int('on-start-load') == 0:
-          self.wikiview.load_main()
+          self.page.wikiview.load_main()
         elif settings.get_int('on-start-load') == 1:
-          self.wikiview.load_random()
+          self.page.wikiview.load_random()
         else:
           if settings.get_string('last-uri'):
-            self.wikiview.load_wiki(settings.get_string('last-uri'))
+            self.page.wikiview.load_wiki(settings.get_string('last-uri'))
           else:
-            self.wikiview.load_main()
+            self.page.wikiview.load_main()
 
-  # Show spinner on wikiview load started
+  # Create new tab with a page
 
-  def _wikiview_load_wiki_cb(self, wikiview):
-    self.headerbar.show_spinner()
+  def new_page(self, uri, parent, select):
+    page = PageBox(self)
+    tabpage = self.tabview.add_page(page, parent)
+    if uri == 'blank' or uri == 'notfound':
+      page.wikiview.load_message(uri, None)
+    else:
+      page.wikiview.load_wiki(uri)
 
-  # Manage wikiview load page events
+    if select:
+      self.tabview.set_selected_page(tabpage)
 
-  def _wikiview_load_changed_cb(self, wikiview, event):
-    if event == WebKit2.LoadEvent.STARTED:
-      if self.search_bar.get_search_mode(): self.search_bar.set_search_mode(False)
-      self.headerbar.toc_button.set_sensitive(False)
-      self.headerbar.langlinks_button.set_sensitive(False)
-    elif event == WebKit2.LoadEvent.FINISHED:
-      wikiview.set_props()
-      self.headerbar.hide_spinner()
-      self.headerbar.set_toc(wikiview.sections)
-      self.headerbar.set_langlinks(wikiview.langlinks)
-      if settings.get_boolean('keep-historic') and not wikiview.is_local():
-        historic.add(wikiview.get_base_uri(), wikiview.get_title(), wikiview.get_lang())
+  # New empty tab
 
-  # If wikiview load failed show error
+  def _new_tab_cb(self, action, parameter):
+    self.new_page('blank', None, True)
 
-  def _wikiview_load_failed_cb(self, wikiview, event, uri, error):
-    if not wikiview.is_loading():
-      wikiview.load_message('error', uri)
+  # Close current tab
+
+  def _close_tab_cb(self, action, parameter):
+    if self.tabview.get_n_pages() > 1:
+      tabpage = self.tabview.get_selected_page()
+      self.tabview.close_page(tabpage)
+
+  # Go to next tab
+
+  def _next_tab_cb(self, action, parameter):
+    num_pages = self.tabview.get_n_pages()
+    if num_pages == 1:
+      return
+
+    tabpage = self.tabview.get_selected_page()
+    if self.tabview.get_page_position(tabpage) < num_pages - 1:
+      self.tabview.select_next_page()
+    else:
+      tabpage = self.tabview.get_nth_page(0)
+      self.tabview.set_selected_page(tabpage)
+
+  # Go to previous tab
+
+  def _prev_tab_cb(self, action, parameter):
+    num_pages = self.tabview.get_n_pages()
+    if num_pages == 1:
+      return
+
+    tabpage = self.tabview.get_selected_page()
+    if self.tabview.get_page_position(tabpage) > 0:
+      self.tabview.select_previous_page()
+    else:
+      tabpage = self.tabview.get_nth_page(num_pages - 1)
+      self.tabview.set_selected_page(tabpage)
+
+  # On tab selected event refresh headerbar controls
+
+  def _tabview_selected_page_cb(self, tabview, value):
+    tabpage = tabview.get_selected_page()
+    if not tabpage:
+      return
+
+    self.page = tabpage.get_child()
+    self.refresh_nav_buttons(self.page.wikiview)
+    self.headerbar.set_title(self.page.wikiview.title)
+    self.headerbar.toc_button.set_sensitive(False)
+    self.headerbar.langlinks_button.set_sensitive(False)
+    self.headerbar.set_toc(self.page.wikiview.sections)
+    self.headerbar.set_langlinks(self.page.wikiview.langlinks)
+
+  # On tab closed event destroy wikiview and confirm
+
+  def _tabview_close_page_cb(self, tabview, tabpage):
+    page = tabpage.get_child()
+    page.wikiview.destroy()
+    tabview.close_page_finish(tabpage, True)
     return True
-
-  # On webview bookmark added show notification
-
-  def _wikiview_add_bookmark_cb(self, wikiview, uri, title, lang):
-    if self.headerbar.bookmarks_popover.add_bookmark(uri, title, lang):
-      message = _('New bookmark: ') + title
-      self.show_notification(message)
-
-  # Search text in article when entry changes
-
-  def _textsearch_entry_changed_cb(self, textsearch_entry, find_controller):
-    text_length = textsearch_entry.get_text_length()
-    if text_length > 2:
-      text = textsearch_entry.get_text()
-      find_controller.count_matches(text, WebKit2.FindOptions.WRAP_AROUND | WebKit2.FindOptions.CASE_INSENSITIVE, 9999)
-      find_controller.search(text, WebKit2.FindOptions.WRAP_AROUND | WebKit2.FindOptions.CASE_INSENSITIVE, 9999)
-    else:
-      self.textsearch_matches_label.set_label('')
-      self.textsearch_prev_button.set_sensitive(False)
-      self.textsearch_next_button.set_sensitive(False)
-      find_controller.search_finish()
-
-  # On entry activated search next match
-
-  def _textsearch_entry_activate_cb(self, textsearch_entry, find_controller):
-    text_length = textsearch_entry.get_text_length()
-    if text_length > 2:
-      find_controller.search_next()
-
-  # On text search prev button clicked search previous match
-
-  def _textsearch_prev_button_clicked_cb(self, textsearch_prev_button, find_controller):
-    find_controller.search_previous()
-
-  # On text search next button clicked search next match
-
-  def _textsearch_next_button_clicked_cb(self, textsearch_next_button, find_controller):
-    find_controller.search_next()
-
-  # Found text in article
-
-  def _find_controller_found_cb(self, find_controller, match_count):
-    self.textsearch_prev_button.set_sensitive(True)
-    self.textsearch_next_button.set_sensitive(True)
-
-  # Not found text in article
-
-  def _find_controller_not_found_cb(self, find_controller):
-    self.textsearch_matches_label.set_markup('<span foreground="red">' + str(0) + '</span>')
-    self.textsearch_prev_button.set_sensitive(False)
-    self.textsearch_next_button.set_sensitive(False)
-    find_controller.search_finish()
-    Gdk.beep()
-
-  # Show text search matches found
-
-  def _find_controller_matches_cb(self, find_controller, match_count):
-    self.textsearch_matches_label.set_label(str(match_count))
-
-  # Refresh navbox state on navlist changed
-
-  def _nav_list_changed_cb(self, nav_list, item_added, item_removed):
-    prev_page_action = self.lookup_action('prev_page')
-    next_page_action = self.lookup_action('next_page')
-
-    if self.wikiview.can_go_back():
-      prev_page_action.set_enabled(True)
-    else:
-      prev_page_action.set_enabled(False)
-    if self.wikiview.can_go_forward():
-      next_page_action.set_enabled(True)
-    else:
-      next_page_action.set_enabled(False)
 
   # Go to previous page
 
   def _prev_page_cb(self, action, parameter):
-    if self.wikiview.can_go_back():
-      self.wikiview.go_back()
-      self.headerbar.hide_spinner()
+    if self.page.wikiview.can_go_back():
+      self.page.wikiview.go_back()
 
   # Go to next page
 
   def _next_page_cb(self, action, parameter):
-    if self.wikiview.can_go_forward():
-      self.wikiview.go_forward()
-      self.headerbar.hide_spinner()
+    if self.page.wikiview.can_go_forward():
+      self.page.wikiview.go_forward()
 
   # Show search entry
 
@@ -252,10 +214,10 @@ class Window(Handy.ApplicationWindow):
   # Add current page to bookmarks
 
   def _add_bookmark_cb(self, action, parameter):
-    if not self.wikiview.is_local():
-      uri = self.wikiview.get_base_uri()
-      title = self.wikiview.get_title()
-      lang = self.wikiview.get_lang()
+    if not self.page.wikiview.is_local():
+      uri = self.page.wikiview.get_base_uri()
+      title = self.page.wikiview.title
+      lang = self.page.wikiview.get_lang()
       if self.headerbar.bookmarks_popover.add_bookmark(uri, title, lang):
         if self.headerbar.bookmarks_popover.is_visible():
           self.headerbar.bookmarks_popover.bookmarks_list.show_all()
@@ -280,45 +242,60 @@ class Window(Handy.ApplicationWindow):
   # Show Wikipedia main page
 
   def _main_page_cb(self, action, parameter):
-    self.wikiview.load_main()
+    self.page.wikiview.load_main()
 
   # Show Wikipedia random article
 
   def _random_article_cb(self, action, parameter):
-    self.wikiview.load_random()
+    self.page.wikiview.load_random()
 
   # Show historic
 
   def _show_historic_cb(self, action, parameter):
-    self.wikiview.load_historic()
+    self.page.wikiview.load_historic()
 
   # Reload article view
 
   def _reload_page_cb(self, action, parameter):
-    self.wikiview.reload()
+    self.page.wikiview.reload()
 
   # Show text search bar
 
   def _search_text_cb(self, action, parameter):
-    if not self.search_bar.get_search_mode():
-      self.search_bar.set_search_mode(True)
+    if not self.page.search_bar.get_search_mode():
+      self.page.search_bar.set_search_mode(True)
     else:
-      self.textsearch_entry.grab_focus()
+      self.page.textsearch_entry.grab_focus()
 
   # Open article in external browser
 
   def _open_browser_cb(self, action, parameter):
-    uri = self.wikiview.get_base_uri()
+    uri = self.page.wikiview.get_base_uri()
     Gtk.show_uri(None, uri, Gdk.CURRENT_TIME)
 
   # Copy article URL to clipboard
 
   def _copy_url_cb(self, action, parameter):
-    uri = self.wikiview.get_base_uri()
+    uri = self.page.wikiview.get_base_uri()
     clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
     clipboard.set_text(uri, -1)
 
     self.show_notification(_('Wikipedia URL copied to clipboard'))
+
+  # Refresh navigation buttons state
+
+  def refresh_nav_buttons(self, wikiview):
+    prev_page_action = self.lookup_action('prev_page')
+    next_page_action = self.lookup_action('next_page')
+
+    if wikiview.can_go_back():
+      prev_page_action.set_enabled(True)
+    else:
+      prev_page_action.set_enabled(False)
+    if wikiview.can_go_forward():
+      next_page_action.set_enabled(True)
+    else:
+      next_page_action.set_enabled(False)
 
   # Show notification with provided message
 

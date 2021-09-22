@@ -55,6 +55,24 @@
       </object>
     </child>
     <child>
+      <object class="GtkButton" id="tab_button">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="tooltip-text" translatable="yes">New tab</property>
+        <property name="action_name">win.new_tab</property>
+        <child>
+          <object class="GtkImage">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="icon_name">tab-new-symbolic</property>
+          </object>
+        </child>
+      </object>
+      <packing>
+        <property name="position">1</property>
+      </packing>
+    </child>
+    <child>
       <object class="GtkToggleButton" id="search_button">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
@@ -68,7 +86,7 @@
         </child>
       </object>
       <packing>
-        <property name="position">1</property>
+        <property name="position">2</property>
       </packing>
     </child>
     <child>

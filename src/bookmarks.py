@@ -44,7 +44,7 @@ class BookmarksPopover(Gtk.Popover):
 
     self._window = window
 
-    placeholder_text = _("<b>No Bookmarks</b>\n\n<small>Use the <i>Add Bookmark</i> button\nor click a link with the middle mouse button\nto add bookmarks to the list</small>")
+    placeholder_text = _("<b>No Bookmarks</b>\n\n<small>Use the <i>Add Bookmark</i> button\nor press Ctrl+D to add\nthe current article to the list</small>")
     self.placeholder_label.set_markup(placeholder_text)
 
     self.bookmarks_list.set_sort_func(self._sort_list)
@@ -93,14 +93,14 @@ class BookmarksPopover(Gtk.Popover):
       row = BookmarkBoxRow(bookmark, title, lang, lang_name)
       self.bookmarks_list.add(row)
 
-  # Refresh sensitivity of add and clear buttons
+  # Refresh sensitivity of popover buttons
 
   def _refresh_buttons(self):
     if len(self.bookmarks_list.get_children()) == 0:
       self.clear_button.set_sensitive(False)
     else:
       self.clear_button.set_sensitive(True)
-    if self._window.wikiview.get_base_uri() in bookmarks.items or self._window.wikiview.is_local():
+    if self._window.page.wikiview.get_base_uri() in bookmarks.items or self._window.page.wikiview.is_local():
       self.add_button.set_sensitive(False)
     else:
       self.add_button.set_sensitive(True)
@@ -122,9 +122,9 @@ class BookmarksPopover(Gtk.Popover):
   # Add item on button clicked
 
   def _add_button_clicked_cb(self, add_button):
-    uri = self._window.wikiview.get_base_uri()
-    title = self._window.wikiview.get_title()
-    lang = self._window.wikiview.get_lang()
+    uri = self._window.page.wikiview.get_base_uri()
+    title = self._window.page.wikiview.title
+    lang = self._window.page.wikiview.get_lang()
     if self.add_bookmark(uri, title, lang):
       self.bookmarks_list.show_all()
 
@@ -136,6 +136,7 @@ class BookmarksPopover(Gtk.Popover):
                                      Gtk.MessageType.WARNING,
                                      Gtk.ButtonsType.CANCEL,
                                      _('Clear Bookmarks List?'))
+
     clear_dialog.set_property('secondary-text', _('All bookmarks in the list will be removed permanently.'))
     clear_dialog.add_buttons(_('Clear List'), Gtk.ResponseType.YES)
 
@@ -153,7 +154,7 @@ class BookmarksPopover(Gtk.Popover):
 
   def _list_activated_cb(self, bookmarks_list, row):
     self.hide()
-    self._window.wikiview.load_wiki(row.uri)
+    self._window.page.wikiview.load_wiki(row.uri)
 
   # Refresh buttons state on list changed
 

@@ -17,13 +17,11 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 
-import os
 import sys
 
 import gi
 gi.require_version('Gtk', '3.0')
 gi.require_version('Handy', '1')
-gi.require_version('WebKit2', '4.0')
 from gi.repository import Gio, GLib, Gtk, Handy
 
 from wike.data import settings, languages, historic, bookmarks
@@ -72,6 +70,11 @@ class Application(Gtk.Application):
     action.connect('activate', self._about_cb)
     self.add_action(action)
 
+    action = Gio.SimpleAction.new('quit', None)
+    action.connect('activate', self._quit_cb)
+    self.add_action(action)
+    self.set_accels_for_action('app.quit', ('<Ctrl>Q',))
+
   # Manage command line options
 
   def do_command_line(self, command_line):
@@ -81,10 +84,7 @@ class Application(Gtk.Application):
       self._launch_uri = options['url']
 
     if self._window:
-      if self._launch_uri == 'notfound':
-        self._window.wikiview.load_message(self._launch_uri, None)
-      else:
-        self._window.wikiview.load_wiki(self._launch_uri)
+      self._window.new_page(self._launch_uri, None, True)
 
     self.activate()
     return 0
@@ -96,7 +96,8 @@ class Application(Gtk.Application):
       self._window = Window(self, self._launch_uri)
       self._window.connect('delete-event',self._window_delete_cb)
       self._gtk_settings = Gtk.Settings.get_default()
-      if settings.get_boolean('dark-mode'): self._gtk_settings.set_property('gtk-application-prefer-dark-theme', True)
+      if settings.get_boolean('dark-mode'):
+        self._gtk_settings.set_property('gtk-application-prefer-dark-theme', True)
       self._window.show_all()
     else:
       self._window.present()
@@ -135,21 +136,27 @@ class Application(Gtk.Application):
     about_dialog.run()
     about_dialog.destroy()
 
-  # Save settings and data and quit app
+  # On window delete quit app
 
   def _window_delete_cb(self, window, event):
-    if window.is_maximized():
+    quit_action = self.lookup_action('quit')
+    quit_action.activate()
+
+  # Save settings and data and quit app
+
+  def _quit_cb(self, action, parameter):
+    if self._window.is_maximized():
       settings.set_boolean('window-max', True)
     else:
       settings.set_boolean('window-max', False)
-      size = window.get_size()
+      size = self._window.get_size()
       settings.set_int('window-width', size[0])
       settings.set_int('window-height', size[1])
 
-    if window.wikiview.is_local():
+    if self._window.page.wikiview.is_local():
       settings.set_string('last-uri', '')
     else:
-      settings.set_string('last-uri', window.wikiview.get_base_uri())
+      settings.set_string('last-uri', self._window.page.wikiview.get_base_uri())
 
     settings.sync()
     languages.save()

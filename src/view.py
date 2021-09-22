@@ -91,7 +91,7 @@ class ViewSettings:
   def _settings_preview_popups_changed_cb(self, settings, key):
     self.set_style()
 
-  # Inyect stylesheet for customize article view
+  # Inject stylesheets for customize article view
 
   def set_style(self):
     self.user_content.remove_all_style_sheets()
@@ -124,10 +124,9 @@ view_settings = ViewSettings()
 
 class WikiView(WebKit2.WebView):
 
-  __gsignals__ = { 'load-wiki': (GObject.SIGNAL_RUN_FIRST, None, ()),
-                   'add-bookmark': (GObject.SIGNAL_RUN_FIRST, None, (str, str, str,)) }
+  __gsignals__ = { 'new-page': (GObject.SIGNAL_RUN_FIRST, None, (str, )) }
 
-  _title = None
+  title = 'Wike'
   sections = None
   langlinks = None
 
@@ -141,13 +140,12 @@ class WikiView(WebKit2.WebView):
     else:
       self.set_background_color(Gdk.RGBA(1, 1, 1, 1))
 
-  # Check connection and load Wikipedia article by URI
+  # Load Wikipedia article by URI
 
   def load_wiki(self, uri):
     self.stop_loading()
     if uri.find('.m.') == -1:
       uri = uri.replace('.wikipedia.org', '.m.wikipedia.org')
-    self.emit('load-wiki')
     self.load_uri(uri)
 
   # Go to section in page
@@ -179,13 +177,17 @@ class WikiView(WebKit2.WebView):
   # Create and load html for message page
 
   def load_message(self, message_type, fail_uri):
-    self.emit('load-wiki')
-
-    if message_type == 'notfound':
-      title = _('Article not found')
+    if message_type == 'blank':
+      title = 'Wike'
+      subtitle = _('Search and read Wikipedia articles')
+      message = _('Click the search button or press F2 to search articles in Wikipedia. You can also use the main menu to open Wikipedia main page, the list of recent articles or get a random article.')
+    elif message_type == 'notfound':
+      title = ':-('
+      subtitle = _('Article not found')
       message = _('Can\'t find any results for requested query')
     else:
-      title = _('Can\'t access Wikipedia')
+      title = ':-('
+      subtitle = _('Can\'t access Wikipedia')
       message = _('Check your Internet connection and try again')
 
     if fail_uri:
@@ -194,7 +196,7 @@ class WikiView(WebKit2.WebView):
       button = ''
 
     html = '<!DOCTYPE html>\n<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />\n<title>Wike</title>\n</head>\n\
-<body class="wike-body">\n<div id="wike-message">\n<h1>:-(</h1>\n<h3>' + title + '</h3>\n<p>' + message + '</p>\n' + button + '</div>\n</body>\n</html>\n'
+<body class="wike-body">\n<div id="wike-message">\n<h1>' + title + '</h1>\n<h3>' + subtitle + '</h3>\n<p>' + message + '</p>\n' + button + '</div>\n</body>\n</html>\n'
 
     uri = 'about:' + message_type
     self.load_html(html, uri)
@@ -202,8 +204,6 @@ class WikiView(WebKit2.WebView):
   # Create and load html for historic page
 
   def load_historic(self):
-    self.emit('load-wiki')
-
     html_top = '<!DOCTYPE html>\n<html>\n<head>\n<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />\n<title>Wike</title>\n</head>\n\
 <body class="wike-body">\n<div id="wike-historic">\n'
 
@@ -217,7 +217,8 @@ class WikiView(WebKit2.WebView):
         time = historic_item[uri][0]
         title = historic_item[uri][1]
         lang = historic_item[uri][2]
-        if lang in languages.wikilangs: lang = languages.wikilangs[lang].capitalize()
+        if lang in languages.wikilangs:
+          lang = languages.wikilangs[lang].capitalize()
         html_body = html_body + '<tr>\n<td class="wike-hist-time">' + time.rsplit(':', 1)[0] + '</td>\n<td class="wike-hist-link">' + '<a href="' + uri + '">' + title + '</a></td>\n<td class="wike-hist-lang">' + lang + '</td>\n</tr>\n'
       html_body = html_body + '</table>\n'
 
@@ -237,7 +238,6 @@ class WikiView(WebKit2.WebView):
       if uri_path == 'historic':
         self.load_historic()
     else:
-      self.emit('load-wiki')
       self.reload_bypass_cache()
 
   # Get base uri for current article
@@ -251,26 +251,6 @@ class WikiView(WebKit2.WebView):
       return base_uri
     else:
       return uri
-
-  # Get title for current article
-
-  def get_title(self):
-    if self._title:
-      return self._title
-
-    uri = self.get_uri()
-    uri_elements = urllib.parse.urlparse(uri)
-    uri_scheme = uri_elements[0]
-    uri_path = uri_elements[2]
-
-    if uri_scheme == 'about':
-      if uri_path == 'historic':
-        return _('Recent Articles')
-      else:
-        return 'Wike'
-    else:
-      title = uri_path.replace('/wiki/', '', 1).replace('_', ' ')
-      return urllib.parse.unquote(title)
 
   # Get language for current article
 
@@ -286,7 +266,7 @@ class WikiView(WebKit2.WebView):
       lang = uri_netloc.split('.', 1)[0]
       return lang
 
-  # Get table of contents and langlinks for current article
+  # Set TOC, langlinks and title for current article
 
   def set_props(self):
     uri = self.get_uri()
@@ -306,13 +286,25 @@ class WikiView(WebKit2.WebView):
       props = None
 
     if props:
-      self._title = props['title']
+      self.title = props['title']
       self.sections = props['sections']
       self.langlinks = props['langlinks']
+      return
+
+    if uri_scheme == 'about':
+      if uri_path == 'historic':
+        self.title = _('Recent Articles')
+      elif uri_path == 'notfound':
+        self.title = _('Article not found')
+      elif uri_path == 'error':
+        self.title = _('Can\'t access Wikipedia')
+      else:
+        self.title = 'Wike'
     else:
-      self._title = None
-      self.sections = None
-      self.langlinks = None
+      self.title = 'Wike'
+
+    self.sections = None
+    self.langlinks = None
 
   # Check if current page is local (message page or historic)
 
@@ -345,10 +337,7 @@ class WikiView(WebKit2.WebView):
           base_uri = urllib.parse.urlunparse(base_uri_elements)
           if mouse_button == 2:
             decision.ignore()
-            title = uri_path.replace('/wiki/', '', 1).replace('_', ' ')
-            title = urllib.parse.unquote(title)
-            lang = uri_netloc.split('.', 1)[0]
-            self.emit('add-bookmark', base_uri, title, lang)
+            self.emit('new-page', base_uri)
           else:
             if base_uri == self.get_base_uri():
               decision.use()

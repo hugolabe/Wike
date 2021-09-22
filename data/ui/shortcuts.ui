@@ -7,7 +7,7 @@
       <object class="GtkShortcutsSection">
         <property name="visible">True</property>
         <property name="section-name">shortcuts</property>
-        <property name="max-height">10</property>
+        <property name="max-height">12</property>
         <child>
           <object class="GtkShortcutsGroup">
             <property name="visible">True</property>
@@ -50,20 +50,6 @@
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">True</property>
-                <property name="title" translatable="yes" context="shortcut window">Select all</property>
-                <property name="accelerator">&lt;Primary&gt;A</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="visible">True</property>
-                <property name="title" translatable="yes" context="shortcut window">Copy selection</property>
-                <property name="accelerator">&lt;Primary&gt;C</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="visible">True</property>
                 <property name="title" translatable="yes" context="shortcut window">Copy Wikipedia URL</property>
                 <property name="accelerator">&lt;Primary&gt;U</property>
               </object>
@@ -80,6 +66,60 @@
                 <property name="visible">True</property>
                 <property name="title" translatable="yes" context="shortcut window">Keyboard shortcuts</property>
                 <property name="accelerator">&lt;Primary&gt;question</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="visible">True</property>
+            <property name="title" translatable="yes" context="shortcut window">Bookmarks</property>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">True</property>
+                <property name="title" translatable="yes" context="shortcut window">Show bookmarks</property>
+                <property name="accelerator">&lt;Primary&gt;B</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">True</property>
+                <property name="title" translatable="yes" context="shortcut window">Add bookmark</property>
+                <property name="accelerator">&lt;Primary&gt;D</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="visible">True</property>
+            <property name="title" translatable="yes" context="shortcut window">Tabs</property>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">True</property>
+                <property name="title" translatable="yes" context="shortcut window">New tab</property>
+                <property name="accelerator">&lt;Primary&gt;N</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">True</property>
+                <property name="title" translatable="yes" context="shortcut window">Close current tab</property>
+                <property name="accelerator">&lt;Primary&gt;W</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">True</property>
+                <property name="title" translatable="yes" context="shortcut window">Next tab</property>
+                <property name="accelerator">&lt;Primary&gt;Tab</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">True</property>
+                <property name="title" translatable="yes" context="shortcut window">Previous tab</property>
+                <property name="accelerator">&lt;Shift&gt;&lt;Primary&gt;Tab</property>
               </object>
             </child>
           </object>
@@ -128,26 +168,6 @@
                 <property name="visible">True</property>
                 <property name="title" translatable="yes" context="shortcut window">Reload page</property>
                 <property name="accelerator">F5 &lt;Primary&gt;R</property>
-              </object>
-            </child>
-          </object>
-        </child>
-        <child>
-          <object class="GtkShortcutsGroup">
-            <property name="visible">True</property>
-            <property name="title" translatable="yes" context="shortcut window">Bookmarks</property>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="visible">True</property>
-                <property name="title" translatable="yes" context="shortcut window">Show bookmarks</property>
-                <property name="accelerator">&lt;Primary&gt;B</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkShortcutsShortcut">
-                <property name="visible">True</property>
-                <property name="title" translatable="yes" context="shortcut window">Add bookmark</property>
-                <property name="accelerator">&lt;Primary&gt;D</property>
               </object>
             </child>
           </object>

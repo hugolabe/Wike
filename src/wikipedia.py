@@ -25,7 +25,7 @@ import requests
 _session = requests.Session()
 _api = 'https://en.wikipedia.org/w/api.php'
 
-# Set api uri for selected language
+# Set API uri for selected language
 
 def set_lang(lang):
   global _api

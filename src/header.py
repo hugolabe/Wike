@@ -37,6 +37,7 @@ class HeaderBar(Handy.HeaderBar):
 
   __gtype_name__ = 'HeaderBar'
 
+  tab_button = Gtk.Template.Child()
   search_button = Gtk.Template.Child()
   menu_button = Gtk.Template.Child()
   bookmarks_button = Gtk.Template.Child()
@@ -54,11 +55,6 @@ class HeaderBar(Handy.HeaderBar):
     builder_menu.add_from_resource("/com/github/hugolabe/Wike/ui/menu.ui")
     menu = builder_menu.get_object("menu")
 
-    builder_spinner = Gtk.Builder()
-    builder_spinner.add_from_resource("/com/github/hugolabe/Wike/ui/header-spinner.ui")
-    self._spinner_box = builder_spinner.get_object("spinner_box")
-    self._spinner = builder_spinner.get_object("spinner")
-
     self.search_entry = SearchEntry(self.search_button, self._window)
     self.bookmarks_popover = BookmarksPopover(self._window)
     self.langlinks_popover = LanglinksPopover(self._window)
@@ -72,25 +68,6 @@ class HeaderBar(Handy.HeaderBar):
 
     self.search_button.connect('clicked', self._search_button_cb)
     self.menu_button.connect('toggled', self._menu_button_cb)
-
-  # Show headerbar spinner and disable search button
-
-  def show_spinner(self):
-    if self.search_button.get_active():
-      self.search_button.set_active(False)
-    self.set_custom_title(self._spinner_box)
-    self.search_button.set_sensitive(False)
-    self._spinner.start()
-
-  # Hide headerbar spinner and enable search button
-
-  def hide_spinner(self):
-    if self.search_button.get_active():
-      self.search_button.set_active(False)
-    self.search_button.set_sensitive(True)
-    self._spinner.stop()
-    self.set_title(self._window.wikiview.get_title())
-    self.set_custom_title(None)
 
   # Populate toc popover
 
@@ -152,12 +129,13 @@ class HeaderBar(Handy.HeaderBar):
       open_browser_action = self._window.lookup_action('open_browser')
       copy_url_action = self._window.lookup_action('copy_url')
 
-      if self._window.wikiview.is_local():
+      if self._window.page.wikiview.is_local():
         open_browser_action.set_enabled(False)
         copy_url_action.set_enabled(False)
       else:
         open_browser_action.set_enabled(True)
         copy_url_action.set_enabled(True)
+
       if settings.get_boolean('keep-historic') and len(historic.items) > 0:
         show_historic_action.set_enabled(True)
       else:

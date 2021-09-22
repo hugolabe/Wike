@@ -58,31 +58,36 @@ class TocPopover(Gtk.Popover):
     if index > 0:
       action_string = 'toc_popover.section(\'' + str(index-1) + '\')'
       text = toc[index-1]['anchor'].replace('_', ' ')
-      if len(text) > 45: text = text[0:44] + '...'
+      if len(text) > 45:
+        text = text[0:44] + '...'
       button = Gio.MenuItem.new(text, action_string)
       menu.append_item(button)
 
     while index < len(toc) - 1:
       leap = level - toc[index+1]['toclevel']
       text = toc[index]['anchor'].replace('_', ' ')
-      if len(text) > 45: text = text[0:44] + '...'
+      if len(text) > 45:
+        text = text[0:44] + '...'
 
       if leap >= 0:
         action_string = 'toc_popover.section(\'' + str(index) + '\')'
         button = Gio.MenuItem.new(text, action_string)
         menu.append_item(button)
         index += 1
-        if leap > 0: return index
+        if leap > 0:
+          return index
       elif leap < 0:
         submenu = Gio.Menu()
         menu.append_submenu(text, submenu)
         index = self._fill_menu(submenu, toc, index+1)
-        if toc[index]['toclevel'] < level: return index
+        if toc[index]['toclevel'] < level:
+          return index
 
     if toc[index]['toclevel'] == level:
       action_string = 'toc_popover.section(\'' + str(index) + '\')'
       text = toc[index]['anchor'].replace('_', ' ')
-      if len(text) > 45: text = text[0:44] + '...'
+      if len(text) > 45:
+        text = text[0:44] + '...'
       button = Gio.MenuItem.new(text, action_string)
       menu.append_item(button)
       return index
@@ -92,5 +97,5 @@ class TocPopover(Gtk.Popover):
   def _section_activate_cb(self, action, parameter):
     index = int(parameter.unpack())
     anchor = self._toc[index]['anchor']
-    self._window.wikiview.load_section(anchor)
+    self._window.page.wikiview.load_section(anchor)
 

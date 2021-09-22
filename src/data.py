@@ -18,7 +18,6 @@
 
 
 import datetime
-import errno
 import json
 import os
 

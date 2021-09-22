@@ -109,7 +109,7 @@ class LanglinksPopover(Gtk.Popover):
 
   def _list_activated_cb(self, langlinks_list, row):
     self.hide()
-    self._window.wikiview.load_wiki(row.uri)
+    self._window.page.wikiview.load_wiki(row.uri)
 
   # Refresh list on filter entry changed
 

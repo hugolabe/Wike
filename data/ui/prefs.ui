@@ -3,7 +3,7 @@
   <requires lib="gtk+" version="3.24"/>
   <requires lib="libhandy" version="1.0"/>
   <template class="PrefsWindow" parent="HdyPreferencesWindow">
-    <property name="default_height">480</property>
+    <property name="default_height">425</property>
     <property name="default_width">540</property>
     <property name="modal">True</property>
     <property name="window_position">center-on-parent</property>
@@ -23,21 +23,6 @@
                 <property name="title" translatable="yes">Home page</property>
                 <property name="subtitle" translatable="yes">The page that will be displayed when Wike starts</property>
                 <property name="visible">True</property>
-              </object>
-            </child>
-            <child>
-              <object class="HdyActionRow">
-                <property name="title" translatable="yes">Clear bookmarks on exit</property>
-                <property name="subtitle" translatable="yes">The bookmarks list will be cleared when exiting Wike</property>
-                <property name="visible">True</property>
-                <property name="activatable_widget">clear_bookmarks_switch</property>
-                <child>
-                  <object class="GtkSwitch" id="clear_bookmarks_switch">
-                    <property name="visible">True</property>
-                    <property name="can_focus">True</property>
-                    <property name="valign">center</property>
-                  </object>
-                </child>
               </object>
             </child>
           </object>

@@ -163,8 +163,6 @@ class Application(Gtk.Application):
     if not settings.get_boolean('keep-historic'):
       historic.clear()
     historic.save()
-    if settings.get_boolean('clear-bookmarks'):
-      bookmarks.clear()
     bookmarks.save()
 
     self.quit()

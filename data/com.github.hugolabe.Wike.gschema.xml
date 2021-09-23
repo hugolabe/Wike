@@ -13,7 +13,7 @@
     </key>
 
     <key name="on-start-load" type="i">
-      <default>2</default>
+      <default>0</default>
       <summary>On start load this page (0-Main, 1-Random, 2-Last)</summary>
     </key>
 
@@ -30,11 +30,6 @@
     <key name="keep-historic" type="b">
       <default>true</default>
       <summary>Keep a list of recent articles</summary>
-    </key>
-
-    <key name="clear-bookmarks" type="b">
-      <default>false</default>
-      <summary>Clear bookmarks list on exit</summary>
     </key>
 
     <key name="font-size" type="i">

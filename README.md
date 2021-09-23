@@ -2,13 +2,14 @@
 
 # Wike
 
-![](data/screenshots/wike-01-main.png)
+![](data/screenshots/wike-02-tabs.png)
 
 *Wike* is a Wikipedia reader for the GNOME Desktop.
 Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles.
 
 ## Features
 
+- Open multiple articles in tabs
 - Multiple languages
 - Search suggestions
 - List of recent articles

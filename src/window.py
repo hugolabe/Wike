@@ -87,7 +87,7 @@ class Window(Handy.ApplicationWindow):
       if accel:
         app.set_accels_for_action('win.' + action, accel)
 
-    self.tabview.connect('notify::selected-page', self._tabview_selected_page_cb)
+    self.handler_selpage = self.tabview.connect('notify::selected-page', self._tabview_selected_page_cb)
     self.tabview.connect('close-page', self._tabview_close_page_cb)
     self.notification_close_button.connect('clicked', self._hide_notification_cb)
 

@@ -139,6 +139,7 @@ class Application(Gtk.Application):
   # On window delete quit app
 
   def _window_delete_cb(self, window, event):
+    window.tabview.disconnect(window.handler_selpage)
     quit_action = self.lookup_action('quit')
     quit_action.activate()
 

@@ -1,4 +1,4 @@
-# window.py
+# page.py
 #
 # This file is part of Wike, a Wikipedia Reader for the GNOME Desktop.
 # Copyright 2021 Hugo Olabera <hugolabe@gmail.com>.

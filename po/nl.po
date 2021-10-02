@@ -7,48 +7,48 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: nl\n"
 
-#: ../src/view.py:154
+#: ../src/view.py:186 ../src/view.py:298
 msgid "Article not found"
 msgstr "Het artikel kan niet worden gevonden"
 
-#: ../src/view.py:155
+#: ../src/view.py:187
 msgid "Can't find any results for requested query"
 msgstr "Er zijn geen resultaten gevonden voor uw zoekopdracht"
 
-#: ../src/view.py:157
+#: ../src/view.py:190 ../src/view.py:300
 msgid "Can't access Wikipedia"
 msgstr "Geen Wikipedia-toegang"
 
-#: ../src/view.py:158
+#: ../src/view.py:191
 msgid "Check your Internet connection and try again"
 msgstr "Controleer uw internetverbinding en probeer het opnieuw"
 
-#: ../src/window.py:151 ../src/window.py:261
+#: ../src/window.py:225
 msgid "New bookmark: "
 msgstr "Nieuwe bladwijzer: "
 
-#: ../src/window.py:319
+#: ../src/window.py:283
 msgid "Wikipedia URL copied to clipboard"
 msgstr "De Wikipedia-url is gekopieerd naar het klembord"
 
-#: ../src/search.py:249
+#: ../src/search.py:260
 msgid "Default search language: "
 msgstr "Standaard zoektaal: "
 
-#: ../src/bookmarks.py:137
+#: ../src/bookmarks.py:138
 msgid "Clear Bookmarks List?"
 msgstr "Bladwijzerlijst wissen?"
 
-#: ../src/bookmarks.py:138
+#: ../src/bookmarks.py:140
 msgid "All bookmarks in the list will be removed permanently."
 msgstr "Alle bladwijzers op de lijst worden permanent gewist."
 
-#: ../src/bookmarks.py:139 ../data/ui/bookmarks.ui:70
+#: ../src/bookmarks.py:141 ../data/ui/bookmarks.ui:70
 msgid "Clear List"
 msgstr "Lijst wissen"
 
 #: ../data/ui/search-settings.ui:61
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:21
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:22
 msgid "Search suggestions"
 msgstr "Zoeksuggesties"
 
@@ -99,84 +99,74 @@ msgstr "Voorkeuren"
 
 #: ../data/ui/shortcuts.ui:53
 msgctxt "shortcut window"
-msgid "Select all"
-msgstr "Selecteer alles"
-
-#: ../data/ui/shortcuts.ui:60
-msgctxt "shortcut window"
-msgid "Copy selection"
-msgstr "Kopieer de selectie"
-
-#: ../data/ui/shortcuts.ui:67
-msgctxt "shortcut window"
 msgid "Copy Wikipedia URL"
 msgstr "Kopieer de Wikipedia-url"
 
-#: ../data/ui/shortcuts.ui:74
+#: ../data/ui/shortcuts.ui:60
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Sluit af"
 
-#: ../data/ui/shortcuts.ui:81
+#: ../data/ui/shortcuts.ui:67
 msgctxt "shortcut window"
 msgid "Keyboard shortcuts"
 msgstr "Sneltoetsen"
 
-#: ../data/ui/shortcuts.ui:90
+#: ../data/ui/shortcuts.ui:130
 msgctxt "shortcut window"
 msgid "Navigation"
 msgstr "Navigatie"
 
-#: ../data/ui/shortcuts.ui:94
+#: ../data/ui/shortcuts.ui:134
 msgctxt "shortcut window"
 msgid "Search articles"
 msgstr "Zoek naar artikelen"
 
-#: ../data/ui/shortcuts.ui:101
+#: ../data/ui/shortcuts.ui:141
 msgctxt "shortcut window"
 msgid "Wikipedia main page"
 msgstr "Wikipedia-startpagina"
 
-#: ../data/ui/shortcuts.ui:108
+#: ../data/ui/shortcuts.ui:148
 msgctxt "shortcut window"
 msgid "Show recent articles"
 msgstr "Toon recente artikelen"
 
-#: ../data/ui/shortcuts.ui:115
+#: ../data/ui/shortcuts.ui:155
 msgctxt "shortcut window"
 msgid "Previous page"
 msgstr "Vorige pagina"
 
-#: ../data/ui/shortcuts.ui:122
+#: ../data/ui/shortcuts.ui:162
 msgctxt "shortcut window"
 msgid "Next page"
 msgstr "Volgende pagina"
 
-#: ../data/ui/shortcuts.ui:129
+#: ../data/ui/shortcuts.ui:169
 msgctxt "shortcut window"
 msgid "Reload page"
 msgstr "Herlaad de pagina"
 
-#: ../data/ui/shortcuts.ui:138
+#: ../data/ui/shortcuts.ui:76
 msgctxt "shortcut window"
 msgid "Bookmarks"
 msgstr "Bladwijzers"
 
-#: ../data/ui/shortcuts.ui:142
+#: ../data/ui/shortcuts.ui:80
 msgctxt "shortcut window"
 msgid "Show bookmarks"
 msgstr "Toon de bladwijzers"
 
-#: ../data/ui/shortcuts.ui:149
+#: ../data/ui/shortcuts.ui:87
 msgctxt "shortcut window"
 msgid "Add bookmark"
 msgstr "Voeg bladwijzer toe"
 
-#: ../src/prefs.py:81 ../data/ui/menu.ui:8
+#: ../src/prefs.py:80 ../data/ui/menu.ui:8
 msgid "Wikipedia Main Page"
 msgstr "Wikipedia-startpagina"
 
-#: ../src/view.py:234 ../data/ui/menu.ui:18
+#: ../src/view.py:296 ../data/ui/menu.ui:18
 msgid "Recent Articles"
 msgstr "Recente artikelen"
 
@@ -212,7 +202,7 @@ msgstr "Over Wike"
 msgid "Behavior"
 msgstr "Gedrag"
 
-#: ../data/ui/prefs.ui:135
+#: ../data/ui/prefs.ui:120
 msgid "Keep a list of recent articles"
 msgstr "Lijst met recente artikelen bijhouden"
 
@@ -220,11 +210,11 @@ msgstr "Lijst met recente artikelen bijhouden"
 msgid "General"
 msgstr "Algemeen"
 
-#: ../data/ui/prefs.ui:178
+#: ../data/ui/prefs.ui:163
 msgid "Languages"
 msgstr "Talen"
 
-#: ../data/ui/header-spinner.ui:23
+#: ../src/page.py:77 ../src/page.py:80
 msgid "Loading Article"
 msgstr "Bezig met laden…"
 
@@ -234,7 +224,7 @@ msgstr "Bezig met laden…"
 msgid "Wike"
 msgstr "Wike"
 
-#: ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../src/view.py:182 ../data/com.github.hugolabe.Wike.desktop.in:4
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
 msgid "Search and read Wikipedia articles"
 msgstr "Zoek naar en lees Wikipedia-artikelen"
@@ -248,27 +238,27 @@ msgstr "Wikipedia;Encyclopedie;"
 msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
 msgstr "Wike is een Wikipedia-leeshulpmiddel voor de GNOME-werkomgeving. U heeft toegang tot alle inhoud van deze online-encyclopedie, maar in een met de werkomgeving geïntegreerd jasje en een eenvoudige weergave zonder enige afleiding."
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:21
 msgid "Multiple languages"
 msgstr "Meerdere talen"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:22
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:23
 msgid "List of recent articles"
 msgstr "Lijst met recente artikelen"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:23
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:24
 msgid "Simple bookmarks management"
 msgstr "Eenvoudig bladwijzerbeheer"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:24
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:25
 msgid "Text search in articles"
 msgstr "Zoek binnen artikelen"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:25
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
 msgid "Article table of contents"
 msgstr "Inhoudsopgaven"
 
-#: ../data/ui/header.ui:136 ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
+#: ../data/ui/header.ui:154 ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
 msgid "View article in other languages"
 msgstr "Lees artikelen in andere talen"
 
@@ -280,35 +270,35 @@ msgstr "Kenmerken:"
 msgid "Dark Mode"
 msgstr "Donker thema"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:29
 msgid "Dark mode"
 msgstr "Donker thema"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
 msgid "GNOME Shell search integration"
 msgstr "GNOME Shell-zoekintegratie"
 
-#: ../src/prefs.py:146
+#: ../src/prefs.py:148
 msgid "Clear Historic?"
 msgstr "Geschiedenis wissen?"
 
-#: ../src/prefs.py:147
+#: ../src/prefs.py:150
 msgid "The history of visited articles will be deleted permanently."
 msgstr "De lijst met bekeken artikelen wordt hierdoor permanent gewist."
 
-#: ../src/prefs.py:148
+#: ../src/prefs.py:151
 msgid "Clear Historic"
 msgstr "Geschiedenis wissen"
 
-#: ../src/prefs.py:165
+#: ../src/prefs.py:168
 msgid "Clear Personal Data?"
 msgstr "Persoonlijke gegevens wissen?"
 
-#: ../src/prefs.py:166
+#: ../src/prefs.py:170
 msgid "Cookies and cache data will be deleted permanently."
 msgstr "De cookies en cache worden hierdoor permanent gewist."
 
-#: ../src/prefs.py:167
+#: ../src/prefs.py:171
 msgid "Clear Data"
 msgstr "Gegevens wissen"
 
@@ -325,123 +315,103 @@ msgstr "Beginpagina"
 msgid "The page that will be displayed when Wike starts"
 msgstr "De pagina die wordt getoond na het openen van Wike"
 
-#: ../data/ui/prefs.ui:30
-msgid "Clear bookmarks on exit"
-msgstr "Bladwijzers wissen na afsluiten"
-
-#: ../data/ui/prefs.ui:31
-msgid "The bookmarks list will be cleared when exiting Wike"
-msgstr "Wis de bladwijzerlijst na het afsluiten van Wike"
-
-#: ../data/ui/prefs.ui:49
+#: ../data/ui/prefs.ui:34
 msgid "Article View"
 msgstr "Artikelweergave"
 
-#: ../data/ui/prefs.ui:52
+#: ../data/ui/prefs.ui:37
 msgid "Font size"
 msgstr "Tekstgrootte"
 
-#: ../data/ui/prefs.ui:53
+#: ../data/ui/prefs.ui:38
 msgid "Font size for article view (default is 16)"
 msgstr "De tekstgrootte in de artikelweergave (standaard: 16)"
 
-#: ../data/ui/prefs.ui:70
+#: ../data/ui/prefs.ui:55
 msgid "Use custom font"
 msgstr "Aangepast lettertype gebruiken"
 
-#: ../data/ui/prefs.ui:71
+#: ../data/ui/prefs.ui:56
 msgid "Choose a font for the article view"
 msgstr "Kies een lettertype voor de artikelweergave"
 
-#: ../data/ui/prefs.ui:84
+#: ../data/ui/prefs.ui:69
 msgid "Preview popups in article links"
 msgstr "Links voorvertonen"
 
-#: ../data/ui/prefs.ui:85
+#: ../data/ui/prefs.ui:70
 msgid "Show a preview of the article when hovering over a link"
 msgstr "Toon een voorvertoning van een artikel na het aanwijzen van een link"
 
-#: ../data/ui/prefs.ui:104
+#: ../data/ui/prefs.ui:89
 msgid "Privacy"
 msgstr "Privacy"
 
-#: ../data/ui/prefs.ui:110
+#: ../data/ui/prefs.ui:95
 msgid "Search"
 msgstr "Zoeken"
 
-#: ../data/ui/prefs.ui:113
+#: ../data/ui/prefs.ui:98
 msgid "Allow live search on desktop"
 msgstr "Live-zoeken gebruiken"
 
-#: ../data/ui/prefs.ui:114
+#: ../data/ui/prefs.ui:99
 msgid "Warning: all desktop searches will be sent to Wikipedia"
 msgstr "Waarschuwing: alle zoekopdrachten worden gedeeld met Wikipedia"
 
-#: ../data/ui/prefs.ui:132
+#: ../data/ui/prefs.ui:117
 msgid "Personal Data"
 msgstr "Persoonlijke gegevens"
 
-#: ../data/ui/prefs.ui:136
+#: ../data/ui/prefs.ui:121
 msgid "Wike will remember the history of visited articles"
 msgstr "Wike bewaart de geschiedenis van bezochte artikelen"
 
-#: ../data/ui/prefs.ui:148 ../data/ui/prefs.ui:163
+#: ../data/ui/prefs.ui:133 ../data/ui/prefs.ui:148
 msgid "Clear"
 msgstr "Wissen"
 
-#: ../data/ui/prefs.ui:158
+#: ../data/ui/prefs.ui:143
 msgid "Clear personal data"
 msgstr "Persoonlijke gegevens wissen"
 
-#: ../data/ui/prefs.ui:159
+#: ../data/ui/prefs.ui:144
 msgid "Cookies and cache data will be deleted"
 msgstr "De cookies en cache worden gewist"
 
-#: ../src/view.py:161
+#: ../src/view.py:194
 msgid "Try Again"
 msgstr "Opnieuw proberen"
 
-#: ../src/prefs.py:81 ../data/ui/menu.ui:13
+#: ../src/prefs.py:80 ../data/ui/menu.ui:13
 msgid "Random Article"
 msgstr "Willekeurig artikel"
 
-#: ../src/prefs.py:81
+#: ../src/prefs.py:80
 msgid "Last Article"
 msgstr "Recentst gelezen artikel"
 
-#: ../src/bookmarks.py:46
-msgid "<b>No Bookmarks</b>\n"
-"\n"
-"<small>Use the <i>Add Bookmark</i> button\n"
-"or click a link with the middle mouse button\n"
-"to add bookmarks to the list</small>"
-msgstr "<b>Geen bladwijzers</b>\n"
-"\n"
-"<small>Klik op de knop <i>Bladwijzer toevoegen</i>\n"
-"of klik met de middelste muisknop op een link om een\n"
-"bladwijzer toe te voegen</small>"
-
-#: ../data/ui/header.ui:61
+#: ../data/ui/header.ui:79
 msgid "Search articles"
 msgstr "Zoek naar artikelen"
 
-#: ../data/ui/header.ui:95
+#: ../data/ui/header.ui:113
 msgid "Bookmarks"
 msgstr "Bladwijzers"
 
-#: ../data/ui/header.ui:117
+#: ../data/ui/header.ui:135
 msgid "Table of contents"
 msgstr "Inhoudsopgave"
 
-#: ../data/ui/prefs.ui:184
+#: ../data/ui/prefs.ui:169
 msgid "Filter Available Languages"
 msgstr "Beschikbare talen filteren"
 
-#: ../data/ui/prefs.ui:218
+#: ../data/ui/prefs.ui:203
 msgid "Select All"
 msgstr "Alles selecteren"
 
-#: ../data/ui/prefs.ui:230
+#: ../data/ui/prefs.ui:215
 msgid "Select None"
 msgstr "Niets selecteren"
 
@@ -449,4 +419,53 @@ msgstr "Niets selecteren"
 msgctxt "shortcut window"
 msgid "Main menu"
 msgstr "Hoofdmenu"
+
+#: ../src/view.py:183
+msgid "Click the search button or press F2 to search articles in Wikipedia. You can also use the main menu to open Wikipedia main page, the list of recent articles or get a random article."
+msgstr "Klik op de zoekknop of druk op F2 om naar artikelen te zoeken op Wikipedia. Ook kunt u via het hoofdmenu te Wikipedia-startpagina bereiken, de lijst met recente artikelen opvragen of een willekeurig artikel openen."
+
+#: ../src/bookmarks.py:47
+msgid "<b>No Bookmarks</b>\n"
+"\n"
+"<small>Use the <i>Add Bookmark</i> button\n"
+"or press Ctrl+D to add\n"
+"the current article to the list</small>"
+msgstr "<b>U heeft geen bladwijzers</b>\n"
+"\n"
+"<small>Klik op de knop <i>Bladwijzer toevoegen</i>\n"
+"of druk op Ctrl+D om het huidige\n"
+"artikel toe te voegen aan deze lijst</small>"
+
+#: ../data/ui/shortcuts.ui:96
+msgctxt "shortcut window"
+msgid "Tabs"
+msgstr "Tabbladen"
+
+#: ../data/ui/shortcuts.ui:100
+msgctxt "shortcut window"
+msgid "New tab"
+msgstr "Nieuw tabblad"
+
+#: ../data/ui/shortcuts.ui:107
+msgctxt "shortcut window"
+msgid "Close current tab"
+msgstr "Huidig tabblad sluiten"
+
+#: ../data/ui/shortcuts.ui:114
+msgctxt "shortcut window"
+msgid "Next tab"
+msgstr "Volgend tabblad"
+
+#: ../data/ui/shortcuts.ui:121
+msgctxt "shortcut window"
+msgid "Previous tab"
+msgstr "Vorig tabblad"
+
+#: ../data/ui/header.ui:61
+msgid "New tab"
+msgstr "Nieuw tabblad"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
+msgid "Open multiple articles in tabs"
+msgstr "Meerdere artikelen op tabbladen openen"
 

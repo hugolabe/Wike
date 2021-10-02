@@ -77,7 +77,7 @@ class PageBox(Gtk.Box):
       tabpage.set_title(_('Loading Article'))
       tabpage.set_loading(True)
       if tabpage.get_selected():
-        self._window.headerbar.set_title('Loading Article')
+        self._window.headerbar.set_title(_('Loading Article'))
         self._window.headerbar.toc_button.set_sensitive(False)
         self._window.headerbar.langlinks_button.set_sensitive(False)
         if self._window.headerbar.search_button.get_active():

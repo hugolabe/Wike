@@ -7,48 +7,48 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: hr\n"
 
-#: ../src/view.py:154
+#: ../src/view.py:186 ../src/view.py:298
 msgid "Article not found"
 msgstr "Članak nije pronađen"
 
-#: ../src/view.py:155
+#: ../src/view.py:187
 msgid "Can't find any results for requested query"
 msgstr "Nema rezultata za traženi upit"
 
-#: ../src/view.py:157
+#: ../src/view.py:190 ../src/view.py:300
 msgid "Can't access Wikipedia"
 msgstr "Wikipedija nije dostupna"
 
-#: ../src/view.py:158
+#: ../src/view.py:191
 msgid "Check your Internet connection and try again"
 msgstr "Provjeri internetsku vezu i pokušaj ponovo"
 
-#: ../src/window.py:151 ../src/window.py:261
+#: ../src/window.py:225
 msgid "New bookmark: "
 msgstr "Nova oznaka: "
 
-#: ../src/window.py:319
+#: ../src/window.py:283
 msgid "Wikipedia URL copied to clipboard"
 msgstr "URL adresa Wikipedije je kopirana u međuspremnikK"
 
-#: ../src/search.py:249
+#: ../src/search.py:260
 msgid "Default search language: "
 msgstr "Standardni jezik pretrage: "
 
-#: ../src/bookmarks.py:137
+#: ../src/bookmarks.py:138
 msgid "Clear Bookmarks List?"
 msgstr "Izbrisati popis oznaka?"
 
-#: ../src/bookmarks.py:138
+#: ../src/bookmarks.py:140
 msgid "All bookmarks in the list will be removed permanently."
 msgstr "Sve oznake u popisu će se zauvijek izbrisati."
 
-#: ../src/bookmarks.py:139 ../data/ui/bookmarks.ui:70
+#: ../src/bookmarks.py:141 ../data/ui/bookmarks.ui:70
 msgid "Clear List"
 msgstr "Izbriši popis"
 
 #: ../data/ui/search-settings.ui:61
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:21
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:22
 msgid "Search suggestions"
 msgstr "Prijedlozi pretrage"
 
@@ -98,84 +98,74 @@ msgstr "Postavke"
 
 #: ../data/ui/shortcuts.ui:53
 msgctxt "shortcut window"
-msgid "Select all"
-msgstr "Odaberi sve"
-
-#: ../data/ui/shortcuts.ui:60
-msgctxt "shortcut window"
-msgid "Copy selection"
-msgstr "Kopiraj odabir"
-
-#: ../data/ui/shortcuts.ui:67
-msgctxt "shortcut window"
 msgid "Copy Wikipedia URL"
 msgstr "Kopiraj URL adresu Wikipedije"
 
-#: ../data/ui/shortcuts.ui:74
+#: ../data/ui/shortcuts.ui:60
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Zatvori program"
 
-#: ../data/ui/shortcuts.ui:81
+#: ../data/ui/shortcuts.ui:67
 msgctxt "shortcut window"
 msgid "Keyboard shortcuts"
 msgstr "Tipkovni prečaci"
 
-#: ../data/ui/shortcuts.ui:90
+#: ../data/ui/shortcuts.ui:130
 msgctxt "shortcut window"
 msgid "Navigation"
 msgstr "Navigacija"
 
-#: ../data/ui/shortcuts.ui:94
+#: ../data/ui/shortcuts.ui:134
 msgctxt "shortcut window"
 msgid "Search articles"
 msgstr "Traži članke"
 
-#: ../data/ui/shortcuts.ui:101
+#: ../data/ui/shortcuts.ui:141
 msgctxt "shortcut window"
 msgid "Wikipedia main page"
 msgstr "Glavna stranica Wikipedije"
 
-#: ../data/ui/shortcuts.ui:108
+#: ../data/ui/shortcuts.ui:148
 msgctxt "shortcut window"
 msgid "Show recent articles"
 msgstr "Pokaži nedavne članke"
 
-#: ../data/ui/shortcuts.ui:115
+#: ../data/ui/shortcuts.ui:155
 msgctxt "shortcut window"
 msgid "Previous page"
 msgstr "Prethodna stranica"
 
-#: ../data/ui/shortcuts.ui:122
+#: ../data/ui/shortcuts.ui:162
 msgctxt "shortcut window"
 msgid "Next page"
 msgstr "Sljedeća stranica"
 
-#: ../data/ui/shortcuts.ui:129
+#: ../data/ui/shortcuts.ui:169
 msgctxt "shortcut window"
 msgid "Reload page"
 msgstr "Ponovo učitaj stranicu"
 
-#: ../data/ui/shortcuts.ui:138
+#: ../data/ui/shortcuts.ui:76
 msgctxt "shortcut window"
 msgid "Bookmarks"
 msgstr "Oznake"
 
-#: ../data/ui/shortcuts.ui:142
+#: ../data/ui/shortcuts.ui:80
 msgctxt "shortcut window"
 msgid "Show bookmarks"
 msgstr "Pokaži oznake"
 
-#: ../data/ui/shortcuts.ui:149
+#: ../data/ui/shortcuts.ui:87
 msgctxt "shortcut window"
 msgid "Add bookmark"
 msgstr "Dodaj oznaku"
 
-#: ../src/prefs.py:81 ../data/ui/menu.ui:8
+#: ../src/prefs.py:80 ../data/ui/menu.ui:8
 msgid "Wikipedia Main Page"
 msgstr "Glavna stranica Wikipedije"
 
-#: ../src/view.py:234 ../data/ui/menu.ui:18
+#: ../src/view.py:296 ../data/ui/menu.ui:18
 msgid "Recent Articles"
 msgstr "Nedavni članci"
 
@@ -211,7 +201,7 @@ msgstr "Wike informacije"
 msgid "Behavior"
 msgstr "Ponašanje"
 
-#: ../data/ui/prefs.ui:135
+#: ../data/ui/prefs.ui:120
 msgid "Keep a list of recent articles"
 msgstr "Čuvaj popis nedavnih članaka"
 
@@ -219,11 +209,11 @@ msgstr "Čuvaj popis nedavnih članaka"
 msgid "General"
 msgstr "Opće"
 
-#: ../data/ui/prefs.ui:178
+#: ../data/ui/prefs.ui:163
 msgid "Languages"
 msgstr "Jezici"
 
-#: ../data/ui/header-spinner.ui:23
+#: ../src/page.py:77 ../src/page.py:80
 msgid "Loading Article"
 msgstr "Učitavanje članka"
 
@@ -233,7 +223,7 @@ msgstr "Učitavanje članka"
 msgid "Wike"
 msgstr "Wike"
 
-#: ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../src/view.py:182 ../data/com.github.hugolabe.Wike.desktop.in:4
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
 msgid "Search and read Wikipedia articles"
 msgstr "Traži i čitaj članke Wikipedije"
@@ -241,33 +231,33 @@ msgstr "Traži i čitaj članke Wikipedije"
 #. Don't remove semicolons!
 #: ../data/com.github.hugolabe.Wike.desktop.in:10
 msgid "Wikipedia;Encyclopedia;"
-msgstr "Wikipedija;Enciklopedija;Wikipedia;Encyclopedia;"
+msgstr "Wikipedija;Enciklopedija;Leksikon;Wikipedia;Encyclopedia;"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:11
 msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
 msgstr "Wike je čitač Wikipedije za GNOME radno okruženje. Omogućuje pristup svom sadržaju ove internetske enciklopedije te prikazuje članke na jednostavniji, čitljiviji način."
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:21
 msgid "Multiple languages"
 msgstr "Preveden na razne jezike"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:22
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:23
 msgid "List of recent articles"
 msgstr "Popis nedavnih članaka"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:23
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:24
 msgid "Simple bookmarks management"
 msgstr "Jednostavno upravljanje oznakama"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:24
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:25
 msgid "Text search in articles"
 msgstr "Traženje teksta u člancima"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:25
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
 msgid "Article table of contents"
 msgstr "Sadržaj članka"
 
-#: ../data/ui/header.ui:136 ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
+#: ../data/ui/header.ui:154 ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
 msgid "View article in other languages"
 msgstr "Čitaj članak na drugim jezicima"
 
@@ -279,35 +269,35 @@ msgstr "Značajke:"
 msgid "Dark Mode"
 msgstr "Tamni način"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:29
 msgid "Dark mode"
 msgstr "Tamni dizajn"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
 msgid "GNOME Shell search integration"
 msgstr "Integracija s pretragom GNOME ljuske"
 
-#: ../src/prefs.py:146
+#: ../src/prefs.py:148
 msgid "Clear Historic?"
 msgstr "Izbrisati povijest?"
 
-#: ../src/prefs.py:147
+#: ../src/prefs.py:150
 msgid "The history of visited articles will be deleted permanently."
 msgstr "Povijest posjećenih članaka će se zauvijek izbrisati."
 
-#: ../src/prefs.py:148
+#: ../src/prefs.py:151
 msgid "Clear Historic"
 msgstr "Izbriši povijest"
 
-#: ../src/prefs.py:165
+#: ../src/prefs.py:168
 msgid "Clear Personal Data?"
 msgstr "Izbrisati osobne podatke?"
 
-#: ../src/prefs.py:166
+#: ../src/prefs.py:170
 msgid "Cookies and cache data will be deleted permanently."
 msgstr "Kolačići i podaci u predmemoriji će se zauvijek izbrisati."
 
-#: ../src/prefs.py:167
+#: ../src/prefs.py:171
 msgid "Clear Data"
 msgstr "Izbriši podatke"
 
@@ -324,123 +314,103 @@ msgstr "Početna stranica"
 msgid "The page that will be displayed when Wike starts"
 msgstr "Stranica koja će se prikazati kad se Wike pokrene"
 
-#: ../data/ui/prefs.ui:30
-msgid "Clear bookmarks on exit"
-msgstr "Izbriši oznake kad se program zatvori"
-
-#: ../data/ui/prefs.ui:31
-msgid "The bookmarks list will be cleared when exiting Wike"
-msgstr "Popis oznaka će se izbrisati kad se Wike zatvori"
-
-#: ../data/ui/prefs.ui:49
+#: ../data/ui/prefs.ui:34
 msgid "Article View"
 msgstr "Prikaz članaka"
 
-#: ../data/ui/prefs.ui:52
+#: ../data/ui/prefs.ui:37
 msgid "Font size"
 msgstr "Veličina fonta"
 
-#: ../data/ui/prefs.ui:53
+#: ../data/ui/prefs.ui:38
 msgid "Font size for article view (default is 16)"
 msgstr "Veličina fonta za prikaz članaka (zadano je 16)"
 
-#: ../data/ui/prefs.ui:70
+#: ../data/ui/prefs.ui:55
 msgid "Use custom font"
 msgstr "Koristi prilagođeni font"
 
-#: ../data/ui/prefs.ui:71
+#: ../data/ui/prefs.ui:56
 msgid "Choose a font for the article view"
 msgstr "Odaberi font za prikaz članaka"
 
-#: ../data/ui/prefs.ui:84
+#: ../data/ui/prefs.ui:69
 msgid "Preview popups in article links"
 msgstr "Pregled u poveznicama na članke"
 
-#: ../data/ui/prefs.ui:85
+#: ../data/ui/prefs.ui:70
 msgid "Show a preview of the article when hovering over a link"
 msgstr "Pokaži pregled članka tijekom prelaženja mišem preko poveznice"
 
-#: ../data/ui/prefs.ui:104
+#: ../data/ui/prefs.ui:89
 msgid "Privacy"
 msgstr "Privatnost"
 
-#: ../data/ui/prefs.ui:110
+#: ../data/ui/prefs.ui:95
 msgid "Search"
 msgstr "Traži"
 
-#: ../data/ui/prefs.ui:113
+#: ../data/ui/prefs.ui:98
 msgid "Allow live search on desktop"
 msgstr "Dozvoli izravnu pretragu na radnoj površini"
 
-#: ../data/ui/prefs.ui:114
+#: ../data/ui/prefs.ui:99
 msgid "Warning: all desktop searches will be sent to Wikipedia"
 msgstr "Upozorenje: sve pretrage radne površine će se poslati Wikipediji"
 
-#: ../data/ui/prefs.ui:132
+#: ../data/ui/prefs.ui:117
 msgid "Personal Data"
 msgstr "Osobni podaci"
 
-#: ../data/ui/prefs.ui:136
+#: ../data/ui/prefs.ui:121
 msgid "Wike will remember the history of visited articles"
 msgstr "Wike će zapamtiti povijest posjećenih članaka"
 
-#: ../data/ui/prefs.ui:148 ../data/ui/prefs.ui:163
+#: ../data/ui/prefs.ui:133 ../data/ui/prefs.ui:148
 msgid "Clear"
 msgstr "Izbriši"
 
-#: ../data/ui/prefs.ui:158
+#: ../data/ui/prefs.ui:143
 msgid "Clear personal data"
 msgstr "Izbriši osobne podatke"
 
-#: ../data/ui/prefs.ui:159
+#: ../data/ui/prefs.ui:144
 msgid "Cookies and cache data will be deleted"
 msgstr "Kolačići i podaci u predmemoriji će se izbrisati"
 
-#: ../src/view.py:161
+#: ../src/view.py:194
 msgid "Try Again"
 msgstr "Pokušaj ponovo"
 
-#: ../src/prefs.py:81 ../data/ui/menu.ui:13
+#: ../src/prefs.py:80 ../data/ui/menu.ui:13
 msgid "Random Article"
 msgstr "Slučajni članak"
 
-#: ../src/prefs.py:81
+#: ../src/prefs.py:80
 msgid "Last Article"
 msgstr "Zadnji članak"
 
-#: ../src/bookmarks.py:46
-msgid "<b>No Bookmarks</b>\n"
-"\n"
-"<small>Use the <i>Add Bookmark</i> button\n"
-"or click a link with the middle mouse button\n"
-"to add bookmarks to the list</small>"
-msgstr "<b>Nema oznaka</b>\n"
-"\n"
-"<small>Za dodavanje oznaka u popis koristi \n"
-"gumb <i>Dodaj oznaku</i> ili pritisni \n"
-"poveznicu srednjom tipkom miša</small>"
-
-#: ../data/ui/header.ui:61
+#: ../data/ui/header.ui:79
 msgid "Search articles"
 msgstr "Traži članke"
 
-#: ../data/ui/header.ui:95
+#: ../data/ui/header.ui:113
 msgid "Bookmarks"
 msgstr "Oznake"
 
-#: ../data/ui/header.ui:117
+#: ../data/ui/header.ui:135
 msgid "Table of contents"
 msgstr "Sadržaj"
 
-#: ../data/ui/prefs.ui:184
+#: ../data/ui/prefs.ui:169
 msgid "Filter Available Languages"
 msgstr "Filtriraj dostupne jezike"
 
-#: ../data/ui/prefs.ui:218
+#: ../data/ui/prefs.ui:203
 msgid "Select All"
 msgstr "Odaberi sve"
 
-#: ../data/ui/prefs.ui:230
+#: ../data/ui/prefs.ui:215
 msgid "Select None"
 msgstr "Odaberi ništa"
 
@@ -448,4 +418,53 @@ msgstr "Odaberi ništa"
 msgctxt "shortcut window"
 msgid "Main menu"
 msgstr "Glavni izbornik"
+
+#: ../src/view.py:183
+msgid "Click the search button or press F2 to search articles in Wikipedia. You can also use the main menu to open Wikipedia main page, the list of recent articles or get a random article."
+msgstr "Pritisni gumb za pretraživanje ili pritisni F2 za traženje članaka u Wikipediji. Glavni izbornik možeš koristiti i za otvaranje glavne stranice Wikipedije, za prikaz popisa najnovijih članaka ili za primanje slučajno odabranog članka."
+
+#: ../src/bookmarks.py:47
+msgid "<b>No Bookmarks</b>\n"
+"\n"
+"<small>Use the <i>Add Bookmark</i> button\n"
+"or press Ctrl+D to add\n"
+"the current article to the list</small>"
+msgstr "<b>Nema oznaka</b>\n"
+"\n"
+"<small>Koristi gumb <i>Dodaj oznaku</i>\n"
+"ili pritisni Ctrl+D za dodavanje\n"
+"trenutačnog članak u popis</small>"
+
+#: ../data/ui/shortcuts.ui:96
+msgctxt "shortcut window"
+msgid "Tabs"
+msgstr "Kartice"
+
+#: ../data/ui/shortcuts.ui:100
+msgctxt "shortcut window"
+msgid "New tab"
+msgstr "Nova kartica"
+
+#: ../data/ui/shortcuts.ui:107
+msgctxt "shortcut window"
+msgid "Close current tab"
+msgstr "Zatvori trenutačnu karticu"
+
+#: ../data/ui/shortcuts.ui:114
+msgctxt "shortcut window"
+msgid "Next tab"
+msgstr "Sljedeća kartica"
+
+#: ../data/ui/shortcuts.ui:121
+msgctxt "shortcut window"
+msgid "Previous tab"
+msgstr "Prethodna kartica"
+
+#: ../data/ui/header.ui:61
+msgid "New tab"
+msgstr "Nova kartica"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
+msgid "Open multiple articles in tabs"
+msgstr "Otvori više članaka u karticama"
 

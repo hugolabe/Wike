@@ -8,7 +8,7 @@
     <property name="comments" translatable="yes">Search and read Wikipedia articles
 All content from Wikipedia.org
 and available under CC BY-SA 3.0 unless otherwise noted</property>
-    <property name="website">https://github.com/hugolabe/Wike</property>
+    <property name="website">https://hugolabe.github.io/Wike/</property>
     <property name="authors">Hugo Olabera &lt;hugolabe@gmail.com&gt;</property>
     <property name="translator_credits" translatable="yes">translator-credits</property>
     <property name="license_type">gpl-3-0</property>

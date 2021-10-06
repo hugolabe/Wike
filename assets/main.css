@@ -1,0 +1,191 @@
+body {
+	color: #eee;
+	background-color: #3d3846;
+}
+
+a {
+  color: #eee;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: #eee;
+  text-decoration: underline;
+}
+
+section {
+  padding: 4rem 0 5rem;
+}
+
+section .title {
+  margin-bottom: 2rem;
+}
+
+header {
+  padding: 0 0 5rem;
+  background: radial-gradient(#62a0ea, #1a5fb4);
+}
+
+header p {
+  margin: 1rem;
+  font-weight: 600;
+}
+
+header a {
+  margin-left: 1rem;
+}
+
+header h1 {
+  margin-top: 4rem;
+  font-weight: 600 !important;
+}
+
+header .container {
+  max-width: 100%;
+}
+
+header .container-pc {
+  position: relative;
+  margin-top: -1rem;
+}
+
+header .image-pc {
+  width: 100%;
+  margin: 0;
+}
+
+header .video-pc {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 85%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+footer {
+  padding: 2rem 0;
+  background-color: #241f31;
+}
+
+footer h6 {
+  font-weight: bold;
+}
+
+footer h7 {
+  color: #aaa;
+  font-size: .8em;
+}
+
+footer img {
+  margin: 1rem 0;
+}
+
+#search .tile .item {
+  margin: 0.5rem;
+  background-color: #5e5c64;
+  border-radius: 8px;
+}
+
+#search .tile h5 {
+  padding: 1rem 1rem 0;
+  font-weight: 600;
+}
+
+#search .tile p {
+  padding: 0 1rem 1rem;
+}
+
+#search .tile img {
+  border-radius: 8px 8px 0 0;
+}
+
+#view {
+  background-color: #5e5c64;
+}
+
+#view input {
+  display: none;
+}
+
+#view input + label {
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+#view input:checked + label {
+	background-color: rgba(0,0,0,0.1);
+	transition: background-color 500ms;
+}
+
+#view img.icon-theme {
+  padding: 10px;
+}
+
+#view img.icon-theme:hover {
+  transform: scale(1.1);
+  transition: transform 200ms ease-in-out;
+}
+
+#image-theme {
+  margin-top: 1rem;
+}
+
+#languages .tile .item {
+  margin: 0.5rem;
+}
+
+#languages .tile p {
+  margin: 2rem 0;
+}
+
+#languages .tile img {
+  border-radius: 8px
+}
+
+#features {
+  background: radial-gradient(#dc8add, #1a5fb4);
+}
+
+#features input {
+  display: none;
+}
+
+#features input + label {
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+#features input:checked + label {
+	background-color: rgba(0,0,0,0.1);
+	transition: background-color 500ms;
+}
+
+#features img.icon-features {
+  padding: 10px;
+}
+
+#features img.icon-features:hover {
+  transform: scale(1.1);
+  transition: transform 200ms ease-in-out;
+}
+
+#image-features {
+  margin: 1rem 0;
+}
+
+#features p {
+  margin: 0 10%;
+}
+
+#foss {
+  background-color: #3d3846;
+}
+
+#foss img {
+  margin-bottom: 1rem;
+}
+
+#foss .circle {
+  margin-top: 3rem;
+}
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="40"
+   height="40"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="icon-bookmarks.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     showgrid="false"
+     inkscape:zoom="9.269728"
+     inkscape:cx="32.687043"
+     inkscape:cy="21.791362"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4"
+     width="40px" />
+  <path
+     d="M 13.98134,1 C 11.324236,1 9.321675,2.6546072 8.5552022,4.1510533 7.7911629,5.6474995 7.8252283,7.0831147 7.8252283,7.0831147 V 39 L 19.991458,32.916886 32.150387,39 32.174719,20.465966 h -0.0097 l -0.0097,-13.3828513 c 0,0 0.03407,-1.4210157 -0.71294,-2.9125954 C 30.695306,2.6765064 28.707343,1 26.072138,1 Z m 0,4.8664916 h 12.093233 c 1.01223,0 0.849202,0.1459947 1.014662,0.4793494 a 2.3261831,2.3261831 0 0 1 0.199527,0.7372737 l 0.0097,18.2493433 -0.0048,5.798425 -7.304604,-3.649868 -7.299738,3.649868 V 7.0831147 c 0,0 0.03163,-0.3893195 0.199527,-0.7178076 0.167864,-0.326055 0.0243,-0.4988155 1.094931,-0.4988155 z"
+     style="line-height:normal;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;text-orientation:mixed;shape-padding:0;isolation:auto;mix-blend-mode:normal;fill:#eeeeee;fill-opacity:1;stroke-width:2.43324"
+     color="#000000"
+     font-weight="400"
+     font-family="sans-serif"
+     overflow="visible"
+     fill="#2e3436"
+     fill-rule="evenodd"
+     id="path2" />
+</svg>

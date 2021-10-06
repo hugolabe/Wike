@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Wike</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="Wike">
+  <meta name="description" content="Wikipedia Reader for the GNOME Desktop">
+  <link href="assets/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-4 d-none d-xl-block text-start">
+          <p>Wikipedia Reader for the GNOME Desktop</p>
+        </div>
+        <div class="col-4 text-center">
+          <p>WIKE</p>
+        </div>
+        <div class="col-4 d-none d-xl-block text-end">
+          <p><a href="https://flathub.org/apps/details/com.github.hugolabe.Wike">Get It</a><a href="#foss">Contribute</a></p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-10 col-md-8 col-lg-7 col-xxl-4 container-pc">
+          <img class="image-pc" alt="Wike Computer" src="media/computer.svg">
+          <video class="video-pc" autoplay loop muted playsinline preload="auto">
+            <source src="media/wike-video.webm" type="video/webm">
+            <source src="media/wike-video.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1 class="display-4">Wikipedia on your Desktop</h1>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <section id="search">
+    <div class="container">
+      <div class="row justify-content-center title">
+        <div class="col-10 col-md-8 col-xl-5 text-center">
+          <h1 class="display-4">Search</h1>
+          <p>Find Wikipedia articles with search suggestions, either from the app or directly on the desktop thanks to the GNOME Shell search integration.</p>
+        </div>
+      </div>
+      <div class="row justify-content-center tile">
+        <div class="col-11 col-md-6 col-xl-5">
+          <div class="item">
+            <img class="img-fluid" src="media/search-suggestions.png">
+            <h5>Search Suggestions</h5>
+            <p>With the help of search suggestions it's easy to find the article you are looking for.</p>
+          </div>
+        </div>
+        <div class="col-11 col-md-6 col-xl-5">
+          <div class="item">
+            <img class="img-fluid" src="media/search-text.png">
+            <h5>Search Text in Articles</h5>
+            <p>Thanks to the integrated text search you can quickly find any content within the article.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="view">
+    <div class="container">
+      <div class="row justify-content-center title">
+        <div class="col-10 col-md-8 col-xl-5 text-center">
+          <h1 class="display-4">View</h1>
+          <p>Open multiple articles in tabs and read them with a simpler and distraction-free view. Customize fonts and easily switch between light and dark mode.</p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-3 col-sm-2 col-lg-1 text-center">
+          <input type="radio" name="theme" id="theme-light" onclick="clickThemeIcon(this);" value="0" checked />
+          <label for="theme-light"><img class="icon-theme icon-light" alt="Sun" src="media/icon-sun.svg"></label>
+        </div>
+        <div class="col-3 col-sm-2 col-lg-1 text-center">
+          <input type="radio" name="theme" id="theme-dark" onclick="clickThemeIcon(this);" value="1" />
+          <label for="theme-dark"><img class="icon-theme icon-dark" alt="Moon" src="media/icon-moon.svg"></label>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12 text-center">
+          <img class="img-fluid" id="image-theme" alt="Wike Theme" src="media/wike-light.png">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="languages">
+    <div class="container">
+      <div class="row justify-content-center title">
+        <div class="col-10 col-md-8 col-xl-5 text-center">
+          <h1 class="display-4">Multiple Languages</h1>
+          <p>Wike supports searching and reading articles in almost 300 languages.</p>
+        </div>
+      </div>
+      <div class="row justify-content-center tile">
+        <div class="col-11 col-md-8 col-lg-4">
+          <div class="item">
+            <img class="img-fluid" src="media/languages-filter.png">
+            <p>Select in Preferences the languages ​​you want to make available for searching and reading articles.</p>
+          </div>
+        </div>
+        <div class="col-11 col-md-8 col-lg-4">
+          <div class="item">
+            <img class="img-fluid" src="media/languages-select.png">
+            <p>Press the gear icon in the search entry to choose the active language.</p>
+          </div>
+        </div>
+        <div class="col-11 col-md-8 col-lg-4">
+          <div class="item">
+            <img class="img-fluid" src="media/languages-langlinks.png">
+            <p>You can also see the current article in other languages ​​by clicking the languages button.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="features">
+    <div class="container">
+      <div class="row justify-content-center title">
+        <div class="col-10 col-md-8 col-xl-5 text-center">
+          <h1 class="display-4">Other Features</h1>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-3 col-sm-2 col-lg-1 text-center">
+          <input type="radio" name="features" id="features-toc" onclick="clickFeaturesIcon(this);" value="0" checked />
+          <label for="features-toc"><img class="icon-features icon-toc" alt="TOC" src="media/icon-toc.svg"></label>
+        </div>
+        <div class="col-3 col-sm-2 col-lg-1 text-center">
+          <input type="radio" name="features" id="features-bookmarks" onclick="clickFeaturesIcon(this);" value="1" />
+          <label for="features-bookmarks"><img class="icon-features icon-bookmarks" alt="Bookmarks" src="media/icon-bookmarks.svg"></label>
+        </div>
+        <div class="col-3 col-sm-2 col-lg-1 text-center">
+          <input type="radio" name="features" id="features-historic" onclick="clickFeaturesIcon(this);" value="2" />
+          <label for="features-historic"><img class="icon-features icon-historic" alt="Historic" src="media/icon-historic.svg"></label>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12 text-center">
+          <img class="img-fluid" id="image-features" alt="Wike Features" src="media/wike-toc.png">
+          <h5 id="title-features">Table of Contents</h5>
+          <p id="text-features">Quickly scroll through the various sections of the article.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="foss">
+    <div class="container">
+      <div class="row justify-content-center title">
+        <div class="col-10 col-md-8 col-xl-5 text-center">
+          <h1 class="display-4">Free & Open Source</h1>
+          <p>Wike is free & open source software, released under de terms of the GNU General Public License V3.</p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-7 col-md-3 col-lg-2 text-center">
+          <a href="https://flathub.org/apps/details/com.github.hugolabe.Wike"><img width="80" height="80" src="media/logo-flathub.png"></a>
+          <h5>Get Wike</h5>
+          <p>Install the latest version from Flathub.</p>
+        </div>
+        <div class="col-7 col-md-3 col-lg-2 text-center">
+          <a href="https://github.com/hugolabe/Wike"><img width="80" height="80" src="media/logo-github.png"></a>
+          <h5>Source Code</h5>
+          <p>Explore source code in GitHub repository.</p>
+        </div>
+        <div class="col-7 col-md-3 col-lg-2 text-center">
+          <a href="https://poeditor.com/join/project?hash=kNgJu4MAum"><img width="80" height="80" src="media/logo-poeditor.png"></a>
+          <h5>Translations</h5>
+          <p>Help translating Wike on POEditor platform.</p>
+        </div>
+      </div>
+      <div class="row justify-content-center circle"">
+        <div class="col-10 text-center">
+          <p><a href="https://circle.gnome.org"><img height="100" alt="GNOME Circle" src="media/gnome-circle.svg"></a></p>
+          <p>Wike is part of GNOME Circle.<br/>Applications and libraries extending the GNOME ecosystem.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="text-center">
+          <h6>Made by Hugo Olabera</h6>
+          <p><a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons CC-BY-SA</a></p>
+          <p><a href="https://stopthemingmy.app"><img alt="Please Don't Theme" src="media/dont-theme.svg"></a></p>
+          <h7>Wike is an independent development not endorsed by or affiliated with the Wikimedia Foundation</h7>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script type="text/javascript" src="assets/scripts.js"></script>
+
+</body>
+
+</html>

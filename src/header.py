@@ -25,6 +25,7 @@ from gi.repository import Gtk, Handy
 from wike.data import settings, historic
 from wike.bookmarks import BookmarksPopover
 from wike.langlinks import LanglinksPopover
+from wike.menu import MenuPopover
 from wike.search import SearchEntry
 from wike.toc import TocPopover
 
@@ -51,17 +52,13 @@ class HeaderBar(Handy.HeaderBar):
 
     self._window = window
 
-    builder_menu = Gtk.Builder()
-    builder_menu.add_from_resource("/com/github/hugolabe/Wike/ui/menu.ui")
-    menu = builder_menu.get_object("menu")
-
     self.search_entry = SearchEntry(self.search_button, self._window)
+    self.menu_popover = MenuPopover(self._window)
     self.bookmarks_popover = BookmarksPopover(self._window)
     self.langlinks_popover = LanglinksPopover(self._window)
     self.toc_popover = TocPopover(self._window)
 
-    self.menu_button.set_menu_model(menu)
-    self.menu_button.get_popover().set_size_request(280, -1)
+    self.menu_button.set_popover(self.menu_popover)
     self.bookmarks_button.set_popover(self.bookmarks_popover)
     self.langlinks_button.set_popover(self.langlinks_popover)
     self.toc_button.set_popover(self.toc_popover)

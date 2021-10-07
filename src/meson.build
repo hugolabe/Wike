@@ -21,6 +21,7 @@ wike_sources = [
   'data.py',
   'header.py',
   'langlinks.py',
+  'menu.py',
   'page.py',
   'prefs.py',
   'search.py',

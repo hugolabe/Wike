@@ -1,0 +1,52 @@
+/*
+sepia.css
+
+This file is part of Wike, a Wikipedia Reader for the GNOME Desktop.
+Copyright 2021 Hugo Olabera <hugolabe@gmail.com>.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+
+/* General */
+
+#mw-mf-page-center {
+  background-color: #f9f3e9 !important;
+}
+
+.mw-body {
+  background-color: #f9f3e9 !important;
+  color: #242020 !important;
+}
+
+/* Main content */
+
+.infobox, .infobox_v2, .infobox_v3 {
+  background-color: #fdfaf6 !important;
+}
+
+.gallerybox .thumb, .flexquote {
+  background-color: #fdfaf6 !important;
+}
+
+.wikitable {
+  background: transparent !important;
+}
+
+/* Wike local pages */
+
+.wike-body {
+  background: #f9f3e9;
+  color: #242020;
+}
+

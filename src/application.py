@@ -26,7 +26,6 @@ from gi.repository import Gio, GLib, Gtk, Handy
 
 from wike.data import settings, languages, historic, bookmarks
 from wike.prefs import PrefsWindow
-from wike.view import view_settings
 from wike.window import Window
 
 
@@ -57,8 +56,16 @@ class Application(Gtk.Application):
     self.add_action(action)
     self.set_accels_for_action('app.prefs', ('<Ctrl>E',))
 
-    action = Gio.SimpleAction.new_stateful('dark_mode', None, GLib.Variant.new_boolean(settings.get_boolean('dark-mode')))
-    action.connect('change-state', self._dark_mode)
+    action = Gio.SimpleAction.new('theme_dark', None)
+    action.connect('activate', self._theme_dark)
+    self.add_action(action)
+
+    action = Gio.SimpleAction.new('theme_light', None)
+    action.connect('activate', self._theme_light)
+    self.add_action(action)
+
+    action = Gio.SimpleAction.new('theme_sepia', None)
+    action.connect('activate', self._theme_sepia)
     self.add_action(action)
 
     action = Gio.SimpleAction.new('shortcuts', None)
@@ -96,7 +103,7 @@ class Application(Gtk.Application):
       self._window = Window(self, self._launch_uri)
       self._window.connect('delete-event',self._window_delete_cb)
       self._gtk_settings = Gtk.Settings.get_default()
-      if settings.get_boolean('dark-mode'):
+      if settings.get_int('theme') == 1:
         self._gtk_settings.set_property('gtk-application-prefer-dark-theme', True)
       self._window.show_all()
     else:
@@ -109,13 +116,23 @@ class Application(Gtk.Application):
     prefs_window.set_transient_for(self._window)
     prefs_window.show_all()
 
-  # Set/unset dark mode for UI and view
+  # Set theme light for UI and view
 
-  def _dark_mode(self, action, parameter):
-    action.set_state(parameter)
-    settings.set_boolean('dark-mode', parameter)
-    self._gtk_settings.set_property('gtk-application-prefer-dark-theme', parameter)
-    view_settings.set_style()
+  def _theme_light(self, action, parameter):
+    settings.set_int('theme', 0)
+    self._gtk_settings.set_property('gtk-application-prefer-dark-theme', False)
+
+  # Set theme dark for UI and view
+
+  def _theme_dark(self, action, parameter):
+    settings.set_int('theme', 1)
+    self._gtk_settings.set_property('gtk-application-prefer-dark-theme', True)
+
+  # Set theme sepia for UI and view
+
+  def _theme_sepia(self, action, parameter):
+    settings.set_int('theme', 2)
+    self._gtk_settings.set_property('gtk-application-prefer-dark-theme', False)
 
   # Show Shortcuts window
 

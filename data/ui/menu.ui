@@ -1,66 +1,240 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <requires lib="gtk+" version="3.24"/>
-  <menu id="menu">
-    <section>
-      <attribute name="display-hint">horizontal-buttons</attribute>
-      <item>
-        <attribute name="label" translatable="yes">Wikipedia Main Page</attribute>
-        <attribute name="verb-icon">go-home-symbolic</attribute>
-        <attribute name="action">win.main_page</attribute>
-      </item>
-      <item>
-        <attribute name="label" translatable="yes">Random Article</attribute>
-        <attribute name="verb-icon">wike-dice-symbolic</attribute>
-        <attribute name="action">win.random_article</attribute>
-      </item>
-      <item>
-        <attribute name="label" translatable="yes">Recent Articles</attribute>
-        <attribute name="verb-icon">document-open-recent-symbolic</attribute>
-        <attribute name="action">win.show_historic</attribute>
-      </item>
-      <item>
-        <attribute name="label" translatable="yes">Reload Page</attribute>
-        <attribute name="verb-icon">view-refresh-symbolic</attribute>
-        <attribute name="action">win.reload_page</attribute>
-      </item>
-    </section>
-    <section>
-      <item>
-        <attribute name="label" translatable="yes">Search Text in Page</attribute>
-        <attribute name="action">win.search_text</attribute>
-      </item>
-    </section>
-    <section>
-      <item>
-        <attribute name="label" translatable="yes">Open Wikipedia Page in Browser</attribute>
-        <attribute name="action">win.open_browser</attribute>
-      </item>
-      <item>
-        <attribute name="label" translatable="yes">Copy Wikipedia URL to Clipboard</attribute>
-        <attribute name="action">win.copy_url</attribute>
-      </item>
-    </section>
-    <section>
-      <item>
-        <attribute name="label" translatable="yes">Preferences</attribute>
-        <attribute name="action">app.prefs</attribute>
-      </item>
-      <item>
-        <attribute name="label" translatable="yes">Dark Mode</attribute>
-        <attribute name="action">app.dark_mode</attribute>
-      </item>
-    </section>
-    <section>
-      <item>
-        <attribute name="label" translatable="yes">Keyboard Shortcuts</attribute>
-        <attribute name="action">app.shortcuts</attribute>
-      </item>
-      <item>
-        <attribute name="label" translatable="yes">About Wike</attribute>
-        <attribute name="action">app.about</attribute>
-      </item>
-    </section>
-  </menu>
+  <template class="MenuPopover" parent="GtkPopover">
+    <property name="can_focus">False</property>
+    <property name="width-request">280</property>
+    <child>
+      <object class="GtkBox">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="border_width">10</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkBox">
+            <property name="visible">True</property>
+            <property name="halign">center</property>
+            <property name="margin-bottom">6</property>
+            <property name="spacing">24</property>
+            <child>
+              <object class="GtkRadioButton" id="light_button">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="halign">center</property>
+                <property name="draw-indicator">False</property>
+                <child>
+                  <object class="GtkImage">
+                    <property name="visible">True</property>
+                    <property name="icon-name">emblem-ok-symbolic</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="color-button"/>
+                  <class name="color-light"/>
+                </style>
+              </object>
+              <packing>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkRadioButton" id="sepia_button">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="halign">center</property>
+                <property name="draw-indicator">False</property>
+                <property name="group">light_button</property>
+                <child>
+                  <object class="GtkImage">
+                    <property name="visible">True</property>
+                    <property name="icon-name">emblem-ok-symbolic</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="color-button"/>
+                  <class name="color-sepia"/>
+                </style>
+              </object>
+              <packing>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkRadioButton" id="dark_button">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="halign">center</property>
+                <property name="draw-indicator">False</property>
+                <property name="group">light_button</property>
+                <child>
+                  <object class="GtkImage">
+                    <property name="visible">True</property>
+                    <property name="icon-name">emblem-ok-symbolic</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="color-button"/>
+                  <class name="color-dark"/>
+                </style>
+              </object>
+              <packing>
+                <property name="position">2</property>
+              </packing>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkSeparator">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkModelButton">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="text" translatable="yes">Wikipedia Main Page</property>
+            <property name="action_name">win.main_page</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkModelButton">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="text" translatable="yes">Random Article</property>
+            <property name="action_name">win.random_article</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkModelButton">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="text" translatable="yes">Recent Articles</property>
+            <property name="action_name">win.show_historic</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">4</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkSeparator">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">5</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkModelButton">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="text" translatable="yes">Search Text in Page</property>
+            <property name="action_name">win.search_text</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">6</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkModelButton">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="text" translatable="yes">Open Wikipedia Page in Browser</property>
+            <property name="action_name">win.open_browser</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">7</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkModelButton">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="text" translatable="yes">Copy Wikipedia URL to Clipboard</property>
+            <property name="action_name">win.copy_url</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">8</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkSeparator">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">10</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkModelButton">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="text" translatable="yes">Preferences</property>
+            <property name="action_name">app.prefs</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">11</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkModelButton">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="text" translatable="yes">Keyboard Shortcuts</property>
+            <property name="action_name">app.shortcuts</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">12</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkModelButton">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="text" translatable="yes">About Wike</property>
+            <property name="action_name">app.about</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">13</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </template>
 </interface>
 

@@ -295,21 +295,10 @@ class WikiView(WebKit2.WebView):
     uri_netloc = uri_elements[1]
     uri_path = uri_elements[2]
 
-    if uri_scheme != 'about':
-      page = uri_path.replace('/wiki/', '', 1)
-      lang = uri_netloc.split('.', 1)[0]
-      try:
-        props = wikipedia.get_properties(page, lang)
-      except:
-        props = None
-    else:
-      props = None
-
-    if props:
-      self.title = props['title']
-      self.sections = props['sections']
-      self.langlinks = props['langlinks']
-      return
+    props = None
+    self.title = 'Wike'
+    self.sections = None
+    self.langlinks = None
 
     if uri_scheme == 'about':
       if uri_path == 'historic':
@@ -318,13 +307,22 @@ class WikiView(WebKit2.WebView):
         self.title = _('Article not found')
       elif uri_path == 'error':
         self.title = _('Can\'t access Wikipedia')
-      else:
-        self.title = 'Wike'
+      return
     else:
-      self.title = 'Wike'
+      page = uri_path.replace('/wiki/', '', 1)
+      lang = uri_netloc.split('.', 1)[0]
+      try:
+        props = wikipedia.get_properties(page, lang)
+      except:
+        props = None
 
-    self.sections = None
-    self.langlinks = None
+    if props:
+      self.title = props['title']
+      self.sections = props['sections']
+      self.langlinks = props['langlinks']
+    else:
+      title_raw = page.replace('_', ' ')
+      self.title = urllib.parse.unquote(title_raw)
 
   # Check if current page is local (message page or historic)
 

@@ -247,19 +247,6 @@ class WikiView(WebKit2.WebView):
     uri = 'about:historic'
     self.load_alternate_html(html, uri, uri)
 
-  # Check connection and reload Wikipedia article or local page
-
-  def reload(self):
-    self.stop_loading()
-    uri = self.get_uri()
-    if self.is_local():
-      uri_elements = urllib.parse.urlparse(uri)
-      uri_path = uri_elements[2]
-      if uri_path == 'historic':
-        self.load_historic()
-    else:
-      self.reload_bypass_cache()
-
   # Get base uri for current article
 
   def get_base_uri(self):
@@ -357,19 +344,20 @@ class WikiView(WebKit2.WebView):
             decision.ignore()
             self.emit('new-page', base_uri)
           else:
-            if base_uri == self.get_base_uri():
-              decision.use()
-            else:
+            if base_uri != self.get_base_uri():
               decision.ignore()
               self.load_wiki(uri)
         else:
           decision.ignore()
           Gtk.show_uri(None, uri, Gdk.CURRENT_TIME)
       elif nav_type == WebKit2.NavigationType.RELOAD or nav_type == WebKit2.NavigationType.BACK_FORWARD:
-        if uri_scheme == 'about' and uri_path == 'historic':
-          self.load_historic()
+        if uri_scheme == 'about':
+          decision.ignore()
+          if uri_path == 'historic':
+            self.load_historic()
       elif nav_type == WebKit2.NavigationType.OTHER:
-        if uri_netloc.startswith('upload.'): decision.ignore()
+        if uri_netloc.startswith('upload.'):
+          decision.ignore()
     return True
 
   # Deactivate webview context menu

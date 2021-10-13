@@ -7,23 +7,23 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: sv\n"
 
-#: ../src/view.py:186 ../src/view.py:298
+#: ../src/view.py:207 ../src/view.py:295
 msgid "Article not found"
 msgstr "Ingen artikel hittades"
 
-#: ../src/view.py:187
+#: ../src/view.py:208
 msgid "Can't find any results for requested query"
 msgstr "Kan inte hitta några resultat för frågan"
 
-#: ../src/view.py:190 ../src/view.py:300
+#: ../src/view.py:211 ../src/view.py:297
 msgid "Can't access Wikipedia"
 msgstr "Kan inte ansluta till Wikipedia"
 
-#: ../src/view.py:191
+#: ../src/view.py:212
 msgid "Check your Internet connection and try again"
 msgstr "Kontrollera din internetanslutning och försök igen"
 
-#: ../src/window.py:225
+#: ../src/window.py:225 ../src/page.py:115
 msgid "New bookmark: "
 msgstr "Nytt bokmärke: "
 
@@ -67,7 +67,7 @@ msgstr "Sök och läs Wikipedia-artiklar\n"
 msgid "translator-credits"
 msgstr "Åke Engelbrektson <eson@svenskasprakfiler.se>"
 
-#: ../data/ui/bookmarks.ui:58
+#: ../src/view.py:397 ../data/ui/bookmarks.ui:58
 msgid "Add Bookmark"
 msgstr "Lägg till bokmärke"
 
@@ -161,39 +161,35 @@ msgctxt "shortcut window"
 msgid "Add bookmark"
 msgstr "Lägg till bokmärke"
 
-#: ../src/prefs.py:80 ../data/ui/menu.ui:8
+#: ../src/prefs.py:80 ../data/ui/menu.ui:101
 msgid "Wikipedia Main Page"
 msgstr "Wikipedias huvudsida"
 
-#: ../src/view.py:296 ../data/ui/menu.ui:18
+#: ../src/view.py:293 ../data/ui/menu.ui:127
 msgid "Recent Articles"
 msgstr "Tidigare artiklar"
 
-#: ../data/ui/menu.ui:23
-msgid "Reload Page"
-msgstr "Uppdatera sidan"
-
-#: ../data/ui/menu.ui:30
+#: ../data/ui/menu.ui:151
 msgid "Search Text in Page"
 msgstr "Sök text på sidan"
 
-#: ../data/ui/menu.ui:36
+#: ../data/ui/menu.ui:164
 msgid "Open Wikipedia Page in Browser"
 msgstr "Öppna Wikipedia-sida i webbläsaren"
 
-#: ../data/ui/menu.ui:40
+#: ../data/ui/menu.ui:177
 msgid "Copy Wikipedia URL to Clipboard"
 msgstr "Kopiera Wikipedia-URL till urklipp"
 
-#: ../data/ui/menu.ui:46
+#: ../data/ui/menu.ui:201
 msgid "Preferences"
 msgstr "Inställningar"
 
-#: ../data/ui/menu.ui:56
+#: ../data/ui/menu.ui:214
 msgid "Keyboard Shortcuts"
 msgstr "Tangentbordsgenvägar"
 
-#: ../data/ui/menu.ui:60
+#: ../data/ui/menu.ui:227
 msgid "About Wike"
 msgstr "Om Wike"
 
@@ -213,7 +209,7 @@ msgstr "Allmänt"
 msgid "Languages"
 msgstr "Språk"
 
-#: ../src/page.py:77 ../src/page.py:80
+#: ../src/page.py:78 ../src/page.py:81
 msgid "Loading Article"
 msgstr "Läser in artikel"
 
@@ -223,7 +219,7 @@ msgstr "Läser in artikel"
 msgid "Wike"
 msgstr "Wike"
 
-#: ../src/view.py:182 ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../src/view.py:203 ../data/com.github.hugolabe.Wike.desktop.in:4
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
 msgid "Search and read Wikipedia articles"
 msgstr "Sök och läs Wikipedia-artiklar"
@@ -264,14 +260,6 @@ msgstr "Visa artikel på andra språk"
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
 msgid "Features:"
 msgstr "Funktioner:"
-
-#: ../data/ui/menu.ui:50
-msgid "Dark Mode"
-msgstr "Mörkt läge"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:29
-msgid "Dark mode"
-msgstr "Mörkt läge"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
 msgid "GNOME Shell search integration"
@@ -378,11 +366,11 @@ msgstr "Rensa personlig data"
 msgid "Cookies and cache data will be deleted"
 msgstr "Cookies och cachelagrad data kommer att tas bort"
 
-#: ../src/view.py:194
+#: ../src/view.py:215
 msgid "Try Again"
 msgstr "Försök igen"
 
-#: ../src/prefs.py:80 ../data/ui/menu.ui:13
+#: ../src/prefs.py:80 ../data/ui/menu.ui:114
 msgid "Random Article"
 msgstr "Slumpmässig artikel"
 
@@ -419,7 +407,7 @@ msgctxt "shortcut window"
 msgid "Main menu"
 msgstr "Huvudmeny"
 
-#: ../src/view.py:183
+#: ../src/view.py:204
 msgid "Click the search button or press F2 to search articles in Wikipedia. You can also use the main menu to open Wikipedia main page, the list of recent articles or get a random article."
 msgstr "Klicka på sökknappen eller tryck F2, för att söka efter artiklar i Wikipedia. Du kan också använda huvudmenyn för att öppna Wikipedias huvudsida, listan över tidigare artiklar eller en slumpmässig artikel."
 
@@ -467,4 +455,16 @@ msgstr "Ny flik"
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
 msgid "Open multiple articles in tabs"
 msgstr "Öppna flera artiklar i flikar"
+
+#: ../src/view.py:409
+msgid "Open Link in New Tab"
+msgstr "Öppna länk i ny flik"
+
+#: ../src/view.py:411
+msgid "Add Link to Bookmarks"
+msgstr "Lägg till länk i Bokmärken"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:29
+msgid "Light, dark and sepia themes"
+msgstr "Ljust, mörkt och sepiatema"
 

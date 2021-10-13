@@ -7,23 +7,23 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: fi\n"
 
-#: ../src/view.py:186 ../src/view.py:298
+#: ../src/view.py:207 ../src/view.py:295
 msgid "Article not found"
 msgstr "Artikkelia ei löydy"
 
-#: ../src/view.py:187
+#: ../src/view.py:208
 msgid "Can't find any results for requested query"
 msgstr "Hakuehdoilla ei löytynyt tuloksia"
 
-#: ../src/view.py:190 ../src/view.py:300
+#: ../src/view.py:211 ../src/view.py:297
 msgid "Can't access Wikipedia"
 msgstr "Ei pääsyä Wikipediaan"
 
-#: ../src/view.py:191
+#: ../src/view.py:212
 msgid "Check your Internet connection and try again"
 msgstr "Tarkista internetyhteys ja yritä uudelleen"
 
-#: ../src/window.py:225
+#: ../src/window.py:225 ../src/page.py:115
 msgid "New bookmark: "
 msgstr "Uusi kirjanmerkki: "
 
@@ -67,7 +67,7 @@ msgstr "Hae ja lue Wikipedia-artikkeleita\n"
 msgid "translator-credits"
 msgstr "Jiri Grönroos"
 
-#: ../data/ui/bookmarks.ui:58
+#: ../src/view.py:397 ../data/ui/bookmarks.ui:58
 msgid "Add Bookmark"
 msgstr "Lisää kirjanmerkki"
 
@@ -161,39 +161,35 @@ msgctxt "shortcut window"
 msgid "Add bookmark"
 msgstr "Lisää kirjanmerkki"
 
-#: ../src/prefs.py:80 ../data/ui/menu.ui:8
+#: ../src/prefs.py:80 ../data/ui/menu.ui:101
 msgid "Wikipedia Main Page"
 msgstr "Wikipedian etusivu"
 
-#: ../src/view.py:296 ../data/ui/menu.ui:18
+#: ../src/view.py:293 ../data/ui/menu.ui:127
 msgid "Recent Articles"
 msgstr "Viimeisimmät artikkelit"
 
-#: ../data/ui/menu.ui:23
-msgid "Reload Page"
-msgstr "Lataa sivu uudelleen"
-
-#: ../data/ui/menu.ui:30
+#: ../data/ui/menu.ui:151
 msgid "Search Text in Page"
 msgstr "Etsi tekstiä sivulta"
 
-#: ../data/ui/menu.ui:36
+#: ../data/ui/menu.ui:164
 msgid "Open Wikipedia Page in Browser"
 msgstr "Avaa Wikipedia-sivu selaimessa"
 
-#: ../data/ui/menu.ui:40
+#: ../data/ui/menu.ui:177
 msgid "Copy Wikipedia URL to Clipboard"
 msgstr "Kopioi Wikipedia-osoite leikepöydälle"
 
-#: ../data/ui/menu.ui:46
+#: ../data/ui/menu.ui:201
 msgid "Preferences"
 msgstr "Asetukset"
 
-#: ../data/ui/menu.ui:56
+#: ../data/ui/menu.ui:214
 msgid "Keyboard Shortcuts"
 msgstr "Pikanäppäimet"
 
-#: ../data/ui/menu.ui:60
+#: ../data/ui/menu.ui:227
 msgid "About Wike"
 msgstr "Tietoja - Wike"
 
@@ -213,7 +209,7 @@ msgstr "Yleiset"
 msgid "Languages"
 msgstr "Kielet"
 
-#: ../src/page.py:77 ../src/page.py:80
+#: ../src/page.py:78 ../src/page.py:81
 msgid "Loading Article"
 msgstr "Ladataan artikkelia"
 
@@ -223,7 +219,7 @@ msgstr "Ladataan artikkelia"
 msgid "Wike"
 msgstr "Wike"
 
-#: ../src/view.py:182 ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../src/view.py:203 ../data/com.github.hugolabe.Wike.desktop.in:4
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
 msgid "Search and read Wikipedia articles"
 msgstr "Hae ja lue Wikipedia-artikkeleita"
@@ -264,14 +260,6 @@ msgstr "Lue artikkeli eri kielillä"
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
 msgid "Features:"
 msgstr "Ominaisuudet:"
-
-#: ../data/ui/menu.ui:50
-msgid "Dark Mode"
-msgstr "Tumma tila"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:29
-msgid "Dark mode"
-msgstr "Tumma tila"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
 msgid "GNOME Shell search integration"
@@ -378,11 +366,11 @@ msgstr "Tyhjennä henkilökohtaiset tiedot"
 msgid "Cookies and cache data will be deleted"
 msgstr "Evästeet ja välimuisti tyhjennetään"
 
-#: ../src/view.py:194
+#: ../src/view.py:215
 msgid "Try Again"
 msgstr "Yritä uudelleen"
 
-#: ../src/prefs.py:80 ../data/ui/menu.ui:13
+#: ../src/prefs.py:80 ../data/ui/menu.ui:114
 msgid "Random Article"
 msgstr "Satunnainen artikkeli"
 
@@ -419,7 +407,7 @@ msgctxt "shortcut window"
 msgid "Main menu"
 msgstr "Päävalikko"
 
-#: ../src/view.py:183
+#: ../src/view.py:204
 msgid "Click the search button or press F2 to search articles in Wikipedia. You can also use the main menu to open Wikipedia main page, the list of recent articles or get a random article."
 msgstr "Napsauta hakupainiketta tai paina F2 etsiäksesi artikkeleita Wikipediasta. Voit myös avata päävalikosta Wikipedian etusivun, luettelon viimeisimmistä artikkeleista tai satunnaisen artikkelin."
 
@@ -467,4 +455,16 @@ msgstr "Uusi välilehti"
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
 msgid "Open multiple articles in tabs"
 msgstr "Avaa useita artikkeleita välilehtiin"
+
+#: ../src/view.py:409
+msgid "Open Link in New Tab"
+msgstr "Avaa linkki uudessa välilehdessä"
+
+#: ../src/view.py:411
+msgid "Add Link to Bookmarks"
+msgstr "Lisää linkki kirjanmerkkeihin"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:29
+msgid "Light, dark and sepia themes"
+msgstr "Tumma, vaalea ja seepianvärinen teema"
 

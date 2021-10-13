@@ -25,7 +25,7 @@ gi.require_version('WebKit2', '4.0')
 from gi.repository import Gio, GLib, GObject, Gdk, Gtk, WebKit2
 
 from wike import wikipedia
-from wike.data import settings, languages, historic
+from wike.data import settings, languages, historic, bookmarks
 
 
 # Initialize webcontext with cookie manager
@@ -142,7 +142,8 @@ view_settings = ViewSettings()
 
 class WikiView(WebKit2.WebView):
 
-  __gsignals__ = { 'new-page': (GObject.SIGNAL_RUN_FIRST, None, (str, )) }
+  __gsignals__ = { 'new-page': (GObject.SIGNAL_RUN_FIRST, None, (str, )),
+                   'add-bookmark': (GObject.SIGNAL_RUN_FIRST, None, (str, str, str,)) }
 
   title = 'Wike'
   sections = None
@@ -323,6 +324,21 @@ class WikiView(WebKit2.WebView):
     else:
       return False
 
+  # Check if uri is a valid Wikipedia URL
+
+  def _is_wiki_uri(self, uri):
+    uri_elements = urllib.parse.urlparse(uri)
+    uri_scheme = uri_elements[0]
+    uri_netloc = uri_elements[1]
+    uri_path = uri_elements[2]
+
+    if uri_netloc.endswith('.wikipedia.org') and (uri_path.startswith('/wiki/') or uri_path == '/'):
+      base_uri_elements = (uri_scheme, uri_netloc.replace('.m.', '.'), uri_path, '', '', '')
+      base_uri = urllib.parse.urlunparse(base_uri_elements)
+      return base_uri
+    else:
+      return ''
+
   # Webview decision policy event
 
   def do_decide_policy(self, decision, decision_type):
@@ -360,8 +376,74 @@ class WikiView(WebKit2.WebView):
           decision.ignore()
     return True
 
-  # Deactivate webview context menu
+  # Manage webview context menu
 
-  def do_context_menu(self, menu, event, hit_test_result):
-    return True
+  def do_context_menu(self, menu, event, hit_test):
+    if hit_test.context_is_editable() or hit_test.context_is_media() or hit_test.context_is_scrollbar():
+      return True
+
+    action_bookmark = Gio.SimpleAction.new('add_bookmark', GLib.VariantType('s'))
+    action_bookmark.connect('activate', self._add_bookmark_cb)
+    action_tab = Gio.SimpleAction.new('new_tab', GLib.VariantType('s'))
+    action_tab.connect('activate', self._new_tab_cb)
+
+    if hit_test.get_context() == WebKit2.HitTestResultContext.DOCUMENT:
+      base_uri = self.get_base_uri()
+      uri = self._is_wiki_uri(base_uri)
+      if uri == '' or uri in bookmarks.items:
+        action_bookmark.set_enabled(False)
+      item = WebKit2.ContextMenuItem.new_separator()
+      menu.append(item)
+      item = WebKit2.ContextMenuItem.new_from_gaction(action_bookmark, _('Add Bookmark'), GLib.Variant.new_string(uri))
+      menu.append(item)
+
+    if hit_test.context_is_link() and not hit_test.context_is_image():
+      link = hit_test.get_link_uri()
+      uri = self._is_wiki_uri(link)
+      if uri == '':
+        action_bookmark.set_enabled(False)
+        action_tab.set_enabled(False)
+      else:
+        if uri in bookmarks.items:
+          action_bookmark.set_enabled(False)
+      item = WebKit2.ContextMenuItem.new_from_gaction(action_tab, _('Open Link in New Tab'), GLib.Variant.new_string(uri))
+      menu.append(item)
+      item = WebKit2.ContextMenuItem.new_from_gaction(action_bookmark, _('Add Link to Bookmarks'), GLib.Variant.new_string(uri))
+      menu.append(item)
+
+    allowed_actions = (WebKit2.ContextMenuAction.NO_ACTION,
+                       WebKit2.ContextMenuAction.CUSTOM,
+                       WebKit2.ContextMenuAction.GO_BACK,
+                       WebKit2.ContextMenuAction.GO_FORWARD,
+                       WebKit2.ContextMenuAction.RELOAD,
+                       WebKit2.ContextMenuAction.COPY,
+                       WebKit2.ContextMenuAction.COPY_IMAGE_TO_CLIPBOARD)
+
+    items = menu.get_items()
+    for item in items:
+      if not item.get_stock_action() in allowed_actions:
+        menu.remove(item)
+
+    return False
+
+  # On context menu activated add bookmark
+
+  def _add_bookmark_cb(self, action, parameter):
+    uri = parameter.get_string()
+    uri_elements = urllib.parse.urlparse(uri)
+    uri_netloc = uri_elements[1]
+    uri_path = uri_elements[2]
+
+    page = uri_path.replace('/wiki/', '', 1)
+    title_raw = page.replace('_', ' ')
+    title = urllib.parse.unquote(title_raw)
+    lang = uri_netloc.split('.', 1)[0]
+
+    self.emit('add-bookmark', uri, title, lang)
+
+  # On context menu activated open new tab
+
+  def _new_tab_cb(self, action, parameter):
+    uri = parameter.get_string()
+    self.emit('new-page', uri)
 

@@ -58,6 +58,7 @@ class PageBox(Gtk.Box):
     self.wikiview.connect('load-changed', self._wikiview_load_changed_cb)
     self.wikiview.connect('load-failed', self._wikiview_load_failed_cb)
     self.wikiview.connect('new-page', self._wikiview_new_page_cb)
+    self.wikiview.connect('add_bookmark', self._wikiview_add_bookmark_cb)
     self.textsearch_entry.connect('changed', self._textsearch_entry_changed_cb, find_controller)
     self.textsearch_entry.connect('activate', self._textsearch_entry_activate_cb, find_controller)
     self.textsearch_prev_button.connect('clicked', self._textsearch_prev_button_clicked_cb, find_controller)
@@ -106,6 +107,13 @@ class PageBox(Gtk.Box):
   def _wikiview_new_page_cb(self, wikiview, uri):
     tabpage = self._window.tabview.get_page(self)
     self._window.new_page(uri, tabpage, False)
+
+  # On webview event add new bookmark
+
+  def _wikiview_add_bookmark_cb(self, wikiview, uri, title, lang):
+    if self._window.headerbar.bookmarks_popover.add_bookmark(uri, title, lang):
+      message = _('New bookmark: ') + title
+      self._window.show_notification(message)
 
   # Search text in article when entry changes
 

@@ -7,23 +7,23 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: fr\n"
 
-#: ../src/view.py:186 ../src/view.py:298
+#: ../src/view.py:207 ../src/view.py:295
 msgid "Article not found"
 msgstr "Article introuvable"
 
-#: ../src/view.py:187
+#: ../src/view.py:208
 msgid "Can't find any results for requested query"
 msgstr "Impossible de trouver des résultats pour la requête demandée"
 
-#: ../src/view.py:190 ../src/view.py:300
+#: ../src/view.py:211 ../src/view.py:297
 msgid "Can't access Wikipedia"
 msgstr "Impossible d'accéder à Wikipédia"
 
-#: ../src/view.py:191
+#: ../src/view.py:212
 msgid "Check your Internet connection and try again"
 msgstr "Vérifier votre connection Internet et réessayer"
 
-#: ../src/window.py:225
+#: ../src/window.py:225 ../src/page.py:115
 msgid "New bookmark: "
 msgstr "Nouveau signet : "
 
@@ -67,7 +67,7 @@ msgstr "Rechercher et lire des articles de Wikipédia\n"
 msgid "translator-credits"
 msgstr "Florian R"
 
-#: ../data/ui/bookmarks.ui:58
+#: ../src/view.py:397 ../data/ui/bookmarks.ui:58
 msgid "Add Bookmark"
 msgstr "Ajouter un signet"
 
@@ -161,39 +161,35 @@ msgctxt "shortcut window"
 msgid "Add bookmark"
 msgstr "Ajouter aux signets"
 
-#: ../src/prefs.py:80 ../data/ui/menu.ui:8
+#: ../src/prefs.py:80 ../data/ui/menu.ui:101
 msgid "Wikipedia Main Page"
 msgstr "Page principale de Wikipédia"
 
-#: ../src/view.py:296 ../data/ui/menu.ui:18
+#: ../src/view.py:293 ../data/ui/menu.ui:127
 msgid "Recent Articles"
 msgstr "Articles récents"
 
-#: ../data/ui/menu.ui:23
-msgid "Reload Page"
-msgstr "Recharger la page"
-
-#: ../data/ui/menu.ui:30
+#: ../data/ui/menu.ui:151
 msgid "Search Text in Page"
 msgstr "Rechercher Texte dans la page"
 
-#: ../data/ui/menu.ui:36
+#: ../data/ui/menu.ui:164
 msgid "Open Wikipedia Page in Browser"
 msgstr "Ouvrir la page Wikipédia dans le navigateur"
 
-#: ../data/ui/menu.ui:40
+#: ../data/ui/menu.ui:177
 msgid "Copy Wikipedia URL to Clipboard"
 msgstr "Copier l'URL de Wikipédia dans le presse-papiers"
 
-#: ../data/ui/menu.ui:46
+#: ../data/ui/menu.ui:201
 msgid "Preferences"
 msgstr "Préférences"
 
-#: ../data/ui/menu.ui:56
+#: ../data/ui/menu.ui:214
 msgid "Keyboard Shortcuts"
 msgstr "Raccourcis clavier"
 
-#: ../data/ui/menu.ui:60
+#: ../data/ui/menu.ui:227
 msgid "About Wike"
 msgstr "À propos de Wike"
 
@@ -213,7 +209,7 @@ msgstr "Général"
 msgid "Languages"
 msgstr "Langues"
 
-#: ../src/page.py:77 ../src/page.py:80
+#: ../src/page.py:78 ../src/page.py:81
 msgid "Loading Article"
 msgstr "Chargement de l'article"
 
@@ -223,7 +219,7 @@ msgstr "Chargement de l'article"
 msgid "Wike"
 msgstr "Wike"
 
-#: ../src/view.py:182 ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../src/view.py:203 ../data/com.github.hugolabe.Wike.desktop.in:4
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
 msgid "Search and read Wikipedia articles"
 msgstr "Rechercher et lire des articles de Wikipédia"
@@ -264,14 +260,6 @@ msgstr "Voir l'article dans d'autres langues"
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
 msgid "Features:"
 msgstr "Fonctionnalités : "
-
-#: ../data/ui/menu.ui:50
-msgid "Dark Mode"
-msgstr "Mode Sombre"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:29
-msgid "Dark mode"
-msgstr "Mode sombre"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
 msgid "GNOME Shell search integration"
@@ -378,11 +366,11 @@ msgstr "Supprimer les données personnelles"
 msgid "Cookies and cache data will be deleted"
 msgstr "Les cookies et les données en cache seront supprimés"
 
-#: ../src/view.py:194
+#: ../src/view.py:215
 msgid "Try Again"
 msgstr "Réessayer"
 
-#: ../src/prefs.py:80 ../data/ui/menu.ui:13
+#: ../src/prefs.py:80 ../data/ui/menu.ui:114
 msgid "Random Article"
 msgstr "Article aléatoire"
 
@@ -419,7 +407,7 @@ msgctxt "shortcut window"
 msgid "Main menu"
 msgstr "Menu principal"
 
-#: ../src/view.py:183
+#: ../src/view.py:204
 msgid "Click the search button or press F2 to search articles in Wikipedia. You can also use the main menu to open Wikipedia main page, the list of recent articles or get a random article."
 msgstr "Cliquez sur le bouton de recherche ou appuyez sur F2 pour rechercher des articles dans Wikipédia. Vous pouvez également utiliser le menu principal pour ouvrir la page principale de Wikipédia, la liste des articles récents ou obtenir un article au hasard."
 
@@ -467,4 +455,16 @@ msgstr "Nouvel onglet"
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
 msgid "Open multiple articles in tabs"
 msgstr "Ouvrir les différents articles dans des onglets"
+
+#: ../src/view.py:409
+msgid "Open Link in New Tab"
+msgstr "Ouvrir le lien dans un nouvel onglet"
+
+#: ../src/view.py:411
+msgid "Add Link to Bookmarks"
+msgstr "Ajouter le lien aux signets"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:29
+msgid "Light, dark and sepia themes"
+msgstr "Thèmes clair, foncé et sépia"
 

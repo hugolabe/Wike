@@ -7,23 +7,23 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: nl\n"
 
-#: ../src/view.py:186 ../src/view.py:298
+#: ../src/view.py:207 ../src/view.py:295
 msgid "Article not found"
 msgstr "Het artikel kan niet worden gevonden"
 
-#: ../src/view.py:187
+#: ../src/view.py:208
 msgid "Can't find any results for requested query"
 msgstr "Er zijn geen resultaten gevonden voor uw zoekopdracht"
 
-#: ../src/view.py:190 ../src/view.py:300
+#: ../src/view.py:211 ../src/view.py:297
 msgid "Can't access Wikipedia"
 msgstr "Geen Wikipedia-toegang"
 
-#: ../src/view.py:191
+#: ../src/view.py:212
 msgid "Check your Internet connection and try again"
 msgstr "Controleer uw internetverbinding en probeer het opnieuw"
 
-#: ../src/window.py:225
+#: ../src/window.py:225 ../src/page.py:115
 msgid "New bookmark: "
 msgstr "Nieuwe bladwijzer: "
 
@@ -68,7 +68,7 @@ msgstr "Zoek naar en lees Wikipedia-artikelen\n"
 msgid "translator-credits"
 msgstr "Heimen Stoffels <vistausss@fastmail.com>"
 
-#: ../data/ui/bookmarks.ui:58
+#: ../src/view.py:397 ../data/ui/bookmarks.ui:58
 msgid "Add Bookmark"
 msgstr "Bladwijzer toevoegen"
 
@@ -162,39 +162,35 @@ msgctxt "shortcut window"
 msgid "Add bookmark"
 msgstr "Voeg bladwijzer toe"
 
-#: ../src/prefs.py:80 ../data/ui/menu.ui:8
+#: ../src/prefs.py:80 ../data/ui/menu.ui:101
 msgid "Wikipedia Main Page"
 msgstr "Wikipedia-startpagina"
 
-#: ../src/view.py:296 ../data/ui/menu.ui:18
+#: ../src/view.py:293 ../data/ui/menu.ui:127
 msgid "Recent Articles"
 msgstr "Recente artikelen"
 
-#: ../data/ui/menu.ui:23
-msgid "Reload Page"
-msgstr "Pagina herladen"
-
-#: ../data/ui/menu.ui:30
+#: ../data/ui/menu.ui:151
 msgid "Search Text in Page"
 msgstr "Zoeken op pagina"
 
-#: ../data/ui/menu.ui:36
+#: ../data/ui/menu.ui:164
 msgid "Open Wikipedia Page in Browser"
 msgstr "Pagina openen in webbrowser"
 
-#: ../data/ui/menu.ui:40
+#: ../data/ui/menu.ui:177
 msgid "Copy Wikipedia URL to Clipboard"
 msgstr "URL kopiëren naar klembord"
 
-#: ../data/ui/menu.ui:46
+#: ../data/ui/menu.ui:201
 msgid "Preferences"
 msgstr "Voorkeuren"
 
-#: ../data/ui/menu.ui:56
+#: ../data/ui/menu.ui:214
 msgid "Keyboard Shortcuts"
 msgstr "Sneltoetsen"
 
-#: ../data/ui/menu.ui:60
+#: ../data/ui/menu.ui:227
 msgid "About Wike"
 msgstr "Over Wike"
 
@@ -214,7 +210,7 @@ msgstr "Algemeen"
 msgid "Languages"
 msgstr "Talen"
 
-#: ../src/page.py:77 ../src/page.py:80
+#: ../src/page.py:78 ../src/page.py:81
 msgid "Loading Article"
 msgstr "Bezig met laden…"
 
@@ -224,7 +220,7 @@ msgstr "Bezig met laden…"
 msgid "Wike"
 msgstr "Wike"
 
-#: ../src/view.py:182 ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../src/view.py:203 ../data/com.github.hugolabe.Wike.desktop.in:4
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
 msgid "Search and read Wikipedia articles"
 msgstr "Zoek naar en lees Wikipedia-artikelen"
@@ -265,14 +261,6 @@ msgstr "Lees artikelen in andere talen"
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
 msgid "Features:"
 msgstr "Kenmerken:"
-
-#: ../data/ui/menu.ui:50
-msgid "Dark Mode"
-msgstr "Donker thema"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:29
-msgid "Dark mode"
-msgstr "Donker thema"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
 msgid "GNOME Shell search integration"
@@ -379,11 +367,11 @@ msgstr "Persoonlijke gegevens wissen"
 msgid "Cookies and cache data will be deleted"
 msgstr "De cookies en cache worden gewist"
 
-#: ../src/view.py:194
+#: ../src/view.py:215
 msgid "Try Again"
 msgstr "Opnieuw proberen"
 
-#: ../src/prefs.py:80 ../data/ui/menu.ui:13
+#: ../src/prefs.py:80 ../data/ui/menu.ui:114
 msgid "Random Article"
 msgstr "Willekeurig artikel"
 
@@ -420,7 +408,7 @@ msgctxt "shortcut window"
 msgid "Main menu"
 msgstr "Hoofdmenu"
 
-#: ../src/view.py:183
+#: ../src/view.py:204
 msgid "Click the search button or press F2 to search articles in Wikipedia. You can also use the main menu to open Wikipedia main page, the list of recent articles or get a random article."
 msgstr "Klik op de zoekknop of druk op F2 om naar artikelen te zoeken op Wikipedia. Ook kunt u via het hoofdmenu te Wikipedia-startpagina bereiken, de lijst met recente artikelen opvragen of een willekeurig artikel openen."
 
@@ -468,4 +456,16 @@ msgstr "Nieuw tabblad"
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
 msgid "Open multiple articles in tabs"
 msgstr "Meerdere artikelen op tabbladen openen"
+
+#: ../src/view.py:409
+msgid "Open Link in New Tab"
+msgstr "Link openen op nieuw tabblad"
+
+#: ../src/view.py:411
+msgid "Add Link to Bookmarks"
+msgstr "Link toevoegen aan bladwijzers"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:29
+msgid "Light, dark and sepia themes"
+msgstr "Lichte, donkere en sepiathema's"
 

@@ -7,23 +7,23 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: hr\n"
 
-#: ../src/view.py:186 ../src/view.py:298
+#: ../src/view.py:207 ../src/view.py:295
 msgid "Article not found"
 msgstr "Članak nije pronađen"
 
-#: ../src/view.py:187
+#: ../src/view.py:208
 msgid "Can't find any results for requested query"
 msgstr "Nema rezultata za traženi upit"
 
-#: ../src/view.py:190 ../src/view.py:300
+#: ../src/view.py:211 ../src/view.py:297
 msgid "Can't access Wikipedia"
 msgstr "Wikipedija nije dostupna"
 
-#: ../src/view.py:191
+#: ../src/view.py:212
 msgid "Check your Internet connection and try again"
 msgstr "Provjeri internetsku vezu i pokušaj ponovo"
 
-#: ../src/window.py:225
+#: ../src/window.py:225 ../src/page.py:115
 msgid "New bookmark: "
 msgstr "Nova oznaka: "
 
@@ -67,7 +67,7 @@ msgstr "Traži i čitaj Wikipedijine članke\n"
 msgid "translator-credits"
 msgstr "Milo Ivir <mail@milotype.de>"
 
-#: ../data/ui/bookmarks.ui:58
+#: ../src/view.py:397 ../data/ui/bookmarks.ui:58
 msgid "Add Bookmark"
 msgstr "Dodaj oznaku"
 
@@ -161,39 +161,35 @@ msgctxt "shortcut window"
 msgid "Add bookmark"
 msgstr "Dodaj oznaku"
 
-#: ../src/prefs.py:80 ../data/ui/menu.ui:8
+#: ../src/prefs.py:80 ../data/ui/menu.ui:101
 msgid "Wikipedia Main Page"
 msgstr "Glavna stranica Wikipedije"
 
-#: ../src/view.py:296 ../data/ui/menu.ui:18
+#: ../src/view.py:293 ../data/ui/menu.ui:127
 msgid "Recent Articles"
 msgstr "Nedavni članci"
 
-#: ../data/ui/menu.ui:23
-msgid "Reload Page"
-msgstr "Ponovo učitaj stranicu"
-
-#: ../data/ui/menu.ui:30
+#: ../data/ui/menu.ui:151
 msgid "Search Text in Page"
 msgstr "Traži tekst na stranici"
 
-#: ../data/ui/menu.ui:36
+#: ../data/ui/menu.ui:164
 msgid "Open Wikipedia Page in Browser"
 msgstr "Otvori stranicu Wikipedije u pregledniku"
 
-#: ../data/ui/menu.ui:40
+#: ../data/ui/menu.ui:177
 msgid "Copy Wikipedia URL to Clipboard"
 msgstr "Kopiraj URL adresu Wikipedije u međuspremnik"
 
-#: ../data/ui/menu.ui:46
+#: ../data/ui/menu.ui:201
 msgid "Preferences"
 msgstr "Postavke"
 
-#: ../data/ui/menu.ui:56
+#: ../data/ui/menu.ui:214
 msgid "Keyboard Shortcuts"
 msgstr "Tipkovni prečaci"
 
-#: ../data/ui/menu.ui:60
+#: ../data/ui/menu.ui:227
 msgid "About Wike"
 msgstr "Wike informacije"
 
@@ -213,7 +209,7 @@ msgstr "Opće"
 msgid "Languages"
 msgstr "Jezici"
 
-#: ../src/page.py:77 ../src/page.py:80
+#: ../src/page.py:78 ../src/page.py:81
 msgid "Loading Article"
 msgstr "Učitavanje članka"
 
@@ -223,7 +219,7 @@ msgstr "Učitavanje članka"
 msgid "Wike"
 msgstr "Wike"
 
-#: ../src/view.py:182 ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../src/view.py:203 ../data/com.github.hugolabe.Wike.desktop.in:4
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
 msgid "Search and read Wikipedia articles"
 msgstr "Traži i čitaj članke Wikipedije"
@@ -264,14 +260,6 @@ msgstr "Čitaj članak na drugim jezicima"
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
 msgid "Features:"
 msgstr "Značajke:"
-
-#: ../data/ui/menu.ui:50
-msgid "Dark Mode"
-msgstr "Tamni način"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:29
-msgid "Dark mode"
-msgstr "Tamni dizajn"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
 msgid "GNOME Shell search integration"
@@ -378,11 +366,11 @@ msgstr "Izbriši osobne podatke"
 msgid "Cookies and cache data will be deleted"
 msgstr "Kolačići i podaci u predmemoriji će se izbrisati"
 
-#: ../src/view.py:194
+#: ../src/view.py:215
 msgid "Try Again"
 msgstr "Pokušaj ponovo"
 
-#: ../src/prefs.py:80 ../data/ui/menu.ui:13
+#: ../src/prefs.py:80 ../data/ui/menu.ui:114
 msgid "Random Article"
 msgstr "Slučajni članak"
 
@@ -419,7 +407,7 @@ msgctxt "shortcut window"
 msgid "Main menu"
 msgstr "Glavni izbornik"
 
-#: ../src/view.py:183
+#: ../src/view.py:204
 msgid "Click the search button or press F2 to search articles in Wikipedia. You can also use the main menu to open Wikipedia main page, the list of recent articles or get a random article."
 msgstr "Pritisni gumb za pretraživanje ili pritisni F2 za traženje članaka u Wikipediji. Glavni izbornik možeš koristiti i za otvaranje glavne stranice Wikipedije, za prikaz popisa najnovijih članaka ili za primanje slučajno odabranog članka."
 
@@ -467,4 +455,16 @@ msgstr "Nova kartica"
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
 msgid "Open multiple articles in tabs"
 msgstr "Otvori više članaka u karticama"
+
+#: ../src/view.py:409
+msgid "Open Link in New Tab"
+msgstr "Otvori poveznicu u novoj karticu"
+
+#: ../src/view.py:411
+msgid "Add Link to Bookmarks"
+msgstr "Dodaj poveznicu u oznake"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:29
+msgid "Light, dark and sepia themes"
+msgstr "Svijetla, tamna i tamnosmeđa tema"
 

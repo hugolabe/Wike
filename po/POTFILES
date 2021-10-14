@@ -7,10 +7,10 @@ data/ui/about.ui
 data/ui/bookmarks.ui
 data/ui/bookmarks-row.ui
 data/ui/header.ui
-data/ui/header-spinner.ui
 data/ui/langlinks.ui
 data/ui/langlinks-row.ui
 data/ui/menu.ui
+data/ui/page.ui
 data/ui/prefs.ui
 data/ui/prefs-row.ui
 data/ui/search.ui
@@ -26,6 +26,8 @@ src/bookmarks.py
 src/data.py
 src/header.py
 src/langlinks.py
+src/menu.py
+src/page.py
 src/prefs.py
 src/search.py
 src/toc.py

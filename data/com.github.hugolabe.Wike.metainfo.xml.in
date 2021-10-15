@@ -53,6 +53,17 @@
   </screenshots>
 
   <releases>
+    <release version="1.6.0" date="2021-10-15">
+      <description>
+        <ul>
+          <li>Open multiple articles in tabs.</li>
+          <li>Added sepia mode.</li>
+          <li>Added context menu.</li>
+          <li>Main menu redesign.</li>
+          <li>Updated translations: Croatian, Dutch, Finnish, French, Portuguese, Russian, Spanish and Swedish.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.5.7" date="2021-09-21">
       <description>
         <ul>

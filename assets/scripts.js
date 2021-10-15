@@ -1,6 +1,8 @@
 function clickThemeIcon (themeIcon) {
   var themeImage = document.getElementById("image-theme");
   if (themeIcon.value == 1) {
+    themeImage.src = "media/wike-sepia.png";
+  } else if (themeIcon.value == 2) {
     themeImage.src = "media/wike-dark.png";
   } else {
     themeImage.src = "media/wike-light.png";

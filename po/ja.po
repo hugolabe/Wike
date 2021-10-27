@@ -1,0 +1,469 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Wike\n"
+"Language: ja\n"
+
+#: ../src/view.py:207 ../src/view.py:295
+msgid "Article not found"
+msgstr "記事が見つかりません"
+
+#: ../src/view.py:208
+msgid "Can't find any results for requested query"
+msgstr "要求されたクエリの結果が見つかりません"
+
+#: ../src/view.py:211 ../src/view.py:297
+msgid "Can't access Wikipedia"
+msgstr "Wikipediaにアクセスできません"
+
+#: ../src/view.py:212
+msgid "Check your Internet connection and try again"
+msgstr "インターネット接続確認し、やり直してください"
+
+#: ../src/window.py:225 ../src/page.py:115
+msgid "New bookmark: "
+msgstr "新しいブックマーク: "
+
+#: ../src/window.py:283
+msgid "Wikipedia URL copied to clipboard"
+msgstr "WikipediaのURLがコピーされました"
+
+#: ../src/search.py:260
+msgid "Default search language: "
+msgstr "デフォルトで検索する言語: "
+
+#: ../src/bookmarks.py:138
+msgid "Clear Bookmarks List?"
+msgstr "ブックマークリストを削除しますか？"
+
+#: ../src/bookmarks.py:140
+msgid "All bookmarks in the list will be removed permanently."
+msgstr "リスト内のすべてのブックマークは完全に削除されます。"
+
+#: ../src/bookmarks.py:141 ../data/ui/bookmarks.ui:70
+msgid "Clear List"
+msgstr "リストを削除"
+
+#: ../data/ui/search-settings.ui:61
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:22
+msgid "Search suggestions"
+msgstr "検索候補"
+
+#: ../data/ui/about.ui:8
+msgid "Search and read Wikipedia articles\n"
+"All content from Wikipedia.org\n"
+"and available under CC BY-SA 3.0 unless otherwise noted"
+msgstr "Wikipediaの記事を検索して読む\n"
+"すべてのWikipedia.orgのコンテンツは特に記述がない限り\n"
+"CC BY-SA 3.0で利用可能です"
+
+#. Add your name like this:
+#. 
+#. Hugo Olabera <hugolabe@gmail.com>
+#: ../data/ui/about.ui:13
+msgid "translator-credits"
+msgstr "翻訳者のクレジット"
+
+#: ../src/view.py:397 ../data/ui/bookmarks.ui:58
+msgid "Add Bookmark"
+msgstr "ブックマークを追加"
+
+#: ../data/ui/shortcuts.ui:14
+msgctxt "shortcut window"
+msgid "General"
+msgstr "全般"
+
+#: ../data/ui/shortcuts.ui:25
+msgctxt "shortcut window"
+msgid "Table of contents"
+msgstr "目次"
+
+#: ../data/ui/shortcuts.ui:32
+msgctxt "shortcut window"
+msgid "View article in other languages"
+msgstr "他の言語で記事を見る"
+
+#: ../data/ui/shortcuts.ui:39
+msgctxt "shortcut window"
+msgid "Search text in page"
+msgstr "ページ内のテキストを検索"
+
+#: ../data/ui/shortcuts.ui:46
+msgctxt "shortcut window"
+msgid "Preferences"
+msgstr "設定"
+
+#: ../data/ui/shortcuts.ui:53
+msgctxt "shortcut window"
+msgid "Copy Wikipedia URL"
+msgstr "WikipediaのURLをコピー"
+
+#: ../data/ui/shortcuts.ui:60
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "閉じる"
+
+#: ../data/ui/shortcuts.ui:67
+msgctxt "shortcut window"
+msgid "Keyboard shortcuts"
+msgstr "キーボードショートカット"
+
+#: ../data/ui/shortcuts.ui:130
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "ナビゲーション"
+
+#: ../data/ui/shortcuts.ui:134
+msgctxt "shortcut window"
+msgid "Search articles"
+msgstr "記事を検索"
+
+#: ../data/ui/shortcuts.ui:141
+msgctxt "shortcut window"
+msgid "Wikipedia main page"
+msgstr "メインページへ"
+
+#: ../data/ui/shortcuts.ui:148
+msgctxt "shortcut window"
+msgid "Show recent articles"
+msgstr "最近の記事"
+
+#: ../data/ui/shortcuts.ui:155
+msgctxt "shortcut window"
+msgid "Previous page"
+msgstr "前のページ"
+
+#: ../data/ui/shortcuts.ui:162
+msgctxt "shortcut window"
+msgid "Next page"
+msgstr "次のページ"
+
+#: ../data/ui/shortcuts.ui:169
+msgctxt "shortcut window"
+msgid "Reload page"
+msgstr "ページを更新"
+
+#: ../data/ui/shortcuts.ui:76
+msgctxt "shortcut window"
+msgid "Bookmarks"
+msgstr "ブックマーク"
+
+#: ../data/ui/shortcuts.ui:80
+msgctxt "shortcut window"
+msgid "Show bookmarks"
+msgstr "ブックマークを表示"
+
+#: ../data/ui/shortcuts.ui:87
+msgctxt "shortcut window"
+msgid "Add bookmark"
+msgstr "ブックマークを追加"
+
+#: ../src/prefs.py:80 ../data/ui/menu.ui:101
+msgid "Wikipedia Main Page"
+msgstr "メインページ"
+
+#: ../src/view.py:293 ../data/ui/menu.ui:127
+msgid "Recent Articles"
+msgstr "最近の記事"
+
+#: ../data/ui/menu.ui:151
+msgid "Search Text in Page"
+msgstr "ページ内のテキストを検索"
+
+#: ../data/ui/menu.ui:164
+msgid "Open Wikipedia Page in Browser"
+msgstr "ページをブラウザで開く"
+
+#: ../data/ui/menu.ui:177
+msgid "Copy Wikipedia URL to Clipboard"
+msgstr "WikipediaのURLをクリップボードにコピー"
+
+#: ../data/ui/menu.ui:201
+msgid "Preferences"
+msgstr "設定"
+
+#: ../data/ui/menu.ui:214
+msgid "Keyboard Shortcuts"
+msgstr "キーボードショートカット"
+
+#: ../data/ui/menu.ui:227
+msgid "About Wike"
+msgstr "Wikeについて"
+
+#: ../data/ui/prefs.ui:20
+msgid "Behavior"
+msgstr "振舞い"
+
+#: ../data/ui/prefs.ui:120
+msgid "Keep a list of recent articles"
+msgstr "最近の記事リストを保持する"
+
+#: ../data/ui/prefs.ui:14
+msgid "General"
+msgstr "全般"
+
+#: ../data/ui/prefs.ui:163
+msgid "Languages"
+msgstr "言語"
+
+#: ../src/page.py:78 ../src/page.py:81
+msgid "Loading Article"
+msgstr "記事を読み込み"
+
+#. Don't translate app name!
+#: ../data/com.github.hugolabe.Wike.desktop.in:3
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:7
+msgid "Wike"
+msgstr "Wike"
+
+#: ../src/view.py:203 ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
+msgid "Search and read Wikipedia articles"
+msgstr "Wikipediaの記事を検索と閲覧"
+
+#. Don't remove semicolons!
+#: ../data/com.github.hugolabe.Wike.desktop.in:10
+msgid "Wikipedia;Encyclopedia;"
+msgstr "Wikipedia;百科事典;"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:11
+msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
+msgstr "WikeはGNOMEデスクトップ向けのWikipediaリーダーです。ネイティブアプリケーションで、このオンライン百科事典のすべてのコンテンツを提供し、記事をよりシンプルで気を散らすことなく表示します。"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:21
+msgid "Multiple languages"
+msgstr "多言語"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:23
+msgid "List of recent articles"
+msgstr "最近の記事のリスト"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:24
+msgid "Simple bookmarks management"
+msgstr "シンプルなブックマーク管理"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:25
+msgid "Text search in articles"
+msgstr "記事のテキスト検索"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
+msgid "Article table of contents"
+msgstr "記事の目次"
+
+#: ../data/ui/header.ui:154 ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
+msgid "View article in other languages"
+msgstr "記事を他の言語で表示"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
+msgid "Features:"
+msgstr "機能:"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
+msgid "GNOME Shell search integration"
+msgstr "GNOME Shell 検索との統合"
+
+#: ../src/prefs.py:148
+msgid "Clear Historic?"
+msgstr "履歴をクリア？"
+
+#: ../src/prefs.py:150
+msgid "The history of visited articles will be deleted permanently."
+msgstr "訪れた記事の履歴は完全に削除されます。"
+
+#: ../src/prefs.py:151
+msgid "Clear Historic"
+msgstr "履歴をクリア"
+
+#: ../src/prefs.py:168
+msgid "Clear Personal Data?"
+msgstr "パーソナルデータを削除しますか？"
+
+#: ../src/prefs.py:170
+msgid "Cookies and cache data will be deleted permanently."
+msgstr "クッキーとキャッシュは完全に削除されます。"
+
+#: ../src/prefs.py:171
+msgid "Clear Data"
+msgstr "データを削除"
+
+#. Don't remove %s tag!
+#: ../src/wike-sp.in:71
+msgid "Search “%s” on Wikipedia"
+msgstr "Wikipediaで“%s”を検索"
+
+#: ../data/ui/prefs.ui:23
+msgid "Home page"
+msgstr "ホームページ"
+
+#: ../data/ui/prefs.ui:24
+msgid "The page that will be displayed when Wike starts"
+msgstr "Wike起動時に表示されるページ"
+
+#: ../data/ui/prefs.ui:34
+msgid "Article View"
+msgstr "記事の表示"
+
+#: ../data/ui/prefs.ui:37
+msgid "Font size"
+msgstr "フォントサイズ"
+
+#: ../data/ui/prefs.ui:38
+msgid "Font size for article view (default is 16)"
+msgstr "記事のフォントサイズ（デフォルトは16）"
+
+#: ../data/ui/prefs.ui:55
+msgid "Use custom font"
+msgstr "カスタムフォントを使う"
+
+#: ../data/ui/prefs.ui:56
+msgid "Choose a font for the article view"
+msgstr "記事を見るときのフォント"
+
+#: ../data/ui/prefs.ui:69
+msgid "Preview popups in article links"
+msgstr "記事のリンクでプレビューを表示する"
+
+#: ../data/ui/prefs.ui:70
+msgid "Show a preview of the article when hovering over a link"
+msgstr "リンクを選択した際にプレビューを表示"
+
+#: ../data/ui/prefs.ui:89
+msgid "Privacy"
+msgstr "プライバシー"
+
+#: ../data/ui/prefs.ui:95
+msgid "Search"
+msgstr "検索"
+
+#: ../data/ui/prefs.ui:98
+msgid "Allow live search on desktop"
+msgstr "デスクトップでのライブ検索を許可する"
+
+#: ../data/ui/prefs.ui:99
+msgid "Warning: all desktop searches will be sent to Wikipedia"
+msgstr "注意：デスクトップ検索した情報はすべてWikipediaに送信されます"
+
+#: ../data/ui/prefs.ui:117
+msgid "Personal Data"
+msgstr "パーソナルデータ"
+
+#: ../data/ui/prefs.ui:121
+msgid "Wike will remember the history of visited articles"
+msgstr "Wikeは訪れた記事の履歴を記録します"
+
+#: ../data/ui/prefs.ui:133 ../data/ui/prefs.ui:148
+msgid "Clear"
+msgstr "クリア"
+
+#: ../data/ui/prefs.ui:143
+msgid "Clear personal data"
+msgstr "パーソナルデータをクリア"
+
+#: ../data/ui/prefs.ui:144
+msgid "Cookies and cache data will be deleted"
+msgstr "クッキーとキャッシュを削除"
+
+#: ../src/view.py:215
+msgid "Try Again"
+msgstr "やり直す"
+
+#: ../src/prefs.py:80 ../data/ui/menu.ui:114
+msgid "Random Article"
+msgstr "ランダムな記事"
+
+#: ../src/prefs.py:80
+msgid "Last Article"
+msgstr "最後に閲覧した記事"
+
+#: ../data/ui/header.ui:79
+msgid "Search articles"
+msgstr "記事を検索"
+
+#: ../data/ui/header.ui:113
+msgid "Bookmarks"
+msgstr "ブックマーク"
+
+#: ../data/ui/header.ui:135
+msgid "Table of contents"
+msgstr "目次"
+
+#: ../data/ui/prefs.ui:169
+msgid "Filter Available Languages"
+msgstr "記事の言語をフィルタリング"
+
+#: ../data/ui/prefs.ui:203
+msgid "Select All"
+msgstr "すべて選択"
+
+#: ../data/ui/prefs.ui:215
+msgid "Select None"
+msgstr "選択解除"
+
+#: ../data/ui/shortcuts.ui:18
+msgctxt "shortcut window"
+msgid "Main menu"
+msgstr "メインメニュー"
+
+#: ../src/view.py:204
+msgid "Click the search button or press F2 to search articles in Wikipedia. You can also use the main menu to open Wikipedia main page, the list of recent articles or get a random article."
+msgstr "検索ボタンをクリックするか、F2キーを押して、記事を検索します。メインメニューを使用して、ウィキペディアのメインページ、最近の記事リストを開いたり、ランダムな記事を取得したりすることもできます。"
+
+#: ../src/bookmarks.py:47
+msgid "<b>No Bookmarks</b>\n"
+"\n"
+"<small>Use the <i>Add Bookmark</i> button\n"
+"or press Ctrl+D to add\n"
+"the current article to the list</small>"
+msgstr "<b>ブックマークはありません</b>\n"
+"\n"
+"<small><i>ブックマーク</i> \n"
+"を追加をクリックするかCtrl+Dを押して記事をリストに追加します</small>"
+
+#: ../data/ui/shortcuts.ui:96
+msgctxt "shortcut window"
+msgid "Tabs"
+msgstr "タブ"
+
+#: ../data/ui/shortcuts.ui:100
+msgctxt "shortcut window"
+msgid "New tab"
+msgstr "新しいタブ"
+
+#: ../data/ui/shortcuts.ui:107
+msgctxt "shortcut window"
+msgid "Close current tab"
+msgstr "現在のタブを閉じる"
+
+#: ../data/ui/shortcuts.ui:114
+msgctxt "shortcut window"
+msgid "Next tab"
+msgstr "次のタブ"
+
+#: ../data/ui/shortcuts.ui:121
+msgctxt "shortcut window"
+msgid "Previous tab"
+msgstr "前のタブ"
+
+#: ../data/ui/header.ui:61
+msgid "New tab"
+msgstr "新しいタブ"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
+msgid "Open multiple articles in tabs"
+msgstr "タブで複数の記事を開く"
+
+#: ../src/view.py:409
+msgid "Open Link in New Tab"
+msgstr "リンクを新しいタブで開く"
+
+#: ../src/view.py:411
+msgid "Add Link to Bookmarks"
+msgstr "リンク先をブックマークに追加"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:29
+msgid "Light, dark and sepia themes"
+msgstr "ライト、ダークそして、スピアのテーマ"
+

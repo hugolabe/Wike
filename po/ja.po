@@ -65,7 +65,7 @@ msgstr "Wikipediaの記事を検索して読む\n"
 #. Hugo Olabera <hugolabe@gmail.com>
 #: ../data/ui/about.ui:13
 msgid "translator-credits"
-msgstr "翻訳者のクレジット"
+msgstr "Kaz Sibuya <sibuyakazokuu@gmail.com>"
 
 #: ../src/view.py:397 ../data/ui/bookmarks.ui:58
 msgid "Add Bookmark"
@@ -419,8 +419,9 @@ msgid "<b>No Bookmarks</b>\n"
 "the current article to the list</small>"
 msgstr "<b>ブックマークはありません</b>\n"
 "\n"
-"<small><i>ブックマーク</i> \n"
-"を追加をクリックするかCtrl+Dを押して記事をリストに追加します</small>"
+"<small><i>ブックマークを追加</i> をクリック\n"
+"するかCtrl+Dを押して\n"
+"記事をリストに追加します</small>"
 
 #: ../data/ui/shortcuts.ui:96
 msgctxt "shortcut window"

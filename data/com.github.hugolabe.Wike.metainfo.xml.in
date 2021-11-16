@@ -53,6 +53,14 @@
   </screenshots>
 
   <releases>
+    <release version="1.6.1" date="2021-11-16">
+      <description>
+        <ul>
+          <li>Added translations: Japanese, Persian and Polish.</li>
+          <li>Updated translations: Interlingua, Italian, Russian and Turkish.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.6.0" date="2021-10-15">
       <description>
         <ul>

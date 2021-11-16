@@ -17,8 +17,7 @@ msgstr "nie znaleziono wyników dla wyszukiwania"
 
 #: ../src/view.py:211 ../src/view.py:297
 msgid "Can't access Wikipedia"
-msgstr "brak dostępu do wikipedia\n"
-""
+msgstr "brak dostępu do wikipedia"
 
 #: ../src/view.py:212
 msgid "Check your Internet connection and try again"

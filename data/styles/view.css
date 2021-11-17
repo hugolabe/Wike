@@ -48,6 +48,10 @@ ul#page-actions, .page-actions-menu {
   display: none !important;
 }
 
+.pre-content .minerva__tab-container {
+  display: none !important;
+}
+
 /* Post content */
 
 .post-content .language-selector {

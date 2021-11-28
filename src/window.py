@@ -169,7 +169,7 @@ class Window(Adw.ApplicationWindow):
 
     self.page = tabpage.get_child()
     self.refresh_nav_buttons(self.page.wikiview)
-    self.headerbar.set_title(self.page.wikiview.title)
+    self.set_title(self.page.wikiview.title)
     self.headerbar.toc_button.set_sensitive(False)
     self.headerbar.langlinks_button.set_sensitive(False)
     self.headerbar.set_toc(self.page.wikiview.sections)
@@ -179,7 +179,7 @@ class Window(Adw.ApplicationWindow):
 
   def _tabview_close_page_cb(self, tabview, tabpage):
     page = tabpage.get_child()
-    page.wikiview.destroy()
+    #page.wikiview.destroy()
     tabview.close_page_finish(tabpage, True)
     return True
 

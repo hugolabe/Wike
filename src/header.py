@@ -44,7 +44,6 @@ class HeaderBar(Gtk.HeaderBar):
   bookmarks_button = Gtk.Template.Child()
   langlinks_button = Gtk.Template.Child()
   toc_button = Gtk.Template.Child()
-  window_title = Gtk.Template.Child()
 
   # Set main menu and connect signals and actions
 
@@ -58,7 +57,6 @@ class HeaderBar(Gtk.HeaderBar):
     self.bookmarks_popover = BookmarksPopover(self._window)
     self.langlinks_popover = LanglinksPopover(self._window)
     self.toc_popover = TocPopover(self._window)
-    self.window_title = Gtk.Label()
 
     self.menu_button.set_popover(self.menu_popover)
     self.bookmarks_button.set_popover(self.bookmarks_popover)

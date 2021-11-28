@@ -3,14 +3,6 @@
   <requires lib="gtk" version="4.0"/>
   <requires lib="libadwaita" version="1.0"/>
   <template class="HeaderBar" parent="GtkHeaderBar">
-		<property name="title-widget">
-			<object class="GtkLabel" id="window_title">
-				<property name="label" translatable="no">Wike</property>
-				<style>
-        	<class name="title"/>
-      	</style>
-			</object>
-		</property>
     <child>
       <object class="GtkBox">
         <child>

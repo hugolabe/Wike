@@ -13,6 +13,8 @@
         <child>
           <object class="GtkBox">
             <property name="halign">center</property>
+						<property name="valign">center</property>
+						<property name="margin-top">6</property>
             <property name="margin-bottom">6</property>
             <property name="spacing">24</property>
             <child>

@@ -49,6 +49,8 @@ class PageBox(Gtk.Box):
 
     self.wikiview = WikiView()
     self.append(self.wikiview)
+    self.wikiview.set_hexpand(True)
+    self.wikiview.set_vexpand(True)
     self.wikiview.show()
 
     find_controller = self.wikiview.get_find_controller()

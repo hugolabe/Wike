@@ -105,9 +105,9 @@ class Application(Gtk.Application):
       self._gtk_settings = Gtk.Settings.get_default()
       if settings.get_int('theme') == 1:
         self._gtk_settings.set_property('gtk-application-prefer-dark-theme', True)
-        self._window.present()
     else:
       self._window.present()
+    self._window.show()
 
   # Show Preferences window
 
@@ -155,7 +155,7 @@ class Application(Gtk.Application):
 
   # On window delete quit app
 
-  def _window_delete_cb(self, window, event):
+  def _window_delete_cb(self, window):
     window.tabview.disconnect(window.handler_selpage)
     quit_action = self.lookup_action('quit')
     quit_action.activate()

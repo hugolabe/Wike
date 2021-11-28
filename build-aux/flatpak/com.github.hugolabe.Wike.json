@@ -1,31 +1,34 @@
 {
-  "app-id" : "com.github.hugolabe.Wike",
-  "runtime" : "org.gnome.Platform",
-  "runtime-version" : "master",
-  "sdk" : "org.gnome.Sdk",
-  "command" : "wike",
-  "finish-args" : [
-    "--share=network",
-    "--share=ipc",
-    "--socket=fallback-x11",
-    "--socket=wayland",
-    "--socket=pulseaudio",
-    "--device=dri",
-    "--own-name=com.github.hugolabe.Wike.SearchProvider"
-  ],
-  "modules" : [
-    "python3-dbus-python.json",
-    "python3-requests.json",
-    {
-      "name" : "wike",
-      "buildsystem" : "meson",
-      "builddir" : true,
-      "sources" : [
+    "app-id" : "com.github.hugolabe.Wike",
+    "runtime" : "org.gnome.Platform",
+    "runtime-version" : "master",
+    "sdk" : "org.gnome.Sdk",
+    "command" : "wike",
+    "finish-args" : [
+        "--share=network",
+        "--share=ipc",
+        "--socket=fallback-x11",
+        "--socket=wayland",
+        "--socket=pulseaudio",
+        "--device=dri",
+        "--own-name=com.github.hugolabe.Wike.SearchProvider"
+    ],
+    "modules" : [
+        "python3-dbus-python.json",
+        "python3-requests.json",
         {
-          "type" : "dir",
-          "path" : "../../."
+            "name" : "wike",
+            "buildsystem" : "meson",
+            "builddir" : true,
+            "sources" : [
+                {
+                    "type" : "dir",
+                    "path" : "../../."
+                }
+            ]
         }
-      ]
+    ],
+    "build-options" : {
+        "env" : {        }
     }
-  ]
 }

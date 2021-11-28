@@ -114,7 +114,7 @@ class Application(Gtk.Application):
   def _prefs_cb(self, action, parameter):
     prefs_window = PrefsWindow()
     prefs_window.set_transient_for(self._window)
-    prefs_window.show_all()
+    prefs_window.present()
 
   # Set theme light for UI and view
 
@@ -150,8 +150,7 @@ class Application(Gtk.Application):
     builder.add_from_resource("/com/github/hugolabe/Wike/ui/about.ui")
     about_dialog = builder.get_object("about_dialog")
     about_dialog.set_transient_for(self._window)
-    about_dialog.run()
-    about_dialog.destroy()
+    about_dialog.present()
 
   # On window delete quit app
 

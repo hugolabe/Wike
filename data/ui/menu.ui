@@ -6,6 +6,10 @@
     <child>
       <object class="GtkBox">
         <property name="orientation">vertical</property>
+				<property name="margin-start">6</property>
+				<property name="margin-end">6</property>
+				<property name="margin-top">6</property>
+				<property name="margin-bottom">6</property>
         <child>
           <object class="GtkBox">
             <property name="halign">center</property>
@@ -135,6 +139,9 @@
         </child>
       </object>
     </child>
+		<style>
+			<class name="menu"/>
+		</style>
   </template>
 </interface>
 

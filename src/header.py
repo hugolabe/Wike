@@ -112,12 +112,12 @@ class HeaderBar(Gtk.HeaderBar):
 
   def _search_button_cb(self, search_button):
     if search_button.get_active():
-      self.set_custom_title(self.search_entry)
+      self.set_title_widget(self.search_entry)
       self.search_entry.show()
       self.search_entry.grab_focus()
     else:
       self.search_entry.hide()
-      self.set_custom_title(None)
+      self.set_title_widget(None)
 
   # Enable or disable menu items on button toggled
 

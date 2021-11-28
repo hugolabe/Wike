@@ -104,7 +104,7 @@ class Application(Gtk.Application):
       self._window.connect('close-request',self._window_delete_cb)
       self._gtk_settings = Gtk.Settings.get_default()
       if settings.get_int('theme') == 1:
-        self._gtk_settings.set_property('gtk-application-prefer-dark-theme', True)
+        Adw.StyleManager().get_default().set_color_scheme(Adw.ColorScheme.FORCE_LIGHT)
     else:
       self._window.present()
     self._window.show()
@@ -120,19 +120,19 @@ class Application(Gtk.Application):
 
   def _theme_light(self, action, parameter):
     settings.set_int('theme', 0)
-    self._gtk_settings.set_property('gtk-application-prefer-dark-theme', False)
+    Adw.StyleManager().get_default().set_color_scheme(Adw.ColorScheme.FORCE_LIGHT)
 
   # Set theme dark for UI and view
 
   def _theme_dark(self, action, parameter):
     settings.set_int('theme', 1)
-    self._gtk_settings.set_property('gtk-application-prefer-dark-theme', True)
+    Adw.StyleManager().get_default().set_color_scheme(Adw.ColorScheme.FORCE_DARK)
 
   # Set theme sepia for UI and view
 
   def _theme_sepia(self, action, parameter):
     settings.set_int('theme', 2)
-    self._gtk_settings.set_property('gtk-application-prefer-dark-theme', False)
+    Adw.StyleManager().get_default().set_color_scheme(Adw.ColorScheme.FORCE_LIGHT)
 
   # Show Shortcuts window
 

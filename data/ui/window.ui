@@ -1,101 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <requires lib="gtk+" version="3.24"/>
-  <requires lib="libhandy" version="1.0"/>
-  <template class="Window" parent="HdyApplicationWindow">
-    <property name="can_focus">False</property>
+  <requires lib="gtk" version="4.0"/>
+  <requires lib="libadwaita" version="1.0"/>
+  <template class="Window" parent="AdwApplicationWindow">
     <child>
       <object class="GtkBox" id="window_box">
-        <property name="visible">True</property>
-        <property name="can-focus">False</property>
         <property name="orientation">vertical</property>
         <child>
           <object class="GtkOverlay">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
             <child>
               <object class="GtkBox">
-                <property name="visible">True</property>
-                <property name="can-focus">False</property>
                 <property name="orientation">vertical</property>
                 <child>
-                  <object class="HdyTabBar" id="tabbar">
+                  <object class="AdwTabBar" id="tabbar">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="autohide">True</property>
                     <property name="expand-tabs">True</property>
                     <property name="view">tabview</property>
                   </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">True</property>
-                    <property name="position">0</property>
-                  </packing>
                 </child>
                 <child>
-                  <object class="HdyTabView" id="tabview">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
+                  <object class="AdwTabView" id="tabview">
                   </object>
-                  <packing>
-                    <property name="expand">True</property>
-                    <property name="fill">True</property>
-                    <property name="position">1</property>
-                  </packing>
                 </child>
               </object>
-              <packing>
-                <property name="index">-1</property>
-              </packing>
             </child>
             <child type="overlay">
               <object class="GtkRevealer" id="notification">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
                 <property name="halign">center</property>
                 <property name="valign">start</property>
                 <property name="transition_duration">500</property>
                 <property name="reveal_child">False</property>
                 <child>
                   <object class="GtkFrame">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="shadow_type">none</property>
                     <child>
                       <object class="GtkBox">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
                         <property name="spacing">10</property>
                         <child>
                           <object class="GtkLabel" id="notification_label">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="margin_left">8</property>
+                            <property name="margin_start">8</property>
                           </object>
-                          <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">0</property>
-                          </packing>
                         </child>
                         <child>
                           <object class="GtkButton" id="notification_close_button">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="relief">none</property>
                             <child>
                               <object class="GtkImage">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
                                 <property name="icon_name">window-close-symbolic</property>
                               </object>
                             </child>
                           </object>
-                          <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">1</property>
-                          </packing>
                         </child>
                       </object>
                     </child>
@@ -107,11 +61,6 @@
               </object>
             </child>
           </object>
-          <packing>
-            <property name="expand">True</property>
-            <property name="fill">True</property>
-            <property name="pack_type">end</property>
-          </packing>
         </child>
       </object>
     </child>

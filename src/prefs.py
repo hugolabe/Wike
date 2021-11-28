@@ -18,10 +18,11 @@
 
 
 import gi
-gi.require_version('Gtk', '3.0')
-gi.require_version('Handy', '1')
-gi.require_version('WebKit2', '4.0')
-from gi.repository import Gio, Gtk, Handy, WebKit2
+gi.require_version('Gtk', '4.0')
+gi.require_version('Adw', '1')
+gi.require_version('WebKit2', '5.0')
+
+from gi.repository import Gio, Gtk, Adw, WebKit2
 
 from wike.data import settings, languages, historic
 
@@ -30,7 +31,7 @@ from wike.data import settings, languages, historic
 # Manage application preferences
 
 @Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/prefs.ui')
-class PrefsWindow(Handy.PreferencesWindow):
+class PrefsWindow(Adw.PreferencesWindow):
 
   __gtype_name__ = 'PrefsWindow'
 
@@ -76,16 +77,16 @@ class PrefsWindow(Handy.PreferencesWindow):
   # Populate list of available options for start page
 
   def _populate_on_start_combo(self):
-    model = Gio.ListStore.new(Handy.ValueObject)
+    model = Gio.ListStore.new(Adw.ValueObject)
     options = (_('Wikipedia Main Page'), _('Random Article'), _('Last Article'))
     for index, option in enumerate(options):
-      model.insert(index, Handy.ValueObject.new(option))
-    self.on_start_combo.bind_name_model(model, Handy.ValueObject.dup_string)
+      model.insert(index, Adw.ValueObject.new(option))
+    self.on_start_combo.bind_name_model(model, Adw.ValueObject.dup_string)
 
   # Populate font list for custom font combo
 
   def _populate_custom_font_combo(self):
-    model = Gio.ListStore.new(Handy.ValueObject)
+    model = Gio.ListStore.new(Adw.ValueObject)
     fonts = []
     custom_font = settings.get_string('font-family')
     pango_context = self.get_pango_context()
@@ -94,10 +95,10 @@ class PrefsWindow(Handy.PreferencesWindow):
     fonts.sort(key=str.lower)
     selected = 0
     for index, font in enumerate(fonts):
-      model.insert(index, Handy.ValueObject.new(font))
+      model.insert(index, Adw.ValueObject.new(font))
       if font == custom_font:
         selected = index
-    self.custom_font_combo.bind_name_model(model, Handy.ValueObject.dup_string)
+    self.custom_font_combo.bind_name_model(model, Adw.ValueObject.dup_string)
     self.custom_font_combo.set_selected_index(selected)
 
   # Populate list of available languages

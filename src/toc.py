@@ -18,7 +18,7 @@
 
 
 import gi
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 from gi.repository import Gio, GLib, Gtk
 
 
@@ -46,7 +46,7 @@ class TocPopover(Gtk.Popover):
   def populate(self, toc):
     self._toc = toc
     menu = Gio.Menu()
-    self.bind_model(menu, None)
+    self.set_child(Gtk.PopoverMenu.new_from_model(menu))
     if toc != None:
       self._fill_menu(menu, toc, 0)
 

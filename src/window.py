@@ -18,9 +18,9 @@
 
 
 import gi
-gi.require_version('Gtk', '3.0')
-gi.require_version('Handy', '1')
-from gi.repository import Gio, GLib, Gdk, Gtk, Handy
+gi.require_version('Gtk', '4.0')
+gi.require_version('Adw', '1')
+from gi.repository import Gio, GLib, Gdk, Gtk, Adw
 
 from wike.data import settings
 from wike.header import HeaderBar
@@ -31,7 +31,7 @@ from wike.page import PageBox
 # Contains a page and a headerbar
 
 @Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/window.ui')
-class Window(Handy.ApplicationWindow):
+class Window(Adw.ApplicationWindow):
 
   __gtype_name__ = 'Window'
 
@@ -58,7 +58,7 @@ class Window(Handy.ApplicationWindow):
     tabpage = self.tabview.append(self.page)
 
     self.headerbar = HeaderBar(self)
-    self.window_box.pack_start(self.headerbar, False, True, 0)
+    self.window_box.prepend(self.headerbar)
 
     actions = [ ('prev_page', self._prev_page_cb, ('<Alt>Left',)),
                 ('next_page', self._next_page_cb, ('<Alt>Right',)),

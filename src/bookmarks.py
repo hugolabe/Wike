@@ -18,7 +18,7 @@
 
 
 import gi
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 from gi.repository import Gtk
 
 from wike.data import languages, bookmarks
@@ -52,8 +52,8 @@ class BookmarksPopover(Gtk.Popover):
     self._populate()
 
     self.bookmarks_list.connect('row-activated', self._list_activated_cb)
-    self.bookmarks_list.connect('add', self._list_changed_cb)
-    self.bookmarks_list.connect('remove', self._list_changed_cb)
+    #self.bookmarks_list.connect('add', self._list_changed_cb)
+    #self.bookmarks_list.connect('remove', self._list_changed_cb)
     self.add_button.connect('clicked', self._add_button_clicked_cb)
     self.clear_button.connect('clicked', self._clear_button_clicked_cb)
     self.connect('show', self._popover_show_cb)

@@ -1,46 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <requires lib="gtk+" version="3.24"/>
-  <requires lib="libhandy" version="1.0"/>
-  <template class="PrefsWindow" parent="HdyPreferencesWindow">
+  <requires lib="gtk" version="4.0"/>
+  <requires lib="libadwaita" version="1.0"/>
+  <template class="PrefsWindow" parent="AdwPreferencesWindow">
     <property name="default_height">425</property>
     <property name="default_width">540</property>
     <property name="modal">True</property>
     <property name="window_position">center-on-parent</property>
     <property name="search-enabled">False</property>
     <child>
-      <object class="HdyPreferencesPage">
-        <property name="visible">True</property>
+      <object class="AdwPreferencesPage">
         <property name="title" translatable="yes">General</property>
         <property name="icon_name">applications-system-symbolic</property>
         <child>
-          <object class="HdyPreferencesGroup">
-            <property name="visible">True</property>
+          <object class="AdwPreferencesGroup">
             <property name="can-focus">False</property>
             <property name="title" translatable="yes">Behavior</property>
             <child>
-              <object class="HdyComboRow" id="on_start_combo">
+              <object class="AdwComboRow" id="on_start_combo">
                 <property name="title" translatable="yes">Home page</property>
                 <property name="subtitle" translatable="yes">The page that will be displayed when Wike starts</property>
-                <property name="visible">True</property>
               </object>
             </child>
           </object>
         </child>
         <child>
-          <object class="HdyPreferencesGroup">
-            <property name="visible">True</property>
+          <object class="AdwPreferencesGroup">
             <property name="can-focus">False</property>
             <property name="title" translatable="yes">Article View</property>
             <child>
-              <object class="HdyActionRow">
+              <object class="AdwActionRow">
                 <property name="title" translatable="yes">Font size</property>
                 <property name="subtitle" translatable="yes">Font size for article view (default is 16)</property>
-                <property name="visible">True</property>
                 <property name="activatable">False</property>
                 <child>
                   <object class="GtkSpinButton" id="font_size_spin">
-                    <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="valign">center</property>
                     <property name="numeric">True</property>
@@ -51,13 +45,11 @@
               </object>
             </child>
             <child>
-              <object class="HdyComboRow" id="custom_font_combo">
+              <object class="AdwComboRow" id="custom_font_combo">
                 <property name="title" translatable="yes">Use custom font</property>
                 <property name="subtitle" translatable="yes">Choose a font for the article view</property>
-                <property name="visible">True</property>
                 <child type="prefix">
                   <object class="GtkSwitch" id="custom_font_switch">
-                    <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="valign">center</property>
                   </object>
@@ -65,14 +57,12 @@
               </object>
             </child>
             <child>
-              <object class="HdyActionRow">
+              <object class="AdwActionRow">
                 <property name="title" translatable="yes">Preview popups in article links</property>
                 <property name="subtitle" translatable="yes">Show a preview of the article when hovering over a link</property>
-                <property name="visible">True</property>
                 <property name="activatable_widget">preview_popups_switch</property>
                 <child>
                   <object class="GtkSwitch" id="preview_popups_switch">
-                    <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="valign">center</property>
                   </object>
@@ -84,24 +74,20 @@
       </object>
     </child>
     <child>
-      <object class="HdyPreferencesPage">
-        <property name="visible">True</property>
+      <object class="AdwPreferencesPage">
         <property name="title" translatable="yes">Privacy</property>
         <property name="icon_name">preferences-system-privacy-symbolic</property>
         <child>
-          <object class="HdyPreferencesGroup">
-            <property name="visible">True</property>
+          <object class="AdwPreferencesGroup">
             <property name="can-focus">False</property>
             <property name="title" translatable="yes">Search</property>
             <child>
-              <object class="HdyActionRow">
+              <object class="AdwActionRow">
                 <property name="title" translatable="yes">Allow live search on desktop</property>
                 <property name="subtitle" translatable="yes">Warning: all desktop searches will be sent to Wikipedia</property>
-                <property name="visible">True</property>
                 <property name="activatable_widget">desktop_search_switch</property>
                 <child>
                   <object class="GtkSwitch" id="desktop_search_switch">
-                    <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="valign">center</property>
                   </object>
@@ -111,19 +97,16 @@
           </object>
         </child>
         <child>
-          <object class="HdyPreferencesGroup">
-            <property name="visible">True</property>
+          <object class="AdwPreferencesGroup">
             <property name="can-focus">False</property>
             <property name="title" translatable="yes">Personal Data</property>
             <child>
-              <object class="HdyActionRow">
+              <object class="AdwActionRow">
                 <property name="title" translatable="yes">Keep a list of recent articles</property>
                 <property name="subtitle" translatable="yes">Wike will remember the history of visited articles</property>
-                <property name="visible">True</property>
                 <property name="activatable_widget">historic_switch</property>
                 <child type="prefix">
                   <object class="GtkSwitch" id="historic_switch">
-                    <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="valign">center</property>
                   </object>
@@ -131,7 +114,6 @@
                 <child>
                   <object class="GtkButton" id="clear_historic_button">
                     <property name="label" translatable="yes">Clear</property>
-                    <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="valign">center</property>
                   </object>
@@ -139,14 +121,12 @@
               </object>
             </child>
             <child>
-              <object class="HdyActionRow">
+              <object class="AdwActionRow">
                 <property name="title" translatable="yes">Clear personal data</property>
                 <property name="subtitle" translatable="yes">Cookies and cache data will be deleted</property>
-                <property name="visible">True</property>
                 <child>
                   <object class="GtkButton" id="clear_data_button">
                     <property name="label" translatable="yes">Clear</property>
-                    <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="valign">center</property>
                   </object>
@@ -158,29 +138,21 @@
       </object>
     </child>
     <child>
-      <object class="HdyPreferencesPage">
-        <property name="visible">True</property>
+      <object class="AdwPreferencesPage">
         <property name="title" translatable="yes">Languages</property>
         <property name="icon_name">wike-flag-symbolic</property>
         <child>
-          <object class="HdyPreferencesGroup">
-            <property name="visible">True</property>
+          <object class="AdwPreferencesGroup">
             <property name="can-focus">False</property>
             <property name="title" translatable="yes">Filter Available Languages</property>
             <child>
               <object class="GtkScrolledWindow">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
                 <property name="shadow_type">in</property>
                 <property name="propagate-natural-height">True</property>
                 <child>
                   <object class="GtkViewport">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
                     <child>
                       <object class="GtkListBox" id="languages_list">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
                       </object>
                     </child>
                   </object>
@@ -193,15 +165,15 @@
             </child>
             <child>
               <object class="GtkBox">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
+
+
                 <property name="spacing">12</property>
                 <property name="margin-top">12</property>
                 <property name="homogeneous">True</property>
                 <child>
                   <object class="GtkButton" id="select_all_button">
                     <property name="label" translatable="yes">Select All</property>
-                    <property name="visible">True</property>
+
                     <property name="can_focus">True</property>
                   </object>
                   <packing>
@@ -213,7 +185,7 @@
                 <child>
                   <object class="GtkButton" id="select_none_button">
                     <property name="label" translatable="yes">Select None</property>
-                    <property name="visible">True</property>
+
                     <property name="can_focus">True</property>
                   </object>
                   <packing>

@@ -1,7 +1,6 @@
 .color-button {
   padding: 12px;
   border-radius: 999px;
-  -gtk-outline-radius: 999px;
   outline-offset: 1px;
   border: none;
   -gtk-icon-shadow: none;

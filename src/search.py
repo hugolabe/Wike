@@ -20,12 +20,11 @@
 from threading import Thread
 
 import gi
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 from gi.repository import Gio, GLib, Gtk
 
 from wike import wikipedia
 from wike.data import settings, languages
-
 
 # Search entry class
 # Manage article searchs in Wikipedia
@@ -42,17 +41,18 @@ class SearchEntry(Gtk.SearchEntry):
 
     self.window = window
 
-    self.settings_popover = SettingsPopover(self)
-    self.suggestions_popover = SuggestionsPopover(self)
+    # self.settings_popover = SettingsPopover(self)
+    # self.suggestions_popover = SuggestionsPopover(self)
     self.results_list = None
     self._results_changed = False
 
     lang_id = settings.get_string('search-language')
-    self.set_icon_tooltip_text(Gtk.EntryIconPosition.PRIMARY, languages.wikilangs[lang_id].capitalize())
+    #self.set_icon_tooltip_text(Gtk.EntryIconPosition.PRIMARY, languages.wikilangs[lang_id].capitalize())
 
     self.connect('show', self._entry_show_cb)
-    self.connect('key-press-event', self._key_press_cb, search_button)
-    self.connect('icon-release',self._icon_release_cb)
+    # TODO: Use EventControllerKey
+    #self.connect('key-press-event', self._key_press_cb, search_button)
+    #self.connect('icon-release',self._icon_release_cb)
 
   # Search text in Wikipedia and load results list
 
@@ -66,8 +66,8 @@ class SearchEntry(Gtk.SearchEntry):
   # When entry show add timeout function
 
   def _entry_show_cb(self, entry):
-    if self.suggestions_popover.is_visible():
-      self.suggestions_popover.hide()
+    #if self.suggestions_popover.is_visible():
+    #  self.suggestions_popover.hide()
 
     if settings.get_boolean('search-suggestions'):
       GLib.timeout_add(250, self._timeout_cb)
@@ -79,12 +79,12 @@ class SearchEntry(Gtk.SearchEntry):
       return False
 
     if self._results_changed:
-      if self.results_list != None:
-        self.suggestions_popover.populate(self.results_list)
-        if not self.suggestions_popover.is_visible():
-          self.suggestions_popover.show_all()
-      else:
-        self.suggestions_popover.hide()
+      #if self.results_list != None:
+        # self.suggestions_popover.populate(self.results_list)
+        # if not self.suggestions_popover.is_visible():
+        #   self.suggestions_popover.show_all()
+      #else:
+        # self.suggestions_popover.hide()
       self._results_changed = False
     return True
 
@@ -92,22 +92,23 @@ class SearchEntry(Gtk.SearchEntry):
 
   def _key_press_cb(self, entry, event, search_button):
     if event.keyval == 65364:
-      if self.suggestions_popover.is_visible():
-        self.suggestions_popover.grab_focus()
+      #if self.suggestions_popover.is_visible():
+      #  self.suggestions_popover.grab_focus()
       return True
     elif event.keyval == 65307:
-      if self.suggestions_popover.is_visible():
-        self.suggestions_popover.hide()
-      else:
+      #if self.suggestions_popover.is_visible():
+      #  self.suggestions_popover.hide()
+      #else:
         search_button.set_active(False)
 
   # Show settings popover on icon clicked
 
   def _icon_release_cb(self, entry, icon_pos, event):
-    if icon_pos == Gtk.EntryIconPosition.PRIMARY:
-      if self.suggestions_popover.is_visible():
-        self.suggestions_popover.hide()
-      self.settings_popover.show_all()
+    #if icon_pos == Gtk.EntryIconPosition.PRIMARY:
+    None
+      #if self.suggestions_popover.is_visible():
+      #  self.suggestions_popover.hide()
+      # self.settings_popover.show_all()
 
   # When text changes run search in new thread
 
@@ -147,7 +148,7 @@ class SuggestionsPopover(Gtk.Popover):
 
   def __init__(self, search_entry):
     super().__init__()
-    self.set_relative_to(search_entry)
+    # self.set_relative_to(search_entry)
     self.set_size_request(360, -1)
     self.set_modal(False)
 
@@ -160,14 +161,14 @@ class SuggestionsPopover(Gtk.Popover):
     action = Gio.SimpleAction.new('suggestion', GLib.VariantType('s'))
     action.connect('activate', self._suggestion_activate_cb)
     actions.add_action(action)
-    self.insert_action_group('suggestions_popover', actions)
+    #self.insert_action_group('suggestions_popover', actions)
 
   # Populate search results list
 
   def populate(self, results_list):
     self._results_menu.remove_all()
     for index, item in enumerate(results_list[0]):
-      action_string = 'suggestions_popover.suggestion(\'' + str(index) + '\')'
+      #action_string = 'suggestions_popover.suggestion(\'' + str(index) + '\')'
       button = Gio.MenuItem.new(item, action_string)
       self._results_menu.append_item(button)
 
@@ -175,7 +176,7 @@ class SuggestionsPopover(Gtk.Popover):
 
   def do_key_press_event(self, event):
     if event.keyval == 65307:
-      search_entry = self.get_relative_to()
+      # search_entry = self.get_relative_to()
       search_entry.grab_focus_without_selecting()
       self.hide()
 
@@ -183,7 +184,7 @@ class SuggestionsPopover(Gtk.Popover):
 
   def _suggestion_activate_cb(self, action, parameter):
     index = int(parameter.unpack())
-    search_entry = self.get_relative_to()
+    # search_entry = self.get_relative_to()
     uri = search_entry.results_list[1][index]
     self._window.page.wikiview.load_wiki(uri)
 
@@ -204,7 +205,7 @@ class SettingsPopover(Gtk.Popover):
 
   def __init__(self, search_entry):
     super().__init__()
-    self.set_relative_to(search_entry)
+    # self.set_relative_to(search_entry)
 
     self._window = search_entry.window
 
@@ -252,7 +253,7 @@ class SettingsPopover(Gtk.Popover):
   # Change search language on list activated
 
   def _languages_list_activated_cb(self, lang_list, row):
-    search_entry = self.get_relative_to()
+    # search_entry = self.get_relative_to()
     search_entry.set_icon_tooltip_text(Gtk.EntryIconPosition.PRIMARY, languages.wikilangs[row.lang_id].capitalize())
     settings.set_string('search-language', row.lang_id)
     wikipedia.set_lang(row.lang_id)

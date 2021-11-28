@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <requires lib="gtk+" version="3.24"/>
+  <requires lib="gtk" version="4.0"/>
   <template class="LanglinkBoxRow" parent="GtkListBoxRow">
     <child>
       <object class="GtkBox">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="margin_left">6</property>
-        <property name="margin_right">6</property>
+        
+        
+        <property name="margin_start">6</property>
+        <property name="margin_end">6</property>
         <property name="margin_top">3</property>
         <property name="margin_bottom">3</property>
         <property name="spacing">12</property>
         <child>
           <object class="GtkBox">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            
+            
             <property name="orientation">vertical</property>
             <child>
               <object class="GtkLabel" id="langlink_lang">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                
+                
                 <property name="halign">start</property>
                 <property name="ellipsize">end</property>
               </object>
@@ -31,8 +31,8 @@
             </child>
             <child>
               <object class="GtkLabel" id="langlink_title">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
+                
+                
                 <property name="halign">start</property>
                 <property name="use_markup">True</property>
                 <property name="ellipsize">end</property>
@@ -52,8 +52,8 @@
         </child>
         <child>
           <object class="GtkLabel" id="langlink_id">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
+            
+            
             <property name="valign">start</property>
           </object>
           <packing>

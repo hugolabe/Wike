@@ -18,9 +18,9 @@
 
 
 import gi
-gi.require_version('Gtk', '3.0')
-gi.require_version('Handy', '1')
-from gi.repository import Gtk, Handy
+gi.require_version('Gtk', '4.0')
+gi.require_version('Adw', '1')
+from gi.repository import Gtk, Adw
 
 from wike.data import settings, historic
 from wike.bookmarks import BookmarksPopover
@@ -34,7 +34,7 @@ from wike.toc import TocPopover
 # Contains widgets for manage searchs, navigation and popovers
 
 @Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/header.ui')
-class HeaderBar(Handy.HeaderBar):
+class HeaderBar(Gtk.HeaderBar):
 
   __gtype_name__ = 'HeaderBar'
 
@@ -44,6 +44,7 @@ class HeaderBar(Handy.HeaderBar):
   bookmarks_button = Gtk.Template.Child()
   langlinks_button = Gtk.Template.Child()
   toc_button = Gtk.Template.Child()
+  window_title = Gtk.Template.Child()
 
   # Set main menu and connect signals and actions
 
@@ -57,6 +58,7 @@ class HeaderBar(Handy.HeaderBar):
     self.bookmarks_popover = BookmarksPopover(self._window)
     self.langlinks_popover = LanglinksPopover(self._window)
     self.toc_popover = TocPopover(self._window)
+    self.window_title = Gtk.Label()
 
     self.menu_button.set_popover(self.menu_popover)
     self.bookmarks_button.set_popover(self.bookmarks_popover)
@@ -64,7 +66,7 @@ class HeaderBar(Handy.HeaderBar):
     self.toc_button.set_popover(self.toc_popover)
 
     self.search_button.connect('clicked', self._search_button_cb)
-    self.menu_button.connect('toggled', self._menu_button_cb)
+    self.menu_button.connect('activate', self._menu_button_cb)
 
   # Populate toc popover
 
@@ -81,14 +83,15 @@ class HeaderBar(Handy.HeaderBar):
   # Populate langlinks popover
 
   def set_langlinks(self, langlinks):
-    if langlinks == None:
-      self.langlinks_popover.populate(None)
-    else:
-      if len(langlinks) > 0:
-        if self.langlinks_popover.populate(langlinks):
-          self.langlinks_button.set_sensitive(True)
-      else:
-        self.langlinks_popover.populate(None)
+      None
+    # if langlinks == None:
+    #   self.langlinks_popover.populate(None)
+    # else:
+    #   if len(langlinks) > 0:
+    #     if self.langlinks_popover.populate(langlinks):
+    #       self.langlinks_button.set_sensitive(True)
+    #   else:
+    #     self.langlinks_popover.populate(None)
 
   # Refresh_languages for settings and langlinks popovers
 
@@ -137,4 +140,6 @@ class HeaderBar(Handy.HeaderBar):
         show_historic_action.set_enabled(True)
       else:
         show_historic_action.set_enabled(False)
+
+
 

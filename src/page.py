@@ -18,8 +18,8 @@
 
 
 import gi
-gi.require_version('Gtk', '3.0')
-gi.require_version('WebKit2', '4.0')
+gi.require_version('Gtk', '4.0')
+gi.require_version('WebKit2', '5.0')
 from gi.repository import Gdk, Gtk, WebKit2
 
 from wike.data import settings, historic
@@ -48,7 +48,7 @@ class PageBox(Gtk.Box):
     self._window = window
 
     self.wikiview = WikiView()
-    self.pack_end(self.wikiview, True, True, 0)
+    self.append(self.wikiview)
     self.wikiview.show()
 
     find_controller = self.wikiview.get_find_controller()
@@ -78,7 +78,7 @@ class PageBox(Gtk.Box):
       tabpage.set_title(_('Loading Article'))
       tabpage.set_loading(True)
       if tabpage.get_selected():
-        self._window.headerbar.set_title(_('Loading Article'))
+        self._window.headerbar.window_title.set_label(_('Loading Article'))
         self._window.headerbar.toc_button.set_sensitive(False)
         self._window.headerbar.langlinks_button.set_sensitive(False)
         if self._window.headerbar.search_button.get_active():
@@ -87,7 +87,7 @@ class PageBox(Gtk.Box):
       wikiview.set_props()
       tabpage.set_title(wikiview.title)
       if tabpage.get_selected():
-        self._window.headerbar.set_title(wikiview.title)
+        self._window.headerbar.window_title.set_label(wikiview.title)
         self._window.headerbar.set_toc(wikiview.sections)
         self._window.headerbar.set_langlinks(wikiview.langlinks)
     elif event == WebKit2.LoadEvent.FINISHED:

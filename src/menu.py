@@ -18,7 +18,7 @@
 
 
 import gi
-gi.require_version('Gtk', '3.0')
+gi.require_version('Gtk', '4.0')
 from gi.repository import Gio, Gdk, Gtk
 
 from wike.data import settings
@@ -46,7 +46,7 @@ class MenuPopover(Gtk.Popover):
     gfile = Gio.File.new_for_uri('resource:///com/github/hugolabe/Wike/ui/menu.css')
     css_provider = Gtk.CssProvider()
     css_provider.load_from_file(gfile)
-    Gtk.StyleContext.add_provider_for_screen(Gdk.Screen.get_default(), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER)
+    Gtk.StyleContext.add_provider_for_display(Gdk.Display.get_default(), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER)
     
     if settings.get_int('theme') == 1:
       self.dark_button.set_active(True)

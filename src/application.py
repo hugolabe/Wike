@@ -18,16 +18,16 @@
 
 
 import sys
-
 import gi
-gi.require_version('Gtk', '3.0')
-gi.require_version('Handy', '1')
-from gi.repository import Gio, GLib, Gtk, Handy
+
+gi.require_version('Gtk', '4.0')
+gi.require_version('Adw', '1')
+
+from gi.repository import  Gtk, Gio, GLib, Adw
 
 from wike.data import settings, languages, historic, bookmarks
 from wike.prefs import PrefsWindow
 from wike.window import Window
-
 
 # Main application class
 # Wike Wikipedia Reader
@@ -49,7 +49,7 @@ class Application(Gtk.Application):
   def do_startup(self):
     Gtk.Application.do_startup(self)
 
-    Handy.init()
+    Adw.init()
 
     action = Gio.SimpleAction.new('prefs', None)
     action.connect('activate', self._prefs_cb)
@@ -101,11 +101,11 @@ class Application(Gtk.Application):
   def do_activate(self):
     if not self._window:
       self._window = Window(self, self._launch_uri)
-      self._window.connect('delete-event',self._window_delete_cb)
+      self._window.connect('close-request',self._window_delete_cb)
       self._gtk_settings = Gtk.Settings.get_default()
       if settings.get_int('theme') == 1:
         self._gtk_settings.set_property('gtk-application-prefer-dark-theme', True)
-      self._window.show_all()
+        self._window.present()
     else:
       self._window.present()
 

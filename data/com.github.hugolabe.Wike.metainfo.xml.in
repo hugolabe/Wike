@@ -53,6 +53,15 @@
   </screenshots>
 
   <releases>
+    <release version="1.6.2" date="2021-12-03">
+      <description>
+        <ul>
+          <li>Added translations: Catalan.</li>
+          <li>Updated translations: German and Japanese.</li>
+          <li>CSS tweaks.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.6.1" date="2021-11-16">
       <description>
         <ul>

@@ -340,11 +340,11 @@ msgstr "検索"
 
 #: ../data/ui/prefs.ui:98
 msgid "Allow live search on desktop"
-msgstr "デスクトップでのライブ検索を許可する"
+msgstr "デスクトップでの記事の検索を許可する"
 
 #: ../data/ui/prefs.ui:99
 msgid "Warning: all desktop searches will be sent to Wikipedia"
-msgstr "注意：デスクトップ検索した情報はすべてWikipediaに送信されます"
+msgstr "注意：検索した情報はすべてWikipediaに送信されます"
 
 #: ../data/ui/prefs.ui:117
 msgid "Personal Data"

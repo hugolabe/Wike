@@ -65,7 +65,7 @@ msgstr "Wikipediako artikuluak bilatu eta irakurri\n"
 #. Hugo Olabera <hugolabe@gmail.com>
 #: ../data/ui/about.ui:13
 msgid "translator-credits"
-msgstr "Sergio Varela (sergiovg01@outlook.com)"
+msgstr "Sergio Varela <sergiovg01@outlook.com>"
 
 #: ../src/view.py:397 ../data/ui/bookmarks.ui:58
 msgid "Add Bookmark"

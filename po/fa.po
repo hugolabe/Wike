@@ -37,15 +37,15 @@ msgstr "زبان جست‌وجوی پیش‌فرض: "
 
 #: ../src/bookmarks.py:138
 msgid "Clear Bookmarks List?"
-msgstr "فهرست نشانک‌ها پاک شود؟"
+msgstr "سیاههٔ نشانک‌ها پاک شود؟"
 
 #: ../src/bookmarks.py:140
 msgid "All bookmarks in the list will be removed permanently."
-msgstr "تمام نشانک‌های درون فهرست برای همیشه حذف می‌شوند."
+msgstr "تمام نشانک‌های درون سیاهه برای همیشه حذف می‌شوند."
 
 #: ../src/bookmarks.py:141 ../data/ui/bookmarks.ui:70
 msgid "Clear List"
-msgstr "پاک کردن فهرست"
+msgstr "پاک کردن سیاهه"
 
 #: ../data/ui/search-settings.ui:61
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:22
@@ -199,7 +199,7 @@ msgstr "رفتار"
 
 #: ../data/ui/prefs.ui:120
 msgid "Keep a list of recent articles"
-msgstr "فهرستی از مقالات تازه دیده شده نگه دار"
+msgstr "سیاهه‌ای از مقالات تازه دیده شده نگه دار"
 
 #: ../data/ui/prefs.ui:14
 msgid "General"
@@ -239,7 +239,7 @@ msgstr "چندین زبان"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:23
 msgid "List of recent articles"
-msgstr "فهرست مقالات تازه دیده شده"
+msgstr "سیاههٔ مقالات تازه دیده شده"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:24
 msgid "Simple bookmarks management"
@@ -409,7 +409,7 @@ msgstr "گزینه‌های اصلی"
 
 #: ../src/view.py:204
 msgid "Click the search button or press F2 to search articles in Wikipedia. You can also use the main menu to open Wikipedia main page, the list of recent articles or get a random article."
-msgstr "روی دکمهٔ جست‌وجو کلیک کنید یا F2 را بفشارید تا در مقالات ویکی‌پدیا جست‌وجو کنید. همچنین می‌توانید از گزینه‌های اصلی برای باز کردن صفحهٔ اصلی ویکی‌پدیا، فهرست مقالات تازه دیده شده یا دریافت یک مقالهٔ‌ تصادفی استفاده کنید."
+msgstr "روی دکمهٔ جست‌وجو کلیک کنید یا F2 را بفشارید تا در مقالات ویکی‌پدیا جست‌وجو کنید. همچنین می‌توانید از گزینه‌های اصلی برای باز کردن صفحهٔ اصلی ویکی‌پدیا، سیاههٔ مقالات تازه دیده شده یا دریافت یک مقالهٔ‌ تصادفی استفاده کنید."
 
 #: ../src/bookmarks.py:47
 msgid "<b>No Bookmarks</b>\n"
@@ -421,7 +421,7 @@ msgstr "<b>نشانکی وجود ندارد</b>\n"
 "\n"
 "<small>از دکمهٔ <i>افزودن نشانک</i> استفاده کنید\n"
 "یا Ctrl+D را برای افزودن\n"
-"مقالهٔ فعلی به فهرست بفشارید</small>"
+"مقالهٔ فعلی به سیاهه بفشارید</small>"
 
 #: ../data/ui/shortcuts.ui:96
 msgctxt "shortcut window"
@@ -454,7 +454,7 @@ msgstr "زبانهٔ جدید"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
 msgid "Open multiple articles in tabs"
-msgstr "باز مردن چندین مقاله در زبانه‌ها"
+msgstr "باز کردن چندین مقاله در زبانه‌ها"
 
 #: ../src/view.py:409
 msgid "Open Link in New Tab"

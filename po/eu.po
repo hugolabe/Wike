@@ -1,0 +1,472 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Wike\n"
+"Language: eu\n"
+
+#: ../src/view.py:207 ../src/view.py:295
+msgid "Article not found"
+msgstr "Artikulua ez da aurkitu"
+
+#: ../src/view.py:208
+msgid "Can't find any results for requested query"
+msgstr "Ez da emaitzarik aurkitu eskatutako kontsultarako"
+
+#: ../src/view.py:211 ../src/view.py:297
+msgid "Can't access Wikipedia"
+msgstr "Ezin da Wikipedian sartu"
+
+#: ../src/view.py:212
+msgid "Check your Internet connection and try again"
+msgstr "Egiaztatu zure Interneterako konexioa eta saiatu berriro"
+
+#: ../src/window.py:225 ../src/page.py:115
+msgid "New bookmark: "
+msgstr "Markagailu berria: "
+
+#: ../src/window.py:283
+msgid "Wikipedia URL copied to clipboard"
+msgstr "Wikipediaren URLa, paper-zorroan kopiatuta"
+
+#: ../src/search.py:260
+msgid "Default search language: "
+msgstr "Bilaketa-hizkuntza lehenetsia: "
+
+#: ../src/bookmarks.py:138
+msgid "Clear Bookmarks List?"
+msgstr "Faboritoen zerrenda ezabatu?"
+
+#: ../src/bookmarks.py:140
+msgid "All bookmarks in the list will be removed permanently."
+msgstr "Zerrendako markagailu guztiak etengabe ezabatuko dira."
+
+#: ../src/bookmarks.py:141 ../data/ui/bookmarks.ui:70
+msgid "Clear List"
+msgstr "Garbitu zerrenda"
+
+#: ../data/ui/search-settings.ui:61
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:22
+msgid "Search suggestions"
+msgstr "Bilaketa-iradokizunak"
+
+#: ../data/ui/about.ui:8
+msgid "Search and read Wikipedia articles\n"
+"All content from Wikipedia.org\n"
+"and available under CC BY-SA 3.0 unless otherwise noted"
+msgstr "Wikipediako artikuluak bilatu eta irakurri\n"
+"Wikipedia.org-eko eduki guztia\n"
+"Eta eskuragarri CC BY-SA 3.0 azpian, kontrakoa adierazi ezean"
+
+#. Add your name like this:
+#. 
+#. Hugo Olabera <hugolabe@gmail.com>
+#: ../data/ui/about.ui:13
+msgid "translator-credits"
+msgstr "Sergio Varela (sergiovg01@outlook.com)"
+
+#: ../src/view.py:397 ../data/ui/bookmarks.ui:58
+msgid "Add Bookmark"
+msgstr "Gehitu markagailua"
+
+#: ../data/ui/shortcuts.ui:14
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Orokorra"
+
+#: ../data/ui/shortcuts.ui:25
+msgctxt "shortcut window"
+msgid "Table of contents"
+msgstr "Edukien aurkibidea"
+
+#: ../data/ui/shortcuts.ui:32
+msgctxt "shortcut window"
+msgid "View article in other languages"
+msgstr "Ikusi artikulua beste hizkuntza batzuetan"
+
+#: ../data/ui/shortcuts.ui:39
+msgctxt "shortcut window"
+msgid "Search text in page"
+msgstr "Bilatu testua orrian"
+
+#. Agian hobe litzateke "Doikuntzak" edo "ezarpenak" esatea, "Lehentasunak" esan beharrean
+#: ../data/ui/shortcuts.ui:46
+msgctxt "shortcut window"
+msgid "Preferences"
+msgstr "Ezarpenak"
+
+#: ../data/ui/shortcuts.ui:53
+msgctxt "shortcut window"
+msgid "Copy Wikipedia URL"
+msgstr "Kopiatu Wikipediaren URLa"
+
+#: ../data/ui/shortcuts.ui:60
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Utzi"
+
+#: ../data/ui/shortcuts.ui:67
+msgctxt "shortcut window"
+msgid "Keyboard shortcuts"
+msgstr "Teklatu-lasterbideak"
+
+#: ../data/ui/shortcuts.ui:130
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Nabigazioa"
+
+#: ../data/ui/shortcuts.ui:134
+msgctxt "shortcut window"
+msgid "Search articles"
+msgstr "Bilatu artikuluak"
+
+#: ../data/ui/shortcuts.ui:141
+msgctxt "shortcut window"
+msgid "Wikipedia main page"
+msgstr "Wikipediako hasierako orria"
+
+#: ../data/ui/shortcuts.ui:148
+msgctxt "shortcut window"
+msgid "Show recent articles"
+msgstr "Erakutsi artikulu berriak"
+
+#: ../data/ui/shortcuts.ui:155
+msgctxt "shortcut window"
+msgid "Previous page"
+msgstr "Aurreko orria"
+
+#: ../data/ui/shortcuts.ui:162
+msgctxt "shortcut window"
+msgid "Next page"
+msgstr "Hurrengo orria"
+
+#: ../data/ui/shortcuts.ui:169
+msgctxt "shortcut window"
+msgid "Reload page"
+msgstr "Berriro kargatu orria"
+
+#. Edo "Markatzaileak"
+#: ../data/ui/shortcuts.ui:76
+msgctxt "shortcut window"
+msgid "Bookmarks"
+msgstr "Markagailuak"
+
+#: ../data/ui/shortcuts.ui:80
+msgctxt "shortcut window"
+msgid "Show bookmarks"
+msgstr "Erakutsi markagailuak"
+
+#: ../data/ui/shortcuts.ui:87
+msgctxt "shortcut window"
+msgid "Add bookmark"
+msgstr "Gehitu markagailu bat"
+
+#: ../src/prefs.py:80 ../data/ui/menu.ui:101
+msgid "Wikipedia Main Page"
+msgstr "Wikipediako Hasierako Orria"
+
+#: ../src/view.py:293 ../data/ui/menu.ui:127
+msgid "Recent Articles"
+msgstr "Artikulu berriak"
+
+#: ../data/ui/menu.ui:151
+msgid "Search Text in Page"
+msgstr "Bilatu testua orrian"
+
+#: ../data/ui/menu.ui:164
+msgid "Open Wikipedia Page in Browser"
+msgstr "Ireki Wikipediaren orria nabigatzailean"
+
+#: ../data/ui/menu.ui:177
+msgid "Copy Wikipedia URL to Clipboard"
+msgstr "Kopiatu Wikipediaren URLa paper-zorroan"
+
+#: ../data/ui/menu.ui:201
+msgid "Preferences"
+msgstr "Lehentasunak"
+
+#: ../data/ui/menu.ui:214
+msgid "Keyboard Shortcuts"
+msgstr "Teklatu-lasterbideak"
+
+#: ../data/ui/menu.ui:227
+msgid "About Wike"
+msgstr "Wikeri buruz"
+
+#: ../data/ui/prefs.ui:20
+msgid "Behavior"
+msgstr "Portaera"
+
+#: ../data/ui/prefs.ui:120
+msgid "Keep a list of recent articles"
+msgstr "Mantendu artikulu berrien zerrenda"
+
+#: ../data/ui/prefs.ui:14
+msgid "General"
+msgstr "Orokorra"
+
+#: ../data/ui/prefs.ui:163
+msgid "Languages"
+msgstr "Hizkuntzak"
+
+#: ../src/page.py:78 ../src/page.py:81
+msgid "Loading Article"
+msgstr "Artikulua kargatzen"
+
+#. Don't translate app name!
+#: ../data/com.github.hugolabe.Wike.desktop.in:3
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:7
+msgid "Wike"
+msgstr "Wike"
+
+#: ../src/view.py:203 ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
+msgid "Search and read Wikipedia articles"
+msgstr "Wikipediako artikuluak bilatu eta irakurri"
+
+#. Don't remove semicolons!
+#: ../data/com.github.hugolabe.Wike.desktop.in:10
+msgid "Wikipedia;Encyclopedia;"
+msgstr "Wikipedia;Entziklopedia;"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:11
+msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
+msgstr "Wike Wikipediako irakurlea da GNOME mahaigainarako. Online entziklopedia honen eduki guztirako sarbidea ematen du aplikazio natibo batean, ikuspegi errazagoarekin eta artikuluen distrakziorik gabe."
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:21
+msgid "Multiple languages"
+msgstr "Hizkuntza ugari"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:23
+msgid "List of recent articles"
+msgstr "Artikulu berrien zerrenda"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:24
+msgid "Simple bookmarks management"
+msgstr "Markagailuen kudeaketa erraza"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:25
+msgid "Text search in articles"
+msgstr "Testu bilaketa artikuluetan"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
+msgid "Article table of contents"
+msgstr "Artikuluaren aurkibidea"
+
+#: ../data/ui/header.ui:154 ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
+msgid "View article in other languages"
+msgstr "Ikusi artikulua beste hizkuntza batzuetan"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
+msgid "Features:"
+msgstr "Ezaugarriak:"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
+msgid "GNOME Shell search integration"
+msgstr "Bilaketa GNOME Shellen integratua"
+
+#: ../src/prefs.py:148
+msgid "Clear Historic?"
+msgstr "Historia garbitu?"
+
+#: ../src/prefs.py:150
+msgid "The history of visited articles will be deleted permanently."
+msgstr "Bisitatutako artikuluen historia etengabe ezabatuko da."
+
+#: ../src/prefs.py:151
+msgid "Clear Historic"
+msgstr "Historia garbitu"
+
+#: ../src/prefs.py:168
+msgid "Clear Personal Data?"
+msgstr "Datu pertsonalak garbitu?"
+
+#: ../src/prefs.py:170
+msgid "Cookies and cache data will be deleted permanently."
+msgstr "Cookieak eta katxearen datuak modu iraunkorrean ezabatuko dira."
+
+#: ../src/prefs.py:171
+msgid "Clear Data"
+msgstr "Garbitu datuak"
+
+#. Don't remove %s tag!
+#: ../src/wike-sp.in:71
+msgid "Search “%s” on Wikipedia"
+msgstr "Bilatu “%s” Wikipedian"
+
+#: ../data/ui/prefs.ui:23
+msgid "Home page"
+msgstr "Hasierako orria"
+
+#: ../data/ui/prefs.ui:24
+msgid "The page that will be displayed when Wike starts"
+msgstr "Wike hasten denean erakutsiko den orria"
+
+#: ../data/ui/prefs.ui:34
+msgid "Article View"
+msgstr "Artikuluaren ikuspegia"
+
+#: ../data/ui/prefs.ui:37
+msgid "Font size"
+msgstr "Letraren tamaina"
+
+#: ../data/ui/prefs.ui:38
+msgid "Font size for article view (default is 16)"
+msgstr "Artikuluaren bistarako letraren tamaina (besterik adierazi ezean, 16 da)"
+
+#: ../data/ui/prefs.ui:55
+msgid "Use custom font"
+msgstr "Letra mota pertsonalizatu bat erabili"
+
+#: ../data/ui/prefs.ui:56
+msgid "Choose a font for the article view"
+msgstr "Aukeratu letra-mota bat artikulua ikusteko"
+
+#: ../data/ui/prefs.ui:69
+msgid "Preview popups in article links"
+msgstr "Artikuluen esteketan agertzen diren leihoen aurretiko bista"
+
+#: ../data/ui/prefs.ui:70
+msgid "Show a preview of the article when hovering over a link"
+msgstr "Lotura baten gainetik igarotzean, artikuluaren aldez aurreko ikuspegia erakutsi"
+
+#: ../data/ui/prefs.ui:89
+msgid "Privacy"
+msgstr "Pribatutasuna"
+
+#: ../data/ui/prefs.ui:95
+msgid "Search"
+msgstr "Bilatu"
+
+#: ../data/ui/prefs.ui:98
+msgid "Allow live search on desktop"
+msgstr "Gaimahaian bilaketa zuzenean egiteko aukera eman"
+
+#: ../data/ui/prefs.ui:99
+msgid "Warning: all desktop searches will be sent to Wikipedia"
+msgstr "Oharra: gaimahaiko bilaketa guztiak Wikipediara bidaliko dira"
+
+#: ../data/ui/prefs.ui:117
+msgid "Personal Data"
+msgstr "Datu pertsonalak"
+
+#: ../data/ui/prefs.ui:121
+msgid "Wike will remember the history of visited articles"
+msgstr "Wikek bisitatutako artikuluen historia gogoratuko du"
+
+#: ../data/ui/prefs.ui:133 ../data/ui/prefs.ui:148
+msgid "Clear"
+msgstr "Garbitu"
+
+#: ../data/ui/prefs.ui:143
+msgid "Clear personal data"
+msgstr "Ezabatu datu pertsonalak"
+
+#: ../data/ui/prefs.ui:144
+msgid "Cookies and cache data will be deleted"
+msgstr "Cookieak eta katxearen datuak ezabatuko dira"
+
+#: ../src/view.py:215
+msgid "Try Again"
+msgstr "Saiatu berriro"
+
+#: ../src/prefs.py:80 ../data/ui/menu.ui:114
+msgid "Random Article"
+msgstr "Ausazko artikulua"
+
+#: ../src/prefs.py:80
+msgid "Last Article"
+msgstr "Azken artikulua"
+
+#: ../data/ui/header.ui:79
+msgid "Search articles"
+msgstr "Bilatu artikuluak"
+
+#: ../data/ui/header.ui:113
+msgid "Bookmarks"
+msgstr "Markagailuak"
+
+#: ../data/ui/header.ui:135
+msgid "Table of contents"
+msgstr "Edukien aurkibidea"
+
+#: ../data/ui/prefs.ui:169
+msgid "Filter Available Languages"
+msgstr "Hizkuntza erabilgarriak iragazi"
+
+#: ../data/ui/prefs.ui:203
+msgid "Select All"
+msgstr "Hautatu dena"
+
+#: ../data/ui/prefs.ui:215
+msgid "Select None"
+msgstr "Hautatu bat ere ez"
+
+#: ../data/ui/shortcuts.ui:18
+msgctxt "shortcut window"
+msgid "Main menu"
+msgstr "Menu nagusia"
+
+#: ../src/view.py:204
+msgid "Click the search button or press F2 to search articles in Wikipedia. You can also use the main menu to open Wikipedia main page, the list of recent articles or get a random article."
+msgstr "Egin klik bilaketa-botoian edo sakatu F2 Wikipedian artikuluak bilatzeko. Menu nagusia ere erabil dezakezu Wikipediako orri nagusia irekitzeko, edo artikulu berrien zerrenda edo ausazko artikulu bat lortzeko."
+
+#: ../src/bookmarks.py:47
+msgid "<b>No Bookmarks</b>\n"
+"\n"
+"<small>Use the <i>Add Bookmark</i> button\n"
+"or press Ctrl+D to add\n"
+"the current article to the list</small>"
+msgstr "<b>Markatzailerik gabe</b>\n"
+"\n"
+"<small>Erabili <i>Gehitu markatzailea</i> botoia\n"
+"edo sakatu Ctrl+D \n"
+"artikulua zerrendara gehitzeko</small>"
+
+#: ../data/ui/shortcuts.ui:96
+msgctxt "shortcut window"
+msgid "Tabs"
+msgstr "Erlaitzak"
+
+#: ../data/ui/shortcuts.ui:100
+msgctxt "shortcut window"
+msgid "New tab"
+msgstr "Erlaitz berria"
+
+#: ../data/ui/shortcuts.ui:107
+msgctxt "shortcut window"
+msgid "Close current tab"
+msgstr "Itxi oraingo erlaitza"
+
+#: ../data/ui/shortcuts.ui:114
+msgctxt "shortcut window"
+msgid "Next tab"
+msgstr "Hurrengo erlaitza"
+
+#: ../data/ui/shortcuts.ui:121
+msgctxt "shortcut window"
+msgid "Previous tab"
+msgstr "Aurreko erlaitza"
+
+#: ../data/ui/header.ui:61
+msgid "New tab"
+msgstr "Erlaitz berria"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
+msgid "Open multiple articles in tabs"
+msgstr "Ireki hainbat artikulu erlaitzetan"
+
+#: ../src/view.py:409
+msgid "Open Link in New Tab"
+msgstr "Ireki esteka erlaitz berri batean"
+
+#: ../src/view.py:411
+msgid "Add Link to Bookmarks"
+msgstr "Gehitu esteka markagailuetara"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:29
+msgid "Light, dark and sepia themes"
+msgstr "Gai argiak, ilunak eta sepia"
+

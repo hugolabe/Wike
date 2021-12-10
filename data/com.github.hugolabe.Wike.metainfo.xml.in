@@ -53,6 +53,14 @@
   </screenshots>
 
   <releases>
+    <release version="1.6.3" date="2021-12-10">
+      <description>
+        <ul>
+          <li>Added Basque translation.</li>
+          <li>Updated Persian translation.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.6.2" date="2021-12-03">
       <description>
         <ul>

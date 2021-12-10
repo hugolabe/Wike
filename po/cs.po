@@ -446,5 +446,5 @@ msgstr "Zrušit výběr"
 #: ../data/ui/shortcuts.ui:18
 msgctxt "shortcut window"
 msgid "Main menu"
-msgstr ""
+msgstr "Hlavní nabídka"
 

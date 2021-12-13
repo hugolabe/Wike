@@ -33,7 +33,7 @@ msgstr "URL da Wikipédia copiado para a área de transferência"
 
 #: ../src/search.py:260
 msgid "Default search language: "
-msgstr "Língua da pesquisa padrão: "
+msgstr "Língua de pesquisa padrão: "
 
 #: ../src/bookmarks.py:138
 msgid "Clear Bookmarks List?"
@@ -58,19 +58,20 @@ msgid "Search and read Wikipedia articles\n"
 "and available under CC BY-SA 3.0 unless otherwise noted"
 msgstr "Pesquise e leia artigos da Wikipédia\n"
 "Todo conteúdo do Wikipedia.org\n"
-"e disponível pela CC BY-SA 3.0 se não mencionado explicitamente"
+"é disponível pela CC BY-SA 3.0 se não mencionado explicitamente"
 
 #. Add your name like this:
 #. 
 #. Hugo Olabera <hugolabe@gmail.com>
 #: ../data/ui/about.ui:13
 msgid "translator-credits"
-msgstr "Gustavo Machado Peredo\n"
+msgstr "Gabriel Gian <gabrielgian@protonmail.com>\n"
+"Gustavo Machado Peredo\n"
 "Gustavo Costa <xfgusta@gmail.com>"
 
 #: ../src/view.py:397 ../data/ui/bookmarks.ui:58
 msgid "Add Bookmark"
-msgstr "Adicionar favorito"
+msgstr "Adicionar Favorito"
 
 #: ../data/ui/shortcuts.ui:14
 msgctxt "shortcut window"
@@ -100,12 +101,12 @@ msgstr "Preferências"
 #: ../data/ui/shortcuts.ui:53
 msgctxt "shortcut window"
 msgid "Copy Wikipedia URL"
-msgstr "Copia o URL da Wikipédia"
+msgstr "Copiar o URL da Wikipédia"
 
 #: ../data/ui/shortcuts.ui:60
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr "Fechar"
+msgstr "Sair"
 
 #: ../data/ui/shortcuts.ui:67
 msgctxt "shortcut window"
@@ -120,7 +121,7 @@ msgstr "Navegação"
 #: ../data/ui/shortcuts.ui:134
 msgctxt "shortcut window"
 msgid "Search articles"
-msgstr "Pesquisa artigos"
+msgstr "Pesquisar artigos"
 
 #: ../data/ui/shortcuts.ui:141
 msgctxt "shortcut window"
@@ -130,7 +131,7 @@ msgstr "Página principal da Wikipédia"
 #: ../data/ui/shortcuts.ui:148
 msgctxt "shortcut window"
 msgid "Show recent articles"
-msgstr "Mostra artigos recentes"
+msgstr "Mostrar artigos recentes"
 
 #: ../data/ui/shortcuts.ui:155
 msgctxt "shortcut window"
@@ -155,16 +156,16 @@ msgstr "Favoritos"
 #: ../data/ui/shortcuts.ui:80
 msgctxt "shortcut window"
 msgid "Show bookmarks"
-msgstr "Mostra favoritos"
+msgstr "Mostrar Favoritos"
 
 #: ../data/ui/shortcuts.ui:87
 msgctxt "shortcut window"
 msgid "Add bookmark"
-msgstr "Adiciona favorito"
+msgstr "Adicionar Favorito"
 
 #: ../src/prefs.py:80 ../data/ui/menu.ui:101
 msgid "Wikipedia Main Page"
-msgstr "Página principal da Wikipédia"
+msgstr "Página Principal da Wikipédia"
 
 #: ../src/view.py:293 ../data/ui/menu.ui:127
 msgid "Recent Articles"
@@ -180,7 +181,7 @@ msgstr "Abrir página da Wikipédia no navegador"
 
 #: ../data/ui/menu.ui:177
 msgid "Copy Wikipedia URL to Clipboard"
-msgstr "Copiar URL para área de transferência"
+msgstr "Copiar URL para a área de transferência"
 
 #: ../data/ui/menu.ui:201
 msgid "Preferences"
@@ -244,7 +245,7 @@ msgstr "Lista de artigos recentes"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:24
 msgid "Simple bookmarks management"
-msgstr "Manuseio simples de favoritos"
+msgstr "Gerenciamento simples de favoritos"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:25
 msgid "Text search in articles"
@@ -293,7 +294,7 @@ msgstr "Apagar dados"
 #. Don't remove %s tag!
 #: ../src/wike-sp.in:71
 msgid "Search “%s” on Wikipedia"
-msgstr "Pesquisar «%s» na Wikipédia"
+msgstr "Pesquisar \"%s\" na Wikipédia"
 
 #: ../data/ui/prefs.ui:23
 msgid "Home page"
@@ -313,7 +314,7 @@ msgstr "Tamanho da fonte"
 
 #: ../data/ui/prefs.ui:38
 msgid "Font size for article view (default is 16)"
-msgstr "Tamanho da fonte para visualização do artigo (o padrão é 16)"
+msgstr "Tamanho da fonte para a visualização do artigo (16 por padrão)"
 
 #: ../data/ui/prefs.ui:55
 msgid "Use custom font"
@@ -329,7 +330,7 @@ msgstr "Visualizar pop-ups em links de artigos"
 
 #: ../data/ui/prefs.ui:70
 msgid "Show a preview of the article when hovering over a link"
-msgstr "Mostra uma prévia do artigo ao passar o mouse sobre um link"
+msgstr "Mostra uma prévia do artigo ao passar o cursor sobre um link"
 
 #: ../data/ui/prefs.ui:89
 msgid "Privacy"
@@ -341,7 +342,7 @@ msgstr "Pesquisa"
 
 #: ../data/ui/prefs.ui:98
 msgid "Allow live search on desktop"
-msgstr "Permitir pesquisa ao vivo no desktop"
+msgstr "Permitir pesquisa em tempo real no desktop"
 
 #: ../data/ui/prefs.ui:99
 msgid "Warning: all desktop searches will be sent to Wikipedia"
@@ -353,7 +354,7 @@ msgstr "Dados pessoais"
 
 #: ../data/ui/prefs.ui:121
 msgid "Wike will remember the history of visited articles"
-msgstr "Wike se lembrará do histórico dos artigos visitados"
+msgstr "Wike se lembrará do histórico de artigos visitados"
 
 #: ../data/ui/prefs.ui:133 ../data/ui/prefs.ui:148
 msgid "Clear"
@@ -381,7 +382,7 @@ msgstr "Último artigo"
 
 #: ../data/ui/header.ui:79
 msgid "Search articles"
-msgstr "Pesquisa artigos"
+msgstr "Pesquisar artigos"
 
 #: ../data/ui/header.ui:113
 msgid "Bookmarks"
@@ -437,7 +438,7 @@ msgstr "Nova aba"
 #: ../data/ui/shortcuts.ui:107
 msgctxt "shortcut window"
 msgid "Close current tab"
-msgstr "Fecha a aba atual"
+msgstr "Fechar aba atual"
 
 #: ../data/ui/shortcuts.ui:114
 msgctxt "shortcut window"
@@ -455,11 +456,11 @@ msgstr "Nova aba"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
 msgid "Open multiple articles in tabs"
-msgstr "Abra vários artigos em abas"
+msgstr "Abrir múltiplos artigos em abas"
 
 #: ../src/view.py:409
 msgid "Open Link in New Tab"
-msgstr "Abrir link numa nova aba"
+msgstr "Abrir link em uma nova aba"
 
 #: ../src/view.py:411
 msgid "Add Link to Bookmarks"

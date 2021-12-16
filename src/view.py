@@ -382,16 +382,21 @@ class WikiView(WebKit2.WebView):
     if hit_test.context_is_editable() or hit_test.context_is_media() or hit_test.context_is_scrollbar():
       return True
 
-    action_bookmark = Gio.SimpleAction.new('add_bookmark', GLib.VariantType('s'))
-    action_bookmark.connect('activate', self._add_bookmark_cb)
     action_tab = Gio.SimpleAction.new('new_tab', GLib.VariantType('s'))
     action_tab.connect('activate', self._new_tab_cb)
+    action_browser = Gio.SimpleAction.new('open_browser', GLib.VariantType('s'))
+    action_browser.connect('activate', self._open_browser_cb)
+    action_bookmark = Gio.SimpleAction.new('add_bookmark', GLib.VariantType('s'))
+    action_bookmark.connect('activate', self._add_bookmark_cb)
+    action_clipboard = Gio.SimpleAction.new('copy_link', GLib.VariantType('s'))
+    action_clipboard.connect('activate', self._copy_link_cb)
 
     if hit_test.get_context() == WebKit2.HitTestResultContext.DOCUMENT:
       base_uri = self.get_base_uri()
       uri = self._is_wiki_uri(base_uri)
       if uri == '' or uri in bookmarks.items:
         action_bookmark.set_enabled(False)
+
       item = WebKit2.ContextMenuItem.new_separator()
       menu.append(item)
       item = WebKit2.ContextMenuItem.new_from_gaction(action_bookmark, _('Add Bookmark'), GLib.Variant.new_string(uri))
@@ -406,9 +411,18 @@ class WikiView(WebKit2.WebView):
       else:
         if uri in bookmarks.items:
           action_bookmark.set_enabled(False)
+
+      if uri != '':
+        link = uri
       item = WebKit2.ContextMenuItem.new_from_gaction(action_tab, _('Open Link in New Tab'), GLib.Variant.new_string(uri))
       menu.append(item)
+      item = WebKit2.ContextMenuItem.new_from_gaction(action_browser, _('Open Link in Browser'), GLib.Variant.new_string(link))
+      menu.append(item)
+      item = WebKit2.ContextMenuItem.new_separator()
+      menu.append(item)
       item = WebKit2.ContextMenuItem.new_from_gaction(action_bookmark, _('Add Link to Bookmarks'), GLib.Variant.new_string(uri))
+      menu.append(item)
+      item = WebKit2.ContextMenuItem.new_from_gaction(action_clipboard, _('Copy Link to Clipboard'), GLib.Variant.new_string(link))
       menu.append(item)
 
     allowed_actions = (WebKit2.ContextMenuAction.NO_ACTION,
@@ -417,7 +431,8 @@ class WikiView(WebKit2.WebView):
                        WebKit2.ContextMenuAction.GO_FORWARD,
                        WebKit2.ContextMenuAction.RELOAD,
                        WebKit2.ContextMenuAction.COPY,
-                       WebKit2.ContextMenuAction.COPY_IMAGE_TO_CLIPBOARD)
+                       WebKit2.ContextMenuAction.COPY_IMAGE_TO_CLIPBOARD,
+                       WebKit2.ContextMenuAction.COPY_IMAGE_URL_TO_CLIPBOARD)
 
     items = menu.get_items()
     for item in items:
@@ -425,6 +440,18 @@ class WikiView(WebKit2.WebView):
         menu.remove(item)
 
     return False
+
+  # On context menu activated open link in new tab
+
+  def _new_tab_cb(self, action, parameter):
+    uri = parameter.get_string()
+    self.emit('new-page', uri)
+
+  # On context menu activated open link in browser
+
+  def _open_browser_cb(self, action, parameter):
+    uri = parameter.get_string()
+    Gtk.show_uri(None, uri, Gdk.CURRENT_TIME)
 
   # On context menu activated add bookmark
 
@@ -441,9 +468,10 @@ class WikiView(WebKit2.WebView):
 
     self.emit('add-bookmark', uri, title, lang)
 
-  # On context menu activated open new tab
+  # On context menu activated copy link to clipboard
 
-  def _new_tab_cb(self, action, parameter):
+  def _copy_link_cb(self, action, parameter):
     uri = parameter.get_string()
-    self.emit('new-page', uri)
+    clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
+    clipboard.set_text(uri, -1)
 

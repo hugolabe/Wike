@@ -24,15 +24,10 @@ import os
 import gi
 from gi.repository import Gio, GLib
 
-from wike import wikipedia
 
-
-# Create app settings object and set search language
+# Create app settings object and set data path variable
 
 settings = Gio.Settings.new('com.github.hugolabe.Wike')
-if settings.get_string('search-language') != 'en':
-  wikipedia.set_lang(settings.get_string('search-language'))
-
 _data_path = GLib.get_user_data_dir()
 
 

@@ -58,7 +58,7 @@ class SearchEntry(Gtk.SearchEntry):
 
   def _search_wikipedia(self, text):
     try:
-      self.results_list = wikipedia.search(text.lower(), 10)
+      self.results_list = wikipedia.search(text.lower(), settings.get_string('search-language'), 10)
     except:
       self.results_list = None
     self._results_changed = True
@@ -127,7 +127,7 @@ class SearchEntry(Gtk.SearchEntry):
     text = self.get_text()
     if text != '':
       try:
-        result = wikipedia.search(text.lower(), 1)
+        result = wikipedia.search(text.lower(), settings.get_string('search-language'), 1)
       except:
         self.window.page.wikiview.load_message('notfound', None)
       else:
@@ -255,7 +255,6 @@ class SettingsPopover(Gtk.Popover):
     search_entry = self.get_relative_to()
     search_entry.set_icon_tooltip_text(Gtk.EntryIconPosition.PRIMARY, languages.wikilangs[row.lang_id].capitalize())
     settings.set_string('search-language', row.lang_id)
-    wikipedia.set_lang(row.lang_id)
     self.hide()
     message = _('Default search language: ') + row.lang_name
     self._window.show_notification(message)

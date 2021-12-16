@@ -190,7 +190,7 @@ class WikiView(WebKit2.WebView):
 
   def load_random(self):
     try:
-      uri = wikipedia.get_random()
+      uri = wikipedia.get_random(settings.get_string('search-language'))
       self.load_wiki(uri)
     except:
       self.load_message('notfound', None)

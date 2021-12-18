@@ -94,16 +94,22 @@
             <property name="can-focus">False</property>
             <property name="title" translatable="yes">Search</property>
             <child>
-              <object class="HdyActionRow">
+              <object class="HdyExpanderRow">
                 <property name="title" translatable="yes">Allow live search on desktop</property>
                 <property name="subtitle" translatable="yes">Warning: all desktop searches will be sent to Wikipedia</property>
                 <property name="visible">True</property>
-                <property name="activatable_widget">desktop_search_switch</property>
-                <child>
+                <child type="prefix">
                   <object class="GtkSwitch" id="desktop_search_switch">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="valign">center</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="HdyActionRow">
+                    <property name="title" translatable="yes">Desktop searches are performed in the default language</property>
+                    <property name="subtitle" translatable="yes">You can search in other languages ​​using a prefix. Eg. -es to search in Spanish</property>
+                    <property name="visible">True</property>
                   </object>
                 </child>
               </object>

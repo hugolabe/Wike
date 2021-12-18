@@ -19,6 +19,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 
+import os
 import gettext
 from threading import Thread
 
@@ -28,14 +29,17 @@ from dbus.mainloop.glib import DBusGMainLoop
 
 from gi.repository import GLib, Gio
 
-from wike import wikipedia
-from wike.data import settings
-
-
+pkgdatadir = '@pkgdatadir@'
 localedir = '@localedir@'
+
+resource = Gio.Resource.load(os.path.join(pkgdatadir, 'wike.gresource'))
+resource._register()
 gettext.install('wike', localedir)
 
 sbn = dict(dbus_interface='org.gnome.Shell.SearchProvider2')
+
+from wike import wikipedia
+from wike.data import settings, languages
 
 
 # Search provider service class
@@ -51,9 +55,8 @@ class WikeSearchService(dbus.service.Object):
 
     self._results = dict()
     self._search_thread = None
+    self._lang = settings.get_string('search-language')
 
-    if settings.get_string('search-language') != 'en':
-      wikipedia.set_lang(settings.get_string('search-language'))
     settings.connect('changed::search-language', self._search_lang_changed_cb)
 
   # Get results for first search
@@ -61,13 +64,23 @@ class WikeSearchService(dbus.service.Object):
   @dbus.service.method(in_signature='as', out_signature='as', **sbn)
   def GetInitialResultSet(self, terms):
     text = ' '.join(terms)
+    lang = self._lang
     self._results.clear()
+
+    if text.startswith('-'):
+      prefix = terms[0].lstrip('-')
+      if prefix in languages.wikilangs.keys():
+        lang = prefix
+      if len(terms) > 1:
+        text = text.split(' ', 1)[1]
+      else:
+        text = ''
 
     if len(text) > 2:
       if settings.get_boolean('search-desktop'):
-        self._get_results(text)
+        self._get_results(text, lang)
       else:
-        key = 'search:' + text
+        key = 'search:' + lang + ':' + text
         value = _('Search “%s” on Wikipedia') % text
         self._results[key] = value
 
@@ -98,7 +111,8 @@ class WikeSearchService(dbus.service.Object):
     if id.startswith('search'):
       self._results.clear()
       text = id.replace('search:', '', 1)
-      self._get_results(text)
+      params = text.split(':', 1)
+      self._get_results(params[1], params[0])
       if len(self._results) > 0:
         uri = list(self._results.keys())[0]
       else:
@@ -116,19 +130,19 @@ class WikeSearchService(dbus.service.Object):
 
   # Run Wikipedia search in new thread
 
-  def _get_results(self, text):
+  def _get_results(self, text, lang):
     if self._search_thread:
       self._search_thread.join()
-    self._search_thread = Thread(target=self._search_wikipedia, args=(text, ))
+    self._search_thread = Thread(target=self._search_wikipedia, args=(text, lang, ))
     self._search_thread.start()
     self._search_thread.join()
     self._search_thread = None
 
   # Search text in Wikipedia and load results dict
 
-  def _search_wikipedia(self, text):
+  def _search_wikipedia(self, text, lang):
     try:
-      found = wikipedia.search(text.lower(), 5)
+      found = wikipedia.search(text.lower(), lang, 5)
     except:
       found = None
     if found:
@@ -138,8 +152,7 @@ class WikeSearchService(dbus.service.Object):
   # Search language changed in app settings
 
   def _search_lang_changed_cb(self, settings, key):
-    search_lang = settings.get_string('search-language')
-    wikipedia.set_lang(search_lang)
+    self._lang = settings.get_string('search-language')
 
 
 if __name__ == "__main__":

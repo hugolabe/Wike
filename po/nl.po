@@ -31,7 +31,7 @@ msgstr "Nieuwe bladwijzer: "
 msgid "Wikipedia URL copied to clipboard"
 msgstr "De Wikipedia-url is gekopieerd naar het klembord"
 
-#: ../src/search.py:260
+#: ../src/search.py:259
 msgid "Default search language: "
 msgstr "Standaard zoektaal: "
 
@@ -68,7 +68,7 @@ msgstr "Zoek naar en lees Wikipedia-artikelen\n"
 msgid "translator-credits"
 msgstr "Heimen Stoffels <vistausss@fastmail.com>"
 
-#: ../src/view.py:397 ../data/ui/bookmarks.ui:58
+#: ../src/view.py:402 ../data/ui/bookmarks.ui:58
 msgid "Add Bookmark"
 msgstr "Bladwijzer toevoegen"
 
@@ -198,7 +198,7 @@ msgstr "Over Wike"
 msgid "Behavior"
 msgstr "Gedrag"
 
-#: ../data/ui/prefs.ui:120
+#: ../data/ui/prefs.ui:126
 msgid "Keep a list of recent articles"
 msgstr "Lijst met recente artikelen bijhouden"
 
@@ -206,7 +206,7 @@ msgstr "Lijst met recente artikelen bijhouden"
 msgid "General"
 msgstr "Algemeen"
 
-#: ../data/ui/prefs.ui:163
+#: ../data/ui/prefs.ui:169
 msgid "Languages"
 msgstr "Talen"
 
@@ -291,7 +291,7 @@ msgid "Clear Data"
 msgstr "Gegevens wissen"
 
 #. Don't remove %s tag!
-#: ../src/wike-sp.in:71
+#: ../src/wike-sp.in:84
 msgid "Search “%s” on Wikipedia"
 msgstr "«%s» opzoeken op Wikipedia"
 
@@ -347,23 +347,23 @@ msgstr "Live-zoeken gebruiken"
 msgid "Warning: all desktop searches will be sent to Wikipedia"
 msgstr "Waarschuwing: alle zoekopdrachten worden gedeeld met Wikipedia"
 
-#: ../data/ui/prefs.ui:117
+#: ../data/ui/prefs.ui:123
 msgid "Personal Data"
 msgstr "Persoonlijke gegevens"
 
-#: ../data/ui/prefs.ui:121
+#: ../data/ui/prefs.ui:127
 msgid "Wike will remember the history of visited articles"
 msgstr "Wike bewaart de geschiedenis van bezochte artikelen"
 
-#: ../data/ui/prefs.ui:133 ../data/ui/prefs.ui:148
+#: ../data/ui/prefs.ui:139 ../data/ui/prefs.ui:154
 msgid "Clear"
 msgstr "Wissen"
 
-#: ../data/ui/prefs.ui:143
+#: ../data/ui/prefs.ui:149
 msgid "Clear personal data"
 msgstr "Persoonlijke gegevens wissen"
 
-#: ../data/ui/prefs.ui:144
+#: ../data/ui/prefs.ui:150
 msgid "Cookies and cache data will be deleted"
 msgstr "De cookies en cache worden gewist"
 
@@ -391,15 +391,15 @@ msgstr "Bladwijzers"
 msgid "Table of contents"
 msgstr "Inhoudsopgave"
 
-#: ../data/ui/prefs.ui:169
+#: ../data/ui/prefs.ui:175
 msgid "Filter Available Languages"
 msgstr "Beschikbare talen filteren"
 
-#: ../data/ui/prefs.ui:203
+#: ../data/ui/prefs.ui:209
 msgid "Select All"
 msgstr "Alles selecteren"
 
-#: ../data/ui/prefs.ui:215
+#: ../data/ui/prefs.ui:221
 msgid "Select None"
 msgstr "Niets selecteren"
 
@@ -457,15 +457,31 @@ msgstr "Nieuw tabblad"
 msgid "Open multiple articles in tabs"
 msgstr "Meerdere artikelen op tabbladen openen"
 
-#: ../src/view.py:409
+#: ../src/view.py:417
 msgid "Open Link in New Tab"
 msgstr "Link openen op nieuw tabblad"
 
-#: ../src/view.py:411
+#: ../src/view.py:423
 msgid "Add Link to Bookmarks"
 msgstr "Link toevoegen aan bladwijzers"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:29
 msgid "Light, dark and sepia themes"
 msgstr "Lichte, donkere en sepiathema's"
+
+#: ../src/view.py:419
+msgid "Open Link in Browser"
+msgstr "Link openen in browser"
+
+#: ../src/view.py:425
+msgid "Copy Link to Clipboard"
+msgstr "Link kopiëren naar klembord"
+
+#: ../data/ui/prefs.ui:110
+msgid "Desktop searches are performed in the default language"
+msgstr "Zoekopdrachten worden uitgevoerd in de standaardtaal"
+
+#: ../data/ui/prefs.ui:111
+msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
+msgstr "Met behulp van een voorvoegsel kunt u een andere taal opgeven. Voorbeeld: -es zoekt in het Spaans."
 

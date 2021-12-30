@@ -31,7 +31,7 @@ msgstr "Nova oznaka: "
 msgid "Wikipedia URL copied to clipboard"
 msgstr "URL adresa Wikipedije je kopirana u međuspremnikK"
 
-#: ../src/search.py:260
+#: ../src/search.py:259
 msgid "Default search language: "
 msgstr "Standardni jezik pretrage: "
 
@@ -67,7 +67,7 @@ msgstr "Traži i čitaj Wikipedijine članke\n"
 msgid "translator-credits"
 msgstr "Milo Ivir <mail@milotype.de>"
 
-#: ../src/view.py:397 ../data/ui/bookmarks.ui:58
+#: ../src/view.py:402 ../data/ui/bookmarks.ui:58
 msgid "Add Bookmark"
 msgstr "Dodaj oznaku"
 
@@ -197,7 +197,7 @@ msgstr "Wike informacije"
 msgid "Behavior"
 msgstr "Ponašanje"
 
-#: ../data/ui/prefs.ui:120
+#: ../data/ui/prefs.ui:126
 msgid "Keep a list of recent articles"
 msgstr "Čuvaj popis nedavnih članaka"
 
@@ -205,7 +205,7 @@ msgstr "Čuvaj popis nedavnih članaka"
 msgid "General"
 msgstr "Opće"
 
-#: ../data/ui/prefs.ui:163
+#: ../data/ui/prefs.ui:169
 msgid "Languages"
 msgstr "Jezici"
 
@@ -290,7 +290,7 @@ msgid "Clear Data"
 msgstr "Izbriši podatke"
 
 #. Don't remove %s tag!
-#: ../src/wike-sp.in:71
+#: ../src/wike-sp.in:84
 msgid "Search “%s” on Wikipedia"
 msgstr "Traži „%s” na Wikipediji"
 
@@ -346,23 +346,23 @@ msgstr "Dozvoli izravnu pretragu na radnoj površini"
 msgid "Warning: all desktop searches will be sent to Wikipedia"
 msgstr "Upozorenje: sve pretrage radne površine će se poslati Wikipediji"
 
-#: ../data/ui/prefs.ui:117
+#: ../data/ui/prefs.ui:123
 msgid "Personal Data"
 msgstr "Osobni podaci"
 
-#: ../data/ui/prefs.ui:121
+#: ../data/ui/prefs.ui:127
 msgid "Wike will remember the history of visited articles"
 msgstr "Wike će zapamtiti povijest posjećenih članaka"
 
-#: ../data/ui/prefs.ui:133 ../data/ui/prefs.ui:148
+#: ../data/ui/prefs.ui:139 ../data/ui/prefs.ui:154
 msgid "Clear"
 msgstr "Izbriši"
 
-#: ../data/ui/prefs.ui:143
+#: ../data/ui/prefs.ui:149
 msgid "Clear personal data"
 msgstr "Izbriši osobne podatke"
 
-#: ../data/ui/prefs.ui:144
+#: ../data/ui/prefs.ui:150
 msgid "Cookies and cache data will be deleted"
 msgstr "Kolačići i podaci u predmemoriji će se izbrisati"
 
@@ -390,15 +390,15 @@ msgstr "Oznake"
 msgid "Table of contents"
 msgstr "Sadržaj"
 
-#: ../data/ui/prefs.ui:169
+#: ../data/ui/prefs.ui:175
 msgid "Filter Available Languages"
 msgstr "Filtriraj dostupne jezike"
 
-#: ../data/ui/prefs.ui:203
+#: ../data/ui/prefs.ui:209
 msgid "Select All"
 msgstr "Odaberi sve"
 
-#: ../data/ui/prefs.ui:215
+#: ../data/ui/prefs.ui:221
 msgid "Select None"
 msgstr "Odaberi ništa"
 
@@ -456,15 +456,31 @@ msgstr "Nova kartica"
 msgid "Open multiple articles in tabs"
 msgstr "Otvori više članaka u karticama"
 
-#: ../src/view.py:409
+#: ../src/view.py:417
 msgid "Open Link in New Tab"
 msgstr "Otvori poveznicu u novoj karticu"
 
-#: ../src/view.py:411
+#: ../src/view.py:423
 msgid "Add Link to Bookmarks"
 msgstr "Dodaj poveznicu u oznake"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:29
 msgid "Light, dark and sepia themes"
 msgstr "Svijetla, tamna i tamnosmeđa tema"
+
+#: ../src/view.py:419
+msgid "Open Link in Browser"
+msgstr "Otvori poveznicu u pregledniku"
+
+#: ../src/view.py:425
+msgid "Copy Link to Clipboard"
+msgstr "Kopiraj poveznicu u međuspremnik"
+
+#: ../data/ui/prefs.ui:110
+msgid "Desktop searches are performed in the default language"
+msgstr "Pretrage se obavljaju na standardnom jeziku"
+
+#: ../data/ui/prefs.ui:111
+msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
+msgstr "Pretraživati je moguće i na drugim jezicima. Npr. -hr za pretraživanje na hrvatskom jeziku"
 

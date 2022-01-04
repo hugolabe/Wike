@@ -33,7 +33,7 @@ msgstr "URL článku zkopírováno do schránky"
 
 #: ../src/search.py:249
 msgid "Default search language: "
-msgstr "Výchozí vyhledávač: "
+msgstr "Výchozí jazyk vyhledávání: "
 
 #: ../src/bookmarks.py:137
 msgid "Clear Bookmarks List?"
@@ -203,7 +203,7 @@ msgstr "Klávesové zkratky"
 
 #: ../data/ui/menu.ui:60
 msgid "About Wike"
-msgstr "O projektu Wike"
+msgstr "O Wike"
 
 #: ../data/ui/prefs.ui:20
 msgid "Behavior"
@@ -235,16 +235,16 @@ msgstr "Wike"
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
 #, fuzzy
 msgid "Search and read Wikipedia articles"
-msgstr "Čtečka Wikipedie"
+msgstr "Vyhledávejte a čtěte články na Wikipedii"
 
 #. Don't remove semicolons!
 #: ../data/com.github.hugolabe.Wike.desktop.in:10
 msgid "Wikipedia;Encyclopedia;"
-msgstr "Wikipedia;Encyclopedia;Wikipedie;Encyklopedie"
+msgstr "Wikipedia;Encyclopedia;Wikipedie;Encyklopedie;"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:11
 msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
-msgstr "Wike je čtečka Wikipedie pro prostření GNOME Desktop. Umožňuje čtení veškerého obsahu této online encyklopedie v samostatné aplikaci, s jednoduším a nerušivým zobrazením článků."
+msgstr "Wike je čtečka Wikipedie pro prostření GNOME Desktop. Umožňuje čtení veškerého obsahu této online encyklopedie v samostatné aplikaci, s jednodušším a nerušivým zobrazením článků."
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
 msgid "Multiple languages"
@@ -292,7 +292,7 @@ msgstr "Vymazat historii?"
 
 #: ../src/prefs.py:147
 msgid "The history of visited articles will be deleted permanently."
-msgstr "Historie navštívených článků bude trvale smazána"
+msgstr "Historie navštívených článků bude trvale smazána."
 
 #: ../src/prefs.py:148
 msgid "Clear Historic"
@@ -313,7 +313,7 @@ msgstr "Smazat data"
 #. Don't remove %s tag!
 #: ../src/wike-sp.in:71
 msgid "Search “%s” on Wikipedia"
-msgstr "Hledat «%s» na Wikipedii"
+msgstr "Hledat »%s« na Wikipedii"
 
 #: ../data/ui/prefs.ui:23
 msgid "Home page"
@@ -357,7 +357,7 @@ msgstr "Náhledy u odkazů v článku"
 
 #: ../data/ui/prefs.ui:85
 msgid "Show a preview of the article when hovering over a link"
-msgstr "Zobrazit náhled článku při umístění ukazatele na odkaz"
+msgstr "Zobrazit náhled článku při přejetí ukazatelem myši přes odkaz"
 
 #: ../data/ui/prefs.ui:104
 msgid "Privacy"

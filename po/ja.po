@@ -31,7 +31,7 @@ msgstr "新しいブックマーク: "
 msgid "Wikipedia URL copied to clipboard"
 msgstr "WikipediaのURLがコピーされました"
 
-#: ../src/search.py:260
+#: ../src/search.py:259
 msgid "Default search language: "
 msgstr "デフォルトで検索する言語: "
 
@@ -67,7 +67,7 @@ msgstr "Wikipediaの記事を検索して読む\n"
 msgid "translator-credits"
 msgstr "Kaz Sibuya <sibuyakazokuu@gmail.com>"
 
-#: ../src/view.py:397 ../data/ui/bookmarks.ui:58
+#: ../src/view.py:402 ../data/ui/bookmarks.ui:58
 msgid "Add Bookmark"
 msgstr "ブックマークを追加"
 
@@ -197,7 +197,7 @@ msgstr "Wikeについて"
 msgid "Behavior"
 msgstr "振舞い"
 
-#: ../data/ui/prefs.ui:120
+#: ../data/ui/prefs.ui:126
 msgid "Keep a list of recent articles"
 msgstr "最近の記事リストを保持する"
 
@@ -205,7 +205,7 @@ msgstr "最近の記事リストを保持する"
 msgid "General"
 msgstr "全般"
 
-#: ../data/ui/prefs.ui:163
+#: ../data/ui/prefs.ui:169
 msgid "Languages"
 msgstr "言語"
 
@@ -227,7 +227,7 @@ msgstr "Wikipediaの記事を検索と閲覧"
 #. Don't remove semicolons!
 #: ../data/com.github.hugolabe.Wike.desktop.in:10
 msgid "Wikipedia;Encyclopedia;"
-msgstr "Wikipedia;百科事典;"
+msgstr "Wikipedia;Encyclopedia;"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:11
 msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
@@ -290,7 +290,7 @@ msgid "Clear Data"
 msgstr "データを削除"
 
 #. Don't remove %s tag!
-#: ../src/wike-sp.in:71
+#: ../src/wike-sp.in:84
 msgid "Search “%s” on Wikipedia"
 msgstr "Wikipediaで“%s”を検索"
 
@@ -346,23 +346,23 @@ msgstr "デスクトップでの記事の検索を許可する"
 msgid "Warning: all desktop searches will be sent to Wikipedia"
 msgstr "注意：検索した情報はすべてWikipediaに送信されます"
 
-#: ../data/ui/prefs.ui:117
+#: ../data/ui/prefs.ui:123
 msgid "Personal Data"
 msgstr "パーソナルデータ"
 
-#: ../data/ui/prefs.ui:121
+#: ../data/ui/prefs.ui:127
 msgid "Wike will remember the history of visited articles"
 msgstr "Wikeは訪れた記事の履歴を記録します"
 
-#: ../data/ui/prefs.ui:133 ../data/ui/prefs.ui:148
+#: ../data/ui/prefs.ui:139 ../data/ui/prefs.ui:154
 msgid "Clear"
 msgstr "クリア"
 
-#: ../data/ui/prefs.ui:143
+#: ../data/ui/prefs.ui:149
 msgid "Clear personal data"
 msgstr "パーソナルデータをクリア"
 
-#: ../data/ui/prefs.ui:144
+#: ../data/ui/prefs.ui:150
 msgid "Cookies and cache data will be deleted"
 msgstr "クッキーとキャッシュを削除"
 
@@ -390,15 +390,15 @@ msgstr "ブックマーク"
 msgid "Table of contents"
 msgstr "目次"
 
-#: ../data/ui/prefs.ui:169
+#: ../data/ui/prefs.ui:175
 msgid "Filter Available Languages"
 msgstr "記事の言語をフィルタリング"
 
-#: ../data/ui/prefs.ui:203
+#: ../data/ui/prefs.ui:209
 msgid "Select All"
 msgstr "すべて選択"
 
-#: ../data/ui/prefs.ui:215
+#: ../data/ui/prefs.ui:221
 msgid "Select None"
 msgstr "選択解除"
 
@@ -456,15 +456,31 @@ msgstr "新しいタブ"
 msgid "Open multiple articles in tabs"
 msgstr "タブで複数の記事を開く"
 
-#: ../src/view.py:409
+#: ../src/view.py:417
 msgid "Open Link in New Tab"
 msgstr "リンクを新しいタブで開く"
 
-#: ../src/view.py:411
+#: ../src/view.py:423
 msgid "Add Link to Bookmarks"
 msgstr "リンク先をブックマークに追加"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:29
 msgid "Light, dark and sepia themes"
 msgstr "ライト、ダークそして、スピアのテーマ"
+
+#: ../src/view.py:419
+msgid "Open Link in Browser"
+msgstr "リンクをブラウザで開く"
+
+#: ../src/view.py:425
+msgid "Copy Link to Clipboard"
+msgstr "リンクをクリップボードにコピー"
+
+#: ../data/ui/prefs.ui:110
+msgid "Desktop searches are performed in the default language"
+msgstr "デスクトップでの検索はデフォルトの言語で検索されます"
+
+#: ../data/ui/prefs.ui:111
+msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
+msgstr ""
 

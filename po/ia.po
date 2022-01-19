@@ -31,7 +31,7 @@ msgstr "Nove marcapagina: "
 msgid "Wikipedia URL copied to clipboard"
 msgstr "URL de Wikipedia copiate al area de transferentia"
 
-#: ../src/search.py:260
+#: ../src/search.py:259
 msgid "Default search language: "
 msgstr "Lingua predefinite de recerca: "
 
@@ -67,7 +67,7 @@ msgstr "Cerca e lege articulos de WIkipedia\n"
 msgid "translator-credits"
 msgstr "SoftInterlingua <softinterlingua@gmail.com>"
 
-#: ../src/view.py:397 ../data/ui/bookmarks.ui:58
+#: ../src/view.py:402 ../data/ui/bookmarks.ui:58
 msgid "Add Bookmark"
 msgstr "Adder marcapaginas"
 
@@ -197,7 +197,7 @@ msgstr "A proposito de Wike"
 msgid "Behavior"
 msgstr "Comportamento"
 
-#: ../data/ui/prefs.ui:120
+#: ../data/ui/prefs.ui:126
 msgid "Keep a list of recent articles"
 msgstr "Mantener un lista de articulos recente"
 
@@ -205,7 +205,7 @@ msgstr "Mantener un lista de articulos recente"
 msgid "General"
 msgstr "General"
 
-#: ../data/ui/prefs.ui:163
+#: ../data/ui/prefs.ui:169
 msgid "Languages"
 msgstr "Linguas"
 
@@ -290,7 +290,7 @@ msgid "Clear Data"
 msgstr "Vacuar datos"
 
 #. Don't remove %s tag!
-#: ../src/wike-sp.in:71
+#: ../src/wike-sp.in:84
 msgid "Search “%s” on Wikipedia"
 msgstr "Cercar “%s” in Wikipedia"
 
@@ -346,29 +346,29 @@ msgstr "Permitter recerca active in scriptorio"
 msgid "Warning: all desktop searches will be sent to Wikipedia"
 msgstr "Advertentia:Tote le recercas de scriptorio essera inviate a WIkipedia"
 
-#: ../data/ui/prefs.ui:117
+#: ../data/ui/prefs.ui:123
 msgid "Personal Data"
 msgstr "Datos personal"
 
-#: ../data/ui/prefs.ui:121
+#: ../data/ui/prefs.ui:127
 msgid "Wike will remember the history of visited articles"
 msgstr "Wike rememorara le chronologia del articulos visitate"
 
-#: ../data/ui/prefs.ui:133 ../data/ui/prefs.ui:148
+#: ../data/ui/prefs.ui:139 ../data/ui/prefs.ui:154
 msgid "Clear"
 msgstr "Vacuar"
 
-#: ../data/ui/prefs.ui:143
+#: ../data/ui/prefs.ui:149
 msgid "Clear personal data"
 msgstr "Vacuar le datos personal"
 
-#: ../data/ui/prefs.ui:144
+#: ../data/ui/prefs.ui:150
 msgid "Cookies and cache data will be deleted"
 msgstr "Le cookies e datos de cache essera delite"
 
 #: ../src/view.py:215
 msgid "Try Again"
-msgstr ""
+msgstr "Retenta"
 
 #: ../src/prefs.py:80 ../data/ui/menu.ui:114
 msgid "Random Article"
@@ -390,22 +390,22 @@ msgstr "Marcapaginas"
 msgid "Table of contents"
 msgstr "Tabula del contentos"
 
-#: ../data/ui/prefs.ui:169
+#: ../data/ui/prefs.ui:175
 msgid "Filter Available Languages"
 msgstr "Filtrar le linguas disponibile"
 
-#: ../data/ui/prefs.ui:203
+#: ../data/ui/prefs.ui:209
 msgid "Select All"
 msgstr "Seliger toto"
 
-#: ../data/ui/prefs.ui:215
+#: ../data/ui/prefs.ui:221
 msgid "Select None"
 msgstr "Seliger nulle"
 
 #: ../data/ui/shortcuts.ui:18
 msgctxt "shortcut window"
 msgid "Main menu"
-msgstr ""
+msgstr "Menu principal"
 
 #: ../src/view.py:204
 msgid "Click the search button or press F2 to search articles in Wikipedia. You can also use the main menu to open Wikipedia main page, the list of recent articles or get a random article."
@@ -450,17 +450,33 @@ msgstr "Nove scheda"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
 msgid "Open multiple articles in tabs"
-msgstr ""
+msgstr "Aperir multiple articulos in schedas"
 
-#: ../src/view.py:409
+#: ../src/view.py:417
 msgid "Open Link in New Tab"
 msgstr "Aperir ligamine in nove scheda"
 
-#: ../src/view.py:411
+#: ../src/view.py:423
 msgid "Add Link to Bookmarks"
 msgstr "Adder ligamine a Marcapaginas"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:29
 msgid "Light, dark and sepia themes"
-msgstr ""
+msgstr "Themas clar, obscur e sepia"
+
+#: ../src/view.py:419
+msgid "Open Link in Browser"
+msgstr "Aperir ligamine in navigator"
+
+#: ../src/view.py:425
+msgid "Copy Link to Clipboard"
+msgstr "Copiar ligamine al area de transferentia"
+
+#: ../data/ui/prefs.ui:110
+msgid "Desktop searches are performed in the default language"
+msgstr "Recercas de scriptorio es facite in le lingua predefinite"
+
+#: ../data/ui/prefs.ui:111
+msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
+msgstr "Tu pote cercar in altere linguas usante un prefixo. i.e -es pro cercar in Espaniol"
 

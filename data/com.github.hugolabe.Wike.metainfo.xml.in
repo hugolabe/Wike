@@ -53,6 +53,15 @@
   </screenshots>
 
   <releases>
+    <release version="1.7.0" date="2022-01-19">
+      <description>
+        <ul>
+          <li>Desktop searches in multiple languages.</li>
+          <li>Context menu improvements.</li>
+          <li>Updated translations: Basque, Croatian, Czech, Dutch, Finnish, Interlingua, Italian, Japanese, Persian, Polish, Portuguese (BR), Russian, Spanish, Swedish.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.6.3" date="2021-12-10">
       <description>
         <ul>

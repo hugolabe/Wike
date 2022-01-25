@@ -1,0 +1,485 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Wike\n"
+"Language: bn\n"
+
+#: ../src/view.py:207 ../src/view.py:295
+msgid "Article not found"
+msgstr "আর্টিকেল খুঁজে পাওয়া যায়নি"
+
+#: ../src/view.py:208
+msgid "Can't find any results for requested query"
+msgstr "আপনার খোঁজের কোন ফলাফল পাওয়া যায়নি"
+
+#: ../src/view.py:211 ../src/view.py:297
+msgid "Can't access Wikipedia"
+msgstr "উইকিপিডিয়া অ্যাক্সেস করা যাচ্ছে না"
+
+#: ../src/view.py:212
+msgid "Check your Internet connection and try again"
+msgstr "ইন্টারনেট কানেকশন চেক করে আবার চেষ্টা করুন"
+
+#: ../src/window.py:225 ../src/page.py:115
+msgid "New bookmark: "
+msgstr "নতুন বুকমার্ক: "
+
+#: ../src/window.py:283
+msgid "Wikipedia URL copied to clipboard"
+msgstr "উইকিপিডিয়া URL ক্লিপবোর্ডে কপি করা হয়েছে"
+
+#: ../src/search.py:259
+msgid "Default search language: "
+msgstr "ডিফল্ট অনুসন্ধান ভাষা: "
+
+#: ../src/bookmarks.py:138
+msgid "Clear Bookmarks List?"
+msgstr "বুকমার্ক লিস্ট মুছে ফেলবেন?"
+
+#: ../src/bookmarks.py:140
+msgid "All bookmarks in the list will be removed permanently."
+msgstr "এই লিস্টের সমস্ত বুকমার্ক চিরতরে মুছে যাবে।"
+
+#: ../src/bookmarks.py:141 ../data/ui/bookmarks.ui:70
+msgid "Clear List"
+msgstr "লিস্ট মুছে ফেলুন"
+
+#: ../data/ui/search-settings.ui:61
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:22
+msgid "Search suggestions"
+msgstr "সার্চ সাজেশন"
+
+#: ../data/ui/about.ui:8
+msgid "Search and read Wikipedia articles\n"
+"All content from Wikipedia.org\n"
+"and available under CC BY-SA 3.0 unless otherwise noted"
+msgstr "বিভিন্ন উইকিপিডিয়া আর্টিকেল সার্চ করুন এবং পড়ুন\n"
+"সমস্ত বিষয়বস্তু Wikipedia.org থেকে প্রাপ্ত\n"
+"এবং CC BY-SA 3.0 এর অধীনে উপলব্ধ অন্যথায় যদি উল্লেখিত না থাকে"
+
+#. Add your name like this:
+#. 
+#. Hugo Olabera <hugolabe@gmail.com>
+#: ../data/ui/about.ui:13
+msgid "translator-credits"
+msgstr "ট্রান্সলেটর-ক্রেডিট"
+
+#: ../src/view.py:402 ../data/ui/bookmarks.ui:58
+msgid "Add Bookmark"
+msgstr "বুকমার্কে যোগ করুন"
+
+#: ../data/ui/shortcuts.ui:14
+msgctxt "shortcut window"
+msgid "General"
+msgstr "সাধারণ"
+
+#: ../data/ui/shortcuts.ui:25
+msgctxt "shortcut window"
+msgid "Table of contents"
+msgstr "সূচিপত্র"
+
+#: ../data/ui/shortcuts.ui:32
+msgctxt "shortcut window"
+msgid "View article in other languages"
+msgstr "অন্য ভাষায় আর্টিকেল দেখুন"
+
+#: ../data/ui/shortcuts.ui:39
+msgctxt "shortcut window"
+msgid "Search text in page"
+msgstr "এই পেজে টেক্সট সার্চ করুন"
+
+#: ../data/ui/shortcuts.ui:46
+msgctxt "shortcut window"
+msgid "Preferences"
+msgstr "পছন্দসমূহ"
+
+#: ../data/ui/shortcuts.ui:53
+msgctxt "shortcut window"
+msgid "Copy Wikipedia URL"
+msgstr "উইকিপিডিয়া URL কপি করুন"
+
+#: ../data/ui/shortcuts.ui:60
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "প্রস্থান করুন"
+
+#: ../data/ui/shortcuts.ui:67
+msgctxt "shortcut window"
+msgid "Keyboard shortcuts"
+msgstr "কীবোর্ড শর্টকাট"
+
+#: ../data/ui/shortcuts.ui:130
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "নেভিগেশন"
+
+#: ../data/ui/shortcuts.ui:134
+msgctxt "shortcut window"
+msgid "Search articles"
+msgstr "আর্টিকেল সার্চ করুন"
+
+#: ../data/ui/shortcuts.ui:141
+msgctxt "shortcut window"
+msgid "Wikipedia main page"
+msgstr "উইকিপিডিয়া প্রধান পেজ"
+
+#: ../data/ui/shortcuts.ui:148
+msgctxt "shortcut window"
+msgid "Show recent articles"
+msgstr "সাম্প্রতিক আর্টিকেল গুলি দেখুন"
+
+#: ../data/ui/shortcuts.ui:155
+msgctxt "shortcut window"
+msgid "Previous page"
+msgstr "আগের পেজ"
+
+#: ../data/ui/shortcuts.ui:162
+msgctxt "shortcut window"
+msgid "Next page"
+msgstr "পরের পেজ"
+
+#: ../data/ui/shortcuts.ui:169
+msgctxt "shortcut window"
+msgid "Reload page"
+msgstr "পেজটি আবার লোড করুন"
+
+#: ../data/ui/shortcuts.ui:76
+msgctxt "shortcut window"
+msgid "Bookmarks"
+msgstr "বুকমার্ক"
+
+#: ../data/ui/shortcuts.ui:80
+msgctxt "shortcut window"
+msgid "Show bookmarks"
+msgstr "বুকমার্কগুলি দেখুন"
+
+#: ../data/ui/shortcuts.ui:87
+msgctxt "shortcut window"
+msgid "Add bookmark"
+msgstr "বুকমার্ক যোগ করুন"
+
+#: ../src/prefs.py:80 ../data/ui/menu.ui:101
+msgid "Wikipedia Main Page"
+msgstr "উইকিপিডিয়া প্রধান পেজ"
+
+#: ../src/view.py:293 ../data/ui/menu.ui:127
+msgid "Recent Articles"
+msgstr "সাম্প্রতিক আর্টিকেল গুলি"
+
+#: ../data/ui/menu.ui:151
+msgid "Search Text in Page"
+msgstr "এই পেজে টেক্সট সার্চ করুন"
+
+#: ../data/ui/menu.ui:164
+msgid "Open Wikipedia Page in Browser"
+msgstr "এই উইকিপিডিয়া পেজটি ব্রাউজারে খুলুন"
+
+#: ../data/ui/menu.ui:177
+msgid "Copy Wikipedia URL to Clipboard"
+msgstr "উইকিপিডিয়া URL কপি করুন"
+
+#: ../data/ui/menu.ui:201
+msgid "Preferences"
+msgstr "পছন্দসমূহ"
+
+#: ../data/ui/menu.ui:214
+msgid "Keyboard Shortcuts"
+msgstr "কীবোর্ড শর্টকাট"
+
+#: ../data/ui/menu.ui:227
+msgid "About Wike"
+msgstr "Wike সম্পর্কে"
+
+#: ../data/ui/prefs.ui:20
+msgid "Behavior"
+msgstr "আচরণ"
+
+#: ../data/ui/prefs.ui:126
+msgid "Keep a list of recent articles"
+msgstr "সাম্প্রতিক আর্টিকেল গুলির একটি লিস্ট করে রাখুন"
+
+#: ../data/ui/prefs.ui:14
+msgid "General"
+msgstr "সাধারণ"
+
+#: ../data/ui/prefs.ui:169
+msgid "Languages"
+msgstr "ভাষা"
+
+#: ../src/page.py:78 ../src/page.py:81
+msgid "Loading Article"
+msgstr "আর্টিকেল লোড হচ্ছে"
+
+#. Don't translate app name!
+#: ../data/com.github.hugolabe.Wike.desktop.in:3
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:7
+msgid "Wike"
+msgstr "Wike"
+
+#: ../src/view.py:203 ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
+msgid "Search and read Wikipedia articles"
+msgstr "নানান উইকিপিডিয়া আর্টিকেল সার্চ করুন এবং পড়ুন"
+
+#. Don't remove semicolons!
+#: ../data/com.github.hugolabe.Wike.desktop.in:10
+msgid "Wikipedia;Encyclopedia;"
+msgstr "উইকিপিডিয়া;বিশ্বকোষ;"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:11
+msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
+msgstr "Wike হল GNOME ডেস্কটপের জন্য একটি উইকিপিডিয়া রিডার। আর্টিকেল গুলি এই অনলাইন বিশ্বকোষ থেকে সরল এবং বিভ্রান্তি-মুক্ত দৃশ্য সহ একটি স্থানীয় অ্যাপ্লিকেশন রূপে সরবরাহ করা হয়।"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:21
+msgid "Multiple languages"
+msgstr "একাধিক ভাষা"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:23
+msgid "List of recent articles"
+msgstr "সাম্প্রতিক আর্টিকেলের তালিকা"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:24
+msgid "Simple bookmarks management"
+msgstr "সহজ বুকমার্ক ম্যানেজমেন্ট"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:25
+msgid "Text search in articles"
+msgstr "আর্টিকেলে টেক্সট সার্চ"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
+msgid "Article table of contents"
+msgstr "আর্টিকেলের বিষয়সূচি"
+
+#: ../data/ui/header.ui:154 ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
+msgid "View article in other languages"
+msgstr "অন্য ভাষায় আর্টিকেল দেখুন"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
+msgid "Features:"
+msgstr "বৈশিষ্ট্য:"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
+msgid "GNOME Shell search integration"
+msgstr "GNOME শেল সার্চ ইনটিগ্রেশন"
+
+#: ../src/prefs.py:148
+msgid "Clear Historic?"
+msgstr "ইতিহাস মুছবেন?"
+
+#: ../src/prefs.py:150
+msgid "The history of visited articles will be deleted permanently."
+msgstr "ভিজিটেড আর্টিকেলের ইতিহাস স্থায়ীভাবে মুছে ফেলা হবে।"
+
+#: ../src/prefs.py:151
+msgid "Clear Historic"
+msgstr "ইতিহাস মুছে ফেলুন"
+
+#: ../src/prefs.py:168
+msgid "Clear Personal Data?"
+msgstr "ব্যাক্তিগত তথ্য মুছবেন?"
+
+#: ../src/prefs.py:170
+msgid "Cookies and cache data will be deleted permanently."
+msgstr "কুকিজ এবং ক্যাশে ডেটা স্থায়ীভাবে ডিলিট হয়ে যাবে।"
+
+#: ../src/prefs.py:171
+msgid "Clear Data"
+msgstr "ডেটা মুছে ফেলুন"
+
+#. Don't remove %s tag!
+#: ../src/wike-sp.in:84
+msgid "Search “%s” on Wikipedia"
+msgstr "উইকিপিডিয়াতে \"%s\" সার্চ করুন"
+
+#: ../data/ui/prefs.ui:23
+msgid "Home page"
+msgstr "হোম পেজ"
+
+#: ../data/ui/prefs.ui:24
+msgid "The page that will be displayed when Wike starts"
+msgstr "Wike শুরু হলে এই পেজটি দেখাবে"
+
+#: ../data/ui/prefs.ui:34
+msgid "Article View"
+msgstr "আর্টিকেল ভিউ"
+
+#: ../data/ui/prefs.ui:37
+msgid "Font size"
+msgstr "ফন্ট সাইজ"
+
+#: ../data/ui/prefs.ui:38
+msgid "Font size for article view (default is 16)"
+msgstr "আর্টিকেল ভিউয়ে ফন্ট সাইজ (ডিফল্ট ১৬)"
+
+#: ../data/ui/prefs.ui:55
+msgid "Use custom font"
+msgstr "কাস্টম ফন্ট ব্যবহার করুন"
+
+#: ../data/ui/prefs.ui:56
+msgid "Choose a font for the article view"
+msgstr "আর্টিকেল ভিউয়ের জন্য একটি ফন্ট বেছে নিন"
+
+#: ../data/ui/prefs.ui:69
+msgid "Preview popups in article links"
+msgstr "আর্টিকেল লিংকের পপ আপ প্রিভিউ দেখুন"
+
+#: ../data/ui/prefs.ui:70
+msgid "Show a preview of the article when hovering over a link"
+msgstr "কোন লিংকের ওপর হোভার করার সময় আর্টিকেলটির প্রিভিউ দেখুন"
+
+#: ../data/ui/prefs.ui:89
+msgid "Privacy"
+msgstr "গোপনীয়তা"
+
+#: ../data/ui/prefs.ui:95
+msgid "Search"
+msgstr "অনুসন্ধান"
+
+#: ../data/ui/prefs.ui:98
+msgid "Allow live search on desktop"
+msgstr "ডেস্কটপে লাইভ সার্চের অনুমতি দিন"
+
+#: ../data/ui/prefs.ui:99
+msgid "Warning: all desktop searches will be sent to Wikipedia"
+msgstr "সতর্কীকরণ: সমস্ত ডেস্কটপ সার্চ উইকিপিডিয়ায় পাঠানো হবে"
+
+#: ../data/ui/prefs.ui:123
+msgid "Personal Data"
+msgstr "ব্যাক্তিগত তথ্য"
+
+#: ../data/ui/prefs.ui:127
+msgid "Wike will remember the history of visited articles"
+msgstr "Wike ভিজিট করা আর্টিকেলের ইতিহাস মনে রাখবে"
+
+#: ../data/ui/prefs.ui:139 ../data/ui/prefs.ui:154
+msgid "Clear"
+msgstr "মুছে ফেলুন"
+
+#: ../data/ui/prefs.ui:149
+msgid "Clear personal data"
+msgstr "ব্যাক্তিগত তথ্য মুছে ফেলুন"
+
+#: ../data/ui/prefs.ui:150
+msgid "Cookies and cache data will be deleted"
+msgstr "কুকিজ এবং ক্যাশে ডেটা ডিলিট হয়ে যাবে"
+
+#: ../src/view.py:215
+msgid "Try Again"
+msgstr "আবার চেষ্টা করুন"
+
+#: ../src/prefs.py:80 ../data/ui/menu.ui:114
+msgid "Random Article"
+msgstr "র‍্যান্ডম আর্টিকেল"
+
+#: ../src/prefs.py:80
+msgid "Last Article"
+msgstr "শেষ আর্টিকেল"
+
+#: ../data/ui/header.ui:79
+msgid "Search articles"
+msgstr "আর্টিকেল খুঁজুন"
+
+#: ../data/ui/header.ui:113
+msgid "Bookmarks"
+msgstr "বুকমার্ক"
+
+#: ../data/ui/header.ui:135
+msgid "Table of contents"
+msgstr "সূচিপত্র"
+
+#: ../data/ui/prefs.ui:175
+msgid "Filter Available Languages"
+msgstr "উপলব্ধ ভাষাগুলি ফিল্টার করুন"
+
+#: ../data/ui/prefs.ui:209
+msgid "Select All"
+msgstr "সবকিছু সিলেক্ট করুন"
+
+#: ../data/ui/prefs.ui:221
+msgid "Select None"
+msgstr "কিছুই সিলেক্ট করবেন না"
+
+#: ../data/ui/shortcuts.ui:18
+msgctxt "shortcut window"
+msgid "Main menu"
+msgstr "প্রধান মেনু"
+
+#: ../src/view.py:204
+msgid "Click the search button or press F2 to search articles in Wikipedia. You can also use the main menu to open Wikipedia main page, the list of recent articles or get a random article."
+msgstr "উইকিপিডিয়ায় আর্টিকেল সার্চ করতে সার্চ বাটনে ক্লিক করুন অথবা F2 টিপুন। আপনি প্রধান মেনু ব্যবহার করেও উইকিপিডিয়া প্রধান পেজ খুলতে, সাম্প্রতিক আর্টিকেলের লিস্ট খুলতে বা যেকোনো একটি আর্টিকেল খুলতে পারেন।"
+
+#: ../src/bookmarks.py:47
+msgid "<b>No Bookmarks</b>\n"
+"\n"
+"<small>Use the <i>Add Bookmark</i> button\n"
+"or press Ctrl+D to add\n"
+"the current article to the list</small>"
+msgstr "<b>বুকমার্ক নেই</b>\n"
+"\n"
+"<small>এই আর্টিকেলটি লিস্টে যোগ করতে\n"
+"<i>Add Bookmark</i> ব্যবহার করুন অথবা টিপুন</small>"
+
+#: ../data/ui/shortcuts.ui:96
+msgctxt "shortcut window"
+msgid "Tabs"
+msgstr "ট্যাব গুলি"
+
+#: ../data/ui/shortcuts.ui:100
+msgctxt "shortcut window"
+msgid "New tab"
+msgstr "নতুন ট্যাব"
+
+#: ../data/ui/shortcuts.ui:107
+msgctxt "shortcut window"
+msgid "Close current tab"
+msgstr "বর্তমান ট্যাবটি ক্লোজ করুন"
+
+#: ../data/ui/shortcuts.ui:114
+msgctxt "shortcut window"
+msgid "Next tab"
+msgstr "পরের ট্যাব"
+
+#: ../data/ui/shortcuts.ui:121
+msgctxt "shortcut window"
+msgid "Previous tab"
+msgstr "আগের ট্যাব"
+
+#: ../data/ui/header.ui:61
+msgid "New tab"
+msgstr "নতুন ট্যাব"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
+msgid "Open multiple articles in tabs"
+msgstr "ট্যাব গুলিতে একাধিক আর্টিকেল খুলুন"
+
+#: ../src/view.py:417
+msgid "Open Link in New Tab"
+msgstr "নতুন ট্যাবে লিংক খুলুন"
+
+#: ../src/view.py:423
+msgid "Add Link to Bookmarks"
+msgstr "বুকমার্কে লিংক যোগ করুন"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:29
+msgid "Light, dark and sepia themes"
+msgstr "লাইট, ডার্ক এবং সেপিয়া থিম"
+
+#: ../src/view.py:419
+msgid "Open Link in Browser"
+msgstr "ব্রাউজারে লিংক খুলুন"
+
+#: ../src/view.py:425
+msgid "Copy Link to Clipboard"
+msgstr "ক্লিপবোর্ডে লিংক কপি করুন"
+
+#: ../data/ui/prefs.ui:110
+msgid "Desktop searches are performed in the default language"
+msgstr "ডেস্কটপ অফ সার্চ ডিফল্ট ভাষায় করা হবে"
+
+#: ../data/ui/prefs.ui:111
+msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
+msgstr "আপনি প্রেফিক্স ব্যবহার করে অন্য ভাষায় সার্চ করতে পারেন। উদা. স্প্যানিশ এ সার্চ করতে -es"
+

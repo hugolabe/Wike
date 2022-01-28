@@ -64,8 +64,9 @@ msgstr "বিভিন্ন উইকিপিডিয়া আর্টি�
 #. 
 #. Hugo Olabera <hugolabe@gmail.com>
 #: ../data/ui/about.ui:13
+#, fuzzy
 msgid "translator-credits"
-msgstr "ট্রান্সলেটর-ক্রেডিট"
+msgstr "Saptarshi Mondal"
 
 #: ../src/view.py:402 ../data/ui/bookmarks.ui:58
 msgid "Add Bookmark"

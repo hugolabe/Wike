@@ -171,7 +171,7 @@ msgstr "Articles récents"
 
 #: ../data/ui/menu.ui:151
 msgid "Search Text in Page"
-msgstr "Rechercher Texte dans la page"
+msgstr "Rechercher du texte dans la page"
 
 #: ../data/ui/menu.ui:164
 msgid "Open Wikipedia Page in Browser"
@@ -300,7 +300,7 @@ msgstr "Page d'acceuil"
 
 #: ../data/ui/prefs.ui:24
 msgid "The page that will be displayed when Wike starts"
-msgstr "La page qui sera affichée quand Wike s'ouvrira"
+msgstr "Page affichée à l'ouverture de Wike"
 
 #: ../data/ui/prefs.ui:34
 msgid "Article View"
@@ -344,7 +344,7 @@ msgstr "Autoriser la recherche directement sur le bureau"
 
 #: ../data/ui/prefs.ui:99
 msgid "Warning: all desktop searches will be sent to Wikipedia"
-msgstr "Avertissement : toutes les recherches effectuées sur le bureau seront envoyées vers Wikipedia"
+msgstr "Attention : les recherches depuis le bureau sont envoyées à Wikipédia"
 
 #: ../data/ui/prefs.ui:123
 msgid "Personal Data"

@@ -53,6 +53,14 @@
   </screenshots>
 
   <releases>
+    <release version="1.7.1" date="2022-02-06">
+      <description>
+        <ul>
+          <li>Added translations: Bengali, Chinese (traditional).</li>
+          <li>Updated translations: Catalan, French.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.7.0" date="2022-01-19">
       <description>
         <ul>

@@ -31,13 +31,13 @@ msgstr "Yeni yerimi: "
 msgid "Wikipedia URL copied to clipboard"
 msgstr "Vikipedi Bağlantısı panoya kopyalandı"
 
-#: ../src/search.py:260
+#: ../src/search.py:259
 msgid "Default search language: "
 msgstr "Varsayılan arama dili: "
 
 #: ../src/bookmarks.py:138
 msgid "Clear Bookmarks List?"
-msgstr "Yer İmi Listesini Temizle?"
+msgstr "Yerimi Listesini Temizle?"
 
 #: ../src/bookmarks.py:140
 msgid "All bookmarks in the list will be removed permanently."
@@ -67,7 +67,7 @@ msgstr "Vikipedi makalelerini arayın ve okuyun\n"
 msgid "translator-credits"
 msgstr "translator-credits"
 
-#: ../src/view.py:397 ../data/ui/bookmarks.ui:58
+#: ../src/view.py:402 ../data/ui/bookmarks.ui:58
 msgid "Add Bookmark"
 msgstr "Yerimi Ekle"
 
@@ -99,7 +99,7 @@ msgstr "Tercihler"
 #: ../data/ui/shortcuts.ui:53
 msgctxt "shortcut window"
 msgid "Copy Wikipedia URL"
-msgstr "Vikipedia Bağlantısını Kopyala"
+msgstr "Vikipedi Bağlantısını Kopyala"
 
 #: ../data/ui/shortcuts.ui:60
 msgctxt "shortcut window"
@@ -124,7 +124,7 @@ msgstr "Makale ara"
 #: ../data/ui/shortcuts.ui:141
 msgctxt "shortcut window"
 msgid "Wikipedia main page"
-msgstr "Vikipedia ana sayfa"
+msgstr "Vikipedi ana sayfa"
 
 #: ../data/ui/shortcuts.ui:148
 msgctxt "shortcut window"
@@ -163,7 +163,7 @@ msgstr "Yerimi ekle"
 
 #: ../src/prefs.py:80 ../data/ui/menu.ui:101
 msgid "Wikipedia Main Page"
-msgstr "Vikipedia Anasayfa"
+msgstr "Vikipedi Anasayfa"
 
 #: ../src/view.py:293 ../data/ui/menu.ui:127
 msgid "Recent Articles"
@@ -175,11 +175,11 @@ msgstr "Sayfadaki metni Ara"
 
 #: ../data/ui/menu.ui:164
 msgid "Open Wikipedia Page in Browser"
-msgstr "Vikipedia sayfasını tarayıcı da aç"
+msgstr "Vikipedi sayfasını tarayıcıda aç"
 
 #: ../data/ui/menu.ui:177
 msgid "Copy Wikipedia URL to Clipboard"
-msgstr "Vikipedia bağlantısını panoya kopyala"
+msgstr "Vikipedi bağlantısını panoya kopyala"
 
 #: ../data/ui/menu.ui:201
 msgid "Preferences"
@@ -187,7 +187,7 @@ msgstr "Tercihler"
 
 #: ../data/ui/menu.ui:214
 msgid "Keyboard Shortcuts"
-msgstr "Klavye Kısayolu"
+msgstr "Klavye Kısayolları"
 
 #: ../data/ui/menu.ui:227
 msgid "About Wike"
@@ -197,15 +197,15 @@ msgstr "Wike Hakkında"
 msgid "Behavior"
 msgstr "Davranış"
 
-#: ../data/ui/prefs.ui:120
+#: ../data/ui/prefs.ui:126
 msgid "Keep a list of recent articles"
-msgstr "En son makalelerin bir listesini tutun"
+msgstr "Son makalelerin bir listesini tut"
 
 #: ../data/ui/prefs.ui:14
 msgid "General"
 msgstr "Genel"
 
-#: ../data/ui/prefs.ui:163
+#: ../data/ui/prefs.ui:169
 msgid "Languages"
 msgstr "Diller"
 
@@ -222,16 +222,16 @@ msgstr "Wike"
 #: ../src/view.py:203 ../data/com.github.hugolabe.Wike.desktop.in:4
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
 msgid "Search and read Wikipedia articles"
-msgstr "Vikipedia makalelerini arayın ve okuyun"
+msgstr "Vikipedi makalelerini arayın ve okuyun"
 
 #. Don't remove semicolons!
 #: ../data/com.github.hugolabe.Wike.desktop.in:10
 msgid "Wikipedia;Encyclopedia;"
-msgstr "Vikipedia;Ansiklopedi;"
+msgstr "Vikipedi;Ansiklopedi;"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:11
 msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
-msgstr "Wike, GNOME Masaüstü için bir Vikipedia okuyucusu. Bu çevrimiçi ansiklopedinin tüm içeriğine, makalelerin daha basit ve dikkat dağıtıcı olmayan bir görünümü ile yerel bir uygulamada erişimi sağlar."
+msgstr "Wike, GNOME Masaüstü için bir Vikipedi okuyucusu. Bu çevrimiçi ansiklopedinin tüm içeriğine, makalelerin daha basit ve dikkat dağıtıcı olmayan bir görünümü ile yerel bir uygulamada erişimi sağlar."
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:21
 msgid "Multiple languages"
@@ -255,7 +255,7 @@ msgstr "Makale içindekiler tablosu"
 
 #: ../data/ui/header.ui:154 ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
 msgid "View article in other languages"
-msgstr "Makaleyi diğer dillerde görüntüleme"
+msgstr "Makaleyi diğer dillerde görüntüle"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
 msgid "Features:"
@@ -267,7 +267,7 @@ msgstr "GNOME Shell arama birleştirme"
 
 #: ../src/prefs.py:148
 msgid "Clear Historic?"
-msgstr "Tarihi Sil?"
+msgstr "Geçmişi Temizle?"
 
 #: ../src/prefs.py:150
 msgid "The history of visited articles will be deleted permanently."
@@ -275,7 +275,7 @@ msgstr "Ziyaret edilen makalelerin geçmişi kalıcı olarak silinir."
 
 #: ../src/prefs.py:151
 msgid "Clear Historic"
-msgstr "Tarihi Sil"
+msgstr "Geçmişi Temizle"
 
 #: ../src/prefs.py:168
 msgid "Clear Personal Data?"
@@ -287,12 +287,12 @@ msgstr "Çerezler ve önbellek verileri kalıcı olarak silinir."
 
 #: ../src/prefs.py:171
 msgid "Clear Data"
-msgstr "Veri Temizle"
+msgstr "Veriyi Temizle"
 
 #. Don't remove %s tag!
-#: ../src/wike-sp.in:71
+#: ../src/wike-sp.in:84
 msgid "Search “%s” on Wikipedia"
-msgstr "Vikipedia «%s» içinde Ara"
+msgstr "Vikipedi «%s» içinde Ara"
 
 #: ../data/ui/prefs.ui:23
 msgid "Home page"
@@ -308,7 +308,7 @@ msgstr "Makale Görünümü"
 
 #: ../data/ui/prefs.ui:37
 msgid "Font size"
-msgstr "Yazı türü boyutu"
+msgstr "Yazı tipi boyutu"
 
 #: ../data/ui/prefs.ui:38
 msgid "Font size for article view (default is 16)"
@@ -316,7 +316,7 @@ msgstr "Makale görünümü için yazı tipi boyutu (varsayılan değer 16)"
 
 #: ../data/ui/prefs.ui:55
 msgid "Use custom font"
-msgstr "Özel yazı türü kullan"
+msgstr "Özel yazı tipi kullan"
 
 #: ../data/ui/prefs.ui:56
 msgid "Choose a font for the article view"
@@ -344,25 +344,25 @@ msgstr "Masaüstünde canlı arama yap"
 
 #: ../data/ui/prefs.ui:99
 msgid "Warning: all desktop searches will be sent to Wikipedia"
-msgstr "UYARI: Tüm masaüstü aramaları Vikipedia'ya gönderilecek"
+msgstr "Uyarı: tüm masaüstü aramaları Vikipedi'ye gönderilecek"
 
-#: ../data/ui/prefs.ui:117
+#: ../data/ui/prefs.ui:123
 msgid "Personal Data"
 msgstr "Kişisel Veriler"
 
-#: ../data/ui/prefs.ui:121
+#: ../data/ui/prefs.ui:127
 msgid "Wike will remember the history of visited articles"
 msgstr "Wike, ziyaret edilen makalelerin geçmişini hatırlayacak"
 
-#: ../data/ui/prefs.ui:133 ../data/ui/prefs.ui:148
+#: ../data/ui/prefs.ui:139 ../data/ui/prefs.ui:154
 msgid "Clear"
 msgstr "Temizle"
 
-#: ../data/ui/prefs.ui:143
+#: ../data/ui/prefs.ui:149
 msgid "Clear personal data"
 msgstr "Kişisel verileri temizle"
 
-#: ../data/ui/prefs.ui:144
+#: ../data/ui/prefs.ui:150
 msgid "Cookies and cache data will be deleted"
 msgstr "Çerezler ve önbellek verileri silinecek"
 
@@ -390,15 +390,15 @@ msgstr "Yerimleri"
 msgid "Table of contents"
 msgstr "İçindekiler tablosu"
 
-#: ../data/ui/prefs.ui:169
+#: ../data/ui/prefs.ui:175
 msgid "Filter Available Languages"
 msgstr "Mevcut Dilleri Süz"
 
-#: ../data/ui/prefs.ui:203
+#: ../data/ui/prefs.ui:209
 msgid "Select All"
 msgstr "Tümünü Seç"
 
-#: ../data/ui/prefs.ui:215
+#: ../data/ui/prefs.ui:221
 msgid "Select None"
 msgstr "Hiçbirini Seçme"
 
@@ -409,7 +409,8 @@ msgstr "Ana menü"
 
 #: ../src/view.py:204
 msgid "Click the search button or press F2 to search articles in Wikipedia. You can also use the main menu to open Wikipedia main page, the list of recent articles or get a random article."
-msgstr ""
+msgstr "Makaleleri Wikipedia'da aramak için arama butonuna veya F2 tuşuna basın.\n"
+"Wikipedia ana sayfasını, son makaleleri veya rastgele bir makaleyi açmak için ana menüyü kullanabilirsiniz."
 
 #: ../src/bookmarks.py:47
 msgid "<b>No Bookmarks</b>\n"
@@ -417,7 +418,11 @@ msgid "<b>No Bookmarks</b>\n"
 "<small>Use the <i>Add Bookmark</i> button\n"
 "or press Ctrl+D to add\n"
 "the current article to the list</small>"
-msgstr ""
+msgstr "<b>Yerimi Yok</b>\n"
+"\n"
+"<small>Mevcut makaleyi listeye eklemek için\n"
+"<i>Yerimi Ekle</i> butonuna veya\n"
+"Ctrl+D'ye basın</small>"
 
 #: ../data/ui/shortcuts.ui:96
 msgctxt "shortcut window"
@@ -452,15 +457,31 @@ msgstr "Yeni sekme"
 msgid "Open multiple articles in tabs"
 msgstr "Çoklu sayfaları sekmelerde aç"
 
-#: ../src/view.py:409
+#: ../src/view.py:417
 msgid "Open Link in New Tab"
 msgstr "Bağlantıyı Yeni Sekmede Aç"
 
-#: ../src/view.py:411
+#: ../src/view.py:423
 msgid "Add Link to Bookmarks"
 msgstr "Bağlantıyı Yer İmlerine Ekle"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:29
 msgid "Light, dark and sepia themes"
 msgstr "Açık, karanlık ve sepya temalar"
+
+#: ../src/view.py:419
+msgid "Open Link in Browser"
+msgstr "Bağlantıyı Tarayıcıda Aç"
+
+#: ../src/view.py:425
+msgid "Copy Link to Clipboard"
+msgstr "Bağlantıyı Panoya Kopyala"
+
+#: ../data/ui/prefs.ui:110
+msgid "Desktop searches are performed in the default language"
+msgstr "Masaüstü aramaları varsayılan dilde gerçekleştirildi"
+
+#: ../data/ui/prefs.ui:111
+msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
+msgstr "Ön ek kullanarak diğer dillerde arama yapabilirsiniz. Ör. Türkçe aramak için -tr"
 

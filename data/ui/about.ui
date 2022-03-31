@@ -3,7 +3,7 @@
   <requires lib="gtk+" version="3.24"/>
   <object class="GtkAboutDialog" id="about_dialog">
     <property name="program_name">Wike</property>
-    <property name="version">1.7.1</property>
+    <property name="version">1.7.2</property>
     <property name="logo_icon_name">com.github.hugolabe.Wike</property>
     <property name="comments" translatable="yes">Search and read Wikipedia articles
 All content from Wikipedia.org

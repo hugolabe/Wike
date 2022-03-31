@@ -53,6 +53,14 @@
   </screenshots>
 
   <releases>
+    <release version="1.7.2" date="2022-03-31">
+      <description>
+        <ul>
+          <li>Flatpak runtime bumped to GNOME 42.</li>
+          <li>Updated translations: Turkish.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.7.1" date="2022-02-06">
       <description>
         <ul>

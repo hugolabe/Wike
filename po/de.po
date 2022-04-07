@@ -25,15 +25,15 @@ msgstr "Internetverbindung überprüfen oder noch einmal versuchen"
 
 #: ../src/window.py:225 ../src/page.py:115
 msgid "New bookmark: "
-msgstr "Neues Lesezeichen:"
+msgstr "Neues Lesezeichen: "
 
 #: ../src/window.py:283
 msgid "Wikipedia URL copied to clipboard"
 msgstr "Wikipedia URL wurde in die Zwischenablage kopiert"
 
-#: ../src/search.py:260
+#: ../src/search.py:259
 msgid "Default search language: "
-msgstr "Standardsprache für Suche:"
+msgstr "Standardsprache für Suche: "
 
 #: ../src/bookmarks.py:138
 msgid "Clear Bookmarks List?"
@@ -68,7 +68,7 @@ msgid "translator-credits"
 msgstr "Jan Krings <liquidksky42@gmail.com>\n"
 "Markus Göllnitz <camelcasenick@bewares.it>"
 
-#: ../src/view.py:397 ../data/ui/bookmarks.ui:58
+#: ../src/view.py:402 ../data/ui/bookmarks.ui:58
 msgid "Add Bookmark"
 msgstr "Lesezeichen hinzufügen"
 
@@ -198,7 +198,7 @@ msgstr "Über Wike"
 msgid "Behavior"
 msgstr "Verhalten"
 
-#: ../data/ui/prefs.ui:120
+#: ../data/ui/prefs.ui:126
 msgid "Keep a list of recent articles"
 msgstr "Liste zuletzt aufgerufener Artikel anlegen"
 
@@ -206,7 +206,7 @@ msgstr "Liste zuletzt aufgerufener Artikel anlegen"
 msgid "General"
 msgstr "Allgemein"
 
-#: ../data/ui/prefs.ui:163
+#: ../data/ui/prefs.ui:169
 msgid "Languages"
 msgstr "Sprachen"
 
@@ -291,7 +291,7 @@ msgid "Clear Data"
 msgstr "Daten löschen"
 
 #. Don't remove %s tag!
-#: ../src/wike-sp.in:71
+#: ../src/wike-sp.in:84
 msgid "Search “%s” on Wikipedia"
 msgstr "bei Wikipedia nach „%s“ suchen"
 
@@ -347,23 +347,23 @@ msgstr "direkte Suche vom Desktop zulassen"
 msgid "Warning: all desktop searches will be sent to Wikipedia"
 msgstr "Warnung: alle Sucheingaben werden direkt zu WIkipedia übermittelt"
 
-#: ../data/ui/prefs.ui:117
+#: ../data/ui/prefs.ui:123
 msgid "Personal Data"
 msgstr "Persönliche Daten"
 
-#: ../data/ui/prefs.ui:121
+#: ../data/ui/prefs.ui:127
 msgid "Wike will remember the history of visited articles"
 msgstr "Wike wird den Verlauf der besuchten Artikel speichern"
 
-#: ../data/ui/prefs.ui:133 ../data/ui/prefs.ui:148
+#: ../data/ui/prefs.ui:139 ../data/ui/prefs.ui:154
 msgid "Clear"
 msgstr "löschen"
 
-#: ../data/ui/prefs.ui:143
+#: ../data/ui/prefs.ui:149
 msgid "Clear personal data"
 msgstr "Persönliche Daten löschen"
 
-#: ../data/ui/prefs.ui:144
+#: ../data/ui/prefs.ui:150
 msgid "Cookies and cache data will be deleted"
 msgstr "Cookies werden gelöscht und der Cache geleert"
 
@@ -391,15 +391,15 @@ msgstr "Lesezeichen"
 msgid "Table of contents"
 msgstr "Inhaltsverzeichnis"
 
-#: ../data/ui/prefs.ui:169
+#: ../data/ui/prefs.ui:175
 msgid "Filter Available Languages"
 msgstr "Filter verfügbarer Sprachen"
 
-#: ../data/ui/prefs.ui:203
+#: ../data/ui/prefs.ui:209
 msgid "Select All"
 msgstr "Alles auswählen"
 
-#: ../data/ui/prefs.ui:215
+#: ../data/ui/prefs.ui:221
 msgid "Select None"
 msgstr "Nichts auswählen"
 
@@ -457,15 +457,31 @@ msgstr "Neuer Reiter"
 msgid "Open multiple articles in tabs"
 msgstr "Artikel in mehreren Reitern öffnen"
 
-#: ../src/view.py:409
+#: ../src/view.py:417
 msgid "Open Link in New Tab"
 msgstr "Verweis in neuem Reiter öffnen"
 
-#: ../src/view.py:411
+#: ../src/view.py:423
 msgid "Add Link to Bookmarks"
 msgstr "Verweis zu Lesezeichen hinzufügen"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:29
 msgid "Light, dark and sepia themes"
 msgstr "Helle, dunkle und sepia Themen"
+
+#: ../src/view.py:419
+msgid "Open Link in Browser"
+msgstr "Link im Browser öffnen"
+
+#: ../src/view.py:425
+msgid "Copy Link to Clipboard"
+msgstr "Link in die Zwischenablage kopieren"
+
+#: ../data/ui/prefs.ui:110
+msgid "Desktop searches are performed in the default language"
+msgstr "Desktop-Suchen werden in der vorgegebenen Sprache durchgeführt"
+
+#: ../data/ui/prefs.ui:111
+msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
+msgstr "Sie können in anderen Sprachen suchen, indem Sie ein Präfix verwenden. Z. B. -es für eine Suche in Spanisch"
 

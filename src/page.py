@@ -74,6 +74,10 @@ class PageBox(Gtk.Box):
     tabpage = self._window.tabview.get_page(self)
 
     if event == WebKit2.LoadEvent.STARTED:
+      if wikiview.get_uri().endswith('.wikipedia.org/'):
+        self._is_main = True
+      else:
+        self._is_main = False
       if self.search_bar.get_search_mode(): self.search_bar.set_search_mode(False)
       tabpage.set_title(_('Loading Article'))
       tabpage.set_loading(True)
@@ -92,8 +96,9 @@ class PageBox(Gtk.Box):
         self._window.headerbar.set_langlinks(wikiview.langlinks)
     elif event == WebKit2.LoadEvent.FINISHED:
       tabpage.set_loading(False)
-      if settings.get_boolean('keep-historic') and not wikiview.is_local():
-        historic.add(wikiview.get_base_uri(), wikiview.title, wikiview.get_lang())
+      if settings.get_boolean('keep-historic'):
+        if not self._is_main and not wikiview.is_local():
+          historic.add(wikiview.get_base_uri(), wikiview.title, wikiview.get_lang())
 
   # If wikiview load failed show error
 

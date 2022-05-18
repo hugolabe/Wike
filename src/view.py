@@ -109,6 +109,8 @@ class ViewSettings:
   # Inject stylesheets for customize article view
 
   def set_style(self):
+    data_manager = web_context.get_website_data_manager()
+    data_manager.clear(WebKit2.WebsiteDataTypes.MEMORY_CACHE , 0, None, None, None)
     self.user_content.remove_all_style_sheets()
 
     style_view = WebKit2.UserStyleSheet(self._css_view, WebKit2.UserContentInjectedFrames.ALL_FRAMES, WebKit2.UserStyleLevel.USER, None, None)

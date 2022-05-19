@@ -22,7 +22,7 @@ import urllib.parse
 import gi
 gi.require_version('Gtk', '3.0')
 gi.require_version('WebKit2', '4.0')
-from gi.repository import Gio, GLib, GObject, Gdk, Gtk, WebKit2
+from gi.repository import Gio, GLib, GObject, Gdk, Gtk, Handy, WebKit2
 
 from wike import wikipedia
 from wike.data import settings, languages, historic, bookmarks
@@ -45,6 +45,7 @@ class ViewSettings:
 
   web_settings = WebKit2.Settings()
   user_content = WebKit2.UserContentManager()
+  style_manager = Handy.StyleManager.get_default()
 
   # Load custom css and connect view settings signals
 
@@ -85,6 +86,7 @@ class ViewSettings:
     settings.connect('changed::font-family', self._settings_custom_font_changed_cb)
     settings.connect('changed::preview-popups', self._settings_preview_popups_changed_cb)
     settings.connect('changed::theme', self._settings_theme_changed_cb)
+    self.style_manager.connect('notify::dark', self._system_theme_changed_cb)
 
   # Settings font-size changed event
 
@@ -106,6 +108,11 @@ class ViewSettings:
   def _settings_theme_changed_cb(self, settings, key):
     self.set_style()
 
+  # System theme changed event
+
+  def _system_theme_changed_cb(self, style_manager, dark):
+    self.set_style()
+
   # Inject stylesheets for customize article view
 
   def set_style(self):
@@ -116,12 +123,17 @@ class ViewSettings:
     style_view = WebKit2.UserStyleSheet(self._css_view, WebKit2.UserContentInjectedFrames.ALL_FRAMES, WebKit2.UserStyleLevel.USER, None, None)
     self.user_content.add_style_sheet(style_view)
 
-    if settings.get_int('theme') == 1:
+    theme = settings.get_int('theme')
+    if theme == 1:
       style_dark = WebKit2.UserStyleSheet(self._css_dark, WebKit2.UserContentInjectedFrames.ALL_FRAMES, WebKit2.UserStyleLevel.USER, None, None)
       self.user_content.add_style_sheet(style_dark)
-    elif settings.get_int('theme') == 2:
+    elif theme == 2:
       style_sepia = WebKit2.UserStyleSheet(self._css_sepia, WebKit2.UserContentInjectedFrames.ALL_FRAMES, WebKit2.UserStyleLevel.USER, None, None)
       self.user_content.add_style_sheet(style_sepia)
+    elif theme == 3:
+      if self.style_manager.get_dark():
+        style_dark = WebKit2.UserStyleSheet(self._css_dark, WebKit2.UserContentInjectedFrames.ALL_FRAMES, WebKit2.UserStyleLevel.USER, None, None)
+        self.user_content.add_style_sheet(style_dark)
 
     if settings.get_boolean('custom-font'):
       css_font = 'body,h1,h2{font-family:"' + settings.get_string('font-family') + '"!important}'
@@ -156,10 +168,16 @@ class WikiView(WebKit2.WebView):
   def __init__(self):
     super().__init__(settings=view_settings.web_settings, user_content_manager=view_settings.user_content)
 
-    if settings.get_int('theme') == 1:
+    theme = settings.get_int('theme')
+    if theme == 1:
       self.set_background_color(Gdk.RGBA(0.1, 0.1, 0.1, 1))
-    elif settings.get_int('theme') == 2:
+    elif theme == 2:
       self.set_background_color(Gdk.RGBA(0.976, 0.953, 0.914, 1))
+    elif theme == 3:
+      if view_settings.style_manager.get_dark():
+        self.set_background_color(Gdk.RGBA(0.1, 0.1, 0.1, 1))
+      else:
+        self.set_background_color(Gdk.RGBA(1, 1, 1, 1))
     else:
       self.set_background_color(Gdk.RGBA(1, 1, 1, 1))
 

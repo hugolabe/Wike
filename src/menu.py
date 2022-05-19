@@ -32,6 +32,7 @@ class MenuPopover(Gtk.Popover):
 
   __gtype_name__ = 'MenuPopover'
   
+  system_button = Gtk.Template.Child()
   light_button = Gtk.Template.Child()
   sepia_button = Gtk.Template.Child()
   dark_button = Gtk.Template.Child()
@@ -48,15 +49,29 @@ class MenuPopover(Gtk.Popover):
     css_provider.load_from_file(gfile)
     Gtk.StyleContext.add_provider_for_screen(Gdk.Screen.get_default(), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER)
     
-    if settings.get_int('theme') == 1:
+    theme = settings.get_int('theme')
+    if theme == 0:
+      self.light_button.set_active(True)
+    elif theme == 1:
       self.dark_button.set_active(True)
-    elif settings.get_int('theme') == 2:
+    elif theme == 2:
       self.sepia_button.set_active(True)
+    else:
+      self.system_button.set_active(True)
 
+    self.system_button.connect('toggled', self._system_button_toggled_cb)
     self.light_button.connect('toggled', self._light_button_toggled_cb)
     self.sepia_button.connect('toggled', self._sepia_button_toggled_cb)
     self.dark_button.connect('toggled', self._dark_button_toggled_cb)
   
+  # Change to system theme on button toggle
+
+  def _system_button_toggled_cb(self, button):
+    if button.get_active():
+      app = self._window.get_application()
+      theme_action = app.lookup_action('theme_system')
+      theme_action.activate()
+
   # Change to light theme on button toggle
   
   def _light_button_toggled_cb(self, button):

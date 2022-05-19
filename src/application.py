@@ -48,16 +48,25 @@ class Application(Gtk.Application):
 
   def do_startup(self):
     Gtk.Application.do_startup(self)
-
     Handy.init()
+
+    self._style_manager = Handy.StyleManager.get_default()
+    if settings.get_int('theme') == 0:
+      self._style_manager.set_color_scheme(Handy.ColorScheme.FORCE_LIGHT)
+    elif settings.get_int('theme') == 1:
+      self._style_manager.set_color_scheme(Handy.ColorScheme.FORCE_DARK)
+    elif settings.get_int('theme') == 2:
+      self._style_manager.set_color_scheme(Handy.ColorScheme.FORCE_LIGHT)
+    elif settings.get_int('theme') == 3:
+      self._style_manager.set_color_scheme(Handy.ColorScheme.PREFER_LIGHT)
 
     action = Gio.SimpleAction.new('prefs', None)
     action.connect('activate', self._prefs_cb)
     self.add_action(action)
     self.set_accels_for_action('app.prefs', ('<Ctrl>E',))
 
-    action = Gio.SimpleAction.new('theme_dark', None)
-    action.connect('activate', self._theme_dark)
+    action = Gio.SimpleAction.new('theme_system', None)
+    action.connect('activate', self._theme_system)
     self.add_action(action)
 
     action = Gio.SimpleAction.new('theme_light', None)
@@ -66,6 +75,10 @@ class Application(Gtk.Application):
 
     action = Gio.SimpleAction.new('theme_sepia', None)
     action.connect('activate', self._theme_sepia)
+    self.add_action(action)
+
+    action = Gio.SimpleAction.new('theme_dark', None)
+    action.connect('activate', self._theme_dark)
     self.add_action(action)
 
     action = Gio.SimpleAction.new('shortcuts', None)
@@ -102,9 +115,7 @@ class Application(Gtk.Application):
     if not self._window:
       self._window = Window(self, self._launch_uri)
       self._window.connect('delete-event',self._window_delete_cb)
-      self._gtk_settings = Gtk.Settings.get_default()
-      if settings.get_int('theme') == 1:
-        self._gtk_settings.set_property('gtk-application-prefer-dark-theme', True)
+
       self._window.show_all()
     else:
       self._window.present()
@@ -116,23 +127,29 @@ class Application(Gtk.Application):
     prefs_window.set_transient_for(self._window)
     prefs_window.show_all()
 
-  # Set theme light for UI and view
+  # Set theme system
+
+  def _theme_system(self, action, parameter):
+    self._style_manager.set_color_scheme(Handy.ColorScheme.PREFER_LIGHT)
+    settings.set_int('theme', 3)
+
+  # Set theme light
 
   def _theme_light(self, action, parameter):
+    self._style_manager.set_color_scheme(Handy.ColorScheme.FORCE_LIGHT)
     settings.set_int('theme', 0)
-    self._gtk_settings.set_property('gtk-application-prefer-dark-theme', False)
 
-  # Set theme dark for UI and view
-
-  def _theme_dark(self, action, parameter):
-    settings.set_int('theme', 1)
-    self._gtk_settings.set_property('gtk-application-prefer-dark-theme', True)
-
-  # Set theme sepia for UI and view
+  # Set theme sepia
 
   def _theme_sepia(self, action, parameter):
+    self._style_manager.set_color_scheme(Handy.ColorScheme.FORCE_LIGHT)
     settings.set_int('theme', 2)
-    self._gtk_settings.set_property('gtk-application-prefer-dark-theme', False)
+
+  # Set theme dark
+
+  def _theme_dark(self, action, parameter):
+    self._style_manager.set_color_scheme(Handy.ColorScheme.FORCE_DARK)
+    settings.set_int('theme', 1)
 
   # Show Shortcuts window
 

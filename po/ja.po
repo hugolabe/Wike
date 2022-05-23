@@ -231,7 +231,7 @@ msgstr "Wikipedia;Encyclopedia;"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:11
 msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
-msgstr "WikeはGNOMEデスクトップ向けのWikipediaリーダーです。ネイティブアプリケーションで、このオンライン百科事典のすべてのコンテンツを提供し、記事をよりシンプルで気を散らすことなく表示します。"
+msgstr "WikeはGNOMEデスクトップ向けのWikipediaリーダーです。このオンライン百科事典のすべてのコンテンツをネイティブアプリケーションで提供し、記事をよりシンプルで気を散らすことなく表示します。"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:21
 msgid "Multiple languages"
@@ -473,6 +473,7 @@ msgid "Open Link in Browser"
 msgstr "リンクをブラウザで開く"
 
 #: ../src/view.py:425
+#, fuzzy
 msgid "Copy Link to Clipboard"
 msgstr "リンクをクリップボードにコピー"
 
@@ -481,6 +482,7 @@ msgid "Desktop searches are performed in the default language"
 msgstr "デスクトップでの検索はデフォルトの言語で検索されます"
 
 #: ../data/ui/prefs.ui:111
+#, fuzzy
 msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
-msgstr ""
+msgstr "プレフィックスを使用して、他の言語を検索できます。例えば、-es でスペイン語で検索"
 

@@ -1,0 +1,486 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Wike\n"
+"Language: he\n"
+
+#: ../src/view.py:207 ../src/view.py:295
+msgid "Article not found"
+msgstr "הערך לא נמצא"
+
+#: ../src/view.py:208
+msgid "Can't find any results for requested query"
+msgstr "לא נמצאו תוצאות לשאילתה המבוקשת"
+
+#: ../src/view.py:211 ../src/view.py:297
+msgid "Can't access Wikipedia"
+msgstr "לא ניתן לגשת לוויקיפדיה"
+
+#: ../src/view.py:212
+msgid "Check your Internet connection and try again"
+msgstr "נא לבדוק את החיבור שלך לאינטרנט ולנסות שוב"
+
+#: ../src/window.py:225 ../src/page.py:115
+msgid "New bookmark: "
+msgstr "סימנייה חדשה: "
+
+#: ../src/window.py:283
+msgid "Wikipedia URL copied to clipboard"
+msgstr "הכתובת מוויקיפדיה הועתקה ללוח הגזירים"
+
+#: ../src/search.py:259
+msgid "Default search language: "
+msgstr "שפת החיפוש כברירת מחדל: "
+
+#: ../src/bookmarks.py:138
+msgid "Clear Bookmarks List?"
+msgstr "לפנות את רשימת הסימניות?"
+
+#: ../src/bookmarks.py:140
+msgid "All bookmarks in the list will be removed permanently."
+msgstr "כל הסימניות ברשימה יימחקו לצמיתות."
+
+#: ../src/bookmarks.py:141 ../data/ui/bookmarks.ui:70
+msgid "Clear List"
+msgstr "לפנות את הרשימה"
+
+#: ../data/ui/search-settings.ui:61
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:22
+msgid "Search suggestions"
+msgstr "הצעות חיפוש"
+
+#: ../data/ui/about.ui:8
+msgid "Search and read Wikipedia articles\n"
+"All content from Wikipedia.org\n"
+"and available under CC BY-SA 3.0 unless otherwise noted"
+msgstr "חיפוש וקריאה של ערכים בוויקיפדיה\n"
+"מקור כל התוכן הוא Wikipedia.org\n"
+"וזמין תחת הרישיון CC BY-SA 3.0 למעט אם צוין אחרת"
+
+#. Add your name like this:
+#. 
+#. Hugo Olabera <hugolabe@gmail.com>
+#: ../data/ui/about.ui:13
+msgid "translator-credits"
+msgstr "ירון שהרבני <sh.yaron@gmail.com>"
+
+#: ../src/view.py:402 ../data/ui/bookmarks.ui:58
+msgid "Add Bookmark"
+msgstr "הוספת סימנייה"
+
+#: ../data/ui/shortcuts.ui:14
+msgctxt "shortcut window"
+msgid "General"
+msgstr "כללי"
+
+#: ../data/ui/shortcuts.ui:25
+msgctxt "shortcut window"
+msgid "Table of contents"
+msgstr "תוכן עניינים"
+
+#: ../data/ui/shortcuts.ui:32
+msgctxt "shortcut window"
+msgid "View article in other languages"
+msgstr "הצגת הערך בשפות אחרות"
+
+#: ../data/ui/shortcuts.ui:39
+msgctxt "shortcut window"
+msgid "Search text in page"
+msgstr "חיפוש טקסט בעמוד"
+
+#: ../data/ui/shortcuts.ui:46
+msgctxt "shortcut window"
+msgid "Preferences"
+msgstr "העדפות"
+
+#: ../data/ui/shortcuts.ui:53
+msgctxt "shortcut window"
+msgid "Copy Wikipedia URL"
+msgstr "העתקת כתובת בוויקיפדיה"
+
+#: ../data/ui/shortcuts.ui:60
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "יציאה"
+
+#: ../data/ui/shortcuts.ui:67
+msgctxt "shortcut window"
+msgid "Keyboard shortcuts"
+msgstr "צירופי מקשים"
+
+#: ../data/ui/shortcuts.ui:130
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "ניווט"
+
+#: ../data/ui/shortcuts.ui:134
+msgctxt "shortcut window"
+msgid "Search articles"
+msgstr "חיפוש ערכים"
+
+#: ../data/ui/shortcuts.ui:141
+msgctxt "shortcut window"
+msgid "Wikipedia main page"
+msgstr "העמוד הראשי של ויקיפדיה"
+
+#: ../data/ui/shortcuts.ui:148
+msgctxt "shortcut window"
+msgid "Show recent articles"
+msgstr "הצגת ערכים אחרונים"
+
+#: ../data/ui/shortcuts.ui:155
+msgctxt "shortcut window"
+msgid "Previous page"
+msgstr "העמוד הקודם"
+
+#: ../data/ui/shortcuts.ui:162
+msgctxt "shortcut window"
+msgid "Next page"
+msgstr "העמוד הבא"
+
+#: ../data/ui/shortcuts.ui:169
+msgctxt "shortcut window"
+msgid "Reload page"
+msgstr "רענון העמוד"
+
+#: ../data/ui/shortcuts.ui:76
+msgctxt "shortcut window"
+msgid "Bookmarks"
+msgstr "סימניות"
+
+#: ../data/ui/shortcuts.ui:80
+msgctxt "shortcut window"
+msgid "Show bookmarks"
+msgstr "הצגת סימניות"
+
+#: ../data/ui/shortcuts.ui:87
+msgctxt "shortcut window"
+msgid "Add bookmark"
+msgstr "הוספת סימנייה"
+
+#: ../src/prefs.py:80 ../data/ui/menu.ui:101
+msgid "Wikipedia Main Page"
+msgstr "העמוד הראשי של ויקיפדיה"
+
+#: ../src/view.py:293 ../data/ui/menu.ui:127
+msgid "Recent Articles"
+msgstr "ערכים אחרונים"
+
+#: ../data/ui/menu.ui:151
+msgid "Search Text in Page"
+msgstr "חיפוש טקסט בעמוד"
+
+#: ../data/ui/menu.ui:164
+msgid "Open Wikipedia Page in Browser"
+msgstr "פתיחת עמוד ויקיפדיה בדפדפן"
+
+#: ../data/ui/menu.ui:177
+msgid "Copy Wikipedia URL to Clipboard"
+msgstr "העתקת כתובת ויקיפדיה ללוח הגזירים"
+
+#: ../data/ui/menu.ui:201
+msgid "Preferences"
+msgstr "העדפות"
+
+#: ../data/ui/menu.ui:214
+msgid "Keyboard Shortcuts"
+msgstr "צירופי מקשים"
+
+#: ../data/ui/menu.ui:227
+msgid "About Wike"
+msgstr "על Wike"
+
+#: ../data/ui/prefs.ui:20
+msgid "Behavior"
+msgstr "התנהגות"
+
+#: ../data/ui/prefs.ui:126
+msgid "Keep a list of recent articles"
+msgstr "לשמור רשימה של ערכים אחרונים"
+
+#: ../data/ui/prefs.ui:14
+msgid "General"
+msgstr "כללי"
+
+#: ../data/ui/prefs.ui:169
+msgid "Languages"
+msgstr "שפות"
+
+#: ../src/page.py:78 ../src/page.py:81
+msgid "Loading Article"
+msgstr "ערך נטען"
+
+#. Don't translate app name!
+#: ../data/com.github.hugolabe.Wike.desktop.in:3
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:7
+msgid "Wike"
+msgstr "Wike"
+
+#: ../src/view.py:203 ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
+msgid "Search and read Wikipedia articles"
+msgstr "חיפוש וקריאה של ערכים בוויקיפדיה"
+
+#. Don't remove semicolons!
+#: ../data/com.github.hugolabe.Wike.desktop.in:10
+msgid "Wikipedia;Encyclopedia;"
+msgstr "ויקיפדיה;אנציקלופדיה;"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:11
+msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
+msgstr "Wike הוא מציג ויקיפדיה לשולחן העבודה GNOME. מספק גישה לכל התוכן של האנציקלופדיה המקוונת הזאת ביישום מותאם, והצגת ערכים פשוטה ונטולת הסחות דעת."
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:21
+msgid "Multiple languages"
+msgstr "מגוון שפות"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:23
+msgid "List of recent articles"
+msgstr "רשימת ערכים אחרונים"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:24
+msgid "Simple bookmarks management"
+msgstr "ניהול סימניות פשוט"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:25
+msgid "Text search in articles"
+msgstr "חיפוש טקסט בערכים"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
+msgid "Article table of contents"
+msgstr "תוכן עניינים של ערכים"
+
+#: ../data/ui/header.ui:154 ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
+msgid "View article in other languages"
+msgstr "הצגת ערך בשפות אחרות"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
+msgid "Features:"
+msgstr "יכולות:"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
+msgid "GNOME Shell search integration"
+msgstr "שילוב חיפוש במעטפת של GNOME"
+
+#: ../src/prefs.py:148
+msgid "Clear Historic?"
+msgstr "למחוק היסטוריים?"
+
+#: ../src/prefs.py:150
+msgid "The history of visited articles will be deleted permanently."
+msgstr "היסטוריית הערכים בהם ביקרת תימחק לצמיתות."
+
+#: ../src/prefs.py:151
+msgid "Clear Historic"
+msgstr "מחיקת הסיטוריים"
+
+#: ../src/prefs.py:168
+msgid "Clear Personal Data?"
+msgstr "לפנות נתונים אישיים?"
+
+#: ../src/prefs.py:170
+msgid "Cookies and cache data will be deleted permanently."
+msgstr "עוגיות ונתוני מטמון יימחקו לצמיתות."
+
+#: ../src/prefs.py:171
+msgid "Clear Data"
+msgstr "פינוי נתונים"
+
+#. Don't remove %s tag!
+#: ../src/wike-sp.in:84
+msgid "Search “%s” on Wikipedia"
+msgstr "חיפוש אחר „%s” בוויקיפדיה"
+
+#: ../data/ui/prefs.ui:23
+msgid "Home page"
+msgstr "עמוד הבית"
+
+#: ../data/ui/prefs.ui:24
+msgid "The page that will be displayed when Wike starts"
+msgstr "העמוד שיוצג עם פתיחת Wike"
+
+#: ../data/ui/prefs.ui:34
+msgid "Article View"
+msgstr "תצוגת ערכים"
+
+#: ../data/ui/prefs.ui:37
+msgid "Font size"
+msgstr "גודל כתב"
+
+#: ../data/ui/prefs.ui:38
+msgid "Font size for article view (default is 16)"
+msgstr "גודל הכתב בתצוגת הערכים (ברירת המחדל היא 16)"
+
+#: ../data/ui/prefs.ui:55
+msgid "Use custom font"
+msgstr "להשתמש בגופן משלך"
+
+#: ../data/ui/prefs.ui:56
+msgid "Choose a font for the article view"
+msgstr "לבחור בגופן לתצוגת הערכים"
+
+#: ../data/ui/prefs.ui:69
+msgid "Preview popups in article links"
+msgstr "חלוניות תצוגה מקדימה לקישורים בערכים"
+
+#: ../data/ui/prefs.ui:70
+msgid "Show a preview of the article when hovering over a link"
+msgstr "הצגת תצוגה מקדימה של הערך כשעוברים מעל הקישור עם העכבר"
+
+#: ../data/ui/prefs.ui:89
+msgid "Privacy"
+msgstr "פרטיות"
+
+#: ../data/ui/prefs.ui:95
+msgid "Search"
+msgstr "חיפוש"
+
+#: ../data/ui/prefs.ui:98
+msgid "Allow live search on desktop"
+msgstr "לאפשר חיפוש חי בשולחן העבודה"
+
+#: ../data/ui/prefs.ui:99
+msgid "Warning: all desktop searches will be sent to Wikipedia"
+msgstr "אזהרה: כל החיפוש משולחן העבודה נשלחים לוויקיפדיה"
+
+#: ../data/ui/prefs.ui:123
+msgid "Personal Data"
+msgstr "נתונים אישיים"
+
+#: ../data/ui/prefs.ui:127
+msgid "Wike will remember the history of visited articles"
+msgstr "Wike יזכור את היסטוריית הערכים בהם ביקרת"
+
+#: ../data/ui/prefs.ui:139 ../data/ui/prefs.ui:154
+msgid "Clear"
+msgstr "פינוי"
+
+#: ../data/ui/prefs.ui:149
+msgid "Clear personal data"
+msgstr "פינוי הנתונים האישיים"
+
+#: ../data/ui/prefs.ui:150
+msgid "Cookies and cache data will be deleted"
+msgstr "העוגיות ונתוני המטמון יימחקו"
+
+#: ../src/view.py:215
+msgid "Try Again"
+msgstr "לנסות שוב"
+
+#: ../src/prefs.py:80 ../data/ui/menu.ui:114
+msgid "Random Article"
+msgstr "ערך אקראי"
+
+#: ../src/prefs.py:80
+msgid "Last Article"
+msgstr "הערך האחרון"
+
+#: ../data/ui/header.ui:79
+msgid "Search articles"
+msgstr "חיפוש בערכים"
+
+#: ../data/ui/header.ui:113
+msgid "Bookmarks"
+msgstr "סימניות"
+
+#: ../data/ui/header.ui:135
+msgid "Table of contents"
+msgstr "תוכן עניינים"
+
+#: ../data/ui/prefs.ui:175
+msgid "Filter Available Languages"
+msgstr "סינון השפות הזמינות"
+
+#: ../data/ui/prefs.ui:209
+msgid "Select All"
+msgstr "בחירה בהכול"
+
+#: ../data/ui/prefs.ui:221
+msgid "Select None"
+msgstr "בחירה בכלום"
+
+#: ../data/ui/shortcuts.ui:18
+msgctxt "shortcut window"
+msgid "Main menu"
+msgstr "תפריט ראשי"
+
+#: ../src/view.py:204
+msgid "Click the search button or press F2 to search articles in Wikipedia. You can also use the main menu to open Wikipedia main page, the list of recent articles or get a random article."
+msgstr "ניתן לחפש ערכים בוויקיפדיה בלחיצה על כפתור החיפוש או F2. אפשר גם להשתמש בתפריט הראשי כדי לפתוח את העמוד הראשי של ויקיפדיה, את רשימות הערכים האחרונים או לפנות לערך אקראי."
+
+#: ../src/bookmarks.py:47
+msgid "<b>No Bookmarks</b>\n"
+"\n"
+"<small>Use the <i>Add Bookmark</i> button\n"
+"or press Ctrl+D to add\n"
+"the current article to the list</small>"
+msgstr "<b>אין סימניות</b>\n"
+"\n"
+"<small>יש להשתמש בכפתור <b>הוספת סימנייה</b>\n"
+"או ללחוץ על Ctrl+D כדי להוסיף\n"
+"את הערך הנוכחי לרשימה</small>"
+
+#: ../data/ui/shortcuts.ui:96
+msgctxt "shortcut window"
+msgid "Tabs"
+msgstr "לשוניות"
+
+#: ../data/ui/shortcuts.ui:100
+msgctxt "shortcut window"
+msgid "New tab"
+msgstr "לשונית חדשה"
+
+#: ../data/ui/shortcuts.ui:107
+msgctxt "shortcut window"
+msgid "Close current tab"
+msgstr "סגירת הלשונית הנוכחית"
+
+#: ../data/ui/shortcuts.ui:114
+msgctxt "shortcut window"
+msgid "Next tab"
+msgstr "הלשונית הבאה"
+
+#: ../data/ui/shortcuts.ui:121
+msgctxt "shortcut window"
+msgid "Previous tab"
+msgstr "הלשונית הקודמת"
+
+#: ../data/ui/header.ui:61
+msgid "New tab"
+msgstr "לשונית חדשה"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
+msgid "Open multiple articles in tabs"
+msgstr "פתיחת מגוון ערכים בלשוניות"
+
+#: ../src/view.py:417
+msgid "Open Link in New Tab"
+msgstr "פתיחת קישור בלשונית חדשה"
+
+#: ../src/view.py:423
+msgid "Add Link to Bookmarks"
+msgstr "הוספת קישור לסימניות"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:29
+msgid "Light, dark and sepia themes"
+msgstr "ערכות עיצוב בהירה, כהה וגווני חום"
+
+#: ../src/view.py:419
+msgid "Open Link in Browser"
+msgstr "פתיחת קישור בדפדפן"
+
+#: ../src/view.py:425
+msgid "Copy Link to Clipboard"
+msgstr "העתקת קישור ללוח הגזירים"
+
+#: ../data/ui/prefs.ui:110
+msgid "Desktop searches are performed in the default language"
+msgstr "חיפושים בשולחן העבודה נערכים בשפת ברירת המחדל"
+
+#: ../data/ui/prefs.ui:111
+msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
+msgstr "ניתן לחפש בשפות אחרות באמצעות קידומת. למשל: ‎-en כדי לחפש באנגלית"
+

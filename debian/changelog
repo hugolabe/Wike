@@ -1,3 +1,7 @@
+wike (1.8.0) focal; urgency=medium
+
+  * New release with system theme support
+
 wike (1.7.2) focal; urgency=medium
 
   * Runtime 42

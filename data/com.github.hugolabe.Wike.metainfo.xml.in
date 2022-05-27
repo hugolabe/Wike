@@ -53,6 +53,17 @@
   </screenshots>
 
   <releases>
+    <release version="1.8.0" date="2022-05-28">
+      <description>
+        <ul>
+          <li>System light/dark theme support.</li>
+          <li>Updated Wikipedia language list.</li>
+          <li>Added translations: Hebrew.</li>
+          <li>Updated translations: Czech, German, Japanese.</li>
+          <li>Bug fixes.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.7.2" date="2022-03-31">
       <description>
         <ul>

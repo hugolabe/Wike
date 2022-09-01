@@ -1,0 +1,486 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Wike\n"
+"Language: ta\n"
+
+#: ../src/view.py:207 ../src/view.py:295
+msgid "Article not found"
+msgstr "கட்டுரை கிடைக்கவில்லை"
+
+#: ../src/view.py:208
+msgid "Can't find any results for requested query"
+msgstr "கோரப்பட்ட வினவலுக்கு எந்த முடிவும் கிடைக்கவில்லை"
+
+#: ../src/view.py:211 ../src/view.py:297
+msgid "Can't access Wikipedia"
+msgstr "விக்கிபீடியாவை அணுக முடியவில்லை"
+
+#: ../src/view.py:212
+msgid "Check your Internet connection and try again"
+msgstr "உங்கள் இணைய இணைப்பைச் சரிபார்த்து மீண்டும் முயலவும்"
+
+#: ../src/window.py:225 ../src/page.py:115
+msgid "New bookmark: "
+msgstr "புதிய புக்மார்க்: "
+
+#: ../src/window.py:283
+msgid "Wikipedia URL copied to clipboard"
+msgstr "விக்கிபீடியா URL கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது"
+
+#: ../src/search.py:259
+msgid "Default search language: "
+msgstr "இயல்புநிலை தேடல் மொழி: "
+
+#: ../src/bookmarks.py:138
+msgid "Clear Bookmarks List?"
+msgstr "புக்மார்க்குகள் பட்டியலை அழிக்கவா?"
+
+#: ../src/bookmarks.py:140
+msgid "All bookmarks in the list will be removed permanently."
+msgstr "பட்டியலில் உள்ள அனைத்து புக்மார்க்குகளும் நிரந்தரமாக அகற்றப்படும்."
+
+#: ../src/bookmarks.py:141 ../data/ui/bookmarks.ui:70
+msgid "Clear List"
+msgstr "பட்டியலை அழி"
+
+#: ../data/ui/search-settings.ui:61
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:22
+msgid "Search suggestions"
+msgstr "தேடல் பரிந்துரைகள்"
+
+#: ../data/ui/about.ui:8
+msgid "Search and read Wikipedia articles\n"
+"All content from Wikipedia.org\n"
+"and available under CC BY-SA 3.0 unless otherwise noted"
+msgstr "விக்கிபீடியா கட்டுரைகளைத் தேடிப் படிக்கவும்\n"
+"Wikipedia.org இலிருந்து அனைத்து உள்ளடக்கமும்\n"
+"மற்றும் வேறுவிதமாகக் குறிப்பிடப்படாவிட்டால் CC BY-SA 3.0 இன் கீழ் கிடைக்கும்"
+
+#. Add your name like this:
+#. 
+#. Hugo Olabera <hugolabe@gmail.com>
+#: ../data/ui/about.ui:13
+msgid "translator-credits"
+msgstr "மொழிபெயர்ப்பாளர்-வரவுகள்"
+
+#: ../src/view.py:402 ../data/ui/bookmarks.ui:58
+msgid "Add Bookmark"
+msgstr "புக்மார்க் சேர்"
+
+#: ../data/ui/shortcuts.ui:14
+msgctxt "shortcut window"
+msgid "General"
+msgstr "ஜெனரல்"
+
+#: ../data/ui/shortcuts.ui:25
+msgctxt "shortcut window"
+msgid "Table of contents"
+msgstr "உள்ளடக்க அட்டவணை"
+
+#: ../data/ui/shortcuts.ui:32
+msgctxt "shortcut window"
+msgid "View article in other languages"
+msgstr "பிற மொழிகளில் கட்டுரையைப் பார்க்கவும்"
+
+#: ../data/ui/shortcuts.ui:39
+msgctxt "shortcut window"
+msgid "Search text in page"
+msgstr "பக்கத்தில் உரையைத் தேடுங்கள்"
+
+#: ../data/ui/shortcuts.ui:46
+msgctxt "shortcut window"
+msgid "Preferences"
+msgstr "விருப்பத்தேர்வுகள்"
+
+#: ../data/ui/shortcuts.ui:53
+msgctxt "shortcut window"
+msgid "Copy Wikipedia URL"
+msgstr "விக்கிபீடியா URL ஐ நகலெடுக்கவும்"
+
+#: ../data/ui/shortcuts.ui:60
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "வெளியேறு"
+
+#: ../data/ui/shortcuts.ui:67
+msgctxt "shortcut window"
+msgid "Keyboard shortcuts"
+msgstr "கீபோர்டு ஷார்ட்கட்கள்"
+
+#: ../data/ui/shortcuts.ui:130
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "வழிசெலுத்தல்"
+
+#: ../data/ui/shortcuts.ui:134
+msgctxt "shortcut window"
+msgid "Search articles"
+msgstr "கட்டுரைகளைத் தேடுங்கள்"
+
+#: ../data/ui/shortcuts.ui:141
+msgctxt "shortcut window"
+msgid "Wikipedia main page"
+msgstr "விக்கிபீடியாவின் முதன்மைப் பக்கம்"
+
+#: ../data/ui/shortcuts.ui:148
+msgctxt "shortcut window"
+msgid "Show recent articles"
+msgstr "சமீபத்திய கட்டுரைகளைக் காட்டு"
+
+#: ../data/ui/shortcuts.ui:155
+msgctxt "shortcut window"
+msgid "Previous page"
+msgstr "முந்தைய பக்கம்"
+
+#: ../data/ui/shortcuts.ui:162
+msgctxt "shortcut window"
+msgid "Next page"
+msgstr "அடுத்த பக்கம்"
+
+#: ../data/ui/shortcuts.ui:169
+msgctxt "shortcut window"
+msgid "Reload page"
+msgstr "பக்கத்தை மீண்டும் ஏற்றவும்"
+
+#: ../data/ui/shortcuts.ui:76
+msgctxt "shortcut window"
+msgid "Bookmarks"
+msgstr "புத்தகக்குறிகள்"
+
+#: ../data/ui/shortcuts.ui:80
+msgctxt "shortcut window"
+msgid "Show bookmarks"
+msgstr "புத்தகக்குறிகள் காட்டு"
+
+#: ../data/ui/shortcuts.ui:87
+msgctxt "shortcut window"
+msgid "Add bookmark"
+msgstr "புத்தகக்குறியை  சேர்க்கவும்"
+
+#: ../src/prefs.py:80 ../data/ui/menu.ui:101
+msgid "Wikipedia Main Page"
+msgstr "விக்கிபீடியா முதன்மை பக்கம்"
+
+#: ../src/view.py:293 ../data/ui/menu.ui:127
+msgid "Recent Articles"
+msgstr "சமீபத்திய கட்டுரைகள்"
+
+#: ../data/ui/menu.ui:151
+msgid "Search Text in Page"
+msgstr "பக்கத்தில் உரையைத் தேடுங்கள்"
+
+#: ../data/ui/menu.ui:164
+msgid "Open Wikipedia Page in Browser"
+msgstr "விக்கிபீடியா பக்கத்தை உலாவியில் திறக்கவும்"
+
+#: ../data/ui/menu.ui:177
+msgid "Copy Wikipedia URL to Clipboard"
+msgstr "விக்கிபீடியா URL ஐ கிளிப்போர்டுக்கு நகலெடுக்கவும்"
+
+#: ../data/ui/menu.ui:201
+msgid "Preferences"
+msgstr "விருப்பத்தேர்வுகள்"
+
+#: ../data/ui/menu.ui:214
+msgid "Keyboard Shortcuts"
+msgstr "கீபோர்டு ஷார்ட்கட்கள்"
+
+#: ../data/ui/menu.ui:227
+msgid "About Wike"
+msgstr "வைக்கைப் பற்றி"
+
+#: ../data/ui/prefs.ui:20
+msgid "Behavior"
+msgstr "நடத்தை"
+
+#: ../data/ui/prefs.ui:126
+msgid "Keep a list of recent articles"
+msgstr "சமீபத்திய கட்டுரைகளின் பட்டியலை வைத்திருங்கள்"
+
+#: ../data/ui/prefs.ui:14
+msgid "General"
+msgstr "ஜெனரல்"
+
+#: ../data/ui/prefs.ui:169
+msgid "Languages"
+msgstr "மொழிகள்"
+
+#: ../src/page.py:78 ../src/page.py:81
+msgid "Loading Article"
+msgstr "கட்டுரையை ஏற்றுகிறது"
+
+#. Don't translate app name!
+#: ../data/com.github.hugolabe.Wike.desktop.in:3
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:7
+msgid "Wike"
+msgstr "வைக்"
+
+#: ../src/view.py:203 ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
+msgid "Search and read Wikipedia articles"
+msgstr "விக்கிபீடியா கட்டுரைகளைத் தேடிப் படிக்கவும்"
+
+#. Don't remove semicolons!
+#: ../data/com.github.hugolabe.Wike.desktop.in:10
+msgid "Wikipedia;Encyclopedia;"
+msgstr "விக்கிபீடியா;என்சைக்ளோபீடியா;"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:11
+msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
+msgstr "வைக் என்பது க்னோம் டெஸ்க்டாப்பிற்கான விக்கிபீடியா ரீடர். கட்டுரைகளின் எளிமையான மற்றும் கவனச்சிதறல் இல்லாத பார்வையுடன், இந்த ஆன்லைன் கலைக்களஞ்சியத்தின் அனைத்து உள்ளடக்கங்களுக்கும் சொந்த பயன்பாட்டில் அணுகலை வழங்குகிறது."
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:21
+msgid "Multiple languages"
+msgstr "பல மொழிகள்"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:23
+msgid "List of recent articles"
+msgstr "சமீபத்திய கட்டுரைகளின் பட்டியல்"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:24
+msgid "Simple bookmarks management"
+msgstr "எளிய புக்மார்க்குகள் மேலாண்மை"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:25
+msgid "Text search in articles"
+msgstr "கட்டுரைகளில் உரை தேடல்"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
+msgid "Article table of contents"
+msgstr "கட்டுரை உள்ளடக்க அட்டவணை"
+
+#: ../data/ui/header.ui:154 ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
+msgid "View article in other languages"
+msgstr "பிற மொழிகளில் கட்டுரையைப் பார்க்கவும்"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
+msgid "Features:"
+msgstr "அம்சங்கள்:"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
+msgid "GNOME Shell search integration"
+msgstr "க்னோம் ஷெல் தேடல் ஒருங்கிணைப்பு"
+
+#: ../src/prefs.py:148
+msgid "Clear Historic?"
+msgstr "வரலாற்றை அழிக்கவா?"
+
+#: ../src/prefs.py:150
+msgid "The history of visited articles will be deleted permanently."
+msgstr "பார்வையிட்ட கட்டுரைகளின் வரலாறு நிரந்தரமாக நீக்கப்படும்."
+
+#: ../src/prefs.py:151
+msgid "Clear Historic"
+msgstr "வரலாற்றை அழிக்கவும்"
+
+#: ../src/prefs.py:168
+msgid "Clear Personal Data?"
+msgstr "தனிப்பட்ட தரவை அழிக்கவா?"
+
+#: ../src/prefs.py:170
+msgid "Cookies and cache data will be deleted permanently."
+msgstr "குக்கீகள் மற்றும் கேச் தரவு நிரந்தரமாக நீக்கப்படும்."
+
+#: ../src/prefs.py:171
+msgid "Clear Data"
+msgstr "தரவை அழிக்கவும்"
+
+#. Don't remove %s tag!
+#: ../src/wike-sp.in:84
+msgid "Search “%s” on Wikipedia"
+msgstr "விக்கிபீடியாவில் “%s” ஐ தேடவும்"
+
+#: ../data/ui/prefs.ui:23
+msgid "Home page"
+msgstr "முகப்பு பக்கம்"
+
+#: ../data/ui/prefs.ui:24
+msgid "The page that will be displayed when Wike starts"
+msgstr "வைக் தொடங்கும் போது காட்டப்படும் பக்கம்"
+
+#: ../data/ui/prefs.ui:34
+msgid "Article View"
+msgstr "கட்டுரை பார்வை"
+
+#: ../data/ui/prefs.ui:37
+msgid "Font size"
+msgstr "எழுத்துரு அளவு"
+
+#: ../data/ui/prefs.ui:38
+msgid "Font size for article view (default is 16)"
+msgstr "கட்டுரை பார்வைக்கான எழுத்துரு அளவு (இயல்புநிலை 16)"
+
+#: ../data/ui/prefs.ui:55
+msgid "Use custom font"
+msgstr "தனிப்பயன் எழுத்துருவைப் பயன்படுத்தவும்"
+
+#: ../data/ui/prefs.ui:56
+msgid "Choose a font for the article view"
+msgstr "கட்டுரைப் பார்வைக்கு எழுத்துருவைத் தேர்ந்தெடுக்கவும்"
+
+#: ../data/ui/prefs.ui:69
+msgid "Preview popups in article links"
+msgstr "கட்டுரை இணைப்புகளில் பாப்அப்களை முன்னோட்டமிடுங்கள்"
+
+#: ../data/ui/prefs.ui:70
+msgid "Show a preview of the article when hovering over a link"
+msgstr "இணைப்பின் மீது வட்டமிடும்போது கட்டுரையின் முன்னோட்டத்தைக் காட்டு"
+
+#: ../data/ui/prefs.ui:89
+msgid "Privacy"
+msgstr "தனியுரிமை"
+
+#: ../data/ui/prefs.ui:95
+msgid "Search"
+msgstr "தேடு"
+
+#: ../data/ui/prefs.ui:98
+msgid "Allow live search on desktop"
+msgstr "டெஸ்க்டாப்பில் நேரடி தேடலை அனுமதிக்கவும்"
+
+#: ../data/ui/prefs.ui:99
+msgid "Warning: all desktop searches will be sent to Wikipedia"
+msgstr "எச்சரிக்கை: அனைத்து டெஸ்க்டாப் தேடல்களும் விக்கிபீடியாவிற்கு அனுப்பப்படும்"
+
+#: ../data/ui/prefs.ui:123
+msgid "Personal Data"
+msgstr "தனிப்பட்ட தகவல்"
+
+#: ../data/ui/prefs.ui:127
+msgid "Wike will remember the history of visited articles"
+msgstr "பார்வையிட்ட கட்டுரைகளின் வரலாற்றை வைக் நினைவில் வைத்திருப்பார்"
+
+#: ../data/ui/prefs.ui:139 ../data/ui/prefs.ui:154
+msgid "Clear"
+msgstr "அழி"
+
+#: ../data/ui/prefs.ui:149
+msgid "Clear personal data"
+msgstr "தனிப்பட்ட தரவை அழி"
+
+#: ../data/ui/prefs.ui:150
+msgid "Cookies and cache data will be deleted"
+msgstr "குக்கீகள் மற்றும் கேச் தரவு நீக்கப்படும்"
+
+#: ../src/view.py:215
+msgid "Try Again"
+msgstr "மீண்டும் முயற்சி செய்"
+
+#: ../src/prefs.py:80 ../data/ui/menu.ui:114
+msgid "Random Article"
+msgstr "சீரற்ற கட்டுரை"
+
+#: ../src/prefs.py:80
+msgid "Last Article"
+msgstr "கடைசி கட்டுரை"
+
+#: ../data/ui/header.ui:79
+msgid "Search articles"
+msgstr "கட்டுரைகளைத் தேடுங்கள்"
+
+#: ../data/ui/header.ui:113
+msgid "Bookmarks"
+msgstr "புக்மார்க்குகள்"
+
+#: ../data/ui/header.ui:135
+msgid "Table of contents"
+msgstr "உள்ளடக்க அட்டவணை"
+
+#: ../data/ui/prefs.ui:175
+msgid "Filter Available Languages"
+msgstr "கிடைக்கக்கூடிய மொழிகளை வடிகட்டவும்"
+
+#: ../data/ui/prefs.ui:209
+msgid "Select All"
+msgstr "அனைத்தையும் தெரிவுசெய்"
+
+#: ../data/ui/prefs.ui:221
+msgid "Select None"
+msgstr "எதுவுமில்லை என்பதைத் தேர்ந்தெடுக்கவும்"
+
+#: ../data/ui/shortcuts.ui:18
+msgctxt "shortcut window"
+msgid "Main menu"
+msgstr "முதன்மை பட்டியல்"
+
+#: ../src/view.py:204
+msgid "Click the search button or press F2 to search articles in Wikipedia. You can also use the main menu to open Wikipedia main page, the list of recent articles or get a random article."
+msgstr "விக்கிபீடியாவில் கட்டுரைகளைத் தேட தேடல் பொத்தானைக் கிளிக் செய்யவும் அல்லது F2 ஐ அழுத்தவும். விக்கிபீடியாவின் முதன்மைப் பக்கம், சமீபத்திய கட்டுரைகளின் பட்டியல் அல்லது சீரற்ற கட்டுரையைப் பெற முதன்மை மெனுவைப் பயன்படுத்தலாம்."
+
+#: ../src/bookmarks.py:47
+msgid "<b>No Bookmarks</b>\n"
+"\n"
+"<small>Use the <i>Add Bookmark</i> button\n"
+"or press Ctrl+D to add\n"
+"the current article to the list</small>"
+msgstr "<b>புக்மார்க்குகள் இல்லை</b>\n"
+"\n"
+"<small><i>புக்மார்க்கைச் சேர்</i> பொத்தானைப் பயன்படுத்தவும்\n"
+"அல்லது சேர்க்க Ctrl+D ஐ அழுத்தவும்\n"
+"பட்டியலில் தற்போதைய கட்டுரை</small>"
+
+#: ../data/ui/shortcuts.ui:96
+msgctxt "shortcut window"
+msgid "Tabs"
+msgstr "தாவல்கள்"
+
+#: ../data/ui/shortcuts.ui:100
+msgctxt "shortcut window"
+msgid "New tab"
+msgstr "புதிய தாவல்"
+
+#: ../data/ui/shortcuts.ui:107
+msgctxt "shortcut window"
+msgid "Close current tab"
+msgstr "தற்போதைய தாவலை மூடு"
+
+#: ../data/ui/shortcuts.ui:114
+msgctxt "shortcut window"
+msgid "Next tab"
+msgstr "அடுத்த தாவல்"
+
+#: ../data/ui/shortcuts.ui:121
+msgctxt "shortcut window"
+msgid "Previous tab"
+msgstr "முந்தைய தாவல்"
+
+#: ../data/ui/header.ui:61
+msgid "New tab"
+msgstr "புதிய தாவல்"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
+msgid "Open multiple articles in tabs"
+msgstr "தாவல்களில் பல கட்டுரைகளைத் திறக்கவும்"
+
+#: ../src/view.py:417
+msgid "Open Link in New Tab"
+msgstr "புதிய தாவலில் இணைப்பைத் திறக்கவும்"
+
+#: ../src/view.py:423
+msgid "Add Link to Bookmarks"
+msgstr "புக்மார்க்குகளுக்கு இணைப்பைச் சேர்க்கவும்"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:29
+msgid "Light, dark and sepia themes"
+msgstr "ஒளி, இருண்ட மற்றும் செபியா தீம்கள்"
+
+#: ../src/view.py:419
+msgid "Open Link in Browser"
+msgstr "உலாவியில் இணைப்பைத் திறக்கவும்"
+
+#: ../src/view.py:425
+msgid "Copy Link to Clipboard"
+msgstr "கிளிப்போர்டுக்கு இணைப்பை நகலெடுக்கவும்"
+
+#: ../data/ui/prefs.ui:110
+msgid "Desktop searches are performed in the default language"
+msgstr "டெஸ்க்டாப் தேடல்கள் இயல்பு மொழியில் செய்யப்படுகின்றன"
+
+#: ../data/ui/prefs.ui:111
+msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
+msgstr "முன்னொட்டைப் பயன்படுத்தி பிற மொழிகளில் தேடலாம். எ.கா. ஸ்பானிஷ் மொழியில் தேட வேண்டும்"
+

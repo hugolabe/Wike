@@ -41,7 +41,7 @@ msgstr "Bladwijzerlijst wissen?"
 
 #: ../src/bookmarks.py:140
 msgid "All bookmarks in the list will be removed permanently."
-msgstr "Alle bladwijzers op de lijst worden permanent gewist."
+msgstr "Alle bladwijzers zullen permanent gewisst worden."
 
 #: ../src/bookmarks.py:141 ../data/ui/bookmarks.ui:70
 msgid "Clear List"
@@ -155,7 +155,7 @@ msgstr "Bladwijzers"
 #: ../data/ui/shortcuts.ui:80
 msgctxt "shortcut window"
 msgid "Show bookmarks"
-msgstr "Toon de bladwijzers"
+msgstr "Toon bladwijzers"
 
 #: ../data/ui/shortcuts.ui:87
 msgctxt "shortcut window"
@@ -232,7 +232,7 @@ msgstr "Wikipedia;Encyclopedie;"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:11
 msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
-msgstr "Wike is een Wikipedia-leeshulpmiddel voor de GNOME-werkomgeving. U heeft toegang tot alle inhoud van deze online-encyclopedie, maar in een met de werkomgeving geïntegreerd jasje en een eenvoudige weergave zonder enige afleiding."
+msgstr "Wike is een Wikipedia-leeshulpmiddel voor de GNOME desktop. U heeft toegang tot alle inhoud van deze online-encyclopedie, maar in een met de desktop geïntegreerde applicatie en een eenvoudige weergave zonder enige afleiding."
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:21
 msgid "Multiple languages"
@@ -256,7 +256,7 @@ msgstr "Inhoudsopgaven"
 
 #: ../data/ui/header.ui:154 ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
 msgid "View article in other languages"
-msgstr "Lees artikelen in andere talen"
+msgstr "Lees artikel in andere talen"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
 msgid "Features:"
@@ -410,7 +410,7 @@ msgstr "Hoofdmenu"
 
 #: ../src/view.py:204
 msgid "Click the search button or press F2 to search articles in Wikipedia. You can also use the main menu to open Wikipedia main page, the list of recent articles or get a random article."
-msgstr "Klik op de zoekknop of druk op F2 om naar artikelen te zoeken op Wikipedia. Ook kunt u via het hoofdmenu te Wikipedia-startpagina bereiken, de lijst met recente artikelen opvragen of een willekeurig artikel openen."
+msgstr "Klik op de zoekknop of druk op F2 om naar artikelen te zoeken op Wikipedia. Ook kunt u via het hoofdmenu de Wikipedia-startpagina bereiken, de lijst met recente artikelen opvragen of een willekeurig artikel openen."
 
 #: ../src/bookmarks.py:47
 msgid "<b>No Bookmarks</b>\n"
@@ -455,11 +455,11 @@ msgstr "Nieuw tabblad"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
 msgid "Open multiple articles in tabs"
-msgstr "Meerdere artikelen op tabbladen openen"
+msgstr "Meerdere artikelen in tabbladen openen"
 
 #: ../src/view.py:417
 msgid "Open Link in New Tab"
-msgstr "Link openen op nieuw tabblad"
+msgstr "Link openen in nieuw tabblad"
 
 #: ../src/view.py:423
 msgid "Add Link to Bookmarks"

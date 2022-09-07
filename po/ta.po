@@ -65,7 +65,7 @@ msgstr "விக்கிபீடியா கட்டுரைகளைத�
 #. Hugo Olabera <hugolabe@gmail.com>
 #: ../data/ui/about.ui:13
 msgid "translator-credits"
-msgstr "மொழிபெயர்ப்பாளர்-வரவுகள்"
+msgstr "K.B.Dharun Krishna <kbdharunkrishna@gmail.com>"
 
 #: ../src/view.py:402 ../data/ui/bookmarks.ui:58
 msgid "Add Bookmark"

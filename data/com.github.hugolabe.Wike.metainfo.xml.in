@@ -53,6 +53,14 @@
   </screenshots>
 
   <releases>
+    <release version="1.8.1" date="2022-09-07">
+      <description>
+        <ul>
+          <li>Added Tamil translation.</li>
+          <li>Updated Dutch translation.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.8.0" date="2022-05-28">
       <description>
         <ul>

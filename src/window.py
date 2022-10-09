@@ -60,8 +60,11 @@ class Window(Handy.ApplicationWindow):
     self.headerbar = HeaderBar(self)
     self.window_box.pack_start(self.headerbar, False, True, 0)
 
-    actions = [ ('prev_page', self._prev_page_cb, ('<Alt>Left',)),
-                ('next_page', self._next_page_cb, ('<Alt>Right',)),
+    actions = [ ('prev_page', self._prev_page_cb, ('<Alt>Left','<Shift>H',)),
+                ('next_page', self._next_page_cb, ('<Alt>Right','<Shift>L',)),
+                ('scroll_down', self._scroll_down, ('j',)),
+                ('scroll_up', self._scroll_up, ('k',)),
+                ('next_page', self._next_page_cb, ('<Alt>Right','<Shift>L',)),
                 ('new_tab', self._new_tab_cb, ('<Ctrl>N',)),
                 ('close_tab', self._close_tab_cb, ('<Ctrl>W',)),
                 ('next_tab', self._next_tab_cb, ('<Ctrl>Tab',)),
@@ -119,6 +122,16 @@ class Window(Handy.ApplicationWindow):
 
     if select:
       self.tabview.set_selected_page(tabpage)
+
+  # Scroll down
+
+  def _scroll_down(self, action, parameter):
+    self.page.wikiview.run_javascript("window.scrollBy(0,50)",None,None,None)
+
+  # Scroll up
+
+  def _scroll_up(self, action, parameter):
+    self.page.wikiview.run_javascript('window.scrollBy(0,-50)',None,None,None)
 
   # New empty tab
 

@@ -60,11 +60,10 @@ class Window(Handy.ApplicationWindow):
     self.headerbar = HeaderBar(self)
     self.window_box.pack_start(self.headerbar, False, True, 0)
 
-    actions = [ ('prev_page', self._prev_page_cb, ('<Alt>Left','<Shift>H',)),
-                ('next_page', self._next_page_cb, ('<Alt>Right','<Shift>L',)),
+    actions = [ ('prev_page', self._prev_page_cb, ('<Alt>Left','h',)),
+                ('next_page', self._next_page_cb, ('<Alt>Right','l',)),
                 ('scroll_down', self._scroll_down, ('j',)),
                 ('scroll_up', self._scroll_up, ('k',)),
-                ('next_page', self._next_page_cb, ('<Alt>Right','<Shift>L',)),
                 ('new_tab', self._new_tab_cb, ('<Ctrl>N',)),
                 ('close_tab', self._close_tab_cb, ('<Ctrl>W',)),
                 ('next_tab', self._next_tab_cb, ('<Ctrl>Tab',)),

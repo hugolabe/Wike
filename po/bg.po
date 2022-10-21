@@ -1,0 +1,486 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Wike\n"
+"Language: bg\n"
+
+#: ../src/view.py:207 ../src/view.py:295
+msgid "Article not found"
+msgstr "Статията не беше намерена"
+
+#: ../src/view.py:208
+msgid "Can't find any results for requested query"
+msgstr "Няма намерени резултати"
+
+#: ../src/view.py:211 ../src/view.py:297
+msgid "Can't access Wikipedia"
+msgstr "Няма достъп до Уикипедия"
+
+#: ../src/view.py:212
+msgid "Check your Internet connection and try again"
+msgstr "Проверете интернет връзката си и опитайте отново"
+
+#: ../src/window.py:225 ../src/page.py:115
+msgid "New bookmark: "
+msgstr "Нова отметка: "
+
+#: ../src/window.py:283
+msgid "Wikipedia URL copied to clipboard"
+msgstr "Връзката е копирана"
+
+#: ../src/search.py:259
+msgid "Default search language: "
+msgstr "Език за търсене: "
+
+#: ../src/bookmarks.py:138
+msgid "Clear Bookmarks List?"
+msgstr "Изчистване на "
+
+#: ../src/bookmarks.py:140
+msgid "All bookmarks in the list will be removed permanently."
+msgstr "Всички отметки в списъка ще бъдат премахнати завинаги."
+
+#: ../src/bookmarks.py:141 ../data/ui/bookmarks.ui:70
+msgid "Clear List"
+msgstr "Изчистване на списък"
+
+#: ../data/ui/search-settings.ui:61
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:22
+msgid "Search suggestions"
+msgstr "Предложения за търсене"
+
+#: ../data/ui/about.ui:8
+msgid "Search and read Wikipedia articles\n"
+"All content from Wikipedia.org\n"
+"and available under CC BY-SA 3.0 unless otherwise noted"
+msgstr "Търсене и четене на статии в Уикипедия\n"
+"Цялото съдържание е от Wikipedia.org\n"
+"и е "
+
+#. Add your name like this:
+#. 
+#. Hugo Olabera <hugolabe@gmail.com>
+#: ../data/ui/about.ui:13
+msgid "translator-credits"
+msgstr "Николай Георгиев <nikogen06@gmail.com>"
+
+#: ../src/view.py:402 ../data/ui/bookmarks.ui:58
+msgid "Add Bookmark"
+msgstr "Добавяне на отметка"
+
+#: ../data/ui/shortcuts.ui:14
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Основни настройки"
+
+#: ../data/ui/shortcuts.ui:25
+msgctxt "shortcut window"
+msgid "Table of contents"
+msgstr "Съдържание"
+
+#: ../data/ui/shortcuts.ui:32
+msgctxt "shortcut window"
+msgid "View article in other languages"
+msgstr "Вижте в други езици"
+
+#: ../data/ui/shortcuts.ui:39
+msgctxt "shortcut window"
+msgid "Search text in page"
+msgstr "Търсене в статията"
+
+#: ../data/ui/shortcuts.ui:46
+msgctxt "shortcut window"
+msgid "Preferences"
+msgstr "Настройки"
+
+#: ../data/ui/shortcuts.ui:53
+msgctxt "shortcut window"
+msgid "Copy Wikipedia URL"
+msgstr "Копиране на връзка"
+
+#: ../data/ui/shortcuts.ui:60
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Затваряне"
+
+#: ../data/ui/shortcuts.ui:67
+msgctxt "shortcut window"
+msgid "Keyboard shortcuts"
+msgstr "Клавишни комбинации"
+
+#: ../data/ui/shortcuts.ui:130
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Навигация"
+
+#: ../data/ui/shortcuts.ui:134
+msgctxt "shortcut window"
+msgid "Search articles"
+msgstr "Търсене на статии"
+
+#: ../data/ui/shortcuts.ui:141
+msgctxt "shortcut window"
+msgid "Wikipedia main page"
+msgstr "Начална страница"
+
+#: ../data/ui/shortcuts.ui:148
+msgctxt "shortcut window"
+msgid "Show recent articles"
+msgstr "Показване на скоро разглеждани статии"
+
+#: ../data/ui/shortcuts.ui:155
+msgctxt "shortcut window"
+msgid "Previous page"
+msgstr "Предишна страница"
+
+#: ../data/ui/shortcuts.ui:162
+msgctxt "shortcut window"
+msgid "Next page"
+msgstr "Следваща страница"
+
+#: ../data/ui/shortcuts.ui:169
+msgctxt "shortcut window"
+msgid "Reload page"
+msgstr "Презареждане"
+
+#: ../data/ui/shortcuts.ui:76
+msgctxt "shortcut window"
+msgid "Bookmarks"
+msgstr "Отметки"
+
+#: ../data/ui/shortcuts.ui:80
+msgctxt "shortcut window"
+msgid "Show bookmarks"
+msgstr "Показване на отметки"
+
+#: ../data/ui/shortcuts.ui:87
+msgctxt "shortcut window"
+msgid "Add bookmark"
+msgstr "Добавяне на отметка"
+
+#: ../src/prefs.py:80 ../data/ui/menu.ui:101
+msgid "Wikipedia Main Page"
+msgstr "Начална страница"
+
+#: ../src/view.py:293 ../data/ui/menu.ui:127
+msgid "Recent Articles"
+msgstr "Скоро разглеждани статии"
+
+#: ../data/ui/menu.ui:151
+msgid "Search Text in Page"
+msgstr "Търсене в страницата"
+
+#: ../data/ui/menu.ui:164
+msgid "Open Wikipedia Page in Browser"
+msgstr "Отваряне на страницата в браузър"
+
+#: ../data/ui/menu.ui:177
+msgid "Copy Wikipedia URL to Clipboard"
+msgstr "Копиране на връзка"
+
+#: ../data/ui/menu.ui:201
+msgid "Preferences"
+msgstr "Настройки"
+
+#: ../data/ui/menu.ui:214
+msgid "Keyboard Shortcuts"
+msgstr "Клавишни комбинации"
+
+#: ../data/ui/menu.ui:227
+msgid "About Wike"
+msgstr "Относно Wike"
+
+#: ../data/ui/prefs.ui:20
+msgid "Behavior"
+msgstr "Поведение"
+
+#: ../data/ui/prefs.ui:126
+msgid "Keep a list of recent articles"
+msgstr "Запазване на скорошни статии в списък"
+
+#: ../data/ui/prefs.ui:14
+msgid "General"
+msgstr "Основни"
+
+#: ../data/ui/prefs.ui:169
+msgid "Languages"
+msgstr "Езици"
+
+#: ../src/page.py:78 ../src/page.py:81
+msgid "Loading Article"
+msgstr "Зарежда статия"
+
+#. Don't translate app name!
+#: ../data/com.github.hugolabe.Wike.desktop.in:3
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:7
+msgid "Wike"
+msgstr "Wike"
+
+#: ../src/view.py:203 ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
+msgid "Search and read Wikipedia articles"
+msgstr "Търсене и четене на статии от Уикипедия"
+
+#. Don't remove semicolons!
+#: ../data/com.github.hugolabe.Wike.desktop.in:10
+msgid "Wikipedia;Encyclopedia;"
+msgstr "Уикипедия;Енциклопедия;"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:11
+msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
+msgstr "Wike е програма, която представя статии от Уикипедия в GNOME. Осигурява достъп до цялото съдържание на тази енциклопедия в опростено и  приложение."
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:21
+msgid "Multiple languages"
+msgstr "Многобройни езици"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:23
+msgid "List of recent articles"
+msgstr "Списък със скорошни статии"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:24
+msgid "Simple bookmarks management"
+msgstr "Опростено управление на отметките"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:25
+msgid "Text search in articles"
+msgstr "Търсене в статиите"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
+msgid "Article table of contents"
+msgstr "Съдържание на статията"
+
+#: ../data/ui/header.ui:154 ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
+msgid "View article in other languages"
+msgstr "Вижте статията на друг език"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
+#, fuzzy
+msgid "Features:"
+msgstr "Особености:"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
+msgid "GNOME Shell search integration"
+msgstr "Интеграция с търсене в GNOME"
+
+#: ../src/prefs.py:148
+msgid "Clear Historic?"
+msgstr "Да бъде ли изчистена историята?"
+
+#: ../src/prefs.py:150
+msgid "The history of visited articles will be deleted permanently."
+msgstr "Историята на посещаваните статии ще бъде изтрита завинаги."
+
+#: ../src/prefs.py:151
+msgid "Clear Historic"
+msgstr "Изчистване на историята"
+
+#: ../src/prefs.py:168
+msgid "Clear Personal Data?"
+msgstr "Да бъдат ли изчистени лични данни?"
+
+#: ../src/prefs.py:170
+msgid "Cookies and cache data will be deleted permanently."
+msgstr "Бисквитки и кешът ще бъдат изтрити завинаги."
+
+#: ../src/prefs.py:171
+msgid "Clear Data"
+msgstr "Изчистване на данни"
+
+#. Don't remove %s tag!
+#: ../src/wike-sp.in:84
+msgid "Search “%s” on Wikipedia"
+msgstr "Търсене на \"%s\" в Уикипедия"
+
+#: ../data/ui/prefs.ui:23
+msgid "Home page"
+msgstr "Начална страница"
+
+#: ../data/ui/prefs.ui:24
+msgid "The page that will be displayed when Wike starts"
+msgstr "Страницата, която ще бъде показана, когато зареди Wike"
+
+#: ../data/ui/prefs.ui:34
+msgid "Article View"
+msgstr "Режим \"Статия\""
+
+#: ../data/ui/prefs.ui:37
+msgid "Font size"
+msgstr "Размер на шрифта"
+
+#: ../data/ui/prefs.ui:38
+msgid "Font size for article view (default is 16)"
+msgstr "Размер на шрифта в режим \"Статия\" (по подразбиране: 16)"
+
+#: ../data/ui/prefs.ui:55
+msgid "Use custom font"
+msgstr "Използване на различен шрифт"
+
+#: ../data/ui/prefs.ui:56
+msgid "Choose a font for the article view"
+msgstr "Избиране на шрифт за режим \"Статия\""
+
+#: ../data/ui/prefs.ui:69
+msgid "Preview popups in article links"
+msgstr "Изскачащи прозорци за предварителен преглед във връзки в статията"
+
+#: ../data/ui/prefs.ui:70
+msgid "Show a preview of the article when hovering over a link"
+msgstr "Предварителен преглед на статия когато мишката е над връзка"
+
+#: ../data/ui/prefs.ui:89
+msgid "Privacy"
+msgstr "Поверителност"
+
+#: ../data/ui/prefs.ui:95
+msgid "Search"
+msgstr "Търсене"
+
+#: ../data/ui/prefs.ui:98
+msgid "Allow live search on desktop"
+msgstr "Разрешаване на 'Live Search' на работния плот"
+
+#: ../data/ui/prefs.ui:99
+msgid "Warning: all desktop searches will be sent to Wikipedia"
+msgstr "Внимание: всички търсения от работния плот ще бъдат изпратени към Уикипедия"
+
+#: ../data/ui/prefs.ui:123
+msgid "Personal Data"
+msgstr "Лични данни"
+
+#: ../data/ui/prefs.ui:127
+msgid "Wike will remember the history of visited articles"
+msgstr "Wike ще запази историята на посетените статии"
+
+#: ../data/ui/prefs.ui:139 ../data/ui/prefs.ui:154
+msgid "Clear"
+msgstr "Изчистване"
+
+#: ../data/ui/prefs.ui:149
+msgid "Clear personal data"
+msgstr "Изчистване на лични данни"
+
+#: ../data/ui/prefs.ui:150
+msgid "Cookies and cache data will be deleted"
+msgstr "Бисквитките и кешът ще бъдат изтрити"
+
+#: ../src/view.py:215
+msgid "Try Again"
+msgstr "Опитай отново"
+
+#: ../src/prefs.py:80 ../data/ui/menu.ui:114
+msgid "Random Article"
+msgstr "Произволна статия"
+
+#: ../src/prefs.py:80
+msgid "Last Article"
+msgstr "Последна статия"
+
+#: ../data/ui/header.ui:79
+msgid "Search articles"
+msgstr "Търсене на статии"
+
+#: ../data/ui/header.ui:113
+msgid "Bookmarks"
+msgstr "Отметки"
+
+#: ../data/ui/header.ui:135
+msgid "Table of contents"
+msgstr "Съдържание"
+
+#: ../data/ui/prefs.ui:175
+msgid "Filter Available Languages"
+msgstr "Филтриране на достъпните езици"
+
+#: ../data/ui/prefs.ui:209
+msgid "Select All"
+msgstr "Избиране на всички"
+
+#: ../data/ui/prefs.ui:221
+#, fuzzy
+msgid "Select None"
+msgstr "Избиране на нищо"
+
+#: ../data/ui/shortcuts.ui:18
+msgctxt "shortcut window"
+msgid "Main menu"
+msgstr "Основно меню"
+
+#: ../src/view.py:204
+msgid "Click the search button or press F2 to search articles in Wikipedia. You can also use the main menu to open Wikipedia main page, the list of recent articles or get a random article."
+msgstr "Натиснете бутона за търсене или натиснете F2, за да потърсите статии в Уикипедия. Също може да използвате главното меню, за да отворите началната страница на Уикипедия, списъка със скорошни статии или произволна статия."
+
+#: ../src/bookmarks.py:47
+msgid "<b>No Bookmarks</b>\n"
+"\n"
+"<small>Use the <i>Add Bookmark</i> button\n"
+"or press Ctrl+D to add\n"
+"the current article to the list</small>"
+msgstr "<b>Няма отметки</b>\n"
+"\n"
+"<small>Използвайте бутонът <i>Добавяне на отметка</i> или натиснете Ctrl+D, за да добавите текущата статия към списъка</small>"
+
+#: ../data/ui/shortcuts.ui:96
+msgctxt "shortcut window"
+msgid "Tabs"
+msgstr "Раздели"
+
+#: ../data/ui/shortcuts.ui:100
+msgctxt "shortcut window"
+msgid "New tab"
+msgstr "Нов раздел"
+
+#: ../data/ui/shortcuts.ui:107
+msgctxt "shortcut window"
+msgid "Close current tab"
+msgstr "Затваряне на текущия раздел"
+
+#: ../data/ui/shortcuts.ui:114
+msgctxt "shortcut window"
+msgid "Next tab"
+msgstr "Следващ раздел"
+
+#: ../data/ui/shortcuts.ui:121
+msgctxt "shortcut window"
+msgid "Previous tab"
+msgstr "Предишен раздел"
+
+#: ../data/ui/header.ui:61
+msgid "New tab"
+msgstr "Нов раздел"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
+msgid "Open multiple articles in tabs"
+msgstr "Отваряне на няколко статии в отделни раздели"
+
+#: ../src/view.py:417
+msgid "Open Link in New Tab"
+msgstr "Отваряне на връзка в нов прозорец"
+
+#: ../src/view.py:423
+msgid "Add Link to Bookmarks"
+msgstr "Добавяне на връзка към отметките"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:29
+msgid "Light, dark and sepia themes"
+msgstr "Цветове - светли, тъмни и \"Сепия\""
+
+#: ../src/view.py:419
+msgid "Open Link in Browser"
+msgstr "Отваряне на връзка в браузъра"
+
+#: ../src/view.py:425
+msgid "Copy Link to Clipboard"
+msgstr "Копиране на връзка"
+
+#: ../data/ui/prefs.ui:110
+msgid "Desktop searches are performed in the default language"
+msgstr "Търсенията на работния плот се извършват на избраният език"
+
+#: ../data/ui/prefs.ui:111
+msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
+msgstr "Можете да търсите на други езици, използвайки представка. Напр. -es, за да търсите на испански"
+

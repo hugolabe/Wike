@@ -53,6 +53,15 @@
   </screenshots>
 
   <releases>
+    <release version="1.8.2" date="2022-10-24">
+      <description>
+        <ul>
+          <li>Added Bulgarian translation.</li>
+          <li>Updated Turkish translation.</li>
+          <li>Bug fixes.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.8.1" date="2022-09-07">
       <description>
         <ul>

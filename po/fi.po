@@ -7,23 +7,23 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: fi\n"
 
-#: ../src/view.py:207 ../src/view.py:295
+#: ../src/view.py:227 ../src/view.py:315
 msgid "Article not found"
 msgstr "Artikkelia ei löydy"
 
-#: ../src/view.py:208
+#: ../src/view.py:228
 msgid "Can't find any results for requested query"
 msgstr "Hakuehdoilla ei löytynyt tuloksia"
 
-#: ../src/view.py:211 ../src/view.py:297
+#: ../src/view.py:231 ../src/view.py:317
 msgid "Can't access Wikipedia"
 msgstr "Ei pääsyä Wikipediaan"
 
-#: ../src/view.py:212
+#: ../src/view.py:232
 msgid "Check your Internet connection and try again"
 msgstr "Tarkista internetyhteys ja yritä uudelleen"
 
-#: ../src/window.py:225 ../src/page.py:115
+#: ../src/window.py:225 ../src/page.py:120
 msgid "New bookmark: "
 msgstr "Uusi kirjanmerkki: "
 
@@ -67,129 +67,129 @@ msgstr "Hae ja lue Wikipedia-artikkeleita\n"
 msgid "translator-credits"
 msgstr "Jiri Grönroos"
 
-#: ../src/view.py:402 ../data/ui/bookmarks.ui:58
+#: ../src/view.py:422 ../data/ui/bookmarks.ui:58
 msgid "Add Bookmark"
 msgstr "Lisää kirjanmerkki"
 
-#: ../data/ui/shortcuts.ui:14
+#: ../data/ui/shortcuts.ui:13
 msgctxt "shortcut window"
 msgid "General"
 msgstr "Yleiset"
 
-#: ../data/ui/shortcuts.ui:25
+#: ../data/ui/shortcuts.ui:24
 msgctxt "shortcut window"
 msgid "Table of contents"
 msgstr "Sisällysluettelo"
 
-#: ../data/ui/shortcuts.ui:32
+#: ../data/ui/shortcuts.ui:31
 msgctxt "shortcut window"
 msgid "View article in other languages"
 msgstr "Näytä artikkeli muilla kielillä"
 
-#: ../data/ui/shortcuts.ui:39
+#: ../data/ui/shortcuts.ui:38
 msgctxt "shortcut window"
 msgid "Search text in page"
 msgstr "Etsi tekstiä sivulta"
 
-#: ../data/ui/shortcuts.ui:46
+#: ../data/ui/shortcuts.ui:45
 msgctxt "shortcut window"
 msgid "Preferences"
 msgstr "Asetukset"
 
-#: ../data/ui/shortcuts.ui:53
+#: ../data/ui/shortcuts.ui:52
 msgctxt "shortcut window"
 msgid "Copy Wikipedia URL"
 msgstr "Kopioi Wikipedia-osoite"
 
-#: ../data/ui/shortcuts.ui:60
+#: ../data/ui/shortcuts.ui:59
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Lopeta"
 
-#: ../data/ui/shortcuts.ui:67
+#: ../data/ui/shortcuts.ui:66
 msgctxt "shortcut window"
 msgid "Keyboard shortcuts"
 msgstr "Pikanäppäimet"
 
-#: ../data/ui/shortcuts.ui:130
+#: ../data/ui/shortcuts.ui:129
 msgctxt "shortcut window"
 msgid "Navigation"
 msgstr "Liikkuminen"
 
-#: ../data/ui/shortcuts.ui:134
+#: ../data/ui/shortcuts.ui:133
 msgctxt "shortcut window"
 msgid "Search articles"
 msgstr "Etsi artikkeleja"
 
-#: ../data/ui/shortcuts.ui:141
+#: ../data/ui/shortcuts.ui:140
 msgctxt "shortcut window"
 msgid "Wikipedia main page"
 msgstr "Wikipedian etusivu"
 
-#: ../data/ui/shortcuts.ui:148
+#: ../data/ui/shortcuts.ui:154
 msgctxt "shortcut window"
 msgid "Show recent articles"
 msgstr "Näytä viimeisimmät artikkelit"
 
-#: ../data/ui/shortcuts.ui:155
+#: ../data/ui/shortcuts.ui:161
 msgctxt "shortcut window"
 msgid "Previous page"
 msgstr "Edellinen sivu"
 
-#: ../data/ui/shortcuts.ui:162
+#: ../data/ui/shortcuts.ui:168
 msgctxt "shortcut window"
 msgid "Next page"
 msgstr "Seuraava sivu"
 
-#: ../data/ui/shortcuts.ui:169
+#: ../data/ui/shortcuts.ui:175
 msgctxt "shortcut window"
 msgid "Reload page"
 msgstr "Lataa sivu uudelleen"
 
-#: ../data/ui/shortcuts.ui:76
+#: ../data/ui/shortcuts.ui:75
 msgctxt "shortcut window"
 msgid "Bookmarks"
 msgstr "Kirjanmerkit"
 
-#: ../data/ui/shortcuts.ui:80
+#: ../data/ui/shortcuts.ui:79
 msgctxt "shortcut window"
 msgid "Show bookmarks"
 msgstr "Näytä kirjanmerkit"
 
-#: ../data/ui/shortcuts.ui:87
+#: ../data/ui/shortcuts.ui:86
 msgctxt "shortcut window"
 msgid "Add bookmark"
 msgstr "Lisää kirjanmerkki"
 
-#: ../src/prefs.py:80 ../data/ui/menu.ui:101
+#: ../src/prefs.py:80 ../data/ui/menu.ui:123
 msgid "Wikipedia Main Page"
 msgstr "Wikipedian etusivu"
 
-#: ../src/view.py:293 ../data/ui/menu.ui:127
+#: ../src/view.py:313 ../data/ui/menu.ui:149
 msgid "Recent Articles"
 msgstr "Viimeisimmät artikkelit"
 
-#: ../data/ui/menu.ui:151
+#: ../data/ui/menu.ui:173
 msgid "Search Text in Page"
 msgstr "Etsi tekstiä sivulta"
 
-#: ../data/ui/menu.ui:164
+#: ../data/ui/menu.ui:186
 msgid "Open Wikipedia Page in Browser"
 msgstr "Avaa Wikipedia-sivu selaimessa"
 
-#: ../data/ui/menu.ui:177
+#: ../data/ui/menu.ui:199
 msgid "Copy Wikipedia URL to Clipboard"
 msgstr "Kopioi Wikipedia-osoite leikepöydälle"
 
-#: ../data/ui/menu.ui:201
+#: ../data/ui/menu.ui:223
 msgid "Preferences"
 msgstr "Asetukset"
 
-#: ../data/ui/menu.ui:214
+#: ../data/ui/menu.ui:236
 msgid "Keyboard Shortcuts"
 msgstr "Pikanäppäimet"
 
-#: ../data/ui/menu.ui:227
+#: ../data/ui/menu.ui:249
 msgid "About Wike"
 msgstr "Tietoja - Wike"
 
@@ -209,7 +209,7 @@ msgstr "Yleiset"
 msgid "Languages"
 msgstr "Kielet"
 
-#: ../src/page.py:78 ../src/page.py:81
+#: ../src/page.py:82 ../src/page.py:85
 msgid "Loading Article"
 msgstr "Ladataan artikkelia"
 
@@ -219,7 +219,7 @@ msgstr "Ladataan artikkelia"
 msgid "Wike"
 msgstr "Wike"
 
-#: ../src/view.py:203 ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../src/view.py:223 ../data/com.github.hugolabe.Wike.desktop.in:4
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
 msgid "Search and read Wikipedia articles"
 msgstr "Hae ja lue Wikipedia-artikkeleita"
@@ -366,11 +366,11 @@ msgstr "Tyhjennä henkilökohtaiset tiedot"
 msgid "Cookies and cache data will be deleted"
 msgstr "Evästeet ja välimuisti tyhjennetään"
 
-#: ../src/view.py:215
+#: ../src/view.py:235
 msgid "Try Again"
 msgstr "Yritä uudelleen"
 
-#: ../src/prefs.py:80 ../data/ui/menu.ui:114
+#: ../src/prefs.py:80 ../data/ui/menu.ui:136
 msgid "Random Article"
 msgstr "Satunnainen artikkeli"
 
@@ -402,12 +402,12 @@ msgstr "Valitse kaikki"
 msgid "Select None"
 msgstr "Älä valitse mitään"
 
-#: ../data/ui/shortcuts.ui:18
+#: ../data/ui/shortcuts.ui:17
 msgctxt "shortcut window"
 msgid "Main menu"
 msgstr "Päävalikko"
 
-#: ../src/view.py:204
+#: ../src/view.py:224
 msgid "Click the search button or press F2 to search articles in Wikipedia. You can also use the main menu to open Wikipedia main page, the list of recent articles or get a random article."
 msgstr "Napsauta hakupainiketta tai paina F2 etsiäksesi artikkeleita Wikipediasta. Voit myös avata päävalikosta Wikipedian etusivun, luettelon viimeisimmistä artikkeleista tai satunnaisen artikkelin."
 
@@ -423,27 +423,27 @@ msgstr "<b>Ei kirjanmerkkejä</b>\n"
 "tai paina Ctrl+D lisätäksesi\n"
 "nykyisen artikkelin luetteloon</small>"
 
-#: ../data/ui/shortcuts.ui:96
+#: ../data/ui/shortcuts.ui:95
 msgctxt "shortcut window"
 msgid "Tabs"
 msgstr "Välilehdet"
 
-#: ../data/ui/shortcuts.ui:100
+#: ../data/ui/shortcuts.ui:99
 msgctxt "shortcut window"
 msgid "New tab"
 msgstr "Uusi välilehti"
 
-#: ../data/ui/shortcuts.ui:107
+#: ../data/ui/shortcuts.ui:106
 msgctxt "shortcut window"
 msgid "Close current tab"
 msgstr "Sulje nykyinen välilehti"
 
-#: ../data/ui/shortcuts.ui:114
+#: ../data/ui/shortcuts.ui:113
 msgctxt "shortcut window"
 msgid "Next tab"
 msgstr "Seuraava välilehti"
 
-#: ../data/ui/shortcuts.ui:121
+#: ../data/ui/shortcuts.ui:120
 msgctxt "shortcut window"
 msgid "Previous tab"
 msgstr "Edellinen välilehti"
@@ -456,11 +456,11 @@ msgstr "Uusi välilehti"
 msgid "Open multiple articles in tabs"
 msgstr "Avaa useita artikkeleita välilehtiin"
 
-#: ../src/view.py:417
+#: ../src/view.py:437
 msgid "Open Link in New Tab"
 msgstr "Avaa linkki uudessa välilehdessä"
 
-#: ../src/view.py:423
+#: ../src/view.py:443
 msgid "Add Link to Bookmarks"
 msgstr "Lisää linkki kirjanmerkkeihin"
 
@@ -468,11 +468,11 @@ msgstr "Lisää linkki kirjanmerkkeihin"
 msgid "Light, dark and sepia themes"
 msgstr "Tumma, vaalea ja seepianvärinen teema"
 
-#: ../src/view.py:419
+#: ../src/view.py:439
 msgid "Open Link in Browser"
 msgstr "Avaa linkki selaimessa"
 
-#: ../src/view.py:425
+#: ../src/view.py:445
 msgid "Copy Link to Clipboard"
 msgstr "Kopioi linkki leikepöydälle"
 
@@ -483,4 +483,9 @@ msgstr "Työpöytähaut suoritetaan oletuskielellä"
 #: ../data/ui/prefs.ui:111
 msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
 msgstr "Voit etsiä muilla kielillä käyttämällä etuliitettä. Esimerkiksi -en etsii englanniksi"
+
+#: ../data/ui/shortcuts.ui:147
+msgctxt "shortcut window"
+msgid "Random article"
+msgstr "Satunnainen artikkeli"
 

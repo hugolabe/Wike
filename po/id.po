@@ -7,48 +7,48 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: id\n"
 
-#: ../src/view.py:154
+#: ../src/view.py:227 ../src/view.py:315
 msgid "Article not found"
 msgstr "Artikel tidak ditemukan"
 
-#: ../src/view.py:155
+#: ../src/view.py:228
 msgid "Can't find any results for requested query"
 msgstr "Tidak dapat menemukan hasil untuk kueri yang diminta"
 
-#: ../src/view.py:157
+#: ../src/view.py:231 ../src/view.py:317
 msgid "Can't access Wikipedia"
 msgstr "Tidak dapat mengakses Wikipedia"
 
-#: ../src/view.py:158
+#: ../src/view.py:232
 msgid "Check your Internet connection and try again"
 msgstr "Periksa sambungan Internet Anda, lalu coba kembali"
 
-#: ../src/window.py:151 ../src/window.py:261
+#: ../src/window.py:225 ../src/page.py:120
 msgid "New bookmark: "
 msgstr "Markah baru: "
 
-#: ../src/window.py:319
+#: ../src/window.py:283
 msgid "Wikipedia URL copied to clipboard"
 msgstr "URL Wikipedia disalin ke papan klip"
 
-#: ../src/search.py:249
+#: ../src/search.py:259
 msgid "Default search language: "
 msgstr "Bahasa pencarian bawaan: "
 
-#: ../src/bookmarks.py:137
+#: ../src/bookmarks.py:138
 msgid "Clear Bookmarks List?"
 msgstr "Bersihkan Daftar Markah?"
 
-#: ../src/bookmarks.py:138
+#: ../src/bookmarks.py:140
 msgid "All bookmarks in the list will be removed permanently."
 msgstr "Semua markah dalam daftar akan dihapus secara permanen."
 
-#: ../src/bookmarks.py:139 ../data/ui/bookmarks.ui:70
+#: ../src/bookmarks.py:141 ../data/ui/bookmarks.ui:70
 msgid "Clear List"
 msgstr "Bersihkan Daftar"
 
 #: ../data/ui/search-settings.ui:61
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:21
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:22
 msgid "Search suggestions"
 msgstr "Saran Pencarian"
 
@@ -67,143 +67,129 @@ msgstr "Cari dan baca artikel Wikipedia\n"
 msgid "translator-credits"
 msgstr "Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2021."
 
-#: ../data/ui/bookmarks.ui:58
+#: ../src/view.py:422 ../data/ui/bookmarks.ui:58
 msgid "Add Bookmark"
 msgstr "Tambah Markah"
 
-#: ../data/ui/shortcuts.ui:14
+#: ../data/ui/shortcuts.ui:13
 msgctxt "shortcut window"
 msgid "General"
 msgstr "Umum"
 
-#: ../data/ui/shortcuts.ui:25
+#: ../data/ui/shortcuts.ui:24
 msgctxt "shortcut window"
 msgid "Table of contents"
 msgstr "Daftar isi"
 
-#: ../data/ui/shortcuts.ui:32
+#: ../data/ui/shortcuts.ui:31
 msgctxt "shortcut window"
 msgid "View article in other languages"
 msgstr "Tampilkan artikel dalam bahasa lain"
 
-#: ../data/ui/shortcuts.ui:39
+#: ../data/ui/shortcuts.ui:38
 msgctxt "shortcut window"
 msgid "Search text in page"
 msgstr "Cari teks di halaman"
 
-#: ../data/ui/shortcuts.ui:46
+#: ../data/ui/shortcuts.ui:45
 msgctxt "shortcut window"
 msgid "Preferences"
 msgstr "Preferensi"
 
-#: ../data/ui/shortcuts.ui:53
-msgctxt "shortcut window"
-msgid "Select all"
-msgstr "Pilih semua"
-
-#: ../data/ui/shortcuts.ui:60
-msgctxt "shortcut window"
-msgid "Copy selection"
-msgstr "Salin pilihan"
-
-#: ../data/ui/shortcuts.ui:67
+#: ../data/ui/shortcuts.ui:52
 msgctxt "shortcut window"
 msgid "Copy Wikipedia URL"
 msgstr "Salin URL Wikipedia"
 
-#: ../data/ui/shortcuts.ui:74
+#: ../data/ui/shortcuts.ui:59
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Keluar"
 
-#: ../data/ui/shortcuts.ui:81
+#: ../data/ui/shortcuts.ui:66
 msgctxt "shortcut window"
 msgid "Keyboard shortcuts"
 msgstr "Pintasan papan tik"
 
-#: ../data/ui/shortcuts.ui:90
+#: ../data/ui/shortcuts.ui:129
 msgctxt "shortcut window"
 msgid "Navigation"
 msgstr "Navigasi"
 
-#: ../data/ui/shortcuts.ui:94
+#: ../data/ui/shortcuts.ui:133
 msgctxt "shortcut window"
 msgid "Search articles"
 msgstr "Cari artikel"
 
-#: ../data/ui/shortcuts.ui:101
+#: ../data/ui/shortcuts.ui:140
 msgctxt "shortcut window"
 msgid "Wikipedia main page"
 msgstr "Halaman utama Wikipedia"
 
-#: ../data/ui/shortcuts.ui:108
+#: ../data/ui/shortcuts.ui:154
 msgctxt "shortcut window"
 msgid "Show recent articles"
 msgstr "Tampilkan artikel terbaru"
 
-#: ../data/ui/shortcuts.ui:115
+#: ../data/ui/shortcuts.ui:161
 msgctxt "shortcut window"
 msgid "Previous page"
 msgstr "Halaman sebelumnya"
 
-#: ../data/ui/shortcuts.ui:122
+#: ../data/ui/shortcuts.ui:168
 msgctxt "shortcut window"
 msgid "Next page"
 msgstr "Halaman selanjutnya"
 
-#: ../data/ui/shortcuts.ui:129
+#: ../data/ui/shortcuts.ui:175
 msgctxt "shortcut window"
 msgid "Reload page"
 msgstr "Muat ulang halaman"
 
-#: ../data/ui/shortcuts.ui:138
+#: ../data/ui/shortcuts.ui:75
 msgctxt "shortcut window"
 msgid "Bookmarks"
 msgstr "Markah"
 
-#: ../data/ui/shortcuts.ui:142
+#: ../data/ui/shortcuts.ui:79
 msgctxt "shortcut window"
 msgid "Show bookmarks"
 msgstr "Tampilkan markah"
 
-#: ../data/ui/shortcuts.ui:149
+#: ../data/ui/shortcuts.ui:86
 msgctxt "shortcut window"
 msgid "Add bookmark"
 msgstr "Tambah markah"
 
-#: ../src/prefs.py:81 ../data/ui/menu.ui:8
+#: ../src/prefs.py:80 ../data/ui/menu.ui:123
 msgid "Wikipedia Main Page"
 msgstr "Halaman Utama Wikipedia"
 
-#: ../src/view.py:234 ../data/ui/menu.ui:18
+#: ../src/view.py:313 ../data/ui/menu.ui:149
 msgid "Recent Articles"
 msgstr "Artikel Terbaru"
 
-#: ../data/ui/menu.ui:23
-msgid "Reload Page"
-msgstr "Muat Ulang Halaman"
-
-#: ../data/ui/menu.ui:30
+#: ../data/ui/menu.ui:173
 msgid "Search Text in Page"
 msgstr "Cari Teks di Halaman"
 
-#: ../data/ui/menu.ui:36
+#: ../data/ui/menu.ui:186
 msgid "Open Wikipedia Page in Browser"
 msgstr "Buka Halaman Wikipedia di Peramban"
 
-#: ../data/ui/menu.ui:40
+#: ../data/ui/menu.ui:199
 msgid "Copy Wikipedia URL to Clipboard"
 msgstr "Salin URL Wikipedia ke Papan klip"
 
-#: ../data/ui/menu.ui:46
+#: ../data/ui/menu.ui:223
 msgid "Preferences"
 msgstr "Preferensi"
 
-#: ../data/ui/menu.ui:56
+#: ../data/ui/menu.ui:236
 msgid "Keyboard Shortcuts"
 msgstr "Pintasan Papan Tik"
 
-#: ../data/ui/menu.ui:60
+#: ../data/ui/menu.ui:249
 msgid "About Wike"
 msgstr "Tentang Wike"
 
@@ -211,7 +197,7 @@ msgstr "Tentang Wike"
 msgid "Behavior"
 msgstr "Perilaku"
 
-#: ../data/ui/prefs.ui:135
+#: ../data/ui/prefs.ui:126
 msgid "Keep a list of recent articles"
 msgstr "Menyimpan daftar artikel terbaru"
 
@@ -219,11 +205,11 @@ msgstr "Menyimpan daftar artikel terbaru"
 msgid "General"
 msgstr "Umum"
 
-#: ../data/ui/prefs.ui:178
+#: ../data/ui/prefs.ui:169
 msgid "Languages"
 msgstr "Bahasa"
 
-#: ../data/ui/header-spinner.ui:23
+#: ../src/page.py:82 ../src/page.py:85
 msgid "Loading Article"
 msgstr "Memuat Artikel"
 
@@ -233,7 +219,7 @@ msgstr "Memuat Artikel"
 msgid "Wike"
 msgstr "Wike"
 
-#: ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../src/view.py:223 ../data/com.github.hugolabe.Wike.desktop.in:4
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
 msgid "Search and read Wikipedia articles"
 msgstr "Cari dan baca artikel Wikipedia"
@@ -247,27 +233,27 @@ msgstr "Wikipedia; Ensiklopedia;"
 msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
 msgstr "Wike adalah pembaca Wikipedia untuk Destop GNOME. Menyediakan akses ke semua konten ensiklopedia luring ini dalam aplikasi asli, dengan tampilan artikel yang lebih sederhana dan bebas gangguan."
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:21
 msgid "Multiple languages"
 msgstr "Multi Bahasa"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:22
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:23
 msgid "List of recent articles"
 msgstr "Daftar artikel terbaru"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:23
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:24
 msgid "Simple bookmarks management"
 msgstr "Pengelola markah sederhana"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:24
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:25
 msgid "Text search in articles"
 msgstr "Pencarian teks dalam artikel"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:25
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
 msgid "Article table of contents"
 msgstr "Daftar isi artikel"
 
-#: ../data/ui/header.ui:136 ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
+#: ../data/ui/header.ui:154 ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
 msgid "View article in other languages"
 msgstr "Tampilkan artikel dalam bahasa lain"
 
@@ -275,44 +261,36 @@ msgstr "Tampilkan artikel dalam bahasa lain"
 msgid "Features:"
 msgstr "Fitur:"
 
-#: ../data/ui/menu.ui:50
-msgid "Dark Mode"
-msgstr "Mode Gelap"
-
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
-msgid "Dark mode"
-msgstr "Mode gelap"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
 msgid "GNOME Shell search integration"
 msgstr "Integrasi pencarian Shell GNOME"
 
-#: ../src/prefs.py:146
+#: ../src/prefs.py:148
 msgid "Clear Historic?"
 msgstr "Bersihkan Riwayat?"
 
-#: ../src/prefs.py:147
+#: ../src/prefs.py:150
 msgid "The history of visited articles will be deleted permanently."
 msgstr "Riwayat artikel yang dikunjungi akan dihapus secara permanen."
 
-#: ../src/prefs.py:148
+#: ../src/prefs.py:151
 msgid "Clear Historic"
 msgstr "Bersihkan Riwayat"
 
-#: ../src/prefs.py:165
+#: ../src/prefs.py:168
 msgid "Clear Personal Data?"
 msgstr "Bersihkan Data Pribadi?"
 
-#: ../src/prefs.py:166
+#: ../src/prefs.py:170
 msgid "Cookies and cache data will be deleted permanently."
 msgstr "Kuki dan data singgahan akan dihapus secara permanen."
 
-#: ../src/prefs.py:167
+#: ../src/prefs.py:171
 msgid "Clear Data"
 msgstr "Bersihkan Data"
 
 #. Don't remove %s tag!
-#: ../src/wike-sp.in:71
+#: ../src/wike-sp.in:84
 msgid "Search “%s” on Wikipedia"
 msgstr "Cari «%s» di Wikipedia"
 
@@ -324,128 +302,186 @@ msgstr "Halaman beranda"
 msgid "The page that will be displayed when Wike starts"
 msgstr "Halaman yang akan ditampilkan saat Wike dimulai"
 
-#: ../data/ui/prefs.ui:30
-msgid "Clear bookmarks on exit"
-msgstr "Bersihkan markah saat keluar"
-
-#: ../data/ui/prefs.ui:31
-msgid "The bookmarks list will be cleared when exiting Wike"
-msgstr "Daftar markah akan dibersihkan saat keluar dari Wike"
-
-#: ../data/ui/prefs.ui:49
+#: ../data/ui/prefs.ui:34
 msgid "Article View"
 msgstr "Tampilan Artikel"
 
-#: ../data/ui/prefs.ui:52
+#: ../data/ui/prefs.ui:37
 msgid "Font size"
 msgstr "Ukuran fonta"
 
-#: ../data/ui/prefs.ui:53
+#: ../data/ui/prefs.ui:38
 msgid "Font size for article view (default is 16)"
 msgstr "Ukuran fonta untuk tampilan artikel (bawaannya adalah 16)"
 
-#: ../data/ui/prefs.ui:70
+#: ../data/ui/prefs.ui:55
 msgid "Use custom font"
 msgstr "Gunakan fonta ubahan"
 
-#: ../data/ui/prefs.ui:71
+#: ../data/ui/prefs.ui:56
 msgid "Choose a font for the article view"
 msgstr "Memilih fonta untuk tampilan artikel"
 
-#: ../data/ui/prefs.ui:84
+#: ../data/ui/prefs.ui:69
 msgid "Preview popups in article links"
 msgstr "Pratinjau popup dalam tautan artikel"
 
-#: ../data/ui/prefs.ui:85
+#: ../data/ui/prefs.ui:70
 msgid "Show a preview of the article when hovering over a link"
 msgstr "Tampilkan pratinjau artikel saat mengarahkan kursor ke tautan"
 
-#: ../data/ui/prefs.ui:104
+#: ../data/ui/prefs.ui:89
 msgid "Privacy"
 msgstr "Privasi"
 
-#: ../data/ui/prefs.ui:110
+#: ../data/ui/prefs.ui:95
 msgid "Search"
 msgstr "Cari"
 
-#: ../data/ui/prefs.ui:113
+#: ../data/ui/prefs.ui:98
 msgid "Allow live search on desktop"
 msgstr "Perbolehkan pencarian langsung di destop"
 
-#: ../data/ui/prefs.ui:114
+#: ../data/ui/prefs.ui:99
 msgid "Warning: all desktop searches will be sent to Wikipedia"
 msgstr "Peringatan: semua pencarian destop akan dikirim ke Wikipedia"
 
-#: ../data/ui/prefs.ui:132
+#: ../data/ui/prefs.ui:123
 msgid "Personal Data"
 msgstr "Data Pribadi"
 
-#: ../data/ui/prefs.ui:136
+#: ../data/ui/prefs.ui:127
 msgid "Wike will remember the history of visited articles"
 msgstr "Wike akan mengingat riwayat artikel yang dikunjungi"
 
-#: ../data/ui/prefs.ui:148 ../data/ui/prefs.ui:163
+#: ../data/ui/prefs.ui:139 ../data/ui/prefs.ui:154
 msgid "Clear"
 msgstr "Bersihkan"
 
-#: ../data/ui/prefs.ui:158
+#: ../data/ui/prefs.ui:149
 msgid "Clear personal data"
 msgstr "Bersihkan data pribadi"
 
-#: ../data/ui/prefs.ui:159
+#: ../data/ui/prefs.ui:150
 msgid "Cookies and cache data will be deleted"
 msgstr "Kuki dan data singgahan akan dihapus"
 
-#: ../src/view.py:161
+#: ../src/view.py:235
 msgid "Try Again"
 msgstr "Coba lagi"
 
-#: ../src/prefs.py:81 ../data/ui/menu.ui:13
+#: ../src/prefs.py:80 ../data/ui/menu.ui:136
 msgid "Random Article"
 msgstr "Artikel acak"
 
-#: ../src/prefs.py:81
+#: ../src/prefs.py:80
 msgid "Last Article"
 msgstr "Artikel terakhir"
 
-#: ../src/bookmarks.py:46
-msgid "<b>No Bookmarks</b>\n"
-"\n"
-"<small>Use the <i>Add Bookmark</i> button\n"
-"or click a link with the middle mouse button\n"
-"to add bookmarks to the list</small>"
-msgstr "<b>Tidak ada markah</b>\n"
-"\n"
-"<small>Gunakan tombol <i>Tambahkan Markah</i>\n"
-"atau klik tautan dengan tombol tengah tetikus\n"
-"untuk menambahkan markah ke daftar</small>"
-
-#: ../data/ui/header.ui:61
+#: ../data/ui/header.ui:79
 msgid "Search articles"
 msgstr "Cari artikel"
 
-#: ../data/ui/header.ui:95
+#: ../data/ui/header.ui:113
 msgid "Bookmarks"
 msgstr "Markah"
 
-#: ../data/ui/header.ui:117
+#: ../data/ui/header.ui:135
 msgid "Table of contents"
 msgstr "Daftar isi"
 
-#: ../data/ui/prefs.ui:184
+#: ../data/ui/prefs.ui:175
 msgid "Filter Available Languages"
 msgstr "Saring bahasa yang tersedia"
 
-#: ../data/ui/prefs.ui:218
+#: ../data/ui/prefs.ui:209
 msgid "Select All"
 msgstr "Pilih semua"
 
-#: ../data/ui/prefs.ui:230
+#: ../data/ui/prefs.ui:221
 msgid "Select None"
 msgstr "Pilih tak satupun"
 
-#: ../data/ui/shortcuts.ui:18
+#: ../data/ui/shortcuts.ui:17
 msgctxt "shortcut window"
 msgid "Main menu"
 msgstr ""
+
+#: ../src/view.py:224
+msgid "Click the search button or press F2 to search articles in Wikipedia. You can also use the main menu to open Wikipedia main page, the list of recent articles or get a random article."
+msgstr ""
+
+#: ../src/bookmarks.py:47
+msgid "<b>No Bookmarks</b>\n"
+"\n"
+"<small>Use the <i>Add Bookmark</i> button\n"
+"or press Ctrl+D to add\n"
+"the current article to the list</small>"
+msgstr ""
+
+#: ../data/ui/shortcuts.ui:95
+msgctxt "shortcut window"
+msgid "Tabs"
+msgstr ""
+
+#: ../data/ui/shortcuts.ui:99
+msgctxt "shortcut window"
+msgid "New tab"
+msgstr ""
+
+#: ../data/ui/shortcuts.ui:106
+msgctxt "shortcut window"
+msgid "Close current tab"
+msgstr ""
+
+#: ../data/ui/shortcuts.ui:113
+msgctxt "shortcut window"
+msgid "Next tab"
+msgstr ""
+
+#: ../data/ui/shortcuts.ui:120
+msgctxt "shortcut window"
+msgid "Previous tab"
+msgstr ""
+
+#: ../data/ui/header.ui:61
+msgid "New tab"
+msgstr ""
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
+msgid "Open multiple articles in tabs"
+msgstr ""
+
+#: ../src/view.py:437
+msgid "Open Link in New Tab"
+msgstr ""
+
+#: ../src/view.py:443
+msgid "Add Link to Bookmarks"
+msgstr ""
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:29
+msgid "Light, dark and sepia themes"
+msgstr ""
+
+#: ../src/view.py:439
+msgid "Open Link in Browser"
+msgstr ""
+
+#: ../src/view.py:445
+msgid "Copy Link to Clipboard"
+msgstr ""
+
+#: ../data/ui/prefs.ui:110
+msgid "Desktop searches are performed in the default language"
+msgstr ""
+
+#: ../data/ui/prefs.ui:111
+msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
+msgstr ""
+
+#: ../data/ui/shortcuts.ui:147
+msgctxt "shortcut window"
+msgid "Random article"
+msgstr "Artikel acak"
 

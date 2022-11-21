@@ -1,222 +1,195 @@
-#
-# Fran Dieguez <frandieguez@gnome.org>, 2021.
-#
 msgid ""
 msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Gtranslator 40.0\n"
+"X-Generator: POEditor.com\n"
 "Project-Id-Version: Wike\n"
 "Language: gl\n"
-"Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
-"Language-Team: Galician <proxecto@trasno.gal>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"PO-Revision-Date: 2021-09-12 00:38+0200\n"
-"X-DL-Team: galician\n"
-"X-DL-Module: wike\n"
-"X-DL-Branch: master\n"
-"X-DL-Domain: wike\n"
 
-#: ../src/view.py:154
+#: ../src/view.py:227 ../src/view.py:315
 msgid "Article not found"
 msgstr "Artigo non atopado"
 
-#: ../src/view.py:155
+#: ../src/view.py:228
 msgid "Can't find any results for requested query"
 msgstr "Non se atopou ningún resultado para a consulta realizada"
 
-#: ../src/view.py:157
+#: ../src/view.py:231 ../src/view.py:317
 msgid "Can't access Wikipedia"
 msgstr "Non é posíbel acceder a Wikipedia"
 
-#: ../src/view.py:158
+#: ../src/view.py:232
 msgid "Check your Internet connection and try again"
 msgstr "Comprobe a súa conexión a Internet e ténteo de novo"
 
-#: ../src/window.py:151 ../src/window.py:261
+#: ../src/window.py:225 ../src/page.py:120
 msgid "New bookmark: "
 msgstr "Novo marcador: "
 
-#: ../src/window.py:319
+#: ../src/window.py:283
 msgid "Wikipedia URL copied to clipboard"
 msgstr "URL de Wikipedia copiada ao portapapeis"
 
-#: ../src/search.py:249
+#: ../src/search.py:259
 msgid "Default search language: "
 msgstr "Lingüaxe de busca predeterminado: "
 
-#: ../src/bookmarks.py:137
+#: ../src/bookmarks.py:138
 msgid "Clear Bookmarks List?"
 msgstr "Desexa borrar a lista de marcadores?"
 
-#: ../src/bookmarks.py:138
+#: ../src/bookmarks.py:140
 msgid "All bookmarks in the list will be removed permanently."
 msgstr "Todos os marcadores da lista eliminaranse de forma permanente."
 
-#: ../src/bookmarks.py:139 ../data/ui/bookmarks.ui:70
+#: ../src/bookmarks.py:141 ../data/ui/bookmarks.ui:70
 msgid "Clear List"
 msgstr "Borrar lista"
 
 #: ../data/ui/search-settings.ui:61
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:21
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:22
 msgid "Search suggestions"
 msgstr "Suxestións de busca"
 
 #: ../data/ui/about.ui:8
-msgid ""
-"Search and read Wikipedia articles\n"
+msgid "Search and read Wikipedia articles\n"
 "All content from Wikipedia.org\n"
 "and available under CC BY-SA 3.0 unless otherwise noted"
-msgstr ""
-"Buscar e leer artigos de Wikipedia\n"
+msgstr "Buscar e leer artigos de Wikipedia\n"
 "Todo o contenido de Wikipedia.org\n"
 "e dispoñíbel baixo a licenza CC BY-SA 3.0 salvo que se indique o contrario"
 
 #. Add your name like this:
-#.
+#. 
 #. Hugo Olabera <hugolabe@gmail.com>
 #: ../data/ui/about.ui:13
 msgid "translator-credits"
 msgstr "Fran Dieguez <frandieguez@gnome.org>, 2021"
 
-#: ../data/ui/bookmarks.ui:58
+#: ../src/view.py:422 ../data/ui/bookmarks.ui:58
 msgid "Add Bookmark"
 msgstr "Engadir marcador"
 
-#: ../data/ui/shortcuts.ui:14
+#: ../data/ui/shortcuts.ui:13
 msgctxt "shortcut window"
 msgid "General"
 msgstr "Xeral"
 
-#: ../data/ui/shortcuts.ui:25
+#: ../data/ui/shortcuts.ui:24
 msgctxt "shortcut window"
 msgid "Table of contents"
 msgstr "Táboa de contidos"
 
-#: ../data/ui/shortcuts.ui:32
+#: ../data/ui/shortcuts.ui:31
 msgctxt "shortcut window"
 msgid "View article in other languages"
 msgstr "Ver artigo noutros idiomas"
 
-#: ../data/ui/shortcuts.ui:39
+#: ../data/ui/shortcuts.ui:38
 msgctxt "shortcut window"
 msgid "Search text in page"
 msgstr "Buscar texto na páxina"
 
-#: ../data/ui/shortcuts.ui:46
+#: ../data/ui/shortcuts.ui:45
 msgctxt "shortcut window"
 msgid "Preferences"
 msgstr "Preferencias"
 
-#: ../data/ui/shortcuts.ui:53
-msgctxt "shortcut window"
-msgid "Select all"
-msgstr "Seleccionar todo"
-
-#: ../data/ui/shortcuts.ui:60
-msgctxt "shortcut window"
-msgid "Copy selection"
-msgstr "Copiar selección"
-
-#: ../data/ui/shortcuts.ui:67
+#: ../data/ui/shortcuts.ui:52
 msgctxt "shortcut window"
 msgid "Copy Wikipedia URL"
 msgstr "Copiar URL de Wikipedia"
 
-#: ../data/ui/shortcuts.ui:74
+#: ../data/ui/shortcuts.ui:59
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Saír"
 
-#: ../data/ui/shortcuts.ui:81
+#: ../data/ui/shortcuts.ui:66
 msgctxt "shortcut window"
 msgid "Keyboard shortcuts"
 msgstr "Atallos de teclado"
 
-#: ../data/ui/shortcuts.ui:90
+#: ../data/ui/shortcuts.ui:129
 msgctxt "shortcut window"
 msgid "Navigation"
 msgstr "Navegación"
 
-#: ../data/ui/shortcuts.ui:94
+#: ../data/ui/shortcuts.ui:133
 msgctxt "shortcut window"
 msgid "Search articles"
 msgstr "Buscar artigos"
 
-#: ../data/ui/shortcuts.ui:101
+#: ../data/ui/shortcuts.ui:140
 msgctxt "shortcut window"
 msgid "Wikipedia main page"
 msgstr "Portada de Wikipedia"
 
-#: ../data/ui/shortcuts.ui:108
+#: ../data/ui/shortcuts.ui:154
 msgctxt "shortcut window"
 msgid "Show recent articles"
 msgstr "Mostrar artigos recentes"
 
-#: ../data/ui/shortcuts.ui:115
+#: ../data/ui/shortcuts.ui:161
 msgctxt "shortcut window"
 msgid "Previous page"
 msgstr "Atrás"
 
-#: ../data/ui/shortcuts.ui:122
+#: ../data/ui/shortcuts.ui:168
 msgctxt "shortcut window"
 msgid "Next page"
 msgstr "Adiante"
 
-#: ../data/ui/shortcuts.ui:129
+#: ../data/ui/shortcuts.ui:175
 msgctxt "shortcut window"
 msgid "Reload page"
 msgstr "Recargar páxina"
 
-#: ../data/ui/shortcuts.ui:138
+#: ../data/ui/shortcuts.ui:75
 msgctxt "shortcut window"
 msgid "Bookmarks"
 msgstr "Marcadores"
 
-#: ../data/ui/shortcuts.ui:142
+#: ../data/ui/shortcuts.ui:79
 msgctxt "shortcut window"
 msgid "Show bookmarks"
 msgstr "Mostrar marcadores"
 
-#: ../data/ui/shortcuts.ui:149
+#: ../data/ui/shortcuts.ui:86
 msgctxt "shortcut window"
 msgid "Add bookmark"
 msgstr "Engadir marcador"
 
-#: ../src/prefs.py:81 ../data/ui/menu.ui:8
+#: ../src/prefs.py:80 ../data/ui/menu.ui:123
 msgid "Wikipedia Main Page"
 msgstr "Portada de Wikipedia"
 
-#: ../src/view.py:234 ../data/ui/menu.ui:18
+#: ../src/view.py:313 ../data/ui/menu.ui:149
 msgid "Recent Articles"
 msgstr "Artigos recentes"
 
-#: ../data/ui/menu.ui:23
-msgid "Reload Page"
-msgstr "Recargar páxina"
-
-#: ../data/ui/menu.ui:30
+#: ../data/ui/menu.ui:173
 msgid "Search Text in Page"
 msgstr "Buscar texto na páxina"
 
-#: ../data/ui/menu.ui:36
+#: ../data/ui/menu.ui:186
 msgid "Open Wikipedia Page in Browser"
 msgstr "Abrir páxina de Wikipedia no navegador"
 
-#: ../data/ui/menu.ui:40
+#: ../data/ui/menu.ui:199
 msgid "Copy Wikipedia URL to Clipboard"
 msgstr "Copiar URL de Wikipedia ao portapapeis"
 
-#: ../data/ui/menu.ui:46
+#: ../data/ui/menu.ui:223
 msgid "Preferences"
 msgstr "Preferencias"
 
-#: ../data/ui/menu.ui:56
+#: ../data/ui/menu.ui:236
 msgid "Keyboard Shortcuts"
 msgstr "Atallos de teclado"
 
-#: ../data/ui/menu.ui:60
+#: ../data/ui/menu.ui:249
 msgid "About Wike"
 msgstr "Sobre Wike"
 
@@ -224,7 +197,7 @@ msgstr "Sobre Wike"
 msgid "Behavior"
 msgstr "Comportamento"
 
-#: ../data/ui/prefs.ui:135
+#: ../data/ui/prefs.ui:126
 msgid "Keep a list of recent articles"
 msgstr "Lista de artigos recentes"
 
@@ -232,11 +205,11 @@ msgstr "Lista de artigos recentes"
 msgid "General"
 msgstr "Xeral"
 
-#: ../data/ui/prefs.ui:178
+#: ../data/ui/prefs.ui:169
 msgid "Languages"
 msgstr "Idiomas"
 
-#: ../data/ui/header-spinner.ui:23
+#: ../src/page.py:82 ../src/page.py:85
 msgid "Loading Article"
 msgstr "Cargando artigo"
 
@@ -246,7 +219,7 @@ msgstr "Cargando artigo"
 msgid "Wike"
 msgstr "Wike"
 
-#: ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../src/view.py:223 ../data/com.github.hugolabe.Wike.desktop.in:4
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
 msgid "Search and read Wikipedia articles"
 msgstr "Buscar e ler artigos da Wikipedia"
@@ -257,36 +230,30 @@ msgid "Wikipedia;Encyclopedia;"
 msgstr "Wikipedia;Enciclopedia;"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:11
-msgid ""
-"Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the "
-"content of this online encyclopedia in a native application, with a simpler "
-"and distraction-free view of articles."
-msgstr ""
-"Wike é un lector de Wikipedia para GNOME. Fornece acceso a todo o contido "
-"desta enciclopedia en liña, con unha vista de artigos máis limpa e libre de "
-"distraccións."
+msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
+msgstr "Wike é un lector de Wikipedia para GNOME. Fornece acceso a todo o contido desta enciclopedia en liña, con unha vista de artigos máis limpa e libre de distraccións."
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:21
 msgid "Multiple languages"
 msgstr "Múltiples idiomas"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:22
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:23
 msgid "List of recent articles"
 msgstr "Lista de artigos recentes"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:23
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:24
 msgid "Simple bookmarks management"
 msgstr "Xestión doada de marcadores"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:24
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:25
 msgid "Text search in articles"
 msgstr "Busca de texto no artigo"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:25
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
 msgid "Article table of contents"
 msgstr "Táboa de contidos do artigo"
 
-#: ../data/ui/header.ui:136 ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
+#: ../data/ui/header.ui:154 ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
 msgid "View article in other languages"
 msgstr "Ver artigo noutros idiomas"
 
@@ -294,44 +261,36 @@ msgstr "Ver artigo noutros idiomas"
 msgid "Features:"
 msgstr "Características:"
 
-#: ../data/ui/menu.ui:50
-msgid "Dark Mode"
-msgstr "Modo escuro"
-
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
-msgid "Dark mode"
-msgstr "Modo escuro"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
 msgid "GNOME Shell search integration"
 msgstr "Integración coa busca de GNOME Shell"
 
-#: ../src/prefs.py:146
+#: ../src/prefs.py:148
 msgid "Clear Historic?"
 msgstr "Desexa borrar o historial?"
 
-#: ../src/prefs.py:147
+#: ../src/prefs.py:150
 msgid "The history of visited articles will be deleted permanently."
 msgstr "Borrarase o historial de artigos visitados de forma permanente."
 
-#: ../src/prefs.py:148
+#: ../src/prefs.py:151
 msgid "Clear Historic"
 msgstr "Limpar historial"
 
-#: ../src/prefs.py:165
+#: ../src/prefs.py:168
 msgid "Clear Personal Data?"
 msgstr "Desxa borrar os datos personais?"
 
-#: ../src/prefs.py:166
+#: ../src/prefs.py:170
 msgid "Cookies and cache data will be deleted permanently."
 msgstr "Borraranse as cookies e datos deda caché de forma permanente."
 
-#: ../src/prefs.py:167
+#: ../src/prefs.py:171
 msgid "Clear Data"
 msgstr "Borrar datos"
 
 #. Don't remove %s tag!
-#: ../src/wike-sp.in:71
+#: ../src/wike-sp.in:84
 msgid "Search “%s” on Wikipedia"
 msgstr "Buscar «%s» na Wikipedia"
 
@@ -343,129 +302,186 @@ msgstr "Página de inicio"
 msgid "The page that will be displayed when Wike starts"
 msgstr "A páxina que se mostrará ao iniciar Wike"
 
-#: ../data/ui/prefs.ui:30
-msgid "Clear bookmarks on exit"
-msgstr "Borrar marcadores ao saír"
-
-#: ../data/ui/prefs.ui:31
-msgid "The bookmarks list will be cleared when exiting Wike"
-msgstr "Baleirarase a lista de marcadores ao saír de Wike"
-
-#: ../data/ui/prefs.ui:49
+#: ../data/ui/prefs.ui:34
 msgid "Article View"
 msgstr "Vista de artigos"
 
-#: ../data/ui/prefs.ui:52
+#: ../data/ui/prefs.ui:37
 msgid "Font size"
 msgstr "Tamaño da fonte"
 
-#: ../data/ui/prefs.ui:53
+#: ../data/ui/prefs.ui:38
 msgid "Font size for article view (default is 16)"
 msgstr "Tamaño da fonte para os artigos (predeterminado: 16)"
 
-#: ../data/ui/prefs.ui:70
+#: ../data/ui/prefs.ui:55
 msgid "Use custom font"
 msgstr "Usar un tipo de letra personalizado"
 
-#: ../data/ui/prefs.ui:71
+#: ../data/ui/prefs.ui:56
 msgid "Choose a font for the article view"
 msgstr "Elexir un tipo de letra para a vista de artigos"
 
-#: ../data/ui/prefs.ui:84
+#: ../data/ui/prefs.ui:69
 msgid "Preview popups in article links"
 msgstr "Xanelas emerxentes de vista previa nas ligazóns de artigos"
 
-#: ../data/ui/prefs.ui:85
+#: ../data/ui/prefs.ui:70
 msgid "Show a preview of the article when hovering over a link"
 msgstr "Mostrar unha vista previa do artigo ao posicionarse sobre un enlace"
 
-#: ../data/ui/prefs.ui:104
+#: ../data/ui/prefs.ui:89
 msgid "Privacy"
 msgstr "Privacidade"
 
-#: ../data/ui/prefs.ui:110
+#: ../data/ui/prefs.ui:95
 msgid "Search"
 msgstr "Busca"
 
-#: ../data/ui/prefs.ui:113
+#: ../data/ui/prefs.ui:98
 msgid "Allow live search on desktop"
 msgstr "Permitir busca en vivo no escritorio"
 
-#: ../data/ui/prefs.ui:114
+#: ../data/ui/prefs.ui:99
 msgid "Warning: all desktop searches will be sent to Wikipedia"
 msgstr "Aviso: todas as buscas do escritorio enviaranse a Wikipedia"
 
-#: ../data/ui/prefs.ui:132
+#: ../data/ui/prefs.ui:123
 msgid "Personal Data"
 msgstr "Datos personais"
 
-#: ../data/ui/prefs.ui:136
+#: ../data/ui/prefs.ui:127
 msgid "Wike will remember the history of visited articles"
 msgstr "Wike recordará o historial de artigos visitados"
 
-#: ../data/ui/prefs.ui:148 ../data/ui/prefs.ui:163
+#: ../data/ui/prefs.ui:139 ../data/ui/prefs.ui:154
 msgid "Clear"
 msgstr "Borrar"
 
-#: ../data/ui/prefs.ui:158
+#: ../data/ui/prefs.ui:149
 msgid "Clear personal data"
 msgstr "Borrar datos personais"
 
-#: ../data/ui/prefs.ui:159
+#: ../data/ui/prefs.ui:150
 msgid "Cookies and cache data will be deleted"
 msgstr "Borraranse as cookies e os datos da caché"
 
-#: ../src/view.py:161
+#: ../src/view.py:235
 msgid "Try Again"
 msgstr "Intentar de novo"
 
-#: ../src/prefs.py:81 ../data/ui/menu.ui:13
+#: ../src/prefs.py:80 ../data/ui/menu.ui:136
 msgid "Random Article"
 msgstr "Artigo aleatorio"
 
-#: ../src/prefs.py:81
+#: ../src/prefs.py:80
 msgid "Last Article"
 msgstr "Último artigo"
 
-#: ../src/bookmarks.py:46
-msgid ""
-"<b>No Bookmarks</b>\n"
-"\n"
-"<small>Use the <i>Add Bookmark</i> button\n"
-"or click a link with the middle mouse button\n"
-"to add bookmarks to the list</small>"
-msgstr ""
-"<b>Sen marcadores</b>\n"
-"\n"
-"<small>Utilice o botón <i>Engadir marcador</i>\n"
-"ou prema unha ligazón co botón central do ratón\n"
-"para engadir marcadores á lista</small>"
-
-#: ../data/ui/header.ui:61
+#: ../data/ui/header.ui:79
 msgid "Search articles"
 msgstr "Buscar artigos"
 
-#: ../data/ui/header.ui:95
+#: ../data/ui/header.ui:113
 msgid "Bookmarks"
 msgstr "Marcadores"
 
-#: ../data/ui/header.ui:117
+#: ../data/ui/header.ui:135
 msgid "Table of contents"
 msgstr "Táboa de contidos"
 
-#: ../data/ui/prefs.ui:184
+#: ../data/ui/prefs.ui:175
 msgid "Filter Available Languages"
 msgstr "Filtrar idiomas dispoñíbeis"
 
-#: ../data/ui/prefs.ui:218
+#: ../data/ui/prefs.ui:209
 msgid "Select All"
 msgstr "Seleccionar todo"
 
-#: ../data/ui/prefs.ui:230
+#: ../data/ui/prefs.ui:221
 msgid "Select None"
 msgstr "Deseleccionar todo"
 
-#: ../data/ui/shortcuts.ui:18
+#: ../data/ui/shortcuts.ui:17
 msgctxt "shortcut window"
 msgid "Main menu"
 msgstr "Menú principal"
+
+#: ../src/view.py:224
+msgid "Click the search button or press F2 to search articles in Wikipedia. You can also use the main menu to open Wikipedia main page, the list of recent articles or get a random article."
+msgstr ""
+
+#: ../src/bookmarks.py:47
+msgid "<b>No Bookmarks</b>\n"
+"\n"
+"<small>Use the <i>Add Bookmark</i> button\n"
+"or press Ctrl+D to add\n"
+"the current article to the list</small>"
+msgstr ""
+
+#: ../data/ui/shortcuts.ui:95
+msgctxt "shortcut window"
+msgid "Tabs"
+msgstr ""
+
+#: ../data/ui/shortcuts.ui:99
+msgctxt "shortcut window"
+msgid "New tab"
+msgstr ""
+
+#: ../data/ui/shortcuts.ui:106
+msgctxt "shortcut window"
+msgid "Close current tab"
+msgstr ""
+
+#: ../data/ui/shortcuts.ui:113
+msgctxt "shortcut window"
+msgid "Next tab"
+msgstr ""
+
+#: ../data/ui/shortcuts.ui:120
+msgctxt "shortcut window"
+msgid "Previous tab"
+msgstr ""
+
+#: ../data/ui/header.ui:61
+msgid "New tab"
+msgstr ""
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
+msgid "Open multiple articles in tabs"
+msgstr ""
+
+#: ../src/view.py:437
+msgid "Open Link in New Tab"
+msgstr ""
+
+#: ../src/view.py:443
+msgid "Add Link to Bookmarks"
+msgstr ""
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:29
+msgid "Light, dark and sepia themes"
+msgstr ""
+
+#: ../src/view.py:439
+msgid "Open Link in Browser"
+msgstr ""
+
+#: ../src/view.py:445
+msgid "Copy Link to Clipboard"
+msgstr ""
+
+#: ../data/ui/prefs.ui:110
+msgid "Desktop searches are performed in the default language"
+msgstr ""
+
+#: ../data/ui/prefs.ui:111
+msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
+msgstr ""
+
+#: ../data/ui/shortcuts.ui:147
+msgctxt "shortcut window"
+msgid "Random article"
+msgstr "Artigo aleatorio"
+

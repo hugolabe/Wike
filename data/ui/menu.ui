@@ -234,7 +234,7 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="text" translatable="yes">Keyboard Shortcuts</property>
-            <property name="action_name">app.shortcuts</property>
+            <property name="action_name">win.show-help-overlay</property>
           </object>
           <packing>
             <property name="expand">False</property>

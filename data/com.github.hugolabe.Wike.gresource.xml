@@ -19,7 +19,7 @@
     <file>ui/search.ui</file>
     <file>ui/search-row.ui</file>
     <file>ui/search-settings.ui</file>
-    <file>ui/shortcuts.ui</file>
+    <file alias="gtk/help-overlay.ui">ui/shortcuts.ui</file>
     <file>ui/window.ui</file>
   </gresource>
 </gresources>

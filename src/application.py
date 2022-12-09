@@ -81,11 +81,6 @@ class Application(Gtk.Application):
     action.connect('activate', self._theme_dark)
     self.add_action(action)
 
-    action = Gio.SimpleAction.new('shortcuts', None)
-    action.connect('activate', self._shortcuts_cb)
-    self.add_action(action)
-    self.set_accels_for_action('app.shortcuts', ('<Ctrl>question',))
-
     action = Gio.SimpleAction.new('about', None)
     action.connect('activate', self._about_cb)
     self.add_action(action)
@@ -150,15 +145,6 @@ class Application(Gtk.Application):
   def _theme_dark(self, action, parameter):
     self._style_manager.set_color_scheme(Handy.ColorScheme.FORCE_DARK)
     settings.set_int('theme', 1)
-
-  # Show Shortcuts window
-
-  def _shortcuts_cb(self, action, parameter):
-    builder = Gtk.Builder()
-    builder.add_from_resource("/com/github/hugolabe/Wike/ui/shortcuts.ui")
-    shortcuts_window = builder.get_object("shortcuts_window")
-    shortcuts_window.set_transient_for(self._window)
-    shortcuts_window.show()
 
   # Show About dialog
 

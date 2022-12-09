@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <requires lib="gtk+" version="3.24"/>
-  <object class="GtkShortcutsWindow" id="shortcuts_window">
+  <object class="GtkShortcutsWindow" id="help_overlay">
     <property name="modal">True</property>
     <child>
       <object class="GtkShortcutsSection">

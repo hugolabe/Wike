@@ -43,7 +43,7 @@
               <object class="GtkShortcutsShortcut">
                 <property name="visible">True</property>
                 <property name="title" translatable="yes" context="shortcut window">Preferences</property>
-                <property name="accelerator">&lt;Primary&gt;E</property>
+                <property name="action-name">app.prefs</property>
               </object>
             </child>
             <child>

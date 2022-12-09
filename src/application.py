@@ -63,7 +63,7 @@ class Application(Gtk.Application):
     action = Gio.SimpleAction.new('prefs', None)
     action.connect('activate', self._prefs_cb)
     self.add_action(action)
-    self.set_accels_for_action('app.prefs', ('<Ctrl>E',))
+    self.set_accels_for_action('app.prefs', ('<Ctrl>comma',))
 
     action = Gio.SimpleAction.new('theme_system', None)
     action.connect('activate', self._theme_system)

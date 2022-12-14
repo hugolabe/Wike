@@ -344,7 +344,7 @@ msgstr "Autoriser la recherche directement sur le bureau"
 
 #: ../data/ui/prefs.ui:99
 msgid "Warning: all desktop searches will be sent to Wikipedia"
-msgstr "Attention : les recherches depuis le bureau sont envoyées à Wikipédia"
+msgstr "Attention : ces recherches seront envoyées à Wikipédia"
 
 #: ../data/ui/prefs.ui:123
 msgid "Personal Data"
@@ -478,11 +478,11 @@ msgstr "Copier le lien dans le presse-papier"
 
 #: ../data/ui/prefs.ui:110
 msgid "Desktop searches are performed in the default language"
-msgstr "Les recherches depuis le bureau sont faites dans le langage sélectionné par défaut"
+msgstr "Les recherches depuis le bureau sont dans la langue par défaut"
 
 #: ../data/ui/prefs.ui:111
 msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
-msgstr "Vous pouvez faire des recherches dans d'autres langages en utilisant un préfixe ex.: -es pour rechercher en espagnol"
+msgstr "Pour d’autres langues utilisez un préfixe ex. : -es pour l’espagnol"
 
 #: ../data/ui/shortcuts.ui:147
 msgctxt "shortcut window"

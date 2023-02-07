@@ -328,6 +328,7 @@
   </releases>
 
   <url type="homepage">https://hugolabe.github.io/Wike/</url>
+  <url type="bugtracker">https://github.com/hugolabe/Wike/issues</url>
   <url type="translate">https://poeditor.com/join/project?hash=kNgJu4MAum</url>
   <developer_name>Hugo Olabera</developer_name>
   <update_contact>hugolabe@gmail.com</update_contact>

@@ -53,6 +53,16 @@
   </screenshots>
 
   <releases>
+    <release version="1.8.3" date="2023-03-03">
+      <description>
+        <ul>
+          <li>Added shortcut for Random Article.</li>
+          <li>Small UI tweaks.</li>
+          <li>Updated translations.</li>
+          <li>Bumped to GNOME runtime 43 and WebKit 4.1.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.8.2" date="2022-10-24">
       <description>
         <ul>

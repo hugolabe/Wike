@@ -7,23 +7,23 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: ja\n"
 
-#: ../src/view.py:207 ../src/view.py:295
+#: ../src/view.py:227 ../src/view.py:315
 msgid "Article not found"
 msgstr "記事が見つかりません"
 
-#: ../src/view.py:208
+#: ../src/view.py:228
 msgid "Can't find any results for requested query"
 msgstr "要求されたクエリの結果が見つかりません"
 
-#: ../src/view.py:211 ../src/view.py:297
+#: ../src/view.py:231 ../src/view.py:317
 msgid "Can't access Wikipedia"
 msgstr "Wikipediaにアクセスできません"
 
-#: ../src/view.py:212
+#: ../src/view.py:232
 msgid "Check your Internet connection and try again"
 msgstr "インターネット接続確認し、やり直してください"
 
-#: ../src/window.py:225 ../src/page.py:115
+#: ../src/window.py:225 ../src/page.py:120
 msgid "New bookmark: "
 msgstr "新しいブックマーク: "
 
@@ -67,129 +67,129 @@ msgstr "Wikipediaの記事を検索して読む\n"
 msgid "translator-credits"
 msgstr "Kaz Sibuya <sibuyakazokuu@gmail.com>"
 
-#: ../src/view.py:402 ../data/ui/bookmarks.ui:58
+#: ../src/view.py:422 ../data/ui/bookmarks.ui:58
 msgid "Add Bookmark"
 msgstr "ブックマークを追加"
 
-#: ../data/ui/shortcuts.ui:14
+#: ../data/ui/shortcuts.ui:13
 msgctxt "shortcut window"
 msgid "General"
 msgstr "全般"
 
-#: ../data/ui/shortcuts.ui:25
+#: ../data/ui/shortcuts.ui:24
 msgctxt "shortcut window"
 msgid "Table of contents"
 msgstr "目次"
 
-#: ../data/ui/shortcuts.ui:32
+#: ../data/ui/shortcuts.ui:31
 msgctxt "shortcut window"
 msgid "View article in other languages"
 msgstr "他の言語で記事を見る"
 
-#: ../data/ui/shortcuts.ui:39
+#: ../data/ui/shortcuts.ui:38
 msgctxt "shortcut window"
 msgid "Search text in page"
 msgstr "ページ内のテキストを検索"
 
-#: ../data/ui/shortcuts.ui:46
+#: ../data/ui/shortcuts.ui:45
 msgctxt "shortcut window"
 msgid "Preferences"
 msgstr "設定"
 
-#: ../data/ui/shortcuts.ui:53
+#: ../data/ui/shortcuts.ui:52
 msgctxt "shortcut window"
 msgid "Copy Wikipedia URL"
 msgstr "WikipediaのURLをコピー"
 
-#: ../data/ui/shortcuts.ui:60
+#: ../data/ui/shortcuts.ui:59
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "閉じる"
 
-#: ../data/ui/shortcuts.ui:67
+#: ../data/ui/shortcuts.ui:66
 msgctxt "shortcut window"
 msgid "Keyboard shortcuts"
 msgstr "キーボードショートカット"
 
-#: ../data/ui/shortcuts.ui:130
+#: ../data/ui/shortcuts.ui:129
 msgctxt "shortcut window"
 msgid "Navigation"
 msgstr "ナビゲーション"
 
-#: ../data/ui/shortcuts.ui:134
+#: ../data/ui/shortcuts.ui:133
 msgctxt "shortcut window"
 msgid "Search articles"
 msgstr "記事を検索"
 
-#: ../data/ui/shortcuts.ui:141
+#: ../data/ui/shortcuts.ui:140
 msgctxt "shortcut window"
 msgid "Wikipedia main page"
 msgstr "メインページへ"
 
-#: ../data/ui/shortcuts.ui:148
+#: ../data/ui/shortcuts.ui:154
 msgctxt "shortcut window"
 msgid "Show recent articles"
 msgstr "最近の記事"
 
-#: ../data/ui/shortcuts.ui:155
+#: ../data/ui/shortcuts.ui:161
 msgctxt "shortcut window"
 msgid "Previous page"
 msgstr "前のページ"
 
-#: ../data/ui/shortcuts.ui:162
+#: ../data/ui/shortcuts.ui:168
 msgctxt "shortcut window"
 msgid "Next page"
 msgstr "次のページ"
 
-#: ../data/ui/shortcuts.ui:169
+#: ../data/ui/shortcuts.ui:175
 msgctxt "shortcut window"
 msgid "Reload page"
 msgstr "ページを更新"
 
-#: ../data/ui/shortcuts.ui:76
+#: ../data/ui/shortcuts.ui:75
 msgctxt "shortcut window"
 msgid "Bookmarks"
 msgstr "ブックマーク"
 
-#: ../data/ui/shortcuts.ui:80
+#: ../data/ui/shortcuts.ui:79
 msgctxt "shortcut window"
 msgid "Show bookmarks"
 msgstr "ブックマークを表示"
 
-#: ../data/ui/shortcuts.ui:87
+#: ../data/ui/shortcuts.ui:86
 msgctxt "shortcut window"
 msgid "Add bookmark"
 msgstr "ブックマークを追加"
 
-#: ../src/prefs.py:80 ../data/ui/menu.ui:101
+#: ../src/prefs.py:80 ../data/ui/menu.ui:123
 msgid "Wikipedia Main Page"
 msgstr "メインページ"
 
-#: ../src/view.py:293 ../data/ui/menu.ui:127
+#: ../src/view.py:313 ../data/ui/menu.ui:149
 msgid "Recent Articles"
 msgstr "最近の記事"
 
-#: ../data/ui/menu.ui:151
+#: ../data/ui/menu.ui:173
 msgid "Search Text in Page"
 msgstr "ページ内のテキストを検索"
 
-#: ../data/ui/menu.ui:164
+#: ../data/ui/menu.ui:186
 msgid "Open Wikipedia Page in Browser"
 msgstr "ページをブラウザで開く"
 
-#: ../data/ui/menu.ui:177
+#: ../data/ui/menu.ui:199
 msgid "Copy Wikipedia URL to Clipboard"
 msgstr "WikipediaのURLをクリップボードにコピー"
 
-#: ../data/ui/menu.ui:201
+#: ../data/ui/menu.ui:223
 msgid "Preferences"
 msgstr "設定"
 
-#: ../data/ui/menu.ui:214
+#: ../data/ui/menu.ui:236
 msgid "Keyboard Shortcuts"
 msgstr "キーボードショートカット"
 
-#: ../data/ui/menu.ui:227
+#: ../data/ui/menu.ui:249
 msgid "About Wike"
 msgstr "Wikeについて"
 
@@ -209,7 +209,7 @@ msgstr "全般"
 msgid "Languages"
 msgstr "言語"
 
-#: ../src/page.py:78 ../src/page.py:81
+#: ../src/page.py:82 ../src/page.py:85
 msgid "Loading Article"
 msgstr "記事を読み込み"
 
@@ -219,7 +219,7 @@ msgstr "記事を読み込み"
 msgid "Wike"
 msgstr "Wike"
 
-#: ../src/view.py:203 ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../src/view.py:223 ../data/com.github.hugolabe.Wike.desktop.in:4
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
 msgid "Search and read Wikipedia articles"
 msgstr "Wikipediaの記事を検索と閲覧"
@@ -231,7 +231,7 @@ msgstr "Wikipedia;Encyclopedia;"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:11
 msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
-msgstr "WikeはGNOMEデスクトップ向けのWikipediaリーダーです。ネイティブアプリケーションで、このオンライン百科事典のすべてのコンテンツを提供し、記事をよりシンプルで気を散らすことなく表示します。"
+msgstr "WikeはGNOMEデスクトップ向けのWikipediaリーダーです。このオンライン百科事典のすべてのコンテンツをネイティブアプリケーションで提供し、記事をよりシンプルで気を散らすことなく表示します。"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:21
 msgid "Multiple languages"
@@ -366,11 +366,11 @@ msgstr "パーソナルデータをクリア"
 msgid "Cookies and cache data will be deleted"
 msgstr "クッキーとキャッシュを削除"
 
-#: ../src/view.py:215
+#: ../src/view.py:235
 msgid "Try Again"
 msgstr "やり直す"
 
-#: ../src/prefs.py:80 ../data/ui/menu.ui:114
+#: ../src/prefs.py:80 ../data/ui/menu.ui:136
 msgid "Random Article"
 msgstr "ランダムな記事"
 
@@ -402,12 +402,12 @@ msgstr "すべて選択"
 msgid "Select None"
 msgstr "選択解除"
 
-#: ../data/ui/shortcuts.ui:18
+#: ../data/ui/shortcuts.ui:17
 msgctxt "shortcut window"
 msgid "Main menu"
 msgstr "メインメニュー"
 
-#: ../src/view.py:204
+#: ../src/view.py:224
 msgid "Click the search button or press F2 to search articles in Wikipedia. You can also use the main menu to open Wikipedia main page, the list of recent articles or get a random article."
 msgstr "検索ボタンをクリックするか、F2キーを押して、記事を検索します。メインメニューを使用して、ウィキペディアのメインページ、最近の記事リストを開いたり、ランダムな記事を取得したりすることもできます。"
 
@@ -423,27 +423,27 @@ msgstr "<b>ブックマークはありません</b>\n"
 "するかCtrl+Dを押して\n"
 "記事をリストに追加します</small>"
 
-#: ../data/ui/shortcuts.ui:96
+#: ../data/ui/shortcuts.ui:95
 msgctxt "shortcut window"
 msgid "Tabs"
 msgstr "タブ"
 
-#: ../data/ui/shortcuts.ui:100
+#: ../data/ui/shortcuts.ui:99
 msgctxt "shortcut window"
 msgid "New tab"
 msgstr "新しいタブ"
 
-#: ../data/ui/shortcuts.ui:107
+#: ../data/ui/shortcuts.ui:106
 msgctxt "shortcut window"
 msgid "Close current tab"
 msgstr "現在のタブを閉じる"
 
-#: ../data/ui/shortcuts.ui:114
+#: ../data/ui/shortcuts.ui:113
 msgctxt "shortcut window"
 msgid "Next tab"
 msgstr "次のタブ"
 
-#: ../data/ui/shortcuts.ui:121
+#: ../data/ui/shortcuts.ui:120
 msgctxt "shortcut window"
 msgid "Previous tab"
 msgstr "前のタブ"
@@ -456,11 +456,11 @@ msgstr "新しいタブ"
 msgid "Open multiple articles in tabs"
 msgstr "タブで複数の記事を開く"
 
-#: ../src/view.py:417
+#: ../src/view.py:437
 msgid "Open Link in New Tab"
 msgstr "リンクを新しいタブで開く"
 
-#: ../src/view.py:423
+#: ../src/view.py:443
 msgid "Add Link to Bookmarks"
 msgstr "リンク先をブックマークに追加"
 
@@ -468,11 +468,12 @@ msgstr "リンク先をブックマークに追加"
 msgid "Light, dark and sepia themes"
 msgstr "ライト、ダークそして、スピアのテーマ"
 
-#: ../src/view.py:419
+#: ../src/view.py:439
 msgid "Open Link in Browser"
 msgstr "リンクをブラウザで開く"
 
-#: ../src/view.py:425
+#: ../src/view.py:445
+#, fuzzy
 msgid "Copy Link to Clipboard"
 msgstr "リンクをクリップボードにコピー"
 
@@ -481,6 +482,12 @@ msgid "Desktop searches are performed in the default language"
 msgstr "デスクトップでの検索はデフォルトの言語で検索されます"
 
 #: ../data/ui/prefs.ui:111
+#, fuzzy
 msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
-msgstr ""
+msgstr "プレフィックスを使用して、他の言語を検索できます。例えば、-es でスペイン語で検索"
+
+#: ../data/ui/shortcuts.ui:147
+msgctxt "shortcut window"
+msgid "Random article"
+msgstr "ランダムな記事"
 

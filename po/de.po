@@ -7,23 +7,23 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: de\n"
 
-#: ../src/view.py:207 ../src/view.py:295
+#: ../src/view.py:227 ../src/view.py:315
 msgid "Article not found"
 msgstr "Artikel nicht gefunden"
 
-#: ../src/view.py:208
+#: ../src/view.py:228
 msgid "Can't find any results for requested query"
 msgstr "Keine Ergebnisse zur Suchanfrage gefunden"
 
-#: ../src/view.py:211 ../src/view.py:297
+#: ../src/view.py:231 ../src/view.py:317
 msgid "Can't access Wikipedia"
 msgstr "Wikipedia nicht erreichbar"
 
-#: ../src/view.py:212
+#: ../src/view.py:232
 msgid "Check your Internet connection and try again"
 msgstr "Internetverbindung überprüfen oder noch einmal versuchen"
 
-#: ../src/window.py:225 ../src/page.py:115
+#: ../src/window.py:225 ../src/page.py:120
 msgid "New bookmark: "
 msgstr "Neues Lesezeichen: "
 
@@ -68,129 +68,129 @@ msgid "translator-credits"
 msgstr "Jan Krings <liquidksky42@gmail.com>\n"
 "Markus Göllnitz <camelcasenick@bewares.it>"
 
-#: ../src/view.py:402 ../data/ui/bookmarks.ui:58
+#: ../src/view.py:422 ../data/ui/bookmarks.ui:58
 msgid "Add Bookmark"
 msgstr "Lesezeichen hinzufügen"
 
-#: ../data/ui/shortcuts.ui:14
+#: ../data/ui/shortcuts.ui:13
 msgctxt "shortcut window"
 msgid "General"
 msgstr "Allgemein"
 
-#: ../data/ui/shortcuts.ui:25
+#: ../data/ui/shortcuts.ui:24
 msgctxt "shortcut window"
 msgid "Table of contents"
 msgstr "Inhaltsverzeichnis"
 
-#: ../data/ui/shortcuts.ui:32
+#: ../data/ui/shortcuts.ui:31
 msgctxt "shortcut window"
 msgid "View article in other languages"
 msgstr "Artikel in anderer Sprache lesen"
 
-#: ../data/ui/shortcuts.ui:39
+#: ../data/ui/shortcuts.ui:38
 msgctxt "shortcut window"
 msgid "Search text in page"
 msgstr "Suche Text in Seite"
 
-#: ../data/ui/shortcuts.ui:46
+#: ../data/ui/shortcuts.ui:45
 msgctxt "shortcut window"
 msgid "Preferences"
 msgstr "Einstellungen"
 
-#: ../data/ui/shortcuts.ui:53
+#: ../data/ui/shortcuts.ui:52
 msgctxt "shortcut window"
 msgid "Copy Wikipedia URL"
 msgstr "Kopiere Wikipedia URL"
 
-#: ../data/ui/shortcuts.ui:60
+#: ../data/ui/shortcuts.ui:59
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Beenden"
 
-#: ../data/ui/shortcuts.ui:67
+#: ../data/ui/shortcuts.ui:66
 msgctxt "shortcut window"
 msgid "Keyboard shortcuts"
 msgstr "Tastenkombinationen"
 
-#: ../data/ui/shortcuts.ui:130
+#: ../data/ui/shortcuts.ui:129
 msgctxt "shortcut window"
 msgid "Navigation"
 msgstr "Navigation"
 
-#: ../data/ui/shortcuts.ui:134
+#: ../data/ui/shortcuts.ui:133
 msgctxt "shortcut window"
 msgid "Search articles"
 msgstr "Suche Artikel"
 
-#: ../data/ui/shortcuts.ui:141
+#: ../data/ui/shortcuts.ui:140
 msgctxt "shortcut window"
 msgid "Wikipedia main page"
 msgstr "Wikipedia-Hauptseite"
 
-#: ../data/ui/shortcuts.ui:148
+#: ../data/ui/shortcuts.ui:154
 msgctxt "shortcut window"
 msgid "Show recent articles"
 msgstr "Zeige letzten Artikel"
 
-#: ../data/ui/shortcuts.ui:155
+#: ../data/ui/shortcuts.ui:161
 msgctxt "shortcut window"
 msgid "Previous page"
 msgstr "Vorherige Seite"
 
-#: ../data/ui/shortcuts.ui:162
+#: ../data/ui/shortcuts.ui:168
 msgctxt "shortcut window"
 msgid "Next page"
 msgstr "Nächste Seite"
 
-#: ../data/ui/shortcuts.ui:169
+#: ../data/ui/shortcuts.ui:175
 msgctxt "shortcut window"
 msgid "Reload page"
 msgstr "Seite neu laden"
 
-#: ../data/ui/shortcuts.ui:76
+#: ../data/ui/shortcuts.ui:75
 msgctxt "shortcut window"
 msgid "Bookmarks"
 msgstr "Lesezeichen"
 
-#: ../data/ui/shortcuts.ui:80
+#: ../data/ui/shortcuts.ui:79
 msgctxt "shortcut window"
 msgid "Show bookmarks"
 msgstr "Lesezeichen anzeigen"
 
-#: ../data/ui/shortcuts.ui:87
+#: ../data/ui/shortcuts.ui:86
 msgctxt "shortcut window"
 msgid "Add bookmark"
 msgstr "Lesezeichen hinzufügen"
 
-#: ../src/prefs.py:80 ../data/ui/menu.ui:101
+#: ../src/prefs.py:80 ../data/ui/menu.ui:123
 msgid "Wikipedia Main Page"
 msgstr "Wikipedia-Hauptseite"
 
-#: ../src/view.py:293 ../data/ui/menu.ui:127
+#: ../src/view.py:313 ../data/ui/menu.ui:149
 msgid "Recent Articles"
 msgstr "Letzte Artikel"
 
-#: ../data/ui/menu.ui:151
+#: ../data/ui/menu.ui:173
 msgid "Search Text in Page"
 msgstr "Suche Text in Seite"
 
-#: ../data/ui/menu.ui:164
+#: ../data/ui/menu.ui:186
 msgid "Open Wikipedia Page in Browser"
 msgstr "Öffne Wikipediaseite im Browser"
 
-#: ../data/ui/menu.ui:177
+#: ../data/ui/menu.ui:199
 msgid "Copy Wikipedia URL to Clipboard"
 msgstr "Kopiere Wikipedia URL in die Zwischenablage"
 
-#: ../data/ui/menu.ui:201
+#: ../data/ui/menu.ui:223
 msgid "Preferences"
 msgstr "Einstellungen"
 
-#: ../data/ui/menu.ui:214
+#: ../data/ui/menu.ui:236
 msgid "Keyboard Shortcuts"
 msgstr "Tastenkombinationen"
 
-#: ../data/ui/menu.ui:227
+#: ../data/ui/menu.ui:249
 msgid "About Wike"
 msgstr "Über Wike"
 
@@ -210,7 +210,7 @@ msgstr "Allgemein"
 msgid "Languages"
 msgstr "Sprachen"
 
-#: ../src/page.py:78 ../src/page.py:81
+#: ../src/page.py:82 ../src/page.py:85
 msgid "Loading Article"
 msgstr "Artikel wird geladen"
 
@@ -220,7 +220,7 @@ msgstr "Artikel wird geladen"
 msgid "Wike"
 msgstr "Wike"
 
-#: ../src/view.py:203 ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../src/view.py:223 ../data/com.github.hugolabe.Wike.desktop.in:4
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
 msgid "Search and read Wikipedia articles"
 msgstr "Suche und lese Wikipediaartikel"
@@ -367,11 +367,11 @@ msgstr "Persönliche Daten löschen"
 msgid "Cookies and cache data will be deleted"
 msgstr "Cookies werden gelöscht und der Cache geleert"
 
-#: ../src/view.py:215
+#: ../src/view.py:235
 msgid "Try Again"
 msgstr "erneut versuchen"
 
-#: ../src/prefs.py:80 ../data/ui/menu.ui:114
+#: ../src/prefs.py:80 ../data/ui/menu.ui:136
 msgid "Random Article"
 msgstr "Zufälliger Artikel"
 
@@ -403,12 +403,12 @@ msgstr "Alles auswählen"
 msgid "Select None"
 msgstr "Nichts auswählen"
 
-#: ../data/ui/shortcuts.ui:18
+#: ../data/ui/shortcuts.ui:17
 msgctxt "shortcut window"
 msgid "Main menu"
 msgstr "Hauptmenü"
 
-#: ../src/view.py:204
+#: ../src/view.py:224
 msgid "Click the search button or press F2 to search articles in Wikipedia. You can also use the main menu to open Wikipedia main page, the list of recent articles or get a random article."
 msgstr "Klicken Sie auf Suche oder drücken Sie F2 um Artikel bei Wikipedia zu suchen. Sie können auch das Hauptmenü nutzen, um die Hauptseite von Wikipedia, die Liste kürzlich erstellter Artikel, oder einen zufälligen Artikel zu öffnen."
 
@@ -424,27 +424,27 @@ msgstr "<b>Keine Lesezeichen</b>\n"
 "oder drücken Sie Strg+D um den\n"
 "aktuellen Artikel der Liste hinzuzufügen</small>"
 
-#: ../data/ui/shortcuts.ui:96
+#: ../data/ui/shortcuts.ui:95
 msgctxt "shortcut window"
 msgid "Tabs"
 msgstr "Reiter"
 
-#: ../data/ui/shortcuts.ui:100
+#: ../data/ui/shortcuts.ui:99
 msgctxt "shortcut window"
 msgid "New tab"
 msgstr "Neuer Reiter"
 
-#: ../data/ui/shortcuts.ui:107
+#: ../data/ui/shortcuts.ui:106
 msgctxt "shortcut window"
 msgid "Close current tab"
 msgstr "Aktuellen Reiter schließen"
 
-#: ../data/ui/shortcuts.ui:114
+#: ../data/ui/shortcuts.ui:113
 msgctxt "shortcut window"
 msgid "Next tab"
 msgstr "Nächster Reiter"
 
-#: ../data/ui/shortcuts.ui:121
+#: ../data/ui/shortcuts.ui:120
 msgctxt "shortcut window"
 msgid "Previous tab"
 msgstr "Vorheriger Reiter"
@@ -457,11 +457,11 @@ msgstr "Neuer Reiter"
 msgid "Open multiple articles in tabs"
 msgstr "Artikel in mehreren Reitern öffnen"
 
-#: ../src/view.py:417
+#: ../src/view.py:437
 msgid "Open Link in New Tab"
 msgstr "Verweis in neuem Reiter öffnen"
 
-#: ../src/view.py:423
+#: ../src/view.py:443
 msgid "Add Link to Bookmarks"
 msgstr "Verweis zu Lesezeichen hinzufügen"
 
@@ -469,11 +469,11 @@ msgstr "Verweis zu Lesezeichen hinzufügen"
 msgid "Light, dark and sepia themes"
 msgstr "Helle, dunkle und sepia Themen"
 
-#: ../src/view.py:419
+#: ../src/view.py:439
 msgid "Open Link in Browser"
 msgstr "Link im Browser öffnen"
 
-#: ../src/view.py:425
+#: ../src/view.py:445
 msgid "Copy Link to Clipboard"
 msgstr "Link in die Zwischenablage kopieren"
 
@@ -484,4 +484,9 @@ msgstr "Desktop-Suchen werden in der vorgegebenen Sprache durchgeführt"
 #: ../data/ui/prefs.ui:111
 msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
 msgstr "Sie können in anderen Sprachen suchen, indem Sie ein Präfix verwenden. Z. B. -es für eine Suche in Spanisch"
+
+#: ../data/ui/shortcuts.ui:147
+msgctxt "shortcut window"
+msgid "Random article"
+msgstr "Zufälliger Artikel"
 

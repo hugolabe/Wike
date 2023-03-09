@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <requires lib="gtk+" version="3.24"/>
-  <object class="GtkShortcutsWindow" id="shortcuts_window">
+  <object class="GtkShortcutsWindow" id="help_overlay">
     <property name="modal">True</property>
     <child>
       <object class="GtkShortcutsSection">
         <property name="visible">True</property>
         <property name="section-name">shortcuts</property>
-        <property name="max-height">12</property>
         <child>
           <object class="GtkShortcutsGroup">
             <property name="visible">True</property>
@@ -16,56 +15,56 @@
               <object class="GtkShortcutsShortcut">
                 <property name="visible">True</property>
                 <property name="title" translatable="yes" context="shortcut window">Main menu</property>
-                <property name="accelerator">F10</property>
+                <property name="action-name">win.show_menu</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">True</property>
                 <property name="title" translatable="yes" context="shortcut window">Table of contents</property>
-                <property name="accelerator">&lt;Primary&gt;T</property>
+                <property name="action-name">win.show_toc</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">True</property>
                 <property name="title" translatable="yes" context="shortcut window">View article in other languages</property>
-                <property name="accelerator">&lt;Primary&gt;L</property>
+                <property name="action-name">win.show_langlinks</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">True</property>
                 <property name="title" translatable="yes" context="shortcut window">Search text in page</property>
-                <property name="accelerator">&lt;Primary&gt;F</property>
+                <property name="action-name">win.search_text</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">True</property>
                 <property name="title" translatable="yes" context="shortcut window">Preferences</property>
-                <property name="accelerator">&lt;Primary&gt;E</property>
+                <property name="action-name">app.prefs</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">True</property>
                 <property name="title" translatable="yes" context="shortcut window">Copy Wikipedia URL</property>
-                <property name="accelerator">&lt;Primary&gt;U</property>
+                <property name="action-name">win.copy_url</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">True</property>
                 <property name="title" translatable="yes" context="shortcut window">Quit</property>
-                <property name="accelerator">&lt;Primary&gt;Q</property>
+                <property name="action-name">app.quit</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">True</property>
                 <property name="title" translatable="yes" context="shortcut window">Keyboard shortcuts</property>
-                <property name="accelerator">&lt;Primary&gt;question</property>
+                <property name="action-name">win.show-help-overlay</property>
               </object>
             </child>
           </object>
@@ -78,14 +77,14 @@
               <object class="GtkShortcutsShortcut">
                 <property name="visible">True</property>
                 <property name="title" translatable="yes" context="shortcut window">Show bookmarks</property>
-                <property name="accelerator">&lt;Primary&gt;B</property>
+                <property name="action-name">win.show_bookmarks</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">True</property>
                 <property name="title" translatable="yes" context="shortcut window">Add bookmark</property>
-                <property name="accelerator">&lt;Primary&gt;D</property>
+                <property name="action-name">win.add_bookmark</property>
               </object>
             </child>
           </object>
@@ -98,28 +97,28 @@
               <object class="GtkShortcutsShortcut">
                 <property name="visible">True</property>
                 <property name="title" translatable="yes" context="shortcut window">New tab</property>
-                <property name="accelerator">&lt;Primary&gt;N</property>
+                <property name="action-name">win.new_tab</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">True</property>
                 <property name="title" translatable="yes" context="shortcut window">Close current tab</property>
-                <property name="accelerator">&lt;Primary&gt;W</property>
+                <property name="action-name">win.close_tab</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">True</property>
                 <property name="title" translatable="yes" context="shortcut window">Next tab</property>
-                <property name="accelerator">&lt;Primary&gt;Tab</property>
+                <property name="action-name">win.next_tab</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">True</property>
                 <property name="title" translatable="yes" context="shortcut window">Previous tab</property>
-                <property name="accelerator">&lt;Shift&gt;&lt;Primary&gt;Tab</property>
+                <property name="action-name">win.prev_tab</property>
               </object>
             </child>
           </object>
@@ -132,42 +131,49 @@
               <object class="GtkShortcutsShortcut">
                 <property name="visible">True</property>
                 <property name="title" translatable="yes" context="shortcut window">Search articles</property>
-                <property name="accelerator">F2 &lt;Primary&gt;K</property>
+                <property name="action-name">win.show_search</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">True</property>
                 <property name="title" translatable="yes" context="shortcut window">Wikipedia main page</property>
-                <property name="accelerator">&lt;Alt&gt;Home</property>
+                <property name="action-name">win.main_page</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">True</property>
+                <property name="title" translatable="yes" context="shortcut window">Random article</property>
+                <property name="action-name">win.random_article</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">True</property>
                 <property name="title" translatable="yes" context="shortcut window">Show recent articles</property>
-                <property name="accelerator">&lt;Primary&gt;H</property>
+                <property name="action-name">win.show_historic</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">True</property>
                 <property name="title" translatable="yes" context="shortcut window">Previous page</property>
-                <property name="accelerator">&lt;Alt&gt;Left</property>
+                <property name="action-name">win.prev_page</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">True</property>
                 <property name="title" translatable="yes" context="shortcut window">Next page</property>
-                <property name="accelerator">&lt;Alt&gt;Right</property>
+                <property name="action-name">win.next_page</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">True</property>
                 <property name="title" translatable="yes" context="shortcut window">Reload page</property>
-                <property name="accelerator">F5 &lt;Primary&gt;R</property>
+                <property name="action-name">win.reload_page</property>
               </object>
             </child>
           </object>

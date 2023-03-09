@@ -7,49 +7,49 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: el\n"
 
-#: ../src/view.py:154
+#: ../src/view.py:227 ../src/view.py:315
 msgid "Article not found"
 msgstr "Το άρθρο δεν βρέθηκε"
 
-#: ../src/view.py:155
+#: ../src/view.py:228
 msgid "Can't find any results for requested query"
 msgstr "Δεν βρέθηκαν αποτελέσματα"
 
-#: ../src/view.py:157
+#: ../src/view.py:231 ../src/view.py:317
 msgid "Can't access Wikipedia"
 msgstr "Αδύνατη η πρόσβαση στη Βικιπαίδεια"
 
-#: ../src/view.py:158
+#: ../src/view.py:232
 msgid "Check your Internet connection and try again"
 msgstr "Ελέγξτε τη σύνδεσή σας στο διαδίκτυο και ξαναπροσπαθήστε"
 
-#: ../src/window.py:151 ../src/window.py:261
+#: ../src/window.py:225 ../src/page.py:120
 msgid "New bookmark: "
 msgstr "Νέος σελιδοείκτης: "
 
-#: ../src/window.py:319
+#: ../src/window.py:283
 msgid "Wikipedia URL copied to clipboard"
 msgstr "Επιτυχής αντιγραφή διεύθυνσης URL"
 
-#: ../src/search.py:249
+#: ../src/search.py:259
 msgid "Default search language: "
 msgstr "Προκαθορισμένη γλώσσα αναζήτησης: "
 
 #. the semicolon ; is the greek questionmark
-#: ../src/bookmarks.py:137
+#: ../src/bookmarks.py:138
 msgid "Clear Bookmarks List?"
 msgstr "Διαγραφή λίστας σελιδοεικτών;"
 
-#: ../src/bookmarks.py:138
+#: ../src/bookmarks.py:140
 msgid "All bookmarks in the list will be removed permanently."
 msgstr "Όλοι οι σελιδοδείκτες της λίστας θα διαγραφούν μόνιμα"
 
-#: ../src/bookmarks.py:139 ../data/ui/bookmarks.ui:70
+#: ../src/bookmarks.py:141 ../data/ui/bookmarks.ui:70
 msgid "Clear List"
 msgstr "Διαγραφή λίστας"
 
 #: ../data/ui/search-settings.ui:61
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:21
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:22
 msgid "Search suggestions"
 msgstr "Αναζήτηση προτάσεων"
 
@@ -68,148 +68,134 @@ msgstr "Αναζήτηση και ανάγνωση άρθρων Βικιπαίδ
 msgid "translator-credits"
 msgstr ""
 
-#: ../data/ui/bookmarks.ui:58
+#: ../src/view.py:422 ../data/ui/bookmarks.ui:58
 msgid "Add Bookmark"
 msgstr "Προσθήκη σελιδοδείκτη"
 
-#: ../data/ui/shortcuts.ui:14
+#: ../data/ui/shortcuts.ui:13
 msgctxt "shortcut window"
 msgid "General"
 msgstr "Γενικά"
 
-#: ../data/ui/shortcuts.ui:25
+#: ../data/ui/shortcuts.ui:24
 msgctxt "shortcut window"
 msgid "Table of contents"
 msgstr "Περιεχόμενα"
 
-#: ../data/ui/shortcuts.ui:32
+#: ../data/ui/shortcuts.ui:31
 msgctxt "shortcut window"
 msgid "View article in other languages"
 msgstr "Προβολή άρθρου σε άλλες γλώσσες"
 
-#: ../data/ui/shortcuts.ui:39
+#: ../data/ui/shortcuts.ui:38
 msgctxt "shortcut window"
 msgid "Search text in page"
 msgstr "Αναζήτηση κειμένου"
 
-#: ../data/ui/shortcuts.ui:46
+#: ../data/ui/shortcuts.ui:45
 msgctxt "shortcut window"
 msgid "Preferences"
 msgstr "Προτιμήσεις"
 
-#: ../data/ui/shortcuts.ui:53
-msgctxt "shortcut window"
-msgid "Select all"
-msgstr "Επιλογή όλων"
-
-#: ../data/ui/shortcuts.ui:60
-msgctxt "shortcut window"
-msgid "Copy selection"
-msgstr "Αντιγραφή επιλεγμένων"
-
 #. Where is this? If you are copying the article's URL then it would make mroe sense to say "Copy article's URL".
-#: ../data/ui/shortcuts.ui:67
+#: ../data/ui/shortcuts.ui:52
 msgctxt "shortcut window"
 msgid "Copy Wikipedia URL"
 msgstr "Αντιγραφή URL Βικιπαίδειας"
 
-#: ../data/ui/shortcuts.ui:74
+#: ../data/ui/shortcuts.ui:59
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Έξοδος"
 
-#: ../data/ui/shortcuts.ui:81
+#: ../data/ui/shortcuts.ui:66
 msgctxt "shortcut window"
 msgid "Keyboard shortcuts"
 msgstr "Συντομεύσεις πληκτρολογίου"
 
-#: ../data/ui/shortcuts.ui:90
+#: ../data/ui/shortcuts.ui:129
 msgctxt "shortcut window"
 msgid "Navigation"
 msgstr "Πλοήγηση"
 
-#: ../data/ui/shortcuts.ui:94
+#: ../data/ui/shortcuts.ui:133
 msgctxt "shortcut window"
 msgid "Search articles"
 msgstr "Αναζήτηση άρθρων"
 
-#: ../data/ui/shortcuts.ui:101
+#: ../data/ui/shortcuts.ui:140
 msgctxt "shortcut window"
 msgid "Wikipedia main page"
 msgstr "Αρχική σελίδα Βικιπαίδειας"
 
-#: ../data/ui/shortcuts.ui:108
+#: ../data/ui/shortcuts.ui:154
 msgctxt "shortcut window"
 msgid "Show recent articles"
 msgstr "Προβολή πρόσφατων άρθρων"
 
-#: ../data/ui/shortcuts.ui:115
+#: ../data/ui/shortcuts.ui:161
 msgctxt "shortcut window"
 msgid "Previous page"
 msgstr "Προηγούμενη σελίδα"
 
-#: ../data/ui/shortcuts.ui:122
+#: ../data/ui/shortcuts.ui:168
 msgctxt "shortcut window"
 msgid "Next page"
 msgstr "Επόμενη σελίδα"
 
-#: ../data/ui/shortcuts.ui:129
+#: ../data/ui/shortcuts.ui:175
 msgctxt "shortcut window"
 msgid "Reload page"
 msgstr "Επαναφόρτωση"
 
-#: ../data/ui/shortcuts.ui:138
+#: ../data/ui/shortcuts.ui:75
 msgctxt "shortcut window"
 msgid "Bookmarks"
 msgstr "Σελιδοδείκτες"
 
-#: ../data/ui/shortcuts.ui:142
+#: ../data/ui/shortcuts.ui:79
 msgctxt "shortcut window"
 msgid "Show bookmarks"
 msgstr "Προβολή σελιδοδεικτών"
 
-#: ../data/ui/shortcuts.ui:149
+#: ../data/ui/shortcuts.ui:86
 msgctxt "shortcut window"
 msgid "Add bookmark"
 msgstr "Προσθήκη σελιδοδείκτη"
 
 #. I don't know if "wikipedia" is needed. It could just say main page, no?
-#: ../src/prefs.py:81 ../data/ui/menu.ui:8
+#: ../src/prefs.py:80 ../data/ui/menu.ui:123
 msgid "Wikipedia Main Page"
 msgstr "Αρχική σελίδα"
 
-#: ../src/view.py:234 ../data/ui/menu.ui:18
+#: ../src/view.py:313 ../data/ui/menu.ui:149
 msgid "Recent Articles"
 msgstr "Πρόσφατα άρθρα"
 
-#: ../data/ui/menu.ui:23
-msgid "Reload Page"
-msgstr "Επαναφόρτωση"
-
-#: ../data/ui/menu.ui:30
+#: ../data/ui/menu.ui:173
 msgid "Search Text in Page"
 msgstr "Αναζήτηση κειμένου στη σελίδα"
 
-#: ../data/ui/menu.ui:36
+#: ../data/ui/menu.ui:186
 msgid "Open Wikipedia Page in Browser"
 msgstr "Άνοιγμα σελίδας στον περιηγητή"
 
 #. Since you are copying the article's URL to clipboard perhaps you could say that instead of Wikipedia URL?
 #. 
 #. In my translation I say "Copy article's URL address" (word for word it is "Copy address URL of article")
-#: ../data/ui/menu.ui:40
+#: ../data/ui/menu.ui:199
 msgid "Copy Wikipedia URL to Clipboard"
 msgstr "Αντιγραφή διεύθυνσης URL άρθρου"
 
-#: ../data/ui/menu.ui:46
+#: ../data/ui/menu.ui:223
 msgid "Preferences"
 msgstr "Προτιμήσεις"
 
-#: ../data/ui/menu.ui:56
+#: ../data/ui/menu.ui:236
 msgid "Keyboard Shortcuts"
 msgstr "Συντομεύσεις πληκτρολογίου"
 
-#: ../data/ui/menu.ui:60
+#: ../data/ui/menu.ui:249
 msgid "About Wike"
 msgstr "Σχετικά με το Wike"
 
@@ -217,7 +203,7 @@ msgstr "Σχετικά με το Wike"
 msgid "Behavior"
 msgstr "Συμπεριφορά"
 
-#: ../data/ui/prefs.ui:135
+#: ../data/ui/prefs.ui:126
 msgid "Keep a list of recent articles"
 msgstr "Διατήρηση λίστας πρόσφατων άρθρων"
 
@@ -225,11 +211,11 @@ msgstr "Διατήρηση λίστας πρόσφατων άρθρων"
 msgid "General"
 msgstr "Γενικά"
 
-#: ../data/ui/prefs.ui:178
+#: ../data/ui/prefs.ui:169
 msgid "Languages"
 msgstr "Γλώσσες"
 
-#: ../data/ui/header-spinner.ui:23
+#: ../src/page.py:82 ../src/page.py:85
 msgid "Loading Article"
 msgstr "Φόρτωση άρθρου"
 
@@ -239,7 +225,7 @@ msgstr "Φόρτωση άρθρου"
 msgid "Wike"
 msgstr "Wike"
 
-#: ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../src/view.py:223 ../data/com.github.hugolabe.Wike.desktop.in:4
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
 msgid "Search and read Wikipedia articles"
 msgstr "Αναζήτηση και ανάγνωση άρθρων Βικιπαίδειας"
@@ -253,27 +239,27 @@ msgstr "Βικιπαίδεια;Εγκυκλοπαίδεια;"
 msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
 msgstr "Το Wike είναι ένα πρόγραμμα ανάγνωσης της Βικιπαίδειας για το GNOME. Μέσω μιας απλής και δίχως περισπάσεις προβολή παρέχει πρόσβαση σε όλο το περιεχόμενο της ηλεκτρονικής εγκυκλοπαίδειας."
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:21
 msgid "Multiple languages"
 msgstr "Πολλαπλές γλώσσες"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:22
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:23
 msgid "List of recent articles"
 msgstr "Λίστα πρόσφατων άρθρων"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:23
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:24
 msgid "Simple bookmarks management"
 msgstr "Απλή διαχείριση σελιδοδεικτών"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:24
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:25
 msgid "Text search in articles"
 msgstr "Αναζήτηση κειμένου"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:25
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
 msgid "Article table of contents"
 msgstr "Περιεχόμενα άρθρου"
 
-#: ../data/ui/header.ui:136 ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
+#: ../data/ui/header.ui:154 ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
 msgid "View article in other languages"
 msgstr "Προβολή άρθρου σε άλλη γλώσσα"
 
@@ -281,44 +267,36 @@ msgstr "Προβολή άρθρου σε άλλη γλώσσα"
 msgid "Features:"
 msgstr "Χαρακτηριστικά"
 
-#: ../data/ui/menu.ui:50
-msgid "Dark Mode"
-msgstr "Σκούρο θέμα"
-
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
-msgid "Dark mode"
-msgstr "Σκούρο θέμα"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
 msgid "GNOME Shell search integration"
 msgstr ""
 
-#: ../src/prefs.py:146
+#: ../src/prefs.py:148
 msgid "Clear Historic?"
 msgstr ""
 
-#: ../src/prefs.py:147
+#: ../src/prefs.py:150
 msgid "The history of visited articles will be deleted permanently."
 msgstr ""
 
-#: ../src/prefs.py:148
+#: ../src/prefs.py:151
 msgid "Clear Historic"
 msgstr ""
 
-#: ../src/prefs.py:165
+#: ../src/prefs.py:168
 msgid "Clear Personal Data?"
 msgstr ""
 
-#: ../src/prefs.py:166
+#: ../src/prefs.py:170
 msgid "Cookies and cache data will be deleted permanently."
 msgstr ""
 
-#: ../src/prefs.py:167
+#: ../src/prefs.py:171
 msgid "Clear Data"
 msgstr ""
 
 #. Don't remove %s tag!
-#: ../src/wike-sp.in:71
+#: ../src/wike-sp.in:84
 msgid "Search “%s” on Wikipedia"
 msgstr ""
 
@@ -330,128 +308,186 @@ msgstr ""
 msgid "The page that will be displayed when Wike starts"
 msgstr ""
 
-#: ../data/ui/prefs.ui:30
-msgid "Clear bookmarks on exit"
-msgstr ""
-
-#: ../data/ui/prefs.ui:31
-msgid "The bookmarks list will be cleared when exiting Wike"
-msgstr ""
-
-#: ../data/ui/prefs.ui:49
+#: ../data/ui/prefs.ui:34
 msgid "Article View"
 msgstr ""
 
-#: ../data/ui/prefs.ui:52
+#: ../data/ui/prefs.ui:37
 msgid "Font size"
 msgstr ""
 
-#: ../data/ui/prefs.ui:53
+#: ../data/ui/prefs.ui:38
 msgid "Font size for article view (default is 16)"
 msgstr ""
 
-#: ../data/ui/prefs.ui:70
+#: ../data/ui/prefs.ui:55
 msgid "Use custom font"
 msgstr ""
 
-#: ../data/ui/prefs.ui:71
+#: ../data/ui/prefs.ui:56
 msgid "Choose a font for the article view"
 msgstr ""
 
-#: ../data/ui/prefs.ui:84
+#: ../data/ui/prefs.ui:69
 msgid "Preview popups in article links"
 msgstr ""
 
-#: ../data/ui/prefs.ui:85
+#: ../data/ui/prefs.ui:70
 msgid "Show a preview of the article when hovering over a link"
 msgstr ""
 
-#: ../data/ui/prefs.ui:104
+#: ../data/ui/prefs.ui:89
 msgid "Privacy"
 msgstr ""
 
-#: ../data/ui/prefs.ui:110
+#: ../data/ui/prefs.ui:95
 msgid "Search"
 msgstr ""
 
-#: ../data/ui/prefs.ui:113
+#: ../data/ui/prefs.ui:98
 msgid "Allow live search on desktop"
 msgstr ""
 
-#: ../data/ui/prefs.ui:114
+#: ../data/ui/prefs.ui:99
 msgid "Warning: all desktop searches will be sent to Wikipedia"
 msgstr ""
 
-#: ../data/ui/prefs.ui:132
+#: ../data/ui/prefs.ui:123
 msgid "Personal Data"
 msgstr ""
 
-#: ../data/ui/prefs.ui:136
+#: ../data/ui/prefs.ui:127
 msgid "Wike will remember the history of visited articles"
 msgstr ""
 
-#: ../data/ui/prefs.ui:148 ../data/ui/prefs.ui:163
+#: ../data/ui/prefs.ui:139 ../data/ui/prefs.ui:154
 msgid "Clear"
 msgstr ""
 
-#: ../data/ui/prefs.ui:158
+#: ../data/ui/prefs.ui:149
 msgid "Clear personal data"
 msgstr ""
 
-#: ../data/ui/prefs.ui:159
+#: ../data/ui/prefs.ui:150
 msgid "Cookies and cache data will be deleted"
 msgstr ""
 
-#: ../src/view.py:161
+#: ../src/view.py:235
 msgid "Try Again"
 msgstr ""
 
-#: ../src/prefs.py:81 ../data/ui/menu.ui:13
+#: ../src/prefs.py:80 ../data/ui/menu.ui:136
 msgid "Random Article"
 msgstr "Τυχαίο άρθρο"
 
-#: ../src/prefs.py:81
+#: ../src/prefs.py:80
 msgid "Last Article"
 msgstr "Πιο πρόσφατο άρθρο"
 
-#: ../src/bookmarks.py:46
-msgid "<b>No Bookmarks</b>\n"
-"\n"
-"<small>Use the <i>Add Bookmark</i> button\n"
-"or click a link with the middle mouse button\n"
-"to add bookmarks to the list</small>"
-msgstr "<b>Χωρίς σελιδοδείκτες</b>\n"
-"\n"
-"<small>Χρησιμοποίησε το κουμπί <i>Προσθήκη σελιδοδείκτη</i>\n"
-"ή κάνε κλικ σε λινκ με το μεσαίο πλήκτρο του ποντικιού\n"
-"για να το προσθέσεις στη λίστα σελιδοδεικτών</small>"
-
-#: ../data/ui/header.ui:61
+#: ../data/ui/header.ui:79
 msgid "Search articles"
 msgstr "Αναζήτηση άρθρων"
 
-#: ../data/ui/header.ui:95
+#: ../data/ui/header.ui:113
 msgid "Bookmarks"
 msgstr "Σελιδοδείκτες"
 
-#: ../data/ui/header.ui:117
+#: ../data/ui/header.ui:135
 msgid "Table of contents"
 msgstr "Περιεχόμενα"
 
-#: ../data/ui/prefs.ui:184
+#: ../data/ui/prefs.ui:175
 msgid "Filter Available Languages"
 msgstr "Φιλτράρισμα διαθέσιμων γλωσσών"
 
-#: ../data/ui/prefs.ui:218
+#: ../data/ui/prefs.ui:209
 msgid "Select All"
 msgstr "Επιλογή όλων"
 
-#: ../data/ui/prefs.ui:230
+#: ../data/ui/prefs.ui:221
 msgid "Select None"
 msgstr "Ακύρωση επιλογής"
 
-#: ../data/ui/shortcuts.ui:18
+#: ../data/ui/shortcuts.ui:17
 msgctxt "shortcut window"
 msgid "Main menu"
 msgstr ""
+
+#: ../src/view.py:224
+msgid "Click the search button or press F2 to search articles in Wikipedia. You can also use the main menu to open Wikipedia main page, the list of recent articles or get a random article."
+msgstr ""
+
+#: ../src/bookmarks.py:47
+msgid "<b>No Bookmarks</b>\n"
+"\n"
+"<small>Use the <i>Add Bookmark</i> button\n"
+"or press Ctrl+D to add\n"
+"the current article to the list</small>"
+msgstr ""
+
+#: ../data/ui/shortcuts.ui:95
+msgctxt "shortcut window"
+msgid "Tabs"
+msgstr ""
+
+#: ../data/ui/shortcuts.ui:99
+msgctxt "shortcut window"
+msgid "New tab"
+msgstr ""
+
+#: ../data/ui/shortcuts.ui:106
+msgctxt "shortcut window"
+msgid "Close current tab"
+msgstr ""
+
+#: ../data/ui/shortcuts.ui:113
+msgctxt "shortcut window"
+msgid "Next tab"
+msgstr ""
+
+#: ../data/ui/shortcuts.ui:120
+msgctxt "shortcut window"
+msgid "Previous tab"
+msgstr ""
+
+#: ../data/ui/header.ui:61
+msgid "New tab"
+msgstr ""
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
+msgid "Open multiple articles in tabs"
+msgstr ""
+
+#: ../src/view.py:437
+msgid "Open Link in New Tab"
+msgstr ""
+
+#: ../src/view.py:443
+msgid "Add Link to Bookmarks"
+msgstr ""
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:29
+msgid "Light, dark and sepia themes"
+msgstr ""
+
+#: ../src/view.py:439
+msgid "Open Link in Browser"
+msgstr ""
+
+#: ../src/view.py:445
+msgid "Copy Link to Clipboard"
+msgstr ""
+
+#: ../data/ui/prefs.ui:110
+msgid "Desktop searches are performed in the default language"
+msgstr ""
+
+#: ../data/ui/prefs.ui:111
+msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
+msgstr ""
+
+#: ../data/ui/shortcuts.ui:147
+msgctxt "shortcut window"
+msgid "Random article"
+msgstr "Τυχαίο άρθρο"
 

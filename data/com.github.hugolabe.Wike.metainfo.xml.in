@@ -53,6 +53,44 @@
   </screenshots>
 
   <releases>
+    <release version="1.8.3" date="2023-03-03">
+      <description>
+        <ul>
+          <li>Added shortcut for Random Article.</li>
+          <li>Small UI tweaks.</li>
+          <li>Updated translations.</li>
+          <li>Bumped to GNOME runtime 43 and WebKit 4.1.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.8.2" date="2022-10-24">
+      <description>
+        <ul>
+          <li>Added Bulgarian translation.</li>
+          <li>Updated Turkish translation.</li>
+          <li>Bug fixes.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.8.1" date="2022-09-07">
+      <description>
+        <ul>
+          <li>Added Tamil translation.</li>
+          <li>Updated Dutch translation.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.8.0" date="2022-05-28">
+      <description>
+        <ul>
+          <li>System light/dark theme support.</li>
+          <li>Updated Wikipedia language list.</li>
+          <li>Added translations: Hebrew.</li>
+          <li>Updated translations: Czech, German, Japanese.</li>
+          <li>Bug fixes.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.7.2" date="2022-03-31">
       <description>
         <ul>
@@ -300,6 +338,7 @@
   </releases>
 
   <url type="homepage">https://hugolabe.github.io/Wike/</url>
+  <url type="bugtracker">https://github.com/hugolabe/Wike/issues</url>
   <url type="translate">https://poeditor.com/join/project?hash=kNgJu4MAum</url>
   <developer_name>Hugo Olabera</developer_name>
   <update_contact>hugolabe@gmail.com</update_contact>

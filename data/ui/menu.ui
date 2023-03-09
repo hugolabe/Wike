@@ -15,13 +15,35 @@
             <property name="visible">True</property>
             <property name="halign">center</property>
             <property name="margin-bottom">6</property>
-            <property name="spacing">24</property>
+            <property name="spacing">12</property>
+            <child>
+              <object class="GtkRadioButton" id="system_button">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="halign">center</property>
+                <property name="draw-indicator">False</property>
+                <child>
+                  <object class="GtkImage">
+                    <property name="visible">True</property>
+                    <property name="icon-name">emblem-ok-symbolic</property>
+                  </object>
+                </child>
+                <style>
+                  <class name="color-button"/>
+                  <class name="color-system"/>
+                </style>
+              </object>
+              <packing>
+                <property name="position">0</property>
+              </packing>
+            </child>
             <child>
               <object class="GtkRadioButton" id="light_button">
                 <property name="visible">True</property>
                 <property name="can-focus">True</property>
                 <property name="halign">center</property>
                 <property name="draw-indicator">False</property>
+                <property name="group">system_button</property>
                 <child>
                   <object class="GtkImage">
                     <property name="visible">True</property>
@@ -34,7 +56,7 @@
                 </style>
               </object>
               <packing>
-                <property name="position">0</property>
+                <property name="position">1</property>
               </packing>
             </child>
             <child>
@@ -43,7 +65,7 @@
                 <property name="can-focus">True</property>
                 <property name="halign">center</property>
                 <property name="draw-indicator">False</property>
-                <property name="group">light_button</property>
+                <property name="group">system_button</property>
                 <child>
                   <object class="GtkImage">
                     <property name="visible">True</property>
@@ -56,7 +78,7 @@
                 </style>
               </object>
               <packing>
-                <property name="position">1</property>
+                <property name="position">2</property>
               </packing>
             </child>
             <child>
@@ -65,7 +87,7 @@
                 <property name="can-focus">True</property>
                 <property name="halign">center</property>
                 <property name="draw-indicator">False</property>
-                <property name="group">light_button</property>
+                <property name="group">system_button</property>
                 <child>
                   <object class="GtkImage">
                     <property name="visible">True</property>
@@ -78,7 +100,7 @@
                 </style>
               </object>
               <packing>
-                <property name="position">2</property>
+                <property name="position">3</property>
               </packing>
             </child>
           </object>
@@ -212,7 +234,7 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="text" translatable="yes">Keyboard Shortcuts</property>
-            <property name="action_name">app.shortcuts</property>
+            <property name="action_name">win.show-help-overlay</property>
           </object>
           <packing>
             <property name="expand">False</property>

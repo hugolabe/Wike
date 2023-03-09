@@ -92,6 +92,8 @@ class TocPopover(Gtk.Popover):
       menu.append_item(button)
       return index
 
+    return index
+
   # On menu activated load section
 
   def _section_activate_cb(self, action, parameter):

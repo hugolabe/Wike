@@ -73,7 +73,7 @@ class Window(Handy.ApplicationWindow):
                 ('show_langlinks', self._show_langlinks_cb, ('<Ctrl>L',)),
                 ('show_toc', self._show_toc_cb, ('<Ctrl>T',)),
                 ('main_page', self._main_page_cb, ('<Alt>Home',)),
-                ('random_article', self._random_article_cb, None),
+                ('random_article', self._random_article_cb, ('<Alt>R',)),
                 ('show_historic', self._show_historic_cb, ('<Ctrl>H',)),
                 ('reload_page', self._reload_page_cb, ('F5', '<Ctrl>R',)),
                 ('search_text', self._search_text_cb, ('<Ctrl>F',)),

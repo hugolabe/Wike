@@ -18,7 +18,7 @@ Provides access to all the content of this online encyclopedia in a native appli
 - Article table of contents
 - View article in other languages
 - GNOME Shell search integration
-- Dark mode
+- Light, dark and sepia themes
 
 ## GNOME Circle
 

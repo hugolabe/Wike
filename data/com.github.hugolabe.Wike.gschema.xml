@@ -68,8 +68,8 @@
     </key>
 
     <key name="theme" type="i">
-      <default>0</default>
-      <summary>Choose theme (0-Light, 1-Dark, 2-Sepia)</summary>
+      <default>3</default>
+      <summary>Choose theme (0-Light, 1-Dark, 2-Sepia, 3-System)</summary>
     </key>
 
   </schema>

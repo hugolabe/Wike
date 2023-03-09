@@ -7,27 +7,27 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: ca\n"
 
-#: ../src/view.py:207 ../src/view.py:295
+#: ../src/view.py:227 ../src/view.py:315
 #, fuzzy
 msgid "Article not found"
 msgstr "No s'ha trobat l'article"
 
-#: ../src/view.py:208
+#: ../src/view.py:228
 #, fuzzy
 msgid "Can't find any results for requested query"
 msgstr "No es poden trobar resultats per a la consulta sol·licitada"
 
-#: ../src/view.py:211 ../src/view.py:297
+#: ../src/view.py:231 ../src/view.py:317
 #, fuzzy
 msgid "Can't access Wikipedia"
 msgstr "No es pot accedir a la Viquipèdia"
 
-#: ../src/view.py:212
+#: ../src/view.py:232
 #, fuzzy
 msgid "Check your Internet connection and try again"
 msgstr "Comprova la connexió a Internet i torna-ho a provar"
 
-#: ../src/window.py:225 ../src/page.py:115
+#: ../src/window.py:225 ../src/page.py:120
 #, fuzzy
 msgid "New bookmark: "
 msgstr "Nova adreça d'interès: "
@@ -80,155 +80,155 @@ msgstr "Cerca i llegeix articles de la Viquipèdia\n"
 msgid "translator-credits"
 msgstr "Ícar N. S. <icar.nin@protonmail.com>"
 
-#: ../src/view.py:402 ../data/ui/bookmarks.ui:58
+#: ../src/view.py:422 ../data/ui/bookmarks.ui:58
 #, fuzzy
 msgid "Add Bookmark"
 msgstr "Afegeix com a adreça d'interès"
 
-#: ../data/ui/shortcuts.ui:14
+#: ../data/ui/shortcuts.ui:13
 #, fuzzy
 msgctxt "shortcut window"
 msgid "General"
 msgstr "General"
 
-#: ../data/ui/shortcuts.ui:25
+#: ../data/ui/shortcuts.ui:24
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Table of contents"
 msgstr "Taula de continguts"
 
-#: ../data/ui/shortcuts.ui:32
+#: ../data/ui/shortcuts.ui:31
 #, fuzzy
 msgctxt "shortcut window"
 msgid "View article in other languages"
 msgstr "Visualitza l'article en altres llengües"
 
-#: ../data/ui/shortcuts.ui:39
+#: ../data/ui/shortcuts.ui:38
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Search text in page"
 msgstr "Cerca text a la pàgina"
 
-#: ../data/ui/shortcuts.ui:46
+#: ../data/ui/shortcuts.ui:45
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Preferences"
 msgstr "Preferències"
 
-#: ../data/ui/shortcuts.ui:53
+#: ../data/ui/shortcuts.ui:52
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Copy Wikipedia URL"
 msgstr "Copia l'URL de la Viquipèdia"
 
-#: ../data/ui/shortcuts.ui:60
+#: ../data/ui/shortcuts.ui:59
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Surt"
 
-#: ../data/ui/shortcuts.ui:67
+#: ../data/ui/shortcuts.ui:66
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Keyboard shortcuts"
 msgstr "Dreceres de teclat"
 
-#: ../data/ui/shortcuts.ui:130
+#: ../data/ui/shortcuts.ui:129
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Navigation"
 msgstr "Navegació"
 
-#: ../data/ui/shortcuts.ui:134
+#: ../data/ui/shortcuts.ui:133
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Search articles"
 msgstr "Cerca articles"
 
-#: ../data/ui/shortcuts.ui:141
+#: ../data/ui/shortcuts.ui:140
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Wikipedia main page"
 msgstr "Pàgina principal de la Viquipèdia"
 
-#: ../data/ui/shortcuts.ui:148
+#: ../data/ui/shortcuts.ui:154
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Show recent articles"
 msgstr "Mostra els articles recents"
 
-#: ../data/ui/shortcuts.ui:155
+#: ../data/ui/shortcuts.ui:161
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Previous page"
 msgstr "Pàgina anterior"
 
-#: ../data/ui/shortcuts.ui:162
+#: ../data/ui/shortcuts.ui:168
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Next page"
 msgstr "Pàgina següent"
 
-#: ../data/ui/shortcuts.ui:169
+#: ../data/ui/shortcuts.ui:175
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Reload page"
 msgstr "Torna a carregar la pàgina"
 
-#: ../data/ui/shortcuts.ui:76
+#: ../data/ui/shortcuts.ui:75
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Bookmarks"
 msgstr "Adreces d'interès"
 
-#: ../data/ui/shortcuts.ui:80
+#: ../data/ui/shortcuts.ui:79
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Show bookmarks"
 msgstr "Mostra les adreces d'interès"
 
-#: ../data/ui/shortcuts.ui:87
+#: ../data/ui/shortcuts.ui:86
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Add bookmark"
 msgstr "Afegeix com a adreça d'interès"
 
-#: ../src/prefs.py:80 ../data/ui/menu.ui:101
+#: ../src/prefs.py:80 ../data/ui/menu.ui:123
 #, fuzzy
 msgid "Wikipedia Main Page"
 msgstr "Pàgina principal de la Viquipèdia"
 
-#: ../src/view.py:293 ../data/ui/menu.ui:127
+#: ../src/view.py:313 ../data/ui/menu.ui:149
 #, fuzzy
 msgid "Recent Articles"
 msgstr "Articles recents"
 
-#: ../data/ui/menu.ui:151
+#: ../data/ui/menu.ui:173
 #, fuzzy
 msgid "Search Text in Page"
 msgstr "Cerca text a la pàgina"
 
-#: ../data/ui/menu.ui:164
+#: ../data/ui/menu.ui:186
 #, fuzzy
 msgid "Open Wikipedia Page in Browser"
 msgstr "Obre la pàgina de la Viquipèdia al navegador"
 
-#: ../data/ui/menu.ui:177
+#: ../data/ui/menu.ui:199
 #, fuzzy
 msgid "Copy Wikipedia URL to Clipboard"
 msgstr "Copia l'URL de la Viquipèdia al porta-retalls"
 
-#: ../data/ui/menu.ui:201
+#: ../data/ui/menu.ui:223
 #, fuzzy
 msgid "Preferences"
 msgstr "Preferències"
 
-#: ../data/ui/menu.ui:214
+#: ../data/ui/menu.ui:236
 #, fuzzy
 msgid "Keyboard Shortcuts"
 msgstr "Dreceres de teclat"
 
-#: ../data/ui/menu.ui:227
+#: ../data/ui/menu.ui:249
 #, fuzzy
 msgid "About Wike"
 msgstr "Quant al Wike"
@@ -253,7 +253,7 @@ msgstr "General"
 msgid "Languages"
 msgstr "Idiomes"
 
-#: ../src/page.py:78 ../src/page.py:81
+#: ../src/page.py:82 ../src/page.py:85
 #, fuzzy
 msgid "Loading Article"
 msgstr "S'està carregant l'article"
@@ -265,7 +265,7 @@ msgstr "S'està carregant l'article"
 msgid "Wike"
 msgstr "Wike"
 
-#: ../src/view.py:203 ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../src/view.py:223 ../data/com.github.hugolabe.Wike.desktop.in:4
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
 #, fuzzy
 msgid "Search and read Wikipedia articles"
@@ -448,12 +448,12 @@ msgstr "Neteja les dades personals"
 msgid "Cookies and cache data will be deleted"
 msgstr "S'eliminaran les galetes i les dades de la memòria cau"
 
-#: ../src/view.py:215
+#: ../src/view.py:235
 #, fuzzy
 msgid "Try Again"
 msgstr "Torna-ho a provar"
 
-#: ../src/prefs.py:80 ../data/ui/menu.ui:114
+#: ../src/prefs.py:80 ../data/ui/menu.ui:136
 #, fuzzy
 msgid "Random Article"
 msgstr "Article aleatori"
@@ -493,13 +493,13 @@ msgstr "Selecciona-ho tot"
 msgid "Select None"
 msgstr "No seleccionis res"
 
-#: ../data/ui/shortcuts.ui:18
+#: ../data/ui/shortcuts.ui:17
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Main menu"
 msgstr "Menú principal"
 
-#: ../src/view.py:204
+#: ../src/view.py:224
 #, fuzzy
 msgid "Click the search button or press F2 to search articles in Wikipedia. You can also use the main menu to open Wikipedia main page, the list of recent articles or get a random article."
 msgstr "Feu clic al botó de cerca o premeu F2 per cercar articles a la Viquipèdia. També es pot utilitzar el menú principal per obrir la pàgina principal de la Viquipèdia, la llista d'articles recents o obtenir un article aleatori."
@@ -517,31 +517,31 @@ msgstr "<b>No hi ha adreces d'interès</b>\n"
 "o premeu Ctrl+D per afegir\n"
 "l'article actual a la llista</small>"
 
-#: ../data/ui/shortcuts.ui:96
+#: ../data/ui/shortcuts.ui:95
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Tabs"
 msgstr "Pestanyes"
 
-#: ../data/ui/shortcuts.ui:100
+#: ../data/ui/shortcuts.ui:99
 #, fuzzy
 msgctxt "shortcut window"
 msgid "New tab"
 msgstr "Pestanya nova"
 
-#: ../data/ui/shortcuts.ui:107
+#: ../data/ui/shortcuts.ui:106
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Close current tab"
 msgstr "Tanca la pestanya actual"
 
-#: ../data/ui/shortcuts.ui:114
+#: ../data/ui/shortcuts.ui:113
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Next tab"
 msgstr "Pestanya següent"
 
-#: ../data/ui/shortcuts.ui:121
+#: ../data/ui/shortcuts.ui:120
 #, fuzzy
 msgctxt "shortcut window"
 msgid "Previous tab"
@@ -557,12 +557,12 @@ msgstr "Pestanya nova"
 msgid "Open multiple articles in tabs"
 msgstr "Obre diversos articles en pestanyes"
 
-#: ../src/view.py:417
+#: ../src/view.py:437
 #, fuzzy
 msgid "Open Link in New Tab"
 msgstr "Obre l'enllaç en una pestanya nova"
 
-#: ../src/view.py:423
+#: ../src/view.py:443
 #, fuzzy
 msgid "Add Link to Bookmarks"
 msgstr "Afegeix l'enllaç a les adreces d'interès"
@@ -572,11 +572,11 @@ msgstr "Afegeix l'enllaç a les adreces d'interès"
 msgid "Light, dark and sepia themes"
 msgstr "Temes clars, foscos i sèpia"
 
-#: ../src/view.py:419
+#: ../src/view.py:439
 msgid "Open Link in Browser"
 msgstr "Obre l'enllaç al navegador"
 
-#: ../src/view.py:425
+#: ../src/view.py:445
 msgid "Copy Link to Clipboard"
 msgstr "Copia l'enllaç al porta-retalls"
 
@@ -587,4 +587,9 @@ msgstr "Les cerques des de l'escriptori es realitzen en l'idioma per defecte"
 #: ../data/ui/prefs.ui:111
 msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
 msgstr "Podeu cercar en altres idiomes utilitzant un prefix. Per exemple, -es per cercar en castellà"
+
+#: ../data/ui/shortcuts.ui:147
+msgctxt "shortcut window"
+msgid "Random article"
+msgstr "Article aleatori"
 

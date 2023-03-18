@@ -1,11 +1,13 @@
-[![Please do not theme this app](https://stopthemingmy.app/badge.svg)](https://stopthemingmy.app)
+<div align="center">
+  <img src="https://raw.githubusercontent.com/hugolabe/Wike/3ba00b3fe81752914497be531714d7bfb9c8ada0/data/icons/com.github.hugolabe.Wike.svg" width="64">
+  <h1 align="center">Wike</h1>
+  <p align="center">Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles</p>
+  
+ [![Please do not theme this app](https://stopthemingmy.app/badge.svg)](https://stopthemingmy.app) 
+ 
+ ![](data/screenshots/wike-02-tabs.png)
 
-# Wike
-
-![](data/screenshots/wike-02-tabs.png)
-
-*Wike* is a Wikipedia reader for the GNOME Desktop.
-Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles.
+ </div>
 
 ## Features
 
@@ -28,9 +30,9 @@ Wike is part of GNOME Circle.
 
 ## Install
 
-You can install *Wike* from Flathub.org
+You can install **Wike** from Flathub.org
 
-<a href='https://flathub.org/apps/details/com.github.hugolabe.Wike'><img width='240' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-i-en.png'/></a>
+<a href='https://flathub.org/apps/details/com.github.hugolabe.Wike'><img width='240' alt='Download on Flathub' src='https://beta.flathub.org/assets/badges/flathub-badge-i-en.png'/></a>
 
 ### Other installation methods
 
@@ -55,7 +57,6 @@ You can install *Wike* from Flathub.org
 
 You can help translate *Wike* on the [POEditor](https://poeditor.com/join/project?hash=kNgJu4MAum) platform.
 
-## License
-
-*Wike* is released under the terms of the [GNU General Public License V3](https://www.gnu.org/licenses/gpl-3.0.html).
-
+<div align="center">
+<sup><b>Wike</b> is released under the terms of the <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License V3</a>.</sup>
+</div>

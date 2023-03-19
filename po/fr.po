@@ -296,7 +296,7 @@ msgstr "Rechercher «%s» dans Wikipedia"
 
 #: ../data/ui/prefs.ui:23
 msgid "Home page"
-msgstr "Page d'acceuil"
+msgstr "Page d'accueil"
 
 #: ../data/ui/prefs.ui:24
 msgid "The page that will be displayed when Wike starts"

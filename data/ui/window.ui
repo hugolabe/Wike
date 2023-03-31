@@ -52,6 +52,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                             <child>
                               <object class="GtkToggleButton" id="flap_pin_button">
                                 <property name="icon-name">view-pin-symbolic</property>
+                                <property name="tooltip-text" translatable="yes">Pin Sidebar</property>
                                 <property name="margin-start">5</property>
                                 <property name="margin-end">5</property>
                                 <property name="margin-top">5</property>

@@ -10,8 +10,8 @@
   <bug-database rdf:resource="https://github.com/hugolabe/Wike/issues"/>
 
   <programming-language>Python</programming-language>
-  <platform>GTK 3</platform>
-  <platform>Libhandy</platform>
+  <platform>GTK 4</platform>
+  <platform>Libadwaita</platform>
 
   <maintainer>
     <foaf:Person>

@@ -1,98 +1,115 @@
-# window.py
-#
-# This file is part of Wike, a Wikipedia Reader for the GNOME Desktop.
-# Copyright 2021 Hugo Olabera <hugolabe@gmail.com>.
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+# This file is part of Wike (com.github.hugolabe.Wike)
+# SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
+# SPDX-License-Identifier: GPL-3.0-or-later
 
+
+import os
 
 import gi
-gi.require_version('Gtk', '3.0')
-gi.require_version('Handy', '1')
-from gi.repository import Gio, GLib, Gdk, Gtk, Handy
+gi.require_version('Gdk', '4.0')
+gi.require_version('Gtk', '4.0')
+gi.require_version('Adw', '1')
+gi.require_version('WebKit', '6.0')
+from gi.repository import GLib, Gio, Gdk, Gtk, Adw, WebKit
 
 from wike.data import settings
-from wike.header import HeaderBar
+from wike.bookmarks import BookmarksBox
+from wike.header import HeaderBar, ActionBar
+from wike.history import HistoryBox
+from wike.langlinks import LanglinksBox
 from wike.page import PageBox
+from wike.toc import TocBox
 
 
-# Application main window
-# Contains a page and a headerbar
+# Main window with a flap a headerbar and an actionbar
 
 @Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/window.ui')
-class Window(Handy.ApplicationWindow):
+class Window(Adw.ApplicationWindow):
 
   __gtype_name__ = 'Window'
 
   window_box = Gtk.Template.Child()
+  toast_overlay = Gtk.Template.Child()
+  flap = Gtk.Template.Child()
+  flap_stack = Gtk.Template.Child()
+  flap_pin_button = Gtk.Template.Child()
+  flap_toc_button = Gtk.Template.Child()
+  flap_langlinks_button = Gtk.Template.Child()
+  flap_bookmarks_button = Gtk.Template.Child()
+  flap_history_button = Gtk.Template.Child()
   tabbar = Gtk.Template.Child()
   tabview = Gtk.Template.Child()
-  notification = Gtk.Template.Child()
-  notification_label = Gtk.Template.Child()
-  notification_close_button = Gtk.Template.Child()
-
+  taboverview = Gtk.Template.Child()
+  
+  mobile_layout = False
+  
   # Initialize window, set actions and connect signals
 
   def __init__(self, app, launch_uri):
-    super().__init__(title='Wike', application=app)
+    super().__init__(application=app)
 
-    # Set default window icon name for XFCE, LXQt, MATE
-    self.set_default_icon_name('com.github.hugolabe.Wike')
-
-    self.set_default_size(settings.get_int('window-width'), settings.get_int('window-height'))
+    width = settings.get_int('window-width')
+    height = settings.get_int('window-height')
+    
+    self.set_default_size(width, height)
     if settings.get_boolean('window-max'):
       self.maximize()
-
+    else:
+      if width < 720:
+        self.mobile_layout = True
+    
     self.page = PageBox(self)
     tabpage = self.tabview.append(self.page)
 
+    self.actionbar = ActionBar()
+    self.window_box.append(self.actionbar)
+    
     self.headerbar = HeaderBar(self)
-    self.window_box.pack_start(self.headerbar, False, True, 0)
+    self.window_box.prepend(self.headerbar)
 
-    actions = [ ('prev_page', self._prev_page_cb, ('<Alt>Left',)),
-                ('next_page', self._next_page_cb, ('<Alt>Right',)),
-                ('new_tab', self._new_tab_cb, ('<Ctrl>N',)),
-                ('close_tab', self._close_tab_cb, ('<Ctrl>W',)),
-                ('next_tab', self._next_tab_cb, ('<Ctrl>Tab',)),
-                ('prev_tab', self._prev_tab_cb, ('<Shift><Ctrl>Tab',)),
-                ('show_search', self._show_search_cb, ('F2', '<Ctrl>K',)),
-                ('show_menu', self._show_menu_cb, ('F10',)),
-                ('show_bookmarks', self._show_bookmarks_cb, ('<Ctrl>B',)),
-                ('add_bookmark', self._add_bookmark_cb, ('<Ctrl>D',)),
-                ('show_langlinks', self._show_langlinks_cb, ('<Ctrl>L',)),
-                ('show_toc', self._show_toc_cb, ('<Ctrl>T',)),
-                ('main_page', self._main_page_cb, ('<Alt>Home',)),
-                ('random_article', self._random_article_cb, ('<Alt>R',)),
-                ('show_historic', self._show_historic_cb, ('<Ctrl>H',)),
-                ('reload_page', self._reload_page_cb, ('F5', '<Ctrl>R',)),
-                ('search_text', self._search_text_cb, ('<Ctrl>F',)),
-                ('open_browser', self._open_browser_cb, None),
-                ('copy_url', self._copy_url_cb, ('<Ctrl>U',)) ]
+    self.toc_box = TocBox(self)
+    toc_stack_page = self.flap_stack.add_named(self.toc_box, 'toc')
+    
+    self.langlinks_box = LanglinksBox(self)
+    langlinks_stack_page = self.flap_stack.add_named(self.langlinks_box, 'langlinks')
+    
+    self.bookmarks_box = BookmarksBox(self)
+    bookmarks_stack_page = self.flap_stack.add_named(self.bookmarks_box, 'bookmarks')
+    
+    self.history_box = HistoryBox(self)
+    history_stack_page = self.flap_stack.add_named(self.history_box, 'history')
 
-    for action, callback, accel in actions:
-      simple_action = Gio.SimpleAction.new(action, None)
-      simple_action.connect('activate', callback)
-      self.add_action(simple_action)
-      if accel:
-        app.set_accels_for_action('win.' + action, accel)
+    self._print_settings = Gtk.PrintSettings()
+
+    if settings.get_string('flap-page') == 'langlinks':
+      self.flap_langlinks_button.set_active(True)
+    elif settings.get_string('flap-page') == 'bookmarks':
+      self.flap_bookmarks_button.set_active(True)
+    elif settings.get_string('flap-page') == 'history':
+      self.flap_history_button.set_active(True)
+    else:
+      self.flap_toc_button.set_active(True)
+
+    settings.bind('flap-pinned', self.flap_pin_button, 'active', Gio.SettingsBindFlags.DEFAULT)
+    settings.bind('flap-page', self.flap_stack, 'visible-child-name', Gio.SettingsBindFlags.DEFAULT)
+    
+    self.connect('notify::default-width', self._layout_changed_cb)
+    self.connect('notify::maximized', self._layout_changed_cb)
+    
+    self._set_actions(app)
+    self._set_layout()
 
     self.handler_selpage = self.tabview.connect('notify::selected-page', self._tabview_selected_page_cb)
     self.tabview.connect('close-page', self._tabview_close_page_cb)
-    self.notification_close_button.connect('clicked', self._hide_notification_cb)
+    self.taboverview.connect('create-tab', self._taboverview_create_tab_cb)
+
+    self.flap_toc_button.connect('toggled', self._flap_switcher_button_cb, 'toc')
+    self.flap_langlinks_button.connect('toggled', self._flap_switcher_button_cb, 'langlinks')
+    self.flap_bookmarks_button.connect('toggled', self._flap_switcher_button_cb, 'bookmarks')
+    self.flap_history_button.connect('toggled', self._flap_switcher_button_cb, 'history')
 
     if launch_uri == 'notfound':
-      self.page.wikiview.load_message(launch_uri, None)
+      self.page.wikiview.load_message(launch_uri)
     else:
       if launch_uri != '':
         self.page.wikiview.load_wiki(launch_uri)
@@ -107,18 +124,92 @@ class Window(Handy.ApplicationWindow):
           else:
             self.page.wikiview.load_main()
 
+  # Set actions for window
+  
+  def _set_actions(self, app):
+    actions = [ ('prev-page', self._prev_page_cb, ('<Alt>Left',)),
+                ('next-page', self._next_page_cb, ('<Alt>Right',)),
+                ('new-tab', self._new_tab_cb, ('<Ctrl>T',)),
+                ('close-tab', self._close_tab_cb, ('<Ctrl>W',)),
+                ('next-tab', self._next_tab_cb, ('<Ctrl>Tab',)),
+                ('prev-tab', self._prev_tab_cb, ('<Shift><Ctrl>Tab',)),
+                ('go-search', self._go_search_cb, ('F2', '<Ctrl>K',)),
+                ('add-bookmark', self._add_bookmark_cb, ('<Ctrl>D',)),
+                ('show-toc', self._show_toc_cb, ('<Ctrl>C',)),
+                ('show-langlinks', self._show_langlinks_cb, ('<Ctrl>L',)),
+                ('show-bookmarks', self._show_bookmarks_cb, ('<Ctrl>B',)),
+                ('show-history', self._show_history_cb, ('<Ctrl>H',)),
+                ('main-page', self._main_page_cb, ('<Alt>Home',)),
+                ('random-article', self._random_article_cb, ('<Alt>R',)),
+                ('reload-page', self._reload_page_cb, ('F5', '<Ctrl>R',)),
+                ('search-text', self._search_text_cb, ('<Ctrl>F',)),
+                ('print-page', self._print_page_cb, ('<Ctrl>P',)),
+                ('open-browser', self._open_browser_cb, None),
+                ('copy-link', self._copy_url_cb, ('<Ctrl>U',)) ]
+
+    for action, callback, accel in actions:
+      simple_action = Gio.SimpleAction.new(action, None)
+      simple_action.connect('activate', callback)
+      self.add_action(simple_action)
+      if accel:
+        app.set_accels_for_action('win.' + action, accel)
+
+    toggle_sidebar_action = Gio.SimpleAction.new_stateful('toggle-sidebar', None, GLib.Variant.new_boolean(False))
+    toggle_sidebar_action.connect('change-state', self._toggle_sidebar_cb)
+    self.add_action(toggle_sidebar_action)
+    app.set_accels_for_action('win.toggle-sidebar', ('F9',))
+
+    pin_sidebar_action = Gio.SimpleAction.new_stateful('pin-sidebar', None, GLib.Variant.new_boolean(False))
+    pin_sidebar_action.connect('change-state', self._pin_sidebar_cb)
+    self.add_action(pin_sidebar_action)
+    
+    self.flap.connect('notify::reveal-flap', self._flap_reveal_cb)
+    
+    if settings.get_boolean('flap-pinned'):
+      pin_sidebar_action.change_state(GLib.Variant.new_boolean(True))
+
+  # If window size changed set layout
+  
+  def _layout_changed_cb(self, window, parameter):
+    size = self.get_default_size()
+    maximized = self.is_maximized()
+
+    if size.width < 720 and not maximized:
+      if self.mobile_layout == False:
+        self.mobile_layout = True
+        self._set_layout()
+    else:
+      if self.mobile_layout == True:
+        self.mobile_layout = False
+        self._set_layout()
+
+  # Set layout for mobile or desktop
+  
+  def _set_layout (self):
+    pin_sidebar_action = self.lookup_action('pin-sidebar')
+
+    if self.mobile_layout:
+      self.headerbar.set_mobile(True)
+      pin_sidebar_action.change_state(GLib.Variant.new_boolean(False))
+      pin_sidebar_action.set_enabled(False)
+    else:
+      self.headerbar.set_mobile(False)
+      pin_sidebar_action.set_enabled(True)
+
   # Create new tab with a page
 
   def new_page(self, uri, parent, select):
     page = PageBox(self)
     tabpage = self.tabview.add_page(page, parent)
     if uri == 'blank' or uri == 'notfound':
-      page.wikiview.load_message(uri, None)
+      page.wikiview.load_message(uri)
     else:
       page.wikiview.load_wiki(uri)
 
     if select:
       self.tabview.set_selected_page(tabpage)
+
+    return tabpage
 
   # New empty tab
 
@@ -160,7 +251,7 @@ class Window(Handy.ApplicationWindow):
       tabpage = self.tabview.get_nth_page(num_pages - 1)
       self.tabview.set_selected_page(tabpage)
 
-  # On tab selected event refresh headerbar controls
+  # On tab selected event refresh headerbar and sidebar
 
   def _tabview_selected_page_cb(self, tabview, value):
     tabpage = tabview.get_selected_page()
@@ -168,20 +259,39 @@ class Window(Handy.ApplicationWindow):
       return
 
     self.page = tabpage.get_child()
-    self.refresh_nav_buttons(self.page.wikiview)
-    self.headerbar.set_title(self.page.wikiview.title)
-    self.headerbar.toc_button.set_sensitive(False)
-    self.headerbar.langlinks_button.set_sensitive(False)
-    self.headerbar.set_toc(self.page.wikiview.sections)
-    self.headerbar.set_langlinks(self.page.wikiview.langlinks)
+    self.refresh_nav_actions(self.page.wikiview)
+    self.refresh_menu_actions(self.page.wikiview.is_local())
+    self.toc_box.populate(self.page.wikiview.title, self.page.wikiview.sections)
+    self.langlinks_box.populate(self.page.wikiview.langlinks)
+    self.bookmarks_box.refresh_buttons()
 
   # On tab closed event destroy wikiview and confirm
 
   def _tabview_close_page_cb(self, tabview, tabpage):
-    page = tabpage.get_child()
-    page.wikiview.destroy()
-    tabview.close_page_finish(tabpage, True)
+    if self.tabview.get_n_pages() > 1:
+      page = tabpage.get_child()
+      wikiview = page.wikiview
+      page.view_stack.remove(wikiview)
+      wikiview.run_dispose()
+      tabview.close_page_finish(tabpage, True)
+    else:
+      if self.taboverview.get_open():
+        self.taboverview.set_open(False)
+      tabview.close_page_finish(tabpage, False)
+
     return True
+
+  # Create new tab on taboverview button clicked
+
+  def _taboverview_create_tab_cb(self, taboverview):
+    tabpage = self.new_page('blank', None, True)
+    return tabpage
+
+  # On flap switcher button toggled change panel view
+
+  def _flap_switcher_button_cb(self, button, name):
+    if button.get_active():
+      self.flap_stack.set_visible_child_name(name)
 
   # Go to previous page
 
@@ -195,49 +305,78 @@ class Window(Handy.ApplicationWindow):
     if self.page.wikiview.can_go_forward():
       self.page.wikiview.go_forward()
 
-  # Show search entry
+  # Go to search entry
 
-  def _show_search_cb(self, action, parameter):
-    self.headerbar.search_button.set_active(not self.headerbar.search_button.get_active())
+  def _go_search_cb(self, action, parameter):
+    self.headerbar.search_box.search_entry.grab_focus()
 
-  # Show main menu
-
-  def _show_menu_cb(self, action, parameter):
-    self.headerbar.menu_button.set_active(not self.headerbar.menu_button.get_active())
-
-  # Show bookmarks popover
-
-  def _show_bookmarks_cb(self, action, parameter):
-    if not self.headerbar.bookmarks_button.get_active():
-      self.headerbar.bookmarks_button.set_active(True)
-
-  # Add current page to bookmarks
+  # Add page to bookmarks
 
   def _add_bookmark_cb(self, action, parameter):
     if not self.page.wikiview.is_local():
       uri = self.page.wikiview.get_base_uri()
       title = self.page.wikiview.title
       lang = self.page.wikiview.get_lang()
-      if self.headerbar.bookmarks_popover.add_bookmark(uri, title, lang):
-        if self.headerbar.bookmarks_popover.is_visible():
-          self.headerbar.bookmarks_popover.bookmarks_list.show_all()
-        else:
-          message = _('New bookmark: ') + title
-          self.show_notification(message)
+      if self.bookmarks_box.add_bookmark(uri, title, lang):
+        message = _('Bookmark added: ') + title
+        self.send_notification(message)
 
-  # Show langlinks popover
+  # Show/hide sidebar (flap)
 
-  def _show_langlinks_cb(self, action, parameter):
-    if self.headerbar.langlinks_button.get_sensitive():
-      if not self.headerbar.langlinks_button.get_active():
-        self.headerbar.langlinks_button.set_active(True)
+  def _toggle_sidebar_cb(self, action, parameter):
+    action.set_state(parameter)
+    
+    if parameter:
+      self.flap.set_reveal_flap(True)
+    else:
+      self.flap.set_reveal_flap(False)
+  
+  # Pin sidebar (flap)
+  
+  def _pin_sidebar_cb(self, action, parameter):
+    action.set_state(parameter)
+    
+    if parameter:
+      self.flap.set_fold_policy(Adw.FlapFoldPolicy.NEVER)
+    else:
+      self.flap.set_fold_policy(Adw.FlapFoldPolicy.ALWAYS)
 
-  # Show toc popover
+  # On flap reveal changed set action state
+  
+  def _flap_reveal_cb(self, flap, parameter):
+    reveal_state = GLib.Variant.new_boolean(flap.get_reveal_flap())
+    toggle_sidebar_action = self.lookup_action('toggle-sidebar')
+    
+    if toggle_sidebar_action.get_state() != reveal_state:
+      toggle_sidebar_action.set_state(reveal_state)
+    
+  # Show toc in sidebar
 
   def _show_toc_cb(self, action, parameter):
-    if self.headerbar.toc_button.get_sensitive():
-      if not self.headerbar.toc_button.get_active():
-        self.headerbar.toc_button.set_active(True)
+    self.flap_toc_button.set_active(True)
+    if self.flap.get_fold_policy() == Adw.FlapFoldPolicy.ALWAYS:
+      self.flap.set_reveal_flap(True)
+
+  # Show langlinks in sidebar
+
+  def _show_langlinks_cb(self, action, parameter):
+    self.flap_langlinks_button.set_active(True)
+    if self.flap.get_fold_policy() == Adw.FlapFoldPolicy.ALWAYS:
+      self.flap.set_reveal_flap(True)
+
+  # Show bookmarks in sidebar
+
+  def _show_bookmarks_cb(self, action, parameter):
+    self.flap_bookmarks_button.set_active(True)
+    if self.flap.get_fold_policy() == Adw.FlapFoldPolicy.ALWAYS:
+      self.flap.set_reveal_flap(True)
+
+  # Show history in sidebar
+
+  def _show_history_cb(self, action, parameter):
+    self.flap_history_button.set_active(True)
+    if self.flap.get_fold_policy() == Adw.FlapFoldPolicy.ALWAYS:
+      self.flap.set_reveal_flap(True)
 
   # Show Wikipedia main page
 
@@ -248,11 +387,6 @@ class Window(Handy.ApplicationWindow):
 
   def _random_article_cb(self, action, parameter):
     self.page.wikiview.load_random()
-
-  # Show historic
-
-  def _show_historic_cb(self, action, parameter):
-    self.page.wikiview.load_historic()
 
   # Reload article view
 
@@ -267,6 +401,45 @@ class Window(Handy.ApplicationWindow):
     else:
       self.page.textsearch_entry.grab_focus()
 
+  # Print current page
+
+  def _print_page_cb(self, action, parameter):
+    print_operation = WebKit.PrintOperation.new(self.page.wikiview)
+    self._print_set_settings(print_operation)
+
+    result = print_operation.run_dialog(self)
+    if result == WebKit.PrintOperationResponse.PRINT:
+      handler_finished = print_operation.connect('finished', self._print_operation_finished)
+      print_operation.connect('failed', self._print_operation_failed, handler_finished)
+
+  # Set print operation settings
+
+  def _print_set_settings(self, print_operation):
+    output_uri = self._print_settings.get('output-uri')
+    if output_uri:
+      output_dir = os.path.dirname(output_uri)
+    else:
+      output_dir = 'file://' + GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_DOWNLOAD)
+
+    output_name = self.page.wikiview.title + '.pdf'
+    output_name = output_name.replace('/', '-')
+
+    output_uri = os.path.join(output_dir, output_name)
+    self._print_settings.set('output-uri', output_uri)
+    print_operation.set_print_settings(self._print_settings)
+
+  # Show a notification when print operation is finished
+
+  def _print_operation_finished(self, print_operation):
+    self._print_settings = print_operation.get_print_settings()
+    self.send_notification(_('Print operation completed'))
+
+  # Show a notification when print operation failed
+
+  def _print_operation_failed(self, print_operation, error, handler_finished):
+    print_operation.disconnect(handler_finished)
+    self.send_notification(_('Print operation failed'))
+
   # Open article in external browser
 
   def _open_browser_cb(self, action, parameter):
@@ -277,16 +450,16 @@ class Window(Handy.ApplicationWindow):
 
   def _copy_url_cb(self, action, parameter):
     uri = self.page.wikiview.get_base_uri()
-    clipboard = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
-    clipboard.set_text(uri, -1)
+    clipboard = Gdk.Display.get_default().get_clipboard()
+    clipboard.set(uri)
+    
+    self.send_notification(_('Link copied to clipboard'))
 
-    self.show_notification(_('Wikipedia URL copied to clipboard'))
+  # Refresh navigation actions state
 
-  # Refresh navigation buttons state
-
-  def refresh_nav_buttons(self, wikiview):
-    prev_page_action = self.lookup_action('prev_page')
-    next_page_action = self.lookup_action('next_page')
+  def refresh_nav_actions(self, wikiview):
+    prev_page_action = self.lookup_action('prev-page')
+    next_page_action = self.lookup_action('next-page')
 
     if wikiview.can_go_back():
       prev_page_action.set_enabled(True)
@@ -297,17 +470,28 @@ class Window(Handy.ApplicationWindow):
     else:
       next_page_action.set_enabled(False)
 
+  # Refresh page actions state
+
+  def refresh_menu_actions(self, is_local):
+    search_text_action = self.lookup_action('search-text')
+    print_page_action = self.lookup_action('print-page')
+    open_browser_action = self.lookup_action('open-browser')
+    copy_url_action = self.lookup_action('copy-link')
+
+    if is_local:
+      search_text_action.set_enabled(False)
+      print_page_action.set_enabled(False)
+      open_browser_action.set_enabled(False)
+      copy_url_action.set_enabled(False)
+    else:
+      search_text_action.set_enabled(True)
+      print_page_action.set_enabled(True)
+      open_browser_action.set_enabled(True)
+      copy_url_action.set_enabled(True)
+
   # Show notification with provided message
 
-  def show_notification(self, message):
-    self.notification_label.set_label(message)
-    self.notification.set_reveal_child(True)
-    GLib.timeout_add_seconds(3, self._hide_notification_cb, None)
-
-  # Hide notification on button clicked or time expired
-
-  def _hide_notification_cb(self, close_button):
-    if self.notification.get_reveal_child():
-      self.notification.set_reveal_child(False)
-    return False
-
+  def send_notification(self, message):
+    toast = Adw.Toast.new(message)
+    toast.set_timeout(3)
+    self.toast_overlay.add_toast(toast)

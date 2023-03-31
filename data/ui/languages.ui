@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  
+<!-- This file is part of Wike (com.github.hugolabe.Wike)
+SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<interface>
+  <template class="LanguagesWindow" parent="AdwWindow">
+    <property name="title" translatable="yes">Pick your Languages</property>
+    <property name="default-height">560</property>
+    <property name="default-width">420</property>
+    <property name="modal">true</property>
+    <property name="content">
+      <object class="GtkBox">
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkHeaderBar">
+            <style>
+              <class name="flat"/>
+            </style>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">vertical</property>
+            <property name="margin-start">12</property>
+            <property name="margin-end">12</property>
+            <property name="margin-bottom">12</property>
+            <property name="spacing">12</property>
+            <child>
+              <object class="GtkSearchEntry" id="languages_entry">
+                <property name="placeholder_text" translatable="yes">Filter languages</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkScrolledWindow">
+                <property name="vexpand">true</property>
+                <property name="has-frame">true</property>
+                <child>
+                  <object class="GtkViewport">
+                    <child>
+                      <object class="GtkListBox" id="languages_list">
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="spacing">12</property>
+                <property name="homogeneous">true</property>
+                <child>
+                  <object class="GtkButton" id="select_all_button">
+                    <property name="label" translatable="yes">Select All</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton" id="select_none_button">
+                    <property name="label" translatable="yes">Select None</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </property>
+  </template>
+</interface>

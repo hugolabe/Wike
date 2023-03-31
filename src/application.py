@@ -1,38 +1,24 @@
-# application.py
-#
-# This file is part of Wike, a Wikipedia Reader for the GNOME Desktop.
-# Copyright 2021 Hugo Olabera <hugolabe@gmail.com>.
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+# This file is part of Wike (com.github.hugolabe.Wike)
+# SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
+# SPDX-License-Identifier: GPL-3.0-or-later
 
 
 import sys
 
 import gi
-gi.require_version('Gtk', '3.0')
-gi.require_version('Handy', '1')
-from gi.repository import Gio, GLib, Gtk, Handy
+gi.require_version('Gdk', '4.0')
+gi.require_version('Gtk', '4.0')
+gi.require_version('Adw', '1')
+from gi.repository import GLib, Gio, Gdk, Gtk, Adw
 
-from wike.data import settings, languages, historic, bookmarks
+from wike.data import settings, languages, history, bookmarks
 from wike.prefs import PrefsWindow
 from wike.window import Window
 
 
-# Main application class
-# Wike Wikipedia Reader
+# Main application class for Wike
 
-class Application(Gtk.Application):
+class Application(Adw.Application):
 
   # Initialize app
 
@@ -42,42 +28,48 @@ class Application(Gtk.Application):
     self._window = None
     self._launch_uri = ''
 
-    self.add_main_option('url', b'u', GLib.OptionFlags.NONE, GLib.OptionArg.STRING, 'Wikipedia URL to open', None)
+    self.add_main_option('url', b'u', GLib.OptionFlags.NONE, GLib.OptionArg.STRING, 'Open Wikipedia URL', None)
 
-  # Initialize libhandy and set actions
+  # Load custom css and set actions
 
   def do_startup(self):
-    Gtk.Application.do_startup(self)
-    Handy.init()
+    Adw.Application.do_startup(self)
 
-    self._style_manager = Handy.StyleManager.get_default()
+    css_widgets = Gtk.CssProvider()
+    css_widgets.load_from_resource('/com/github/hugolabe/Wike/ui/widgets.css')
+    self._css_sepia = Gtk.CssProvider()
+    self._css_sepia.load_from_resource('/com/github/hugolabe/Wike/ui/sepia.css')
+    Gtk.StyleContext.add_provider_for_display(Gdk.Display.get_default(), css_widgets, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
+
+    self._style_manager = Adw.StyleManager.get_default()
     if settings.get_int('theme') == 0:
-      self._style_manager.set_color_scheme(Handy.ColorScheme.FORCE_LIGHT)
+      self._style_manager.set_color_scheme(Adw.ColorScheme.FORCE_LIGHT)
     elif settings.get_int('theme') == 1:
-      self._style_manager.set_color_scheme(Handy.ColorScheme.FORCE_DARK)
+      self._style_manager.set_color_scheme(Adw.ColorScheme.FORCE_DARK)
     elif settings.get_int('theme') == 2:
-      self._style_manager.set_color_scheme(Handy.ColorScheme.FORCE_LIGHT)
+      self._style_manager.set_color_scheme(Adw.ColorScheme.FORCE_LIGHT)
+      Gtk.StyleContext.add_provider_for_display(Gdk.Display.get_default(), self._css_sepia, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
     elif settings.get_int('theme') == 3:
-      self._style_manager.set_color_scheme(Handy.ColorScheme.PREFER_LIGHT)
+      self._style_manager.set_color_scheme(Adw.ColorScheme.PREFER_LIGHT)
 
     action = Gio.SimpleAction.new('prefs', None)
     action.connect('activate', self._prefs_cb)
     self.add_action(action)
     self.set_accels_for_action('app.prefs', ('<Ctrl>comma',))
 
-    action = Gio.SimpleAction.new('theme_system', None)
+    action = Gio.SimpleAction.new('theme-system', None)
     action.connect('activate', self._theme_system)
     self.add_action(action)
 
-    action = Gio.SimpleAction.new('theme_light', None)
+    action = Gio.SimpleAction.new('theme-light', None)
     action.connect('activate', self._theme_light)
     self.add_action(action)
 
-    action = Gio.SimpleAction.new('theme_sepia', None)
+    action = Gio.SimpleAction.new('theme-sepia', None)
     action.connect('activate', self._theme_sepia)
     self.add_action(action)
 
-    action = Gio.SimpleAction.new('theme_dark', None)
+    action = Gio.SimpleAction.new('theme-dark', None)
     action.connect('activate', self._theme_dark)
     self.add_action(action)
 
@@ -100,65 +92,77 @@ class Application(Gtk.Application):
 
     if self._window:
       self._window.new_page(self._launch_uri, None, True)
+      return 0
 
     self.activate()
     return 0
 
-  # Create main window and connect delete event
+  # Create main window and connect close event
 
   def do_activate(self):
     if not self._window:
       self._window = Window(self, self._launch_uri)
-      self._window.connect('delete-event',self._window_delete_cb)
+      self._window.connect('close-request',self._window_close_cb)
 
-      self._window.show_all()
-    else:
       self._window.present()
-
-  # Show Preferences window
-
-  def _prefs_cb(self, action, parameter):
-    prefs_window = PrefsWindow()
-    prefs_window.set_transient_for(self._window)
-    prefs_window.show_all()
 
   # Set theme system
 
   def _theme_system(self, action, parameter):
-    self._style_manager.set_color_scheme(Handy.ColorScheme.PREFER_LIGHT)
+    self._style_manager.set_color_scheme(Adw.ColorScheme.PREFER_LIGHT)
+    Gtk.StyleContext.remove_provider_for_display(Gdk.Display.get_default(), self._css_sepia)
     settings.set_int('theme', 3)
 
   # Set theme light
 
   def _theme_light(self, action, parameter):
-    self._style_manager.set_color_scheme(Handy.ColorScheme.FORCE_LIGHT)
+    self._style_manager.set_color_scheme(Adw.ColorScheme.FORCE_LIGHT)
+    Gtk.StyleContext.remove_provider_for_display(Gdk.Display.get_default(), self._css_sepia)
     settings.set_int('theme', 0)
 
   # Set theme sepia
 
   def _theme_sepia(self, action, parameter):
-    self._style_manager.set_color_scheme(Handy.ColorScheme.FORCE_LIGHT)
+    self._style_manager.set_color_scheme(Adw.ColorScheme.FORCE_LIGHT)
+    Gtk.StyleContext.add_provider_for_display(Gdk.Display.get_default(), self._css_sepia, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
     settings.set_int('theme', 2)
 
   # Set theme dark
 
   def _theme_dark(self, action, parameter):
-    self._style_manager.set_color_scheme(Handy.ColorScheme.FORCE_DARK)
+    self._style_manager.set_color_scheme(Adw.ColorScheme.FORCE_DARK)
+    Gtk.StyleContext.remove_provider_for_display(Gdk.Display.get_default(), self._css_sepia)
     settings.set_int('theme', 1)
 
-  # Show About dialog
+  # Show preferences window
+
+  def _prefs_cb(self, action, parameter):
+    prefs_window = PrefsWindow()
+    prefs_window.set_transient_for(self._window)
+
+    prefs_window.show()
+
+  # Show about window
 
   def _about_cb(self, action, parameter):
     builder = Gtk.Builder()
-    builder.add_from_resource("/com/github/hugolabe/Wike/ui/about.ui")
-    about_dialog = builder.get_object("about_dialog")
-    about_dialog.set_transient_for(self._window)
-    about_dialog.run()
-    about_dialog.destroy()
+    builder.add_from_resource('/com/github/hugolabe/Wike/ui/about.ui')
+    about_window = builder.get_object('about_window')
+    about_window.set_transient_for(self._window)
 
-  # On window delete quit app
+    about_window.add_link(_('Source Code'), 'https://github.com/hugolabe/Wike')
+    about_window.add_link(_('Report an Issue'), 'https://github.com/hugolabe/Wike/issues')
+    about_window.add_link(_('Help Translating'), 'https://poeditor.com/join/project?hash=kNgJu4MAum')
+    about_window.set_developers(['Hugo Olabera <hugolabe@gmail.com>', _('Contributors') + ' https://github.com/hugolabe/Wike/graphs/contributors',])
+    about_window.add_credit_section(_('Flag Icons'), ['HatScripts https://github.com/HatScripts/',])
+    about_window.add_legal_section('Wikipedia', _('All content from Wikipedia.org and available under CC BY-SA 3.0 unless otherwise noted.\n\nWike is an independent development not endorsed by or affiliated with the Wikimedia Foundation.'), Gtk.License.UNKNOWN, None)
+    about_window.add_legal_section('Circle Flags', 'Copyright © 2022 HatScripts', Gtk.License.MIT_X11, None)
 
-  def _window_delete_cb(self, window, event):
+    about_window.show()
+
+  # On window close quit app
+
+  def _window_close_cb(self, window):
     window.tabview.disconnect(window.handler_selpage)
     quit_action = self.lookup_action('quit')
     quit_action.activate()
@@ -170,7 +174,7 @@ class Application(Gtk.Application):
       settings.set_boolean('window-max', True)
     else:
       settings.set_boolean('window-max', False)
-      size = self._window.get_size()
+      size = self._window.get_default_size()
       settings.set_int('window-width', size[0])
       settings.set_int('window-height', size[1])
 
@@ -181,9 +185,9 @@ class Application(Gtk.Application):
 
     settings.sync()
     languages.save()
-    if not settings.get_boolean('keep-historic'):
-      historic.clear()
-    historic.save()
+    if not settings.get_boolean('keep-history'):
+      history.clear()
+    history.save()
     bookmarks.save()
 
     self.quit()
@@ -194,4 +198,3 @@ class Application(Gtk.Application):
 def main(version):
   app = Application()
   return app.run(sys.argv)
-

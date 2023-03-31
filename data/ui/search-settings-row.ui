@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  
+<!-- This file is part of Wike (com.github.hugolabe.Wike)
+SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<interface>
+  <template class="SettingsLangsRow" parent="GtkListBoxRow">
+    <child>
+      <object class="GtkBox">
+        <property name="margin-top">6</property>
+        <property name="margin-bottom">6</property>
+        <property name="margin-start">12</property>
+        <property name="margin-end">18</property>
+        <property name="spacing">9</property>
+        <child>
+          <object class="GtkImage" id="flag_image">
+            <property name="icon-name">noflag</property>
+            <property name="pixel-size">16</property>
+            <property name="valign">center</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="name_label">
+            <property name="halign">start</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkImage" id="check_image">
+            <property name="hexpand">true</property>
+            <property name="halign">start</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="id_label">
+            <property name="halign">end</property>
+            <style>
+              <class name="dim-label"/>
+            </style>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

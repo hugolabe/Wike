@@ -1,0 +1,105 @@
+/* This file is part of Wike (com.github.hugolabe.Wike)
+SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
+SPDX-License-Identifier: GPL-3.0-or-later
+*/
+
+
+/* Theme sitcher */
+
+.theme-button radio {
+  -gtk-icon-source: none;
+  margin: 1px;
+  padding: 6px;
+  min-height: 26px;
+  min-width: 26px;
+  border: solid 1px @light_4;
+  border-radius: 100%;
+  transition: all 200ms ease-out;
+}
+
+.theme-button:checked radio {
+  margin: 0;
+  border-width: 2px;
+  border-color: @accent_bg_color;
+}
+
+.theme-button image {
+  margin: 26px 0 0 -26px;
+  padding: 2px;
+  min-width: 24px;
+  min-height: 24px;
+  color: @accent_fg_color;
+  background-color: @accent_bg_color;
+  border-radius: 100%;
+  opacity: 0;
+  transform: scale(0.75) translate(-1px, -1px);
+  transition: all 200ms ease-out;
+}
+
+.theme-button:checked image {
+  opacity: 1;
+}
+
+.theme-button-system radio {
+  background: linear-gradient(135deg, @light_1 0%, @light_1 49%, @dark_3 51%, @dark_3 100%);
+}
+
+.theme-button-light radio {
+  background-color: @light_1;
+}
+
+.theme-button-sepia radio {
+  background-color: #f4ecd8;
+}
+
+.theme-button-dark radio {
+  background-color: @dark_3;
+}
+
+/* Search settings popover */
+
+.language-list {
+  background-color: transparent;
+}
+
+.language-list > row {
+  border-radius: 6px;
+}
+
+/* Sidebar */
+
+.pin-button {
+  transform: scale(0.8);
+}
+
+.pin-button:checked {
+  color: @accent_fg_color;
+  background-color: @accent_bg_color;
+}
+
+.pin-button:checked:hover {
+  background-color: @accent_color;
+}
+
+.pin-button:checked:active {
+  background-color: @accent_bg_color;
+}
+
+.navigation-sidebar > row {
+  min-height: 28px;
+}
+
+.bookmarks-remove {
+  min-height: 28px;
+  min-width: 28px;
+}
+
+.bookmarks-remove:hover {
+  color: @destructive_fg_color;
+  background-color: @destructive_bg_color;
+}
+
+.bookmarks-remove:active {
+  color: @destructive_fg_color;
+  background-color: @destructive_color;
+}

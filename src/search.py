@@ -1,58 +1,56 @@
-# search.py
-#
-# This file is part of Wike, a Wikipedia Reader for the GNOME Desktop.
-# Copyright 2021 Hugo Olabera <hugolabe@gmail.com>.
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+# This file is part of Wike (com.github.hugolabe.Wike)
+# SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
+# SPDX-License-Identifier: GPL-3.0-or-later
 
 
 from threading import Thread
 
 import gi
-gi.require_version('Gtk', '3.0')
-from gi.repository import Gio, GLib, Gtk
+gi.require_version('Gtk', '4.0')
+from gi.repository import GLib, Gio, Gtk
 
 from wike import wikipedia
 from wike.data import settings, languages
+from wike.languages import LanguagesWindow
 
 
-# Search entry class
-# Manage article searchs in Wikipedia
+# Box with entry for manage searchs in Wikipedia
 
 @Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/search.ui')
-class SearchEntry(Gtk.SearchEntry):
+class SearchBox(Gtk.Box):
 
-  __gtype_name__ = 'SearchEntry'
-
+  __gtype_name__ = 'SearchBox'
+  
+  search_entry = Gtk.Template.Child()
+  lang_label = Gtk.Template.Child()
+  settings_button = Gtk.Template.Child()
+  
   # Create suggestions list and connect search entry events
 
-  def __init__(self, search_button, window):
+  def __init__(self, window):
     super().__init__()
 
     self.window = window
+    self._delegate = self.search_entry.get_delegate()
+
+    self.results_list = None
+    self._results_changed = False
+    lang_id = settings.get_string('search-language')
 
     self.settings_popover = SettingsPopover(self)
     self.suggestions_popover = SuggestionsPopover(self)
-    self.results_list = None
-    self._results_changed = False
+    self.settings_button.set_popover(self.settings_popover)
 
-    lang_id = settings.get_string('search-language')
-    self.set_icon_tooltip_text(Gtk.EntryIconPosition.PRIMARY, languages.wikilangs[lang_id].capitalize())
+    event_controller = Gtk.EventControllerKey()
+    self._delegate.add_controller(event_controller)
+    
+    event_controller.connect('key-pressed', self._search_key_pressed_cb)
+    self._delegate.connect('notify::has-focus', self._search_has_focus_cb)
+    self.search_entry.connect('search-changed', self._search_changed_cb)
+    self.search_entry.connect('stop-search', self._search_stop_cb)
+    self.search_entry.connect('activate', self._search_activate_cb)
 
-    self.connect('show', self._entry_show_cb)
-    self.connect('key-press-event', self._key_press_cb, search_button)
-    self.connect('icon-release',self._icon_release_cb)
+    self.search_entry.set_key_capture_widget(window)
 
   # Search text in Wikipedia and load results list
 
@@ -63,57 +61,29 @@ class SearchEntry(Gtk.SearchEntry):
       self.results_list = None
     self._results_changed = True
 
-  # When entry show add timeout function
-
-  def _entry_show_cb(self, entry):
-    if self.suggestions_popover.is_visible():
-      self.suggestions_popover.hide()
-
-    if settings.get_boolean('search-suggestions'):
-      GLib.timeout_add(250, self._timeout_cb)
-
-  # Timeout function which show search results in popover
-
-  def _timeout_cb(self):
-    if not self.is_visible():
-      return False
-
-    if self._results_changed:
-      if self.results_list != None:
-        self.suggestions_popover.populate(self.results_list)
-        if not self.suggestions_popover.is_visible():
-          self.suggestions_popover.show_all()
-      else:
-        self.suggestions_popover.hide()
-      self._results_changed = False
-    return True
-
-  # Manage ESC and Down keys
-
-  def _key_press_cb(self, entry, event, search_button):
-    if event.keyval == 65364:
+  # When down key pressed set focus to suggestions popover
+  
+  def _search_key_pressed_cb(self, event_controller, keyval, keycode, modifier):
+    if keyval == 65364:
       if self.suggestions_popover.is_visible():
-        self.suggestions_popover.grab_focus()
-      return True
-    elif event.keyval == 65307:
-      if self.suggestions_popover.is_visible():
-        self.suggestions_popover.hide()
-      else:
-        search_button.set_active(False)
+        self.suggestions_popover.set_can_focus(True)
+        
+    return False
+    
+  # When entry is focused add timeout function
 
-  # Show settings popover on icon clicked
-
-  def _icon_release_cb(self, entry, icon_pos, event):
-    if icon_pos == Gtk.EntryIconPosition.PRIMARY:
-      if self.suggestions_popover.is_visible():
-        self.suggestions_popover.hide()
-      self.settings_popover.show_all()
+  def _search_has_focus_cb(self, delegate, parameter):
+    if delegate.has_focus():
+      self.suggestions_popover.set_can_focus(False)
+      if settings.get_boolean('search-suggestions'):
+        GLib.timeout_add(250, self._timeout_cb)
 
   # When text changes run search in new thread
 
-  def do_search_changed(self):
+  def _search_changed_cb(self, search_entry):
+    search_entry.grab_focus()
     if settings.get_boolean('search-suggestions'):
-      text = self.get_text()
+      text = search_entry.get_text()
       if len(text) > 2:
         t = Thread(target=self._search_wikipedia, args=(text, ))
         t.start()
@@ -121,47 +91,84 @@ class SearchEntry(Gtk.SearchEntry):
         self.results_list = None
         self._results_changed = True
 
+  # When search stoped with ESC hide suggestions
+  
+  def _search_stop_cb(self, search_entry):
+    if self.suggestions_popover.is_visible():
+      self.suggestions_popover.hide()
+    else:
+      if len(search_entry.get_text()) > 0:
+        search_entry.delete_text(0, -1)
+      else:
+        self.window.page.wikiview.grab_focus()
+
+  # Timeout function which show search results in popover
+
+  def _timeout_cb(self):
+    if not self._delegate.has_focus():
+      return False
+
+    if self._results_changed:
+      if self.results_list != None:
+        self.suggestions_popover.populate(self.results_list)
+        if not self.suggestions_popover.is_visible():
+          self.suggestions_popover.show()
+      else:
+        self.suggestions_popover.hide()
+      self._results_changed = False
+    return True
+
   # On entry activated search for text in Wikipedia and load result
 
-  def do_activate(self):
-    text = self.get_text()
+  def _search_activate_cb(self, search_entry):
+    text = search_entry.get_text()
+    self.suggestions_popover.hide()
+    search_entry.delete_text(0, -1)
     if text != '':
       try:
         result = wikipedia.search(text.lower(), settings.get_string('search-language'), 1)
       except:
-        self.window.page.wikiview.load_message('notfound', None)
+        self.window.page.wikiview.load_message('notfound')
       else:
         if result != None:
           uri = result[1][0]
           self.window.page.wikiview.load_wiki(uri)
         else:
-          self.window.page.wikiview.load_message('notfound', None)
+          self.window.page.wikiview.load_message('notfound')
+
+  # Close suggestions and empty search entry
+  
+  def reset(self):
+    if self.suggestions_popover.is_visible():
+      self.suggestions_popover.hide()
+    self.search_entry.delete_text(0, -1)
 
 
-# Popover class for search suggestions
-# Show search suggestions when user type in entry
+# Popover for search suggestions
 
-class SuggestionsPopover(Gtk.Popover):
+@Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/suggestions.ui')
+class SuggestionsPopover(Gtk.PopoverMenu):
+
+  __gtype_name__ = 'SuggestionsPopover'
 
   # Create menu and actions for suggestions
 
-  def __init__(self, search_entry):
+  def __init__(self, search_box):
     super().__init__()
-    self.set_relative_to(search_entry)
-    self.set_size_request(360, -1)
-    self.set_modal(False)
 
-    self._window = search_entry.window
+    self._search_box = search_box
+    self._window = search_box.window
 
     self._results_menu = Gio.Menu()
-    self.bind_model(self._results_menu, None)
+    self.set_menu_model(self._results_menu)
+    self.set_parent(search_box.search_entry)
 
     actions = Gio.SimpleActionGroup()
     action = Gio.SimpleAction.new('suggestion', GLib.VariantType('s'))
     action.connect('activate', self._suggestion_activate_cb)
     actions.add_action(action)
     self.insert_action_group('suggestions_popover', actions)
-
+    
   # Populate search results list
 
   def populate(self, results_list):
@@ -171,25 +178,20 @@ class SuggestionsPopover(Gtk.Popover):
       button = Gio.MenuItem.new(item, action_string)
       self._results_menu.append_item(button)
 
-  # Set focus to search entry on ESC key press
-
-  def do_key_press_event(self, event):
-    if event.keyval == 65307:
-      search_entry = self.get_relative_to()
-      search_entry.grab_focus_without_selecting()
-      self.hide()
-
   # On menu activated get uri for selected result and load it
 
   def _suggestion_activate_cb(self, action, parameter):
     index = int(parameter.unpack())
-    search_entry = self.get_relative_to()
-    uri = search_entry.results_list[1][index]
+    uri = self._search_box.results_list[1][index]
     self._window.page.wikiview.load_wiki(uri)
+    
+  # On popover closed set focus to search entry
+  
+  def do_closed(self):
+    self._search_box.search_entry.grab_focus()
 
 
-# Popover class for search settings
-# Select search language and set search suggestions
+# Popover for search settings
 
 @Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/search-settings.ui')
 class SettingsPopover(Gtk.Popover):
@@ -197,24 +199,31 @@ class SettingsPopover(Gtk.Popover):
   __gtype_name__ = 'SettingsPopover'
 
   filter_entry = Gtk.Template.Child()
+  languages_button = Gtk.Template.Child()
   languages_list = Gtk.Template.Child()
+  languages_scroller = Gtk.Template.Child()
+  languages_separator = Gtk.Template.Child()
   suggestions_switch = Gtk.Template.Child()
 
   # Populate search languages list and connect signals and bindings
 
-  def __init__(self, search_entry):
+  def __init__(self, search_box):
     super().__init__()
-    self.set_relative_to(search_entry)
 
-    self._window = search_entry.window
+    self._search_box = search_box
+    self._window = search_box.window
 
     self.languages_list.set_filter_func(self._filter_list)
-    self.languages_list.set_header_func(self._set_row_separator)
     self.populate_list()
 
     settings.bind('search-suggestions', self.suggestions_switch, 'active', Gio.SettingsBindFlags.DEFAULT)
+    settings.connect('changed::show-flags', self._settings_show_flags_changed_cb)
+    
+    self.languages_button.connect('clicked', self._languages_button_clicked_cb)
     self.filter_entry.connect('search-changed', self._filter_entry_changed_cb)
     self.languages_list.connect('row-activated', self._languages_list_activated_cb)
+    self.languages_scroller.get_vadjustment().connect('value-changed', self._languages_scrolled_cb)
+    self.connect('show', self._popover_show_cb)
 
   # Filter languages list for filter entry content
 
@@ -228,63 +237,81 @@ class SettingsPopover(Gtk.Popover):
     else:
       return False
 
-  # Set language row separator
-
-  def _set_row_separator(self, row, before):
-    if before and not row.get_header():
-      separator = Gtk.Separator.new(Gtk.Orientation.HORIZONTAL)
-      row.set_header(separator)
-
   # Populate languages list
 
   def populate_list(self):
-    rows = self.languages_list.get_children()
-    for row in rows:
-      self.languages_list.remove(row)
+    lang_id = settings.get_string('search-language')
+    self._search_box.lang_label.set_label(lang_id)
+    self._search_box.lang_label.set_tooltip_text(languages.wikilangs[lang_id].capitalize())
+
+    while True:
+      row = self.languages_list.get_row_at_index(0)
+      if row:
+        self.languages_list.remove(row)
+      else:
+        break
 
     if len(languages.items) > 0:
       for lang_id in sorted(languages.items):
         lang_name = languages.items[lang_id].capitalize()
         check_mark = (lang_id == settings.get_string('search-language'))
-        row = SearchLangBoxRow(lang_name, lang_id, check_mark)
-        self.languages_list.add(row)
+        row = SettingsLangsRow(lang_name, lang_id, check_mark)
+        self.languages_list.append(row)
 
-  # Change search language on list activated
+  # Settings show flags changed event
 
-  def _languages_list_activated_cb(self, lang_list, row):
-    search_entry = self.get_relative_to()
-    search_entry.set_icon_tooltip_text(Gtk.EntryIconPosition.PRIMARY, languages.wikilangs[row.lang_id].capitalize())
-    settings.set_string('search-language', row.lang_id)
-    self.hide()
-    message = _('Default search language: ') + row.lang_name
-    self._window.show_notification(message)
+  def _settings_show_flags_changed_cb(self, settings, key):
     self.populate_list()
 
-  # Refresh languages list on filter entry changed
+  # On button clicked open languages window
+  
+  def _languages_button_clicked_cb(self, languages_button):
+    self.hide()
+    languages_window = LanguagesWindow()
+    languages_window.set_transient_for(self._window)
+    languages_window.show()
+
+  # On filter entry changed refresh languages list
 
   def _filter_entry_changed_cb(self, filter_entry):
     self.languages_list.invalidate_filter()
 
-  # Unselect items and show popover
+  # On list activated change search language
 
-  def show_all(self):
+  def _languages_list_activated_cb(self, lang_list, row):
+    settings.set_string('search-language', row.lang_id)
+    self.hide()
+    self.populate_list()
+
+  # Show/hide separator on scroll
+
+  def _languages_scrolled_cb(self, adjustment):
+    if adjustment.get_value() > 0:
+      self.languages_separator.set_visible(True)
+    else:
+      self.languages_separator.set_visible(False)
+
+  # On popover show unselect items and hide suggestions
+
+  def _popover_show_cb(self, settings_popover):
     self.languages_list.unselect_all()
-    Gtk.Popover.show_all(self)
+    self._search_box.suggestions_popover.hide()
+    self.languages_scroller.get_vadjustment().set_value(0)
 
 
-# Class for row in search languages list
-# Create row from language name and id
+# Language row in search settings
 
-@Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/search-row.ui')
-class SearchLangBoxRow(Gtk.ListBoxRow):
+@Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/search-settings-row.ui')
+class SettingsLangsRow(Gtk.ListBoxRow):
 
-  __gtype_name__ = 'SearchLangBoxRow'
+  __gtype_name__ = 'SettingsLangsRow'
 
-  label_name = Gtk.Template.Child()
-  label_id = Gtk.Template.Child()
-  image_check = Gtk.Template.Child()
+  name_label = Gtk.Template.Child()
+  id_label = Gtk.Template.Child()
+  flag_image = Gtk.Template.Child()
+  check_image = Gtk.Template.Child()
 
-  # Initialize widgets
+  # Set values and initialize widgets
 
   def __init__(self, lang_name, lang_id, check_mark):
     super().__init__()
@@ -292,8 +319,13 @@ class SearchLangBoxRow(Gtk.ListBoxRow):
     self.lang_name = lang_name
     self.lang_id = lang_id
 
-    self.label_name.set_label(lang_name)
+    self.name_label.set_label(lang_name)
     if check_mark:
-      self.image_check.set_from_icon_name('emblem-ok-symbolic', Gtk.IconSize.BUTTON)
-    self.label_id.set_label(lang_id)
-
+      self.check_image.set_from_icon_name('emblem-ok-symbolic')
+    self.id_label.set_label(lang_id)
+    if settings.get_boolean('show-flags'):
+      gfile = Gio.File.new_for_uri('resource:///com/github/hugolabe/Wike/icons/scalable/emblems/' + lang_id + '.svg')
+      if gfile.query_exists():
+        self.flag_image.set_from_icon_name(lang_id)
+    else:
+      self.flag_image.set_visible(False)

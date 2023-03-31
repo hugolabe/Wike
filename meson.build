@@ -1,5 +1,5 @@
 project('wike',
-  version: '1.8.3',
+  version: '2.0.0',
   license: 'GPL3+',
   meson_version: '>= 0.50.0',
   default_options: [ 'warning_level=2', ],

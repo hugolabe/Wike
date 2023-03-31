@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  
+<!-- This file is part of Wike (com.github.hugolabe.Wike)
+SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<interface>
+  <template class="TocBoxRow" parent="GtkListBoxRow">
+    <child>
+      <object class="GtkLabel" id="section_label">
+        <property name="margin-start">3</property>
+        <property name="margin-end">3</property>
+        <property name="halign">start</property>
+        <property name="use-markup">true</property>
+        <property name="ellipsize">end</property>
+      </object>
+    </child>
+  </template>
+</interface>

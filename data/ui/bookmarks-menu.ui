@@ -9,17 +9,17 @@ SPDX-License-Identifier: GPL-3.0-or-later
   <menu id="bookmarks_menu">
     <section>
       <item>
-        <attribute name="label" translatable="yes">Create New List...</attribute>
+        <attribute name="label" translatable="yes">Create New List…</attribute>
         <attribute name="action">bookmarks.create-list</attribute>
       </item>
     </section>
     <section>
       <item>
-        <attribute name="label" translatable="yes">Rename List...</attribute>
+        <attribute name="label" translatable="yes">Rename List…</attribute>
         <attribute name="action">bookmarks.rename-list</attribute>
       </item>
       <item>
-        <attribute name="label" translatable="yes">Clear List...</attribute>
+        <attribute name="label" translatable="yes">Clear List…</attribute>
         <attribute name="action">bookmarks.clear-list</attribute>
       </item>
     </section>

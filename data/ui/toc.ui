@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of Wike (com.github.hugolabe.Wike)
+SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<interface>
+  <template class="TocBox" parent="GtkBox">
+    <property name="orientation">vertical</property>
+    <child>
+      <object class="GtkLabel" id="title_label">
+        <property name="margin-start">15</property>
+        <property name="margin-end">15</property>
+        <property name="margin-top">12</property>
+        <property name="margin-bottom">9</property>
+        <property name="xalign">0</property>
+        <property name="width-chars">30</property>
+        <property name="max-width-chars">30</property>
+        <property name="ellipsize">end</property>
+        <property name="use-markup">true</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparator" id="toc_separator">
+        <property name="visible">false</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkScrolledWindow" id ="toc_scroller">
+        <child>
+          <object class="GtkViewport">
+            <child>
+              <object class="GtkListBox" id="toc_list">
+                <property name="vexpand">true</property>
+                <property name="selection-mode">none</property>
+                <style>
+                  <class name="navigation-sidebar"/>
+                </style>
+                <child type="placeholder">
+                  <object class="AdwStatusPage">
+                    <property name="title" translatable="yes">No Contents</property>
+                    <property name="description" translatable="yes">There is no table of contents for this page</property>
+                    <property name="icon-name">sidebar-toc-symbolic</property>
+                    <property name="margin-start">50</property>
+                    <property name="margin-end">50</property>
+                    <style>
+                      <class name="compact"/>
+                    </style>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

@@ -7,16 +7,6 @@
       <summary>Default search language</summary>
     </key>
 
-    <key name="last-uri" type="s">
-      <default>""</default>
-      <summary>Last Wikipedia uri loaded</summary>
-    </key>
-
-    <key name="on-start-load" type="i">
-      <default>0</default>
-      <summary>On start load this page (0-Main, 1-Random, 2-Last)</summary>
-    </key>
-
     <key name="search-suggestions" type="b">
       <default>true</default>
       <summary>Show search suggestions</summary>
@@ -27,14 +17,39 @@
       <summary>Allow live search on desktop</summary>
     </key>
 
-    <key name="keep-historic" type="b">
+    <key name="keep-history" type="b">
       <default>true</default>
       <summary>Keep a list of recent articles</summary>
     </key>
 
-    <key name="font-size" type="i">
-      <default>16</default>
-      <summary>Base font size in pixels</summary>
+    <key name="on-start-load" type="i">
+      <default>0</default>
+      <summary>On start load this page (0-Main, 1-Random, 2-Last)</summary>
+    </key>
+
+    <key name="last-uri" type="s">
+      <default>""</default>
+      <summary>Last Wikipedia uri loaded</summary>
+    </key>
+
+    <key name="theme" type="i">
+      <default>3</default>
+      <summary>Choose theme (0-Light, 1-Dark, 2-Sepia, 3-System)</summary>
+    </key>
+
+    <key name="zoom-level" type="i">
+      <default>100</default>
+      <summary>Article view magnification level in percent</summary>
+    </key>
+
+    <key name="show-flags" type="b">
+      <default>true</default>
+      <summary>Show flag icons for languages</summary>
+    </key>
+
+    <key name="preview-popups" type="b">
+      <default>false</default>
+      <summary>Show preview popups in article links</summary>
     </key>
 
     <key name="custom-font" type="b">
@@ -47,9 +62,24 @@
       <summary>Font family for custom font</summary>
     </key>
 
-    <key name="preview-popups" type="b">
+    <key name="font-size" type="i">
+      <default>16</default>
+      <summary>Base font size in pixels</summary>
+    </key>
+
+    <key name="flap-pinned" type="b">
       <default>false</default>
-      <summary>Show preview popups in article links</summary>
+      <summary>Flap sidebar is pinned</summary>
+    </key>
+
+    <key name="flap-page" type="s">
+      <default>"toc"</default>
+      <summary>Last flap sidebar page selected</summary>
+    </key>
+
+    <key name="filter-history" type="i">
+      <default>0</default>
+      <summary>Days to show in history (0-Today, 1-Week, 2-Month, 3-All)</summary>
     </key>
 
     <key name="window-width" type="i">
@@ -65,11 +95,6 @@
     <key name="window-max" type="b">
       <default>false</default>
       <summary>Window is maximized</summary>
-    </key>
-
-    <key name="theme" type="i">
-      <default>3</default>
-      <summary>Choose theme (0-Light, 1-Dark, 2-Sepia, 3-System)</summary>
     </key>
 
   </schema>

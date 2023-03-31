@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of Wike (com.github.hugolabe.Wike)
+SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<interface>
+  <template class="HeaderBar" parent="GtkHeaderBar">
+    <child type="start">
+      <object class="GtkButton" id="prev_button">
+        <property name="icon-name">go-previous-symbolic</property>
+        <property name="action-name">win.prev-page</property>
+      </object>
+    </child>
+    <child type="start">
+      <object class="GtkButton" id="next_button">
+        <property name="icon-name">go-next-symbolic</property>
+        <property name="action-name">win.next-page</property>
+      </object>
+    </child>
+    <child type="start">
+      <object class="GtkButton" id="newtab_button">
+        <property name="icon-name">tab-new-symbolic</property>
+        <property name="tooltip-text" translatable="yes">New Tab</property>
+        <property name="action-name">win.new-tab</property>
+      </object>
+    </child>
+    <child type="start">
+      <object class="AdwTabButton" id="tabs_button">
+        <property name="action-name">overview.open</property>
+      </object>
+    </child>
+    <child type="end">
+      <object class="GtkMenuButton" id="menu_button">
+        <property name="icon-name">open-menu-symbolic</property>
+        <property name="primary">true</property>
+      </object>
+    </child>
+    <child type="end">
+      <object class="GtkMenuButton" id="view_button">
+        <property name="icon-name">view-reveal-symbolic</property>
+        <property name="tooltip-text" translatable="yes">View</property>
+      </object>
+    </child>
+    <child type="end">
+      <object class="GtkToggleButton" id="flap_button">
+        <property name="icon-name">sidebar-show-right-symbolic</property>
+        <property name="tooltip-text" translatable="yes">Sidebar</property>
+        <property name="action-name">win.toggle-sidebar</property>
+      </object>
+    </child>
+  </template>
+</interface>

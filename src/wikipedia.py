@@ -1,20 +1,6 @@
-# wikipedia.py
-#
-# This file is part of Wike, a Wikipedia Reader for the GNOME Desktop.
-# Copyright 2021 Hugo Olabera <hugolabe@gmail.com>.
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+# This file is part of Wike (com.github.hugolabe.Wike)
+# SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
+# SPDX-License-Identifier: GPL-3.0-or-later
 
 
 import requests
@@ -75,7 +61,7 @@ def get_properties(page, lang):
 
 def _request(api, params):
   global _session
-  headers = { 'User-Agent': 'Wike/1.8.3 (https://github.com/hugolabe)' }
+  headers = { 'User-Agent': 'Wike/2.0.0 (https://github.com/hugolabe)' }
 
   if type(params) is dict:
     response = _session.get(url=api, params=params, headers=headers, timeout=(4, 12))
@@ -84,4 +70,3 @@ def _request(api, params):
     response = _session.get(url=uri, params=None, headers=headers, timeout=(4, 12))
 
   return response.json()
-

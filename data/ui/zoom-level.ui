@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of Wike (com.github.hugolabe.Wike)
+SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<interface>
+  <template class="ZoomLevel" parent="GtkBox">
+    <property name="halign">center</property>
+    <property name="spacing">6</property>
+    <child>
+      <object class="GtkButton" id="zoom_out_button">
+        <property name="icon-name">zoom-out-symbolic</property>
+        <style>
+          <class name="flat"/>
+          <class name="circular"/>
+        </style>
+      </object>
+    </child>
+    <child>
+      <object class="GtkButton" id="zoom_value_button">
+        <property name="width-request">100</property>
+        <style>
+          <class name="flat"/>
+        </style>
+      </object>
+    </child>
+    <child>
+      <object class="GtkButton" id="zoom_in_button">
+        <property name="icon-name">zoom-in-symbolic</property>
+        <style>
+          <class name="flat"/>
+          <class name="circular"/>
+        </style>
+      </object>
+    </child>
+  </template>
+</interface>

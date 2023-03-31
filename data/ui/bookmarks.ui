@@ -1,91 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of Wike (com.github.hugolabe.Wike)
+SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
 <interface>
-  <requires lib="gtk+" version="3.24"/>
-  <template class="BookmarksPopover" parent="GtkPopover">
-    <property name="can_focus">False</property>
+  <template class="BookmarksBox" parent="GtkBox">
+    <property name="orientation">vertical</property>
     <child>
       <object class="GtkBox">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
-        <property name="border_width">10</property>
-        <property name="orientation">vertical</property>
-        <property name="spacing">8</property>
+        <property name="margin-start">6</property>
+        <property name="margin-end">6</property>
+        <property name="margin-top">6</property>
+        <property name="margin-bottom">6</property>
+        <property name="spacing">6</property>
         <child>
-          <object class="GtkScrolledWindow">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="shadow_type">in</property>
-            <property name="min_content_width">260</property>
-            <property name="max_content_height">400</property>
-            <property name="hscrollbar-policy">never</property>
-            <property name="propagate_natural_height">True</property>
+          <object class="GtkDropDown" id="booklists_dropdown">
+            <property name="width-request">233</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkButton" id="add_button">
+            <property name="icon-name">bookmark-new-symbolic</property>
+            <property name="tooltip-text" translatable="yes">Add Bookmark</property>
+            <property name="action-name">win.add-bookmark</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkMenuButton" id="menu_button">
+            <property name="icon-name">view-more-symbolic</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparator" id="bookmarks_separator">
+        <property name="visible">false</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkScrolledWindow" id="bookmarks_scroller">
+        <child>
+          <object class="GtkViewport">
             <child>
-              <object class="GtkViewport">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <child>
-                  <object class="GtkListBox" id="bookmarks_list">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <child type="placeholder">
-                      <object class="GtkLabel" id="placeholder_label">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="xpad">10</property>
-                        <property name="ypad">30</property>
-                        <property name="justify">center</property>
-                      </object>
-                    </child>
+              <object class="GtkListBox" id="bookmarks_list">
+                <property name="vexpand">true</property>
+                <property name="selection-mode">none</property>
+                <style>
+                  <class name="navigation-sidebar"/>
+                </style>
+                <child type="placeholder">
+                  <object class="AdwStatusPage">
+                    <property name="title" translatable="yes">No Bookmarks</property>
+                    <property name="description" translatable="yes">Use the Add Bookmark button or press Ctrl+D to add the current article to the list</property>
+                    <property name="icon-name">sidebar-bookmarks-symbolic</property>
+                    <property name="margin-start">50</property>
+                    <property name="margin-end">50</property>
+                    <style>
+                      <class name="compact"/>
+                    </style>
                   </object>
                 </child>
               </object>
             </child>
           </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">0</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkBox">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="spacing">8</property>
-            <property name="homogeneous">True</property>
-            <child>
-              <object class="GtkButton" id="add_button">
-                <property name="label" translatable="yes">Add Bookmark</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">0</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkButton" id="clear_button">
-                <property name="label" translatable="yes">Clear List</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">1</property>
-              </packing>
-            </child>
-          </object>
-          <packing>
-            <property name="expand">False</property>
-            <property name="fill">True</property>
-            <property name="position">1</property>
-          </packing>
         </child>
       </object>
     </child>
   </template>
 </interface>
-

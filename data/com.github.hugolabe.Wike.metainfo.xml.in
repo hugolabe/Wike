@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright (C) 2021 Hugo Olabera <hugolabe@gmail.com> -->
+<!-- Copyright (C) 2021-23 Hugo Olabera <hugolabe@gmail.com> -->
 <component type="desktop-application">
   <id>com.github.hugolabe.Wike</id>
   <metadata_license>CC0-1.0</metadata_license>
@@ -14,20 +14,11 @@
       with a simpler and distraction-free view of articles.
     </p>
     <p>
-      Features:
+      It supports more than 300 languages and integrates with desktop searches,
+      providing suggestions that make it easier to find any content.
+      Other features are: bookmarks with multiple lists, article table of contents,
+      history, text searches and much more ...
     </p>
-    <ul>
-      <li>Open multiple articles in tabs</li>
-      <li>Multiple languages</li>
-      <li>Search suggestions</li>
-      <li>List of recent articles</li>
-      <li>Simple bookmarks management</li>
-      <li>Text search in articles</li>
-      <li>Article table of contents</li>
-      <li>View article in other languages</li>
-      <li>GNOME Shell search integration</li>
-      <li>Light, dark and sepia themes</li>
-    </ul>
   </description>
 
   <launchable type="desktop-id">com.github.hugolabe.Wike.desktop</launchable>
@@ -36,23 +27,43 @@
 
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/hugolabe/wike/master/data/screenshots/wike-01-main.png</image>
+      <image>https://raw.githubusercontent.com/hugolabe/wike/master/data/screenshots/wike-01.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/hugolabe/wike/master/data/screenshots/wike-02-tabs.png</image>
+      <image>https://raw.githubusercontent.com/hugolabe/wike/master/data/screenshots/wike-02.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/hugolabe/wike/master/data/screenshots/wike-03-toc.png</image>
+      <image>https://raw.githubusercontent.com/hugolabe/wike/master/data/screenshots/wike-03.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/hugolabe/wike/master/data/screenshots/wike-04-bookmarks.png</image>
+      <image>https://raw.githubusercontent.com/hugolabe/wike/master/data/screenshots/wike-04.png</image>
     </screenshot>
     <screenshot>
-      <image>https://raw.githubusercontent.com/hugolabe/wike/master/data/screenshots/wike-05-dark.png</image>
+      <image>https://raw.githubusercontent.com/hugolabe/wike/master/data/screenshots/wike-05.png</image>
     </screenshot>
   </screenshots>
 
   <releases>
+    <release version="2.0.0" date="2023-04-10">
+      <description>
+        <p>This version brings a major revamp to the user interface and also introduces some new features. These are the main novelties:</p>
+        <ul>
+          <li>Migration to GTK4 + Libadwaita.</li>
+          <li>The search input is now always visible. It also includes an indication of the selected language and a button that gives access to the search settings.</li>
+          <li>Type to search. Just start typing to find articles.</li>
+          <li>New side panel that provides access to the article table of contents, languages, bookmarks and history. It can be used in floating or pinned mode.</li>
+          <li>Bookmarks with multiple lists.</li>
+          <li>New view menu that allows you to change the theme, zoom, typography and more.</li>
+          <li>Content view now defaults to system font.</li>
+          <li>Responsive design. The user interface now adapts to small screens, like phones.</li>
+          <li>Improved status pages (new tab, article not found...).</li>
+          <li>Use of flag icons to help identify languages. This can be turned off.</li>
+          <li>New printing option. This also allows export articles using the "Print to PDF" option.</li>
+          <li>New app icon.</li>
+          <li>Updated translations.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.8.3" date="2023-03-03">
       <description>
         <ul>
@@ -337,10 +348,14 @@
     </release>
   </releases>
 
+  <custom>
+    <value key="Purism::form_factor">workstation</value>
+    <value key="Purism::form_factor">mobile</value>
+  </custom>
+
   <url type="homepage">https://hugolabe.github.io/Wike/</url>
   <url type="bugtracker">https://github.com/hugolabe/Wike/issues</url>
   <url type="translate">https://poeditor.com/join/project?hash=kNgJu4MAum</url>
   <developer_name>Hugo Olabera</developer_name>
   <update_contact>hugolabe@gmail.com</update_contact>
 </component>
-

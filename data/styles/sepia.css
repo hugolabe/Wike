@@ -1,42 +1,28 @@
-/*
-sepia.css
-
-This file is part of Wike, a Wikipedia Reader for the GNOME Desktop.
-Copyright 2021 Hugo Olabera <hugolabe@gmail.com>.
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
+/* This file is part of Wike (com.github.hugolabe.Wike)
+SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
+SPDX-License-Identifier: GPL-3.0-or-later
 */
 
 
 /* General */
 
 #mw-mf-page-center {
-  background-color: #f9f3e9 !important;
+  background-color: #fdf6e3 !important;
 }
 
 .mw-body {
-  background-color: #f9f3e9 !important;
-  color: #242020 !important;
+  background-color: #fdf6e3 !important;
+  color: #453530 !important;
 }
 
 /* Main content */
 
 .infobox, .infobox_v2, .infobox_v3 {
-  background-color: #fdfaf6 !important;
+  background-color: #fefcf5 !important;
 }
 
 .gallerybox .thumb, .flexquote {
-  background-color: #fdfaf6 !important;
+  background-color: #fefcf5 !important;
 }
 
 .wikitable {
@@ -46,7 +32,6 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 /* Wike local pages */
 
 .wike-body {
-  background: #f9f3e9;
-  color: #242020;
+  background: #fdf6e3;
+  color: #453530;
 }
-

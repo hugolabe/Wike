@@ -2,7 +2,7 @@
 
 # Wike
 
-![](data/screenshots/wike-02-tabs.png)
+![](data/screenshots/wike-01.png)
 
 *Wike* is a Wikipedia reader for the GNOME Desktop.
 Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles.
@@ -10,15 +10,16 @@ Provides access to all the content of this online encyclopedia in a native appli
 ## Features
 
 - Open multiple articles in tabs
-- Multiple languages
+- More than 300 languages
 - Search suggestions
-- List of recent articles
-- Simple bookmarks management
+- Bookmarks management
+- History of recent articles
+- Table of contents
 - Text search in articles
-- Article table of contents
-- View article in other languages
-- GNOME Shell search integration
+- Print articles
 - Light, dark and sepia themes
+- Desktop and mobile layouts
+- GNOME Shell search integration
 
 ## GNOME Circle
 
@@ -27,6 +28,8 @@ Wike is part of GNOME Circle.
 <a href="https://circle.gnome.org"><img width="200" alt="GNOME Circle" src="https://gitlab.gnome.org/Teams/Circle/-/raw/master/assets/button/circle-button-fullcolor.svg"></a>
 
 ## Install
+
+### Official
 
 You can install *Wike* from Flathub.org
 
@@ -58,4 +61,9 @@ You can help translate *Wike* on the [POEditor](https://poeditor.com/join/projec
 ## License
 
 *Wike* is released under the terms of the [GNU General Public License V3](https://www.gnu.org/licenses/gpl-3.0.html).
+
+All content provided by the app comes from [Wikipedia.org](https://www.wikipedia.org/) and is available under [Creative Commons Attribution-ShareAlike License 3.0](https://creativecommons.org/licenses/by-sa/3.0/) unless otherwise noted.
+*Wike* is an independent development not endorsed by or affiliated with the [Wikimedia Foundation](https://wikimediafoundation.org/).
+
+*Wike* uses a subset of [circle-flags](https://github.com/HatScripts/circle-flags) icons, copyright by [HatScripts](https://github.com/HatScripts), and released under the [MIT license](https://opensource.org/license/mit/).
 

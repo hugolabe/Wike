@@ -5,6 +5,9 @@ Icon=com.github.hugolabe.Wike
 Exec=wike
 Terminal=false
 Type=Application
-Categories=Network;GTK;
-Keywords=Wikipedia;Encyclopedia;
 StartupNotify=true
+Categories=Network;GTK;
+# Translators: Do not translate or localize the semicolons
+Keywords=Wikipedia;Encyclopedia;
+# Translators: Do not translate or transliterate this text
+X-Purism-FormFactor=Workstation;Mobile;

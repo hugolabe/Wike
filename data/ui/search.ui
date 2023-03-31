@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of Wike (com.github.hugolabe.Wike)
+SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
 <interface>
-  <requires lib="gtk+" version="3.24"/>
-  <template class="SearchEntry" parent="GtkSearchEntry">
-    <property name="visible">False</property>
-    <property name="can_focus">True</property>
-    <property name="max_width_chars">40</property>
-    <property name="primary_icon_name">emblem-system-symbolic</property>
-    <property name="primary_icon_activatable">True</property>
-    <property name="primary_icon_sensitive">True</property>
+  <template class="SearchBox" parent="GtkBox">
+    <style>
+      <class name="linked"/>
+    </style>
+    <child>
+      <object class="GtkSearchEntry" id="search_entry">
+        <property name="placeholder-text" translatable="yes">Search Wikipedia</property>
+        <child>
+          <object class="GtkLabel" id="lang_label">
+            <property name="sensitive">false</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuButton" id="settings_button">
+        <property name="icon-name">pan-down-symbolic</property>
+        <property name="tooltip-text" translatable="yes">Search Settings</property>
+      </object>
+    </child>
   </template>
 </interface>
-

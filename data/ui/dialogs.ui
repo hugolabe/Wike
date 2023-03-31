@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of Wike (com.github.hugolabe.Wike)
+SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<interface>
+
+  <object class="AdwMessageDialog" id="new_booklist_dialog">
+    <property name="heading" translatable="yes">New Bookmarks List</property>
+    <property name="default-response">create</property>
+    <property name="close-response">cancel</property>
+    <property name="extra-child">
+      <object class="AdwPreferencesGroup">
+        <child>
+          <object class="AdwEntryRow" id="name_entry">
+            <property name="title" translatable="yes">List Name</property>
+            <property name="width-request">340</property>
+            <property name="activates-default">true</property>
+          </object>
+        </child>
+      </object>
+    </property>
+    <responses>
+      <response id="cancel" translatable="yes">Cancel</response>
+      <response id="create" translatable="yes" appearance="suggested" enabled="false">Create List</response>
+    </responses>
+  </object>
+
+  <object class="AdwMessageDialog" id="rename_booklist_dialog">
+    <property name="heading" translatable="yes">Rename Bookmarks List</property>
+    <property name="default-response">rename</property>
+    <property name="close-response">cancel</property>
+    <property name="extra-child">
+      <object class="AdwPreferencesGroup">
+        <child>
+          <object class="AdwEntryRow" id="rename_entry">
+            <property name="title" translatable="yes">List Name</property>
+            <property name="width-request">340</property>
+            <property name="activates-default">true</property>
+          </object>
+        </child>
+      </object>
+    </property>
+    <responses>
+      <response id="cancel" translatable="yes">Cancel</response>
+      <response id="rename" translatable="yes" appearance="suggested" enabled="false">Rename List</response>
+    </responses>
+  </object>
+
+  <object class="AdwMessageDialog" id="clear_booklist_dialog">
+    <property name="heading" translatable="yes">Clear Bookmarks List?</property>
+    <property name="body" translatable="yes">All bookmarks in the list will be removed permanently.</property>
+    <property name="width-request">400</property>
+    <property name="default-response">clear</property>
+    <property name="close-response">cancel</property>
+    <property name="extra-child">
+      <object class="GtkCheckButton" id="delete_booklist_check">
+        <property name="label" translatable="yes">Also delete the list</property>
+      </object>
+    </property>
+    <responses>
+      <response id="cancel" translatable="yes">Cancel</response>
+      <response id="clear" translatable="yes" appearance="destructive">Clear List</response>
+    </responses>
+  </object>
+
+  <object class="AdwMessageDialog" id="clear_history_dialog">
+    <property name="heading" translatable="yes">Clear History?</property>
+    <property name="body" translatable="yes">The history of visited articles will be deleted permanently.</property>
+    <property name="width-request">400</property>
+    <property name="default-response">clear</property>
+    <property name="close-response">cancel</property>
+    <responses>
+      <response id="cancel" translatable="yes">Cancel</response>
+      <response id="clear" translatable="yes" appearance="destructive">Clear History</response>
+    </responses>
+  </object>
+
+  <object class="AdwMessageDialog" id="clear_data_dialog">
+    <property name="heading" translatable="yes">Clear Personal Data?</property>
+    <property name="body" translatable="yes">Cookies and cache data will be deleted permanently.</property>
+    <property name="width-request">400</property>
+    <property name="default-response">clear</property>
+    <property name="close-response">cancel</property>
+    <responses>
+      <response id="cancel" translatable="yes">Cancel</response>
+      <response id="clear" translatable="yes" appearance="destructive">Clear Data</response>
+    </responses>
+  </object>
+
+</interface>

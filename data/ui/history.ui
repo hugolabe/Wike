@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of Wike (com.github.hugolabe.Wike)
+SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<interface>
+  <template class="HistoryBox" parent="GtkBox">
+    <property name="orientation">vertical</property>
+    <child>
+      <object class="GtkBox">
+        <property name="margin-start">6</property>
+        <property name="margin-end">6</property>
+        <property name="margin-top">6</property>
+        <property name="margin-bottom">6</property>
+        <property name="spacing">6</property>
+        <child>
+          <object class="GtkDropDown" id="filter_dropdown">
+            <property name="width-request">273</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkButton" id="clear_button">
+            <property name="icon-name">list-remove-all-symbolic</property>
+            <property name="tooltip-text" translatable="yes">Clear History</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkSeparator" id="history_separator">
+        <property name="visible">false</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkScrolledWindow" id="history_scroller">
+        <child>
+          <object class="GtkViewport">
+            <child>
+              <object class="GtkListBox" id="history_list">
+                <property name="vexpand">true</property>
+                <property name="selection-mode">none</property>
+                <style>
+                  <class name="navigation-sidebar"/>
+                </style>
+                <child type="placeholder">
+                  <object class="AdwStatusPage">
+                    <property name="title" translatable="yes">Empty History</property>
+                    <property name="description" translatable="yes">There are no recent articles in the history</property>
+                    <property name="icon-name">sidebar-history-symbolic</property>
+                    <property name="margin-start">50</property>
+                    <property name="margin-end">50</property>
+                    <style>
+                      <class name="compact"/>
+                    </style>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

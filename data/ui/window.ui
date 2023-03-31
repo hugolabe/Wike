@@ -1,120 +1,140 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of Wike (com.github.hugolabe.Wike)
+SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
 <interface>
-  <requires lib="gtk+" version="3.24"/>
-  <requires lib="libhandy" version="1.0"/>
-  <template class="Window" parent="HdyApplicationWindow">
-    <property name="can_focus">False</property>
-    <child>
-      <object class="GtkBox" id="window_box">
-        <property name="visible">True</property>
-        <property name="can-focus">False</property>
-        <property name="orientation">vertical</property>
-        <child>
-          <object class="GtkOverlay">
-            <property name="visible">True</property>
-            <property name="can_focus">False</property>
+  <template class="Window" parent="AdwApplicationWindow">
+    <property name="title">Wike</property>
+    <property name="icon-name">com.github.hugolabe.Wike</property>
+    <property name="content">
+      <object class="AdwTabOverview" id="taboverview">
+        <property name="view">tabview</property>
+        <property name="enable-new-tab">true</property>
+        <property name="child">
+          <object class="GtkBox" id="window_box">
+            <property name="orientation">vertical</property>
             <child>
-              <object class="GtkBox">
-                <property name="visible">True</property>
-                <property name="can-focus">False</property>
-                <property name="orientation">vertical</property>
+              <object class="AdwToastOverlay" id="toast_overlay">
                 <child>
-                  <object class="HdyTabBar" id="tabbar">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="autohide">True</property>
-                    <property name="expand-tabs">True</property>
-                    <property name="view">tabview</property>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">True</property>
-                    <property name="position">0</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="HdyTabView" id="tabview">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                  </object>
-                  <packing>
-                    <property name="expand">True</property>
-                    <property name="fill">True</property>
-                    <property name="position">1</property>
-                  </packing>
-                </child>
-              </object>
-              <packing>
-                <property name="index">-1</property>
-              </packing>
-            </child>
-            <child type="overlay">
-              <object class="GtkRevealer" id="notification">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="halign">center</property>
-                <property name="valign">start</property>
-                <property name="transition_duration">500</property>
-                <property name="reveal_child">False</property>
-                <child>
-                  <object class="GtkFrame">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="shadow_type">none</property>
-                    <child>
+                  <object class="AdwFlap" id="flap">
+                    <property name="flap-position">end</property>
+                    <property name="reveal-flap">false</property>
+                    <property name="fold-policy">always</property>
+                    <property name="content">
                       <object class="GtkBox">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="spacing">10</property>
+                        <property name="orientation">vertical</property>
                         <child>
-                          <object class="GtkLabel" id="notification_label">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="margin_left">8</property>
+                          <object class="AdwTabBar" id="tabbar">
+                            <property name="view">tabview</property>
                           </object>
-                          <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">0</property>
-                          </packing>
                         </child>
                         <child>
-                          <object class="GtkButton" id="notification_close_button">
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="relief">none</property>
+                          <object class="AdwTabView" id="tabview">
+                          </object>
+                        </child>
+                      </object>
+                    </property>
+                    <property name="separator">
+                      <object class="GtkSeparator">
+                      </object>
+                    </property>
+                    <property name="flap">
+                      <object class="GtkBox">
+                        <property name="orientation">vertical</property>
+                        <style>
+                          <class name="background"/>
+                        </style>
+                        <child>
+                          <object class="GtkBox">
                             <child>
-                              <object class="GtkImage">
-                                <property name="visible">True</property>
-                                <property name="can_focus">False</property>
-                                <property name="icon_name">window-close-symbolic</property>
+                              <object class="GtkToggleButton" id="flap_pin_button">
+                                <property name="icon-name">view-pin-symbolic</property>
+                                <property name="margin-start">5</property>
+                                <property name="margin-end">5</property>
+                                <property name="margin-top">5</property>
+                                <property name="margin-bottom">5</property>
+                                <property name="valign">center</property>
+                                <property name="action-name">win.pin-sidebar</property>
+                                <style>
+                                  <class name="circular"/>
+                                  <class name="pin-button"/>
+                                </style>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkBox">
+                                <property name="margin-start">5</property>
+                                <property name="margin-end">5</property>
+                                <property name="margin-top">5</property>
+                                <property name="margin-bottom">5</property>
+                                <property name="spacing">5</property>
+                                <child>
+                                  <object class="GtkToggleButton" id="flap_toc_button">
+                                    <property name="icon-name">sidebar-toc-symbolic</property>
+                                    <property name="tooltip-text" translatable="yes">Contents</property>
+                                    <property name="width-request">64</property>
+                                    <style>
+                                      <class name="flat"/>
+                                    </style>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkToggleButton" id="flap_langlinks_button">
+                                    <property name="icon-name">sidebar-langlinks-symbolic</property>
+                                    <property name="tooltip-text" translatable="yes">Languages</property>
+                                    <property name="width-request">64</property>
+                                    <property name="group">flap_toc_button</property>
+                                    <style>
+                                      <class name="flat"/>
+                                    </style>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkToggleButton" id="flap_bookmarks_button">
+                                    <property name="icon-name">sidebar-bookmarks-symbolic</property>
+                                    <property name="tooltip-text" translatable="yes">Bookmarks</property>
+                                    <property name="width-request">64</property>
+                                    <property name="group">flap_toc_button</property>
+                                    <style>
+                                      <class name="flat"/>
+                                    </style>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkToggleButton" id="flap_history_button">
+                                    <property name="icon-name">sidebar-history-symbolic</property>
+                                    <property name="tooltip-text" translatable="yes">History</property>
+                                    <property name="width-request">64</property>
+                                    <property name="group">flap_toc_button</property>
+                                    <style>
+                                      <class name="flat"/>
+                                    </style>
+                                  </object>
+                                </child>
                               </object>
                             </child>
                           </object>
-                          <packing>
-                            <property name="expand">False</property>
-                            <property name="fill">True</property>
-                            <property name="position">1</property>
-                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkSeparator">
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkStack" id="flap_stack">
+                          </object>
                         </child>
                       </object>
-                    </child>
-                    <style>
-                      <class name="app-notification"/>
-                    </style>
+                    </property>
                   </object>
                 </child>
               </object>
             </child>
           </object>
-          <packing>
-            <property name="expand">True</property>
-            <property name="fill">True</property>
-            <property name="pack_type">end</property>
-          </packing>
-        </child>
+        </property>
       </object>
-    </child>
+    </property>
   </template>
 </interface>
-

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  
+<!-- This file is part of Wike (com.github.hugolabe.Wike)
+SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<interface>
+  <template class="LanguagesRow" parent="GtkListBoxRow">
+    <child>
+      <object class="GtkBox">
+        <property name="margin_top">2</property>
+        <property name="margin_bottom">2</property>
+        <child>
+          <object class="GtkLabel" id="name_label">
+            <property name="margin-start">12</property>
+            <property name="margin-end">6</property>
+            <property name="halign">start</property>
+            <property name="valign">center</property>
+            <property name="hexpand">true</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="id_label">
+            <property name="margin-start">6</property>
+            <property name="margin-end">6</property>
+            <property name="halign">end</property>
+            <property name="valign">center</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkCheckButton" id="lang_check">
+            <property name="margin-start">12</property>
+            <property name="margin-end">18</property>
+            <property name="halign">end</property>
+            <property name="valign">center</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

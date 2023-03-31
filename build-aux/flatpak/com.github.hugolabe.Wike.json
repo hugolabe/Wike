@@ -1,7 +1,7 @@
 {
   "app-id" : "com.github.hugolabe.Wike",
   "runtime" : "org.gnome.Platform",
-  "runtime-version" : "43",
+  "runtime-version" : "44",
   "sdk" : "org.gnome.Sdk",
   "command" : "wike",
   "finish-args" : [
@@ -11,7 +11,7 @@
     "--socket=wayland",
     "--socket=pulseaudio",
     "--device=dri",
-    "--own-name=com.github.hugolabe.Wike.SearchProvider"
+    "--filesystem=home"
   ],
   "modules" : [
     "python3-dbus-python.json",

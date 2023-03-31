@@ -1,25 +1,160 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/com/github/hugolabe/Wike">
+    
     <file>languages/languages.min.json</file>
+    
     <file>styles/view.min.css</file>
     <file>styles/dark.min.css</file>
     <file>styles/sepia.min.css</file>
+    
     <file>ui/about.ui</file>
+    <file>ui/actionbar.ui</file>
     <file>ui/bookmarks.ui</file>
+    <file>ui/bookmarks-menu.ui</file>
     <file>ui/bookmarks-row.ui</file>
-    <file>ui/header.ui</file>
+    <file>ui/dialogs.ui</file>
+    <file>ui/headerbar.ui</file>
+    <file>ui/history.ui</file>
+    <file>ui/history-row.ui</file>
     <file>ui/langlinks.ui</file>
     <file>ui/langlinks-row.ui</file>
-    <file>ui/menu.ui</file>
-    <file>ui/menu.css</file>
+    <file>ui/languages.ui</file>
+    <file>ui/languages-row.ui</file>
+    <file>ui/menu-main.ui</file>
+    <file>ui/menu-view.ui</file>
     <file>ui/page.ui</file>
     <file>ui/prefs.ui</file>
-    <file>ui/prefs-row.ui</file>
     <file>ui/search.ui</file>
-    <file>ui/search-row.ui</file>
     <file>ui/search-settings.ui</file>
+    <file>ui/search-settings-row.ui</file>
+    <file>ui/sepia.css</file>
     <file alias="gtk/help-overlay.ui">ui/shortcuts.ui</file>
+    <file>ui/suggestions.ui</file>
+    <file>ui/theme-switcher.ui</file>
+    <file>ui/toc.ui</file>
+    <file>ui/toc-row.ui</file>
+    <file>ui/widgets.css</file>
     <file>ui/window.ui</file>
+    <file>ui/zoom-level.ui</file>
+    
+    <file preprocess="xml-stripblanks">icons/scalable/actions/languages-choose-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/sidebar-bookmarks-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/sidebar-history-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/sidebar-langlinks-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/sidebar-toc-symbolic.svg</file>
+
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/af.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/am.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/an.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/ang.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/ar.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/arz.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/as.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/az.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/ba.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/be.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/bg.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/bn.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/bo.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/br.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/bs.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/ca.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/ce.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/ceb.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/ckb.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/cs.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/cv.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/cy.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/da.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/de.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/el.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/en.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/eo.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/es.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/et.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/eu.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/fa.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/fi.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/fo.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/fr.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/fy.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/ga.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/gl.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/gu.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/gv.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/he.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/hi.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/hif.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/hr.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/ht.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/hu.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/hy.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/ia.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/id.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/io.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/is.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/it.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/ja.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/jv.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/ka.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/kk.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/km.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/kn.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/ko.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/ku.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/ky.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/la.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/lb.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/lt.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/lv.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/mg.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/mk.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/ml.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/mn.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/ms.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/my.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/ne.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/nl.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/nn.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/no.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/noflag.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/oc.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/or.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/pl.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/pt.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/qu.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/ro.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/ru.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/scn.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/sco.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/se.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/sh.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/si.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/simple.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/sk.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/sl.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/so.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/sq.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/sr.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/sv.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/sw.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/ta.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/tg.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/th.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/tl.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/tr.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/tt.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/uk.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/ur.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/uz.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/vi.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/vo.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/war.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/yi.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/zh.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/zh-min-nan.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/emblems/zh-yue.svg</file>
+
   </gresource>
 </gresources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of Wike (com.github.hugolabe.Wike)
+SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<interface>
+  <menu id="view_menu">
+    <section>
+      <item>
+        <attribute name="custom">theme_switcher</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="custom">zoom_level</attribute>
+      </item>
+    </section>
+    <section>
+      <attribute name="label" translatable="yes">Show</attribute>
+      <item>
+        <attribute name="label" translatable="yes">Language Flags</attribute>
+        <attribute name="action">view.show-flags</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">Link Previews</attribute>
+        <attribute name="action">view.preview-popups</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>

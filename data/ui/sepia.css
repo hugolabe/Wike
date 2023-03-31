@@ -1,0 +1,17 @@
+/* This file is part of Wike (com.github.hugolabe.Wike)
+SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
+SPDX-License-Identifier: GPL-3.0-or-later
+*/
+
+
+/* Sepia theme */
+
+@define-color headerbar_bg_color #f0ead8;
+@define-color window_bg_color #fdf8e8;
+@define-color view_bg_color #fefdf6;
+@define-color card_bg_color #fefdf6;
+@define-color dialog_bg_color #fdf8e8;
+@define-color popover_bg_color #fdf8e8;
+
+@define-color accent_bg_color @orange_4;
+@define-color accent_color @orange_5;

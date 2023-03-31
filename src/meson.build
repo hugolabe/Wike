@@ -20,7 +20,9 @@ wike_sources = [
   'bookmarks.py',
   'data.py',
   'header.py',
+  'history.py',
   'langlinks.py',
+  'languages.py',
   'menu.py',
   'page.py',
   'prefs.py',
@@ -32,4 +34,3 @@ wike_sources = [
 ]
 
 install_data(wike_sources, install_dir: moduledir)
-

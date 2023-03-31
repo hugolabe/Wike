@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of Wike (com.github.hugolabe.Wike)
+SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
 <interface>
-  <requires lib="gtk+" version="3.24"/>
-  <object class="GtkAboutDialog" id="about_dialog">
-    <property name="program_name">Wike</property>
-    <property name="version">1.8.3</property>
-    <property name="logo_icon_name">com.github.hugolabe.Wike</property>
-    <property name="comments" translatable="yes">Search and read Wikipedia articles
-All content from Wikipedia.org
-and available under CC BY-SA 3.0 unless otherwise noted</property>
+  <object class="AdwAboutWindow" id="about_window">
+    <property name="application-icon">com.github.hugolabe.Wike</property>
+    <property name="application-name">Wike</property>
+    <property name="developer-name">Hugo Olabera</property>
+    <property name="version">2.0.0</property>
+    <property name="comments" translatable="yes">Search and read Wikipedia articles</property>
     <property name="website">https://hugolabe.github.io/Wike/</property>
-    <property name="authors">Hugo Olabera &lt;hugolabe@gmail.com&gt;</property>
-    <property name="translator_credits" translatable="yes">translator-credits</property>
-    <property name="license_type">gpl-3-0</property>
+    <property name="translator-credits" translatable="yes">translator-credits</property>
+    <property name="copyright">Copyright © 2021-23 Hugo Olabera</property>
+    <property name="license-type">GTK_LICENSE_GPL_3_0</property>
   </object>
 </interface>
-

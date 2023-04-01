@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wike\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-27 08:51+0200\n"
+"POT-Creation-Date: 2023-04-01 22:28+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -508,19 +508,23 @@ msgstr ""
 msgid "Use the Add Bookmark button or press Ctrl+D to add the current article to the list"
 msgstr ""
 
-#: ../data/ui/window.ui:77
+#: ../data/ui/window.ui:55
+msgid "Pin Sidebar"
+msgstr ""
+
+#: ../data/ui/window.ui:78
 msgid "Contents"
 msgstr ""
 
-#: ../data/ui/window.ui:87
+#: ../data/ui/window.ui:88
 msgid "Languages"
 msgstr ""
 
-#: ../data/ui/window.ui:98
+#: ../data/ui/window.ui:99
 msgid "Bookmarks"
 msgstr ""
 
-#: ../data/ui/window.ui:109
+#: ../data/ui/window.ui:110
 msgid "History"
 msgstr ""
 
@@ -549,15 +553,15 @@ msgid "About Wike"
 msgstr ""
 
 #: ../data/ui/bookmarks-menu.ui:12
-msgid "Create New List..."
+msgid "Create New List…"
 msgstr ""
 
 #: ../data/ui/bookmarks-menu.ui:18
-msgid "Rename List..."
+msgid "Rename List…"
 msgstr ""
 
 #: ../data/ui/bookmarks-menu.ui:22
-msgid "Clear List..."
+msgid "Clear List…"
 msgstr ""
 
 #: ../data/com.github.hugolabe.Wike.desktop.in:3
@@ -574,5 +578,5 @@ msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all 
 msgstr ""
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
-msgid "It supports more than 300 languages and integrates with desktop searches, providing suggestions that make it easier to find any content. Other features are: bookmarks with multiple lists, article table of contents, history, text searches and much more ..."
+msgid "It supports more than 300 languages and integrates with desktop searches, providing suggestions that make it easier to find any content. Other features are: bookmarks with multiple lists, article table of contents, history, text searches and much more…"
 msgstr ""

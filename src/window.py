@@ -5,7 +5,7 @@
 
 import os
 
-from gi.repository import GLib, Gio, Gdk, Gtk, Adw, WebKit
+from gi.repository import GLib, GObject, Gio, Gdk, Gtk, Adw, WebKit
 
 from wike.data import settings
 from wike.bookmarks import BookmarksBox
@@ -27,6 +27,7 @@ class Window(Adw.ApplicationWindow):
   toast_overlay = Gtk.Template.Child()
   flap = Gtk.Template.Child()
   flap_stack = Gtk.Template.Child()
+  flap_pin_button_revealer = Gtk.Template.Child()
   flap_pin_button = Gtk.Template.Child()
   flap_toc_button = Gtk.Template.Child()
   flap_langlinks_button = Gtk.Template.Child()
@@ -90,6 +91,8 @@ class Window(Adw.ApplicationWindow):
 
     self._set_actions(app)
     self._set_layout()
+
+    self.lookup_action('pin-sidebar').bind_property('enabled', self.flap_pin_button_revealer, 'reveal-child',  GObject.BindingFlags.SYNC_CREATE)
 
     self.handler_selpage = self.tabview.connect('notify::selected-page', self._tabview_selected_page_cb)
     self.tabview.connect('close-page', self._tabview_close_page_cb)

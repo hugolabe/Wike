@@ -181,11 +181,12 @@ class Window(Adw.ApplicationWindow):
 
     if self.mobile_layout:
       self.headerbar.set_mobile(True)
-      pin_sidebar_action.change_state(GLib.Variant.new_boolean(False))
       pin_sidebar_action.set_enabled(False)
     else:
       self.headerbar.set_mobile(False)
       pin_sidebar_action.set_enabled(True)
+
+    self._update_sidebar_pinned()
 
   # Create new tab with a page
 
@@ -326,8 +327,12 @@ class Window(Adw.ApplicationWindow):
   
   def _pin_sidebar_cb(self, action, parameter):
     action.set_state(parameter)
+    self._update_sidebar_pinned()
     
-    if parameter:
+  def _update_sidebar_pinned(self):
+    pin_sidebar_action = self.lookup_action('pin-sidebar')
+    prefer_pinned = pin_sidebar_action.get_state().get_boolean()
+    if prefer_pinned and not self.mobile_layout:
       self.flap.set_fold_policy(Adw.FlapFoldPolicy.NEVER)
     else:
       self.flap.set_fold_policy(Adw.FlapFoldPolicy.ALWAYS)

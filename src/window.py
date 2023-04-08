@@ -10,7 +10,7 @@ gi.require_version('Gdk', '4.0')
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 gi.require_version('WebKit', '6.0')
-from gi.repository import GLib, Gio, Gdk, Gtk, Adw, WebKit
+from gi.repository import GLib, GObject, Gio, Gdk, Gtk, Adw, WebKit
 
 from wike.data import settings
 from wike.bookmarks import BookmarksBox
@@ -98,6 +98,8 @@ class Window(Adw.ApplicationWindow):
     
     self._set_actions(app)
     self._set_layout()
+
+    self.lookup_action('pin-sidebar').bind_property('enabled', self.flap_pin_button, 'visible',  GObject.BindingFlags.SYNC_CREATE)
 
     self.handler_selpage = self.tabview.connect('notify::selected-page', self._tabview_selected_page_cb)
     self.tabview.connect('close-page', self._tabview_close_page_cb)

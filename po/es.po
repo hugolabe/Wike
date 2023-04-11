@@ -125,7 +125,7 @@ msgstr "Comportamiento"
 msgid "Keep a List of Recent Articles"
 msgstr "Mantener una lista de artículos recientes"
 
-#: ../data/ui/window.ui:87
+#: ../data/ui/window.ui:88
 msgid "Languages"
 msgstr "Idiomas"
 
@@ -218,7 +218,7 @@ msgstr "Artículo aleatorio"
 msgid "Last article"
 msgstr "Último artículo"
 
-#: ../data/ui/window.ui:98
+#: ../data/ui/window.ui:99
 msgid "Bookmarks"
 msgstr "Marcadores"
 
@@ -543,11 +543,11 @@ msgstr "Sin marcadores"
 msgid "Use the Add Bookmark button or press Ctrl+D to add the current article to the list"
 msgstr "Utilice el botón Añadir Marcador o presione Ctrl+D para agregar el artículo actual a la lista"
 
-#: ../data/ui/window.ui:77
+#: ../data/ui/window.ui:78
 msgid "Contents"
 msgstr "Índice"
 
-#: ../data/ui/window.ui:109
+#: ../data/ui/window.ui:110
 msgid "History"
 msgstr "Historial"
 
@@ -564,18 +564,22 @@ msgid "Open in Browser"
 msgstr "Abrir en el navegador"
 
 #: ../data/ui/bookmarks-menu.ui:12
-msgid "Create New List..."
-msgstr "Crear nueva lista..."
+msgid "Create New List…"
+msgstr "Crear nueva lista…"
 
 #: ../data/ui/bookmarks-menu.ui:18
-msgid "Rename List..."
-msgstr "Renombrar lista..."
+msgid "Rename List…"
+msgstr "Renombrar lista…"
 
 #: ../data/ui/bookmarks-menu.ui:22
-msgid "Clear List..."
-msgstr "Vaciar lista..."
+msgid "Clear List…"
+msgstr "Vaciar lista…"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
-msgid "It supports more than 300 languages and integrates with desktop searches, providing suggestions that make it easier to find any content. Other features are: bookmarks with multiple lists, article table of contents, history, text searches and much more ..."
-msgstr "Soporta más de 300 idiomas y se integra con las búsquedas del escritorio, proporcionando sugerencias que facilitan la búsqueda de cualquier contenido. Otras características son: marcadores con múltiples listas, índice de artículos, historial, búsquedas de texto y mucho más..."
+msgid "It supports more than 300 languages and integrates with desktop searches, providing suggestions that make it easier to find any content. Other features are: bookmarks with multiple lists, article table of contents, history, text searches and much more…"
+msgstr "Soporta más de 300 idiomas y se integra con las búsquedas del escritorio, proporcionando sugerencias que facilitan la búsqueda de cualquier contenido. Otras características son: marcadores con múltiples listas, índice de artículos, historial, búsquedas de texto y mucho más…"
+
+#: ../data/ui/window.ui:55
+msgid "Pin Sidebar"
+msgstr "Fijar panel"
 

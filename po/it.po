@@ -7,212 +7,128 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: it\n"
 
-#: ../src/view.py:227 ../src/view.py:315
+#: ../src/view.py:252
 msgid "Article not found"
 msgstr "Articolo non trovato"
 
-#: ../src/view.py:228
+#: ../src/page.py:103
 msgid "Can't find any results for requested query"
 msgstr "Impossibile trovare risultati per la domanda richiesta"
 
-#: ../src/view.py:231 ../src/view.py:317
+#: ../src/view.py:254
 msgid "Can't access Wikipedia"
 msgstr "Impossibile accedere a Wikipedia"
 
-#: ../src/view.py:232
+#: ../src/page.py:111
 msgid "Check your Internet connection and try again"
 msgstr "Controlla la tua connessione Internet e riprova"
 
-#: ../src/window.py:225 ../src/page.py:120
-msgid "New bookmark: "
-msgstr "Nuovo segnalibro: "
-
-#: ../src/window.py:283
-msgid "Wikipedia URL copied to clipboard"
-msgstr "URL di Wikipedia copiato negli appunti"
-
-#: ../src/search.py:259
-msgid "Default search language: "
-msgstr "Lingua di ricerca predefinita: "
-
-#: ../src/bookmarks.py:138
+#: ../data/ui/dialogs.ui:53
 msgid "Clear Bookmarks List?"
 msgstr "Cancellare l'elenco dei segnalibri?"
 
-#: ../src/bookmarks.py:140
+#: ../data/ui/dialogs.ui:54
 msgid "All bookmarks in the list will be removed permanently."
 msgstr "Tutti i segnalibri nell'elenco verranno rimossi definitivamente."
 
-#: ../src/bookmarks.py:141 ../data/ui/bookmarks.ui:70
+#: ../data/ui/dialogs.ui:65
 msgid "Clear List"
 msgstr "Cancella elenco"
 
-#: ../data/ui/search-settings.ui:61
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:22
-msgid "Search suggestions"
+#: ../data/ui/search-settings.ui:69
+msgid "Search Suggestions"
 msgstr "Suggerimenti di ricerca"
-
-#: ../data/ui/about.ui:8
-msgid "Search and read Wikipedia articles\n"
-"All content from Wikipedia.org\n"
-"and available under CC BY-SA 3.0 unless otherwise noted"
-msgstr "Cerca e leggi articoli di Wikipedia\n"
-"Tutto il contenuto da Wikipedia.org\n"
-"è disponibile sotto CC BY-SA 3.0 se non diversamente specificato"
 
 #. Add your name like this:
 #. 
 #. Hugo Olabera <hugolabe@gmail.com>
-#: ../data/ui/about.ui:13
+#: ../data/ui/about.ui:16
 msgid "translator-credits"
 msgstr "Albano Battistella\n"
 "Michael Moroni <michaelmoroni@disroot.org>"
 
-#: ../src/view.py:422 ../data/ui/bookmarks.ui:58
+#: ../src/view.py:364 ../data/ui/bookmarks.ui:26
 msgid "Add Bookmark"
 msgstr "Aggiungi segnalibro"
 
-#: ../data/ui/shortcuts.ui:13
+#: ../data/ui/shortcuts.ui:16
 msgctxt "shortcut window"
 msgid "General"
 msgstr "Generale"
 
-#: ../data/ui/shortcuts.ui:24
+#: ../data/ui/shortcuts.ui:31
 msgctxt "shortcut window"
 msgid "Table of contents"
 msgstr "Indice dei contenuti"
 
-#: ../data/ui/shortcuts.ui:31
-msgctxt "shortcut window"
-msgid "View article in other languages"
-msgstr "Visualizza l'articolo in altre lingue"
-
-#: ../data/ui/shortcuts.ui:38
-msgctxt "shortcut window"
-msgid "Search text in page"
-msgstr "Cerca testo nella pagina"
-
-#: ../data/ui/shortcuts.ui:45
+#: ../data/ui/shortcuts.ui:61
 msgctxt "shortcut window"
 msgid "Preferences"
 msgstr "Preferenze"
 
-#: ../data/ui/shortcuts.ui:52
-msgctxt "shortcut window"
-msgid "Copy Wikipedia URL"
-msgstr "Copia l'URL di Wikipedia"
-
-#: ../data/ui/shortcuts.ui:59
+#: ../data/ui/shortcuts.ui:73
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Esci"
 
-#: ../data/ui/shortcuts.ui:66
+#: ../data/ui/shortcuts.ui:67
 msgctxt "shortcut window"
 msgid "Keyboard shortcuts"
 msgstr "Scorciatoie da tastiera"
 
-#: ../data/ui/shortcuts.ui:129
+#: ../data/ui/shortcuts.ui:127
 msgctxt "shortcut window"
 msgid "Navigation"
 msgstr "Navigazione"
 
-#: ../data/ui/shortcuts.ui:133
+#: ../data/ui/shortcuts.ui:130
 msgctxt "shortcut window"
 msgid "Search articles"
 msgstr "Cerca articolo"
 
-#: ../data/ui/shortcuts.ui:140
-msgctxt "shortcut window"
-msgid "Wikipedia main page"
-msgstr "Pagina principale di Wikipedia"
-
 #: ../data/ui/shortcuts.ui:154
-msgctxt "shortcut window"
-msgid "Show recent articles"
-msgstr "Mostra articoli recenti"
-
-#: ../data/ui/shortcuts.ui:161
 msgctxt "shortcut window"
 msgid "Previous page"
 msgstr "Pagina precedente"
 
-#: ../data/ui/shortcuts.ui:168
+#: ../data/ui/shortcuts.ui:160
 msgctxt "shortcut window"
 msgid "Next page"
 msgstr "Pagina successiva"
 
-#: ../data/ui/shortcuts.ui:175
-msgctxt "shortcut window"
-msgid "Reload page"
-msgstr "Ricarica la pagina"
-
-#: ../data/ui/shortcuts.ui:75
+#: ../data/ui/shortcuts.ui:81 ../data/ui/shortcuts.ui:84
 msgctxt "shortcut window"
 msgid "Bookmarks"
 msgstr "Segnalibri"
 
-#: ../data/ui/shortcuts.ui:79
-msgctxt "shortcut window"
-msgid "Show bookmarks"
-msgstr "Mostra segnalibri"
-
-#: ../data/ui/shortcuts.ui:86
+#: ../data/ui/shortcuts.ui:90
 msgctxt "shortcut window"
 msgid "Add bookmark"
 msgstr "Aggiungi segnalibro"
 
-#: ../src/prefs.py:80 ../data/ui/menu.ui:123
-msgid "Wikipedia Main Page"
-msgstr "Pagina principale di Wikipedia"
-
-#: ../src/view.py:313 ../data/ui/menu.ui:149
-msgid "Recent Articles"
-msgstr "Articoli recenti"
-
-#: ../data/ui/menu.ui:173
-msgid "Search Text in Page"
-msgstr "Cerca testo nella pagina"
-
-#: ../data/ui/menu.ui:186
-msgid "Open Wikipedia Page in Browser"
-msgstr "Apri la pagina Wikipedia nel browser"
-
-#: ../data/ui/menu.ui:199
-msgid "Copy Wikipedia URL to Clipboard"
-msgstr "Copia l'URL di Wikipedia negli appunti"
-
-#: ../data/ui/menu.ui:223
+#: ../data/ui/menu-main.ui:45
 msgid "Preferences"
 msgstr "Preferenze"
 
-#: ../data/ui/menu.ui:236
+#: ../data/ui/menu-main.ui:49
 msgid "Keyboard Shortcuts"
 msgstr "Scorciatoie da tastiera"
 
-#: ../data/ui/menu.ui:249
+#: ../data/ui/menu-main.ui:53
 msgid "About Wike"
 msgstr "A proposito di Wike"
 
-#: ../data/ui/prefs.ui:20
+#: ../data/ui/prefs.ui:18
 msgid "Behavior"
 msgstr "Comportamento"
 
-#: ../data/ui/prefs.ui:126
-msgid "Keep a list of recent articles"
+#: ../data/ui/prefs.ui:58
+msgid "Keep a List of Recent Articles"
 msgstr "Tieni un elenco degli articoli recenti"
 
-#: ../data/ui/prefs.ui:14
-msgid "General"
-msgstr "Generale"
-
-#: ../data/ui/prefs.ui:169
+#: ../data/ui/window.ui:88
 msgid "Languages"
 msgstr "Lingue"
-
-#: ../src/page.py:82 ../src/page.py:85
-msgid "Loading Article"
-msgstr "Carica articolo"
 
 #. Don't translate app name!
 #: ../data/com.github.hugolabe.Wike.desktop.in:3
@@ -220,13 +136,13 @@ msgstr "Carica articolo"
 msgid "Wike"
 msgstr "Wike"
 
-#: ../src/view.py:223 ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../data/ui/about.ui:14 ../data/com.github.hugolabe.Wike.desktop.in:4
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
 msgid "Search and read Wikipedia articles"
 msgstr "Cerca e leggi articoli di Wikipedia"
 
 #. Don't remove semicolons!
-#: ../data/com.github.hugolabe.Wike.desktop.in:10
+#: ../data/com.github.hugolabe.Wike.desktop.in:12
 msgid "Wikipedia;Encyclopedia;"
 msgstr "Wikipedia; Enciclopedia;"
 
@@ -234,207 +150,103 @@ msgstr "Wikipedia; Enciclopedia;"
 msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
 msgstr "Wike è un lettore di Wikipedia per GNOME. Fornisce accesso a tutto il contenuto di questa enciclopedia online in un'applicazione nativa, con una visualizzazione degli articoli più semplice e priva di distrazioni."
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:21
-msgid "Multiple languages"
-msgstr "Multilingue"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:23
-msgid "List of recent articles"
-msgstr "Elenco degli articoli recenti"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:24
-msgid "Simple bookmarks management"
-msgstr "Semplice gestione dei segnalibri"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:25
-msgid "Text search in articles"
-msgstr "Ricerca testuale negli articoli"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
-msgid "Article table of contents"
-msgstr "Indice dei contenuti dell'articolo"
-
-#: ../data/ui/header.ui:154 ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
-msgid "View article in other languages"
-msgstr "Visualizza l'articolo in altre lingue"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
-msgid "Features:"
-msgstr "Caratteristiche:"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
-msgid "GNOME Shell search integration"
-msgstr "Integrazione della ricerca in GNOME Shell"
-
-#: ../src/prefs.py:148
-msgid "Clear Historic?"
-msgstr "Rimuovi la cronologia?"
-
-#: ../src/prefs.py:150
+#: ../data/ui/dialogs.ui:71
 msgid "The history of visited articles will be deleted permanently."
 msgstr "La cronologia degli articoli visitati sarà permanentemente cancellata."
 
-#: ../src/prefs.py:151
-msgid "Clear Historic"
-msgstr "Rimuovi cronologia"
-
-#: ../src/prefs.py:168
+#: ../data/ui/dialogs.ui:82
 msgid "Clear Personal Data?"
 msgstr "Rimuovi dati personali?"
 
-#: ../src/prefs.py:170
+#: ../data/ui/dialogs.ui:83
 msgid "Cookies and cache data will be deleted permanently."
 msgstr "I dati dei cookie e cache saranno permanentemente cancellati."
 
-#: ../src/prefs.py:171
+#: ../data/ui/dialogs.ui:89
 msgid "Clear Data"
 msgstr "Rimuovi dati"
 
 #. Don't remove %s tag!
-#: ../src/wike-sp.in:84
+#: ../src/wike-sp.in:69
 msgid "Search “%s” on Wikipedia"
 msgstr "Cerca «%s» su Wikipedia"
 
-#: ../data/ui/prefs.ui:23
-msgid "Home page"
+#: ../data/ui/prefs.ui:21
+msgid "Home Page"
 msgstr "Pagina principale"
 
-#: ../data/ui/prefs.ui:24
+#: ../data/ui/prefs.ui:22
 msgid "The page that will be displayed when Wike starts"
 msgstr "La pagina che viene mostrata quando Wike viene avviato"
 
-#: ../data/ui/prefs.ui:34
-msgid "Article View"
-msgstr "Visualizzazione dell'articolo"
-
-#: ../data/ui/prefs.ui:37
-msgid "Font size"
-msgstr "Dimensione del font"
-
 #: ../data/ui/prefs.ui:38
-msgid "Font size for article view (default is 16)"
-msgstr "Dimensione del font per la visualizzazione dell'articolo (il valore predefinito è 16)"
-
-#: ../data/ui/prefs.ui:55
-msgid "Use custom font"
-msgstr "Usa un font personalizzato"
-
-#: ../data/ui/prefs.ui:56
-msgid "Choose a font for the article view"
-msgstr "Scegli un font per la visualizzazione dell'articolo"
-
-#: ../data/ui/prefs.ui:69
-msgid "Preview popups in article links"
-msgstr "Popup di anteprima sui link degli articoli"
-
-#: ../data/ui/prefs.ui:70
-msgid "Show a preview of the article when hovering over a link"
-msgstr "Mostra un'anteprima dell'articolo quando il mouse si trova sopra un link"
-
-#: ../data/ui/prefs.ui:89
 msgid "Privacy"
 msgstr "Privacy"
 
-#: ../data/ui/prefs.ui:95
-msgid "Search"
-msgstr "Ricerca"
-
-#: ../data/ui/prefs.ui:98
-msgid "Allow live search on desktop"
+#: ../data/ui/prefs.ui:41
+msgid "Allow Live Search on Desktop"
 msgstr "Permetti ricerca live sul desktop"
 
-#: ../data/ui/prefs.ui:99
+#: ../data/ui/prefs.ui:42
 msgid "Warning: all desktop searches will be sent to Wikipedia"
 msgstr "Attenzione: tutte le ricerche fatte da desktop saranno inviate a Wikipedia"
 
-#: ../data/ui/prefs.ui:123
-msgid "Personal Data"
-msgstr "Dati personali"
-
-#: ../data/ui/prefs.ui:127
+#: ../data/ui/prefs.ui:59
 msgid "Wike will remember the history of visited articles"
 msgstr "Wike si ricorderà della cronologia degli articoli visitati"
 
-#: ../data/ui/prefs.ui:139 ../data/ui/prefs.ui:154
+#: ../data/ui/prefs.ui:68 ../data/ui/prefs.ui:80
 msgid "Clear"
 msgstr "Pulisci"
 
-#: ../data/ui/prefs.ui:149
-msgid "Clear personal data"
+#: ../data/ui/prefs.ui:76
+msgid "Clear Personal Data"
 msgstr "Rimuovi dati personali"
 
-#: ../data/ui/prefs.ui:150
+#: ../data/ui/prefs.ui:77
 msgid "Cookies and cache data will be deleted"
 msgstr "Dati sui cookie e cache saranno rimossi"
 
-#: ../src/view.py:235
+#: ../data/ui/page.ui:87
 msgid "Try Again"
 msgstr "Prova di nuovo"
 
-#: ../src/prefs.py:80 ../data/ui/menu.ui:136
+#: ../data/ui/page.ui:78 ../data/ui/menu-main.ui:29
 msgid "Random Article"
 msgstr "Articolo casuale"
 
-#: ../src/prefs.py:80
-msgid "Last Article"
+#: ../data/ui/prefs.ui:28
+msgid "Last article"
 msgstr "Ultimo articolo"
 
-#: ../data/ui/header.ui:79
-msgid "Search articles"
-msgstr "Cerca articolo"
-
-#: ../data/ui/header.ui:113
+#: ../data/ui/window.ui:99
 msgid "Bookmarks"
 msgstr "Segnalibri"
 
-#: ../data/ui/header.ui:135
-msgid "Table of contents"
-msgstr "Indice dei contenuti"
-
-#: ../data/ui/prefs.ui:175
-msgid "Filter Available Languages"
-msgstr "Filtra le lingue disponibili"
-
-#: ../data/ui/prefs.ui:209
+#: ../data/ui/languages.ui:56
 msgid "Select All"
 msgstr "Seleziona tutto"
 
-#: ../data/ui/prefs.ui:221
+#: ../data/ui/languages.ui:61
 msgid "Select None"
 msgstr "Non selezionare niente"
 
-#: ../data/ui/shortcuts.ui:17
+#: ../data/ui/shortcuts.ui:19
 msgctxt "shortcut window"
 msgid "Main menu"
 msgstr "Menù principale"
 
-#: ../src/view.py:224
-msgid "Click the search button or press F2 to search articles in Wikipedia. You can also use the main menu to open Wikipedia main page, the list of recent articles or get a random article."
-msgstr "Clicca sul bottone di ricerca o premi F2 per cercare articoli su Wikipedia. Puoi anche usare il menù principale per aprire la pagina principale di Wikipedia, la lista degli articoli recenti o leggere un articolo casuale."
-
-#: ../src/bookmarks.py:47
-msgid "<b>No Bookmarks</b>\n"
-"\n"
-"<small>Use the <i>Add Bookmark</i> button\n"
-"or press Ctrl+D to add\n"
-"the current article to the list</small>"
-msgstr "<b>Nessun segnalibro</b>\n"
-"\n"
-"<small>Usa il bottone <i>Aggiungi segnalibro</i>\n"
-"o premi Ctrl+D per aggiungere\n"
-"l'attuale articolo nella lista</small>"
-
-#: ../data/ui/shortcuts.ui:95
+#: ../data/ui/shortcuts.ui:98
 msgctxt "shortcut window"
 msgid "Tabs"
 msgstr "Schede"
 
-#: ../data/ui/shortcuts.ui:99
+#: ../data/ui/shortcuts.ui:101
 msgctxt "shortcut window"
 msgid "New tab"
 msgstr "Nuova scheda"
 
-#: ../data/ui/shortcuts.ui:106
+#: ../data/ui/shortcuts.ui:107
 msgctxt "shortcut window"
 msgid "Close current tab"
 msgstr "Chiudi scheda corrente"
@@ -444,49 +256,331 @@ msgctxt "shortcut window"
 msgid "Next tab"
 msgstr "Scheda successiva"
 
-#: ../data/ui/shortcuts.ui:120
+#: ../data/ui/shortcuts.ui:119
 msgctxt "shortcut window"
 msgid "Previous tab"
 msgstr "Scheda precedente"
 
-#: ../data/ui/header.ui:61
-msgid "New tab"
-msgstr "Nuova scheda"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
-msgid "Open multiple articles in tabs"
-msgstr "Apri più articoli in schede"
-
-#: ../src/view.py:437
+#: ../src/view.py:379
 msgid "Open Link in New Tab"
 msgstr "Apri link in una nuova scheda"
 
-#: ../src/view.py:443
+#: ../src/view.py:385
 msgid "Add Link to Bookmarks"
 msgstr "Aggiungi link nei segnalibro"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:29
-msgid "Light, dark and sepia themes"
-msgstr "Temi chiaro, scuro e seppia"
-
-#: ../src/view.py:439
+#: ../src/view.py:381
 msgid "Open Link in Browser"
 msgstr "Apri nel browser"
 
-#: ../src/view.py:445
+#: ../src/view.py:387 ../data/ui/menu-main.ui:39
 msgid "Copy Link to Clipboard"
 msgstr "Copia link"
 
-#: ../data/ui/prefs.ui:110
+#: ../data/ui/prefs.ui:50
 msgid "Desktop searches are performed in the default language"
 msgstr "Le ricerche dal desktop sono effettuate nella lingua predefinita"
 
-#: ../data/ui/prefs.ui:111
+#: ../data/ui/prefs.ui:51
 msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
 msgstr "Puoi cercare nelle altre lingue usando un prefisso, per esempio -es per cercare in spagnolo"
 
-#: ../data/ui/shortcuts.ui:147
+#: ../data/ui/shortcuts.ui:142
 msgctxt "shortcut window"
 msgid "Random article"
 msgstr "Articolo casuale"
+
+#: ../src/menu.py:88
+msgid "Pick a Font"
+msgstr "Scegli font"
+
+#: ../src/menu.py:117
+msgid "Font"
+msgstr "Font"
+
+#: ../src/history.py:36
+msgid "Today"
+msgstr "Oggi"
+
+#: ../src/history.py:36
+msgid "Last 7 days"
+msgstr "Ultimi 7 giorni"
+
+#: ../src/history.py:36
+msgid "Last 30 days"
+msgstr "Ultimi 30 giorni"
+
+#: ../src/history.py:36
+msgid "Show full history"
+msgstr "Mostra l'intera cronologia"
+
+#: ../src/window.py:321 ../src/page.py:138
+msgid "Bookmark added: "
+msgstr "Segnalibro aggiunto: "
+
+#: ../src/window.py:435
+msgid "Print operation completed"
+msgstr "Operazione di stampa completata"
+
+#: ../src/window.py:441
+msgid "Print operation failed"
+msgstr "Operazione di stampa fallita"
+
+#: ../src/window.py:456
+msgid "Link copied to clipboard"
+msgstr "Collegamento copiato negli appunti"
+
+#: ../src/application.py:153
+msgid "Source Code"
+msgstr "Codice sorgente"
+
+#: ../src/application.py:154
+msgid "Report an Issue"
+msgstr "Segnala un problema"
+
+#: ../src/application.py:155
+msgid "Help Translating"
+msgstr "Aiuta a tradurre"
+
+#: ../src/application.py:156
+msgid "Contributors"
+msgstr "Contributori"
+
+#: ../src/application.py:157
+msgid "Flag Icons"
+msgstr "Icone delle bandiere"
+
+#: ../src/application.py:158
+msgid "All content from Wikipedia.org and available under CC BY-SA 3.0 unless otherwise noted.\n"
+"\n"
+"Wike is an independent development not endorsed by or affiliated with the Wikimedia Foundation."
+msgstr "Tutto il contenuto da Wikipedia.org è disponibile sotto licenza CC BY-SA 3.0 se non segnalato.\n"
+"\n"
+"Wike è un progetto indipendente non supportato né affiliato alla Wikimedia Foundation."
+
+#: ../src/page.py:75
+msgid "Loading"
+msgstr "Caricamento"
+
+#: ../src/page.py:102
+msgid "Article not Found"
+msgstr "Articolo non trovato"
+
+#: ../src/page.py:110
+msgid "Can't Access Wikipedia"
+msgstr "Impossibile ad accedere a Wikipedia"
+
+#: ../src/bookmarks.py:34
+msgid "Reading list"
+msgstr "Lista della lettura"
+
+#: ../data/ui/toc.ui:42
+msgid "No Contents"
+msgstr "Nessun contenuto"
+
+#: ../data/ui/toc.ui:43
+msgid "There is no table of contents for this page"
+msgstr "Non c'è alcun indice per questa pagina"
+
+#: ../data/ui/languages.ui:10 ../data/ui/search-settings.ui:26
+msgid "Pick your Languages"
+msgstr "Scegli le tue lingue"
+
+#: ../data/ui/languages.ui:33 ../data/ui/search-settings.ui:20
+#: ../data/ui/langlinks.ui:17
+msgid "Filter languages"
+msgstr "Filtra lingue"
+
+#: ../data/ui/shortcuts.ui:25
+msgctxt "shortcut window"
+msgid "Sidebar"
+msgstr "Barra laterale"
+
+#: ../data/ui/shortcuts.ui:37
+msgctxt "shortcut window"
+msgid "Languages"
+msgstr "Lingue"
+
+#: ../data/ui/shortcuts.ui:43
+msgctxt "shortcut window"
+msgid "Search text"
+msgstr "Testo di ricerca"
+
+#: ../data/ui/shortcuts.ui:49
+msgctxt "shortcut window"
+msgid "Print"
+msgstr "Stampa"
+
+#: ../data/ui/shortcuts.ui:55
+msgctxt "shortcut window"
+msgid "Copy link to clipboard"
+msgstr "Copia link negli appunti"
+
+#: ../data/ui/shortcuts.ui:136
+msgctxt "shortcut window"
+msgid "Main page"
+msgstr "Pagina principale"
+
+#: ../data/ui/shortcuts.ui:148
+msgctxt "shortcut window"
+msgid "History of recent articles"
+msgstr "Cronologia degli articoli recenti"
+
+#: ../data/ui/shortcuts.ui:166
+msgctxt "shortcut window"
+msgid "Reload current page"
+msgstr "Ricarica pagina attuale"
+
+#: ../data/ui/search.ui:15 ../data/ui/page.ui:57
+msgid "Search Wikipedia"
+msgstr "Cerca su Wikipedia"
+
+#: ../data/ui/search.ui:26
+msgid "Search Settings"
+msgstr "Impostazioni di ricerca"
+
+#: ../data/ui/dialogs.ui:11
+msgid "New Bookmarks List"
+msgstr "Nuova lista dei segnalibri"
+
+#: ../data/ui/dialogs.ui:18 ../data/ui/dialogs.ui:39
+msgid "List Name"
+msgstr "Nome della lista"
+
+#: ../data/ui/dialogs.ui:26 ../data/ui/dialogs.ui:47 ../data/ui/dialogs.ui:64
+#: ../data/ui/dialogs.ui:76 ../data/ui/dialogs.ui:88
+msgid "Cancel"
+msgstr "Cancella"
+
+#: ../data/ui/dialogs.ui:27
+msgid "Create List"
+msgstr "Crea lista"
+
+#: ../data/ui/dialogs.ui:32
+msgid "Rename Bookmarks List"
+msgstr "Rinomina lista dei segnalibri"
+
+#: ../data/ui/dialogs.ui:48
+msgid "Rename List"
+msgstr "Rinomina lista"
+
+#: ../data/ui/dialogs.ui:60
+msgid "Also delete the list"
+msgstr "Elimina anche la lista"
+
+#: ../data/ui/dialogs.ui:70
+msgid "Clear History?"
+msgstr "Vuoi svuotare la cronologia?"
+
+#: ../data/ui/dialogs.ui:77 ../data/ui/history.ui:26
+msgid "Clear History"
+msgstr "Svuota la cronologia"
+
+#: ../data/ui/prefs.ui:26
+msgid "Wikipedia main page"
+msgstr "Pagina principale di Wikipedia"
+
+#: ../data/ui/prefs.ui:27
+msgid "Random article"
+msgstr "Articolo casuale"
+
+#: ../data/ui/headerbar.ui:25
+msgid "New Tab"
+msgstr "Nuova scheda"
+
+#: ../data/ui/headerbar.ui:43 ../data/ui/actionbar.ui:34
+msgid "View"
+msgstr "Guarda"
+
+#: ../data/ui/headerbar.ui:49 ../data/ui/actionbar.ui:27
+msgid "Sidebar"
+msgstr "Barra laterale"
+
+#: ../data/ui/page.ui:20
+msgid "Search text"
+msgstr "Cerca testo"
+
+#: ../data/ui/page.ui:58
+msgid "Start typing to search Wikipedia articles"
+msgstr "Inizia a digitare per cercare articoli di Wikipedia"
+
+#: ../data/ui/page.ui:68 ../data/ui/menu-main.ui:25
+msgid "Main Page"
+msgstr "Pagina principale"
+
+#: ../data/ui/langlinks.ui:38
+msgid "No Languages"
+msgstr "Nessuna lingua"
+
+#: ../data/ui/langlinks.ui:39
+msgid "This page is not available in other languages"
+msgstr "Questa pagina non è disponibile in altre lingue"
+
+#: ../data/ui/menu-view.ui:21
+msgid "Show"
+msgstr "Mostra"
+
+#: ../data/ui/menu-view.ui:23
+msgid "Language Flags"
+msgstr "Bandiere delle lingue"
+
+#: ../data/ui/menu-view.ui:27
+msgid "Link Previews"
+msgstr "Anteprime dei collegamenti"
+
+#: ../data/ui/history.ui:49
+msgid "Empty History"
+msgstr "Svuota cronologia"
+
+#: ../data/ui/history.ui:50
+msgid "There are no recent articles in the history"
+msgstr "Non c'è alcun articolo recente nella cronologia"
+
+#: ../data/ui/bookmarks.ui:55
+msgid "No Bookmarks"
+msgstr "Nessun segnalibro"
+
+#: ../data/ui/bookmarks.ui:56
+msgid "Use the Add Bookmark button or press Ctrl+D to add the current article to the list"
+msgstr "Usa il bottone Aggiungi segnalibro o premi Ctrl+D per aggiungere l'attuale articolo nella lista"
+
+#: ../data/ui/window.ui:78
+msgid "Contents"
+msgstr "Contenuto"
+
+#: ../data/ui/window.ui:110
+msgid "History"
+msgstr "Cronologia"
+
+#: ../data/ui/menu-main.ui:13
+msgid "Print"
+msgstr "Stampa"
+
+#: ../data/ui/menu-main.ui:18
+msgid "Search Text"
+msgstr "Testo di ricerca"
+
+#: ../data/ui/menu-main.ui:35
+msgid "Open in Browser"
+msgstr "Apri nel browser"
+
+#: ../data/ui/bookmarks-menu.ui:12
+msgid "Create New List…"
+msgstr "Crea nuova lista..."
+
+#: ../data/ui/bookmarks-menu.ui:18
+msgid "Rename List…"
+msgstr "Rinomina lista..."
+
+#: ../data/ui/bookmarks-menu.ui:22
+msgid "Clear List…"
+msgstr "Svuota lista..."
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
+msgid "It supports more than 300 languages and integrates with desktop searches, providing suggestions that make it easier to find any content. Other features are: bookmarks with multiple lists, article table of contents, history, text searches and much more…"
+msgstr "Supporta più di 300 lingue e si integra con le ricerche desktop, fornendo suggerimenti che rendono più facile trovare qualsiasi contenuto. Altre funzioni sono: segnalibri con liste multiple, indice degli articoli, cronologia, ricerche di testo e molto altro..."
+
+#: ../data/ui/window.ui:55
+msgid "Pin Sidebar"
+msgstr "Fissa barra laterale"
 

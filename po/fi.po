@@ -7,211 +7,127 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: fi\n"
 
-#: ../src/view.py:227 ../src/view.py:315
+#: ../src/view.py:252
 msgid "Article not found"
 msgstr "Artikkelia ei löydy"
 
-#: ../src/view.py:228
+#: ../src/page.py:103
 msgid "Can't find any results for requested query"
 msgstr "Hakuehdoilla ei löytynyt tuloksia"
 
-#: ../src/view.py:231 ../src/view.py:317
+#: ../src/view.py:254
 msgid "Can't access Wikipedia"
 msgstr "Ei pääsyä Wikipediaan"
 
-#: ../src/view.py:232
+#: ../src/page.py:111
 msgid "Check your Internet connection and try again"
 msgstr "Tarkista internetyhteys ja yritä uudelleen"
 
-#: ../src/window.py:225 ../src/page.py:120
-msgid "New bookmark: "
-msgstr "Uusi kirjanmerkki: "
-
-#: ../src/window.py:283
-msgid "Wikipedia URL copied to clipboard"
-msgstr "Wikipedia-osoite kopioitu leikepöydälle"
-
-#: ../src/search.py:259
-msgid "Default search language: "
-msgstr "Haun oletuskieli: "
-
-#: ../src/bookmarks.py:138
+#: ../data/ui/dialogs.ui:53
 msgid "Clear Bookmarks List?"
 msgstr "Tyhjennetäänkö kirjanmerkkien luettelo?"
 
-#: ../src/bookmarks.py:140
+#: ../data/ui/dialogs.ui:54
 msgid "All bookmarks in the list will be removed permanently."
 msgstr "Kaikki luettelossa olevat kirjanmerkit poistetaan pysyvästi."
 
-#: ../src/bookmarks.py:141 ../data/ui/bookmarks.ui:70
+#: ../data/ui/dialogs.ui:65
 msgid "Clear List"
 msgstr "Tyhjennä luettelo"
 
-#: ../data/ui/search-settings.ui:61
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:22
-msgid "Search suggestions"
+#: ../data/ui/search-settings.ui:69
+msgid "Search Suggestions"
 msgstr "Hakuehdotukset"
-
-#: ../data/ui/about.ui:8
-msgid "Search and read Wikipedia articles\n"
-"All content from Wikipedia.org\n"
-"and available under CC BY-SA 3.0 unless otherwise noted"
-msgstr "Hae ja lue Wikipedia-artikkeleita\n"
-"Kaikki sisältö tulee Wikipedia.orgista\n"
-"ja on tarjolla CC BY-SA 3.0 -lisenssin alaisena ellei toisin mainita"
 
 #. Add your name like this:
 #. 
 #. Hugo Olabera <hugolabe@gmail.com>
-#: ../data/ui/about.ui:13
+#: ../data/ui/about.ui:16
 msgid "translator-credits"
 msgstr "Jiri Grönroos"
 
-#: ../src/view.py:422 ../data/ui/bookmarks.ui:58
+#: ../src/view.py:364 ../data/ui/bookmarks.ui:26
 msgid "Add Bookmark"
 msgstr "Lisää kirjanmerkki"
 
-#: ../data/ui/shortcuts.ui:13
+#: ../data/ui/shortcuts.ui:16
 msgctxt "shortcut window"
 msgid "General"
 msgstr "Yleiset"
 
-#: ../data/ui/shortcuts.ui:24
+#: ../data/ui/shortcuts.ui:31
 msgctxt "shortcut window"
 msgid "Table of contents"
 msgstr "Sisällysluettelo"
 
-#: ../data/ui/shortcuts.ui:31
-msgctxt "shortcut window"
-msgid "View article in other languages"
-msgstr "Näytä artikkeli muilla kielillä"
-
-#: ../data/ui/shortcuts.ui:38
-msgctxt "shortcut window"
-msgid "Search text in page"
-msgstr "Etsi tekstiä sivulta"
-
-#: ../data/ui/shortcuts.ui:45
+#: ../data/ui/shortcuts.ui:61
 msgctxt "shortcut window"
 msgid "Preferences"
 msgstr "Asetukset"
 
-#: ../data/ui/shortcuts.ui:52
-msgctxt "shortcut window"
-msgid "Copy Wikipedia URL"
-msgstr "Kopioi Wikipedia-osoite"
-
-#: ../data/ui/shortcuts.ui:59
+#: ../data/ui/shortcuts.ui:73
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Lopeta"
 
-#: ../data/ui/shortcuts.ui:66
+#: ../data/ui/shortcuts.ui:67
 msgctxt "shortcut window"
 msgid "Keyboard shortcuts"
 msgstr "Pikanäppäimet"
 
-#: ../data/ui/shortcuts.ui:129
+#: ../data/ui/shortcuts.ui:127
 msgctxt "shortcut window"
 msgid "Navigation"
 msgstr "Liikkuminen"
 
-#: ../data/ui/shortcuts.ui:133
+#: ../data/ui/shortcuts.ui:130
 msgctxt "shortcut window"
 msgid "Search articles"
 msgstr "Etsi artikkeleja"
 
-#: ../data/ui/shortcuts.ui:140
-msgctxt "shortcut window"
-msgid "Wikipedia main page"
-msgstr "Wikipedian etusivu"
-
 #: ../data/ui/shortcuts.ui:154
-msgctxt "shortcut window"
-msgid "Show recent articles"
-msgstr "Näytä viimeisimmät artikkelit"
-
-#: ../data/ui/shortcuts.ui:161
 msgctxt "shortcut window"
 msgid "Previous page"
 msgstr "Edellinen sivu"
 
-#: ../data/ui/shortcuts.ui:168
+#: ../data/ui/shortcuts.ui:160
 msgctxt "shortcut window"
 msgid "Next page"
 msgstr "Seuraava sivu"
 
-#: ../data/ui/shortcuts.ui:175
-msgctxt "shortcut window"
-msgid "Reload page"
-msgstr "Lataa sivu uudelleen"
-
-#: ../data/ui/shortcuts.ui:75
+#: ../data/ui/shortcuts.ui:81 ../data/ui/shortcuts.ui:84
 msgctxt "shortcut window"
 msgid "Bookmarks"
 msgstr "Kirjanmerkit"
 
-#: ../data/ui/shortcuts.ui:79
-msgctxt "shortcut window"
-msgid "Show bookmarks"
-msgstr "Näytä kirjanmerkit"
-
-#: ../data/ui/shortcuts.ui:86
+#: ../data/ui/shortcuts.ui:90
 msgctxt "shortcut window"
 msgid "Add bookmark"
 msgstr "Lisää kirjanmerkki"
 
-#: ../src/prefs.py:80 ../data/ui/menu.ui:123
-msgid "Wikipedia Main Page"
-msgstr "Wikipedian etusivu"
-
-#: ../src/view.py:313 ../data/ui/menu.ui:149
-msgid "Recent Articles"
-msgstr "Viimeisimmät artikkelit"
-
-#: ../data/ui/menu.ui:173
-msgid "Search Text in Page"
-msgstr "Etsi tekstiä sivulta"
-
-#: ../data/ui/menu.ui:186
-msgid "Open Wikipedia Page in Browser"
-msgstr "Avaa Wikipedia-sivu selaimessa"
-
-#: ../data/ui/menu.ui:199
-msgid "Copy Wikipedia URL to Clipboard"
-msgstr "Kopioi Wikipedia-osoite leikepöydälle"
-
-#: ../data/ui/menu.ui:223
+#: ../data/ui/menu-main.ui:45
 msgid "Preferences"
 msgstr "Asetukset"
 
-#: ../data/ui/menu.ui:236
+#: ../data/ui/menu-main.ui:49
 msgid "Keyboard Shortcuts"
 msgstr "Pikanäppäimet"
 
-#: ../data/ui/menu.ui:249
+#: ../data/ui/menu-main.ui:53
 msgid "About Wike"
 msgstr "Tietoja - Wike"
 
-#: ../data/ui/prefs.ui:20
+#: ../data/ui/prefs.ui:18
 msgid "Behavior"
 msgstr "Toiminta"
 
-#: ../data/ui/prefs.ui:126
-msgid "Keep a list of recent articles"
+#: ../data/ui/prefs.ui:58
+msgid "Keep a List of Recent Articles"
 msgstr "Pidä luetteloa viimeisimmistä artikkeleista"
 
-#: ../data/ui/prefs.ui:14
-msgid "General"
-msgstr "Yleiset"
-
-#: ../data/ui/prefs.ui:169
+#: ../data/ui/window.ui:88
 msgid "Languages"
 msgstr "Kielet"
-
-#: ../src/page.py:82 ../src/page.py:85
-msgid "Loading Article"
-msgstr "Ladataan artikkelia"
 
 #. Don't translate app name!
 #: ../data/com.github.hugolabe.Wike.desktop.in:3
@@ -219,13 +135,13 @@ msgstr "Ladataan artikkelia"
 msgid "Wike"
 msgstr "Wike"
 
-#: ../src/view.py:223 ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../data/ui/about.ui:14 ../data/com.github.hugolabe.Wike.desktop.in:4
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
 msgid "Search and read Wikipedia articles"
 msgstr "Hae ja lue Wikipedia-artikkeleita"
 
 #. Don't remove semicolons!
-#: ../data/com.github.hugolabe.Wike.desktop.in:10
+#: ../data/com.github.hugolabe.Wike.desktop.in:12
 msgid "Wikipedia;Encyclopedia;"
 msgstr "Wikipedia;Encyclopedia;tietosanakirja;"
 
@@ -233,207 +149,103 @@ msgstr "Wikipedia;Encyclopedia;tietosanakirja;"
 msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
 msgstr "Wike on Wikipedian lukuohjelma Gnome-työpöydälle. Sen avulla sinulla on pääsy kaikkeen vapaan tietosanakirjan sisältöön natiivilla sovelluksella, joka tarjoaa selainta yksinkertaisemman ja vähemmän häiriötekijöitä sisältävän näkymän artikkeleihin."
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:21
-msgid "Multiple languages"
-msgstr "Useita kieliä"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:23
-msgid "List of recent articles"
-msgstr "Luettelo viimeisimmistä artikkeleista"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:24
-msgid "Simple bookmarks management"
-msgstr "Yksinkertainen kirjanmerkkien hallinta"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:25
-msgid "Text search in articles"
-msgstr "Etsi tekstiä artikkeleista"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
-msgid "Article table of contents"
-msgstr "Artikkelin sisällysluettelo"
-
-#: ../data/ui/header.ui:154 ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
-msgid "View article in other languages"
-msgstr "Lue artikkeli eri kielillä"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
-msgid "Features:"
-msgstr "Ominaisuudet:"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
-msgid "GNOME Shell search integration"
-msgstr "Gnome Shell -hakuintegraatio"
-
-#: ../src/prefs.py:148
-msgid "Clear Historic?"
-msgstr "Tyhjennetäänkö historia?"
-
-#: ../src/prefs.py:150
+#: ../data/ui/dialogs.ui:71
 msgid "The history of visited articles will be deleted permanently."
 msgstr "Avattujen artikkelien historia poistetaan pysyvästi."
 
-#: ../src/prefs.py:151
-msgid "Clear Historic"
-msgstr "Tyhjennä historia"
-
-#: ../src/prefs.py:168
+#: ../data/ui/dialogs.ui:82
 msgid "Clear Personal Data?"
 msgstr "Tyhjennetäänkö henkilökohtaiset tiedot?"
 
-#: ../src/prefs.py:170
+#: ../data/ui/dialogs.ui:83
 msgid "Cookies and cache data will be deleted permanently."
 msgstr "Evästeet ja välimuisti poistetaan pysyvästi."
 
-#: ../src/prefs.py:171
+#: ../data/ui/dialogs.ui:89
 msgid "Clear Data"
 msgstr "Tyhjennä tiedot"
 
 #. Don't remove %s tag!
-#: ../src/wike-sp.in:84
+#: ../src/wike-sp.in:69
 msgid "Search “%s” on Wikipedia"
 msgstr "Etsi «%s» Wikipediasta"
 
-#: ../data/ui/prefs.ui:23
-msgid "Home page"
+#: ../data/ui/prefs.ui:21
+msgid "Home Page"
 msgstr "Kotisivu"
 
-#: ../data/ui/prefs.ui:24
+#: ../data/ui/prefs.ui:22
 msgid "The page that will be displayed when Wike starts"
 msgstr "Wiken käynnistyessä näytettävä sivu"
 
-#: ../data/ui/prefs.ui:34
-msgid "Article View"
-msgstr "Artikkelinäkymä"
-
-#: ../data/ui/prefs.ui:37
-msgid "Font size"
-msgstr "Fontin koko"
-
 #: ../data/ui/prefs.ui:38
-msgid "Font size for article view (default is 16)"
-msgstr "Fontin koko artikkelinäkymässä (oletus 16)"
-
-#: ../data/ui/prefs.ui:55
-msgid "Use custom font"
-msgstr "Käytä mukautettua fonttia"
-
-#: ../data/ui/prefs.ui:56
-msgid "Choose a font for the article view"
-msgstr "Valitse artikkelinäkymän fontti"
-
-#: ../data/ui/prefs.ui:69
-msgid "Preview popups in article links"
-msgstr "Esikatselut artikkelilinkeissä"
-
-#: ../data/ui/prefs.ui:70
-msgid "Show a preview of the article when hovering over a link"
-msgstr "Näytä artikkelin esikatselu kun hiiren osoitin viedään linkin päälle"
-
-#: ../data/ui/prefs.ui:89
 msgid "Privacy"
 msgstr "Yksityisyys"
 
-#: ../data/ui/prefs.ui:95
-msgid "Search"
-msgstr "Haku"
-
-#: ../data/ui/prefs.ui:98
-msgid "Allow live search on desktop"
+#: ../data/ui/prefs.ui:41
+msgid "Allow Live Search on Desktop"
 msgstr "Salli reaaliaikainen haku työpöydältä"
 
-#: ../data/ui/prefs.ui:99
+#: ../data/ui/prefs.ui:42
 msgid "Warning: all desktop searches will be sent to Wikipedia"
 msgstr "Varoitus: kaikki työpöytähaut lähetetään Wikipediaan"
 
-#: ../data/ui/prefs.ui:123
-msgid "Personal Data"
-msgstr "Henkilökohtaiset tiedot"
-
-#: ../data/ui/prefs.ui:127
+#: ../data/ui/prefs.ui:59
 msgid "Wike will remember the history of visited articles"
 msgstr "Wike muistaa avattujen artikkelien historian"
 
-#: ../data/ui/prefs.ui:139 ../data/ui/prefs.ui:154
+#: ../data/ui/prefs.ui:68 ../data/ui/prefs.ui:80
 msgid "Clear"
 msgstr "Tyhjennä"
 
-#: ../data/ui/prefs.ui:149
-msgid "Clear personal data"
+#: ../data/ui/prefs.ui:76
+msgid "Clear Personal Data"
 msgstr "Tyhjennä henkilökohtaiset tiedot"
 
-#: ../data/ui/prefs.ui:150
+#: ../data/ui/prefs.ui:77
 msgid "Cookies and cache data will be deleted"
 msgstr "Evästeet ja välimuisti tyhjennetään"
 
-#: ../src/view.py:235
+#: ../data/ui/page.ui:87
 msgid "Try Again"
 msgstr "Yritä uudelleen"
 
-#: ../src/prefs.py:80 ../data/ui/menu.ui:136
+#: ../data/ui/page.ui:78 ../data/ui/menu-main.ui:29
 msgid "Random Article"
 msgstr "Satunnainen artikkeli"
 
-#: ../src/prefs.py:80
-msgid "Last Article"
+#: ../data/ui/prefs.ui:28
+msgid "Last article"
 msgstr "Viimeisin artikkeli"
 
-#: ../data/ui/header.ui:79
-msgid "Search articles"
-msgstr "Etsi artikkeleja"
-
-#: ../data/ui/header.ui:113
+#: ../data/ui/window.ui:99
 msgid "Bookmarks"
 msgstr "Kirjanmerkit"
 
-#: ../data/ui/header.ui:135
-msgid "Table of contents"
-msgstr "Sisällysluettelo"
-
-#: ../data/ui/prefs.ui:175
-msgid "Filter Available Languages"
-msgstr "Suodata saatavilla olevia kieliä"
-
-#: ../data/ui/prefs.ui:209
+#: ../data/ui/languages.ui:56
 msgid "Select All"
 msgstr "Valitse kaikki"
 
-#: ../data/ui/prefs.ui:221
+#: ../data/ui/languages.ui:61
 msgid "Select None"
 msgstr "Älä valitse mitään"
 
-#: ../data/ui/shortcuts.ui:17
+#: ../data/ui/shortcuts.ui:19
 msgctxt "shortcut window"
 msgid "Main menu"
 msgstr "Päävalikko"
 
-#: ../src/view.py:224
-msgid "Click the search button or press F2 to search articles in Wikipedia. You can also use the main menu to open Wikipedia main page, the list of recent articles or get a random article."
-msgstr "Napsauta hakupainiketta tai paina F2 etsiäksesi artikkeleita Wikipediasta. Voit myös avata päävalikosta Wikipedian etusivun, luettelon viimeisimmistä artikkeleista tai satunnaisen artikkelin."
-
-#: ../src/bookmarks.py:47
-msgid "<b>No Bookmarks</b>\n"
-"\n"
-"<small>Use the <i>Add Bookmark</i> button\n"
-"or press Ctrl+D to add\n"
-"the current article to the list</small>"
-msgstr "<b>Ei kirjanmerkkejä</b>\n"
-"\n"
-"<small>Napsauta <i>Lisää kirjanmerkki</i> -painiketta\n"
-"tai paina Ctrl+D lisätäksesi\n"
-"nykyisen artikkelin luetteloon</small>"
-
-#: ../data/ui/shortcuts.ui:95
+#: ../data/ui/shortcuts.ui:98
 msgctxt "shortcut window"
 msgid "Tabs"
 msgstr "Välilehdet"
 
-#: ../data/ui/shortcuts.ui:99
+#: ../data/ui/shortcuts.ui:101
 msgctxt "shortcut window"
 msgid "New tab"
 msgstr "Uusi välilehti"
 
-#: ../data/ui/shortcuts.ui:106
+#: ../data/ui/shortcuts.ui:107
 msgctxt "shortcut window"
 msgid "Close current tab"
 msgstr "Sulje nykyinen välilehti"
@@ -443,49 +255,329 @@ msgctxt "shortcut window"
 msgid "Next tab"
 msgstr "Seuraava välilehti"
 
-#: ../data/ui/shortcuts.ui:120
+#: ../data/ui/shortcuts.ui:119
 msgctxt "shortcut window"
 msgid "Previous tab"
 msgstr "Edellinen välilehti"
 
-#: ../data/ui/header.ui:61
-msgid "New tab"
-msgstr "Uusi välilehti"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
-msgid "Open multiple articles in tabs"
-msgstr "Avaa useita artikkeleita välilehtiin"
-
-#: ../src/view.py:437
+#: ../src/view.py:379
 msgid "Open Link in New Tab"
 msgstr "Avaa linkki uudessa välilehdessä"
 
-#: ../src/view.py:443
+#: ../src/view.py:385
 msgid "Add Link to Bookmarks"
 msgstr "Lisää linkki kirjanmerkkeihin"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:29
-msgid "Light, dark and sepia themes"
-msgstr "Tumma, vaalea ja seepianvärinen teema"
-
-#: ../src/view.py:439
+#: ../src/view.py:381
 msgid "Open Link in Browser"
 msgstr "Avaa linkki selaimessa"
 
-#: ../src/view.py:445
+#: ../src/view.py:387 ../data/ui/menu-main.ui:39
 msgid "Copy Link to Clipboard"
 msgstr "Kopioi linkki leikepöydälle"
 
-#: ../data/ui/prefs.ui:110
+#: ../data/ui/prefs.ui:50
 msgid "Desktop searches are performed in the default language"
 msgstr "Työpöytähaut suoritetaan oletuskielellä"
 
-#: ../data/ui/prefs.ui:111
+#: ../data/ui/prefs.ui:51
 msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
 msgstr "Voit etsiä muilla kielillä käyttämällä etuliitettä. Esimerkiksi -en etsii englanniksi"
 
-#: ../data/ui/shortcuts.ui:147
+#: ../data/ui/shortcuts.ui:142
 msgctxt "shortcut window"
 msgid "Random article"
 msgstr "Satunnainen artikkeli"
+
+#: ../src/menu.py:88
+msgid "Pick a Font"
+msgstr "Valitse fontti"
+
+#: ../src/menu.py:117
+msgid "Font"
+msgstr "Fontti"
+
+#: ../src/history.py:36
+msgid "Today"
+msgstr "Tänään"
+
+#: ../src/history.py:36
+msgid "Last 7 days"
+msgstr "Viimeiset 7 päivää"
+
+#: ../src/history.py:36
+msgid "Last 30 days"
+msgstr "Viimeiset 30 päivää"
+
+#: ../src/history.py:36
+msgid "Show full history"
+msgstr "Näytä koko historia"
+
+#: ../src/window.py:321 ../src/page.py:138
+msgid "Bookmark added: "
+msgstr "Kirjanmerkki lisätty: "
+
+#: ../src/window.py:435
+msgid "Print operation completed"
+msgstr "Tulostus valmistui"
+
+#: ../src/window.py:441
+msgid "Print operation failed"
+msgstr "Tulostus epäonnistui"
+
+#: ../src/window.py:456
+msgid "Link copied to clipboard"
+msgstr "Linkki kopioitu leikepöydälle"
+
+#: ../src/application.py:153
+msgid "Source Code"
+msgstr "Lähdekoodi"
+
+#: ../src/application.py:154
+msgid "Report an Issue"
+msgstr "Ilmoita ongelmasta"
+
+#: ../src/application.py:155
+msgid "Help Translating"
+msgstr "Auta kääntämään"
+
+#: ../src/application.py:156
+msgid "Contributors"
+msgstr "Avustajat"
+
+#: ../src/application.py:157
+msgid "Flag Icons"
+msgstr "Lippukuvakkeet"
+
+#: ../src/application.py:158
+msgid "All content from Wikipedia.org and available under CC BY-SA 3.0 unless otherwise noted.\n"
+"\n"
+"Wike is an independent development not endorsed by or affiliated with the Wikimedia Foundation."
+msgstr ""
+
+#: ../src/page.py:75
+msgid "Loading"
+msgstr "Ladataan"
+
+#: ../src/page.py:102
+msgid "Article not Found"
+msgstr "Artikkelia ei löydy"
+
+#: ../src/page.py:110
+msgid "Can't Access Wikipedia"
+msgstr "Pääsy Wikipediaan ei onnistu"
+
+#: ../src/bookmarks.py:34
+msgid "Reading list"
+msgstr "Lukulista"
+
+#: ../data/ui/toc.ui:42
+msgid "No Contents"
+msgstr "Ei sisältöä"
+
+#: ../data/ui/toc.ui:43
+msgid "There is no table of contents for this page"
+msgstr "Tällä sivulla ei ole sisällysluetteloa"
+
+#: ../data/ui/languages.ui:10 ../data/ui/search-settings.ui:26
+msgid "Pick your Languages"
+msgstr "Valitse kielet"
+
+#: ../data/ui/languages.ui:33 ../data/ui/search-settings.ui:20
+#: ../data/ui/langlinks.ui:17
+msgid "Filter languages"
+msgstr "Suodata kieliä"
+
+#: ../data/ui/shortcuts.ui:25
+msgctxt "shortcut window"
+msgid "Sidebar"
+msgstr "Sivupalkki"
+
+#: ../data/ui/shortcuts.ui:37
+msgctxt "shortcut window"
+msgid "Languages"
+msgstr "Kielet"
+
+#: ../data/ui/shortcuts.ui:43
+msgctxt "shortcut window"
+msgid "Search text"
+msgstr "Etsi tekstiä"
+
+#: ../data/ui/shortcuts.ui:49
+msgctxt "shortcut window"
+msgid "Print"
+msgstr "Tulosta"
+
+#: ../data/ui/shortcuts.ui:55
+msgctxt "shortcut window"
+msgid "Copy link to clipboard"
+msgstr "Kopioi linkki leikepöydälle"
+
+#: ../data/ui/shortcuts.ui:136
+msgctxt "shortcut window"
+msgid "Main page"
+msgstr "Pääsivu"
+
+#: ../data/ui/shortcuts.ui:148
+msgctxt "shortcut window"
+msgid "History of recent articles"
+msgstr "Viimeisimpien artikkelien historia"
+
+#: ../data/ui/shortcuts.ui:166
+msgctxt "shortcut window"
+msgid "Reload current page"
+msgstr "Lataa nykyinen sivu uudelleen"
+
+#: ../data/ui/search.ui:15 ../data/ui/page.ui:57
+msgid "Search Wikipedia"
+msgstr "Etsi Wikipediasta"
+
+#: ../data/ui/search.ui:26
+msgid "Search Settings"
+msgstr "Hakuasetukset"
+
+#: ../data/ui/dialogs.ui:11
+msgid "New Bookmarks List"
+msgstr "Uusi kirjanmerkkiluettelo"
+
+#: ../data/ui/dialogs.ui:18 ../data/ui/dialogs.ui:39
+msgid "List Name"
+msgstr "Luettelon nimi"
+
+#: ../data/ui/dialogs.ui:26 ../data/ui/dialogs.ui:47 ../data/ui/dialogs.ui:64
+#: ../data/ui/dialogs.ui:76 ../data/ui/dialogs.ui:88
+msgid "Cancel"
+msgstr "Peru"
+
+#: ../data/ui/dialogs.ui:27
+msgid "Create List"
+msgstr "Luo luettelo"
+
+#: ../data/ui/dialogs.ui:32
+msgid "Rename Bookmarks List"
+msgstr "Nimeä kirjanmerkkiluettelo uudelleen"
+
+#: ../data/ui/dialogs.ui:48
+msgid "Rename List"
+msgstr "Nimeä luettelo uudelleen"
+
+#: ../data/ui/dialogs.ui:60
+msgid "Also delete the list"
+msgstr "Poista myös luettelo"
+
+#: ../data/ui/dialogs.ui:70
+msgid "Clear History?"
+msgstr "Tyhjennetäänkö historia?"
+
+#: ../data/ui/dialogs.ui:77 ../data/ui/history.ui:26
+msgid "Clear History"
+msgstr "Tyhjennä historia"
+
+#: ../data/ui/prefs.ui:26
+msgid "Wikipedia main page"
+msgstr "Wikipedian etusivu"
+
+#: ../data/ui/prefs.ui:27
+msgid "Random article"
+msgstr "Satunnainen artikkeli"
+
+#: ../data/ui/headerbar.ui:25
+msgid "New Tab"
+msgstr "Uusi välilehti"
+
+#: ../data/ui/headerbar.ui:43 ../data/ui/actionbar.ui:34
+msgid "View"
+msgstr "Näytä"
+
+#: ../data/ui/headerbar.ui:49 ../data/ui/actionbar.ui:27
+msgid "Sidebar"
+msgstr "Sivupalkki"
+
+#: ../data/ui/page.ui:20
+msgid "Search text"
+msgstr "Etsi tekstiä"
+
+#: ../data/ui/page.ui:58
+msgid "Start typing to search Wikipedia articles"
+msgstr "Aloita kirjoittaminen etsiäksesi Wikipedia-artikkeleita"
+
+#: ../data/ui/page.ui:68 ../data/ui/menu-main.ui:25
+msgid "Main Page"
+msgstr "Etusivu"
+
+#: ../data/ui/langlinks.ui:38
+msgid "No Languages"
+msgstr "Ei kieliä"
+
+#: ../data/ui/langlinks.ui:39
+msgid "This page is not available in other languages"
+msgstr "Tämä sivu ei ole saatavilla muilla kielillä"
+
+#: ../data/ui/menu-view.ui:21
+msgid "Show"
+msgstr "Näytä"
+
+#: ../data/ui/menu-view.ui:23
+msgid "Language Flags"
+msgstr "Kieliliput"
+
+#: ../data/ui/menu-view.ui:27
+msgid "Link Previews"
+msgstr "Linkkin esikatselut"
+
+#: ../data/ui/history.ui:49
+msgid "Empty History"
+msgstr "Tyhjä historia"
+
+#: ../data/ui/history.ui:50
+msgid "There are no recent articles in the history"
+msgstr "Historiassa ei ole artikkeleita"
+
+#: ../data/ui/bookmarks.ui:55
+msgid "No Bookmarks"
+msgstr "Ei kirjanmerkkejä"
+
+#: ../data/ui/bookmarks.ui:56
+msgid "Use the Add Bookmark button or press Ctrl+D to add the current article to the list"
+msgstr "Käytä Lisää kirjanmerkki -painiketta tai paina Ctrl+D lisätäksesi nykyisen artikkelin luetteloon"
+
+#: ../data/ui/window.ui:78
+msgid "Contents"
+msgstr "Sisältö"
+
+#: ../data/ui/window.ui:110
+msgid "History"
+msgstr "Historia"
+
+#: ../data/ui/menu-main.ui:13
+msgid "Print"
+msgstr "Tulosta"
+
+#: ../data/ui/menu-main.ui:18
+msgid "Search Text"
+msgstr "Etsi tekstiä"
+
+#: ../data/ui/menu-main.ui:35
+msgid "Open in Browser"
+msgstr "Avaa selaimessa"
+
+#: ../data/ui/bookmarks-menu.ui:12
+msgid "Create New List…"
+msgstr "Luo uusi luettelo..."
+
+#: ../data/ui/bookmarks-menu.ui:18
+msgid "Rename List…"
+msgstr "Nimeä luettelo uudelleen..."
+
+#: ../data/ui/bookmarks-menu.ui:22
+msgid "Clear List…"
+msgstr "Tyhjennä luettelo..."
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
+msgid "It supports more than 300 languages and integrates with desktop searches, providing suggestions that make it easier to find any content. Other features are: bookmarks with multiple lists, article table of contents, history, text searches and much more…"
+msgstr "Se tukee yli 300:aa kieltä ja integroituu työpöytähakuihin tarjoten ehdotuksia, jotka helpottavat sisällön löytämistä. Muita ominaisuuksia: kirjanmerkit useine luetteloineen, artikkelin sisällysluettelo, historia, tekstihaut ja paljon muuta..."
+
+#: ../data/ui/window.ui:55
+msgid "Pin Sidebar"
+msgstr "Kiinnitä sivupalkki"
 

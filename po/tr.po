@@ -7,212 +7,128 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: tr\n"
 
-#: ../src/view.py:227 ../src/view.py:315
+#: ../src/view.py:252
 msgid "Article not found"
 msgstr "Makale bulunamadı"
 
-#: ../src/view.py:228
+#: ../src/page.py:103
 msgid "Can't find any results for requested query"
 msgstr "İstenen arama için herhangi bir sonuç bulamadı"
 
-#: ../src/view.py:231 ../src/view.py:317
+#: ../src/view.py:254
 msgid "Can't access Wikipedia"
 msgstr "Wikipedia'ya erişilemiyor"
 
-#: ../src/view.py:232
+#: ../src/page.py:111
 msgid "Check your Internet connection and try again"
-msgstr "İnternet bağlantınızı kontrol edin ve tekrar deneyin"
+msgstr "İnternet bağlantınızı denetleyip tekrar deneyin"
 
-#: ../src/window.py:225 ../src/page.py:120
-msgid "New bookmark: "
-msgstr "Yeni yer imi: "
-
-#: ../src/window.py:283
-msgid "Wikipedia URL copied to clipboard"
-msgstr "Wikipedia bağlantısı panoya kopyalandı"
-
-#: ../src/search.py:259
-msgid "Default search language: "
-msgstr "Varsayılan arama dili: "
-
-#: ../src/bookmarks.py:138
+#: ../data/ui/dialogs.ui:53
 msgid "Clear Bookmarks List?"
 msgstr "Yer İmleri Listesi Temizlensin Mi?"
 
-#: ../src/bookmarks.py:140
+#: ../data/ui/dialogs.ui:54
 msgid "All bookmarks in the list will be removed permanently."
 msgstr "Listedeki tüm yer imleri kalıcı olarak kaldırılacak."
 
-#: ../src/bookmarks.py:141 ../data/ui/bookmarks.ui:70
+#: ../data/ui/dialogs.ui:65
 msgid "Clear List"
 msgstr "Listeyi Temizle"
 
-#: ../data/ui/search-settings.ui:61
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:22
-msgid "Search suggestions"
+#: ../data/ui/search-settings.ui:69
+msgid "Search Suggestions"
 msgstr "Arama Önerilenleri"
-
-#: ../data/ui/about.ui:8
-msgid "Search and read Wikipedia articles\n"
-"All content from Wikipedia.org\n"
-"and available under CC BY-SA 3.0 unless otherwise noted"
-msgstr "Wikipedia makalelerini arayın ve okuyun\n"
-"Tüm içerikler Wikipedia.org sitesinden olup\n"
-"ve aksi belirtilmediği sürece CC BY-SA 3.0 kapsamında kullanılabilir"
 
 #. Add your name like this:
 #. 
 #. Hugo Olabera <hugolabe@gmail.com>
-#: ../data/ui/about.ui:13
+#: ../data/ui/about.ui:16
 msgid "translator-credits"
 msgstr "Ümit Solmaz\n"
 "Sabri Ünal <libreajans@gmail.com>"
 
-#: ../src/view.py:422 ../data/ui/bookmarks.ui:58
+#: ../src/view.py:364 ../data/ui/bookmarks.ui:26
 msgid "Add Bookmark"
 msgstr "Yer İmi Ekle"
 
-#: ../data/ui/shortcuts.ui:13
+#: ../data/ui/shortcuts.ui:16
 msgctxt "shortcut window"
 msgid "General"
 msgstr "Genel"
 
-#: ../data/ui/shortcuts.ui:24
+#: ../data/ui/shortcuts.ui:31
 msgctxt "shortcut window"
 msgid "Table of contents"
 msgstr "İçindekiler"
 
-#: ../data/ui/shortcuts.ui:31
-msgctxt "shortcut window"
-msgid "View article in other languages"
-msgstr "Makaleyi diğer dillerde görüntüle"
-
-#: ../data/ui/shortcuts.ui:38
-msgctxt "shortcut window"
-msgid "Search text in page"
-msgstr "Sayfadaki metni ara"
-
-#: ../data/ui/shortcuts.ui:45
+#: ../data/ui/shortcuts.ui:61
 msgctxt "shortcut window"
 msgid "Preferences"
 msgstr "Tercihler"
 
-#: ../data/ui/shortcuts.ui:52
-msgctxt "shortcut window"
-msgid "Copy Wikipedia URL"
-msgstr "Wikipedia Bağlantısını Kopyala"
-
-#: ../data/ui/shortcuts.ui:59
+#: ../data/ui/shortcuts.ui:73
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Çık"
 
-#: ../data/ui/shortcuts.ui:66
+#: ../data/ui/shortcuts.ui:67
 msgctxt "shortcut window"
 msgid "Keyboard shortcuts"
 msgstr "Klavye kısayolları"
 
-#: ../data/ui/shortcuts.ui:129
+#: ../data/ui/shortcuts.ui:127
 msgctxt "shortcut window"
 msgid "Navigation"
 msgstr "Gezinti"
 
-#: ../data/ui/shortcuts.ui:133
+#: ../data/ui/shortcuts.ui:130
 msgctxt "shortcut window"
 msgid "Search articles"
 msgstr "Makale ara"
 
-#: ../data/ui/shortcuts.ui:140
-msgctxt "shortcut window"
-msgid "Wikipedia main page"
-msgstr "Wikipedia ana sayfası"
-
 #: ../data/ui/shortcuts.ui:154
-msgctxt "shortcut window"
-msgid "Show recent articles"
-msgstr "Son makaleleri göster"
-
-#: ../data/ui/shortcuts.ui:161
 msgctxt "shortcut window"
 msgid "Previous page"
 msgstr "Önceki sayfa"
 
-#: ../data/ui/shortcuts.ui:168
+#: ../data/ui/shortcuts.ui:160
 msgctxt "shortcut window"
 msgid "Next page"
 msgstr "Sonraki sayfa"
 
-#: ../data/ui/shortcuts.ui:175
-msgctxt "shortcut window"
-msgid "Reload page"
-msgstr "Sayfayı yeniden yükle"
-
-#: ../data/ui/shortcuts.ui:75
+#: ../data/ui/shortcuts.ui:81 ../data/ui/shortcuts.ui:84
 msgctxt "shortcut window"
 msgid "Bookmarks"
 msgstr "Yer imleri"
 
-#: ../data/ui/shortcuts.ui:79
-msgctxt "shortcut window"
-msgid "Show bookmarks"
-msgstr "Yer imlerini göster"
-
-#: ../data/ui/shortcuts.ui:86
+#: ../data/ui/shortcuts.ui:90
 msgctxt "shortcut window"
 msgid "Add bookmark"
 msgstr "Yer imi ekle"
 
-#: ../src/prefs.py:80 ../data/ui/menu.ui:123
-msgid "Wikipedia Main Page"
-msgstr "Wikipedia Ana Sayfası"
-
-#: ../src/view.py:313 ../data/ui/menu.ui:149
-msgid "Recent Articles"
-msgstr "Son Makaleler"
-
-#: ../data/ui/menu.ui:173
-msgid "Search Text in Page"
-msgstr "Sayfadaki metni Ara"
-
-#: ../data/ui/menu.ui:186
-msgid "Open Wikipedia Page in Browser"
-msgstr "Wikipedia sayfasını tarayıcıda aç"
-
-#: ../data/ui/menu.ui:199
-msgid "Copy Wikipedia URL to Clipboard"
-msgstr "Wikipedia bağlantısını panoya kopyala"
-
-#: ../data/ui/menu.ui:223
+#: ../data/ui/menu-main.ui:45
 msgid "Preferences"
 msgstr "Tercihler"
 
-#: ../data/ui/menu.ui:236
+#: ../data/ui/menu-main.ui:49
 msgid "Keyboard Shortcuts"
 msgstr "Klavye Kısayolları"
 
-#: ../data/ui/menu.ui:249
+#: ../data/ui/menu-main.ui:53
 msgid "About Wike"
 msgstr "Wike Hakkında"
 
-#: ../data/ui/prefs.ui:20
+#: ../data/ui/prefs.ui:18
 msgid "Behavior"
 msgstr "Davranış"
 
-#: ../data/ui/prefs.ui:126
-msgid "Keep a list of recent articles"
-msgstr "Son makalelerin listesini tut"
+#: ../data/ui/prefs.ui:58
+msgid "Keep a List of Recent Articles"
+msgstr "Son Makalelerin Listesini Tut"
 
-#: ../data/ui/prefs.ui:14
-msgid "General"
-msgstr "Genel"
-
-#: ../data/ui/prefs.ui:169
+#: ../data/ui/window.ui:88
 msgid "Languages"
 msgstr "Diller"
-
-#: ../src/page.py:82 ../src/page.py:85
-msgid "Loading Article"
-msgstr "Makale Yükleniyor"
 
 #. Don't translate app name!
 #: ../data/com.github.hugolabe.Wike.desktop.in:3
@@ -220,13 +136,13 @@ msgstr "Makale Yükleniyor"
 msgid "Wike"
 msgstr "Wike"
 
-#: ../src/view.py:223 ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../data/ui/about.ui:14 ../data/com.github.hugolabe.Wike.desktop.in:4
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
 msgid "Search and read Wikipedia articles"
 msgstr "Wikipedia makalelerini arayın ve okuyun"
 
 #. Don't remove semicolons!
-#: ../data/com.github.hugolabe.Wike.desktop.in:10
+#: ../data/com.github.hugolabe.Wike.desktop.in:12
 msgid "Wikipedia;Encyclopedia;"
 msgstr "Wikipedia;Wikipedi;Vikipedi;Ansiklopedi;"
 
@@ -234,208 +150,103 @@ msgstr "Wikipedia;Wikipedi;Vikipedi;Ansiklopedi;"
 msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
 msgstr "Wike, GNOME Masaüstü için Wikipedia okuyucusudur. Çevrimiçi ansiklopedinin tüm içeriğine, makalelerin daha basit ve dikkat dağıtıcı olmayan görünümü ile yerel uygulama ile erişimeyi sağlar."
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:21
-msgid "Multiple languages"
-msgstr "Çok dilli"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:23
-msgid "List of recent articles"
-msgstr "Son makalelerin listesi"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:24
-msgid "Simple bookmarks management"
-msgstr "Basit yer imleri yönetimi"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:25
-msgid "Text search in articles"
-msgstr "Makalelerde metin ara"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:26
-msgid "Article table of contents"
-msgstr "Makale içindekiler tablosu"
-
-#: ../data/ui/header.ui:154 ../data/com.github.hugolabe.Wike.metainfo.xml.in:27
-msgid "View article in other languages"
-msgstr "Makaleyi diğer dillerde görüntüle"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
-msgid "Features:"
-msgstr "Özellikler:"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:28
-msgid "GNOME Shell search integration"
-msgstr "GNOME Shell arama tümleşimi"
-
-#: ../src/prefs.py:148
-msgid "Clear Historic?"
-msgstr "Geçmiş Temizlensin Mi?"
-
-#: ../src/prefs.py:150
+#: ../data/ui/dialogs.ui:71
 msgid "The history of visited articles will be deleted permanently."
 msgstr "Ziyaret edilen makalelerin geçmişi kalıcı olarak silinir."
 
-#: ../src/prefs.py:151
-msgid "Clear Historic"
-msgstr "Geçmişi Temizle"
-
-#: ../src/prefs.py:168
+#: ../data/ui/dialogs.ui:82
 msgid "Clear Personal Data?"
 msgstr "Kişisel Veriler Temizlensin Mi?"
 
-#: ../src/prefs.py:170
+#: ../data/ui/dialogs.ui:83
 msgid "Cookies and cache data will be deleted permanently."
 msgstr "Çerezler ve önbellek verileri kalıcı olarak silinir."
 
-#: ../src/prefs.py:171
+#: ../data/ui/dialogs.ui:89
 msgid "Clear Data"
 msgstr "Verileri Temizle"
 
 #. Don't remove %s tag!
-#: ../src/wike-sp.in:84
+#: ../src/wike-sp.in:69
 msgid "Search “%s” on Wikipedia"
 msgstr "Wikipedia içinde “%s” ara"
 
-#: ../data/ui/prefs.ui:23
-msgid "Home page"
+#: ../data/ui/prefs.ui:21
+msgid "Home Page"
 msgstr "Ana sayfa"
 
-#: ../data/ui/prefs.ui:24
+#: ../data/ui/prefs.ui:22
 msgid "The page that will be displayed when Wike starts"
 msgstr "Wike başladığında görüntülenecek sayfa"
 
-#: ../data/ui/prefs.ui:34
-msgid "Article View"
-msgstr "Makale Görünümü"
-
-#: ../data/ui/prefs.ui:37
-msgid "Font size"
-msgstr "Yazı tipi boyutu"
-
 #: ../data/ui/prefs.ui:38
-msgid "Font size for article view (default is 16)"
-msgstr "Makale görünümü için yazı tipi boyutu (varsayılan değer 16)"
-
-#: ../data/ui/prefs.ui:55
-msgid "Use custom font"
-msgstr "Özel yazı tipi kullan"
-
-#: ../data/ui/prefs.ui:56
-msgid "Choose a font for the article view"
-msgstr "Makale görünümü için bir yazı tipi seçin"
-
-#: ../data/ui/prefs.ui:69
-msgid "Preview popups in article links"
-msgstr "Makale bağlantılarındaki açılır pencereleri önizle"
-
-#: ../data/ui/prefs.ui:70
-msgid "Show a preview of the article when hovering over a link"
-msgstr "Bağlantının üzerine geldiğinde makalenin önizlemesini göster"
-
-#: ../data/ui/prefs.ui:89
 msgid "Privacy"
 msgstr "Gizlilik"
 
-#: ../data/ui/prefs.ui:95
-msgid "Search"
-msgstr "Ara"
+#: ../data/ui/prefs.ui:41
+msgid "Allow Live Search on Desktop"
+msgstr "Masaüstünde Canlı Arama Yapmaya İzin Ver"
 
-#: ../data/ui/prefs.ui:98
-msgid "Allow live search on desktop"
-msgstr "Masaüstünde canlı arama yapmaya izin ver"
-
-#: ../data/ui/prefs.ui:99
+#: ../data/ui/prefs.ui:42
 msgid "Warning: all desktop searches will be sent to Wikipedia"
-msgstr "Uyarı: Tüm masaüstü aramaları Wikipedia'ya gönderilecek"
+msgstr "Uyarı: Tüm masaüstü aramaları Wikipediaʼya gönderilecek"
 
-#: ../data/ui/prefs.ui:123
-msgid "Personal Data"
-msgstr "Kişisel Veriler"
-
-#: ../data/ui/prefs.ui:127
+#: ../data/ui/prefs.ui:59
 msgid "Wike will remember the history of visited articles"
 msgstr "Wike, ziyaret edilen makalelerin geçmişini hatırlayacak"
 
-#: ../data/ui/prefs.ui:139 ../data/ui/prefs.ui:154
+#: ../data/ui/prefs.ui:68 ../data/ui/prefs.ui:80
 msgid "Clear"
 msgstr "Temizle"
 
-#: ../data/ui/prefs.ui:149
-msgid "Clear personal data"
+#: ../data/ui/prefs.ui:76
+msgid "Clear Personal Data"
 msgstr "Kişisel verileri temizle"
 
-#: ../data/ui/prefs.ui:150
+#: ../data/ui/prefs.ui:77
 msgid "Cookies and cache data will be deleted"
 msgstr "Çerezler ve önbellek verileri silinecek"
 
-#: ../src/view.py:235
+#: ../data/ui/page.ui:87
 msgid "Try Again"
 msgstr "Tekrar Dene"
 
-#: ../src/prefs.py:80 ../data/ui/menu.ui:136
+#: ../data/ui/page.ui:78 ../data/ui/menu-main.ui:29
 msgid "Random Article"
 msgstr "Rastgele Makale"
 
-#: ../src/prefs.py:80
-msgid "Last Article"
-msgstr "Son Makale"
+#: ../data/ui/prefs.ui:28
+msgid "Last article"
+msgstr "Son makale"
 
-#: ../data/ui/header.ui:79
-msgid "Search articles"
-msgstr "Makale ara"
-
-#: ../data/ui/header.ui:113
+#: ../data/ui/window.ui:99
 msgid "Bookmarks"
 msgstr "Yer imleri"
 
-#: ../data/ui/header.ui:135
-msgid "Table of contents"
-msgstr "İçindekiler tablosu"
-
-#: ../data/ui/prefs.ui:175
-msgid "Filter Available Languages"
-msgstr "Mevcut Dilleri Süz"
-
-#: ../data/ui/prefs.ui:209
+#: ../data/ui/languages.ui:56
 msgid "Select All"
 msgstr "Tümünü Seç"
 
-#: ../data/ui/prefs.ui:221
+#: ../data/ui/languages.ui:61
 msgid "Select None"
 msgstr "Hiçbirini Seçme"
 
-#: ../data/ui/shortcuts.ui:17
+#: ../data/ui/shortcuts.ui:19
 msgctxt "shortcut window"
 msgid "Main menu"
 msgstr "Ana menü"
 
-#: ../src/view.py:224
-msgid "Click the search button or press F2 to search articles in Wikipedia. You can also use the main menu to open Wikipedia main page, the list of recent articles or get a random article."
-msgstr "Makaleleri Wikipedia'da aramak için arama butonuna veya F2 tuşuna basın.\n"
-"Wikipedia ana sayfasını, son makaleleri veya rastgele bir makaleyi açmak için ana menüyü kullanabilirsiniz."
-
-#: ../src/bookmarks.py:47
-msgid "<b>No Bookmarks</b>\n"
-"\n"
-"<small>Use the <i>Add Bookmark</i> button\n"
-"or press Ctrl+D to add\n"
-"the current article to the list</small>"
-msgstr "<b>Yer İmi Yok</b>\n"
-"\n"
-"<small>Mevcut makaleyi listeye eklemek için\n"
-"<i>Yer İmi Ekle</i> düğmesine veya\n"
-"Ctrl+D'ye basın</small>"
-
-#: ../data/ui/shortcuts.ui:95
+#: ../data/ui/shortcuts.ui:98
 msgctxt "shortcut window"
 msgid "Tabs"
 msgstr "Sekmeler"
 
-#: ../data/ui/shortcuts.ui:99
+#: ../data/ui/shortcuts.ui:101
 msgctxt "shortcut window"
 msgid "New tab"
 msgstr "Yeni sekme"
 
-#: ../data/ui/shortcuts.ui:106
+#: ../data/ui/shortcuts.ui:107
 msgctxt "shortcut window"
 msgid "Close current tab"
 msgstr "Geçerli sekmeyi kapat"
@@ -445,49 +256,331 @@ msgctxt "shortcut window"
 msgid "Next tab"
 msgstr "Sonraki sekme"
 
-#: ../data/ui/shortcuts.ui:120
+#: ../data/ui/shortcuts.ui:119
 msgctxt "shortcut window"
 msgid "Previous tab"
 msgstr "Önceki sekme"
 
-#: ../data/ui/header.ui:61
-msgid "New tab"
-msgstr "Yeni sekme"
-
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:20
-msgid "Open multiple articles in tabs"
-msgstr "Birden fazla makaleyi sekmelerde aç"
-
-#: ../src/view.py:437
+#: ../src/view.py:379
 msgid "Open Link in New Tab"
 msgstr "Bağlantıyı Yeni Sekmede Aç"
 
-#: ../src/view.py:443
+#: ../src/view.py:385
 msgid "Add Link to Bookmarks"
 msgstr "Bağlantıyı Yer İmlerine Ekle"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:29
-msgid "Light, dark and sepia themes"
-msgstr "Açık, karanlık ve sepya temalar"
-
-#: ../src/view.py:439
+#: ../src/view.py:381
 msgid "Open Link in Browser"
 msgstr "Bağlantıyı Tarayıcıda Aç"
 
-#: ../src/view.py:445
+#: ../src/view.py:387 ../data/ui/menu-main.ui:39
 msgid "Copy Link to Clipboard"
 msgstr "Bağlantıyı Panoya Kopyala"
 
-#: ../data/ui/prefs.ui:110
+#: ../data/ui/prefs.ui:50
 msgid "Desktop searches are performed in the default language"
-msgstr "Masaüstü aramaları varsayılan dilde gerçekleştirilir"
+msgstr "Masaüstü aramalarını öntanımlı dilde gerçekleştirilir"
 
-#: ../data/ui/prefs.ui:111
+#: ../data/ui/prefs.ui:51
 msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
 msgstr "Ön ek kullanarak diğer dillerde arama yapabilirsiniz. Ör. İngilizce aramak için -en kullanabilirsiniz"
 
-#: ../data/ui/shortcuts.ui:147
+#: ../data/ui/shortcuts.ui:142
 msgctxt "shortcut window"
 msgid "Random article"
 msgstr "Rastgele makale"
+
+#: ../src/menu.py:88
+msgid "Pick a Font"
+msgstr "Yazı Tipi Seç"
+
+#: ../src/menu.py:117
+msgid "Font"
+msgstr "Yazı Tipi"
+
+#: ../src/history.py:36
+msgid "Today"
+msgstr "Bugün"
+
+#: ../src/history.py:36
+msgid "Last 7 days"
+msgstr "Son 7 gün"
+
+#: ../src/history.py:36
+msgid "Last 30 days"
+msgstr "Son 30 gün"
+
+#: ../src/history.py:36
+msgid "Show full history"
+msgstr "Tam geçmişi göster"
+
+#: ../src/window.py:321 ../src/page.py:138
+msgid "Bookmark added: "
+msgstr "Yer imi eklendi:␣"
+
+#: ../src/window.py:435
+msgid "Print operation completed"
+msgstr "Yazdırma işlemi tamamlandı"
+
+#: ../src/window.py:441
+msgid "Print operation failed"
+msgstr "Yazdırma işlemi başarısız"
+
+#: ../src/window.py:456
+msgid "Link copied to clipboard"
+msgstr "Bağlantı panoya kopyalandı"
+
+#: ../src/application.py:153
+msgid "Source Code"
+msgstr "Kaynak Kodu"
+
+#: ../src/application.py:154
+msgid "Report an Issue"
+msgstr "Hata Bildir"
+
+#: ../src/application.py:155
+msgid "Help Translating"
+msgstr "Çeviriye Yardım Et"
+
+#: ../src/application.py:156
+msgid "Contributors"
+msgstr "Katkıcılar"
+
+#: ../src/application.py:157
+msgid "Flag Icons"
+msgstr "Bayrak Simgeleri"
+
+#: ../src/application.py:158
+msgid "All content from Wikipedia.org and available under CC BY-SA 3.0 unless otherwise noted.\n"
+"\n"
+"Wike is an independent development not endorsed by or affiliated with the Wikimedia Foundation."
+msgstr "Tüm içerik Wikipedia.org sitesinden alınmıştır ve aksi belirtilmedikçe CC BY-SA 3.0 altında kullanılabilir.\n"
+"\n"
+"Wike, Wikimedia Vakfı tarafından onaylanmayan veya onunla bağlantılı olmayan bağımsız bir çalışmadır."
+
+#: ../src/page.py:75
+msgid "Loading"
+msgstr "Yükleniyor"
+
+#: ../src/page.py:102
+msgid "Article not Found"
+msgstr "Makale Bulunamadı"
+
+#: ../src/page.py:110
+msgid "Can't Access Wikipedia"
+msgstr "Wikipedia Sitesine Erişilemedi"
+
+#: ../src/bookmarks.py:34
+msgid "Reading list"
+msgstr "Liste okunuyor"
+
+#: ../data/ui/toc.ui:42
+msgid "No Contents"
+msgstr "İçindekiler Yok"
+
+#: ../data/ui/toc.ui:43
+msgid "There is no table of contents for this page"
+msgstr "Bu sayfa için içindekiler tablosu yok"
+
+#: ../data/ui/languages.ui:10 ../data/ui/search-settings.ui:26
+msgid "Pick your Languages"
+msgstr "Dillerinizi Seçin"
+
+#: ../data/ui/languages.ui:33 ../data/ui/search-settings.ui:20
+#: ../data/ui/langlinks.ui:17
+msgid "Filter languages"
+msgstr "Dilleri süz"
+
+#: ../data/ui/shortcuts.ui:25
+msgctxt "shortcut window"
+msgid "Sidebar"
+msgstr "Kenar çubuğu"
+
+#: ../data/ui/shortcuts.ui:37
+msgctxt "shortcut window"
+msgid "Languages"
+msgstr "Diller"
+
+#: ../data/ui/shortcuts.ui:43
+msgctxt "shortcut window"
+msgid "Search text"
+msgstr "Metin ara"
+
+#: ../data/ui/shortcuts.ui:49
+msgctxt "shortcut window"
+msgid "Print"
+msgstr "Yazdır"
+
+#: ../data/ui/shortcuts.ui:55
+msgctxt "shortcut window"
+msgid "Copy link to clipboard"
+msgstr "Bağlantıyı panoya kopyala"
+
+#: ../data/ui/shortcuts.ui:136
+msgctxt "shortcut window"
+msgid "Main page"
+msgstr "Ana sayfa"
+
+#: ../data/ui/shortcuts.ui:148
+msgctxt "shortcut window"
+msgid "History of recent articles"
+msgstr "Son makaleler geçmişi"
+
+#: ../data/ui/shortcuts.ui:166
+msgctxt "shortcut window"
+msgid "Reload current page"
+msgstr "Geçerli sayfayı yeniden yükle"
+
+#: ../data/ui/search.ui:15 ../data/ui/page.ui:57
+msgid "Search Wikipedia"
+msgstr "Wikipediaʼda Ara"
+
+#: ../data/ui/search.ui:26
+msgid "Search Settings"
+msgstr "Arama Ayarları"
+
+#: ../data/ui/dialogs.ui:11
+msgid "New Bookmarks List"
+msgstr "Yeni Yer İmi Listesi"
+
+#: ../data/ui/dialogs.ui:18 ../data/ui/dialogs.ui:39
+msgid "List Name"
+msgstr "Liste Adı"
+
+#: ../data/ui/dialogs.ui:26 ../data/ui/dialogs.ui:47 ../data/ui/dialogs.ui:64
+#: ../data/ui/dialogs.ui:76 ../data/ui/dialogs.ui:88
+msgid "Cancel"
+msgstr "İptal Et"
+
+#: ../data/ui/dialogs.ui:27
+msgid "Create List"
+msgstr "Liste Oluştur"
+
+#: ../data/ui/dialogs.ui:32
+msgid "Rename Bookmarks List"
+msgstr "Yer İmi Listesini Yeniden Adlandır"
+
+#: ../data/ui/dialogs.ui:48
+msgid "Rename List"
+msgstr "Listeyi Yeniden Adlandır"
+
+#: ../data/ui/dialogs.ui:60
+msgid "Also delete the list"
+msgstr "Ayrıca listeyi de sil"
+
+#: ../data/ui/dialogs.ui:70
+msgid "Clear History?"
+msgstr "Geçmiş Temizlensin Mi?"
+
+#: ../data/ui/dialogs.ui:77 ../data/ui/history.ui:26
+msgid "Clear History"
+msgstr "Geçmişi Temizle"
+
+#: ../data/ui/prefs.ui:26
+msgid "Wikipedia main page"
+msgstr "Wikipedia ana sayfası"
+
+#: ../data/ui/prefs.ui:27
+msgid "Random article"
+msgstr "Rastgele makale"
+
+#: ../data/ui/headerbar.ui:25
+msgid "New Tab"
+msgstr "Yeni Sekme"
+
+#: ../data/ui/headerbar.ui:43 ../data/ui/actionbar.ui:34
+msgid "View"
+msgstr "Görünüm"
+
+#: ../data/ui/headerbar.ui:49 ../data/ui/actionbar.ui:27
+msgid "Sidebar"
+msgstr "Kenar çubuğu"
+
+#: ../data/ui/page.ui:20
+msgid "Search text"
+msgstr "Arama metni"
+
+#: ../data/ui/page.ui:58
+msgid "Start typing to search Wikipedia articles"
+msgstr "Wikipedia makalelerini aramak için yazmaya başlayın"
+
+#: ../data/ui/page.ui:68 ../data/ui/menu-main.ui:25
+msgid "Main Page"
+msgstr "Ana Sayfa"
+
+#: ../data/ui/langlinks.ui:38
+msgid "No Languages"
+msgstr "Dil Yok"
+
+#: ../data/ui/langlinks.ui:39
+msgid "This page is not available in other languages"
+msgstr "Bu sayfa diğer dillerde yok"
+
+#: ../data/ui/menu-view.ui:21
+msgid "Show"
+msgstr "Göster"
+
+#: ../data/ui/menu-view.ui:23
+msgid "Language Flags"
+msgstr "Dil Bayrakları"
+
+#: ../data/ui/menu-view.ui:27
+msgid "Link Previews"
+msgstr "Bağlantı Ön İzlemeleri"
+
+#: ../data/ui/history.ui:49
+msgid "Empty History"
+msgstr "Geçmiş Boş"
+
+#: ../data/ui/history.ui:50
+msgid "There are no recent articles in the history"
+msgstr "Geçmişte makale yok"
+
+#: ../data/ui/bookmarks.ui:55
+msgid "No Bookmarks"
+msgstr "Yer İmi Yok"
+
+#: ../data/ui/bookmarks.ui:56
+msgid "Use the Add Bookmark button or press Ctrl+D to add the current article to the list"
+msgstr "Geçerli makaleyi listeye eklemek için Yer İmi Ekle düğmesini kullanın ya da Ctrl+D tuşlarına basın"
+
+#: ../data/ui/window.ui:78
+msgid "Contents"
+msgstr "İçerikler"
+
+#: ../data/ui/window.ui:110
+msgid "History"
+msgstr "Geçmiş"
+
+#: ../data/ui/menu-main.ui:13
+msgid "Print"
+msgstr "Yazdır"
+
+#: ../data/ui/menu-main.ui:18
+msgid "Search Text"
+msgstr "Metin Ara"
+
+#: ../data/ui/menu-main.ui:35
+msgid "Open in Browser"
+msgstr "Tarayıcıda Aç"
+
+#: ../data/ui/bookmarks-menu.ui:12
+msgid "Create New List…"
+msgstr "Yeni Liste Oluştur..."
+
+#: ../data/ui/bookmarks-menu.ui:18
+msgid "Rename List…"
+msgstr "Listeyi Yeniden Adlandır..."
+
+#: ../data/ui/bookmarks-menu.ui:22
+msgid "Clear List…"
+msgstr "Listeyi Temizle..."
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
+msgid "It supports more than 300 languages and integrates with desktop searches, providing suggestions that make it easier to find any content. Other features are: bookmarks with multiple lists, article table of contents, history, text searches and much more…"
+msgstr "300ʼden fazla dili destekler ve masaüstü aramalarıyla tümleşik olarak herhangi bir içeriği bulmayı kolaylaştıran öneriler sunar. Diğer özellikler şunlardır: birden fazla liste içeren yer imleri, makale içindekiler tablosu, tarih, metin aramaları ve çok daha fazlası..."
+
+#: ../data/ui/window.ui:55
+msgid "Pin Sidebar"
+msgstr "Kenar Çubuğunu Sabitle"
 

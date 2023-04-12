@@ -44,7 +44,7 @@
   </screenshots>
 
   <releases>
-    <release version="2.0.0" date="2023-04-10">
+    <release version="2.0.0" date="2023-04-12">
       <description>
         <p>This version brings a major revamp to the user interface and also introduces some new features. These are the main novelties:</p>
         <ul>
@@ -60,7 +60,7 @@
           <li>Use of flag icons to help identify languages. This can be turned off.</li>
           <li>New printing option. This also allows export articles using the "Print to PDF" option.</li>
           <li>New app icon.</li>
-          <li>Updated translations.</li>
+          <li>Updated translations: Bengali, Bulgarian, Croatian, Czech, Dutch, Finnish, French, German, Hebrew, Italian, Persian, Polish, Russian, Spanish, Swedish, Tamil, Turkish.</li>
         </ul>
       </description>
     </release>

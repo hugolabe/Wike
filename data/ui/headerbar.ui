@@ -10,12 +10,14 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <child type="start">
       <object class="GtkButton" id="prev_button">
         <property name="icon-name">go-previous-symbolic</property>
+        <property name="tooltip-text" translatable="yes">Back</property>
         <property name="action-name">win.prev-page</property>
       </object>
     </child>
     <child type="start">
       <object class="GtkButton" id="next_button">
         <property name="icon-name">go-next-symbolic</property>
+        <property name="tooltip-text" translatable="yes">Forward</property>
         <property name="action-name">win.next-page</property>
       </object>
     </child>
@@ -34,6 +36,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <child type="end">
       <object class="GtkMenuButton" id="menu_button">
         <property name="icon-name">open-menu-symbolic</property>
+        <property name="tooltip-text" translatable="yes">Main Menu</property>
         <property name="primary">true</property>
       </object>
     </child>

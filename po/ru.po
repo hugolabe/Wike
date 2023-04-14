@@ -53,7 +53,7 @@ msgstr "Добавить закладку"
 #: ../data/ui/shortcuts.ui:16
 msgctxt "shortcut window"
 msgid "General"
-msgstr "Основные"
+msgstr "Общие"
 
 #: ../data/ui/shortcuts.ui:31
 msgctxt "shortcut window"
@@ -63,17 +63,17 @@ msgstr "Содержание"
 #: ../data/ui/shortcuts.ui:61
 msgctxt "shortcut window"
 msgid "Preferences"
-msgstr "Настройки"
+msgstr "Параметры"
 
 #: ../data/ui/shortcuts.ui:73
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr "Выйти из программы"
+msgstr "Выйти"
 
 #: ../data/ui/shortcuts.ui:67
 msgctxt "shortcut window"
 msgid "Keyboard shortcuts"
-msgstr "Горячие клавиши"
+msgstr "Комбинации клавиш"
 
 #: ../data/ui/shortcuts.ui:127
 msgctxt "shortcut window"
@@ -107,15 +107,15 @@ msgstr "Добавить закладку"
 
 #: ../data/ui/menu-main.ui:45
 msgid "Preferences"
-msgstr "Настройки"
+msgstr "Параметры"
 
 #: ../data/ui/menu-main.ui:49
 msgid "Keyboard Shortcuts"
-msgstr "Горячие клавиши"
+msgstr "Комбинации клавиш"
 
 #: ../data/ui/menu-main.ui:53
 msgid "About Wike"
-msgstr "О программе"
+msgstr "О Wike"
 
 #: ../data/ui/prefs.ui:18
 msgid "Behavior"
@@ -168,7 +168,7 @@ msgstr "Очистить данные"
 #. Don't remove %s tag!
 #: ../src/wike-sp.in:69
 msgid "Search “%s” on Wikipedia"
-msgstr "Искать «%s» в Википедии"
+msgstr "Искать “%s” в Википедии"
 
 #: ../data/ui/prefs.ui:21
 msgid "Home Page"
@@ -266,11 +266,11 @@ msgstr "Открыть ссылку в новой вкладке"
 
 #: ../src/view.py:385
 msgid "Add Link to Bookmarks"
-msgstr "Добавить ссылку в Закладки"
+msgstr "Добавить ссылку в закладки"
 
 #: ../src/view.py:381
 msgid "Open Link in Browser"
-msgstr "Открыть ссылку в Браузере"
+msgstr "Открыть ссылку в браузере"
 
 #: ../src/view.py:387 ../data/ui/menu-main.ui:39
 msgid "Copy Link to Clipboard"
@@ -565,19 +565,19 @@ msgstr "Открыть в Браузере"
 
 #: ../data/ui/bookmarks-menu.ui:12
 msgid "Create New List…"
-msgstr "Создать Новый Список..."
+msgstr "Создать Новый Список…"
 
 #: ../data/ui/bookmarks-menu.ui:18
 msgid "Rename List…"
-msgstr "Переименовать Список..."
+msgstr "Переименовать Список…"
 
 #: ../data/ui/bookmarks-menu.ui:22
 msgid "Clear List…"
-msgstr "Очистить Список..."
+msgstr "Очистить Список…"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
 msgid "It supports more than 300 languages and integrates with desktop searches, providing suggestions that make it easier to find any content. Other features are: bookmarks with multiple lists, article table of contents, history, text searches and much more…"
-msgstr "Программа поддерживает более 300 языков, поддерживает интеграцию с поиском в рабочей среде операционной системы, предлагет подсказки, которые делают поиск информации более простым. Дополнительные функции: создание списков для группировки закладок, Содержание для статей для быстрого перехода по разделам, история, поиск по тексту и многое другое..."
+msgstr "Программа поддерживает более 300 языков, поддерживает интеграцию с поиском в рабочей среде операционной системы, предлагет подсказки, которые делают поиск информации более простым. Дополнительные функции: создание списков для группировки закладок, Содержание для статей для быстрого перехода по разделам, история, поиск по тексту и многое другое…"
 
 #: ../data/ui/window.ui:55
 msgid "Pin Sidebar"

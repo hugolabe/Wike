@@ -3,8 +3,6 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 
-import gi
-gi.require_version('Gtk', '4.0')
 from gi.repository import GLib, Gio, Gtk, Pango
 
 from wike.data import settings

@@ -5,9 +5,6 @@
 
 from datetime import datetime
 
-import gi
-gi.require_version('Gtk', '4.0')
-gi.require_version('Adw', '1')
 from gi.repository import GObject, Gio, Gtk, Adw
 
 from wike.data import settings, languages, history

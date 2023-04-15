@@ -6,7 +6,6 @@
 import json
 from datetime import datetime
 
-import gi
 from gi.repository import GLib, Gio
 
 

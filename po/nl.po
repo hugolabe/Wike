@@ -44,7 +44,8 @@ msgstr "Zoeksuggesties"
 #. Hugo Olabera <hugolabe@gmail.com>
 #: ../data/ui/about.ui:16
 msgid "translator-credits"
-msgstr "Heimen Stoffels <vistausss@fastmail.com>"
+msgstr "Heimen Stoffels <vistausss@fastmail.com>\n"
+"Philip Goto https://flipflop97.github.io/"
 
 #: ../src/view.py:364 ../data/ui/bookmarks.ui:26
 msgid "Add Bookmark"
@@ -68,7 +69,7 @@ msgstr "Voorkeuren"
 #: ../data/ui/shortcuts.ui:73
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr "Sluit af"
+msgstr "Afsluiten"
 
 #: ../data/ui/shortcuts.ui:67
 msgctxt "shortcut window"
@@ -83,7 +84,7 @@ msgstr "Navigatie"
 #: ../data/ui/shortcuts.ui:130
 msgctxt "shortcut window"
 msgid "Search articles"
-msgstr "Zoek naar artikelen"
+msgstr "Zoeken naar artikelen"
 
 #: ../data/ui/shortcuts.ui:154
 msgctxt "shortcut window"
@@ -103,7 +104,7 @@ msgstr "Bladwijzers"
 #: ../data/ui/shortcuts.ui:90
 msgctxt "shortcut window"
 msgid "Add bookmark"
-msgstr "Voeg bladwijzer toe"
+msgstr "Bladwijzer toevoegen"
 
 #: ../data/ui/menu-main.ui:45
 msgid "Preferences"
@@ -168,7 +169,7 @@ msgstr "Gegevens wissen"
 #. Don't remove %s tag!
 #: ../src/wike-sp.in:69
 msgid "Search “%s” on Wikipedia"
-msgstr "«%s» opzoeken op Wikipedia"
+msgstr "‘%s’ opzoeken op Wikipedia"
 
 #: ../data/ui/prefs.ui:21
 msgid "Home Page"
@@ -216,7 +217,7 @@ msgstr "Willekeurig artikel"
 
 #: ../data/ui/prefs.ui:28
 msgid "Last article"
-msgstr "Recentst gelezen artikel"
+msgstr "Meest recent gelezen artikel"
 
 #: ../data/ui/window.ui:99
 msgid "Bookmarks"
@@ -291,7 +292,7 @@ msgstr "Willekeurig artikel"
 
 #: ../src/menu.py:88
 msgid "Pick a Font"
-msgstr "Kies een lettertype"
+msgstr "Lettertype kiezen"
 
 #: ../src/menu.py:117
 msgid "Font"
@@ -347,7 +348,7 @@ msgstr "Bijdragers"
 
 #: ../src/application.py:157
 msgid "Flag Icons"
-msgstr "Vlagpictogrammen"
+msgstr "Vlagpictogrammen door"
 
 #: ../src/application.py:158
 msgid "All content from Wikipedia.org and available under CC BY-SA 3.0 unless otherwise noted.\n"

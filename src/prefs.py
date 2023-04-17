@@ -3,10 +3,6 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 
-import gi
-gi.require_version('Gtk', '4.0')
-gi.require_version('Adw', '1')
-gi.require_version('WebKit', '6.0')
 from gi.repository import Gio, Gtk, Adw, WebKit
 
 from wike.data import settings

@@ -39,6 +39,8 @@ class HeaderBar(Gtk.HeaderBar):
 
     self.search_box = SearchBox(window)
     self.set_title_widget(self.search_box)
+
+    self.set_mobile(True)
   
   # Set headerbar for mobile or desktop
   

@@ -45,14 +45,14 @@ class Window(Adw.ApplicationWindow):
 
     width = settings.get_int('window-width')
     height = settings.get_int('window-height')
-    
+
+    if width < 720:
+      self.mobile_layout = True
+
     self.set_default_size(width, height)
     if settings.get_boolean('window-max'):
       self.maximize()
-    else:
-      if width < 720:
-        self.mobile_layout = True
-    
+
     self.page = PageBox(self)
     tabpage = self.tabview.append(self.page)
 
@@ -87,10 +87,7 @@ class Window(Adw.ApplicationWindow):
 
     settings.bind('flap-pinned', self.flap_pin_button, 'active', Gio.SettingsBindFlags.DEFAULT)
     settings.bind('flap-page', self.flap_stack, 'visible-child-name', Gio.SettingsBindFlags.DEFAULT)
-    
-    self.connect('notify::default-width', self._layout_changed_cb)
-    self.connect('notify::maximized', self._layout_changed_cb)
-    
+
     self._set_actions(app)
     self._set_layout()
 
@@ -164,12 +161,9 @@ class Window(Adw.ApplicationWindow):
       pin_sidebar_action.change_state(GLib.Variant.new_boolean(True))
 
   # If window size changed set layout
-  
-  def _layout_changed_cb(self, window, parameter):
-    size = self.get_default_size()
-    maximized = self.is_maximized()
 
-    if size.width < 720 and not maximized:
+  def do_size_allocate(self, width, height, baseline):
+    if width < 720:
       if self.mobile_layout == False:
         self.mobile_layout = True
         self._set_layout()
@@ -177,6 +171,8 @@ class Window(Adw.ApplicationWindow):
       if self.mobile_layout == True:
         self.mobile_layout = False
         self._set_layout()
+
+    Adw.ApplicationWindow.do_size_allocate(self, width, height, baseline)
 
   # Set layout for mobile or desktop
   

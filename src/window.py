@@ -127,7 +127,7 @@ class Window(Adw.ApplicationWindow):
                 ('prev-tab', self._prev_tab_cb, ('<Shift><Ctrl>Tab',)),
                 ('go-search', self._go_search_cb, ('F2', '<Ctrl>K',)),
                 ('add-bookmark', self._add_bookmark_cb, ('<Ctrl>D',)),
-                ('show-toc', self._show_toc_cb, ('<Ctrl>C',)),
+                ('show-toc', self._show_toc_cb, ('<Ctrl>I',)),
                 ('show-langlinks', self._show_langlinks_cb, ('<Ctrl>L',)),
                 ('show-bookmarks', self._show_bookmarks_cb, ('<Ctrl>B',)),
                 ('show-history', self._show_history_cb, ('<Ctrl>H',)),

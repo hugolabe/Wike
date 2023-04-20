@@ -7,19 +7,19 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: pl\n"
 
-#: ../src/view.py:252
+#: ../src/view.py:248
 msgid "Article not found"
 msgstr "nie znaleziono atykułu"
 
-#: ../src/page.py:103
+#: ../src/page.py:100
 msgid "Can't find any results for requested query"
 msgstr "nie znaleziono wyników dla wyszukiwania"
 
-#: ../src/view.py:254
+#: ../src/view.py:250
 msgid "Can't access Wikipedia"
 msgstr "brak dostępu do wikipedii"
 
-#: ../src/page.py:111
+#: ../src/page.py:108
 msgid "Check your Internet connection and try again"
 msgstr "sprawdź twoje połączenie internetowe i spróbuj ponownie"
 
@@ -46,7 +46,7 @@ msgstr "Sugestie wyszukiwania"
 msgid "translator-credits"
 msgstr "rebok232 - Piotr r232yt@int.pl"
 
-#: ../src/view.py:364 ../data/ui/bookmarks.ui:26
+#: ../src/view.py:360 ../data/ui/bookmarks.ui:26
 msgid "Add Bookmark"
 msgstr "Dodaj zakładkę"
 
@@ -260,19 +260,19 @@ msgctxt "shortcut window"
 msgid "Previous tab"
 msgstr "Poprzednia karta"
 
-#: ../src/view.py:379
+#: ../src/view.py:375
 msgid "Open Link in New Tab"
 msgstr "Otwórz link w nowej karcie"
 
-#: ../src/view.py:385
+#: ../src/view.py:381
 msgid "Add Link to Bookmarks"
 msgstr "Dodaj link do zakładek"
 
-#: ../src/view.py:381
+#: ../src/view.py:377
 msgid "Open Link in Browser"
 msgstr "Otwórz link w przeglądarce"
 
-#: ../src/view.py:387 ../data/ui/menu-main.ui:39
+#: ../src/view.py:383 ../data/ui/menu-main.ui:39
 msgid "Copy Link to Clipboard"
 msgstr "Skopiuj link do schowka"
 
@@ -289,67 +289,67 @@ msgctxt "shortcut window"
 msgid "Random article"
 msgstr "Losowy artykuł"
 
-#: ../src/menu.py:88
+#: ../src/menu.py:86
 msgid "Pick a Font"
 msgstr "Wybierz czcionkę"
 
-#: ../src/menu.py:117
+#: ../src/menu.py:115
 msgid "Font"
 msgstr "Czcionka"
 
-#: ../src/history.py:36
+#: ../src/history.py:33
 msgid "Today"
 msgstr "Dzisiaj"
 
-#: ../src/history.py:36
+#: ../src/history.py:33
 msgid "Last 7 days"
 msgstr "Ostatnie 7 dni"
 
-#: ../src/history.py:36
+#: ../src/history.py:33
 msgid "Last 30 days"
 msgstr "Ostatnie 30 dni"
 
-#: ../src/history.py:36
+#: ../src/history.py:33
 msgid "Show full history"
 msgstr "Pokaż pełną historię"
 
-#: ../src/window.py:321 ../src/page.py:138
+#: ../src/window.py:312 ../src/page.py:135
 msgid "Bookmark added: "
 msgstr "Dodano zakładkę: "
 
-#: ../src/window.py:435
+#: ../src/window.py:426
 msgid "Print operation completed"
 msgstr "Zakończono operację drukowania"
 
-#: ../src/window.py:441
+#: ../src/window.py:432
 msgid "Print operation failed"
 msgstr "Operacja drukowanie nie powiodła się"
 
-#: ../src/window.py:456
+#: ../src/window.py:447
 msgid "Link copied to clipboard"
 msgstr "Skopiowano link do schowka"
 
-#: ../src/application.py:153
+#: ../src/application.py:154
 msgid "Source Code"
 msgstr "Kod źródłowy"
 
-#: ../src/application.py:154
+#: ../src/application.py:155
 msgid "Report an Issue"
 msgstr "Zgłoś problem"
 
-#: ../src/application.py:155
+#: ../src/application.py:156
 msgid "Help Translating"
 msgstr "Pomóż w tłumaczeniu"
 
-#: ../src/application.py:156
+#: ../src/application.py:157
 msgid "Contributors"
 msgstr "Współtwórcy"
 
-#: ../src/application.py:157
+#: ../src/application.py:158
 msgid "Flag Icons"
 msgstr "Ikony flag"
 
-#: ../src/application.py:158
+#: ../src/application.py:159
 msgid "All content from Wikipedia.org and available under CC BY-SA 3.0 unless otherwise noted.\n"
 "\n"
 "Wike is an independent development not endorsed by or affiliated with the Wikimedia Foundation."
@@ -357,19 +357,19 @@ msgstr "Cała zawartość z Wikipedia.org dostępna jest na licencji CC BY-SA 3.
 "\n"
 "Wike jest niezależnym projektem, który nie jest wspierany ani powiązany z Fundacją Wikimedia."
 
-#: ../src/page.py:75
+#: ../src/page.py:72
 msgid "Loading"
 msgstr "Wczytywanie"
 
-#: ../src/page.py:102
+#: ../src/page.py:99
 msgid "Article not Found"
 msgstr "Nie znaleziono artykułu"
 
-#: ../src/page.py:110
+#: ../src/page.py:107
 msgid "Can't Access Wikipedia"
 msgstr "Nie można uzyskać dostępu do Wikipedii"
 
-#: ../src/bookmarks.py:34
+#: ../src/bookmarks.py:31
 msgid "Reading list"
 msgstr "Lista artykułów do przeczytania"
 
@@ -483,15 +483,15 @@ msgstr "Strona główna Wikipedii"
 msgid "Random article"
 msgstr "Losowy artykuł"
 
-#: ../data/ui/headerbar.ui:25
+#: ../data/ui/headerbar.ui:27
 msgid "New Tab"
 msgstr "Nowa karta"
 
-#: ../data/ui/headerbar.ui:43 ../data/ui/actionbar.ui:34
+#: ../data/ui/headerbar.ui:46 ../data/ui/actionbar.ui:34
 msgid "View"
 msgstr "Widok"
 
-#: ../data/ui/headerbar.ui:49 ../data/ui/actionbar.ui:27
+#: ../data/ui/headerbar.ui:52 ../data/ui/actionbar.ui:27
 msgid "Sidebar"
 msgstr "Pasek boczny"
 
@@ -582,4 +582,16 @@ msgstr "Obsługuje ponad 300 języków i integruje się z wyszukiwaniem na pulpi
 #: ../data/ui/window.ui:55
 msgid "Pin Sidebar"
 msgstr "Przypnij pasek boczny"
+
+#: ../data/ui/headerbar.ui:13
+msgid "Back"
+msgstr "Wstecz"
+
+#: ../data/ui/headerbar.ui:20
+msgid "Forward"
+msgstr "Dalej"
+
+#: ../data/ui/headerbar.ui:39
+msgid "Main Menu"
+msgstr "Menu główne"
 

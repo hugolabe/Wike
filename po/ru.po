@@ -7,19 +7,19 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: ru\n"
 
-#: ../src/view.py:252
+#: ../src/view.py:248
 msgid "Article not found"
 msgstr "Статья не найдена"
 
-#: ../src/page.py:103
+#: ../src/page.py:100
 msgid "Can't find any results for requested query"
 msgstr "Не можем найти, подходящие вашему запросу, результаты"
 
-#: ../src/view.py:254
+#: ../src/view.py:250
 msgid "Can't access Wikipedia"
 msgstr "Нет доступа к Википедии"
 
-#: ../src/page.py:111
+#: ../src/page.py:108
 msgid "Check your Internet connection and try again"
 msgstr "Проверьте ваше интернет соединение и попробуйте еще раз"
 
@@ -37,7 +37,7 @@ msgstr "Очистить список"
 
 #: ../data/ui/search-settings.ui:69
 msgid "Search Suggestions"
-msgstr "Подсказки для поиска"
+msgstr "Подсказки при вводе"
 
 #. Add your name like this:
 #. 
@@ -46,7 +46,7 @@ msgstr "Подсказки для поиска"
 msgid "translator-credits"
 msgstr "Евгений Буря"
 
-#: ../src/view.py:364 ../data/ui/bookmarks.ui:26
+#: ../src/view.py:360 ../data/ui/bookmarks.ui:26
 msgid "Add Bookmark"
 msgstr "Добавить закладку"
 
@@ -260,19 +260,19 @@ msgctxt "shortcut window"
 msgid "Previous tab"
 msgstr "Предыдущая вкладка"
 
-#: ../src/view.py:379
+#: ../src/view.py:375
 msgid "Open Link in New Tab"
 msgstr "Открыть ссылку в новой вкладке"
 
-#: ../src/view.py:385
+#: ../src/view.py:381
 msgid "Add Link to Bookmarks"
 msgstr "Добавить ссылку в закладки"
 
-#: ../src/view.py:381
+#: ../src/view.py:377
 msgid "Open Link in Browser"
 msgstr "Открыть ссылку в браузере"
 
-#: ../src/view.py:387 ../data/ui/menu-main.ui:39
+#: ../src/view.py:383 ../data/ui/menu-main.ui:39
 msgid "Copy Link to Clipboard"
 msgstr "Скопировать ссылку в буфер обмена"
 
@@ -289,67 +289,67 @@ msgctxt "shortcut window"
 msgid "Random article"
 msgstr "Случайная статья"
 
-#: ../src/menu.py:88
+#: ../src/menu.py:86
 msgid "Pick a Font"
 msgstr "Выберите шрифт"
 
-#: ../src/menu.py:117
+#: ../src/menu.py:115
 msgid "Font"
 msgstr "Шрифт"
 
-#: ../src/history.py:36
+#: ../src/history.py:33
 msgid "Today"
 msgstr "Сегодня"
 
-#: ../src/history.py:36
+#: ../src/history.py:33
 msgid "Last 7 days"
 msgstr "Последние 7 дней"
 
-#: ../src/history.py:36
+#: ../src/history.py:33
 msgid "Last 30 days"
 msgstr "Последние 30 дней"
 
-#: ../src/history.py:36
+#: ../src/history.py:33
 msgid "Show full history"
 msgstr "Показать всю историю"
 
-#: ../src/window.py:321 ../src/page.py:138
+#: ../src/window.py:312 ../src/page.py:135
 msgid "Bookmark added: "
 msgstr "Закладка добавлена:␣"
 
-#: ../src/window.py:435
+#: ../src/window.py:426
 msgid "Print operation completed"
 msgstr "Печать выполнена"
 
-#: ../src/window.py:441
+#: ../src/window.py:432
 msgid "Print operation failed"
 msgstr "Печать не удалась"
 
-#: ../src/window.py:456
+#: ../src/window.py:447
 msgid "Link copied to clipboard"
 msgstr "Ссылка скопирована в буфер обмена"
 
-#: ../src/application.py:153
+#: ../src/application.py:154
 msgid "Source Code"
 msgstr "Исходный код"
 
-#: ../src/application.py:154
+#: ../src/application.py:155
 msgid "Report an Issue"
 msgstr "Сообщить об ошибке"
 
-#: ../src/application.py:155
+#: ../src/application.py:156
 msgid "Help Translating"
 msgstr "Помочь с переводом"
 
-#: ../src/application.py:156
+#: ../src/application.py:157
 msgid "Contributors"
 msgstr "Авторы"
 
-#: ../src/application.py:157
-msgid "Flag Icons"
-msgstr "Флаги"
-
 #: ../src/application.py:158
+msgid "Flag Icons"
+msgstr "Иконки Флагов стран"
+
+#: ../src/application.py:159
 msgid "All content from Wikipedia.org and available under CC BY-SA 3.0 unless otherwise noted.\n"
 "\n"
 "Wike is an independent development not endorsed by or affiliated with the Wikimedia Foundation."
@@ -357,19 +357,19 @@ msgstr "Всё содержимое получено от Wikipedia.org и до�
 "\n"
 "Wike — это независимая разработка, не одобренная и не связанная с Фондом Викимедиа."
 
-#: ../src/page.py:75
+#: ../src/page.py:72
 msgid "Loading"
 msgstr "Загрузка"
 
-#: ../src/page.py:102
+#: ../src/page.py:99
 msgid "Article not Found"
 msgstr "Статья не найдена"
 
-#: ../src/page.py:110
+#: ../src/page.py:107
 msgid "Can't Access Wikipedia"
 msgstr "Нет доступа к Wikipedia"
 
-#: ../src/bookmarks.py:34
+#: ../src/bookmarks.py:31
 msgid "Reading list"
 msgstr "Список для чтения"
 
@@ -388,7 +388,7 @@ msgstr "Выберите ваш язык"
 #: ../data/ui/languages.ui:33 ../data/ui/search-settings.ui:20
 #: ../data/ui/langlinks.ui:17
 msgid "Filter languages"
-msgstr "Фильтровать языки"
+msgstr "Фильтр по языкам"
 
 #: ../data/ui/shortcuts.ui:25
 msgctxt "shortcut window"
@@ -432,7 +432,7 @@ msgstr "Обновить текущую страницу"
 
 #: ../data/ui/search.ui:15 ../data/ui/page.ui:57
 msgid "Search Wikipedia"
-msgstr "Поиск по Wikipedia"
+msgstr "Найти в Wikipedia"
 
 #: ../data/ui/search.ui:26
 msgid "Search Settings"
@@ -483,15 +483,15 @@ msgstr "Главная страница Wikipedia"
 msgid "Random article"
 msgstr "Случайная статья"
 
-#: ../data/ui/headerbar.ui:25
+#: ../data/ui/headerbar.ui:27
 msgid "New Tab"
 msgstr "Новая вкладка"
 
-#: ../data/ui/headerbar.ui:43 ../data/ui/actionbar.ui:34
+#: ../data/ui/headerbar.ui:46 ../data/ui/actionbar.ui:34
 msgid "View"
-msgstr "Просмотр"
+msgstr "Оформление"
 
-#: ../data/ui/headerbar.ui:49 ../data/ui/actionbar.ui:27
+#: ../data/ui/headerbar.ui:52 ../data/ui/actionbar.ui:27
 msgid "Sidebar"
 msgstr "Боковая панель"
 
@@ -521,7 +521,7 @@ msgstr "Показать"
 
 #: ../data/ui/menu-view.ui:23
 msgid "Language Flags"
-msgstr "Флаги языков"
+msgstr "Отображать флаг языка"
 
 #: ../data/ui/menu-view.ui:27
 msgid "Link Previews"
@@ -557,7 +557,7 @@ msgstr "Печать"
 
 #: ../data/ui/menu-main.ui:18
 msgid "Search Text"
-msgstr "Искать текст"
+msgstr "Поиск по тексту"
 
 #: ../data/ui/menu-main.ui:35
 msgid "Open in Browser"
@@ -582,4 +582,16 @@ msgstr "Программа поддерживает более 300 языков,
 #: ../data/ui/window.ui:55
 msgid "Pin Sidebar"
 msgstr "Закрепить боковую панель"
+
+#: ../data/ui/headerbar.ui:13
+msgid "Back"
+msgstr "Назад"
+
+#: ../data/ui/headerbar.ui:20
+msgid "Forward"
+msgstr "Вперед"
+
+#: ../data/ui/headerbar.ui:39
+msgid "Main Menu"
+msgstr "Главное меню"
 

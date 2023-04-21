@@ -21,6 +21,10 @@ function clickFeaturesIcon (featuresIcon) {
     featuresImage.src = "media/wike-historic.png";
     featuresTitle.textContent = "Recent Articles";
     featuresText.textContent = "Use the history to access the last visited articles.";
+  } else if (featuresIcon.value == 3) {
+    featuresImage.src = "media/wike-mobile.png";
+    featuresTitle.textContent = "Mobile View";
+    featuresText.textContent = "Adaptive layout suitable for desktop and mobile devices.";
   } else {
     featuresImage.src = "media/wike-toc.png";
     featuresTitle.textContent = "Table of Contents";

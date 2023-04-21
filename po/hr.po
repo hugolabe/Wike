@@ -7,19 +7,19 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: hr\n"
 
-#: ../src/view.py:252
+#: ../src/view.py:248
 msgid "Article not found"
 msgstr "Članak nije pronađen"
 
-#: ../src/page.py:103
+#: ../src/page.py:100
 msgid "Can't find any results for requested query"
 msgstr "Nema rezultata za traženi upit"
 
-#: ../src/view.py:254
+#: ../src/view.py:250
 msgid "Can't access Wikipedia"
 msgstr "Wikipedija nije dostupna"
 
-#: ../src/page.py:111
+#: ../src/page.py:108
 msgid "Check your Internet connection and try again"
 msgstr "Provjeri internetsku vezu i pokušaj ponovo"
 
@@ -46,7 +46,7 @@ msgstr "Prijedlozi za pretragu"
 msgid "translator-credits"
 msgstr "Milo Ivir <mail@milotype.de>"
 
-#: ../src/view.py:364 ../data/ui/bookmarks.ui:26
+#: ../src/view.py:360 ../data/ui/bookmarks.ui:26
 msgid "Add Bookmark"
 msgstr "Dodaj zabilješku"
 
@@ -260,19 +260,19 @@ msgctxt "shortcut window"
 msgid "Previous tab"
 msgstr "Prethodna kartica"
 
-#: ../src/view.py:379
+#: ../src/view.py:375
 msgid "Open Link in New Tab"
 msgstr "Otvori poveznicu u novoj karticu"
 
-#: ../src/view.py:385
+#: ../src/view.py:381
 msgid "Add Link to Bookmarks"
 msgstr "Dodaj poveznicu u zabilješke"
 
-#: ../src/view.py:381
+#: ../src/view.py:377
 msgid "Open Link in Browser"
 msgstr "Otvori poveznicu u pregledniku"
 
-#: ../src/view.py:387 ../data/ui/menu-main.ui:39
+#: ../src/view.py:383 ../data/ui/menu-main.ui:39
 msgid "Copy Link to Clipboard"
 msgstr "Kopiraj poveznicu u međuspremnik"
 
@@ -289,67 +289,67 @@ msgctxt "shortcut window"
 msgid "Random article"
 msgstr "Slučajni članak"
 
-#: ../src/menu.py:88
+#: ../src/menu.py:86
 msgid "Pick a Font"
 msgstr "Odaberi font"
 
-#: ../src/menu.py:117
+#: ../src/menu.py:115
 msgid "Font"
 msgstr "Font"
 
-#: ../src/history.py:36
+#: ../src/history.py:33
 msgid "Today"
 msgstr "Danas"
 
-#: ../src/history.py:36
+#: ../src/history.py:33
 msgid "Last 7 days"
 msgstr "Zadnjih 7 dana"
 
-#: ../src/history.py:36
+#: ../src/history.py:33
 msgid "Last 30 days"
 msgstr "Zadnjih 30 dana"
 
-#: ../src/history.py:36
+#: ../src/history.py:33
 msgid "Show full history"
 msgstr "Prikaži cijelu povijest"
 
-#: ../src/window.py:321 ../src/page.py:138
+#: ../src/window.py:312 ../src/page.py:135
 msgid "Bookmark added: "
 msgstr "Dodana zabilješka: "
 
-#: ../src/window.py:435
+#: ../src/window.py:426
 msgid "Print operation completed"
 msgstr "Ispis je gotov"
 
-#: ../src/window.py:441
+#: ../src/window.py:432
 msgid "Print operation failed"
 msgstr "Ispis nije uspio"
 
-#: ../src/window.py:456
+#: ../src/window.py:447
 msgid "Link copied to clipboard"
 msgstr "Poveznica je kopirana u međuspremnik"
 
-#: ../src/application.py:153
+#: ../src/application.py:154
 msgid "Source Code"
 msgstr "Izvorni kȏd"
 
-#: ../src/application.py:154
+#: ../src/application.py:155
 msgid "Report an Issue"
 msgstr "Prijavi problem"
 
-#: ../src/application.py:155
+#: ../src/application.py:156
 msgid "Help Translating"
 msgstr "Pomogni prevoditi"
 
-#: ../src/application.py:156
+#: ../src/application.py:157
 msgid "Contributors"
 msgstr "Doprinositelji"
 
-#: ../src/application.py:157
+#: ../src/application.py:158
 msgid "Flag Icons"
 msgstr "Ikone zastava"
 
-#: ../src/application.py:158
+#: ../src/application.py:159
 msgid "All content from Wikipedia.org and available under CC BY-SA 3.0 unless otherwise noted.\n"
 "\n"
 "Wike is an independent development not endorsed by or affiliated with the Wikimedia Foundation."
@@ -357,19 +357,19 @@ msgstr "Sav sadržaj s Wikipedia.org, dostupan pod CC BY-SA 3.0 licencom ukoliko
 "\n"
 "Wike se razvija neovisno, bez podrške ili veze sa zakladom Wikimedia Foundation."
 
-#: ../src/page.py:75
+#: ../src/page.py:72
 msgid "Loading"
 msgstr "Učitavanje"
 
-#: ../src/page.py:102
+#: ../src/page.py:99
 msgid "Article not Found"
 msgstr "Članak nije pronađen"
 
-#: ../src/page.py:110
+#: ../src/page.py:107
 msgid "Can't Access Wikipedia"
 msgstr "Wikipedija nije dostupna"
 
-#: ../src/bookmarks.py:34
+#: ../src/bookmarks.py:31
 msgid "Reading list"
 msgstr "Popis čitanja"
 
@@ -483,15 +483,15 @@ msgstr "Glavna Wikipedija stranica"
 msgid "Random article"
 msgstr "Slučajni članak"
 
-#: ../data/ui/headerbar.ui:25
+#: ../data/ui/headerbar.ui:27
 msgid "New Tab"
 msgstr "Nova kartica"
 
-#: ../data/ui/headerbar.ui:43 ../data/ui/actionbar.ui:34
+#: ../data/ui/headerbar.ui:46 ../data/ui/actionbar.ui:34
 msgid "View"
 msgstr "Prikaz"
 
-#: ../data/ui/headerbar.ui:49 ../data/ui/actionbar.ui:27
+#: ../data/ui/headerbar.ui:52 ../data/ui/actionbar.ui:27
 msgid "Sidebar"
 msgstr "Bočna traka"
 
@@ -582,4 +582,16 @@ msgstr "Podržava više od 300 jezika i integrira se s pretragama na radnoj povr
 #: ../data/ui/window.ui:55
 msgid "Pin Sidebar"
 msgstr "Prikaži bočnu traku"
+
+#: ../data/ui/headerbar.ui:13
+msgid "Back"
+msgstr "Natrag"
+
+#: ../data/ui/headerbar.ui:20
+msgid "Forward"
+msgstr "Naprijed"
+
+#: ../data/ui/headerbar.ui:39
+msgid "Main Menu"
+msgstr "Glavni izbornik"
 

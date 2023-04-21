@@ -7,19 +7,19 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: ta\n"
 
-#: ../src/view.py:252
+#: ../src/view.py:248
 msgid "Article not found"
 msgstr "கட்டுரை கிடைக்கவில்லை"
 
-#: ../src/page.py:103
+#: ../src/page.py:100
 msgid "Can't find any results for requested query"
 msgstr "கோரப்பட்ட வினவலுக்கு எந்த முடிவும் கிடைக்கவில்லை"
 
-#: ../src/view.py:254
+#: ../src/view.py:250
 msgid "Can't access Wikipedia"
 msgstr "விக்கிபீடியாவை அணுக முடியவில்லை"
 
-#: ../src/page.py:111
+#: ../src/page.py:108
 msgid "Check your Internet connection and try again"
 msgstr "உங்கள் இணைய இணைப்பைச் சரிபார்த்து மீண்டும் முயலவும்"
 
@@ -46,7 +46,7 @@ msgstr "தேடல் பரிந்துரைகள்"
 msgid "translator-credits"
 msgstr "K.B.Dharun Krishna <kbdharunkrishna@gmail.com>"
 
-#: ../src/view.py:364 ../data/ui/bookmarks.ui:26
+#: ../src/view.py:360 ../data/ui/bookmarks.ui:26
 msgid "Add Bookmark"
 msgstr "புத்தகக்குறி சேர்"
 
@@ -260,19 +260,19 @@ msgctxt "shortcut window"
 msgid "Previous tab"
 msgstr "முந்தைய தாவல்"
 
-#: ../src/view.py:379
+#: ../src/view.py:375
 msgid "Open Link in New Tab"
 msgstr "புதிய தாவலில் இணைப்பைத் திறக்கவும்"
 
-#: ../src/view.py:385
+#: ../src/view.py:381
 msgid "Add Link to Bookmarks"
 msgstr "புத்தகக்குறிகளுக்கு இணைப்பைச் சேர்க்கவும்"
 
-#: ../src/view.py:381
+#: ../src/view.py:377
 msgid "Open Link in Browser"
 msgstr "உலாவியில் இணைப்பைத் திறக்கவும்"
 
-#: ../src/view.py:387 ../data/ui/menu-main.ui:39
+#: ../src/view.py:383 ../data/ui/menu-main.ui:39
 msgid "Copy Link to Clipboard"
 msgstr "கிளிப்போர்டுக்கு இணைப்பை நகலெடுக்கவும்"
 
@@ -289,67 +289,67 @@ msgctxt "shortcut window"
 msgid "Random article"
 msgstr "சீரற்ற கட்டுரை"
 
-#: ../src/menu.py:88
+#: ../src/menu.py:86
 msgid "Pick a Font"
 msgstr "ஒரு எழுத்துருவை தேர்ந்தெடுங்கள்"
 
-#: ../src/menu.py:117
+#: ../src/menu.py:115
 msgid "Font"
 msgstr "எழுத்துரு"
 
-#: ../src/history.py:36
+#: ../src/history.py:33
 msgid "Today"
 msgstr "இன்று"
 
-#: ../src/history.py:36
+#: ../src/history.py:33
 msgid "Last 7 days"
 msgstr "கடந்த 7 நாட்கள்"
 
-#: ../src/history.py:36
+#: ../src/history.py:33
 msgid "Last 30 days"
 msgstr "கடந்த 30 நாட்கள்"
 
-#: ../src/history.py:36
+#: ../src/history.py:33
 msgid "Show full history"
 msgstr "முழு வரலாற்றைக் காட்டு"
 
-#: ../src/window.py:321 ../src/page.py:138
+#: ../src/window.py:312 ../src/page.py:135
 msgid "Bookmark added: "
 msgstr "புக்மார்க் சேர்க்கப்பட்டது:␣"
 
-#: ../src/window.py:435
+#: ../src/window.py:426
 msgid "Print operation completed"
 msgstr "அச்சு செயல்பாடு முடிந்தது"
 
-#: ../src/window.py:441
+#: ../src/window.py:432
 msgid "Print operation failed"
 msgstr "அச்சு செயல்பாடு தோல்வியடைந்தது"
 
-#: ../src/window.py:456
+#: ../src/window.py:447
 msgid "Link copied to clipboard"
 msgstr "இணைப்பு கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது"
 
-#: ../src/application.py:153
+#: ../src/application.py:154
 msgid "Source Code"
 msgstr "மூல குறியீடு"
 
-#: ../src/application.py:154
+#: ../src/application.py:155
 msgid "Report an Issue"
 msgstr "ஒரு சிக்கலைப் புகாரளிக்கவும்"
 
-#: ../src/application.py:155
+#: ../src/application.py:156
 msgid "Help Translating"
 msgstr "மொழிபெயர்க்க உதவுங்கள்"
 
-#: ../src/application.py:156
+#: ../src/application.py:157
 msgid "Contributors"
 msgstr "பங்களிப்பாளர்கள்"
 
-#: ../src/application.py:157
+#: ../src/application.py:158
 msgid "Flag Icons"
 msgstr "கொடி சின்னங்கள்"
 
-#: ../src/application.py:158
+#: ../src/application.py:159
 msgid "All content from Wikipedia.org and available under CC BY-SA 3.0 unless otherwise noted.\n"
 "\n"
 "Wike is an independent development not endorsed by or affiliated with the Wikimedia Foundation."
@@ -357,19 +357,19 @@ msgstr "Wikipedia.org இலிருந்து அனைத்து உள�
 "\n"
 "வைக் என்பது விக்கிமீடியா அறக்கட்டளையால் அங்கீகரிக்கப்படாத அல்லது இணைக்கப்படாத ஒரு சுயாதீனமான வளர்ச்சியாகும்."
 
-#: ../src/page.py:75
+#: ../src/page.py:72
 msgid "Loading"
 msgstr "ஏற்றுகிறது"
 
-#: ../src/page.py:102
+#: ../src/page.py:99
 msgid "Article not Found"
 msgstr "கட்டுரை கிடைக்கவில்லை"
 
-#: ../src/page.py:110
+#: ../src/page.py:107
 msgid "Can't Access Wikipedia"
 msgstr "விக்கிபீடியாவை அணுக முடியவில்லை"
 
-#: ../src/bookmarks.py:34
+#: ../src/bookmarks.py:31
 msgid "Reading list"
 msgstr "வாசிப்பு பட்டியல்"
 
@@ -483,15 +483,15 @@ msgstr "விக்கிபீடியாவின் முதன்மை�
 msgid "Random article"
 msgstr "சீரற்ற கட்டுரை"
 
-#: ../data/ui/headerbar.ui:25
+#: ../data/ui/headerbar.ui:27
 msgid "New Tab"
 msgstr "புதிய தாவல்"
 
-#: ../data/ui/headerbar.ui:43 ../data/ui/actionbar.ui:34
+#: ../data/ui/headerbar.ui:46 ../data/ui/actionbar.ui:34
 msgid "View"
 msgstr "பார்வை"
 
-#: ../data/ui/headerbar.ui:49 ../data/ui/actionbar.ui:27
+#: ../data/ui/headerbar.ui:52 ../data/ui/actionbar.ui:27
 msgid "Sidebar"
 msgstr "பக்கப்பட்டி"
 
@@ -582,4 +582,16 @@ msgstr "இது 300 க்கும் மேற்பட்ட மொழி�
 #: ../data/ui/window.ui:55
 msgid "Pin Sidebar"
 msgstr "பக்கப்பட்டியைப் பின் செய்யவும்"
+
+#: ../data/ui/headerbar.ui:13
+msgid "Back"
+msgstr "மீண்டும்"
+
+#: ../data/ui/headerbar.ui:20
+msgid "Forward"
+msgstr "முன்னோக்கி"
+
+#: ../data/ui/headerbar.ui:39
+msgid "Main Menu"
+msgstr "முதன்மை பட்டியல்"
 

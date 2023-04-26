@@ -347,7 +347,7 @@ msgstr "Авторы"
 
 #: ../src/application.py:158
 msgid "Flag Icons"
-msgstr "Иконки Флагов стран"
+msgstr "Иконки Флагов"
 
 #: ../src/application.py:159
 msgid "All content from Wikipedia.org and available under CC BY-SA 3.0 unless otherwise noted.\n"
@@ -521,7 +521,7 @@ msgstr "Показать"
 
 #: ../data/ui/menu-view.ui:23
 msgid "Language Flags"
-msgstr "Отображать флаг языка"
+msgstr "Флаги языков"
 
 #: ../data/ui/menu-view.ui:27
 msgid "Link Previews"
@@ -557,7 +557,7 @@ msgstr "Печать"
 
 #: ../data/ui/menu-main.ui:18
 msgid "Search Text"
-msgstr "Поиск по тексту"
+msgstr "Поиск текстa"
 
 #: ../data/ui/menu-main.ui:35
 msgid "Open in Browser"

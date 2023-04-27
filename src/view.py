@@ -32,6 +32,7 @@ class ViewSettings:
 
   def __init__(self):
     self.web_settings.set_default_font_size(settings.get_int('font-size'))
+    self.web_settings.set_enable_back_forward_navigation_gestures(True)
 
     gfile = Gio.File.new_for_uri('resource:///com/github/hugolabe/Wike/styles/view.min.css')
     try:

@@ -49,20 +49,26 @@ SPDX-License-Identifier: GPL-3.0-or-later
                         </style>
                         <child>
                           <object class="GtkBox">
+                            <property name="hexpand">False</property>
                             <child>
-                              <object class="GtkToggleButton" id="flap_pin_button">
-                                <property name="icon-name">view-pin-symbolic</property>
-                                <property name="tooltip-text" translatable="yes">Pin Sidebar</property>
-                                <property name="margin-start">5</property>
-                                <property name="margin-end">5</property>
-                                <property name="margin-top">5</property>
-                                <property name="margin-bottom">5</property>
-                                <property name="valign">center</property>
-                                <property name="action-name">win.pin-sidebar</property>
-                                <style>
-                                  <class name="circular"/>
-                                  <class name="pin-button"/>
-                                </style>
+                              <object class="GtkRevealer" id="flap_pin_button_revealer">
+                                <property name="transition-type">slide-left</property>
+                                <child>
+                                  <object class="GtkToggleButton" id="flap_pin_button">
+                                    <property name="icon-name">view-pin-symbolic</property>
+                                    <property name="tooltip-text" translatable="yes">Pin Sidebar</property>
+                                    <property name="margin-start">5</property>
+                                    <property name="margin-end">5</property>
+                                    <property name="margin-top">5</property>
+                                    <property name="margin-bottom">5</property>
+                                    <property name="valign">center</property>
+                                    <property name="action-name">win.pin-sidebar</property>
+                                    <style>
+                                      <class name="circular"/>
+                                      <class name="pin-button"/>
+                                    </style>
+                                  </object>
+                                </child>
                               </object>
                             </child>
                             <child>
@@ -72,11 +78,12 @@ SPDX-License-Identifier: GPL-3.0-or-later
                                 <property name="margin-top">5</property>
                                 <property name="margin-bottom">5</property>
                                 <property name="spacing">5</property>
+                                <property name="hexpand">True</property>
+                                <property name="homogeneous">True</property>
                                 <child>
                                   <object class="GtkToggleButton" id="flap_toc_button">
                                     <property name="icon-name">sidebar-toc-symbolic</property>
                                     <property name="tooltip-text" translatable="yes">Contents</property>
-                                    <property name="width-request">64</property>
                                     <style>
                                       <class name="flat"/>
                                     </style>
@@ -86,7 +93,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
                                   <object class="GtkToggleButton" id="flap_langlinks_button">
                                     <property name="icon-name">sidebar-langlinks-symbolic</property>
                                     <property name="tooltip-text" translatable="yes">Languages</property>
-                                    <property name="width-request">64</property>
                                     <property name="group">flap_toc_button</property>
                                     <style>
                                       <class name="flat"/>
@@ -97,7 +103,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
                                   <object class="GtkToggleButton" id="flap_bookmarks_button">
                                     <property name="icon-name">sidebar-bookmarks-symbolic</property>
                                     <property name="tooltip-text" translatable="yes">Bookmarks</property>
-                                    <property name="width-request">64</property>
                                     <property name="group">flap_toc_button</property>
                                     <style>
                                       <class name="flat"/>
@@ -108,7 +113,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
                                   <object class="GtkToggleButton" id="flap_history_button">
                                     <property name="icon-name">sidebar-history-symbolic</property>
                                     <property name="tooltip-text" translatable="yes">History</property>
-                                    <property name="width-request">64</property>
                                     <property name="group">flap_toc_button</property>
                                     <style>
                                       <class name="flat"/>

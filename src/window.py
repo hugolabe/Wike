@@ -27,7 +27,7 @@ class Window(Adw.ApplicationWindow):
   toast_overlay = Gtk.Template.Child()
   flap = Gtk.Template.Child()
   flap_stack = Gtk.Template.Child()
-  flap_pin_button_revealer = Gtk.Template.Child()
+  flap_pin_revealer = Gtk.Template.Child()
   flap_pin_button = Gtk.Template.Child()
   flap_toc_button = Gtk.Template.Child()
   flap_langlinks_button = Gtk.Template.Child()
@@ -92,8 +92,6 @@ class Window(Adw.ApplicationWindow):
     self._set_actions(app)
     self._set_layout()
 
-    self.lookup_action('pin-sidebar').bind_property('enabled', self.flap_pin_button_revealer, 'reveal-child',  GObject.BindingFlags.SYNC_CREATE)
-
     self.handler_selpage = self.tabview.connect('notify::selected-page', self._tabview_selected_page_cb)
     self.tabview.connect('close-page', self._tabview_close_page_cb)
     self.taboverview.connect('create-tab', self._taboverview_create_tab_cb)
@@ -156,6 +154,7 @@ class Window(Adw.ApplicationWindow):
 
     pin_sidebar_action = Gio.SimpleAction.new_stateful('pin-sidebar', None, GLib.Variant.new_boolean(False))
     pin_sidebar_action.connect('change-state', self._pin_sidebar_cb)
+    pin_sidebar_action.bind_property('enabled', self.flap_pin_revealer, 'reveal-child',  GObject.BindingFlags.SYNC_CREATE)
     self.add_action(pin_sidebar_action)
     
     self.flap.connect('notify::reveal-flap', self._flap_reveal_cb)
@@ -182,14 +181,10 @@ class Window(Adw.ApplicationWindow):
   def _set_layout (self):
     pin_sidebar_action = self.lookup_action('pin-sidebar')
 
-    if self.mobile_layout:
-      self.headerbar.set_mobile(True)
-      pin_sidebar_action.set_enabled(False)
-    else:
-      self.headerbar.set_mobile(False)
-      pin_sidebar_action.set_enabled(True)
+    self.headerbar.set_mobile(self.mobile_layout)
+    pin_sidebar_action.set_enabled(not self.mobile_layout)
 
-    self._update_sidebar_pinned()
+    self._update_sidebar_policy(pin_sidebar_action)
 
   # Create new tab with a page
 
@@ -326,15 +321,16 @@ class Window(Adw.ApplicationWindow):
     else:
       self.flap.set_reveal_flap(False)
   
-  # Pin sidebar (flap)
+  # On pin sidebar action set state and update sidebar
   
   def _pin_sidebar_cb(self, action, parameter):
     action.set_state(parameter)
-    self._update_sidebar_pinned()
-    
-  def _update_sidebar_pinned(self):
-    pin_sidebar_action = self.lookup_action('pin-sidebar')
-    prefer_pinned = pin_sidebar_action.get_state().get_boolean()
+    self._update_sidebar_policy(action)
+
+  # Update sidebar policy
+
+  def _update_sidebar_policy(self, action):
+    prefer_pinned = action.get_state().get_boolean()
     if prefer_pinned and not self.mobile_layout:
       self.flap.set_fold_policy(Adw.FlapFoldPolicy.NEVER)
     else:

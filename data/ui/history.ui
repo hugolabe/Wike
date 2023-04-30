@@ -15,9 +15,10 @@ SPDX-License-Identifier: GPL-3.0-or-later
         <property name="margin-top">6</property>
         <property name="margin-bottom">6</property>
         <property name="spacing">6</property>
+        <property name="hexpand">false</property>
         <child>
           <object class="GtkDropDown" id="filter_dropdown">
-            <property name="width-request">273</property>
+            <property name="hexpand">true</property>
           </object>
         </child>
         <child>

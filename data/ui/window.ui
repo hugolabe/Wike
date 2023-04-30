@@ -44,6 +44,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                     <property name="flap">
                       <object class="GtkBox">
                         <property name="orientation">vertical</property>
+                        <property name="width-request">325</property>
                         <style>
                           <class name="background"/>
                         </style>
@@ -51,7 +52,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                           <object class="GtkBox">
                             <property name="hexpand">False</property>
                             <child>
-                              <object class="GtkRevealer" id="flap_pin_button_revealer">
+                              <object class="GtkRevealer" id="flap_pin_revealer">
                                 <property name="transition-type">slide-left</property>
                                 <child>
                                   <object class="GtkToggleButton" id="flap_pin_button">

@@ -191,6 +191,7 @@ class Window(Adw.ApplicationWindow):
   def new_page(self, uri, parent, select):
     page = PageBox(self)
     tabpage = self.tabview.add_page(page, parent)
+    tabpage.set_live_thumbnail(True)
     if uri == 'blank' or uri == 'notfound':
       page.wikiview.load_message(uri)
     else:

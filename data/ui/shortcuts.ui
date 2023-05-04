@@ -120,6 +120,12 @@ SPDX-License-Identifier: GPL-3.0-or-later
                 <property name="action-name">win.prev-tab</property>
               </object>
             </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="title" translatable="yes" context="shortcut window">View open tabs</property>
+                <property name="action-name">win.toggle-overview</property>
+              </object>
+            </child>
           </object>
         </child>
         <child>

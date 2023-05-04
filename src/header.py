@@ -77,7 +77,6 @@ class HeaderBar(Gtk.HeaderBar):
         self.view_button.set_popover(ViewMenuPopover(self._window))
       self._actionbar.set_reveal_child(False)
       self._window.tabbar.set_visible(True)
-      self._window.taboverview.set_open(False)
 
 
 # Actionbar for main window and mobile layout

@@ -29,6 +29,12 @@ SPDX-License-Identifier: GPL-3.0-or-later
                         <child>
                           <object class="AdwTabBar" id="tabbar">
                             <property name="view">tabview</property>
+                            <property name="start-action-widget">
+                              <object class="AdwTabButton">
+                                <property name="view">tabview</property>
+                                <property name="action-name">win.toggle-overview</property>
+                              </object>
+                            </property>
                           </object>
                         </child>
                         <child>

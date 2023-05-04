@@ -30,7 +30,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
     </child>
     <child type="start">
       <object class="AdwTabButton" id="tabs_button">
-        <property name="action-name">overview.open</property>
+        <property name="action-name">win.toggle-overview</property>
       </object>
     </child>
     <child type="end">

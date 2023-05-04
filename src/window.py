@@ -126,6 +126,7 @@ class Window(Adw.ApplicationWindow):
                 ('close-tab', self._close_tab_cb, ('<Ctrl>W',)),
                 ('next-tab', self._next_tab_cb, ('<Ctrl>Tab',)),
                 ('prev-tab', self._prev_tab_cb, ('<Shift><Ctrl>Tab',)),
+                ('toggle-overview', self._toggle_overview_cb, ('F4', '<Alt>T',)),
                 ('go-search', self._go_search_cb, ('F2', '<Ctrl>K',)),
                 ('add-bookmark', self._add_bookmark_cb, ('<Ctrl>D',)),
                 ('show-toc', self._show_toc_cb, ('<Ctrl>I',)),
@@ -241,6 +242,11 @@ class Window(Adw.ApplicationWindow):
     else:
       tabpage = self.tabview.get_nth_page(num_pages - 1)
       self.tabview.set_selected_page(tabpage)
+
+  # Open/close taboverview
+
+  def _toggle_overview_cb(self, action, parameter):
+    self.taboverview.set_open(not self.taboverview.get_open())
 
   # On tab selected event refresh headerbar and sidebar
 

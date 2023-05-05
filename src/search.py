@@ -196,7 +196,6 @@ class SettingsPopover(Gtk.Popover):
 
   __gtype_name__ = 'SettingsPopover'
 
-  filter_entry = Gtk.Template.Child()
   languages_button = Gtk.Template.Child()
   languages_list = Gtk.Template.Child()
   languages_scroller = Gtk.Template.Child()
@@ -211,29 +210,15 @@ class SettingsPopover(Gtk.Popover):
     self._search_box = search_box
     self._window = search_box.window
 
-    self.languages_list.set_filter_func(self._filter_list)
     self.populate_list()
 
     settings.bind('search-suggestions', self.suggestions_switch, 'active', Gio.SettingsBindFlags.DEFAULT)
     settings.connect('changed::show-flags', self._settings_show_flags_changed_cb)
     
     self.languages_button.connect('clicked', self._languages_button_clicked_cb)
-    self.filter_entry.connect('search-changed', self._filter_entry_changed_cb)
     self.languages_list.connect('row-activated', self._languages_list_activated_cb)
     self.languages_scroller.get_vadjustment().connect('value-changed', self._languages_scrolled_cb)
     self.connect('show', self._popover_show_cb)
-
-  # Filter languages list for filter entry content
-
-  def _filter_list(self, row):
-    text = self.filter_entry.get_text()
-    if text == '':
-      return True
-
-    if row.lang_name.lower().startswith(text.lower()) or row.lang_id.lower().startswith(text.lower()):
-      return True
-    else:
-      return False
 
   # Populate languages list
 
@@ -268,11 +253,6 @@ class SettingsPopover(Gtk.Popover):
     languages_window = LanguagesWindow()
     languages_window.set_transient_for(self._window)
     languages_window.show()
-
-  # On filter entry changed refresh languages list
-
-  def _filter_entry_changed_cb(self, filter_entry):
-    self.languages_list.invalidate_filter()
 
   # On list activated change search language
 

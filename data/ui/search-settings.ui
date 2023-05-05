@@ -7,25 +7,15 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
 <interface>
   <template class="SettingsPopover" parent="GtkPopover">
+    <property name="width-request">240</property>
     <child>
       <object class="GtkBox">
         <property name="orientation">vertical</property>
         <child>
-          <object class="GtkBox">
+          <object class="GtkButton" id="languages_button">
+            <property name="label" translatable="yes">Pick your Languages</property>
+            <property name="hexpand">true</property>
             <property name="margin-bottom">6</property>
-            <property name="spacing">6</property>
-            <child>
-              <object class="GtkSearchEntry" id="filter_entry">
-                <property name="hexpand">true</property>
-                <property name="placeholder-text" translatable="yes">Filter languages</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkButton" id="languages_button">
-                <property name="icon-name">languages-choose-symbolic</property>
-                <property name="tooltip-text" translatable="yes">Pick your Languages</property>
-              </object>
-            </child>
           </object>
         </child>
         <child>
@@ -42,7 +32,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
               <object class="GtkViewport">
                 <child>
                   <object class="GtkListBox" id="languages_list">
-                    <property name="margin-top">6</property>
                     <property name="margin-bottom">6</property>
                     <style>
                       <class name="language-list"/>

@@ -37,8 +37,7 @@
     <file>ui/widgets.css</file>
     <file>ui/window.ui</file>
     <file>ui/zoom-level.ui</file>
-    
-    <file preprocess="xml-stripblanks">icons/scalable/actions/languages-choose-symbolic.svg</file>
+
     <file preprocess="xml-stripblanks">icons/scalable/actions/sidebar-bookmarks-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/actions/sidebar-history-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/actions/sidebar-langlinks-symbolic.svg</file>

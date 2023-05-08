@@ -28,10 +28,3 @@ SPDX-License-Identifier: GPL-3.0-or-later
 .wikitable {
   background: transparent !important;
 }
-
-/* Wike local pages */
-
-.wike-body {
-  background: #fdf6e3;
-  color: #453530;
-}

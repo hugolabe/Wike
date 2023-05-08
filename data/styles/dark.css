@@ -62,32 +62,3 @@ img:not(.mwe-math-fallback-image-inline, .mwe-math-fallback-image-display, .leaf
 .PieChartTemplate, .PieChartTemplate .thumbcaption {
   filter: invert(100%);
 }
-
-/* Wike local pages */
-
-.wike-body {
-  background: #1b1b1b;
-  color: #dedede;
-}
-
-#wike-message h1 {
-  color: #d65451 !important;
-}
-
-#wike-message a.btn {
-  color: #dedede !important;
-  background-color: #333;
-  border: 1px solid #555;
-}
-
-#wike-message a.btn:hover {
-  background-color: #282828;
-}
-
-#wike-historic h3 {
-  border-bottom: 1px solid #444;
-}
-
-#wike-historic a {
-  color: #a1cdff !important;
-}

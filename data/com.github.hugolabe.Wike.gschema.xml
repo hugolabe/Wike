@@ -7,6 +7,11 @@
       <summary>Default search language</summary>
     </key>
 
+    <key name="search-project" type="s">
+      <default>"wikipedia"</default>
+      <summary>Default search Wikimedia project</summary>
+    </key>
+
     <key name="search-suggestions" type="b">
       <default>true</default>
       <summary>Show search suggestions</summary>
@@ -99,3 +104,4 @@
 
   </schema>
 </schemalist>
+

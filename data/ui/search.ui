@@ -12,7 +12,12 @@ SPDX-License-Identifier: GPL-3.0-or-later
     </style>
     <child>
       <object class="GtkSearchEntry" id="search_entry">
-        <property name="placeholder-text" translatable="yes">Search Wikipedia</property>
+        <property name="placeholder-text" translatable="yes">Search</property>
+        <child>
+          <object class="GtkLabel" id="project_label">
+            <property name="sensitive">false</property>
+          </object>
+        </child>
         <child>
           <object class="GtkLabel" id="lang_label">
             <property name="sensitive">false</property>

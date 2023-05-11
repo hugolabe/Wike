@@ -169,7 +169,7 @@ class WikiView(WebKit.WebView):
   def load_wiki(self, uri):
     self.stop_loading()
     if uri.find('.m.') == -1:
-      uri = uri.replace('.wikipedia.org', '.m.wikipedia.org')
+      uri = uri.replace('.' + settings.get_string('search-project') + '.org', '.m.' + settings.get_string('search-project') + '.org')
     self.load_uri(uri)
 
   # Go to section in page
@@ -186,14 +186,14 @@ class WikiView(WebKit.WebView):
   # Load Wikipedia main page
 
   def load_main(self):
-    uri = 'https://' + settings.get_string('search-language') + '.m.wikipedia.org'
+    uri = 'https://' + settings.get_string('search-language') + '.m.' + settings.get_string('search-project') + '.org'
     self.load_wiki(uri)
 
   # Load Wikipedia random article
 
   def load_random(self):
     try:
-      uri = wikipedia.get_random(settings.get_string('search-language'))
+      uri = wikipedia.get_random(settings.get_string('search-language'), settings.get_string('search-project'))
       self.load_wiki(uri)
     except:
       self.load_message('error')

@@ -26,6 +26,7 @@ wike_sources = [
   'menu.py',
   'page.py',
   'prefs.py',
+  'projects.py',
   'search.py',
   'toc.py',
   'view.py',

@@ -66,7 +66,25 @@ SPDX-License-Identifier: GPL-3.0-or-later
             </child>
           </object>
         </child>
+        <child>
+            <object class="GtkSeparator">
+            </object>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkButton" id="project_button">
+                <property name="label" translatable="yes">Wikimedia Project</property>
+                <property name="hexpand">true</property>
+                <property name="margin-top">12</property>
+                <property name="margin-bottom">6</property>
+              </object>
+            </child>
+          </object>
+      </child>
       </object>
     </child>
   </template>
 </interface>
+

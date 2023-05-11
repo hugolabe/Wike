@@ -10,6 +10,7 @@ from gi.repository import GLib, Gio, Gtk
 from wike import wikipedia
 from wike.data import settings, languages
 from wike.languages import LanguagesWindow
+from wike.projects import ProjectsWindow
 
 
 # Box with entry for manage searchs in Wikipedia
@@ -22,6 +23,7 @@ class SearchBox(Gtk.Box):
   search_entry = Gtk.Template.Child()
   lang_label = Gtk.Template.Child()
   settings_button = Gtk.Template.Child()
+  project_label = Gtk.Template.Child()
   
   # Create suggestions list and connect search entry events
 
@@ -54,7 +56,7 @@ class SearchBox(Gtk.Box):
 
   def _search_wikipedia(self, text):
     try:
-      self.results_list = wikipedia.search(text.lower(), settings.get_string('search-language'), 10)
+      self.results_list = wikipedia.search(text.lower(), settings.get_string('search-language'), 10, settings.get_string('search-project'))
     except:
       self.results_list = None
     self._results_changed = True
@@ -124,7 +126,7 @@ class SearchBox(Gtk.Box):
     search_entry.delete_text(0, -1)
     if text != '':
       try:
-        result = wikipedia.search(text.lower(), settings.get_string('search-language'), 1)
+        result = wikipedia.search(text.lower(), settings.get_string('search-language'), 1, settings.get_string('search-project'))
       except:
         self.window.page.wikiview.load_message('notfound')
       else:
@@ -201,6 +203,7 @@ class SettingsPopover(Gtk.Popover):
   languages_scroller = Gtk.Template.Child()
   languages_separator = Gtk.Template.Child()
   suggestions_switch = Gtk.Template.Child()
+  project_button = Gtk.Template.Child()
 
   # Populate search languages list and connect signals and bindings
 
@@ -218,14 +221,17 @@ class SettingsPopover(Gtk.Popover):
     self.languages_button.connect('clicked', self._languages_button_clicked_cb)
     self.languages_list.connect('row-activated', self._languages_list_activated_cb)
     self.languages_scroller.get_vadjustment().connect('value-changed', self._languages_scrolled_cb)
+    self.project_button.connect('clicked', self._project_button_clicked_cb)
     self.connect('show', self._popover_show_cb)
 
   # Populate languages list
 
   def populate_list(self):
     lang_id = settings.get_string('search-language')
+    project_id = settings.get_string('search-project')
     self._search_box.lang_label.set_label(lang_id)
     self._search_box.lang_label.set_tooltip_text(languages.wikilangs[lang_id].capitalize())
+    self._search_box.project_label.set_label(project_id)
 
     while True:
       row = self.languages_list.get_row_at_index(0)
@@ -275,6 +281,18 @@ class SettingsPopover(Gtk.Popover):
     self.languages_list.unselect_all()
     self._search_box.suggestions_popover.hide()
     self.languages_scroller.get_vadjustment().set_value(0)
+
+  # Current Wikimedia project
+
+  def _project_activated(self):
+    settings.set_string("project_label")
+    self.populate_list()
+
+  def _project_button_clicked_cb(self, project_button):
+    self.hide()
+    projects_window = ProjectsWindow()
+    projects_window.set_transient_for(self._window)
+    projects_window.show()
 
 
 # Language row in search settings

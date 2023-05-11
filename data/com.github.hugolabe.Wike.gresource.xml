@@ -25,6 +25,8 @@
     <file>ui/menu-view.ui</file>
     <file>ui/page.ui</file>
     <file>ui/prefs.ui</file>
+    <file>ui/projects.ui</file>
+    <file>ui/projects-row.ui</file>
     <file>ui/search.ui</file>
     <file>ui/search-settings.ui</file>
     <file>ui/search-settings-row.ui</file>

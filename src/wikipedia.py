@@ -12,8 +12,8 @@ _session = requests.Session()
 
 # Get Wikipedia random page
 
-def get_random(lang):
-  api = 'https://' + lang + '.wikipedia.org/w/api.php'
+def get_random(lang, project):
+  api = f'https://{lang}.{project}.org/w/api.php'
   params = { 'action': 'query',
              'generator': 'random',
              'grnlimit': 1,
@@ -31,8 +31,8 @@ def get_random(lang):
 
 # Search in Wikipedia with a limit of responses
 
-def search(text, lang, limit):
-  api = 'https://' + lang + '.wikipedia.org/w/api.php'
+def search(text, lang, limit, project):
+  api = f'https://{lang}.{project}.org/w/api.php'
   params = { 'action': 'opensearch',
              'search': text,
              'limit': limit,
@@ -49,8 +49,8 @@ def search(text, lang, limit):
 
 # Get sections and langlinks for Wikipedia page
 
-def get_properties(page, lang):
-  api = 'https://' + lang + '.wikipedia.org/w/api.php'
+def get_properties(page, lang, project):
+  api = f'https://{lang}.{project}.org/w/api.php'
   params = '?format=json&action=parse&prop=sections|langlinks&redirects&page=' + page
 
   result = _request(api, params)

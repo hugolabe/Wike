@@ -22,7 +22,7 @@ class ProjectsWindow(Adw.Window):
   def __init__(self):
     super().__init__()
 
-    self.project_selected = ''
+    self.project_selected = 'wikipedia'
     self._populate()
 
     self.projects_list.connect('row-activated', self._project_selected_cb)
@@ -39,14 +39,13 @@ class ProjectsWindow(Adw.Window):
   # Set languages changed variable on radio button changed
 
   def _project_selected_cb(self, projects_list, row):
-    self.project_selected = row.name
+    self.project_selected = row.project_name
 
   # On window close refresh languages list (if changed)
 
   def _window_close_cb(self, prefs_window):
-    if self.project_selected:
-      settings.set_string("search-project", self.project_selected)
-
+    settings.set_string("search-project", self.project_selected)
+    
     window = self.get_transient_for()
     window.headerbar.search_box.settings_popover.populate_list()
     return False
@@ -65,7 +64,7 @@ class ProjectsRow(Gtk.ListBoxRow):
   def __init__(self, project_name):
     super().__init__()
 
-    self.name = project_name
+    self.project_name = project_name
     self.name_label.set_label(project_name)
 
 

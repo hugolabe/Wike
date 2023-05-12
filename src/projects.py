@@ -31,7 +31,15 @@ class ProjectsWindow(Adw.Window):
   # Populate list of available languages
 
   def _populate(self):
-    projects_name = ("wikipedia", "wiktionary", "wikinews")
+    projects_name = (
+            'wikipedia',
+            'wiktionary',
+            'wikiquote',
+            'wikibooks',
+            'wikisource',
+            'wikinews',
+            'wikiversity',
+        )
     for project_name in projects_name:
       row = ProjectsRow(project_name)
       self.projects_list.append(row)
@@ -66,5 +74,6 @@ class ProjectsRow(Gtk.ListBoxRow):
 
     self.project_name = project_name
     self.name_label.set_label(project_name)
+
 
 

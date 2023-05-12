@@ -229,7 +229,7 @@ class SettingsPopover(Gtk.Popover):
   def populate_list(self):
     lang_id = settings.get_string('search-language')
     project_id = settings.get_string('search-project')
-    self._search_box.lang_label.set_label(lang_id)
+    self._search_box.lang_label.set_label('(' + lang_id + ')')
     self._search_box.lang_label.set_tooltip_text(languages.wikilangs[lang_id].capitalize())
     self._search_box.project_label.set_label(project_id)
 
@@ -325,3 +325,4 @@ class SettingsLangsRow(Gtk.ListBoxRow):
         self.flag_image.set_from_icon_name(lang_id)
     else:
       self.flag_image.set_visible(False)
+

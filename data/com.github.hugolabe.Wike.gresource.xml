@@ -40,10 +40,21 @@
     <file>ui/window.ui</file>
     <file>ui/zoom-level.ui</file>
 
-    <file preprocess="xml-stripblanks">icons/scalable/actions/sidebar-bookmarks-symbolic.svg</file>
-    <file preprocess="xml-stripblanks">icons/scalable/actions/sidebar-history-symbolic.svg</file>
-    <file preprocess="xml-stripblanks">icons/scalable/actions/sidebar-langlinks-symbolic.svg</file>
-    <file preprocess="xml-stripblanks">icons/scalable/actions/sidebar-toc-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/bookmark-new-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/checkmark-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/document-open-recent-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/find-location-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/language-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/list-remove-all-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/network-error-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/printer-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/sidebar-show-right-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/system-search-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/tab-new-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/user-bookmarks-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/view-list-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/view-pin-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/view-reveal-symbolic.svg</file>
 
     <file preprocess="xml-stripblanks">icons/scalable/emblems/af.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/emblems/am.svg</file>

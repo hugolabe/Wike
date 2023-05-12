@@ -1,0 +1,33 @@
+on:
+  push:
+    branches: [master]
+  pull_request:
+name: CI
+jobs:
+  flatpak:
+    name: "Flatpak"
+    runs-on: ubuntu-latest
+    container:
+      image: bilelmoussaoui/flatpak-github-actions:gnome-44
+      options: --privileged
+    strategy:
+      matrix:
+        arch: [x86_64, aarch64]
+      fail-fast: false
+    steps:
+    - uses: actions/checkout@v3
+    # Docker is required by the docker/setup-qemu-action which enables emulation
+    - name: Install deps
+      run: |
+        dnf -y install docker
+    - name: Set up QEMU
+      id: qemu
+      uses: docker/setup-qemu-action@v2
+      with:
+        platforms: arm64
+    - uses: flatpak/flatpak-github-actions/flatpak-builder@v6.1
+      with:
+        bundle: com.github.hugolabe.Wike.flatpak
+        manifest-path: build-aux/flatpak/com.github.hugolabe.Wike.json
+        cache-key: flatpak-builder-${{ github.sha }}
+        arch: ${{ matrix.arch }}

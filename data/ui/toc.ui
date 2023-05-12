@@ -41,7 +41,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                   <object class="AdwStatusPage">
                     <property name="title" translatable="yes">No Contents</property>
                     <property name="description" translatable="yes">There is no table of contents for this page</property>
-                    <property name="icon-name">sidebar-toc-symbolic</property>
+                    <property name="icon-name">view-list-symbolic</property>
                     <property name="margin-start">50</property>
                     <property name="margin-end">50</property>
                     <style>

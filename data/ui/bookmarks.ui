@@ -55,7 +55,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                   <object class="AdwStatusPage">
                     <property name="title" translatable="yes">No Bookmarks</property>
                     <property name="description" translatable="yes">Use the Add Bookmark button or press Ctrl+D to add the current article to the list</property>
-                    <property name="icon-name">sidebar-bookmarks-symbolic</property>
+                    <property name="icon-name">user-bookmarks-symbolic</property>
                     <property name="margin-start">50</property>
                     <property name="margin-end">50</property>
                     <style>

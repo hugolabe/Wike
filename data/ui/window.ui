@@ -89,7 +89,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                                 <property name="homogeneous">True</property>
                                 <child>
                                   <object class="GtkToggleButton" id="flap_toc_button">
-                                    <property name="icon-name">sidebar-toc-symbolic</property>
+                                    <property name="icon-name">view-list-symbolic</property>
                                     <property name="tooltip-text" translatable="yes">Contents</property>
                                     <style>
                                       <class name="flat"/>
@@ -98,7 +98,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                                 </child>
                                 <child>
                                   <object class="GtkToggleButton" id="flap_langlinks_button">
-                                    <property name="icon-name">sidebar-langlinks-symbolic</property>
+                                    <property name="icon-name">language-symbolic</property>
                                     <property name="tooltip-text" translatable="yes">Languages</property>
                                     <property name="group">flap_toc_button</property>
                                     <style>
@@ -108,7 +108,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                                 </child>
                                 <child>
                                   <object class="GtkToggleButton" id="flap_bookmarks_button">
-                                    <property name="icon-name">sidebar-bookmarks-symbolic</property>
+                                    <property name="icon-name">user-bookmarks-symbolic</property>
                                     <property name="tooltip-text" translatable="yes">Bookmarks</property>
                                     <property name="group">flap_toc_button</property>
                                     <style>
@@ -118,7 +118,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                                 </child>
                                 <child>
                                   <object class="GtkToggleButton" id="flap_history_button">
-                                    <property name="icon-name">sidebar-history-symbolic</property>
+                                    <property name="icon-name">document-open-recent-symbolic</property>
                                     <property name="tooltip-text" translatable="yes">History</property>
                                     <property name="group">flap_toc_button</property>
                                     <style>

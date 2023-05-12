@@ -37,7 +37,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                   <object class="AdwStatusPage">
                     <property name="title" translatable="yes">No Languages</property>
                     <property name="description" translatable="yes">This page is not available in other languages</property>
-                    <property name="icon-name">sidebar-langlinks-symbolic</property>
+                    <property name="icon-name">language-symbolic</property>
                     <property name="margin-start">50</property>
                     <property name="margin-end">50</property>
                     <style>
@@ -53,4 +53,3 @@ SPDX-License-Identifier: GPL-3.0-or-later
     </child>
   </template>
 </interface>
-  

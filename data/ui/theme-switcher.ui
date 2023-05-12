@@ -17,7 +17,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
         </style>
         <child>
           <object class="GtkImage">
-            <property name="icon-name">object-select-symbolic</property>
+            <property name="icon-name">checkmark-symbolic</property>
             <property name="halign">center</property>
             <property name="valign">center</property>
           </object>
@@ -33,7 +33,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
         </style>
         <child>
           <object class="GtkImage">
-            <property name="icon-name">object-select-symbolic</property>
+            <property name="icon-name">checkmark-symbolic</property>
             <property name="halign">center</property>
             <property name="valign">center</property>
           </object>
@@ -49,7 +49,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
         </style>
         <child>
           <object class="GtkImage">
-            <property name="icon-name">object-select-symbolic</property>
+            <property name="icon-name">checkmark-symbolic</property>
             <property name="halign">center</property>
             <property name="valign">center</property>
           </object>
@@ -65,7 +65,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
         </style>
         <child>
           <object class="GtkImage">
-            <property name="icon-name">object-select-symbolic</property>
+            <property name="icon-name">checkmark-symbolic</property>
             <property name="halign">center</property>
             <property name="valign">center</property>
           </object>

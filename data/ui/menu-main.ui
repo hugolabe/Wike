@@ -11,7 +11,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
       <attribute name="display-hint">horizontal-buttons</attribute>
       <item>
         <attribute name="label" translatable="yes">Print</attribute>
-        <attribute name="verb-icon">document-print-symbolic</attribute>
+        <attribute name="verb-icon">printer-symbolic</attribute>
         <attribute name="action">win.print-page</attribute>
       </item>
       <item>

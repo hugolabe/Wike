@@ -49,7 +49,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                   <object class="AdwStatusPage">
                     <property name="title" translatable="yes">Empty History</property>
                     <property name="description" translatable="yes">There are no recent articles in the history</property>
-                    <property name="icon-name">sidebar-history-symbolic</property>
+                    <property name="icon-name">document-open-recent-symbolic</property>
                     <property name="margin-start">50</property>
                     <property name="margin-end">50</property>
                     <style>

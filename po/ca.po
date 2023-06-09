@@ -519,7 +519,7 @@ msgstr "Barra lateral"
 #. Is this imperative or does it state that it's text to perform a search?
 #: ../data/ui/page.ui:20
 msgid "Search text"
-msgstr "Cerca text"
+msgstr "Text a cercar"
 
 #: ../data/ui/page.ui:58
 msgid "Start typing to search Wikipedia articles"

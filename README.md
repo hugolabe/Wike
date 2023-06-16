@@ -1,13 +1,20 @@
+[![GNOME Circle](https://gitlab.gnome.org/Teams/Circle/-/raw/master/assets/button/badge.svg)](https://circle.gnome.org)
 [![Please do not theme this app](https://stopthemingmy.app/badge.svg)](https://stopthemingmy.app)
+
+<img src="data/icons/com.github.hugolabe.Wike.svg" alt="Wike" align="left"/>
 
 # Wike
 
+Search and read Wikipedia articles
+
 ![](data/screenshots/wike-01.png)
+
+## Description
 
 *Wike* is a Wikipedia reader for the GNOME Desktop.
 Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles.
 
-## Features
+### Features
 
 - Open multiple articles in tabs
 - More than 300 languages
@@ -21,19 +28,19 @@ Provides access to all the content of this online encyclopedia in a native appli
 - Desktop and mobile layouts
 - GNOME Shell search integration
 
-## GNOME Circle
-
-Wike is part of GNOME Circle.
-
-<a href="https://circle.gnome.org"><img width="200" alt="GNOME Circle" src="https://gitlab.gnome.org/Teams/Circle/-/raw/master/assets/button/circle-button-fullcolor.svg"></a>
-
 ## Install
 
-### Official
+### Flatpak
 
-You can install *Wike* from Flathub.org
+This is the official package. You can install it from Flathub.
 
-<a href='https://flathub.org/apps/details/com.github.hugolabe.Wike'><img width='240' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-i-en.png'/></a>
+<a href="https://flathub.org/apps/details/com.github.hugolabe.Wike"><img src="https://flathub.org/assets/badges/flathub-badge-en.svg" alt="Download on Flathub" width="200"/></a>
+
+### Snap
+
+Get it from the Snap Store.
+
+<a href="https://snapcraft.io/wike"><img src="https://snapcraft.io/static/images/badges/en/snap-store-black.svg" alt="Get it from the Snap Store" width="200"/></a>
 
 ### Other installation methods
 
@@ -66,4 +73,3 @@ All content provided by the app comes from [Wikipedia.org](https://www.wikipedia
 *Wike* is an independent development not endorsed by or affiliated with the [Wikimedia Foundation](https://wikimediafoundation.org/).
 
 *Wike* uses a subset of [circle-flags](https://github.com/HatScripts/circle-flags) icons, copyright by [HatScripts](https://github.com/HatScripts), and released under the [MIT license](https://opensource.org/license/mit/).
-

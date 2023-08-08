@@ -22,6 +22,11 @@
       <summary>Keep a list of recent articles</summary>
     </key>
 
+    <key name="clear-data-on-close" type="b">
+      <default>false</default>
+      <summary>Clear cookies and cache data when Wike is closed</summary>
+    </key>
+
     <key name="on-start-load" type="i">
       <default>0</default>
       <summary>On start load this page (0-Main, 1-Random, 2-Last)</summary>

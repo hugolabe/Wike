@@ -187,8 +187,10 @@ class Application(Adw.Application):
 
     settings.sync()
     languages.save()
+
     if not settings.get_boolean('keep-history'):
       history.clear()
+
     if settings.get_boolean('clear-data-on-close'):
       data_manager = network_session.get_website_data_manager()
       data_manager.clear(WebKit.WebsiteDataTypes.ALL, 0, None, None, None)

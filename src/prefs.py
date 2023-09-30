@@ -20,6 +20,7 @@ class PrefsWindow(Adw.PreferencesWindow):
   desktop_switch = Gtk.Template.Child()
   history_switch = Gtk.Template.Child()
   clear_history_button = Gtk.Template.Child()
+  data_switch = Gtk.Template.Child()
   clear_data_button = Gtk.Template.Child()
 
   # Connect signals and bindings
@@ -30,6 +31,7 @@ class PrefsWindow(Adw.PreferencesWindow):
     settings.bind('on-start-load', self.start_combo, 'selected', Gio.SettingsBindFlags.DEFAULT)
     settings.bind('search-desktop', self.desktop_switch, 'active', Gio.SettingsBindFlags.DEFAULT)
     settings.bind('keep-history', self.history_switch, 'active', Gio.SettingsBindFlags.DEFAULT)
+    settings.bind('clear-data-on-close', self.data_switch, 'active', Gio.SettingsBindFlags.DEFAULT)
 
     self.clear_history_button.connect('clicked', self._clear_history_button_cb)
     self.clear_data_button.connect('clicked', self._clear_data_button_cb)

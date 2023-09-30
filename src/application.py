@@ -10,11 +10,12 @@ gi.require_version('Gdk', '4.0')
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 gi.require_version('WebKit', '6.0')
-from gi.repository import GLib, Gio, Gdk, Gtk, Adw
+from gi.repository import GLib, Gio, Gdk, Gtk, Adw, WebKit
 
 from wike.data import settings, languages, history, bookmarks
 from wike.prefs import PrefsWindow
 from wike.window import Window
+from wike.view import network_session
 
 
 # Main application class for Wike
@@ -186,8 +187,14 @@ class Application(Adw.Application):
 
     settings.sync()
     languages.save()
+
     if not settings.get_boolean('keep-history'):
       history.clear()
+
+    if settings.get_boolean('clear-data-on-close'):
+      data_manager = network_session.get_website_data_manager()
+      data_manager.clear(WebKit.WebsiteDataTypes.ALL, 0, None, None, None)
+
     history.save()
     bookmarks.save()
 

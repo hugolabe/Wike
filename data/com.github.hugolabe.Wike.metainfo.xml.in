@@ -45,7 +45,7 @@
 
   <releases>
     <release version="2.0.1" date="2023-04-23">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Bug fixes.</li>
           <li>Small UI tweaks.</li>
@@ -54,7 +54,7 @@
       </description>
     </release>
     <release version="2.0.0" date="2023-04-12">
-      <description>
+      <description translatable="no">
         <p>This version brings a major revamp to the user interface and also introduces some new features. These are the main novelties:</p>
         <ul>
           <li>Migration to GTK4 + Libadwaita.</li>
@@ -74,7 +74,7 @@
       </description>
     </release>
     <release version="1.8.3" date="2023-03-03">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added shortcut for Random Article.</li>
           <li>Small UI tweaks.</li>
@@ -84,7 +84,7 @@
       </description>
     </release>
     <release version="1.8.2" date="2022-10-24">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added Bulgarian translation.</li>
           <li>Updated Turkish translation.</li>
@@ -93,7 +93,7 @@
       </description>
     </release>
     <release version="1.8.1" date="2022-09-07">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added Tamil translation.</li>
           <li>Updated Dutch translation.</li>
@@ -101,7 +101,7 @@
       </description>
     </release>
     <release version="1.8.0" date="2022-05-28">
-      <description>
+      <description translatable="no">
         <ul>
           <li>System light/dark theme support.</li>
           <li>Updated Wikipedia language list.</li>
@@ -112,7 +112,7 @@
       </description>
     </release>
     <release version="1.7.2" date="2022-03-31">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Flatpak runtime bumped to GNOME 42.</li>
           <li>Updated translations: Turkish.</li>
@@ -120,7 +120,7 @@
       </description>
     </release>
     <release version="1.7.1" date="2022-02-06">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added translations: Bengali, Chinese (traditional).</li>
           <li>Updated translations: Catalan, French.</li>
@@ -128,7 +128,7 @@
       </description>
     </release>
     <release version="1.7.0" date="2022-01-19">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Desktop searches in multiple languages.</li>
           <li>Context menu improvements.</li>
@@ -137,7 +137,7 @@
       </description>
     </release>
     <release version="1.6.3" date="2021-12-10">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added Basque translation.</li>
           <li>Updated Persian translation.</li>
@@ -145,7 +145,7 @@
       </description>
     </release>
     <release version="1.6.2" date="2021-12-03">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added translations: Catalan.</li>
           <li>Updated translations: German and Japanese.</li>
@@ -154,7 +154,7 @@
       </description>
     </release>
     <release version="1.6.1" date="2021-11-16">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added translations: Japanese, Persian and Polish.</li>
           <li>Updated translations: Interlingua, Italian, Russian and Turkish.</li>
@@ -162,7 +162,7 @@
       </description>
     </release>
     <release version="1.6.0" date="2021-10-15">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Open multiple articles in tabs.</li>
           <li>Added sepia mode.</li>
@@ -173,14 +173,14 @@
       </description>
     </release>
     <release version="1.5.7" date="2021-09-21">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added Croatian and Galician translations.</li>
         </ul>
       </description>
     </release>
     <release version="1.5.6" date="2021-09-09">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Updated French and Italian translations.</li>
           <li>Bug fixes.</li>
@@ -188,7 +188,7 @@
       </description>
     </release>
     <release version="1.5.5" date="2021-09-05">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Small UI tweaks.</li>
           <li>Fixed some texts.</li>
@@ -198,7 +198,7 @@
       </description>
     </release>
     <release version="1.5.4" date="2021-08-10">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Fix alignment issues in Historic view.</li>
           <li>Added Indonesian translation.</li>
@@ -206,7 +206,7 @@
       </description>
     </release>
     <release version="1.5.3" date="2021-07-09">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added Finnish translation.</li>
           <li>Updated Russian translation.</li>
@@ -214,7 +214,7 @@
       </description>
     </release>
     <release version="1.5.2" date="2021-07-05">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added Czech and Russian translations.</li>
           <li>Updated German translation.</li>
@@ -222,7 +222,7 @@
       </description>
     </release>
     <release version="1.5.1" date="2021-06-25">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Improvements in privacy management.</li>
           <li>Updated translations: Dutch, French, Portuguese (BR) and Spanish.</li>
@@ -230,7 +230,7 @@
       </description>
     </release>
     <release version="1.5.0" date="2021-06-18">
-      <description>
+      <description translatable="no">
         <ul>
           <li>GNOME Shell search integration.</li>
           <li>Added an option in preferences to show preview popups in article links.</li>
@@ -240,7 +240,7 @@
       </description>
     </release>
     <release version="1.4.2" date="2021-06-04">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added Interlingua translation.</li>
           <li>Updated German translation.</li>
@@ -251,7 +251,7 @@
       </description>
     </release>
     <release version="1.4.1" date="2021-05-28">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added Dutch translation.</li>
           <li>Updated French translation.</li>
@@ -260,7 +260,7 @@
       </description>
     </release>
     <release version="1.4.0" date="2021-05-21">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added dark mode.</li>
           <li>Updated Spanish translation.</li>
@@ -268,7 +268,7 @@
       </description>
     </release>
     <release version="1.3.3" date="2021-05-13">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added Greek translation.</li>
           <li>Updated Italian translation.</li>
@@ -276,7 +276,7 @@
       </description>
     </release>
     <release version="1.3.2" date="2021-05-08">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added Ctrl+K shortcut to search articles.</li>
           <li>Increased maximum font size.</li>
@@ -287,7 +287,7 @@
       </description>
     </release>
     <release version="1.3.1" date="2021-05-07">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Article view improvements.</li>
           <li>Updated French translation.</li>
@@ -295,21 +295,21 @@
       </description>
     </release>
     <release version="1.3.0" date="2021-04-28">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added option to use custom font in article view.</li>
         </ul>
       </description>
     </release>
     <release version="1.2.1" date="2021-04-22">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added German translation.</li>
         </ul>
       </description>
     </release>
     <release version="1.2.0" date="2021-04-21">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Correction in French translation.</li>
           <li>Switch to GNOME Platform 40 runtime.</li>
@@ -319,7 +319,7 @@
       </description>
     </release>
     <release version="1.1.1" date="2021-04-14">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Added French translation.</li>
           <li>Added Italian translation.</li>
@@ -328,7 +328,7 @@
       </description>
     </release>
     <release version="1.1.0" date="2021-04-12">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Improved text search bar, with prev/next buttons and match counter.</li>
           <li>Correction in spanish translation.</li>
@@ -336,14 +336,14 @@
       </description>
     </release>
     <release version="1.0.2" date="2021-03-24">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Fix content rating missed in metainfo.</li>
         </ul>
       </description>
     </release>
     <release version="1.0.1" date="2021-03-24">
-      <description>
+      <description translatable="no">
         <ul>
           <li>CSS style tweaks.</li>
           <li>Changes in app distribution files.</li>
@@ -351,7 +351,7 @@
       </description>
     </release>
     <release version="1.0.0" date="2021-03-19">
-      <description>
+      <description translatable="no">
         <p>Initial release.</p>
       </description>
     </release>

@@ -31,7 +31,7 @@ class PrefsWindow(Adw.PreferencesWindow):
     settings.bind('on-start-load', self.start_combo, 'selected', Gio.SettingsBindFlags.DEFAULT)
     settings.bind('search-desktop', self.desktop_switch, 'active', Gio.SettingsBindFlags.DEFAULT)
     settings.bind('keep-history', self.history_switch, 'active', Gio.SettingsBindFlags.DEFAULT)
-    settings.bind('clear-data-on-close', self.data_switch, 'active', Gio.SettingsBindFlags.DEFAULT)
+    settings.bind('clear-data', self.data_switch, 'active', Gio.SettingsBindFlags.DEFAULT)
 
     self.clear_history_button.connect('clicked', self._clear_history_button_cb)
     self.clear_data_button.connect('clicked', self._clear_data_button_cb)

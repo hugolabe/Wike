@@ -185,16 +185,15 @@ class Application(Adw.Application):
     else:
       settings.set_string('last-uri', self._window.page.wikiview.get_base_uri())
 
-    settings.sync()
-    languages.save()
-
     if not settings.get_boolean('keep-history'):
       history.clear()
 
-    if settings.get_boolean('clear-data-on-close'):
+    if settings.get_boolean('clear-data'):
       data_manager = network_session.get_website_data_manager()
       data_manager.clear(WebKit.WebsiteDataTypes.ALL, 0, None, None, None)
 
+    settings.sync()
+    languages.save()
     history.save()
     bookmarks.save()
 

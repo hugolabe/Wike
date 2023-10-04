@@ -22,7 +22,7 @@
       <summary>Keep a list of recent articles</summary>
     </key>
 
-    <key name="clear-data-on-close" type="b">
+    <key name="clear-data" type="b">
       <default>false</default>
       <summary>Clear cookies and cache data when Wike is closed</summary>
     </key>

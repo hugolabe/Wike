@@ -18,10 +18,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
               <object class="GtkSearchEntry" id="search_entry">
                 <property name="max-width-chars">30</property>
                 <property name="placeholder-text" translatable="yes">Search text</property>
-                <child>
-                  <object class="GtkLabel" id="search_matches_label">
-                  </object>
-                </child>
               </object>
             </child>
             <child>

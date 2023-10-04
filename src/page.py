@@ -20,7 +20,6 @@ class PageBox(Gtk.Box):
   search_entry = Gtk.Template.Child()
   search_prev_button = Gtk.Template.Child()
   search_next_button = Gtk.Template.Child()
-  search_matches_label = Gtk.Template.Child()
   view_stack = Gtk.Template.Child()
   status_page = Gtk.Template.Child()
   main_page_button = Gtk.Template.Child()
@@ -53,7 +52,6 @@ class PageBox(Gtk.Box):
     self.search_next_button.connect('clicked', self._search_next_button_cb, find_controller)
     find_controller.connect('found-text', self._find_controller_found_cb)
     find_controller.connect('failed-to-find-text', self._find_controller_not_found_cb)
-    find_controller.connect('counted-matches', self._find_controller_matches_cb)
     nav_list.connect('changed', self._nav_list_changed_cb)
 
   # Manage wikiview load page events
@@ -140,10 +138,8 @@ class PageBox(Gtk.Box):
   def _search_entry_changed_cb(self, search_entry, find_controller):
     text = search_entry.get_text()
     if len(text) > 2:
-      find_controller.count_matches(text, WebKit.FindOptions.WRAP_AROUND | WebKit.FindOptions.CASE_INSENSITIVE, 9999)
       find_controller.search(text, WebKit.FindOptions.WRAP_AROUND | WebKit.FindOptions.CASE_INSENSITIVE, 9999)
     else:
-      self.search_matches_label.set_label('')
       self.search_entry.remove_css_class('error')
       self.search_prev_button.set_sensitive(False)
       self.search_next_button.set_sensitive(False)
@@ -169,23 +165,17 @@ class PageBox(Gtk.Box):
   # Found text in article
 
   def _find_controller_found_cb(self, find_controller, match_count):
+    self.search_entry.remove_css_class('error')
     self.search_prev_button.set_sensitive(True)
     self.search_next_button.set_sensitive(True)
 
   # Not found text in article
 
   def _find_controller_not_found_cb(self, find_controller):
-    self.search_matches_label.set_label('0')
     self.search_entry.add_css_class('error')
     self.search_prev_button.set_sensitive(False)
     self.search_next_button.set_sensitive(False)
     find_controller.search_finish()
-
-  # Show text search matches found
-
-  def _find_controller_matches_cb(self, find_controller, match_count):
-    self.search_matches_label.set_label(str(match_count))
-    self.search_entry.remove_css_class('error')
 
   # Refresh navbox state on navlist changed
 

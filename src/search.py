@@ -20,7 +20,6 @@ class SearchBox(Gtk.Box):
   __gtype_name__ = 'SearchBox'
   
   search_entry = Gtk.Template.Child()
-  lang_label = Gtk.Template.Child()
   settings_button = Gtk.Template.Child()
   
   # Create suggestions list and connect search entry events
@@ -224,8 +223,8 @@ class SettingsPopover(Gtk.Popover):
 
   def populate_list(self):
     lang_id = settings.get_string('search-language')
-    self._search_box.lang_label.set_label(lang_id)
-    self._search_box.lang_label.set_tooltip_text(languages.wikilangs[lang_id].capitalize())
+    self._search_box.settings_button.set_label(lang_id)
+    self._search_box.settings_button.set_tooltip_text(languages.wikilangs[lang_id].capitalize())
 
     while True:
       row = self.languages_list.get_row_at_index(0)

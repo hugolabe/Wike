@@ -13,17 +13,14 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <child>
       <object class="GtkSearchEntry" id="search_entry">
         <property name="placeholder-text" translatable="yes">Search Wikipedia</property>
-        <child>
-          <object class="GtkLabel" id="lang_label">
-            <property name="sensitive">false</property>
-          </object>
-        </child>
+        <property name="hexpand">true</property>
       </object>
     </child>
     <child>
       <object class="GtkMenuButton" id="settings_button">
-        <property name="icon-name">pan-down-symbolic</property>
-        <property name="tooltip-text" translatable="yes">Search Settings</property>
+        <property name="label">en</property>
+        <property name="tooltip-text">English</property>
+        <property name="width_request">60</property>
       </object>
     </child>
   </template>

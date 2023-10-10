@@ -353,7 +353,7 @@ class WikiView(WebKit.WebView):
     if hit_test.get_context() == WebKit.HitTestResultContext.DOCUMENT:
       base_uri = self.get_base_uri()
       uri = self._is_wiki_uri(base_uri)
-      if uri == '' or uri in bookmarks.items:
+      if uri == '':
         action_bookmark.set_enabled(False)
 
       item = WebKit.ContextMenuItem.new_separator()
@@ -367,9 +367,6 @@ class WikiView(WebKit.WebView):
       if uri == '':
         action_bookmark.set_enabled(False)
         action_tab.set_enabled(False)
-      else:
-        if uri in bookmarks.items:
-          action_bookmark.set_enabled(False)
 
       if uri != '':
         link = uri

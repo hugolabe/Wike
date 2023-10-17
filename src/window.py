@@ -111,11 +111,17 @@ class Window(Adw.ApplicationWindow):
           self.page.wikiview.load_main()
         elif settings.get_int('on-start-load') == 1:
           self.page.wikiview.load_random()
-        else:
+        elif settings.get_int('on-start-load') == 2:
           if settings.get_string('last-uri'):
             self.page.wikiview.load_wiki(settings.get_string('last-uri'))
           else:
             self.page.wikiview.load_main()
+        elif len(settings.get_strv('last-window')) == 0:
+            self.page.wikiview.load_main()
+        else:
+          for i, uri in enumerate(settings.get_strv('last-window')):
+            if i==0: self.page.wikiview.load_wiki(uri)
+            else: self.new_page(uri, None, uri == settings.get_string('last-uri'))
 
   # Set actions for window
   

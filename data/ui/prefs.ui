@@ -26,6 +26,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                       <item translatable="yes">Wikipedia main page</item>
                       <item translatable="yes">Random article</item>
                       <item translatable="yes">Last article</item>
+                      <item translatable="yes">Restore window</item>
                     </items>
                   </object>
                 </property>

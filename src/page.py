@@ -9,7 +9,7 @@ from wike.data import settings
 from wike.view import WikiView
 
 LAZY_LOAD_INTERVAL = 500
-LAZY_LOAD_MAX = 15
+LAZY_LOAD_MAX = 7
 
 # Page box for each tab with webview and search bar
 

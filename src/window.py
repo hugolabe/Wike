@@ -56,6 +56,7 @@ class Window(Adw.ApplicationWindow):
 
     self.page = PageBox(self)
     tabpage = self.tabview.append(self.page)
+    tabpage.set_live_thumbnail(True)
 
     self.actionbar = ActionBar()
     self.window_box.append(self.actionbar)
@@ -288,6 +289,8 @@ class Window(Adw.ApplicationWindow):
     self.page = tabpage.get_child()
     if self.page._lazy_load:
       self.page.load_page_now(self._pool)
+    if self.page.wikiview.is_loading():
+      tabpage.set_loading(True)
     self.refresh_nav_actions(self.page.wikiview)
     self.refresh_menu_actions(self.page.wikiview.is_local())
     self.toc_box.populate(self.page.wikiview.title, self.page.wikiview.sections)

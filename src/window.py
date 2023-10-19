@@ -101,6 +101,8 @@ class Window(Adw.ApplicationWindow):
     self.flap_bookmarks_button.connect('toggled', self._flap_switcher_button_cb, 'bookmarks')
     self.flap_history_button.connect('toggled', self._flap_switcher_button_cb, 'history')
 
+    self._pool = []
+
     if launch_uri == 'notfound':
       self.page.wikiview.load_message(launch_uri)
     else:
@@ -116,12 +118,22 @@ class Window(Adw.ApplicationWindow):
             self.page.wikiview.load_wiki(settings.get_string('last-uri'))
           else:
             self.page.wikiview.load_main()
-        elif len(settings.get_strv('last-window')) == 0:
-            self.page.wikiview.load_main()
         else:
-          for i, uri in enumerate(settings.get_strv('last-window')):
-            if i==0: self.page.wikiview.load_wiki(uri)
-            else: self.new_page(uri, None, uri == settings.get_string('last-uri'))
+          tabs_data = settings.get_value('last-window').unpack()
+          if len(tabs_data) == 0:
+            self.page.wikiview.load_main()
+          else:
+              for i, tab_data in enumerate(tabs_data):
+                uri, title = tab_data
+                if i == 0:
+                  if uri != settings.get_string('last-uri'):
+                    self.page._did_lazy_load = True
+                    tabpage.set_title(title)
+                  self.page.wikiview.load_wiki(uri)
+                elif uri == settings.get_string('last-uri'):
+                  self.new_page(uri, None, True)
+                else:
+                  self.new_lazy_page(uri, title, None)
 
   # Set actions for window
   
@@ -209,6 +221,18 @@ class Window(Adw.ApplicationWindow):
 
     return tabpage
 
+  # New empty tab with a title for lazy-loading
+
+  def new_lazy_page(self, uri, title, parent):
+    page = PageBox(self, lazy_load=[uri,title])
+    tabpage = self.tabview.add_page(page, parent)
+    tabpage.set_live_thumbnail(True)
+    tabpage.set_title(title)
+    self._pool.append(page)
+    page.begin_lazy_load(self._pool)
+
+    return tabpage
+
   # New empty tab
 
   def _new_tab_cb(self, action, parameter):
@@ -254,7 +278,7 @@ class Window(Adw.ApplicationWindow):
   def _toggle_overview_cb(self, action, parameter):
     self.taboverview.set_open(not self.taboverview.get_open())
 
-  # On tab selected event refresh headerbar and sidebar
+  # On tab selected event refresh headerbar and sidebar, and force loading
 
   def _tabview_selected_page_cb(self, tabview, value):
     tabpage = tabview.get_selected_page()
@@ -262,6 +286,8 @@ class Window(Adw.ApplicationWindow):
       return
 
     self.page = tabpage.get_child()
+    if self.page._lazy_load:
+      self.page.load_page_now(self._pool)
     self.refresh_nav_actions(self.page.wikiview)
     self.refresh_menu_actions(self.page.wikiview.is_local())
     self.toc_box.populate(self.page.wikiview.title, self.page.wikiview.sections)

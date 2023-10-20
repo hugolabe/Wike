@@ -120,6 +120,7 @@ class PageBox(Gtk.Box):
       self._window.refresh_menu_actions(wikiview.is_local())
 
     elif event == WebKit.LoadEvent.FINISHED:
+      self._did_lazy_load = False
       tabpage.set_loading(False)
       if wikiview.is_local():
         self._show_status_page(wikiview.get_uri())

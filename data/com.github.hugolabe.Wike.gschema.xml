@@ -29,7 +29,7 @@
 
     <key name="on-start-load" type="i">
       <default>0</default>
-      <summary>On start load this page (0-Main, 1-Random, 2-Last article, 3-Restore window)</summary>
+      <summary>On start load this page (0-Main, 1-Random, 2-Last article, 3-Restore all tabs)</summary>
     </key>
 
     <key name="last-uri" type="s">

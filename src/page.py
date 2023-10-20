@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 
-from gi.repository import Gtk, WebKit, GLib
+from gi.repository import Gtk, WebKit
 
 from wike.data import settings
 from wike.view import WikiView
@@ -59,27 +59,10 @@ class PageBox(Gtk.Box):
     find_controller.connect('failed-to-find-text', self._find_controller_not_found_cb)
     nav_list.connect('changed', self._nav_list_changed_cb)
 
-  # Start a timer to load the page later
+  # Load a non-loaded page, for example when the user selects the tab
 
-  def begin_lazy_load(self, pool):
-    if not self._lazy_load:
-      return
-    timeout = LAZY_LOAD_INTERVAL * (pool.index(self) + 1)
-    def _load_page_now():
-        self.load_page_now(pool)
-        return False
-
-    if pool.index(self) < LAZY_LOAD_MAX:
-        self._glib_source = GLib.timeout_add(timeout, _load_page_now)
-
-  # On the end of timer, or when the user selects the page, load it
-
-  def load_page_now(self, pool):
+  def load_page_now(self):
     uri, title = self._lazy_load
-    pool.remove(self)
-    if self._glib_source >= 0:
-      GLib.Source.remove(self._glib_source)
-      self._glib_source = -1
 
     if uri == 'blank' or uri == 'notfound':
       self.wikiview.load_message(uri)
@@ -104,8 +87,8 @@ class PageBox(Gtk.Box):
       self.view_stack.set_visible_child_name('wikiview')
       if self._lazy_load or not self._did_lazy_load:
         tabpage.set_title(_('Loading'))
-        tabpage.set_loading(True)
         self._did_lazy_load = False
+      tabpage.set_loading(True)
       if tabpage.get_selected():
         self._window.headerbar.search_box.reset()
         wikiview.grab_focus()

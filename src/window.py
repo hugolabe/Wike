@@ -54,10 +54,6 @@ class Window(Adw.ApplicationWindow):
     if settings.get_boolean('window-max'):
       self.maximize()
 
-    self.page = PageBox(self)
-    tabpage = self.tabview.append(self.page)
-    tabpage.set_live_thumbnail(True)
-
     self.actionbar = ActionBar()
     self.window_box.append(self.actionbar)
     
@@ -102,39 +98,36 @@ class Window(Adw.ApplicationWindow):
     self.flap_bookmarks_button.connect('toggled', self._flap_switcher_button_cb, 'bookmarks')
     self.flap_history_button.connect('toggled', self._flap_switcher_button_cb, 'history')
 
-    self._pool = []
+    self._finished_loading_tabs = False
 
     if launch_uri == 'notfound':
-      self.page.wikiview.load_message(launch_uri)
+      self.new_page(launch_uri, None, True)
     else:
       if launch_uri != '':
-        self.page.wikiview.load_wiki(launch_uri)
+        self.new_page(launch_uri, None, True)
       else:
         if settings.get_int('on-start-load') == 0:
-          self.page.wikiview.load_main()
+          self.new_page('main', None, True)
         elif settings.get_int('on-start-load') == 1:
-          self.page.wikiview.load_random()
+          self.new_page('random', None, True)
         elif settings.get_int('on-start-load') == 2:
           if settings.get_string('last-uri'):
-            self.page.wikiview.load_wiki(settings.get_string('last-uri'))
+            self.new_page(settings.get_string('last-uri'), None, True)
           else:
-            self.page.wikiview.load_main()
+            self.new_page('main', None, True)
         else:
           tabs_data = settings.get_value('last-window').unpack()
           if len(tabs_data) == 0:
-            self.page.wikiview.load_main()
+            self.new_page('main', None, True)
           else:
-              for i, tab_data in enumerate(tabs_data):
-                uri, title = tab_data
-                if i == 0:
-                  if uri != settings.get_string('last-uri'):
-                    self.page._did_lazy_load = True
-                    tabpage.set_title(title)
-                  self.page.wikiview.load_wiki(uri)
-                elif uri == settings.get_string('last-uri'):
-                  self.new_page(uri, None, True)
-                else:
-                  self.new_lazy_page(uri, title, None)
+            for tab_data in tabs_data:
+              uri, title = tab_data
+              if uri == settings.get_string('last-uri'):
+                self.new_page(uri, None, True)
+              else:
+                self.new_lazy_page(uri, title, None)
+
+    self._finished_loading_tabs = True
 
   # Set actions for window
   
@@ -212,7 +205,12 @@ class Window(Adw.ApplicationWindow):
     page = PageBox(self)
     tabpage = self.tabview.add_page(page, parent)
     tabpage.set_live_thumbnail(True)
-    if uri == 'blank' or uri == 'notfound':
+
+    if uri == 'main':
+      page.wikiview.load_main()
+    elif uri == 'random':
+      page.wikiview.load_random()
+    elif uri == 'blank' or uri == 'notfound':
       page.wikiview.load_message(uri)
     else:
       page.wikiview.load_wiki(uri)
@@ -229,8 +227,6 @@ class Window(Adw.ApplicationWindow):
     tabpage = self.tabview.add_page(page, parent)
     tabpage.set_live_thumbnail(True)
     tabpage.set_title(title)
-    self._pool.append(page)
-    page.begin_lazy_load(self._pool)
 
     return tabpage
 
@@ -287,15 +283,15 @@ class Window(Adw.ApplicationWindow):
       return
 
     self.page = tabpage.get_child()
-    if self.page._lazy_load:
-      self.page.load_page_now(self._pool)
-    if self.page.wikiview.is_loading():
-      tabpage.set_loading(True)
+    if self.page._lazy_load and self._finished_loading_tabs:
+      self.page.load_page_now()
     self.refresh_nav_actions(self.page.wikiview)
     self.refresh_menu_actions(self.page.wikiview.is_local())
     self.toc_box.populate(self.page.wikiview.title, self.page.wikiview.sections)
     self.langlinks_box.populate(self.page.wikiview.langlinks)
-    self.bookmarks_box.refresh_buttons()
+
+    if self._finished_loading_tabs:
+        self.bookmarks_box.refresh_buttons()
 
   # On tab closed event destroy wikiview and confirm
 

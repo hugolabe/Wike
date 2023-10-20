@@ -189,9 +189,9 @@ class Application(Adw.Application):
         tabpage = self._window.tabview.get_nth_page(i_page)
         page = tabpage.get_child()
         if page._lazy_load:
-            pages_data.append(page._lazy_load)
+          pages_data.append(page._lazy_load)
         else:
-            pages_data.append([page.wikiview.get_base_uri(), tabpage.get_title()])
+          pages_data.append([page.wikiview.get_base_uri(), tabpage.get_title()])
       settings.set_value('last-window', GLib.Variant("a(ss)", pages_data))
 
     if not settings.get_boolean('keep-history'):

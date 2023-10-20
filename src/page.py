@@ -33,7 +33,6 @@ class PageBox(Gtk.Box):
     self._window = window
     self._lazy_load = lazy_load
     self._did_lazy_load = False
-    self._glib_source = -1
 
     self.wikiview = WikiView()
     self.wikiview.set_vexpand(True)
@@ -201,3 +200,4 @@ class PageBox(Gtk.Box):
     tabpage = self._window.tabview.get_page(self)
     if tabpage.get_selected():
       self._window.refresh_nav_actions(self.wikiview)
+

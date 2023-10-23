@@ -46,6 +46,9 @@ class HistoryBox(Gtk.Box):
     settings.connect('changed::keep-history', self._keep_history_changed_cb)
     settings.connect('changed::filter-history', self._filter_history_changed_cb)
 
+    self._date_labels = {}
+    self._history_rows = {}
+
     self._populate()
 
     self.clear_button.connect('clicked', self._clear_button_cb)
@@ -82,24 +85,19 @@ class HistoryBox(Gtk.Box):
       if days >= filter_days:
         break
 
-      date_label = Gtk.Label()
-      date_label.set_markup('<b>' + date + '</b>')
-      date_label.set_xalign(0)
-      date_label.set_margin_start(3)
-      date_label.set_margin_end(3)
-      row = Gtk.ListBoxRow()
-      row.set_child(date_label)
-      row.set_activatable(False)
-      row.set_selectable(False)
-      self.history_list.append(row)
+      date_row = self._new_date_label(date)
+      self._date_labels[date] = date_row
+      self.history_list.append(date_row)
 
       history_item = history.items[date]
       for uri in sorted(history_item, key=history_item.get, reverse=True):
         time = history_item[uri][0]
         title = history_item[uri][1]
         lang = history_item[uri][2]
-        row = HistoryRow(uri, title, lang, time)
+        row = HistoryRow(uri, title, lang, date, time)
         self.history_list.append(row)
+        self._history_rows[(date, uri)] = row
+        row.remove_button.connect('clicked', self._row_remove_button_cb, row)
 
   # Clear history list
 
@@ -114,14 +112,50 @@ class HistoryBox(Gtk.Box):
   # Add article to history
 
   def add_item(self, uri, title, lang):
-    history.add(uri, title, lang)
-    self._populate()
+    date, time = history.add(uri, title, lang)
+    if (date, uri) in self._history_rows:
+      self._row_remove_button_cb(None, self._history_rows[(date, uri)])
+    row = HistoryRow(uri, title, lang, date, time)
+    if date in self._date_labels:
+      date_row = self._date_labels[date]
+      self.history_list.remove(date_row)
+    else:
+      date_row = self._new_date_label(date)
+    self.history_list.prepend(row)
+    self.history_list.prepend(date_row)
+    self._history_rows[(date, uri)] = row
+    row.remove_button.connect('clicked', self._row_remove_button_cb, row)
+
+  def _new_date_label(self, date):
+    date_label = Gtk.Label()
+    date_label.set_markup('<b>' + date + '</b>')
+    date_label.set_xalign(0)
+    date_label.set_margin_start(3)
+    date_label.set_margin_end(3)
+    date_row = Gtk.ListBoxRow()
+    date_row.set_child(date_label)
+    date_row.set_activatable(False)
+    date_row.set_selectable(False)
+    self._date_labels[date] = date_row
+    return date_row
+
+  # On row button remove history row and refresh buttons state
+
+  def _row_remove_button_cb(self, remove_button, row):
+    if history.remove(row.date, row.time, row.uri):
+      self.history_list.remove(row)
+      if row.date not in [key[0] for key in self._history_rows]:
+        self.history_list.remove(self._date_labels[row.date])
+        del self._date_labels[row.date]
+      del self._history_rows[(row.date, row.uri)]
 
   # Clear history of recent articles
 
   def clear_history(self):
     history.clear()
     history.save()
+    self._history_rows.clear()
+    self._date_labels.clear()
     self._clear_list()
 
   # Settings keep history changed event
@@ -208,16 +242,18 @@ class HistoryRow(Gtk.ListBoxRow):
   title_label = Gtk.Template.Child()
   lang_label = Gtk.Template.Child()
   time_label = Gtk.Template.Child()
+  remove_button = Gtk.Template.Child()
 
   # Set values and widgets
 
-  def __init__(self, uri, title, lang, time):
+  def __init__(self, uri, title, lang, date, time):
     super().__init__()
 
     self.uri = uri
     self.title = title
     self.lang = lang
-    self.time = time.rsplit(':', 1)[0]
+    self.date = date
+    self.time = time
 
     if lang in languages.wikilangs:
       lang_name = languages.wikilangs[lang].capitalize()
@@ -226,4 +262,4 @@ class HistoryRow(Gtk.ListBoxRow):
 
     self.title_label.set_label(title)
     self.lang_label.set_markup('<small>' + lang_name + '</small>')
-    self.time_label.set_markup('<small>' + self.time + '</small>')
+    self.time_label.set_markup('<small>' + self.time.rsplit(':', 1)[0] + '</small>')

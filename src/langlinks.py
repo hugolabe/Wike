@@ -91,10 +91,14 @@ class LanglinksBox(Gtk.Box):
   # On list activated load page in choosen language
 
   def _list_activated_cb(self, langs_list, row):
-    if self._window.flap.get_fold_policy() == Adw.FlapFoldPolicy.ALWAYS:
+    if self._window.flap.get_fold_policy() == Adw.FlapFoldPolicy.ALWAYS and not self._window._ctrl_pressed:
       self._window.flap.set_reveal_flap(False)
 
-    self._window.page.wikiview.load_wiki(row.uri)
+    if self._window._ctrl_pressed:
+      self._window.new_page(row.uri, None, False)
+    else:
+      self._window.page.wikiview.load_wiki(row.uri)
+
 
   # Show/hide separator on scroll
 

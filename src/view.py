@@ -307,6 +307,7 @@ class WikiView(WebKit.WebView):
       nav_action = decision.get_navigation_action()
       nav_type = nav_action.get_navigation_type()
       mouse_button = nav_action.get_mouse_button()
+      ctrl_pressed = nav_action.get_modifiers() == Gdk.ModifierType.CONTROL_MASK
       uri = nav_action.get_request().get_uri()
       uri_elements = urllib.parse.urlparse(uri)
       uri_scheme = uri_elements[0]
@@ -317,7 +318,7 @@ class WikiView(WebKit.WebView):
         if uri_netloc.endswith('.wikipedia.org') and (uri_path.startswith('/wiki/') or uri_path == '/'):
           base_uri_elements = (uri_elements[0], uri_elements[1].replace('.m.', '.'), uri_elements[2], '', '', '')
           base_uri = urllib.parse.urlunparse(base_uri_elements)
-          if mouse_button == 2:
+          if mouse_button == 2 or ctrl_pressed:
             decision.ignore()
             self.emit('new-page', base_uri)
           else:

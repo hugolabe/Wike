@@ -329,10 +329,13 @@ class BookmarksBox(Gtk.Box):
   # On list activated load article in view
 
   def _list_activated_cb(self, bookmarks_list, row):
-    if self._window.flap.get_fold_policy() == Adw.FlapFoldPolicy.ALWAYS:
+    if self._window.flap.get_fold_policy() == Adw.FlapFoldPolicy.ALWAYS and not self._window._ctrl_pressed:
       self._window.flap.set_reveal_flap(False)
 
-    self._window.page.wikiview.load_wiki(row.uri)
+    if self._window._ctrl_pressed:
+      self._window.new_lazy_page(row.uri, row.title, None)
+    else:
+      self._window.page.wikiview.load_wiki(row.uri)
 
   # On row button remove bookmark and refresh buttons state
   

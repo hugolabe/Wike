@@ -56,7 +56,13 @@ class Window(Adw.ApplicationWindow):
 
     self.actionbar = ActionBar()
     self.window_box.append(self.actionbar)
-    
+
+    self._ctrl_pressed = False
+    self._event_controller = Gtk.EventControllerKey.new()
+    self._event_controller.set_propagation_phase(Gtk.PropagationPhase.CAPTURE)
+    self._event_controller.connect("key-pressed", self._on_key_pressed)
+    self.add_controller(self._event_controller)
+
     self.headerbar = HeaderBar(self)
     self.window_box.prepend(self.headerbar)
 
@@ -472,6 +478,13 @@ class Window(Adw.ApplicationWindow):
   def _print_operation_failed(self, print_operation, error, handler_finished):
     print_operation.disconnect(handler_finished)
     self.send_notification(_('Print operation failed'))
+
+  # Keep track of the state of the ctrl key
+
+  def _on_key_pressed(self, _controller, keyval, _keycode, _state):
+    self._ctrl_pressed = keyval == Gdk.KEY_Control_L or keyval == Gdk.KEY_Control_R
+
+    return Gdk.EVENT_PROPAGATE
 
   # Open article in external browser
 

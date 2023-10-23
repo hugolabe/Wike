@@ -49,11 +49,27 @@ class SearchBox(Gtk.Box):
 
     self.search_entry.set_key_capture_widget(window)
 
+  def _get_search_terms(self, text):
+    text = text.lower()
+    lang = settings.get_string('search-language')
+    if text.startswith('-'):
+      terms = text.split(' ', 1)
+      prefix = terms[0].lstrip('-')
+      if prefix in languages.wikilangs.keys():
+        lang = prefix
+      if len(terms) > 1:
+        text = terms[1]
+      else:
+        text = ''
+    return text, lang
+
   # Search text in Wikipedia and load results list
 
   def _search_wikipedia(self, text):
     try:
-      self.results_list = wikipedia.search(text.lower(), settings.get_string('search-language'), 10)
+      text, lang = self._get_search_terms(text)
+      self.settings_button.set_label(lang)
+      self.results_list = wikipedia.search(text, lang, 10)
     except:
       self.results_list = None
     self._results_changed = True
@@ -85,6 +101,7 @@ class SearchBox(Gtk.Box):
         t = Thread(target=self._search_wikipedia, args=(text, ))
         t.start()
       else:
+        self.settings_button.set_label(settings.get_string('search-language'))
         self.results_list = None
         self._results_changed = True
 
@@ -123,7 +140,8 @@ class SearchBox(Gtk.Box):
     search_entry.delete_text(0, -1)
     if text != '':
       try:
-        result = wikipedia.search(text.lower(), settings.get_string('search-language'), 1)
+        text, lang = self._get_search_terms(text)
+        result = wikipedia.search(text, lang, 1)
       except:
         self.window.page.wikiview.load_message('notfound')
       else:

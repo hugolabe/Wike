@@ -144,10 +144,10 @@ class HistoryBox(Gtk.Box):
   def _row_remove_button_cb(self, remove_button, row):
     if history.remove(row.date, row.time, row.uri):
       self.history_list.remove(row)
+      del self._history_rows[(row.date, row.uri)]
       if row.date not in [key[0] for key in self._history_rows]:
         self.history_list.remove(self._date_labels[row.date])
         del self._date_labels[row.date]
-      del self._history_rows[(row.date, row.uri)]
 
   # Clear history of recent articles
 

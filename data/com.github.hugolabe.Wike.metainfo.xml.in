@@ -357,11 +357,6 @@
     </release>
   </releases>
 
-  <custom>
-    <value key="Purism::form_factor">workstation</value>
-    <value key="Purism::form_factor">mobile</value>
-  </custom>
-
   <url type="homepage">https://hugolabe.github.io/Wike/</url>
   <url type="bugtracker">https://github.com/hugolabe/Wike/issues</url>
   <url type="contribute">https://hugolabe.github.io/Wike/#foss</url>

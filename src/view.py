@@ -159,6 +159,31 @@ class WikiView(WebKit.WebView):
 
     settings.connect('changed::zoom-level', self._zoom_level_changed_cb)
 
+
+    # This is a stupid hack.
+    # Pressing mouse buttons 8 and 9 while hovering a link makes WebKit follow them by default.
+    # It however, identifies these buttons as button 0 so we need GDK's help for it to ignore them.
+    # Here, a "race condition" emerges between the two sources of truth for whether the button is
+    # held down so we need to add a ~100ms timeout to make sure WebKit doesn't actually navigate.
+    self._safe_to_nagivate = True
+
+    self.gesture_click = Gtk.GestureClick(button=0)
+    self.gesture_click.connect('pressed', self._gesture_click_cb)
+    self.add_controller(self.gesture_click)
+
+  def _gesture_click_cb(self, gesture, n_press, x, y):
+    match (btn := gesture.get_current_button()):
+      case 8:
+        if self.can_go_back():
+          self.go_back()
+      case 9:
+        if self.can_go_forward():
+          self.go_forward()
+      
+    if btn in (8, 9):
+      self._safe_to_nagivate = False
+      GLib.timeout_add(100, setattr, self, "_safe_to_nagivate", True)
+
   # Settings zoom level changed event
 
   def _zoom_level_changed_cb(self, settings, key):
@@ -313,11 +338,13 @@ class WikiView(WebKit.WebView):
       uri_netloc = uri_elements[1]
       uri_path = uri_elements[2]
       uri_fragment = uri_elements[5]
-      if nav_type == WebKit.NavigationType.LINK_CLICKED:
+      if (not self._safe_to_nagivate) and (nav_type != WebKit.NavigationType.BACK_FORWARD):
+        decision.ignore()
+      elif nav_type == WebKit.NavigationType.LINK_CLICKED:
         if uri_netloc.endswith('.wikipedia.org') and (uri_path.startswith('/wiki/') or uri_path == '/'):
           base_uri_elements = (uri_elements[0], uri_elements[1].replace('.m.', '.'), uri_elements[2], '', '', '')
           base_uri = urllib.parse.urlunparse(base_uri_elements)
-          if mouse_button == 2:
+          if mouse_button == Gdk.BUTTON_MIDDLE:
             decision.ignore()
             self.emit('new-page', base_uri)
           else:

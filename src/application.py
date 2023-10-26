@@ -104,9 +104,10 @@ class Application(Adw.Application):
   def do_activate(self):
     if not self._window:
       self._window = Window(self, self._launch_uri)
-      self._window.connect('close-request',self._window_close_cb)
 
       self._window.present()
+
+      self.connect('shutdown', self._shutdown_cb)
 
   # Set theme system
 
@@ -162,16 +163,9 @@ class Application(Adw.Application):
 
     about_window.show()
 
-  # On window close quit app
+  # Save settings and data
 
-  def _window_close_cb(self, window):
-    window.tabview.disconnect(window.handler_selpage)
-    quit_action = self.lookup_action('quit')
-    quit_action.activate()
-
-  # Save settings and data and quit app
-
-  def _quit_cb(self, action, parameter):
+  def _shutdown_cb(self, action):
     if self._window.is_maximized():
       settings.set_boolean('window-max', True)
     else:
@@ -197,6 +191,7 @@ class Application(Adw.Application):
     history.save()
     bookmarks.save()
 
+  def _quit_cb(self, action, parameter):
     self.quit()
 
 

@@ -214,6 +214,8 @@ class Window(Adw.ApplicationWindow):
     if self.tabview.get_n_pages() > 1:
       tabpage = self.tabview.get_selected_page()
       self.tabview.close_page(tabpage)
+    else:
+      self.close()
 
   # Go to next tab
 

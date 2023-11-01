@@ -21,16 +21,6 @@
     </p>
   </description>
 
-  <categories>
-      <category>Network</category>
-      <category>GTK</category>
-  </categories>
-
-  <keywords>
-    <keyword translate="no">Wikipedia</keyword>
-    <keyword>Encyclopedia</keyword>
-  </keywords>
-
   <launchable type="desktop-id">com.github.hugolabe.Wike.desktop</launchable>
   <translation type="gettext">wike</translation>
   <content_rating type="oars-1.1" />
@@ -387,6 +377,10 @@
   <url type="contribute">https://hugolabe.github.io/Wike/#foss</url>
   <url type="vcs-browser">https://github.com/hugolabe/Wike</url>
   <url type="translate">https://poeditor.com/join/project?hash=kNgJu4MAum</url>
-  <developer_name>Hugo Olabera</developer_name>
+  <!-- developer_name tag deprecated with Appstream 1.0 -->
+  <developer_name translatable="no">Hugo Olabera</developer_name>
+  <developer id="github.com">
+      <name translatable="no">Hugo Olabera</name>
+  </developer>
   <update_contact>hugolabe@gmail.com</update_contact>
 </component>

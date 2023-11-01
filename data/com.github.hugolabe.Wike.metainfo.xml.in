@@ -21,6 +21,16 @@
     </p>
   </description>
 
+  <categories>
+      <category>Network</category>
+      <category>GTK</category>
+  </categories>
+
+  <keywords>
+    <keyword translate="no">Wikipedia</keyword>
+    <keyword>Encyclopedia</keyword>
+  </keywords>
+
   <launchable type="desktop-id">com.github.hugolabe.Wike.desktop</launchable>
   <translation type="gettext">wike</translation>
   <content_rating type="oars-1.1" />

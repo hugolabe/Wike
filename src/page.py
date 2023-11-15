@@ -8,7 +8,6 @@ from gi.repository import Gtk, WebKit
 from wike.data import settings
 from wike.view import WikiView
 
-
 # Page box for each tab with webview and search bar
 
 @Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/page.ui')
@@ -28,10 +27,12 @@ class PageBox(Gtk.Box):
 
   # Add wikiview, initialize find controller and connect signals
 
-  def __init__(self, window):
+  def __init__(self, window, lazy_load=False):
     super().__init__()
 
     self._window = window
+    self._lazy_load = lazy_load
+    self._did_lazy_load = False
 
     self.wikiview = WikiView()
     self.wikiview.set_vexpand(True)
@@ -54,6 +55,19 @@ class PageBox(Gtk.Box):
     find_controller.connect('failed-to-find-text', self._find_controller_not_found_cb)
     nav_list.connect('changed', self._nav_list_changed_cb)
 
+  # Load a non-loaded page, for example when the user selects the tab
+
+  def load_page_now(self):
+    uri, title = self._lazy_load
+
+    if uri == 'blank' or uri == 'notfound':
+      self.wikiview.load_message(uri)
+    else:
+      self.wikiview.load_wiki(uri)
+
+    self._lazy_load = False
+    self._did_lazy_load = True
+
   # Manage wikiview load page events
 
   def _wikiview_load_changed_cb(self, wikiview, event):
@@ -67,7 +81,9 @@ class PageBox(Gtk.Box):
       if self.search_bar.get_search_mode():
         self.search_bar.set_search_mode(False)
       self.view_stack.set_visible_child_name('wikiview')
-      tabpage.set_title(_('Loading'))
+      if self._lazy_load or not self._did_lazy_load:
+        tabpage.set_title(_('Loading'))
+        self._did_lazy_load = False
       tabpage.set_loading(True)
       if tabpage.get_selected():
         self._window.headerbar.search_box.reset()
@@ -83,6 +99,7 @@ class PageBox(Gtk.Box):
       self._window.refresh_menu_actions(wikiview.is_local())
 
     elif event == WebKit.LoadEvent.FINISHED:
+      self._did_lazy_load = False
       tabpage.set_loading(False)
       if wikiview.is_local():
         self._show_status_page(wikiview.get_uri())
@@ -183,3 +200,4 @@ class PageBox(Gtk.Box):
     tabpage = self._window.tabview.get_page(self)
     if tabpage.get_selected():
       self._window.refresh_nav_actions(self.wikiview)
+

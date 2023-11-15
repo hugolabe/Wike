@@ -29,7 +29,7 @@
 
     <key name="on-start-load" type="i">
       <default>0</default>
-      <summary>On start load this page (0-Main, 1-Random, 2-Last article, 3-Restore all tabs)</summary>
+      <summary>On start load this page (0-Main, 1-Random, 2-Last article, 3-Restore open articles)</summary>
     </key>
 
     <key name="last-uri" type="s">
@@ -37,9 +37,9 @@
       <summary>Last Wikipedia uri loaded</summary>
     </key>
 
-    <key name="last-window" type="a(ss)">
-      <default>[]</default>
-      <summary>Last Wikipedia window uri and title, one for each page</summary>
+    <key name="last-tabs" type="a{ss}">
+      <default>{}</default>
+      <summary>Last open tabs with Wikipedia uri and title</summary>
     </key>
 
     <key name="theme" type="i">

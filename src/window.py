@@ -54,6 +54,8 @@ class Window(Adw.ApplicationWindow):
     if settings.get_boolean('window-max'):
       self.maximize()
 
+    self._print_settings = Gtk.PrintSettings()
+
     self.actionbar = ActionBar()
     self.window_box.append(self.actionbar)
     
@@ -72,8 +74,6 @@ class Window(Adw.ApplicationWindow):
     self.history_box = HistoryBox(self)
     history_stack_page = self.flap_stack.add_named(self.history_box, 'history')
 
-    self._print_settings = Gtk.PrintSettings()
-
     if settings.get_string('flap-page') == 'langlinks':
       self.flap_langlinks_button.set_active(True)
     elif settings.get_string('flap-page') == 'bookmarks':
@@ -82,6 +82,47 @@ class Window(Adw.ApplicationWindow):
       self.flap_history_button.set_active(True)
     else:
       self.flap_toc_button.set_active(True)
+
+    self.page = PageBox(self, None)
+
+    if launch_uri != '':
+      tabpage = self.tabview.append(self.page)
+      if launch_uri == 'notfound':
+        self.page.wikiview.load_message(launch_uri)
+      else:
+        self.page.wikiview.load_wiki(launch_uri)
+    else:
+      on_start = settings.get_int('on-start-load')
+      last_uri = settings.get_string('last-uri')
+      if on_start != 3:
+        tabpage = self.tabview.append(self.page)
+        if on_start == 0:
+          self.page.wikiview.load_main()
+        elif on_start == 1:
+          self.page.wikiview.load_random()
+        elif on_start == 2:
+          if last_uri != '':
+            self.page.wikiview.load_wiki(last_uri)
+          else:
+            self.page.wikiview.load_message('blank')
+      else:
+        tabs_data = settings.get_value('last-tabs').unpack()
+        if len(tabs_data) > 0:
+          for uri, title in tabs_data.items():
+            if last_uri == uri:
+              tabpage = self.tabview.append(self.page)
+              self.tabview.set_selected_page(tabpage)
+              self.page.wikiview.load_wiki(last_uri)
+            else:
+              self.new_lazy_page(uri, title, None)
+          if not last_uri in tabs_data:
+            tabpage = self.tabview.get_nth_page(0)
+            self.tabview.set_selected_page(tabpage)
+            self.page = tabpage.get_child()
+            self.page.load_now()
+        else:
+          tabpage = self.tabview.append(self.page)
+          self.page.wikiview.load_message('blank')
 
     settings.bind('flap-pinned', self.flap_pin_button, 'active', Gio.SettingsBindFlags.DEFAULT)
     settings.bind('flap-page', self.flap_stack, 'visible-child-name', Gio.SettingsBindFlags.DEFAULT)
@@ -97,37 +138,6 @@ class Window(Adw.ApplicationWindow):
     self.flap_langlinks_button.connect('toggled', self._flap_switcher_button_cb, 'langlinks')
     self.flap_bookmarks_button.connect('toggled', self._flap_switcher_button_cb, 'bookmarks')
     self.flap_history_button.connect('toggled', self._flap_switcher_button_cb, 'history')
-
-    self._finished_loading_tabs = False
-
-    if launch_uri == 'notfound':
-      self.new_page(launch_uri, None, True)
-    else:
-      if launch_uri != '':
-        self.new_page(launch_uri, None, True)
-      else:
-        if settings.get_int('on-start-load') == 0:
-          self.new_page('main', None, True)
-        elif settings.get_int('on-start-load') == 1:
-          self.new_page('random', None, True)
-        elif settings.get_int('on-start-load') == 2:
-          if settings.get_string('last-uri'):
-            self.new_page(settings.get_string('last-uri'), None, True)
-          else:
-            self.new_page('main', None, True)
-        else:
-          tabs_data = settings.get_value('last-window').unpack()
-          if len(tabs_data) == 0:
-            self.new_page('main', None, True)
-          else:
-            for tab_data in tabs_data:
-              uri, title = tab_data
-              if uri == settings.get_string('last-uri'):
-                self.new_page(uri, None, True)
-              else:
-                self.new_lazy_page(uri, title, None)
-
-    self._finished_loading_tabs = True
 
   # Set actions for window
   
@@ -202,7 +212,7 @@ class Window(Adw.ApplicationWindow):
   # Create new tab with a page
 
   def new_page(self, uri, parent, select):
-    page = PageBox(self)
+    page = PageBox(self, None)
     tabpage = self.tabview.add_page(page, parent)
     tabpage.set_live_thumbnail(True)
 
@@ -223,7 +233,7 @@ class Window(Adw.ApplicationWindow):
   # New empty tab with a title for lazy-loading
 
   def new_lazy_page(self, uri, title, parent):
-    page = PageBox(self, lazy_load=[uri,title])
+    page = PageBox(self, [uri,title])
     tabpage = self.tabview.add_page(page, parent)
     tabpage.set_live_thumbnail(True)
     tabpage.set_title(title)
@@ -283,15 +293,14 @@ class Window(Adw.ApplicationWindow):
       return
 
     self.page = tabpage.get_child()
-    if self.page._lazy_load and self._finished_loading_tabs:
-      self.page.load_page_now()
-    self.refresh_nav_actions(self.page.wikiview)
-    self.refresh_menu_actions(self.page.wikiview.is_local())
-    self.toc_box.populate(self.page.wikiview.title, self.page.wikiview.sections)
-    self.langlinks_box.populate(self.page.wikiview.langlinks)
-
-    if self._finished_loading_tabs:
-        self.bookmarks_box.refresh_buttons()
+    if self.page.lazy_load:
+      self.page.load_now()
+    else:
+      self.refresh_nav_actions(self.page.wikiview)
+      self.refresh_menu_actions(self.page.wikiview.is_local())
+      self.toc_box.populate(self.page.wikiview.title, self.page.wikiview.sections)
+      self.langlinks_box.populate(self.page.wikiview.langlinks)
+      self.bookmarks_box.refresh_buttons()
 
   # On tab closed event destroy wikiview and confirm
 

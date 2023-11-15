@@ -184,15 +184,20 @@ class Application(Adw.Application):
       settings.set_string('last-uri', '')
     else:
       settings.set_string('last-uri', self._window.page.wikiview.get_base_uri())
-      pages_data = []
-      for i_page in range(self._window.tabview.get_n_pages()):
-        tabpage = self._window.tabview.get_nth_page(i_page)
-        page = tabpage.get_child()
-        if page._lazy_load:
-          pages_data.append(page._lazy_load)
-        else:
-          pages_data.append([page.wikiview.get_base_uri(), tabpage.get_title()])
-      settings.set_value('last-window', GLib.Variant("a(ss)", pages_data))
+
+    tabs_data = {}
+    for i_page in range(self._window.tabview.get_n_pages()):
+      tabpage = self._window.tabview.get_nth_page(i_page)
+      page = tabpage.get_child()
+      if page.lazy_load:
+        uri = page.lazy_load[0]
+        title = page.lazy_load[1]
+      else:
+        uri = page.wikiview.get_base_uri()
+        title = page.wikiview.title
+      if not uri.startswith('about'):
+        tabs_data[uri] = title
+    settings.set_value('last-tabs', GLib.Variant('a{ss}', tabs_data))
 
     if not settings.get_boolean('keep-history'):
       history.clear()

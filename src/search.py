@@ -49,26 +49,10 @@ class SearchBox(Gtk.Box):
 
     self.search_entry.set_key_capture_widget(window)
 
-  def _get_search_terms(self, text):
-    text = text.lower()
-    lang = settings.get_string('search-language')
-    if text.startswith('-'):
-      terms = text.split(' ', 1)
-      prefix = terms[0].lstrip('-')
-      if prefix in languages.wikilangs.keys():
-        lang = prefix
-      if len(terms) > 1:
-        text = terms[1]
-      else:
-        text = ''
-    return text, lang
-
   # Search text in Wikipedia and load results list
 
-  def _search_wikipedia(self, text):
+  def _search_wikipedia(self, text, lang):
     try:
-      text, lang = self._get_search_terms(text)
-      self.settings_button.set_label(lang)
       self.results_list = wikipedia.search(text, lang, 10)
     except:
       self.results_list = None
@@ -96,14 +80,29 @@ class SearchBox(Gtk.Box):
   def _search_changed_cb(self, search_entry):
     search_entry.grab_focus()
     if settings.get_boolean('search-suggestions'):
-      text = search_entry.get_text()
+      text, lang = self._get_search_terms(search_entry.get_text())
       if len(text) > 2:
-        t = Thread(target=self._search_wikipedia, args=(text, ))
+        t = Thread(target=self._search_wikipedia, args=(text, lang, ))
         t.start()
       else:
-        self.settings_button.set_label(settings.get_string('search-language'))
         self.results_list = None
         self._results_changed = True
+
+  # Split search terms to get language prefix
+
+  def _get_search_terms(self, text):
+    text = text.lower()
+    lang = settings.get_string('search-language')
+    if text.startswith('-'):
+      terms = text.split(' ', 1)
+      prefix = terms[0].lstrip('-')
+      if prefix in languages.wikilangs.keys():
+        lang = prefix
+      if len(terms) > 1:
+        text = terms[1]
+      else:
+        text = ''
+    return text, lang
 
   # When search stoped with ESC hide suggestions
   
@@ -135,12 +134,11 @@ class SearchBox(Gtk.Box):
   # On entry activated search for text in Wikipedia and load result
 
   def _search_activate_cb(self, search_entry):
-    text = search_entry.get_text()
+    text, lang = self._get_search_terms(search_entry.get_text())
     self.suggestions_popover.hide()
     search_entry.delete_text(0, -1)
     if text != '':
       try:
-        text, lang = self._get_search_terms(text)
         result = wikipedia.search(text, lang, 1)
       except:
         self.window.page.wikiview.load_message('notfound')

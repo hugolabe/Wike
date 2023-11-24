@@ -74,14 +74,16 @@ class Window(Adw.ApplicationWindow):
     self.history_box = HistoryBox(self)
     history_stack_page = self.flap_stack.add_named(self.history_box, 'history')
 
-    if settings.get_string('flap-page') == 'langlinks':
-      self.flap_langlinks_button.set_active(True)
-    elif settings.get_string('flap-page') == 'bookmarks':
-      self.flap_bookmarks_button.set_active(True)
-    elif settings.get_string('flap-page') == 'history':
-      self.flap_history_button.set_active(True)
-    else:
-      self.flap_toc_button.set_active(True)
+    flap_page = settings.get_string('flap-page')
+    match flap_page:
+      case 'langlinks':
+        self.flap_langlinks_button.set_active(True)
+      case 'bookmarks':
+        self.flap_bookmarks_button.set_active(True)
+      case 'history':
+        self.flap_history_button.set_active(True)
+      case _:
+        self.flap_toc_button.set_active(True)
 
     self.page = PageBox(self, None)
 
@@ -96,15 +98,16 @@ class Window(Adw.ApplicationWindow):
       last_uri = settings.get_string('last-uri')
       if on_start != 3:
         tabpage = self.tabview.append(self.page)
-        if on_start == 0:
-          self.page.wikiview.load_main()
-        elif on_start == 1:
-          self.page.wikiview.load_random()
-        elif on_start == 2:
-          if last_uri != '':
-            self.page.wikiview.load_wiki(last_uri)
-          else:
-            self.page.wikiview.load_message('blank')
+        match on_start:
+          case 0:
+            self.page.wikiview.load_main()
+          case 1:
+            self.page.wikiview.load_random()
+          case 2:
+            if last_uri != '':
+              self.page.wikiview.load_wiki(last_uri)
+            else:
+              self.page.wikiview.load_message('blank')
       else:
         tabs_data = settings.get_value('last-tabs').unpack()
         if len(tabs_data) > 0:
@@ -216,14 +219,15 @@ class Window(Adw.ApplicationWindow):
     tabpage = self.tabview.add_page(page, parent)
     tabpage.set_live_thumbnail(True)
 
-    if uri == 'main':
-      page.wikiview.load_main()
-    elif uri == 'random':
-      page.wikiview.load_random()
-    elif uri == 'blank' or uri == 'notfound':
-      page.wikiview.load_message(uri)
-    else:
-      page.wikiview.load_wiki(uri)
+    match uri:
+      case 'main':
+        page.wikiview.load_main()
+      case 'random':
+        page.wikiview.load_random()
+      case 'blank' | 'notfound':
+        page.wikiview.load_message(uri)
+      case _:
+        page.wikiview.load_wiki(uri)
 
     if select:
       self.tabview.set_selected_page(tabpage)

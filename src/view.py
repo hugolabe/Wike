@@ -108,16 +108,18 @@ class ViewSettings:
     style_font = WebKit.UserStyleSheet(css_font, WebKit.UserContentInjectedFrames.ALL_FRAMES, WebKit.UserStyleLevel.USER, None, None)
     self.user_content.add_style_sheet(style_font)
 
-    if settings.get_int('theme') == 1:
-      style_dark = WebKit.UserStyleSheet(self._css_dark, WebKit.UserContentInjectedFrames.ALL_FRAMES, WebKit.UserStyleLevel.USER, None, None)
-      self.user_content.add_style_sheet(style_dark)
-    elif settings.get_int('theme') == 2:
-      style_sepia = WebKit.UserStyleSheet(self._css_sepia, WebKit.UserContentInjectedFrames.ALL_FRAMES, WebKit.UserStyleLevel.USER, None, None)
-      self.user_content.add_style_sheet(style_sepia)
-    elif settings.get_int('theme') == 3:
-      if self._style_manager.get_dark():
+    theme = settings.get_int('theme')
+    match theme:
+      case 1:
         style_dark = WebKit.UserStyleSheet(self._css_dark, WebKit.UserContentInjectedFrames.ALL_FRAMES, WebKit.UserStyleLevel.USER, None, None)
         self.user_content.add_style_sheet(style_dark)
+      case 2:
+        style_sepia = WebKit.UserStyleSheet(self._css_sepia, WebKit.UserContentInjectedFrames.ALL_FRAMES, WebKit.UserStyleLevel.USER, None, None)
+        self.user_content.add_style_sheet(style_sepia)
+      case 3:
+        if self._style_manager.get_dark():
+          style_dark = WebKit.UserStyleSheet(self._css_dark, WebKit.UserContentInjectedFrames.ALL_FRAMES, WebKit.UserStyleLevel.USER, None, None)
+          self.user_content.add_style_sheet(style_dark)
 
     if not settings.get_boolean('preview-popups'):
       css_previews = '.mwe-popups{display:none!important}'
@@ -148,12 +150,14 @@ class WikiView(WebKit.WebView):
   def __init__(self):
     super().__init__(settings=view_settings.web_settings, user_content_manager=view_settings.user_content)
 
-    if settings.get_int('theme') == 1:
-      self.set_background_color(Gdk.RGBA(0.1, 0.1, 0.1, 1))
-    elif settings.get_int('theme') == 2:
-      self.set_background_color(Gdk.RGBA(0.976, 0.953, 0.914, 1))
-    else:
-      self.set_background_color(Gdk.RGBA(1, 1, 1, 1))
+    theme = settings.get_int('theme')
+    match theme:
+      case 1:
+        self.set_background_color(Gdk.RGBA(0.1, 0.1, 0.1, 1))
+      case 2:
+        self.set_background_color(Gdk.RGBA(0.976, 0.953, 0.914, 1))
+      case _:
+        self.set_background_color(Gdk.RGBA(1, 1, 1, 1))
 
     self.set_zoom_level(settings.get_int('zoom-level') / 100)
 
@@ -313,26 +317,27 @@ class WikiView(WebKit.WebView):
       uri_netloc = uri_elements[1]
       uri_path = uri_elements[2]
       uri_fragment = uri_elements[5]
-      if nav_type == WebKit.NavigationType.LINK_CLICKED:
-        if uri_netloc.endswith('.wikipedia.org') and (uri_path.startswith('/wiki/') or uri_path == '/'):
-          base_uri_elements = (uri_elements[0], uri_elements[1].replace('.m.', '.'), uri_elements[2], '', '', '')
-          base_uri = urllib.parse.urlunparse(base_uri_elements)
-          if mouse_button == 2:
-            decision.ignore()
-            self.emit('new-page', base_uri)
-          else:
-            if base_uri != self.get_base_uri():
+      match nav_type:
+        case WebKit.NavigationType.LINK_CLICKED:
+          if uri_netloc.endswith('.wikipedia.org') and (uri_path.startswith('/wiki/') or uri_path == '/'):
+            base_uri_elements = (uri_elements[0], uri_elements[1].replace('.m.', '.'), uri_elements[2], '', '', '')
+            base_uri = urllib.parse.urlunparse(base_uri_elements)
+            if mouse_button == 2:
               decision.ignore()
-              self.load_wiki(uri)
-        else:
-          decision.ignore()
-          Gtk.show_uri(None, uri, Gdk.CURRENT_TIME)
-      elif nav_type == WebKit.NavigationType.RELOAD or nav_type == WebKit.NavigationType.BACK_FORWARD:
-        if uri_scheme == 'about':
-          decision.ignore()
-      elif nav_type == WebKit.NavigationType.OTHER:
-        if uri_netloc.startswith('upload.'):
-          decision.ignore()
+              self.emit('new-page', base_uri)
+            else:
+              if base_uri != self.get_base_uri():
+                decision.ignore()
+                self.load_wiki(uri)
+          else:
+            decision.ignore()
+            Gtk.show_uri(None, uri, Gdk.CURRENT_TIME)
+        case WebKit.NavigationType.RELOAD | WebKit.NavigationType.BACK_FORWARD:
+          if uri_scheme == 'about':
+            decision.ignore()
+        case WebKit.NavigationType.OTHER:
+          if uri_netloc.startswith('upload.'):
+            decision.ignore()
     return True
 
   # Manage webview context menu

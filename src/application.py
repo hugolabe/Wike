@@ -44,15 +44,17 @@ class Application(Adw.Application):
     Gtk.StyleContext.add_provider_for_display(Gdk.Display.get_default(), css_widgets, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
 
     self._style_manager = Adw.StyleManager.get_default()
-    if settings.get_int('theme') == 0:
-      self._style_manager.set_color_scheme(Adw.ColorScheme.FORCE_LIGHT)
-    elif settings.get_int('theme') == 1:
-      self._style_manager.set_color_scheme(Adw.ColorScheme.FORCE_DARK)
-    elif settings.get_int('theme') == 2:
-      self._style_manager.set_color_scheme(Adw.ColorScheme.FORCE_LIGHT)
-      Gtk.StyleContext.add_provider_for_display(Gdk.Display.get_default(), self._css_sepia, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
-    elif settings.get_int('theme') == 3:
-      self._style_manager.set_color_scheme(Adw.ColorScheme.PREFER_LIGHT)
+    theme = settings.get_int('theme')
+    match theme:
+      case 0:
+        self._style_manager.set_color_scheme(Adw.ColorScheme.FORCE_LIGHT)
+      case 1:
+        self._style_manager.set_color_scheme(Adw.ColorScheme.FORCE_DARK)
+      case 2:
+        self._style_manager.set_color_scheme(Adw.ColorScheme.FORCE_LIGHT)
+        Gtk.StyleContext.add_provider_for_display(Gdk.Display.get_default(), self._css_sepia, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
+      case 3:
+        self._style_manager.set_color_scheme(Adw.ColorScheme.PREFER_LIGHT)
 
     action = Gio.SimpleAction.new('prefs', None)
     action.connect('activate', self._prefs_cb)

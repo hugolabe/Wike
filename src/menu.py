@@ -135,14 +135,15 @@ class ThemeSwitcher(Gtk.Box):
     self._window = window
 
     theme = settings.get_int('theme')
-    if theme == 1:
-      self.dark_button.set_active(True)
-    elif theme == 2:
-      self.sepia_button.set_active(True)
-    elif theme == 3:
-      self.system_button.set_active(True)
-    else:
-      self.light_button.set_active(True)
+    match theme:
+      case 0:
+        self.light_button.set_active(True)
+      case 1:
+        self.dark_button.set_active(True)
+      case 2:
+        self.sepia_button.set_active(True)
+      case 3:
+        self.system_button.set_active(True)
       
     self.system_button.connect('toggled', self._system_button_toggled_cb)
     self.light_button.connect('toggled', self._light_button_toggled_cb)

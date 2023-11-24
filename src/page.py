@@ -67,58 +67,60 @@ class PageBox(Gtk.Box):
   def _wikiview_load_changed_cb(self, wikiview, event):
     tabpage = self._window.tabview.get_page(self)
 
-    if event == WebKit.LoadEvent.STARTED:
-      if wikiview.get_uri().endswith('.wikipedia.org/'):
-        self._is_main = True
-      else:
-        self._is_main = False
-      if self.search_bar.get_search_mode():
-        self.search_bar.set_search_mode(False)
-      self.view_stack.set_visible_child_name('wikiview')
-      tabpage.set_title(_('Loading'))
-      tabpage.set_loading(True)
-      if tabpage.get_selected():
-        self._window.headerbar.search_box.reset()
-        wikiview.grab_focus()
+    match event:
+      case WebKit.LoadEvent.STARTED:
+        if wikiview.get_uri().endswith('.wikipedia.org/'):
+          self._is_main = True
+        else:
+          self._is_main = False
+        if self.search_bar.get_search_mode():
+          self.search_bar.set_search_mode(False)
+        self.view_stack.set_visible_child_name('wikiview')
+        tabpage.set_title(_('Loading'))
+        tabpage.set_loading(True)
+        if tabpage.get_selected():
+          self._window.headerbar.search_box.reset()
+          wikiview.grab_focus()
 
-    elif event == WebKit.LoadEvent.COMMITTED:
-      wikiview.set_props()
-      tabpage.set_title(wikiview.title)
-      if tabpage.get_selected():
-        self._window.toc_box.populate(wikiview.title, wikiview.sections)
-        self._window.langlinks_box.populate(wikiview.langlinks)
-      self._window.bookmarks_box.refresh_buttons()
-      self._window.refresh_menu_actions(wikiview.is_local())
+      case WebKit.LoadEvent.COMMITTED:
+        wikiview.set_props()
+        tabpage.set_title(wikiview.title)
+        if tabpage.get_selected():
+          self._window.toc_box.populate(wikiview.title, wikiview.sections)
+          self._window.langlinks_box.populate(wikiview.langlinks)
+        self._window.bookmarks_box.refresh_buttons()
+        self._window.refresh_menu_actions(wikiview.is_local())
 
-    elif event == WebKit.LoadEvent.FINISHED:
-      tabpage.set_loading(False)
-      if wikiview.is_local():
-        self._show_status_page(wikiview.get_uri())
-      if settings.get_boolean('keep-history'):
-        if not self._is_main and not wikiview.is_local():
-          self._window.history_box.add_item(wikiview.get_base_uri(), wikiview.title, wikiview.get_lang())
+      case WebKit.LoadEvent.FINISHED:
+        tabpage.set_loading(False)
+        if wikiview.is_local():
+          self._show_status_page(wikiview.get_uri())
+        if settings.get_boolean('keep-history'):
+          if not self._is_main and not wikiview.is_local():
+            self._window.history_box.add_item(wikiview.get_base_uri(), wikiview.title, wikiview.get_lang())
 
   # If wikiview is local show status page
 
   def _show_status_page(self, uri):
-    if uri == 'about:notfound':
-      self.status_page.set_title(_('Article not Found'))
-      self.status_page.set_description(_('Can\'t find any results for requested query'))
-      self.status_page.set_icon_name('find-location-symbolic')
-      self.main_page_button.set_visible(True)
-      self.random_article_button.set_visible(False)
-      self.try_again_button.set_visible(False)
-      self.main_page_button.grab_focus()
-    elif uri == 'about:error':
-      self.status_page.set_title(_('Can\'t Access Wikipedia'))
-      self.status_page.set_description(_('Check your Internet connection and try again'))
-      self.status_page.set_icon_name('network-error-symbolic')
-      self.main_page_button.set_visible(False)
-      self.random_article_button.set_visible(False)
-      self.try_again_button.set_visible(True)
-      self.try_again_button.grab_focus()
-    else:
-      self.main_page_button.grab_focus()
+    match uri:
+      case 'about:notfound':
+        self.status_page.set_title(_('Article not Found'))
+        self.status_page.set_description(_('Can\'t find any results for requested query'))
+        self.status_page.set_icon_name('find-location-symbolic')
+        self.main_page_button.set_visible(True)
+        self.random_article_button.set_visible(False)
+        self.try_again_button.set_visible(False)
+        self.main_page_button.grab_focus()
+      case 'about:error':
+        self.status_page.set_title(_('Can\'t Access Wikipedia'))
+        self.status_page.set_description(_('Check your Internet connection and try again'))
+        self.status_page.set_icon_name('network-error-symbolic')
+        self.main_page_button.set_visible(False)
+        self.random_article_button.set_visible(False)
+        self.try_again_button.set_visible(True)
+        self.try_again_button.grab_focus()
+      case _:
+        self.main_page_button.grab_focus()
 
     self.view_stack.set_visible_child_name('status')
 

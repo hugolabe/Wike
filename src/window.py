@@ -142,6 +142,10 @@ class Window(Adw.ApplicationWindow):
     self.flap_bookmarks_button.connect('toggled', self._flap_switcher_button_cb, 'bookmarks')
     self.flap_history_button.connect('toggled', self._flap_switcher_button_cb, 'history')
 
+    gesture = Gtk.GestureClick(button=0, propagation_phase=Gtk.PropagationPhase.CAPTURE)
+    self.add_controller(gesture)
+    gesture.connect('pressed', self._gesture_click_cb)
+
   # Set actions for window
   
   def _set_actions(self, app):
@@ -187,6 +191,21 @@ class Window(Adw.ApplicationWindow):
     
     if settings.get_boolean('flap-pinned'):
       pin_sidebar_action.change_state(GLib.Variant.new_boolean(True))
+
+  # Handle mouse clicks with buttons 8 and 9
+
+  def _gesture_click_cb(self, gesture, n_press, x, y):
+    button = gesture.get_current_button()
+    prev_page_action = self.lookup_action('prev-page')
+    next_page_action = self.lookup_action('next-page')
+
+    match button:
+      case 8:
+        gesture.set_state(Gtk.EventSequenceState.CLAIMED)
+        prev_page_action.activate()
+      case 9:
+        gesture.set_state(Gtk.EventSequenceState.CLAIMED)
+        next_page_action.activate()
 
   # If window size changed set layout
 

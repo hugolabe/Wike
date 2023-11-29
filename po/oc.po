@@ -1,0 +1,597 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Wike\n"
+"Language: oc\n"
+
+#: ../src/view.py:248
+msgid "Article not found"
+msgstr "Article pas trobat"
+
+#: ../src/page.py:100
+msgid "Can't find any results for requested query"
+msgstr "Pas cap de resultas per la demanda"
+
+#: ../src/view.py:250
+msgid "Can't access Wikipedia"
+msgstr "Pòt pas accedir a Wikipedia"
+
+#: ../src/page.py:108
+msgid "Check your Internet connection and try again"
+msgstr "Verificatz vòstra connexion internet e tornatz ensajar"
+
+#: ../data/ui/dialogs.ui:53
+msgid "Clear Bookmarks List?"
+msgstr "Escafar la tièra de signets ?"
+
+#: ../data/ui/dialogs.ui:54
+msgid "All bookmarks in the list will be removed permanently."
+msgstr "Totes los signets seràn definitivament escafats de la tièra."
+
+#: ../data/ui/dialogs.ui:65
+msgid "Clear List"
+msgstr "Escafar la lista"
+
+#: ../data/ui/search-settings.ui:69
+msgid "Search Suggestions"
+msgstr "Suggestions de recèrca"
+
+#. Add your name like this:
+#. 
+#. Hugo Olabera <hugolabe@gmail.com>
+#: ../data/ui/about.ui:16
+msgid "translator-credits"
+msgstr "Quentin PAGÈS & Nicolas MIARD"
+
+#: ../src/view.py:360 ../data/ui/bookmarks.ui:26
+msgid "Add Bookmark"
+msgstr "Apondre un marcapagina"
+
+#: ../data/ui/shortcuts.ui:16
+msgctxt "shortcut window"
+msgid "General"
+msgstr "General"
+
+#: ../data/ui/shortcuts.ui:31
+msgctxt "shortcut window"
+msgid "Table of contents"
+msgstr "Ensenhador"
+
+#: ../data/ui/shortcuts.ui:61
+msgctxt "shortcut window"
+msgid "Preferences"
+msgstr "Preferéncias"
+
+#: ../data/ui/shortcuts.ui:73
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Quitar"
+
+#: ../data/ui/shortcuts.ui:67
+msgctxt "shortcut window"
+msgid "Keyboard shortcuts"
+msgstr "Acorchis clavièr"
+
+#: ../data/ui/shortcuts.ui:127
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Navigacion"
+
+#: ../data/ui/shortcuts.ui:130
+msgctxt "shortcut window"
+msgid "Search articles"
+msgstr "Recercar d'articles"
+
+#: ../data/ui/shortcuts.ui:154
+msgctxt "shortcut window"
+msgid "Previous page"
+msgstr "Pagina precedenta"
+
+#: ../data/ui/shortcuts.ui:160
+msgctxt "shortcut window"
+msgid "Next page"
+msgstr "Pagina seguenta"
+
+#: ../data/ui/shortcuts.ui:81 ../data/ui/shortcuts.ui:84
+msgctxt "shortcut window"
+msgid "Bookmarks"
+msgstr "Signets"
+
+#: ../data/ui/shortcuts.ui:90
+msgctxt "shortcut window"
+msgid "Add bookmark"
+msgstr "Apondre un signet"
+
+#: ../data/ui/menu-main.ui:45
+msgid "Preferences"
+msgstr "Preferéncias"
+
+#: ../data/ui/menu-main.ui:49
+msgid "Keyboard Shortcuts"
+msgstr "Acorchis de clavièr"
+
+#: ../data/ui/menu-main.ui:53
+msgid "About Wike"
+msgstr "A prepaus de Wike"
+
+#: ../data/ui/prefs.ui:18
+msgid "Behavior"
+msgstr "Compòrtament"
+
+#: ../data/ui/prefs.ui:58
+msgid "Keep a List of Recent Articles"
+msgstr "Salvar una tièra dels articles recents"
+
+#: ../data/ui/window.ui:88
+msgid "Languages"
+msgstr "Lengas"
+
+#. Don't translate app name!
+#: ../data/com.github.hugolabe.Wike.desktop.in:3
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:7
+msgid "Wike"
+msgstr "Wike"
+
+#: ../data/ui/about.ui:14 ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
+msgid "Search and read Wikipedia articles"
+msgstr "Cercar e legir d'articles dins Wikipedia"
+
+#. Don't remove semicolons!
+#: ../data/com.github.hugolabe.Wike.desktop.in:12
+msgid "Wikipedia;Encyclopedia;"
+msgstr "Wikipedia;Enciclopedia;"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:11
+msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
+msgstr "Wike es un legidor per Wikipedia per l'environa de burèu GNOME. Porgís un accès a tot lo contengut d'aquesta enciclopedia en linha dins una aplicacion nativa, amb una vista mai simpla e sens distraccion dels articles."
+
+#: ../data/ui/dialogs.ui:71
+msgid "The history of visited articles will be deleted permanently."
+msgstr "L'istoric dels articles vistalhats seràn definitivament escafats."
+
+#: ../data/ui/dialogs.ui:82
+msgid "Clear Personal Data?"
+msgstr "Escafar las donadas personalas"
+
+#: ../data/ui/dialogs.ui:83
+msgid "Cookies and cache data will be deleted permanently."
+msgstr "Los cookies et las donadas de cache seràn definitivement escafats."
+
+#: ../data/ui/dialogs.ui:89
+msgid "Clear Data"
+msgstr "Escafar las donadas"
+
+#. Don't remove %s tag!
+#: ../src/wike-sp.in:69
+msgid "Search “%s” on Wikipedia"
+msgstr "Cercar “%s” sus Wikipedia"
+
+#: ../data/ui/prefs.ui:21
+msgid "Home Page"
+msgstr "Pagina d'acuèlh"
+
+#: ../data/ui/prefs.ui:22
+msgid "The page that will be displayed when Wike starts"
+msgstr "Aquesta pagina s'aficharà quand Wike se lança"
+
+#: ../data/ui/prefs.ui:38
+msgid "Privacy"
+msgstr "Confidencialitat"
+
+#: ../data/ui/prefs.ui:41
+msgid "Allow Live Search on Desktop"
+msgstr "Autorizar la cerca estantanèa dins l'environa de burèu"
+
+#: ../data/ui/prefs.ui:42
+msgid "Warning: all desktop searches will be sent to Wikipedia"
+msgstr "Atencion: totas las cercas dins l'environa de burèu seràn mandadas a Wikipedia"
+
+#: ../data/ui/prefs.ui:59
+msgid "Wike will remember the history of visited articles"
+msgstr "Wike se remembrarà l'istoric dels articles vistalhats"
+
+#: ../data/ui/prefs.ui:68 ../data/ui/prefs.ui:80
+msgid "Clear"
+msgstr "Escafar"
+
+#: ../data/ui/prefs.ui:76
+msgid "Clear Personal Data"
+msgstr "Escafar las donadas personalas"
+
+#: ../data/ui/prefs.ui:77
+msgid "Cookies and cache data will be deleted"
+msgstr "Los cookies et las donadas de cache seràn definitivement escafats."
+
+#: ../data/ui/page.ui:87
+msgid "Try Again"
+msgstr "Ensajar tornarmai"
+
+#: ../data/ui/page.ui:78 ../data/ui/menu-main.ui:29
+msgid "Random Article"
+msgstr "Article a l'azard"
+
+#: ../data/ui/prefs.ui:28
+msgid "Last article"
+msgstr "Darrièr article"
+
+#: ../data/ui/window.ui:99
+msgid "Bookmarks"
+msgstr "Signets"
+
+#: ../data/ui/languages.ui:56
+msgid "Select All"
+msgstr "Tot seleccionar"
+
+#: ../data/ui/languages.ui:61
+msgid "Select None"
+msgstr "Seleccionar pas res"
+
+#: ../data/ui/shortcuts.ui:19
+msgctxt "shortcut window"
+msgid "Main menu"
+msgstr "Menú principal"
+
+#: ../data/ui/shortcuts.ui:98
+msgctxt "shortcut window"
+msgid "Tabs"
+msgstr "Onglets"
+
+#: ../data/ui/shortcuts.ui:101
+msgctxt "shortcut window"
+msgid "New tab"
+msgstr "Onglet novèl"
+
+#: ../data/ui/shortcuts.ui:107
+msgctxt "shortcut window"
+msgid "Close current tab"
+msgstr "Tampar l’onglet actual"
+
+#: ../data/ui/shortcuts.ui:113
+msgctxt "shortcut window"
+msgid "Next tab"
+msgstr "Onglet seguent"
+
+#: ../data/ui/shortcuts.ui:119
+msgctxt "shortcut window"
+msgid "Previous tab"
+msgstr "Onglet precedent"
+
+#: ../src/view.py:375
+msgid "Open Link in New Tab"
+msgstr "Dobrir lo ligam dins un onglet novèl"
+
+#: ../src/view.py:381
+msgid "Add Link to Bookmarks"
+msgstr "Apondre un ligam als signets"
+
+#: ../src/view.py:377
+msgid "Open Link in Browser"
+msgstr "Dobrir un ligam dins lo navigador"
+
+#: ../src/view.py:383 ../data/ui/menu-main.ui:39
+msgid "Copy Link to Clipboard"
+msgstr "Copiar lo ligam dins lo quichapapièrs"
+
+#: ../data/ui/prefs.ui:50
+msgid "Desktop searches are performed in the default language"
+msgstr "Las cercas dins l'environa de burèu se faràn dins la lenga per defaut del sistèma"
+
+#: ../data/ui/prefs.ui:51
+msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
+msgstr "Podètz cercar dins una autra lenga en utilizant un prefixe. Per exemple -es per cercar en Espanhòl"
+
+#: ../data/ui/shortcuts.ui:142
+msgctxt "shortcut window"
+msgid "Random article"
+msgstr "Article a l'azard"
+
+#: ../src/menu.py:86
+msgid "Pick a Font"
+msgstr "Causissètz una polissa"
+
+#: ../src/menu.py:115
+msgid "Font"
+msgstr "Polissa"
+
+#: ../src/history.py:33
+msgid "Today"
+msgstr "Uèi"
+
+#: ../src/history.py:33
+msgid "Last 7 days"
+msgstr "Los 7 darrièrs jorns"
+
+#: ../src/history.py:33
+msgid "Last 30 days"
+msgstr "30 darrièrs jorns"
+
+#: ../src/history.py:33
+msgid "Show full history"
+msgstr "Mostrar l'istoric complet"
+
+#: ../src/window.py:312 ../src/page.py:135
+msgid "Bookmark added: "
+msgstr "Signet apondut:"
+
+#: ../src/window.py:426
+msgid "Print operation completed"
+msgstr "Estampatge acabat"
+
+#: ../src/window.py:432
+msgid "Print operation failed"
+msgstr "L'estampatge se passèt mal"
+
+#: ../src/window.py:447
+msgid "Link copied to clipboard"
+msgstr "Ligam copiat al quichapapièrs"
+
+#: ../src/application.py:154
+msgid "Source Code"
+msgstr "Còdi sorça"
+
+#: ../src/application.py:155
+msgid "Report an Issue"
+msgstr "Senhalar un problèma"
+
+#: ../src/application.py:156
+msgid "Help Translating"
+msgstr "Ajudar a revirar"
+
+#: ../src/application.py:157
+msgid "Contributors"
+msgstr "Contributors"
+
+#: ../src/application.py:158
+msgid "Flag Icons"
+msgstr "Icònas de drapèl"
+
+#: ../src/application.py:159
+msgid "All content from Wikipedia.org and available under CC BY-SA 3.0 unless otherwise noted.\n"
+"\n"
+"Wike is an independent development not endorsed by or affiliated with the Wikimedia Foundation."
+msgstr "Tot lo contengut de Wikipedia.org es disponible jos la licéncia CC BY-SA 3.0 levat indica contrària otherwise noted.\n"
+"\n"
+"Wike es un desvelopment independent, pas aprovat o afiliat a la Foundation Wikimedia."
+
+#: ../src/page.py:72
+msgid "Loading"
+msgstr "Cargament"
+
+#: ../src/page.py:99
+msgid "Article not Found"
+msgstr "Article pas trobat"
+
+#: ../src/page.py:107
+msgid "Can't Access Wikipedia"
+msgstr "Pòt pas accedir a Wikipedia"
+
+#: ../src/bookmarks.py:31
+msgid "Reading list"
+msgstr "Tièra de lectura"
+
+#: ../data/ui/toc.ui:42
+msgid "No Contents"
+msgstr "Pas de contengut"
+
+#: ../data/ui/toc.ui:43
+msgid "There is no table of contents for this page"
+msgstr "Pas cap d'ensenhador per aquesta pagina"
+
+#: ../data/ui/languages.ui:10 ../data/ui/search-settings.ui:26
+msgid "Pick your Languages"
+msgstr "Seleccionatz vòstras lengas"
+
+#: ../data/ui/languages.ui:33 ../data/ui/search-settings.ui:20
+#: ../data/ui/langlinks.ui:17
+msgid "Filter languages"
+msgstr "Filtrar las lengas"
+
+#: ../data/ui/shortcuts.ui:25
+msgctxt "shortcut window"
+msgid "Sidebar"
+msgstr "Panèl lateral"
+
+#: ../data/ui/shortcuts.ui:37
+msgctxt "shortcut window"
+msgid "Languages"
+msgstr "Lengas"
+
+#: ../data/ui/shortcuts.ui:43
+msgctxt "shortcut window"
+msgid "Search text"
+msgstr "Tèxte de recercar"
+
+#: ../data/ui/shortcuts.ui:49
+msgctxt "shortcut window"
+msgid "Print"
+msgstr "Estampar"
+
+#: ../data/ui/shortcuts.ui:55
+msgctxt "shortcut window"
+msgid "Copy link to clipboard"
+msgstr "Copiar lo ligam dins lo quichapapièrs"
+
+#: ../data/ui/shortcuts.ui:136
+msgctxt "shortcut window"
+msgid "Main page"
+msgstr "Pagina principala"
+
+#: ../data/ui/shortcuts.ui:148
+msgctxt "shortcut window"
+msgid "History of recent articles"
+msgstr "Istoric dels articles recents"
+
+#: ../data/ui/shortcuts.ui:166
+msgctxt "shortcut window"
+msgid "Reload current page"
+msgstr "Recargar la pagina actuala"
+
+#: ../data/ui/search.ui:15 ../data/ui/page.ui:57
+msgid "Search Wikipedia"
+msgstr "Recèrcar Wikipèdia"
+
+#: ../data/ui/search.ui:26
+msgid "Search Settings"
+msgstr "Recercar de paramètres"
+
+#: ../data/ui/dialogs.ui:11
+msgid "New Bookmarks List"
+msgstr "Novèla tièra de signets"
+
+#: ../data/ui/dialogs.ui:18 ../data/ui/dialogs.ui:39
+msgid "List Name"
+msgstr "Nom de la lista"
+
+#: ../data/ui/dialogs.ui:26 ../data/ui/dialogs.ui:47 ../data/ui/dialogs.ui:64
+#: ../data/ui/dialogs.ui:76 ../data/ui/dialogs.ui:88
+msgid "Cancel"
+msgstr "Anullar"
+
+#: ../data/ui/dialogs.ui:27
+msgid "Create List"
+msgstr "Crear la lista"
+
+#: ../data/ui/dialogs.ui:32
+msgid "Rename Bookmarks List"
+msgstr "Tornar nomenar la tièra de signets"
+
+#: ../data/ui/dialogs.ui:48
+msgid "Rename List"
+msgstr "Tornar nomenar la tièra"
+
+#: ../data/ui/dialogs.ui:60
+msgid "Also delete the list"
+msgstr "Escafar la tièra tanben"
+
+#: ../data/ui/dialogs.ui:70
+msgid "Clear History?"
+msgstr "Escafar l’istoric ?"
+
+#: ../data/ui/dialogs.ui:77 ../data/ui/history.ui:26
+msgid "Clear History"
+msgstr "Escafar l’istoric"
+
+#: ../data/ui/prefs.ui:26
+msgid "Wikipedia main page"
+msgstr "Pagina principala Wikipedia"
+
+#: ../data/ui/prefs.ui:27
+msgid "Random article"
+msgstr "Article a l'azard"
+
+#: ../data/ui/headerbar.ui:27
+msgid "New Tab"
+msgstr "Onglet novèl"
+
+#: ../data/ui/headerbar.ui:46 ../data/ui/actionbar.ui:34
+msgid "View"
+msgstr "Vista"
+
+#: ../data/ui/headerbar.ui:52 ../data/ui/actionbar.ui:27
+msgid "Sidebar"
+msgstr "Panèl lateral"
+
+#: ../data/ui/page.ui:20
+msgid "Search text"
+msgstr "Tèxte de recercar"
+
+#: ../data/ui/page.ui:58
+msgid "Start typing to search Wikipedia articles"
+msgstr "Començatz de picar per cercar d'articles de Wikipedia"
+
+#: ../data/ui/page.ui:68 ../data/ui/menu-main.ui:25
+msgid "Main Page"
+msgstr "Pagina principala"
+
+#: ../data/ui/langlinks.ui:38
+msgid "No Languages"
+msgstr "Pas cap de lengas"
+
+#: ../data/ui/langlinks.ui:39
+msgid "This page is not available in other languages"
+msgstr "Aquesta pagina es pas disponibla dins d'autras lengas"
+
+#: ../data/ui/menu-view.ui:21
+msgid "Show"
+msgstr "Afichar"
+
+#: ../data/ui/menu-view.ui:23
+msgid "Language Flags"
+msgstr "Drapèls de lengas"
+
+#: ../data/ui/menu-view.ui:27
+msgid "Link Previews"
+msgstr "Apercebuts de ligam"
+
+#: ../data/ui/history.ui:49
+msgid "Empty History"
+msgstr "Vuejar l’istoric"
+
+#: ../data/ui/history.ui:50
+msgid "There are no recent articles in the history"
+msgstr "Pas cap d'article recent dins l'istoric"
+
+#: ../data/ui/bookmarks.ui:55
+msgid "No Bookmarks"
+msgstr "Pas cap de signet"
+
+#: ../data/ui/bookmarks.ui:56
+msgid "Use the Add Bookmark button or press Ctrl+D to add the current article to the list"
+msgstr "Utilisatz lo boton Apondre signet o pressatz Ctrl+D per apondre l'article corrent a la tièra"
+
+#: ../data/ui/window.ui:78
+msgid "Contents"
+msgstr "Contenguts"
+
+#: ../data/ui/window.ui:110
+msgid "History"
+msgstr "Istoric"
+
+#: ../data/ui/menu-main.ui:13
+msgid "Print"
+msgstr "Estampar"
+
+#: ../data/ui/menu-main.ui:18
+msgid "Search Text"
+msgstr "Tèxte de recercar"
+
+#: ../data/ui/menu-main.ui:35
+msgid "Open in Browser"
+msgstr "Dobrir dins lo navigador"
+
+#: ../data/ui/bookmarks-menu.ui:12
+msgid "Create New List…"
+msgstr "Crear una tièra novèla..."
+
+#: ../data/ui/bookmarks-menu.ui:18
+msgid "Rename List…"
+msgstr "Tornar nomenar la lista..."
+
+#: ../data/ui/bookmarks-menu.ui:22
+msgid "Clear List…"
+msgstr "Escafar la lista..."
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
+msgid "It supports more than 300 languages and integrates with desktop searches, providing suggestions that make it easier to find any content. Other features are: bookmarks with multiple lists, article table of contents, history, text searches and much more…"
+msgstr "Supòrta mai de 300 lengas e s'intègra a la cercas dins l'environa de burèu, porgissent de proposicions qu'ajudan de trobar tot contengut. Las autras foncions son : signets amb mantuna tièra, ensenhador d'articles, istoric,cerca de tèxte e fòrça mai..."
+
+#: ../data/ui/window.ui:55
+msgid "Pin Sidebar"
+msgstr "Espinglar la panèl lateral"
+
+#: ../data/ui/headerbar.ui:13
+msgid "Back"
+msgstr "Retorn"
+
+#: ../data/ui/headerbar.ui:20
+msgid "Forward"
+msgstr "En avant"
+
+#: ../data/ui/headerbar.ui:39
+msgid "Main Menu"
+msgstr "Menú principal"
+

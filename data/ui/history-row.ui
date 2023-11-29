@@ -52,7 +52,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
             <style>
               <class name="flat"/>
               <class name="circular"/>
-              <class name="bookmarks-remove"/>
+              <class name="button-remove"/>
             </style>
           </object>
         </child>

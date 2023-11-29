@@ -85,19 +85,22 @@ class History:
       self.items[date][uri] = [time, title, lang]
     else:
       self.items[date] = {uri: [time, title, lang]}
-    return date, time
 
   # Remove item from history list
 
-  def remove(self, date, time, uri):
+  def remove(self, date, uri):
+    item_deleted = False
+    date_deleted = False
+
     if date in self.items:
       if uri in self.items[date]:
         del self.items[date][uri]
+        item_deleted = True
       if len(self.items[date]) == 0:
         del self.items[date]
-      return True
-    else:
-      return False
+        date_deleted = True
+
+    return item_deleted, date_deleted
 
   # Clear history
 

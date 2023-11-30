@@ -7,19 +7,19 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: ru\n"
 
-#: ../src/view.py:248
+#: ../src/view.py:253
 msgid "Article not found"
 msgstr "Статья не найдена"
 
-#: ../src/page.py:100
+#: ../src/page.py:108
 msgid "Can't find any results for requested query"
 msgstr "Не можем найти, подходящие вашему запросу, результаты"
 
-#: ../src/view.py:250
+#: ../src/view.py:255
 msgid "Can't access Wikipedia"
 msgstr "Нет доступа к Википедии"
 
-#: ../src/page.py:108
+#: ../src/page.py:116
 msgid "Check your Internet connection and try again"
 msgstr "Проверьте ваше интернет соединение и попробуйте еще раз"
 
@@ -35,7 +35,7 @@ msgstr "Все закладки в списке будут удалены нав
 msgid "Clear List"
 msgstr "Очистить список"
 
-#: ../data/ui/search-settings.ui:69
+#: ../data/ui/search-settings.ui:58
 msgid "Search Suggestions"
 msgstr "Подсказки при вводе"
 
@@ -46,7 +46,7 @@ msgstr "Подсказки при вводе"
 msgid "translator-credits"
 msgstr "Евгений Буря"
 
-#: ../src/view.py:360 ../data/ui/bookmarks.ui:26
+#: ../src/view.py:366 ../data/ui/bookmarks.ui:27
 msgid "Add Bookmark"
 msgstr "Добавить закладку"
 
@@ -75,22 +75,22 @@ msgctxt "shortcut window"
 msgid "Keyboard shortcuts"
 msgstr "Комбинации клавиш"
 
-#: ../data/ui/shortcuts.ui:127
+#: ../data/ui/shortcuts.ui:133
 msgctxt "shortcut window"
 msgid "Navigation"
 msgstr "Навигация"
 
-#: ../data/ui/shortcuts.ui:130
+#: ../data/ui/shortcuts.ui:136
 msgctxt "shortcut window"
 msgid "Search articles"
 msgstr "Поиск статей"
 
-#: ../data/ui/shortcuts.ui:154
+#: ../data/ui/shortcuts.ui:160
 msgctxt "shortcut window"
 msgid "Previous page"
 msgstr "Предыдущая страница"
 
-#: ../data/ui/shortcuts.ui:160
+#: ../data/ui/shortcuts.ui:166
 msgctxt "shortcut window"
 msgid "Next page"
 msgstr "Следующая страница"
@@ -121,11 +121,11 @@ msgstr "О Wike"
 msgid "Behavior"
 msgstr "Поведение"
 
-#: ../data/ui/prefs.ui:58
+#: ../data/ui/prefs.ui:59
 msgid "Keep a List of Recent Articles"
 msgstr "Сохранять список недавних статей"
 
-#: ../data/ui/window.ui:88
+#: ../data/ui/window.ui:102
 msgid "Languages"
 msgstr "Языки"
 
@@ -178,39 +178,35 @@ msgstr "Домашняя страница"
 msgid "The page that will be displayed when Wike starts"
 msgstr "Страница, которая будет отображаться при запуске Wike"
 
-#: ../data/ui/prefs.ui:38
+#: ../data/ui/prefs.ui:39
 msgid "Privacy"
 msgstr "Конфиденциальность"
 
-#: ../data/ui/prefs.ui:41
+#: ../data/ui/prefs.ui:42
 msgid "Allow Live Search on Desktop"
 msgstr "Разрешить поиск в реальном времени на рабочем столе"
 
-#: ../data/ui/prefs.ui:42
+#: ../data/ui/prefs.ui:43
 msgid "Warning: all desktop searches will be sent to Wikipedia"
 msgstr "Предупреждение: все поисковые запросы на компьютере будут отправляться в Википедию"
 
-#: ../data/ui/prefs.ui:59
+#: ../data/ui/prefs.ui:60
 msgid "Wike will remember the history of visited articles"
 msgstr "Wike запомнит историю посещенных статей"
 
-#: ../data/ui/prefs.ui:68 ../data/ui/prefs.ui:80
+#: ../data/ui/prefs.ui:69 ../data/ui/prefs.ui:87
 msgid "Clear"
 msgstr "Очистить"
 
-#: ../data/ui/prefs.ui:76
-msgid "Clear Personal Data"
-msgstr "Очистить личные данные"
-
-#: ../data/ui/prefs.ui:77
+#: ../data/ui/prefs.ui:78
 msgid "Cookies and cache data will be deleted"
 msgstr "Файлы cookie и данные кеша будут удалены"
 
-#: ../data/ui/page.ui:87
+#: ../data/ui/page.ui:83
 msgid "Try Again"
 msgstr "Попробуйте еще раз"
 
-#: ../data/ui/page.ui:78 ../data/ui/menu-main.ui:29
+#: ../data/ui/menu-main.ui:29 ../data/ui/page.ui:74
 msgid "Random Article"
 msgstr "Случайная статья"
 
@@ -218,7 +214,7 @@ msgstr "Случайная статья"
 msgid "Last article"
 msgstr "Последняя статья"
 
-#: ../data/ui/window.ui:99
+#: ../data/ui/window.ui:112
 msgid "Bookmarks"
 msgstr "Закладки"
 
@@ -260,31 +256,31 @@ msgctxt "shortcut window"
 msgid "Previous tab"
 msgstr "Предыдущая вкладка"
 
-#: ../src/view.py:375
+#: ../src/view.py:378
 msgid "Open Link in New Tab"
 msgstr "Открыть ссылку в новой вкладке"
 
-#: ../src/view.py:381
+#: ../src/view.py:384
 msgid "Add Link to Bookmarks"
 msgstr "Добавить ссылку в закладки"
 
-#: ../src/view.py:377
+#: ../src/view.py:380
 msgid "Open Link in Browser"
 msgstr "Открыть ссылку в браузере"
 
-#: ../src/view.py:383 ../data/ui/menu-main.ui:39
+#: ../src/view.py:386 ../data/ui/menu-main.ui:39
 msgid "Copy Link to Clipboard"
 msgstr "Скопировать ссылку в буфер обмена"
 
-#: ../data/ui/prefs.ui:50
+#: ../data/ui/prefs.ui:51
 msgid "Desktop searches are performed in the default language"
 msgstr "Глобальный поиск в системе выполняется на языке по умолчанию"
 
-#: ../data/ui/prefs.ui:51
+#: ../data/ui/prefs.ui:52
 msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
 msgstr "Вы можете выполнять поиск на других языках с помощью префикса. Например добавление -en позволит выполнить поиск на Английском языке."
 
-#: ../data/ui/shortcuts.ui:142
+#: ../data/ui/shortcuts.ui:148
 msgctxt "shortcut window"
 msgid "Random article"
 msgstr "Случайная статья"
@@ -313,43 +309,43 @@ msgstr "Последние 30 дней"
 msgid "Show full history"
 msgstr "Показать всю историю"
 
-#: ../src/window.py:312 ../src/page.py:135
+#: ../src/page.py:143 ../src/window.py:381
 msgid "Bookmark added: "
 msgstr "Закладка добавлена:␣"
 
-#: ../src/window.py:426
+#: ../src/window.py:500
 msgid "Print operation completed"
 msgstr "Печать выполнена"
 
-#: ../src/window.py:432
+#: ../src/window.py:506
 msgid "Print operation failed"
 msgstr "Печать не удалась"
 
-#: ../src/window.py:447
+#: ../src/window.py:521
 msgid "Link copied to clipboard"
 msgstr "Ссылка скопирована в буфер обмена"
 
-#: ../src/application.py:154
+#: ../src/application.py:157
 msgid "Source Code"
 msgstr "Исходный код"
 
-#: ../src/application.py:155
+#: ../src/application.py:158
 msgid "Report an Issue"
 msgstr "Сообщить об ошибке"
 
-#: ../src/application.py:156
+#: ../src/application.py:159
 msgid "Help Translating"
 msgstr "Помочь с переводом"
 
-#: ../src/application.py:157
+#: ../src/application.py:160
 msgid "Contributors"
 msgstr "Авторы"
 
-#: ../src/application.py:158
+#: ../src/application.py:161
 msgid "Flag Icons"
 msgstr "Иконки Флагов"
 
-#: ../src/application.py:159
+#: ../src/application.py:162
 msgid "All content from Wikipedia.org and available under CC BY-SA 3.0 unless otherwise noted.\n"
 "\n"
 "Wike is an independent development not endorsed by or affiliated with the Wikimedia Foundation."
@@ -357,15 +353,15 @@ msgstr "Всё содержимое получено от Wikipedia.org и до�
 "\n"
 "Wike — это независимая разработка, не одобренная и не связанная с Фондом Викимедиа."
 
-#: ../src/page.py:72
+#: ../src/page.py:79
 msgid "Loading"
 msgstr "Загрузка"
 
-#: ../src/page.py:99
+#: ../src/page.py:107
 msgid "Article not Found"
 msgstr "Статья не найдена"
 
-#: ../src/page.py:107
+#: ../src/page.py:115
 msgid "Can't Access Wikipedia"
 msgstr "Нет доступа к Wikipedia"
 
@@ -381,12 +377,11 @@ msgstr "Содержания отсутствует"
 msgid "There is no table of contents for this page"
 msgstr "Для этой страницы нет Содержания"
 
-#: ../data/ui/languages.ui:10 ../data/ui/search-settings.ui:26
+#: ../data/ui/search-settings.ui:16 ../data/ui/languages.ui:10
 msgid "Pick your Languages"
 msgstr "Выберите ваш язык"
 
-#: ../data/ui/languages.ui:33 ../data/ui/search-settings.ui:20
-#: ../data/ui/langlinks.ui:17
+#: ../data/ui/langlinks.ui:17 ../data/ui/languages.ui:33
 msgid "Filter languages"
 msgstr "Фильтр по языкам"
 
@@ -415,28 +410,24 @@ msgctxt "shortcut window"
 msgid "Copy link to clipboard"
 msgstr "Скопировать ссылку в буфер обмена"
 
-#: ../data/ui/shortcuts.ui:136
+#: ../data/ui/shortcuts.ui:142
 msgctxt "shortcut window"
 msgid "Main page"
 msgstr "Главная страница"
 
-#: ../data/ui/shortcuts.ui:148
+#: ../data/ui/shortcuts.ui:154
 msgctxt "shortcut window"
 msgid "History of recent articles"
 msgstr "История недавно просмотренных статей"
 
-#: ../data/ui/shortcuts.ui:166
+#: ../data/ui/shortcuts.ui:172
 msgctxt "shortcut window"
 msgid "Reload current page"
 msgstr "Обновить текущую страницу"
 
-#: ../data/ui/search.ui:15 ../data/ui/page.ui:57
+#: ../data/ui/page.ui:53 ../data/ui/search.ui:15
 msgid "Search Wikipedia"
 msgstr "Найти в Wikipedia"
-
-#: ../data/ui/search.ui:26
-msgid "Search Settings"
-msgstr "Настройки поиска"
 
 #: ../data/ui/dialogs.ui:11
 msgid "New Bookmarks List"
@@ -471,7 +462,7 @@ msgstr "Также удалить этот список"
 msgid "Clear History?"
 msgstr "Очистить Историю?"
 
-#: ../data/ui/dialogs.ui:77 ../data/ui/history.ui:26
+#: ../data/ui/history.ui:27 ../data/ui/dialogs.ui:77
 msgid "Clear History"
 msgstr "Очистить Историю"
 
@@ -487,11 +478,11 @@ msgstr "Случайная статья"
 msgid "New Tab"
 msgstr "Новая вкладка"
 
-#: ../data/ui/headerbar.ui:46 ../data/ui/actionbar.ui:34
+#: ../data/ui/actionbar.ui:34 ../data/ui/headerbar.ui:46
 msgid "View"
 msgstr "Оформление"
 
-#: ../data/ui/headerbar.ui:52 ../data/ui/actionbar.ui:27
+#: ../data/ui/actionbar.ui:27 ../data/ui/headerbar.ui:52
 msgid "Sidebar"
 msgstr "Боковая панель"
 
@@ -499,11 +490,11 @@ msgstr "Боковая панель"
 msgid "Search text"
 msgstr "Поиск текста"
 
-#: ../data/ui/page.ui:58
+#: ../data/ui/page.ui:54
 msgid "Start typing to search Wikipedia articles"
 msgstr "Начните набирать текст для поиска по статьям Wikipedia"
 
-#: ../data/ui/page.ui:68 ../data/ui/menu-main.ui:25
+#: ../data/ui/menu-main.ui:25 ../data/ui/page.ui:64
 msgid "Main Page"
 msgstr "Главная страница"
 
@@ -527,27 +518,27 @@ msgstr "Флаги языков"
 msgid "Link Previews"
 msgstr "Предпросмотр ссылок"
 
-#: ../data/ui/history.ui:49
+#: ../data/ui/history.ui:50
 msgid "Empty History"
 msgstr "История отсутствует"
 
-#: ../data/ui/history.ui:50
+#: ../data/ui/history.ui:51
 msgid "There are no recent articles in the history"
 msgstr "В истории нет недавних статей"
 
-#: ../data/ui/bookmarks.ui:55
+#: ../data/ui/bookmarks.ui:56
 msgid "No Bookmarks"
 msgstr "Закладки отсутствуют"
 
-#: ../data/ui/bookmarks.ui:56
+#: ../data/ui/bookmarks.ui:57
 msgid "Use the Add Bookmark button or press Ctrl+D to add the current article to the list"
 msgstr "Используйте кнопку Добавить Закладку или нажмите Ctrl+D для добавления текущей статьи в список"
 
-#: ../data/ui/window.ui:78
+#: ../data/ui/window.ui:93
 msgid "Contents"
 msgstr "Содержание"
 
-#: ../data/ui/window.ui:110
+#: ../data/ui/window.ui:122
 msgid "History"
 msgstr "История"
 
@@ -579,7 +570,7 @@ msgstr "Очистить Список…"
 msgid "It supports more than 300 languages and integrates with desktop searches, providing suggestions that make it easier to find any content. Other features are: bookmarks with multiple lists, article table of contents, history, text searches and much more…"
 msgstr "Программа поддерживает более 300 языков, поддерживает интеграцию с поиском в рабочей среде операционной системы, предлагет подсказки, которые делают поиск информации более простым. Дополнительные функции: создание списков для группировки закладок, Содержание для статей для быстрого перехода по разделам, история, поиск по тексту и многое другое…"
 
-#: ../data/ui/window.ui:55
+#: ../data/ui/window.ui:66
 msgid "Pin Sidebar"
 msgstr "Закрепить боковую панель"
 
@@ -594,4 +585,25 @@ msgstr "Вперед"
 #: ../data/ui/headerbar.ui:39
 msgid "Main Menu"
 msgstr "Главное меню"
+
+#: ../data/ui/shortcuts.ui:125
+msgctxt "shortcut window"
+msgid "View open tabs"
+msgstr "Показать открытые вкладки"
+
+#: ../data/ui/prefs.ui:29
+msgid "Restore open articles"
+msgstr "Восстановить открытые статьи"
+
+#: ../data/ui/prefs.ui:77
+msgid "Clear Personal Data on Close"
+msgstr "Очищать личные данные при закрытии"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:31
+msgid "Encyclopedia"
+msgstr "Энциклопедия"
+
+#: 
+msgid "Article Menu"
+msgstr "Меню статей"
 

@@ -7,19 +7,19 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: hr\n"
 
-#: ../src/view.py:248
+#: ../src/view.py:253
 msgid "Article not found"
 msgstr "Članak nije pronađen"
 
-#: ../src/page.py:100
+#: ../src/page.py:108
 msgid "Can't find any results for requested query"
 msgstr "Nema rezultata za traženi upit"
 
-#: ../src/view.py:250
+#: ../src/view.py:255
 msgid "Can't access Wikipedia"
 msgstr "Wikipedija nije dostupna"
 
-#: ../src/page.py:108
+#: ../src/page.py:116
 msgid "Check your Internet connection and try again"
 msgstr "Provjeri internetsku vezu i pokušaj ponovo"
 
@@ -35,7 +35,7 @@ msgstr "Sve zabilješke u popisu će se zauvijek izbrisati."
 msgid "Clear List"
 msgstr "Izbriši popis"
 
-#: ../data/ui/search-settings.ui:69
+#: ../data/ui/search-settings.ui:58
 msgid "Search Suggestions"
 msgstr "Prijedlozi za pretragu"
 
@@ -46,7 +46,7 @@ msgstr "Prijedlozi za pretragu"
 msgid "translator-credits"
 msgstr "Milo Ivir <mail@milotype.de>"
 
-#: ../src/view.py:360 ../data/ui/bookmarks.ui:26
+#: ../src/view.py:366 ../data/ui/bookmarks.ui:27
 msgid "Add Bookmark"
 msgstr "Dodaj zabilješku"
 
@@ -75,22 +75,22 @@ msgctxt "shortcut window"
 msgid "Keyboard shortcuts"
 msgstr "Tipkovni prečaci"
 
-#: ../data/ui/shortcuts.ui:127
+#: ../data/ui/shortcuts.ui:133
 msgctxt "shortcut window"
 msgid "Navigation"
 msgstr "Navigacija"
 
-#: ../data/ui/shortcuts.ui:130
+#: ../data/ui/shortcuts.ui:136
 msgctxt "shortcut window"
 msgid "Search articles"
 msgstr "Traži članke"
 
-#: ../data/ui/shortcuts.ui:154
+#: ../data/ui/shortcuts.ui:160
 msgctxt "shortcut window"
 msgid "Previous page"
 msgstr "Prethodna stranica"
 
-#: ../data/ui/shortcuts.ui:160
+#: ../data/ui/shortcuts.ui:166
 msgctxt "shortcut window"
 msgid "Next page"
 msgstr "Sljedeća stranica"
@@ -121,11 +121,11 @@ msgstr "Wike informacije"
 msgid "Behavior"
 msgstr "Ponašanje"
 
-#: ../data/ui/prefs.ui:58
+#: ../data/ui/prefs.ui:59
 msgid "Keep a List of Recent Articles"
 msgstr "Čuvaj popis nedavnih članaka"
 
-#: ../data/ui/window.ui:88
+#: ../data/ui/window.ui:102
 msgid "Languages"
 msgstr "Jezici"
 
@@ -178,39 +178,35 @@ msgstr "Početna stranica"
 msgid "The page that will be displayed when Wike starts"
 msgstr "Stranica koja će se prikazati kad se Wike pokrene"
 
-#: ../data/ui/prefs.ui:38
+#: ../data/ui/prefs.ui:39
 msgid "Privacy"
 msgstr "Privatnost"
 
-#: ../data/ui/prefs.ui:41
+#: ../data/ui/prefs.ui:42
 msgid "Allow Live Search on Desktop"
 msgstr "Dozvoli pretragu uživo na radnoj površini"
 
-#: ../data/ui/prefs.ui:42
+#: ../data/ui/prefs.ui:43
 msgid "Warning: all desktop searches will be sent to Wikipedia"
 msgstr "Upozorenje: sve pretrage na radnoj površini će se poslati Wikipediji"
 
-#: ../data/ui/prefs.ui:59
+#: ../data/ui/prefs.ui:60
 msgid "Wike will remember the history of visited articles"
 msgstr "Wike će zapamtiti povijest posjećenih članaka"
 
-#: ../data/ui/prefs.ui:68 ../data/ui/prefs.ui:80
+#: ../data/ui/prefs.ui:69 ../data/ui/prefs.ui:87
 msgid "Clear"
 msgstr "Izbriši"
 
-#: ../data/ui/prefs.ui:76
-msgid "Clear Personal Data"
-msgstr "Izbriši osobne podatke"
-
-#: ../data/ui/prefs.ui:77
+#: ../data/ui/prefs.ui:78
 msgid "Cookies and cache data will be deleted"
 msgstr "Kolačići i podaci u predmemoriji će se izbrisati"
 
-#: ../data/ui/page.ui:87
+#: ../data/ui/page.ui:83
 msgid "Try Again"
 msgstr "Pokušaj ponovo"
 
-#: ../data/ui/page.ui:78 ../data/ui/menu-main.ui:29
+#: ../data/ui/menu-main.ui:29 ../data/ui/page.ui:74
 msgid "Random Article"
 msgstr "Slučajni članak"
 
@@ -218,7 +214,7 @@ msgstr "Slučajni članak"
 msgid "Last article"
 msgstr "Zadnji članak"
 
-#: ../data/ui/window.ui:99
+#: ../data/ui/window.ui:112
 msgid "Bookmarks"
 msgstr "Zabilješke"
 
@@ -260,31 +256,31 @@ msgctxt "shortcut window"
 msgid "Previous tab"
 msgstr "Prethodna kartica"
 
-#: ../src/view.py:375
+#: ../src/view.py:378
 msgid "Open Link in New Tab"
 msgstr "Otvori poveznicu u novoj karticu"
 
-#: ../src/view.py:381
+#: ../src/view.py:384
 msgid "Add Link to Bookmarks"
 msgstr "Dodaj poveznicu u zabilješke"
 
-#: ../src/view.py:377
+#: ../src/view.py:380
 msgid "Open Link in Browser"
 msgstr "Otvori poveznicu u pregledniku"
 
-#: ../src/view.py:383 ../data/ui/menu-main.ui:39
+#: ../src/view.py:386 ../data/ui/menu-main.ui:39
 msgid "Copy Link to Clipboard"
 msgstr "Kopiraj poveznicu u međuspremnik"
 
-#: ../data/ui/prefs.ui:50
+#: ../data/ui/prefs.ui:51
 msgid "Desktop searches are performed in the default language"
 msgstr "Pretrage na radnoj površini se obavljaju na standardnom jeziku"
 
-#: ../data/ui/prefs.ui:51
+#: ../data/ui/prefs.ui:52
 msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
 msgstr "Pretraživanje je moguće i na drugim jezicima pomoću prefiksa. Npr. -hr za pretraživanje na hrvatskom jeziku"
 
-#: ../data/ui/shortcuts.ui:142
+#: ../data/ui/shortcuts.ui:148
 msgctxt "shortcut window"
 msgid "Random article"
 msgstr "Slučajni članak"
@@ -313,43 +309,43 @@ msgstr "Zadnjih 30 dana"
 msgid "Show full history"
 msgstr "Prikaži cijelu povijest"
 
-#: ../src/window.py:312 ../src/page.py:135
+#: ../src/page.py:143 ../src/window.py:381
 msgid "Bookmark added: "
 msgstr "Dodana zabilješka: "
 
-#: ../src/window.py:426
+#: ../src/window.py:500
 msgid "Print operation completed"
 msgstr "Ispis je gotov"
 
-#: ../src/window.py:432
+#: ../src/window.py:506
 msgid "Print operation failed"
 msgstr "Ispis nije uspio"
 
-#: ../src/window.py:447
+#: ../src/window.py:521
 msgid "Link copied to clipboard"
 msgstr "Poveznica je kopirana u međuspremnik"
 
-#: ../src/application.py:154
+#: ../src/application.py:157
 msgid "Source Code"
 msgstr "Izvorni kȏd"
 
-#: ../src/application.py:155
+#: ../src/application.py:158
 msgid "Report an Issue"
 msgstr "Prijavi problem"
 
-#: ../src/application.py:156
+#: ../src/application.py:159
 msgid "Help Translating"
 msgstr "Pomogni prevoditi"
 
-#: ../src/application.py:157
+#: ../src/application.py:160
 msgid "Contributors"
 msgstr "Doprinositelji"
 
-#: ../src/application.py:158
+#: ../src/application.py:161
 msgid "Flag Icons"
 msgstr "Ikone zastava"
 
-#: ../src/application.py:159
+#: ../src/application.py:162
 msgid "All content from Wikipedia.org and available under CC BY-SA 3.0 unless otherwise noted.\n"
 "\n"
 "Wike is an independent development not endorsed by or affiliated with the Wikimedia Foundation."
@@ -357,15 +353,15 @@ msgstr "Sav sadržaj s Wikipedia.org, dostupan pod CC BY-SA 3.0 licencom ukoliko
 "\n"
 "Wike se razvija neovisno, bez podrške ili veze sa zakladom Wikimedia Foundation."
 
-#: ../src/page.py:72
+#: ../src/page.py:79
 msgid "Loading"
 msgstr "Učitavanje"
 
-#: ../src/page.py:99
+#: ../src/page.py:107
 msgid "Article not Found"
 msgstr "Članak nije pronađen"
 
-#: ../src/page.py:107
+#: ../src/page.py:115
 msgid "Can't Access Wikipedia"
 msgstr "Wikipedija nije dostupna"
 
@@ -381,12 +377,11 @@ msgstr "Nema kazala"
 msgid "There is no table of contents for this page"
 msgstr "Ova stranica nema kazalo"
 
-#: ../data/ui/languages.ui:10 ../data/ui/search-settings.ui:26
+#: ../data/ui/search-settings.ui:16 ../data/ui/languages.ui:10
 msgid "Pick your Languages"
 msgstr "Odaberi jezik"
 
-#: ../data/ui/languages.ui:33 ../data/ui/search-settings.ui:20
-#: ../data/ui/langlinks.ui:17
+#: ../data/ui/langlinks.ui:17 ../data/ui/languages.ui:33
 msgid "Filter languages"
 msgstr "Filtriraj jezike"
 
@@ -415,28 +410,24 @@ msgctxt "shortcut window"
 msgid "Copy link to clipboard"
 msgstr "Kopiraj poveznicu u međuspremnik"
 
-#: ../data/ui/shortcuts.ui:136
+#: ../data/ui/shortcuts.ui:142
 msgctxt "shortcut window"
 msgid "Main page"
 msgstr "Glavna stranica"
 
-#: ../data/ui/shortcuts.ui:148
+#: ../data/ui/shortcuts.ui:154
 msgctxt "shortcut window"
 msgid "History of recent articles"
 msgstr "Povijest nedavnih članaka"
 
-#: ../data/ui/shortcuts.ui:166
+#: ../data/ui/shortcuts.ui:172
 msgctxt "shortcut window"
 msgid "Reload current page"
 msgstr "Ponovo učitaj trenutačnu stranicu"
 
-#: ../data/ui/search.ui:15 ../data/ui/page.ui:57
+#: ../data/ui/page.ui:53 ../data/ui/search.ui:15
 msgid "Search Wikipedia"
 msgstr "Pretraži Wikipediju"
-
-#: ../data/ui/search.ui:26
-msgid "Search Settings"
-msgstr "Postavke pretrage"
 
 #: ../data/ui/dialogs.ui:11
 msgid "New Bookmarks List"
@@ -471,7 +462,7 @@ msgstr "Također izbriši popis"
 msgid "Clear History?"
 msgstr "Izbrisati povijest?"
 
-#: ../data/ui/dialogs.ui:77 ../data/ui/history.ui:26
+#: ../data/ui/history.ui:27 ../data/ui/dialogs.ui:77
 msgid "Clear History"
 msgstr "Izbriši povijest"
 
@@ -487,11 +478,11 @@ msgstr "Slučajni članak"
 msgid "New Tab"
 msgstr "Nova kartica"
 
-#: ../data/ui/headerbar.ui:46 ../data/ui/actionbar.ui:34
+#: ../data/ui/actionbar.ui:34 ../data/ui/headerbar.ui:46
 msgid "View"
-msgstr "Prikaz"
+msgstr "Pogledaj"
 
-#: ../data/ui/headerbar.ui:52 ../data/ui/actionbar.ui:27
+#: ../data/ui/actionbar.ui:27 ../data/ui/headerbar.ui:52
 msgid "Sidebar"
 msgstr "Bočna traka"
 
@@ -499,11 +490,11 @@ msgstr "Bočna traka"
 msgid "Search text"
 msgstr "Traži tekst"
 
-#: ../data/ui/page.ui:58
+#: ../data/ui/page.ui:54
 msgid "Start typing to search Wikipedia articles"
 msgstr "Počni tipkati za traženje članaka Wikipedije"
 
-#: ../data/ui/page.ui:68 ../data/ui/menu-main.ui:25
+#: ../data/ui/menu-main.ui:25 ../data/ui/page.ui:64
 msgid "Main Page"
 msgstr "Glavna stranica"
 
@@ -527,27 +518,27 @@ msgstr "Zastave jezika"
 msgid "Link Previews"
 msgstr "Pregledi poveznica"
 
-#: ../data/ui/history.ui:49
+#: ../data/ui/history.ui:50
 msgid "Empty History"
 msgstr "Povijest je prazna"
 
-#: ../data/ui/history.ui:50
+#: ../data/ui/history.ui:51
 msgid "There are no recent articles in the history"
 msgstr "U povijesti nema nedavnih članaka"
 
-#: ../data/ui/bookmarks.ui:55
+#: ../data/ui/bookmarks.ui:56
 msgid "No Bookmarks"
 msgstr "Nema zabilješki"
 
-#: ../data/ui/bookmarks.ui:56
+#: ../data/ui/bookmarks.ui:57
 msgid "Use the Add Bookmark button or press Ctrl+D to add the current article to the list"
 msgstr "Za dodavanje trenutačnog članka u popis prisni gumb „Dodaj zabilješku” ili pritisni Ctrl+D"
 
-#: ../data/ui/window.ui:78
+#: ../data/ui/window.ui:93
 msgid "Contents"
 msgstr "Kazalo"
 
-#: ../data/ui/window.ui:110
+#: ../data/ui/window.ui:122
 msgid "History"
 msgstr "Povijest"
 
@@ -579,7 +570,7 @@ msgstr "Izbriši popis …"
 msgid "It supports more than 300 languages and integrates with desktop searches, providing suggestions that make it easier to find any content. Other features are: bookmarks with multiple lists, article table of contents, history, text searches and much more…"
 msgstr "Podržava više od 300 jezika i integrira se s pretragama na radnoj površini, pružajući prijedloge koji olakšavaju pronalaženje bilo kojeg sadržaja. Ostale značajke su: višebrojni popisi zabilješki, kazalo članka, povijest, traženje teksta i još mnogo toga …"
 
-#: ../data/ui/window.ui:55
+#: ../data/ui/window.ui:66
 msgid "Pin Sidebar"
 msgstr "Prikaži bočnu traku"
 
@@ -594,4 +585,25 @@ msgstr "Naprijed"
 #: ../data/ui/headerbar.ui:39
 msgid "Main Menu"
 msgstr "Glavni izbornik"
+
+#: ../data/ui/shortcuts.ui:125
+msgctxt "shortcut window"
+msgid "View open tabs"
+msgstr "Pogledaj otvorene kartice"
+
+#: ../data/ui/prefs.ui:29
+msgid "Restore open articles"
+msgstr "Obnovi otvorene članke"
+
+#: ../data/ui/prefs.ui:77
+msgid "Clear Personal Data on Close"
+msgstr "Izbriši osobne podatke pri zatvaranju"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:31
+msgid "Encyclopedia"
+msgstr "Enciklopedija"
+
+#: 
+msgid "Article Menu"
+msgstr "Izbornik članaka"
 

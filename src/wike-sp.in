@@ -6,12 +6,9 @@
 
 
 import os
+import sys
 import gettext
 from threading import Thread
-
-import dbus
-import dbus.service
-from dbus.mainloop.glib import DBusGMainLoop
 
 from gi.repository import GLib, Gio
 
@@ -22,22 +19,49 @@ resource = Gio.Resource.load(os.path.join(pkgdatadir, 'wike.gresource'))
 resource._register()
 gettext.install('wike', localedir)
 
-sbn = dict(dbus_interface='org.gnome.Shell.SearchProvider2')
-
 from wike import wikipedia
 from wike.data import settings, languages
+
+dbus_interface_description = '''
+<!DOCTYPE node PUBLIC
+'-//freedesktop//DTD D-BUS Object Introspection 1.0//EN'
+'http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd'>
+<node>
+  <interface name="org.gnome.Shell.SearchProvider2">
+    <method name="GetInitialResultSet">
+      <arg type="as" name="terms" direction="in" />
+      <arg type="as" name="results" direction="out" />
+    </method>
+    <method name="GetSubsearchResultSet">
+      <arg type="as" name="previous_results" direction="in" />
+      <arg type="as" name="terms" direction="in" />
+      <arg type="as" name="results" direction="out" />
+    </method>
+    <method name="GetResultMetas">
+      <arg type="as" name="identifiers" direction="in" />
+      <arg type="aa{sv}" name="metas" direction="out" />
+    </method>
+    <method name="ActivateResult">
+      <arg type="s" name="identifier" direction="in" />
+      <arg type="as" name="terms" direction="in" />
+      <arg type="u" name="timestamp" direction="in" />
+    </method>
+    <method name="LaunchSearch">
+      <arg type="as" name="terms" direction="in" />
+      <arg type="u" name="timestamp" direction="in" />
+    </method>
+  </interface>
+</node>
+'''
 
 
 # Search provider service for integration with GNOME Shell search
 
-class WikeSearchService(dbus.service.Object):
+class WikeSearchService:
 
   # Initialize D-Bus service and objects
 
   def __init__(self):
-    bus_name = dbus.service.BusName('com.github.hugolabe.Wike.SearchProvider', bus=dbus.SessionBus())
-    dbus.service.Object.__init__(self, bus_name, '/com/github/hugolabe/Wike/SearchProvider')
-
     self._results = dict()
     self._search_thread = None
     self._lang = settings.get_string('search-language')
@@ -46,7 +70,6 @@ class WikeSearchService(dbus.service.Object):
 
   # Get results for first search
 
-  @dbus.service.method(in_signature='as', out_signature='as', **sbn)
   def GetInitialResultSet(self, terms):
     text = ' '.join(terms)
     lang = self._lang
@@ -73,25 +96,22 @@ class WikeSearchService(dbus.service.Object):
 
   # Get results for next searchs
 
-  @dbus.service.method(in_signature='asas', out_signature='as', **sbn)
   def GetSubsearchResultSet(self, previous_results, new_terms):
     return self.GetInitialResultSet(new_terms)
 
   # Get detailed information for results
 
-  @dbus.service.method(in_signature='as', out_signature='aa{sv}', **sbn)
   def GetResultMetas(self, ids):
     metas = []
     for item in ids:
       if item in self._results:
-        meta = dict(id=item, name=self._results[item])
+        meta = dict(id=GLib.Variant("s", item), name=GLib.Variant("s", self._results[item]))
         metas.append(meta)
 
     return metas
 
   # Open clicked result in Wike app
 
-  @dbus.service.method(in_signature='sasu', **sbn)
   def ActivateResult(self, id, terms, timestamp):
     if id.startswith('search'):
       self._results.clear()
@@ -109,7 +129,6 @@ class WikeSearchService(dbus.service.Object):
 
   # Open Wike app on its current page
 
-  @dbus.service.method(in_signature='asu', terms='as', timestamp='u', **sbn)
   def LaunchSearch(self, terms, timestamp):
     GLib.spawn_async_with_pipes( None, ['@BIN@'], None, GLib.SpawnFlags.SEARCH_PATH, None )
 
@@ -139,8 +158,43 @@ class WikeSearchService(dbus.service.Object):
   def _search_lang_changed_cb(self, settings, key):
     self._lang = settings.get_string('search-language')
 
+class WikeSearchServiceApplication(Gio.Application):
+
+  def __init__(self):
+    Gio.Application.__init__(self,
+                             application_id="com.github.hugolabe.Wike.SearchProvider",
+                             flags=Gio.ApplicationFlags.IS_SERVICE,
+                             inactivity_timeout=10000)
+    self.service_object = WikeSearchService()
+    self.search_interface = Gio.DBusNodeInfo.new_for_xml(dbus_interface_description).interfaces[0]
+
+  def do_dbus_register(self, connection, object_path):
+    try:
+      connection.register_object(object_path=object_path,
+                                 interface_info=self.search_interface,
+                                 method_call_closure=self.on_dbus_method_call)
+    except:
+      self.quit()
+      return False
+    finally:
+      return True
+
+  def on_dbus_method_call(self, connection, sender, object_path, interface_name, method_name, parameters, invocation):
+    self.hold()
+
+    method = getattr(self.service_object, method_name)
+    arguments = list(parameters.unpack())
+
+    results = method(*arguments),
+    if results == (None,):
+      results = ()
+    results_type = "(" + "".join(map(lambda argument_info: argument_info.signature, self.search_interface.lookup_method(method_name).out_args)) + ")"
+    wrapped_results = GLib.Variant(results_type, results)
+
+    invocation.return_value(wrapped_results)
+
+    self.release()
 
 if __name__ == '__main__':
-  DBusGMainLoop(set_as_default=True)
-  WikeSearchService()
-  GLib.MainLoop().run()
+  app = WikeSearchServiceApplication()
+  sys.exit(app.run())

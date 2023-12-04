@@ -54,6 +54,21 @@
   </screenshots>
 
   <releases>
+    <release version="2.1.0" date="2023-12-04">
+      <description translatable="no">
+        <ul>
+          <li>Added an option to clear personal data on exit.</li>
+          <li>Added an option to restore open articles on start.</li>
+          <li>Enabled navigation with gestures and mouse buttons 8 and 9.</li>
+          <li>Tab overview can now also be used in desktop mode.</li>
+          <li>History items can now be deleted individually.</li>
+          <li>Minor UI changes.</li>
+          <li>Added Ukrainian, Urdu and Occitan translations.</li>
+          <li>Updated many translations.</li>
+          <li>Bug fixes.</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.0.1" date="2023-04-23">
       <description translatable="no">
         <ul>

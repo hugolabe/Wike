@@ -59,7 +59,7 @@ dbus_interface_description = '''
 
 class WikeSearchService:
 
-  # Initialize D-Bus service and objects
+  # Initialize variables and connect signals
 
   def __init__(self):
     self._results = dict()
@@ -105,7 +105,7 @@ class WikeSearchService:
     metas = []
     for item in ids:
       if item in self._results:
-        meta = dict(id=GLib.Variant("s", item), name=GLib.Variant("s", self._results[item]))
+        meta = dict(id=GLib.Variant('s', item), name=GLib.Variant('s', self._results[item]))
         metas.append(meta)
 
     return metas
@@ -158,15 +158,19 @@ class WikeSearchService:
   def _search_lang_changed_cb(self, settings, key):
     self._lang = settings.get_string('search-language')
 
+# GIO application for search provider
+
 class WikeSearchServiceApplication(Gio.Application):
 
   def __init__(self):
     Gio.Application.__init__(self,
-                             application_id="com.github.hugolabe.Wike.SearchProvider",
+                             application_id='com.github.hugolabe.Wike.SearchProvider',
                              flags=Gio.ApplicationFlags.IS_SERVICE,
                              inactivity_timeout=10000)
     self.service_object = WikeSearchService()
     self.search_interface = Gio.DBusNodeInfo.new_for_xml(dbus_interface_description).interfaces[0]
+
+  # Register DBUS search provider object
 
   def do_dbus_register(self, connection, object_path):
     try:
@@ -179,6 +183,8 @@ class WikeSearchServiceApplication(Gio.Application):
     finally:
       return True
 
+  # Handle incoming method calls
+
   def on_dbus_method_call(self, connection, sender, object_path, interface_name, method_name, parameters, invocation):
     self.hold()
 
@@ -188,12 +194,14 @@ class WikeSearchServiceApplication(Gio.Application):
     results = method(*arguments),
     if results == (None,):
       results = ()
-    results_type = "(" + "".join(map(lambda argument_info: argument_info.signature, self.search_interface.lookup_method(method_name).out_args)) + ")"
+    results_type = '(' + ''.join(map(lambda argument_info: argument_info.signature, self.search_interface.lookup_method(method_name).out_args)) + ')'
     wrapped_results = GLib.Variant(results_type, results)
 
     invocation.return_value(wrapped_results)
 
     self.release()
+
+# Run search provider application
 
 if __name__ == '__main__':
   app = WikeSearchServiceApplication()

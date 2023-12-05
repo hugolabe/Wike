@@ -52,7 +52,8 @@ class HeaderBar(Gtk.HeaderBar):
       self.tabs_button.set_visible(True)
       self.flap_button.set_visible(False)
       self.view_button.set_visible(False)
-      self.search_box.set_size_request(-1, -1)
+      self.search_box.search_entry.set_hexpand(True)
+      self.search_box.search_entry.set_size_request(-1, -1)
       view_menu_popover = self.view_button.get_popover()
       if view_menu_popover:
         self.view_button.set_popover(None)
@@ -68,7 +69,8 @@ class HeaderBar(Gtk.HeaderBar):
       self.tabs_button.set_visible(False)
       self.flap_button.set_visible(True)
       self.view_button.set_visible(True)
-      self.search_box.set_size_request(320, -1)
+      self.search_box.search_entry.set_hexpand(False)
+      self.search_box.search_entry.set_size_request(280, -1)
       view_menu_popover = self._actionbar.view_button.get_popover()
       if view_menu_popover:
         self._actionbar.view_button.set_popover(None)

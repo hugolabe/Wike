@@ -64,10 +64,10 @@ SPDX-License-Identifier: GPL-3.0-or-later
                                   <object class="GtkToggleButton" id="flap_pin_button">
                                     <property name="icon-name">view-pin-symbolic</property>
                                     <property name="tooltip-text" translatable="yes">Pin Sidebar</property>
-                                    <property name="margin-start">5</property>
-                                    <property name="margin-end">5</property>
-                                    <property name="margin-top">5</property>
-                                    <property name="margin-bottom">5</property>
+                                    <property name="margin-start">6</property>
+                                    <property name="margin-end">6</property>
+                                    <property name="margin-top">6</property>
+                                    <property name="margin-bottom">6</property>
                                     <property name="valign">center</property>
                                     <property name="action-name">win.pin-sidebar</property>
                                     <style>
@@ -80,11 +80,11 @@ SPDX-License-Identifier: GPL-3.0-or-later
                             </child>
                             <child>
                               <object class="GtkBox">
-                                <property name="margin-start">5</property>
-                                <property name="margin-end">5</property>
-                                <property name="margin-top">5</property>
-                                <property name="margin-bottom">5</property>
-                                <property name="spacing">5</property>
+                                <property name="margin-start">6</property>
+                                <property name="margin-end">6</property>
+                                <property name="margin-top">6</property>
+                                <property name="margin-bottom">6</property>
+                                <property name="spacing">6</property>
                                 <property name="hexpand">True</property>
                                 <property name="homogeneous">True</property>
                                 <child>

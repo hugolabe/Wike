@@ -102,6 +102,10 @@ class SearchBox(Gtk.Box):
         text = terms[1]
       else:
         text = ''
+    elif ':' in text:
+      for available_lang in languages.wikilangs.keys():
+        if text.startswith(available_lang + ':'):
+          lang, text = text.split(':', 1)
     return text, lang
 
   # When search stoped with ESC hide suggestions

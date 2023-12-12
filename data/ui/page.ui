@@ -5,60 +5,86 @@ SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
 SPDX-License-Identifier: GPL-3.0-or-later
 -->
 
+<!-- Page content for each tab -->
 <interface>
   <template class="PageBox" parent="GtkBox">
     <property name="orientation">vertical</property>
+
+    <!-- Text searchbar -->
     <child>
       <object class="GtkSearchBar" id="search_bar">
         <property name="show-close-button">True</property>
+
+        <!-- Searchbar box-->
         <child>
           <object class="GtkBox">
             <property name="spacing">6</property>
+
+            <!-- Searchbar entry -->
             <child>
               <object class="GtkSearchEntry" id="search_entry">
                 <property name="max-width-chars">30</property>
                 <property name="placeholder-text" translatable="yes">Search text</property>
               </object>
             </child>
+
+            <!-- Searchbar buttons box -->
             <child>
               <object class="GtkBox">
                 <style>
                   <class name="linked"/>
                 </style>
+
+                <!-- Searchbar prev button -->
                 <child>
                   <object class="GtkButton" id="search_prev_button">
                     <property name="icon-name">go-up-symbolic</property>
                     <property name="sensitive">False</property>
                   </object>
                 </child>
+
+                <!-- Searchbar next button -->
                 <child>
                   <object class="GtkButton" id="search_next_button">
                     <property name="icon-name">go-down-symbolic</property>
                     <property name="sensitive">False</property>
                   </object>
                 </child>
+
               </object>
             </child>
+
           </object>
         </child>
+
       </object>
     </child>
+
+    <!-- Stack for article content-->
     <child>
       <object class="GtkStack" id="view_stack">
+
+        <!-- Stack page status -->
         <child>
           <object class="GtkStackPage">
             <property name="name">status</property>
+
+            <!-- Status page -->
             <property name="child">
               <object class="AdwStatusPage" id="status_page">
                 <property name="title" translatable="yes">Search Wikipedia</property>
                 <property name="description" translatable="yes">Start typing to search Wikipedia articles</property>
                 <property name="icon-name">com.github.hugolabe.Wike</property>
+
+                <!-- Buttons box -->
                 <property name="child">
                   <object class="GtkBox">
                     <property name="orientation">vertical</property>
                     <property name="halign">center</property>
                     <property name="homogeneous">true</property>
                     <property name="spacing">12</property>
+
+                    <!-- Main page button -->
                     <child>
                       <object class="GtkButton" id="main_page_button">
                         <property name="label" translatable="yes">Main Page</property>
@@ -69,6 +95,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
                         </style>
                       </object>
                     </child>
+
+                    <!-- Random article button -->
                     <child>
                       <object class="GtkButton" id="random_article_button">
                         <property name="label" translatable="yes">Random Article</property>
@@ -78,6 +106,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
                         </style>
                       </object>
                     </child>
+
+                    <!-- Try again button -->
                     <child>
                       <object class="GtkButton" id="try_again_button">
                         <property name="label" translatable="yes">Try Again</property>
@@ -88,13 +118,18 @@ SPDX-License-Identifier: GPL-3.0-or-later
                         </style>
                       </object>
                     </child>
+
                   </object>
                 </property>
+
               </object>
             </property>
+
           </object>
         </child>
+
       </object>
     </child>
+
   </template>
 </interface>

@@ -5,9 +5,12 @@ SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
 SPDX-License-Identifier: GPL-3.0-or-later
 -->
 
+<!-- Language links box for sidebar -->
 <interface>
   <template class="LanglinksBox" parent="GtkBox">
     <property name="orientation">vertical</property>
+
+    <!-- Filter entry -->
     <child>
       <object class="GtkSearchEntry" id="filter_entry">
         <property name="margin-start">6</property>
@@ -17,15 +20,21 @@ SPDX-License-Identifier: GPL-3.0-or-later
         <property name="placeholder-text" translatable="yes">Filter languages</property>
       </object>
     </child>
+
+    <!-- Separator -->
     <child>
       <object class="GtkSeparator" id="langlinks_separator">
         <property name="visible">false</property>
       </object>
     </child>
+
+    <!-- Language links scroller -->
     <child>
       <object class="GtkScrolledWindow" id="langlinks_scroller">
         <child>
           <object class="GtkViewport">
+
+            <!-- Language links list -->
             <child>
               <object class="GtkListBox" id="langlinks_list">
                 <property name="vexpand">true</property>
@@ -33,6 +42,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
                 <style>
                   <class name="navigation-sidebar"/>
                 </style>
+
+                <!-- Placeholder -->
                 <child type="placeholder">
                   <object class="AdwStatusPage">
                     <property name="title" translatable="yes">No Languages</property>
@@ -45,11 +56,14 @@ SPDX-License-Identifier: GPL-3.0-or-later
                     </style>
                   </object>
                 </child>
+
               </object>
             </child>
+
           </object>
         </child>
       </object>
     </child>
+
   </template>
 </interface>

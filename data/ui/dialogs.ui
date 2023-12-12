@@ -7,6 +7,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
 <interface>
 
+  <!-- New bookmarks list dialog -->
   <object class="AdwMessageDialog" id="new_booklist_dialog">
     <property name="heading" translatable="yes">New Bookmarks List</property>
     <property name="default-response">create</property>
@@ -28,6 +29,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
     </responses>
   </object>
 
+  <!-- Rename bookmarks list dialog -->
   <object class="AdwMessageDialog" id="rename_booklist_dialog">
     <property name="heading" translatable="yes">Rename Bookmarks List</property>
     <property name="default-response">rename</property>
@@ -49,6 +51,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
     </responses>
   </object>
 
+  <!-- Clear bookmarks list dialog -->
   <object class="AdwMessageDialog" id="clear_booklist_dialog">
     <property name="heading" translatable="yes">Clear Bookmarks List?</property>
     <property name="body" translatable="yes">All bookmarks in the list will be removed permanently.</property>
@@ -66,6 +69,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
     </responses>
   </object>
 
+  <!-- Clear history dialog -->
   <object class="AdwMessageDialog" id="clear_history_dialog">
     <property name="heading" translatable="yes">Clear History?</property>
     <property name="body" translatable="yes">The history of visited articles will be deleted permanently.</property>
@@ -78,6 +82,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
     </responses>
   </object>
 
+  <!-- Clear personal data dialog -->
   <object class="AdwMessageDialog" id="clear_data_dialog">
     <property name="heading" translatable="yes">Clear Personal Data?</property>
     <property name="body" translatable="yes">Cookies and cache data will be deleted permanently.</property>

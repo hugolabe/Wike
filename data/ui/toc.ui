@@ -5,9 +5,12 @@ SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
 SPDX-License-Identifier: GPL-3.0-or-later
 -->
 
+<!-- TOC box for sidebar -->
 <interface>
   <template class="TocBox" parent="GtkBox">
     <property name="orientation">vertical</property>
+
+    <!-- Article title label -->
     <child>
       <object class="GtkLabel" id="title_label">
         <property name="margin-start">15</property>
@@ -21,15 +24,21 @@ SPDX-License-Identifier: GPL-3.0-or-later
         <property name="use-markup">true</property>
       </object>
     </child>
+
+    <!-- Separator -->
     <child>
       <object class="GtkSeparator" id="toc_separator">
         <property name="visible">false</property>
       </object>
     </child>
+
+    <!-- TOC scroller -->
     <child>
       <object class="GtkScrolledWindow" id ="toc_scroller">
         <child>
           <object class="GtkViewport">
+
+            <!-- TOC list -->
             <child>
               <object class="GtkListBox" id="toc_list">
                 <property name="vexpand">true</property>
@@ -37,6 +46,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
                 <style>
                   <class name="navigation-sidebar"/>
                 </style>
+
+                <!-- Placeholder -->
                 <child type="placeholder">
                   <object class="AdwStatusPage">
                     <property name="title" translatable="yes">No Contents</property>
@@ -49,11 +60,14 @@ SPDX-License-Identifier: GPL-3.0-or-later
                     </style>
                   </object>
                 </child>
+
               </object>
             </child>
+
           </object>
         </child>
       </object>
     </child>
+
   </template>
 </interface>

@@ -5,8 +5,11 @@ SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
 SPDX-License-Identifier: GPL-3.0-or-later
 -->
 
+<!-- Headerbar for desktop and mobile modes -->
 <interface>
   <template class="HeaderBar" parent="GtkHeaderBar">
+
+    <!-- Prev navigation button -->
     <child type="start">
       <object class="GtkButton" id="prev_button">
         <property name="icon-name">go-previous-symbolic</property>
@@ -14,6 +17,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
         <property name="action-name">win.prev-page</property>
       </object>
     </child>
+
+    <!-- Next navigation button -->
     <child type="start">
       <object class="GtkButton" id="next_button">
         <property name="icon-name">go-next-symbolic</property>
@@ -21,6 +26,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
         <property name="action-name">win.next-page</property>
       </object>
     </child>
+
+    <!-- New tab button -->
     <child type="start">
       <object class="GtkButton" id="newtab_button">
         <property name="icon-name">tab-new-symbolic</property>
@@ -28,11 +35,15 @@ SPDX-License-Identifier: GPL-3.0-or-later
         <property name="action-name">win.new-tab</property>
       </object>
     </child>
+
+    <!-- Tab overview button -->
     <child type="start">
       <object class="AdwTabButton" id="tabs_button">
         <property name="action-name">win.toggle-overview</property>
       </object>
     </child>
+
+    <!-- Main menu button -->
     <child type="end">
       <object class="GtkMenuButton" id="menu_button">
         <property name="icon-name">open-menu-symbolic</property>
@@ -40,12 +51,16 @@ SPDX-License-Identifier: GPL-3.0-or-later
         <property name="primary">true</property>
       </object>
     </child>
+
+    <!-- View menu button -->
     <child type="end">
       <object class="GtkMenuButton" id="view_button">
         <property name="icon-name">view-reveal-symbolic</property>
         <property name="tooltip-text" translatable="yes">View</property>
       </object>
     </child>
+
+    <!-- Toggle sidebar button -->
     <child type="end">
       <object class="GtkToggleButton" id="flap_button">
         <property name="icon-name">sidebar-show-right-symbolic</property>
@@ -53,5 +68,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
         <property name="action-name">win.toggle-sidebar</property>
       </object>
     </child>
+
   </template>
 </interface>

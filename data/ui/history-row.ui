@@ -5,35 +5,48 @@ SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
 SPDX-License-Identifier: GPL-3.0-or-later
 -->
 
+<!-- Row for history list -->
 <interface>
   <template class="HistoryRow" parent="GtkListBoxRow">
+
+    <!-- History item row box -->
     <child>
       <object class="GtkBox">
         <property name="margin-top">6</property>
         <property name="margin-bottom">6</property>
         <property name="margin-start">3</property>
         <property name="spacing">12</property>
+
+        <!-- Labels box -->
         <child>
           <object class="GtkBox">
             <property name="orientation">vertical</property>
             <property name="hexpand">true</property>
             <property name="valign">center</property>
             <property name="spacing">3</property>
+
+            <!-- Item title label -->
             <child>
               <object class="GtkLabel" id="title_label">
                 <property name="halign">start</property>
                 <property name="ellipsize">end</property>
               </object>
             </child>
+
+            <!-- Item time/language box -->
             <child>
               <object class="GtkBox">
                 <property name="spacing">6</property>
+
+                <!-- Item time label -->
                 <child>
                   <object class="GtkLabel" id="time_label">
                     <property name="halign">start</property>
                     <property name="use-markup">true</property>
                   </object>
                 </child>
+
+                <!-- Item language label -->
                 <child>
                   <object class="GtkLabel" id="lang_label">
                     <property name="halign">start</property>
@@ -41,10 +54,14 @@ SPDX-License-Identifier: GPL-3.0-or-later
                     <property name="ellipsize">end</property>
                   </object>
                 </child>
+
               </object>
             </child>
+
           </object>
         </child>
+
+        <!-- Item remove button -->
         <child>
           <object class="GtkButton" id="remove_button">
             <property name="icon-name">window-close-symbolic</property>
@@ -58,5 +75,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
         </child>
       </object>
     </child>
+
   </template>
 </interface>

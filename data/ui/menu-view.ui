@@ -5,18 +5,25 @@ SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
 SPDX-License-Identifier: GPL-3.0-or-later
 -->
 
+<!-- View menu -->
 <interface>
   <menu id="view_menu">
+
+    <!-- Theme switcher section -->
     <section>
       <item>
         <attribute name="custom">theme_switcher</attribute>
       </item>
     </section>
+
+    <!-- Zoom level section -->
     <section>
       <item>
         <attribute name="custom">zoom_level</attribute>
       </item>
     </section>
+
+    <!-- Show/hide section -->
     <section>
       <attribute name="label" translatable="yes">Show</attribute>
       <item>
@@ -28,5 +35,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
         <attribute name="action">view.preview-popups</attribute>
       </item>
     </section>
+
   </menu>
 </interface>

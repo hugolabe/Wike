@@ -5,9 +5,12 @@ SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
 SPDX-License-Identifier: GPL-3.0-or-later
 -->
 
+<!-- Bookmarks box for sidebar -->
 <interface>
   <template class="BookmarksBox" parent="GtkBox">
     <property name="orientation">vertical</property>
+
+    <!-- Header -->
     <child>
       <object class="GtkBox">
         <property name="margin-start">6</property>
@@ -16,11 +19,15 @@ SPDX-License-Identifier: GPL-3.0-or-later
         <property name="margin-bottom">6</property>
         <property name="spacing">6</property>
         <property name="hexpand">false</property>
+
+        <!-- Bookmark list selector -->
         <child>
           <object class="GtkDropDown" id="booklists_dropdown">
             <property name="hexpand">true</property>
           </object>
         </child>
+
+        <!-- Add bookmark button -->
         <child>
           <object class="GtkButton" id="add_button">
             <property name="icon-name">bookmark-new-symbolic</property>
@@ -28,22 +35,31 @@ SPDX-License-Identifier: GPL-3.0-or-later
             <property name="action-name">win.add-bookmark</property>
           </object>
         </child>
+
+        <!-- Menu button -->
         <child>
           <object class="GtkMenuButton" id="menu_button">
             <property name="icon-name">view-more-symbolic</property>
           </object>
         </child>
+
       </object>
     </child>
+
+    <!-- Separator -->
     <child>
       <object class="GtkSeparator" id="bookmarks_separator">
         <property name="visible">false</property>
       </object>
     </child>
+
+    <!-- Bookmarks scroller -->
     <child>
       <object class="GtkScrolledWindow" id="bookmarks_scroller">
         <child>
           <object class="GtkViewport">
+
+            <!-- Bookmarks list -->
             <child>
               <object class="GtkListBox" id="bookmarks_list">
                 <property name="vexpand">true</property>
@@ -51,6 +67,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
                 <style>
                   <class name="navigation-sidebar"/>
                 </style>
+
+                <!-- Placeholder -->
                 <child type="placeholder">
                   <object class="AdwStatusPage">
                     <property name="title" translatable="yes">No Bookmarks</property>
@@ -63,11 +81,14 @@ SPDX-License-Identifier: GPL-3.0-or-later
                     </style>
                   </object>
                 </child>
+
               </object>
             </child>
+
           </object>
         </child>
       </object>
     </child>
+
   </template>
 </interface>

@@ -5,48 +5,71 @@ SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
 SPDX-License-Identifier: GPL-3.0-or-later
 -->
 
+<!-- Main window -->
 <interface>
   <template class="Window" parent="AdwApplicationWindow">
     <property name="title">Wike</property>
     <property name="icon-name">com.github.hugolabe.Wike</property>
+
+    <!-- Tab overview -->
     <property name="content">
       <object class="AdwTabOverview" id="taboverview">
         <property name="view">tabview</property>
         <property name="enable-new-tab">true</property>
+
+        <!-- Window content box -->
         <property name="child">
           <object class="GtkBox" id="window_box">
             <property name="orientation">vertical</property>
+
+            <!-- Toast overlay -->
             <child>
               <object class="AdwToastOverlay" id="toast_overlay">
+
+                <!-- Flap -->
                 <child>
                   <object class="AdwFlap" id="flap">
                     <property name="flap-position">end</property>
                     <property name="reveal-flap">false</property>
                     <property name="fold-policy">always</property>
+
+                    <!-- Flap content -->
                     <property name="content">
                       <object class="GtkBox">
                         <property name="orientation">vertical</property>
+
+                        <!-- Tab bar -->
                         <child>
                           <object class="AdwTabBar" id="tabbar">
                             <property name="view">tabview</property>
+
+                            <!-- Tab overview button -->
                             <property name="start-action-widget">
                               <object class="AdwTabButton">
                                 <property name="view">tabview</property>
                                 <property name="action-name">win.toggle-overview</property>
                               </object>
                             </property>
+
                           </object>
                         </child>
+
+                        <!-- Tab view -->
                         <child>
                           <object class="AdwTabView" id="tabview">
                           </object>
                         </child>
+
                       </object>
                     </property>
+
+                    <!-- Flap separator -->
                     <property name="separator">
                       <object class="GtkSeparator">
                       </object>
                     </property>
+
+                    <!-- Flap sidebar -->
                     <property name="flap">
                       <object class="GtkBox">
                         <property name="orientation">vertical</property>
@@ -54,12 +77,18 @@ SPDX-License-Identifier: GPL-3.0-or-later
                         <style>
                           <class name="background"/>
                         </style>
+
+                        <!-- Sidebar header -->
                         <child>
                           <object class="GtkBox">
                             <property name="hexpand">False</property>
+
+                            <!-- Revealer -->
                             <child>
                               <object class="GtkRevealer" id="flap_pin_revealer">
                                 <property name="transition-type">slide-left</property>
+
+                                <!-- Pin button -->
                                 <child>
                                   <object class="GtkToggleButton" id="flap_pin_button">
                                     <property name="icon-name">view-pin-symbolic</property>
@@ -76,8 +105,11 @@ SPDX-License-Identifier: GPL-3.0-or-later
                                     </style>
                                   </object>
                                 </child>
+
                               </object>
                             </child>
+
+                            <!-- Buttons box -->
                             <child>
                               <object class="GtkBox">
                                 <property name="margin-start">6</property>
@@ -87,6 +119,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
                                 <property name="spacing">6</property>
                                 <property name="hexpand">True</property>
                                 <property name="homogeneous">True</property>
+
+                                <!-- TOC button -->
                                 <child>
                                   <object class="GtkToggleButton" id="flap_toc_button">
                                     <property name="icon-name">view-list-symbolic</property>
@@ -96,6 +130,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
                                     </style>
                                   </object>
                                 </child>
+
+                                <!-- Langlinks button -->
                                 <child>
                                   <object class="GtkToggleButton" id="flap_langlinks_button">
                                     <property name="icon-name">language-symbolic</property>
@@ -106,6 +142,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
                                     </style>
                                   </object>
                                 </child>
+
+                                <!-- Bookmarks button -->
                                 <child>
                                   <object class="GtkToggleButton" id="flap_bookmarks_button">
                                     <property name="icon-name">user-bookmarks-symbolic</property>
@@ -116,6 +154,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
                                     </style>
                                   </object>
                                 </child>
+
+                                <!-- History button -->
                                 <child>
                                   <object class="GtkToggleButton" id="flap_history_button">
                                     <property name="icon-name">document-open-recent-symbolic</property>
@@ -126,27 +166,39 @@ SPDX-License-Identifier: GPL-3.0-or-later
                                     </style>
                                   </object>
                                 </child>
+
                               </object>
                             </child>
+
                           </object>
                         </child>
+
+                        <!-- Separator -->
                         <child>
                           <object class="GtkSeparator">
                           </object>
                         </child>
+
+                        <!-- Stack for sidebar content -->
                         <child>
                           <object class="GtkStack" id="flap_stack">
                           </object>
                         </child>
+
                       </object>
                     </property>
+
                   </object>
                 </child>
+
               </object>
             </child>
+
           </object>
         </property>
+
       </object>
     </property>
+
   </template>
 </interface>

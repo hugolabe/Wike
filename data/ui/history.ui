@@ -5,9 +5,12 @@ SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
 SPDX-License-Identifier: GPL-3.0-or-later
 -->
 
+<!-- History box for sidebar -->
 <interface>
   <template class="HistoryBox" parent="GtkBox">
     <property name="orientation">vertical</property>
+
+    <!-- Header -->
     <child>
       <object class="GtkBox">
         <property name="margin-start">6</property>
@@ -16,28 +19,39 @@ SPDX-License-Identifier: GPL-3.0-or-later
         <property name="margin-bottom">6</property>
         <property name="spacing">6</property>
         <property name="hexpand">false</property>
+
+        <!-- Filter selector by days -->
         <child>
           <object class="GtkDropDown" id="filter_dropdown">
             <property name="hexpand">true</property>
           </object>
         </child>
+
+        <!-- Clear history button -->
         <child>
           <object class="GtkButton" id="clear_button">
             <property name="icon-name">list-remove-all-symbolic</property>
             <property name="tooltip-text" translatable="yes">Clear History</property>
           </object>
         </child>
+
       </object>
     </child>
+
+    <!-- Separator -->
     <child>
       <object class="GtkSeparator" id="history_separator">
         <property name="visible">false</property>
       </object>
     </child>
+
+    <!-- History scroller -->
     <child>
       <object class="GtkScrolledWindow" id="history_scroller">
         <child>
           <object class="GtkViewport">
+
+            <!-- History list -->
             <child>
               <object class="GtkListBox" id="history_list">
                 <property name="vexpand">true</property>
@@ -45,6 +59,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
                 <style>
                   <class name="navigation-sidebar"/>
                 </style>
+
+                <!-- Placeholder -->
                 <child type="placeholder">
                   <object class="AdwStatusPage">
                     <property name="title" translatable="yes">Empty History</property>
@@ -57,11 +73,14 @@ SPDX-License-Identifier: GPL-3.0-or-later
                     </style>
                   </object>
                 </child>
+
               </object>
             </child>
+
           </object>
         </child>
       </object>
     </child>
+
   </template>
 </interface>

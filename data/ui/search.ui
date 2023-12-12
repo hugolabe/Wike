@@ -5,16 +5,21 @@ SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
 SPDX-License-Identifier: GPL-3.0-or-later
 -->
 
+<!-- Search box for headerbar -->
 <interface>
   <template class="SearchBox" parent="GtkBox">
     <style>
       <class name="linked"/>
     </style>
+
+    <!-- Search entry -->
     <child>
       <object class="GtkSearchEntry" id="search_entry">
         <property name="placeholder-text" translatable="yes">Search Wikipedia</property>
       </object>
     </child>
+
+    <!-- Search settings button -->
     <child>
       <object class="GtkMenuButton" id="settings_button">
         <property name="label">en</property>
@@ -22,5 +27,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
         <property name="width_request">60</property>
       </object>
     </child>
+
   </template>
 </interface>

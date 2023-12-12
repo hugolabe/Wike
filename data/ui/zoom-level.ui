@@ -5,10 +5,13 @@ SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
 SPDX-License-Identifier: GPL-3.0-or-later
 -->
 
+<!-- Zoom level for view menu -->
 <interface>
   <template class="ZoomLevel" parent="GtkBox">
     <property name="halign">center</property>
     <property name="spacing">6</property>
+
+    <!-- Zoom out button -->
     <child>
       <object class="GtkButton" id="zoom_out_button">
         <property name="icon-name">zoom-out-symbolic</property>
@@ -18,6 +21,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
         </style>
       </object>
     </child>
+
+    <!-- Zoom value button -->
     <child>
       <object class="GtkButton" id="zoom_value_button">
         <property name="width-request">100</property>
@@ -26,6 +31,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
         </style>
       </object>
     </child>
+
+    <!-- Zoom in button -->
     <child>
       <object class="GtkButton" id="zoom_in_button">
         <property name="icon-name">zoom-in-symbolic</property>
@@ -35,5 +42,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
         </style>
       </object>
     </child>
+
   </template>
 </interface>

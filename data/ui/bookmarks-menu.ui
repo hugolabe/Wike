@@ -5,14 +5,17 @@ SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
 SPDX-License-Identifier: GPL-3.0-or-later
 -->
 
+<!-- Bookmarks menu -->
 <interface>
   <menu id="bookmarks_menu">
+
     <section>
       <item>
         <attribute name="label" translatable="yes">Create New List…</attribute>
         <attribute name="action">bookmarks.create-list</attribute>
       </item>
     </section>
+
     <section>
       <item>
         <attribute name="label" translatable="yes">Rename List…</attribute>
@@ -23,5 +26,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
         <attribute name="action">bookmarks.clear-list</attribute>
       </item>
     </section>
+
   </menu>
 </interface>

@@ -5,8 +5,11 @@ SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
 SPDX-License-Identifier: GPL-3.0-or-later
 -->
 
+<!-- Main menu -->
 <interface>
   <menu id="main_menu">
+
+    <!-- Buttons section -->
     <section>
       <attribute name="display-hint">horizontal-buttons</attribute>
       <item>
@@ -20,6 +23,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
         <attribute name="action">win.search-text</attribute>
       </item>
     </section>
+
+    <!-- Go to section -->
     <section>
       <item>
         <attribute name="label" translatable="yes">Main Page</attribute>
@@ -30,6 +35,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
         <attribute name="action">win.random-article</attribute>
       </item>
     </section>
+
+    <!-- Share section -->
     <section>
       <item>
         <attribute name="label" translatable="yes">Open in Browser</attribute>
@@ -40,6 +47,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
         <attribute name="action">win.copy-link</attribute>
       </item>
     </section>
+
+    <!-- App section -->
     <section>
       <item>
         <attribute name="label" translatable="yes">Preferences</attribute>
@@ -54,5 +63,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
         <attribute name="action">app.about</attribute>
       </item>
     </section>
+
   </menu>
 </interface>

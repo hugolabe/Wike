@@ -5,16 +5,20 @@ SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
 SPDX-License-Identifier: GPL-3.0-or-later
 -->
 
+<!-- Theme switcher for view menu -->
 <interface>
   <template class="ThemeSwitcher" parent="GtkBox">
     <property name="margin-start">6</property>
     <property name="halign">center</property>
+
+    <!-- System button -->
     <child>
       <object class="GtkCheckButton" id="system_button">
         <style>
           <class name="theme-button"/>
           <class name="theme-button-system"/>
         </style>
+
         <child>
           <object class="GtkImage">
             <property name="icon-name">checkmark-symbolic</property>
@@ -22,8 +26,11 @@ SPDX-License-Identifier: GPL-3.0-or-later
             <property name="valign">center</property>
           </object>
         </child>
+
       </object>
     </child>
+
+    <!-- Light button -->
     <child>
       <object class="GtkCheckButton" id="light_button">
         <property name="group">system_button</property>
@@ -31,6 +38,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
           <class name="theme-button"/>
           <class name="theme-button-light"/>
         </style>
+
         <child>
           <object class="GtkImage">
             <property name="icon-name">checkmark-symbolic</property>
@@ -38,8 +46,11 @@ SPDX-License-Identifier: GPL-3.0-or-later
             <property name="valign">center</property>
           </object>
         </child>
+
       </object>
     </child>
+
+    <!-- Sepia button -->
     <child>
       <object class="GtkCheckButton" id="sepia_button">
         <property name="group">system_button</property>
@@ -47,6 +58,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
           <class name="theme-button"/>
           <class name="theme-button-sepia"/>
         </style>
+
         <child>
           <object class="GtkImage">
             <property name="icon-name">checkmark-symbolic</property>
@@ -54,8 +66,11 @@ SPDX-License-Identifier: GPL-3.0-or-later
             <property name="valign">center</property>
           </object>
         </child>
+
       </object>
     </child>
+
+    <!-- Dark button -->
     <child>
       <object class="GtkCheckButton" id="dark_button">
         <property name="group">system_button</property>
@@ -63,6 +78,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
           <class name="theme-button"/>
           <class name="theme-button-dark"/>
         </style>
+
         <child>
           <object class="GtkImage">
             <property name="icon-name">checkmark-symbolic</property>
@@ -70,7 +86,9 @@ SPDX-License-Identifier: GPL-3.0-or-later
             <property name="valign">center</property>
           </object>
         </child>
+
       </object>
     </child>
+
   </template>
 </interface>

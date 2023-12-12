@@ -5,22 +5,29 @@ SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
 SPDX-License-Identifier: GPL-3.0-or-later
 -->
 
+<!-- Actionbar for mobile mode -->
 <interface>
   <template class="ActionBar" parent="GtkRevealer">
     <child>
       <object class="GtkActionBar">
+
+        <!-- Prev navigation button -->
         <child type="start">
           <object class="GtkButton" id="prev_button">
             <property name="icon-name">go-previous-symbolic</property>
             <property name="action-name">win.prev-page</property>
           </object>
         </child>
+
+        <!-- Next navigation button -->
         <child type="start">
           <object class="GtkButton" id="next_button">
             <property name="icon-name">go-next-symbolic</property>
             <property name="action-name">win.next-page</property>
           </object>
         </child>
+
+        <!-- Toggle sidebar button -->
         <child type="end">
           <object class="GtkToggleButton" id="flap_button">
             <property name="icon-name">sidebar-show-right-symbolic</property>
@@ -28,12 +35,15 @@ SPDX-License-Identifier: GPL-3.0-or-later
             <property name="action-name">win.toggle-sidebar</property>
           </object>
         </child>
+
+        <!-- View menu button -->
         <child type="end">
           <object class="GtkMenuButton" id="view_button">
             <property name="icon-name">view-reveal-symbolic</property>
             <property name="tooltip-text" translatable="yes">View</property>
           </object>
         </child>
+
       </object>
     </child>
   </template>

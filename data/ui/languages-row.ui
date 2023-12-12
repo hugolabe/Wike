@@ -5,12 +5,17 @@ SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
 SPDX-License-Identifier: GPL-3.0-or-later
 -->
 
+<!-- Row for languages window -->
 <interface>
   <template class="LanguagesRow" parent="GtkListBoxRow">
+
+    <!-- Language row box -->
     <child>
       <object class="GtkBox">
         <property name="margin_top">2</property>
         <property name="margin_bottom">2</property>
+
+        <!-- Language name label -->
         <child>
           <object class="GtkLabel" id="name_label">
             <property name="margin-start">12</property>
@@ -20,6 +25,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
             <property name="hexpand">true</property>
           </object>
         </child>
+
+        <!-- Language id label -->
         <child>
           <object class="GtkLabel" id="id_label">
             <property name="margin-start">6</property>
@@ -28,6 +35,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
             <property name="valign">center</property>
           </object>
         </child>
+
+        <!-- Language selected check button -->
         <child>
           <object class="GtkCheckButton" id="lang_check">
             <property name="margin-start">12</property>
@@ -36,7 +45,9 @@ SPDX-License-Identifier: GPL-3.0-or-later
             <property name="valign">center</property>
           </object>
         </child>
+
       </object>
     </child>
+
   </template>
 </interface>

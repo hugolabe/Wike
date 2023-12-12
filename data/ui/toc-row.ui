@@ -5,8 +5,11 @@ SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
 SPDX-License-Identifier: GPL-3.0-or-later
 -->
 
+<!-- Row for TOC list -->
 <interface>
   <template class="TocBoxRow" parent="GtkListBoxRow">
+
+    <!-- Article section label -->
     <child>
       <object class="GtkLabel" id="section_label">
         <property name="margin-start">3</property>
@@ -16,5 +19,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
         <property name="ellipsize">end</property>
       </object>
     </child>
+
   </template>
 </interface>

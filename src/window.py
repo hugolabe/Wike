@@ -271,9 +271,8 @@ class Window(Adw.ApplicationWindow):
   # Close current tab
 
   def _close_tab_cb(self, action, parameter):
-    if self.tabview.get_n_pages() > 1:
-      tabpage = self.tabview.get_selected_page()
-      self.tabview.close_page(tabpage)
+    tabpage = self.tabview.get_selected_page()
+    self.tabview.close_page(tabpage)
 
   # Go to next tab
 
@@ -328,15 +327,17 @@ class Window(Adw.ApplicationWindow):
   # On tab closed event destroy wikiview and confirm
 
   def _tabview_close_page_cb(self, tabview, tabpage):
+    page = tabpage.get_child()
+    wikiview = page.wikiview
+
     if self.tabview.get_n_pages() > 1:
-      page = tabpage.get_child()
-      wikiview = page.wikiview
       page.view_stack.remove(wikiview)
       wikiview.run_dispose()
       tabview.close_page_finish(tabpage, True)
     else:
       if self.taboverview.get_open():
         self.taboverview.set_open(False)
+      wikiview.load_message('blank')
       tabview.close_page_finish(tabpage, False)
 
     return True

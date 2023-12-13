@@ -5,65 +5,61 @@ SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
 SPDX-License-Identifier: GPL-3.0-or-later
 -->
 
-<!-- Language links box for sidebar -->
+<!-- Language links panel for sidebar -->
 <interface>
-  <template class="LanglinksBox" parent="GtkBox">
-    <property name="orientation">vertical</property>
-
-    <!-- Filter entry -->
+  <template class="LanglinksPanel" parent="AdwBin">
     <child>
-      <object class="GtkSearchEntry" id="filter_entry">
-        <property name="margin-start">6</property>
-        <property name="margin-end">6</property>
-        <property name="margin-top">6</property>
-        <property name="margin-bottom">6</property>
-        <property name="placeholder-text" translatable="yes">Filter languages</property>
-      </object>
-    </child>
+      <object class="AdwToolbarView">
 
-    <!-- Separator -->
-    <child>
-      <object class="GtkSeparator" id="langlinks_separator">
-        <property name="visible">false</property>
-      </object>
-    </child>
+        <!-- Filter entry -->
+        <child type="top">
+          <object class="GtkSearchEntry" id="filter_entry">
+            <property name="margin-start">6</property>
+            <property name="margin-end">6</property>
+            <property name="margin-top">6</property>
+            <property name="margin-bottom">6</property>
+            <property name="placeholder-text" translatable="yes">Filter languages</property>
+          </object>
+        </child>
 
-    <!-- Language links scroller -->
-    <child>
-      <object class="GtkScrolledWindow" id="langlinks_scroller">
-        <child>
-          <object class="GtkViewport">
-
-            <!-- Language links list -->
+        <!-- Language links scroller -->
+        <property name="content">
+          <object class="GtkScrolledWindow">
             <child>
-              <object class="GtkListBox" id="langlinks_list">
-                <property name="vexpand">true</property>
-                <property name="selection-mode">none</property>
-                <style>
-                  <class name="navigation-sidebar"/>
-                </style>
+              <object class="GtkViewport">
 
-                <!-- Placeholder -->
-                <child type="placeholder">
-                  <object class="AdwStatusPage">
-                    <property name="title" translatable="yes">No Languages</property>
-                    <property name="description" translatable="yes">This page is not available in other languages</property>
-                    <property name="icon-name">language-symbolic</property>
-                    <property name="margin-start">50</property>
-                    <property name="margin-end">50</property>
+                <!-- Language links list -->
+                <child>
+                  <object class="GtkListBox" id="langlinks_list">
+                    <property name="vexpand">true</property>
+                    <property name="selection-mode">none</property>
                     <style>
-                      <class name="compact"/>
+                      <class name="navigation-sidebar"/>
                     </style>
+
+                    <!-- Placeholder -->
+                    <child type="placeholder">
+                      <object class="AdwStatusPage">
+                        <property name="title" translatable="yes">No Languages</property>
+                        <property name="description" translatable="yes">This page is not available in other languages</property>
+                        <property name="icon-name">language-symbolic</property>
+                        <property name="margin-start">50</property>
+                        <property name="margin-end">50</property>
+                        <style>
+                          <class name="compact"/>
+                        </style>
+                      </object>
+                    </child>
+
                   </object>
                 </child>
-
-              </object>
-            </child>
 
           </object>
         </child>
       </object>
-    </child>
+    </property>
 
+      </object>
+    </child>
   </template>
 </interface>

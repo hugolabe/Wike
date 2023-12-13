@@ -123,7 +123,7 @@ class LanguagesWindow(Adw.Window):
 
       window = self.get_transient_for()
       window.headerbar.search_box.settings_popover.populate_list()
-      window.langlinks_box.populate(window.page.wikiview.langlinks)
+      window.langlinks_panel.populate(window.page.wikiview.langlinks)
 
     return False
 

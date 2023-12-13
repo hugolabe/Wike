@@ -11,7 +11,7 @@ from wike.data import settings
 from wike.bookmarks import BookmarksBox
 from wike.header import HeaderBar, ActionBar
 from wike.history import HistoryPanel
-from wike.langlinks import LanglinksBox
+from wike.langlinks import LanglinksPanel
 from wike.page import PageBox
 from wike.toc import TocPanel
 
@@ -65,8 +65,8 @@ class Window(Adw.ApplicationWindow):
     self.toc_panel = TocPanel(self)
     toc_stack_page = self.flap_stack.add_named(self.toc_panel, 'toc')
     
-    self.langlinks_box = LanglinksBox(self)
-    langlinks_stack_page = self.flap_stack.add_named(self.langlinks_box, 'langlinks')
+    self.langlinks_panel = LanglinksPanel(self)
+    langlinks_stack_page = self.flap_stack.add_named(self.langlinks_panel, 'langlinks')
     
     self.bookmarks_box = BookmarksBox(self)
     bookmarks_stack_page = self.flap_stack.add_named(self.bookmarks_box, 'bookmarks')
@@ -321,7 +321,7 @@ class Window(Adw.ApplicationWindow):
       self.refresh_nav_actions(self.page.wikiview)
       self.refresh_menu_actions(self.page.wikiview.is_local())
       self.toc_panel.populate(self.page.wikiview.title, self.page.wikiview.sections)
-      self.langlinks_box.populate(self.page.wikiview.langlinks)
+      self.langlinks_panel.populate(self.page.wikiview.langlinks)
       self.bookmarks_box.refresh_buttons()
 
   # On tab closed event destroy wikiview and confirm

@@ -87,7 +87,7 @@ class PageBox(Gtk.Box):
         tabpage.set_title(wikiview.title)
         if tabpage.get_selected():
           self._window.toc_panel.populate(wikiview.title, wikiview.sections)
-          self._window.langlinks_box.populate(wikiview.langlinks)
+          self._window.langlinks_panel.populate(wikiview.langlinks)
         self._window.bookmarks_box.refresh_buttons()
         self._window.refresh_menu_actions(wikiview.is_local())
 

@@ -10,17 +10,15 @@ from gi.repository import GLib, Gio, Gtk, Adw
 from wike.data import settings, languages
 
 
-# Box for language links in sidebar
+# Language links panel for sidebar
 
 @Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/langlinks.ui')
-class LanglinksBox(Gtk.Box):
+class LanglinksPanel(Adw.Bin):
 
-  __gtype_name__ = 'LanglinksBox'
+  __gtype_name__ = 'LanglinksPanel'
 
   filter_entry = Gtk.Template.Child()
   langlinks_list = Gtk.Template.Child()
-  langlinks_scroller = Gtk.Template.Child()
-  langlinks_separator = Gtk.Template.Child()
 
   # Initialize widgets and connect signals
 
@@ -36,7 +34,6 @@ class LanglinksBox(Gtk.Box):
 
     self.filter_entry.connect('search-changed', self._filter_entry_changed_cb)
     self.langlinks_list.connect('row-activated', self._list_activated_cb)
-    self.langlinks_scroller.get_vadjustment().connect('value-changed', self._langlinks_scrolled_cb)
     
   # Filter list for entry content
 
@@ -63,7 +60,6 @@ class LanglinksBox(Gtk.Box):
   # Populate langlinks list
 
   def populate(self, langlinks):
-    self.langlinks_scroller.get_vadjustment().set_value(0)
 
     while True:
       row = self.langlinks_list.get_row_at_index(0)
@@ -95,14 +91,6 @@ class LanglinksBox(Gtk.Box):
       self._window.flap.set_reveal_flap(False)
 
     self._window.page.wikiview.load_wiki(row.uri)
-
-  # Show/hide separator on scroll
-
-  def _langlinks_scrolled_cb(self, adjustment):
-    if adjustment.get_value() > 0:
-      self.langlinks_separator.set_visible(True)
-    else:
-      self.langlinks_separator.set_visible(False)
 
 
 # Row on langlinks list

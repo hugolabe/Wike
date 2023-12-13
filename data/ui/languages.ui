@@ -9,79 +9,89 @@ SPDX-License-Identifier: GPL-3.0-or-later
 <interface>
   <template class="LanguagesWindow" parent="AdwWindow">
     <property name="title" translatable="yes">Pick your Languages</property>
-    <property name="default-height">560</property>
+    <property name="default-height">475</property>
     <property name="default-width">420</property>
     <property name="modal">true</property>
 
     <!-- Window content -->
     <property name="content">
-      <object class="GtkBox">
-        <property name="orientation">vertical</property>
+      <object class="AdwToolbarView">
 
-        <!-- Header -->
-        <child>
-          <object class="GtkHeaderBar">
-            <style>
-              <class name="flat"/>
-            </style>
+        <!-- Headerbar -->
+        <child type="top">
+          <object class="AdwHeaderBar">
+
+            <!-- Search languages button -->
+            <child type="start">
+              <object class="GtkToggleButton" id="search_button">
+                <property name="icon-name">system-search-symbolic</property>
+                <property name="tooltip-text" translatable="yes">Filter Languages</property>
+                <property name="active" bind-source="search_bar" bind-property="search-mode-enabled" bind-flags="sync-create"/>
+              </object>
+            </child>
+
           </object>
         </child>
 
-        <!-- Content box -->
-        <child>
-          <object class="GtkBox">
-            <property name="orientation">vertical</property>
-            <property name="margin-start">12</property>
-            <property name="margin-end">12</property>
-            <property name="margin-bottom">12</property>
-            <property name="spacing">12</property>
+        <!-- Filter entry -->
+        <child type="top">
+          <object class="GtkSearchBar" id="search_bar">
+            <property name="search-mode-enabled" bind-source="search_button" bind-property="active" bind-flags="sync-create"/>
 
-            <!-- Filter entry -->
             <child>
               <object class="GtkSearchEntry" id="languages_entry">
                 <property name="placeholder_text" translatable="yes">Filter languages</property>
+                <property name="max-width-chars">25</property>
               </object>
             </child>
 
-            <!-- Languages scroller -->
+          </object>
+        </child>
+
+        <!-- Languages scroller -->
+        <property name="content">
+          <object class="GtkScrolledWindow">
             <child>
-              <object class="GtkScrolledWindow">
-                <property name="vexpand">true</property>
-                <property name="has-frame">true</property>
+              <object class="GtkViewport">
+                <property name="margin-start">6</property>
+                <property name="margin-end">6</property>
+
+                <!-- Languages list -->
                 <child>
-                  <object class="GtkViewport">
-
-                    <!-- Languages list -->
-                    <child>
-                      <object class="GtkListBox" id="languages_list">
-                      </object>
-                    </child>
-
+                  <object class="GtkListBox" id="languages_list">
+                    <property name="selection-mode">none</property>
+                    <style>
+                      <class name="navigation-sidebar"/>
+                    </style>
                   </object>
                 </child>
+
+              </object>
+            </child>
+          </object>
+        </property>
+
+        <!-- Buttons box -->
+        <child type="bottom">
+          <object class="GtkBox">
+            <property name="margin-start">6</property>
+            <property name="margin-end">6</property>
+            <property name="margin-top">6</property>
+            <property name="margin-bottom">6</property>
+            <property name="spacing">6</property>
+            <property name="homogeneous">true</property>
+
+            <!-- Select all languages button -->
+            <child>
+              <object class="GtkButton" id="select_all_button">
+                <property name="label" translatable="yes">Select All</property>
               </object>
             </child>
 
-            <!-- Buttons box -->
+            <!-- Select none languages button -->
             <child>
-              <object class="GtkBox">
-                <property name="spacing">12</property>
-                <property name="homogeneous">true</property>
-
-                <!-- Select all languages button -->
-                <child>
-                  <object class="GtkButton" id="select_all_button">
-                    <property name="label" translatable="yes">Select All</property>
-                  </object>
-                </child>
-
-                <!-- Select none languages button -->
-                <child>
-                  <object class="GtkButton" id="select_none_button">
-                    <property name="label" translatable="yes">Select None</property>
-                  </object>
-                </child>
-
+              <object class="GtkButton" id="select_none_button">
+                <property name="label" translatable="yes">Select None</property>
               </object>
             </child>
 

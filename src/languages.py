@@ -15,6 +15,7 @@ class LanguagesWindow(Adw.Window):
 
   __gtype_name__ = 'LanguagesWindow'
 
+  search_bar = Gtk.Template.Child()
   languages_entry = Gtk.Template.Child()
   languages_list = Gtk.Template.Child()
   select_all_button = Gtk.Template.Child()
@@ -27,6 +28,7 @@ class LanguagesWindow(Adw.Window):
 
     self._languages_changed = False
     
+    self.search_bar.set_key_capture_widget(self)
     self.languages_list.set_filter_func(self._filter_list)
     self._populate()
 

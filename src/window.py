@@ -13,7 +13,7 @@ from wike.header import HeaderBar, ActionBar
 from wike.history import HistoryPanel
 from wike.langlinks import LanglinksBox
 from wike.page import PageBox
-from wike.toc import TocBox
+from wike.toc import TocPanel
 
 
 # Main window with a flap a headerbar and an actionbar
@@ -62,8 +62,8 @@ class Window(Adw.ApplicationWindow):
     self.headerbar = HeaderBar(self)
     self.window_box.prepend(self.headerbar)
 
-    self.toc_box = TocBox(self)
-    toc_stack_page = self.flap_stack.add_named(self.toc_box, 'toc')
+    self.toc_panel = TocPanel(self)
+    toc_stack_page = self.flap_stack.add_named(self.toc_panel, 'toc')
     
     self.langlinks_box = LanglinksBox(self)
     langlinks_stack_page = self.flap_stack.add_named(self.langlinks_box, 'langlinks')
@@ -320,7 +320,7 @@ class Window(Adw.ApplicationWindow):
     else:
       self.refresh_nav_actions(self.page.wikiview)
       self.refresh_menu_actions(self.page.wikiview.is_local())
-      self.toc_box.populate(self.page.wikiview.title, self.page.wikiview.sections)
+      self.toc_panel.populate(self.page.wikiview.title, self.page.wikiview.sections)
       self.langlinks_box.populate(self.page.wikiview.langlinks)
       self.bookmarks_box.refresh_buttons()
 

@@ -5,69 +5,65 @@ SPDX-FileCopyrightText: 2021-23 Hugo Olabera <hugolabe@gmail.com>
 SPDX-License-Identifier: GPL-3.0-or-later
 -->
 
-<!-- TOC box for sidebar -->
+<!-- TOC panel for sidebar -->
 <interface>
-  <template class="TocBox" parent="GtkBox">
-    <property name="orientation">vertical</property>
-
-    <!-- Article title label -->
+  <template class="TocPanel" parent="AdwBin">
     <child>
-      <object class="GtkLabel" id="title_label">
-        <property name="margin-start">15</property>
-        <property name="margin-end">15</property>
-        <property name="margin-top">12</property>
-        <property name="margin-bottom">9</property>
-        <property name="xalign">0</property>
-        <property name="width-chars">30</property>
-        <property name="max-width-chars">30</property>
-        <property name="ellipsize">end</property>
-        <property name="use-markup">true</property>
-      </object>
-    </child>
+      <object class="AdwToolbarView">
 
-    <!-- Separator -->
-    <child>
-      <object class="GtkSeparator" id="toc_separator">
-        <property name="visible">false</property>
-      </object>
-    </child>
+        <!-- Article title label -->
+        <child type="top">
+          <object class="GtkLabel" id="title_label">
+            <property name="margin-start">15</property>
+            <property name="margin-end">15</property>
+            <property name="margin-top">12</property>
+            <property name="margin-bottom">9</property>
+            <property name="xalign">0</property>
+            <property name="width-chars">30</property>
+            <property name="max-width-chars">30</property>
+            <property name="ellipsize">end</property>
+            <property name="use-markup">true</property>
+          </object>
+        </child>
 
-    <!-- TOC scroller -->
-    <child>
-      <object class="GtkScrolledWindow" id ="toc_scroller">
-        <child>
-          <object class="GtkViewport">
-
-            <!-- TOC list -->
+        <!-- TOC scroller -->
+        <property name="content">
+          <object class="GtkScrolledWindow">
             <child>
-              <object class="GtkListBox" id="toc_list">
-                <property name="vexpand">true</property>
-                <property name="selection-mode">none</property>
-                <style>
-                  <class name="navigation-sidebar"/>
-                </style>
+              <object class="GtkViewport">
 
-                <!-- Placeholder -->
-                <child type="placeholder">
-                  <object class="AdwStatusPage">
-                    <property name="title" translatable="yes">No Contents</property>
-                    <property name="description" translatable="yes">There is no table of contents for this page</property>
-                    <property name="icon-name">view-list-symbolic</property>
-                    <property name="margin-start">50</property>
-                    <property name="margin-end">50</property>
+                <!-- TOC list -->
+                <child>
+                  <object class="GtkListBox" id="toc_list">
+                    <property name="vexpand">true</property>
+                    <property name="selection-mode">none</property>
                     <style>
-                      <class name="compact"/>
+                      <class name="navigation-sidebar"/>
                     </style>
+
+                    <!-- Placeholder -->
+                    <child type="placeholder">
+                      <object class="AdwStatusPage">
+                        <property name="title" translatable="yes">No Contents</property>
+                        <property name="description" translatable="yes">There is no table of contents for this page</property>
+                        <property name="icon-name">view-list-symbolic</property>
+                        <property name="margin-start">50</property>
+                        <property name="margin-end">50</property>
+                        <style>
+                          <class name="compact"/>
+                        </style>
+                      </object>
+                    </child>
+
                   </object>
                 </child>
 
               </object>
             </child>
-
           </object>
-        </child>
+        </property>
+
       </object>
     </child>
-
   </template>
 </interface>

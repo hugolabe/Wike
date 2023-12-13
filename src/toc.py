@@ -8,17 +8,15 @@ import json, urllib.parse
 from gi.repository import GLib, Gtk, Adw
 
 
-# Box for toc (table of contents) in sidebar
+# TOC (table of contents) panel for sidebar
 
 @Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/toc.ui')
-class TocBox(Gtk.Box):
+class TocPanel(Adw.Bin):
 
-  __gtype_name__ = 'TocBox'
+  __gtype_name__ = 'TocPanel'
 
   title_label = Gtk.Template.Child()
   toc_list = Gtk.Template.Child()
-  toc_scroller = Gtk.Template.Child()
-  toc_separator = Gtk.Template.Child()
   
   # Initialize widgets and connect signals
 
@@ -28,13 +26,11 @@ class TocBox(Gtk.Box):
     self._window = window
     
     self.toc_list.connect('row-activated', self._list_activated_cb)
-    self.toc_scroller.get_vadjustment().connect('value-changed', self._toc_scrolled_cb)
     
   # Populate toc list
 
   def populate(self, title, sections):
-    self.toc_scroller.get_vadjustment().set_value(0)
-    self.title_label.set_markup('<big>' + GLib.markup_escape_text(title, -1) + '</big>')
+    self.title_label.set_markup('<b>' + GLib.markup_escape_text(title, -1) + '</b>')
 
     while True:
       row = self.toc_list.get_row_at_index(0)
@@ -58,14 +54,6 @@ class TocBox(Gtk.Box):
       self._window.flap.set_reveal_flap(False)
 
     self._window.page.wikiview.load_section(row.anchor)
-
-  # Show/hide separator on scroll
-
-  def _toc_scrolled_cb(self, adjustment):
-    if adjustment.get_value() > 0:
-      self.toc_separator.set_visible(True)
-    else:
-      self.toc_separator.set_visible(False)
 
 
 # Section row in toc list

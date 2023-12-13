@@ -10,18 +10,16 @@ from gi.repository import GObject, Gio, Gtk, Adw
 from wike.data import settings, languages, history
 
 
-# Box for history in sidebar
+# History panel for sidebar
 
 @Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/history.ui')
-class HistoryBox(Gtk.Box):
+class HistoryPanel(Adw.Bin):
 
-  __gtype_name__ = 'HistoryBox'
+  __gtype_name__ = 'HistoryPanel'
 
   filter_dropdown = Gtk.Template.Child()
   clear_button = Gtk.Template.Child()
   history_list = Gtk.Template.Child()
-  history_scroller = Gtk.Template.Child()
-  history_separator = Gtk.Template.Child()
 
   # Initialize widgets and connect signals and bindings
 
@@ -50,7 +48,6 @@ class HistoryBox(Gtk.Box):
 
     self.clear_button.connect('clicked', self._clear_button_cb)
     self.history_list.connect('row-activated', self._list_activated_cb)
-    self.history_scroller.get_vadjustment().connect('value-changed', self._history_scrolled_cb)
 
   # Setup filter item with a label
 
@@ -70,7 +67,6 @@ class HistoryBox(Gtk.Box):
 
   def _populate(self):
     self._clear_list()
-    self.history_scroller.get_vadjustment().set_value(0)
 
     history_filter = self.filter_dropdown.get_selected_item()
     filter_days = history_filter.days
@@ -176,14 +172,6 @@ class HistoryBox(Gtk.Box):
     if date_deleted:
       date_row = self.history_list.get_row_at_index(row_index-1)
       self.history_list.remove(date_row)
-
-  # Show/hide separator on scroll
-
-  def _history_scrolled_cb(self, adjustment):
-    if adjustment.get_value() > 0:
-      self.history_separator.set_visible(True)
-    else:
-      self.history_separator.set_visible(False)
 
 
 # This object represent an history filter in dropdown

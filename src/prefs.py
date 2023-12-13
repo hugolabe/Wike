@@ -53,7 +53,7 @@ class PrefsWindow(Adw.PreferencesWindow):
   def _clear_history_response_cb(self, dialog, response):
     if response == 'clear':
       window = self.get_transient_for()
-      window.history_box.clear_history()
+      window.history_panel.clear_history()
 
   # Show clear personal data dialog
 

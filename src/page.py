@@ -97,7 +97,7 @@ class PageBox(Gtk.Box):
           self._show_status_page(wikiview.get_uri())
         if settings.get_boolean('keep-history'):
           if not self._is_main and not wikiview.is_local():
-            self._window.history_box.add_item(wikiview.get_base_uri(), wikiview.title, wikiview.get_lang())
+            self._window.history_panel.add_item(wikiview.get_base_uri(), wikiview.title, wikiview.get_lang())
 
   # If wikiview is local show status page
 

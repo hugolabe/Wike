@@ -10,7 +10,7 @@ from gi.repository import GLib, GObject, Gio, Gdk, Gtk, Adw, WebKit
 from wike.data import settings
 from wike.bookmarks import BookmarksBox
 from wike.header import HeaderBar, ActionBar
-from wike.history import HistoryBox
+from wike.history import HistoryPanel
 from wike.langlinks import LanglinksBox
 from wike.page import PageBox
 from wike.toc import TocBox
@@ -71,8 +71,8 @@ class Window(Adw.ApplicationWindow):
     self.bookmarks_box = BookmarksBox(self)
     bookmarks_stack_page = self.flap_stack.add_named(self.bookmarks_box, 'bookmarks')
     
-    self.history_box = HistoryBox(self)
-    history_stack_page = self.flap_stack.add_named(self.history_box, 'history')
+    self.history_panel = HistoryPanel(self)
+    history_stack_page = self.flap_stack.add_named(self.history_panel, 'history')
 
     flap_page = settings.get_string('flap-page')
     match flap_page:

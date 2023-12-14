@@ -88,7 +88,7 @@ class PageBox(Gtk.Box):
         if tabpage.get_selected():
           self._window.toc_panel.populate(wikiview.title, wikiview.sections)
           self._window.langlinks_panel.populate(wikiview.langlinks)
-        self._window.bookmarks_box.refresh_buttons()
+        self._window.bookmarks_panel.refresh_buttons()
         self._window.refresh_menu_actions(wikiview.is_local())
 
       case WebKit.LoadEvent.FINISHED:
@@ -139,7 +139,7 @@ class PageBox(Gtk.Box):
   # On webview event add new bookmark
 
   def _wikiview_add_bookmark_cb(self, wikiview, uri, title, lang):
-    if self._window.bookmarks_box.add_bookmark(uri, title, lang):
+    if self._window.bookmarks_panel.add_bookmark(uri, title, lang):
       message = _('Bookmark added: ') + title
       self._window.send_notification(message)
 

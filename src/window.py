@@ -8,7 +8,7 @@ import os
 from gi.repository import GLib, GObject, Gio, Gdk, Gtk, Adw, WebKit
 
 from wike.data import settings
-from wike.bookmarks import BookmarksBox
+from wike.bookmarks import BookmarksPanel
 from wike.header import HeaderBar, ActionBar
 from wike.history import HistoryPanel
 from wike.langlinks import LanglinksPanel
@@ -68,8 +68,8 @@ class Window(Adw.ApplicationWindow):
     self.langlinks_panel = LanglinksPanel(self)
     langlinks_stack_page = self.flap_stack.add_named(self.langlinks_panel, 'langlinks')
     
-    self.bookmarks_box = BookmarksBox(self)
-    bookmarks_stack_page = self.flap_stack.add_named(self.bookmarks_box, 'bookmarks')
+    self.bookmarks_panel = BookmarksPanel(self)
+    bookmarks_stack_page = self.flap_stack.add_named(self.bookmarks_panel, 'bookmarks')
     
     self.history_panel = HistoryPanel(self)
     history_stack_page = self.flap_stack.add_named(self.history_panel, 'history')
@@ -322,7 +322,7 @@ class Window(Adw.ApplicationWindow):
       self.refresh_menu_actions(self.page.wikiview.is_local())
       self.toc_panel.populate(self.page.wikiview.title, self.page.wikiview.sections)
       self.langlinks_panel.populate(self.page.wikiview.langlinks)
-      self.bookmarks_box.refresh_buttons()
+      self.bookmarks_panel.refresh_buttons()
 
   # On tab closed event destroy wikiview and confirm
 
@@ -378,7 +378,7 @@ class Window(Adw.ApplicationWindow):
       uri = self.page.wikiview.get_base_uri()
       title = self.page.wikiview.title
       lang = self.page.wikiview.get_lang()
-      if self.bookmarks_box.add_bookmark(uri, title, lang):
+      if self.bookmarks_panel.add_bookmark(uri, title, lang):
         message = _('Bookmark added: ') + title
         self.send_notification(message)
 

@@ -11,15 +11,13 @@ from wike.data import languages, bookmarks
 # Box bookmarks in sidebar
 
 @Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/bookmarks.ui')
-class BookmarksBox(Gtk.Box):
+class BookmarksPanel(Adw.Bin):
 
-  __gtype_name__ = 'BookmarksBox'
+  __gtype_name__ = 'BookmarksPanel'
 
   booklists_dropdown = Gtk.Template.Child()
   menu_button = Gtk.Template.Child()
   bookmarks_list = Gtk.Template.Child()
-  bookmarks_scroller = Gtk.Template.Child()
-  bookmarks_separator = Gtk.Template.Child()
 
   # Initialize widgets and connect signals
 
@@ -55,7 +53,6 @@ class BookmarksBox(Gtk.Box):
     self.booklists_dropdown.connect('notify::selected', self._booklists_dropdown_selected_cb)
     self.booklists_model.connect('items-changed', self._booklists_model_changed_cb)
     self.bookmarks_list.connect('row-activated', self._list_activated_cb)
-    self.bookmarks_scroller.get_vadjustment().connect('value-changed', self._bookmarks_scrolled_cb)
 
   # Set actions for bookmarks menu
 
@@ -342,14 +339,6 @@ class BookmarksBox(Gtk.Box):
 
     self.refresh_buttons()
 
-  # Show/hide separator on scroll
-
-  def _bookmarks_scrolled_cb(self, adjustment):
-    if adjustment.get_value() > 0:
-      self.bookmarks_separator.set_visible(True)
-    else:
-      self.bookmarks_separator.set_visible(False)
-
 
 # This object represent a bookmarks list in dropdown
 
@@ -405,7 +394,7 @@ class BookmarksMenuPopover(Gtk.PopoverMenu):
 
   # Set menu model and connect signals
 
-  def __init__(self, bookmarks_box):
+  def __init__(self, bookmarks_panel):
     super().__init__()
 
     builder_menu = Gtk.Builder()
@@ -413,14 +402,14 @@ class BookmarksMenuPopover(Gtk.PopoverMenu):
     menu = builder_menu.get_object('bookmarks_menu')
     self.set_menu_model(menu)
 
-    self.connect('show', self._popover_show_cb, bookmarks_box)
+    self.connect('show', self._popover_show_cb, bookmarks_panel)
 
   # Enable or disable menu items on popover show
 
-  def _popover_show_cb(self, popover, bookmarks_box):
-    rename_list_action = bookmarks_box.actions_group.lookup_action('rename-list')
+  def _popover_show_cb(self, popover, bookmarks_panel):
+    rename_list_action = bookmarks_panel.actions_group.lookup_action('rename-list')
 
-    if bookmarks_box.booklists_dropdown.get_selected() == 0:
+    if bookmarks_panel.booklists_dropdown.get_selected() == 0:
       rename_list_action.set_enabled(False)
     else:
       rename_list_action.set_enabled(True)

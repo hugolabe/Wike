@@ -7,19 +7,19 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: ta\n"
 
-#: ../src/view.py:248
+#: ../src/view.py:253
 msgid "Article not found"
 msgstr "கட்டுரை கிடைக்கவில்லை"
 
-#: ../src/page.py:100
+#: ../src/page.py:108
 msgid "Can't find any results for requested query"
 msgstr "கோரப்பட்ட வினவலுக்கு எந்த முடிவும் கிடைக்கவில்லை"
 
-#: ../src/view.py:250
+#: ../src/view.py:255
 msgid "Can't access Wikipedia"
 msgstr "விக்கிபீடியாவை அணுக முடியவில்லை"
 
-#: ../src/page.py:108
+#: ../src/page.py:116
 msgid "Check your Internet connection and try again"
 msgstr "உங்கள் இணைய இணைப்பைச் சரிபார்த்து மீண்டும் முயலவும்"
 
@@ -35,7 +35,7 @@ msgstr "பட்டியலில் உள்ள அனைத்து பு
 msgid "Clear List"
 msgstr "பட்டியலை அழி"
 
-#: ../data/ui/search-settings.ui:69
+#: ../data/ui/search-settings.ui:58
 msgid "Search Suggestions"
 msgstr "தேடல் பரிந்துரைகள்"
 
@@ -46,7 +46,7 @@ msgstr "தேடல் பரிந்துரைகள்"
 msgid "translator-credits"
 msgstr "K.B.Dharun Krishna <kbdharunkrishna@gmail.com>"
 
-#: ../src/view.py:360 ../data/ui/bookmarks.ui:26
+#: ../src/view.py:366 ../data/ui/bookmarks.ui:27
 msgid "Add Bookmark"
 msgstr "புத்தகக்குறி சேர்"
 
@@ -75,22 +75,22 @@ msgctxt "shortcut window"
 msgid "Keyboard shortcuts"
 msgstr "கீபோர்டு ஷார்ட்கட்கள்"
 
-#: ../data/ui/shortcuts.ui:127
+#: ../data/ui/shortcuts.ui:133
 msgctxt "shortcut window"
 msgid "Navigation"
 msgstr "வழிசெலுத்தல்"
 
-#: ../data/ui/shortcuts.ui:130
+#: ../data/ui/shortcuts.ui:136
 msgctxt "shortcut window"
 msgid "Search articles"
 msgstr "கட்டுரைகளைத் தேடுங்கள்"
 
-#: ../data/ui/shortcuts.ui:154
+#: ../data/ui/shortcuts.ui:160
 msgctxt "shortcut window"
 msgid "Previous page"
 msgstr "முந்தைய பக்கம்"
 
-#: ../data/ui/shortcuts.ui:160
+#: ../data/ui/shortcuts.ui:166
 msgctxt "shortcut window"
 msgid "Next page"
 msgstr "அடுத்த பக்கம்"
@@ -121,11 +121,11 @@ msgstr "வைக்கைப் பற்றி"
 msgid "Behavior"
 msgstr "நடத்தை"
 
-#: ../data/ui/prefs.ui:58
+#: ../data/ui/prefs.ui:59
 msgid "Keep a List of Recent Articles"
 msgstr "சமீபத்திய கட்டுரைகளின் பட்டியலை வைத்திருங்கள்"
 
-#: ../data/ui/window.ui:88
+#: ../data/ui/window.ui:102
 msgid "Languages"
 msgstr "மொழிகள்"
 
@@ -178,39 +178,35 @@ msgstr "முகப்பு பக்கம்"
 msgid "The page that will be displayed when Wike starts"
 msgstr "வைக் தொடங்கும் போது காட்டப்படும் பக்கம்"
 
-#: ../data/ui/prefs.ui:38
+#: ../data/ui/prefs.ui:39
 msgid "Privacy"
 msgstr "தனியுரிமை"
 
-#: ../data/ui/prefs.ui:41
+#: ../data/ui/prefs.ui:42
 msgid "Allow Live Search on Desktop"
 msgstr "டெஸ்க்டாப்பில் நேரடி தேடலை அனுமதிக்கவும்"
 
-#: ../data/ui/prefs.ui:42
+#: ../data/ui/prefs.ui:43
 msgid "Warning: all desktop searches will be sent to Wikipedia"
 msgstr "எச்சரிக்கை: அனைத்து டெஸ்க்டாப் தேடல்களும் விக்கிபீடியாவிற்கு அனுப்பப்படும்"
 
-#: ../data/ui/prefs.ui:59
+#: ../data/ui/prefs.ui:60
 msgid "Wike will remember the history of visited articles"
 msgstr "பார்வையிட்ட கட்டுரைகளின் வரலாற்றை வைக் நினைவில் வைத்திருப்பார்"
 
-#: ../data/ui/prefs.ui:68 ../data/ui/prefs.ui:80
+#: ../data/ui/prefs.ui:69 ../data/ui/prefs.ui:87
 msgid "Clear"
 msgstr "அழி"
 
-#: ../data/ui/prefs.ui:76
-msgid "Clear Personal Data"
-msgstr "தனிப்பட்ட தரவை அழி"
-
-#: ../data/ui/prefs.ui:77
+#: ../data/ui/prefs.ui:78
 msgid "Cookies and cache data will be deleted"
 msgstr "குக்கீகள் மற்றும் கேச் தரவு நீக்கப்படும்"
 
-#: ../data/ui/page.ui:87
+#: ../data/ui/page.ui:83
 msgid "Try Again"
 msgstr "மீண்டும் முயற்சி செய்"
 
-#: ../data/ui/page.ui:78 ../data/ui/menu-main.ui:29
+#: ../data/ui/menu-main.ui:29 ../data/ui/page.ui:74
 msgid "Random Article"
 msgstr "சீரற்ற கட்டுரை"
 
@@ -218,7 +214,7 @@ msgstr "சீரற்ற கட்டுரை"
 msgid "Last article"
 msgstr "கடைசி கட்டுரை"
 
-#: ../data/ui/window.ui:99
+#: ../data/ui/window.ui:112
 msgid "Bookmarks"
 msgstr "புத்தகக்குறிகள்"
 
@@ -260,31 +256,31 @@ msgctxt "shortcut window"
 msgid "Previous tab"
 msgstr "முந்தைய தாவல்"
 
-#: ../src/view.py:375
+#: ../src/view.py:378
 msgid "Open Link in New Tab"
 msgstr "புதிய தாவலில் இணைப்பைத் திறக்கவும்"
 
-#: ../src/view.py:381
+#: ../src/view.py:384
 msgid "Add Link to Bookmarks"
 msgstr "புத்தகக்குறிகளுக்கு இணைப்பைச் சேர்க்கவும்"
 
-#: ../src/view.py:377
+#: ../src/view.py:380
 msgid "Open Link in Browser"
 msgstr "உலாவியில் இணைப்பைத் திறக்கவும்"
 
-#: ../src/view.py:383 ../data/ui/menu-main.ui:39
+#: ../src/view.py:386 ../data/ui/menu-main.ui:39
 msgid "Copy Link to Clipboard"
 msgstr "கிளிப்போர்டுக்கு இணைப்பை நகலெடுக்கவும்"
 
-#: ../data/ui/prefs.ui:50
+#: ../data/ui/prefs.ui:51
 msgid "Desktop searches are performed in the default language"
 msgstr "டெஸ்க்டாப் தேடல்கள் இயல்பு மொழியில் செய்யப்படுகின்றன"
 
-#: ../data/ui/prefs.ui:51
+#: ../data/ui/prefs.ui:52
 msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
 msgstr "முன்னொட்டைப் பயன்படுத்தி பிற மொழிகளில் தேடலாம். எ.கா. ஸ்பானிஷ் மொழியில் தேட வேண்டும்"
 
-#: ../data/ui/shortcuts.ui:142
+#: ../data/ui/shortcuts.ui:148
 msgctxt "shortcut window"
 msgid "Random article"
 msgstr "சீரற்ற கட்டுரை"
@@ -313,43 +309,43 @@ msgstr "கடந்த 30 நாட்கள்"
 msgid "Show full history"
 msgstr "முழு வரலாற்றைக் காட்டு"
 
-#: ../src/window.py:312 ../src/page.py:135
+#: ../src/page.py:143 ../src/window.py:381
 msgid "Bookmark added: "
 msgstr "புக்மார்க் சேர்க்கப்பட்டது:␣"
 
-#: ../src/window.py:426
+#: ../src/window.py:500
 msgid "Print operation completed"
 msgstr "அச்சு செயல்பாடு முடிந்தது"
 
-#: ../src/window.py:432
+#: ../src/window.py:506
 msgid "Print operation failed"
 msgstr "அச்சு செயல்பாடு தோல்வியடைந்தது"
 
-#: ../src/window.py:447
+#: ../src/window.py:521
 msgid "Link copied to clipboard"
 msgstr "இணைப்பு கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது"
 
-#: ../src/application.py:154
+#: ../src/application.py:157
 msgid "Source Code"
 msgstr "மூல குறியீடு"
 
-#: ../src/application.py:155
+#: ../src/application.py:158
 msgid "Report an Issue"
 msgstr "ஒரு சிக்கலைப் புகாரளிக்கவும்"
 
-#: ../src/application.py:156
+#: ../src/application.py:159
 msgid "Help Translating"
 msgstr "மொழிபெயர்க்க உதவுங்கள்"
 
-#: ../src/application.py:157
+#: ../src/application.py:160
 msgid "Contributors"
 msgstr "பங்களிப்பாளர்கள்"
 
-#: ../src/application.py:158
+#: ../src/application.py:161
 msgid "Flag Icons"
 msgstr "கொடி சின்னங்கள்"
 
-#: ../src/application.py:159
+#: ../src/application.py:162
 msgid "All content from Wikipedia.org and available under CC BY-SA 3.0 unless otherwise noted.\n"
 "\n"
 "Wike is an independent development not endorsed by or affiliated with the Wikimedia Foundation."
@@ -357,15 +353,15 @@ msgstr "Wikipedia.org இலிருந்து அனைத்து உள�
 "\n"
 "வைக் என்பது விக்கிமீடியா அறக்கட்டளையால் அங்கீகரிக்கப்படாத அல்லது இணைக்கப்படாத ஒரு சுயாதீனமான வளர்ச்சியாகும்."
 
-#: ../src/page.py:72
+#: ../src/page.py:79
 msgid "Loading"
 msgstr "ஏற்றுகிறது"
 
-#: ../src/page.py:99
+#: ../src/page.py:107
 msgid "Article not Found"
 msgstr "கட்டுரை கிடைக்கவில்லை"
 
-#: ../src/page.py:107
+#: ../src/page.py:115
 msgid "Can't Access Wikipedia"
 msgstr "விக்கிபீடியாவை அணுக முடியவில்லை"
 
@@ -381,12 +377,11 @@ msgstr "உள்ளடக்கங்கள் இல்லை"
 msgid "There is no table of contents for this page"
 msgstr "இந்தப் பக்கத்திற்கான உள்ளடக்க அட்டவணை எதுவும் இல்லை"
 
-#: ../data/ui/languages.ui:10 ../data/ui/search-settings.ui:26
+#: ../data/ui/search-settings.ui:16 ../data/ui/languages.ui:10
 msgid "Pick your Languages"
 msgstr "உங்கள் மொழிகளைத் தேர்ந்தெடுங்கள்"
 
-#: ../data/ui/languages.ui:33 ../data/ui/search-settings.ui:20
-#: ../data/ui/langlinks.ui:17
+#: ../data/ui/langlinks.ui:17 ../data/ui/languages.ui:33
 msgid "Filter languages"
 msgstr "மொழிகளை வடிகட்டவும்"
 
@@ -415,28 +410,24 @@ msgctxt "shortcut window"
 msgid "Copy link to clipboard"
 msgstr "கிளிப்போர்டுக்கு இணைப்பை நகலெடுக்கவும்"
 
-#: ../data/ui/shortcuts.ui:136
+#: ../data/ui/shortcuts.ui:142
 msgctxt "shortcut window"
 msgid "Main page"
 msgstr "முதன்மை பக்கம்"
 
-#: ../data/ui/shortcuts.ui:148
+#: ../data/ui/shortcuts.ui:154
 msgctxt "shortcut window"
 msgid "History of recent articles"
 msgstr "சமீபத்திய கட்டுரைகளின் வரலாறு"
 
-#: ../data/ui/shortcuts.ui:166
+#: ../data/ui/shortcuts.ui:172
 msgctxt "shortcut window"
 msgid "Reload current page"
 msgstr "தற்போதைய பக்கத்தை மீண்டும் ஏற்றவும்"
 
-#: ../data/ui/search.ui:15 ../data/ui/page.ui:57
+#: ../data/ui/page.ui:53 ../data/ui/search.ui:15
 msgid "Search Wikipedia"
 msgstr "விக்கிபீடியாவில் தேடவும்"
-
-#: ../data/ui/search.ui:26
-msgid "Search Settings"
-msgstr "தேடல் அமைப்புகள்"
 
 #: ../data/ui/dialogs.ui:11
 msgid "New Bookmarks List"
@@ -471,7 +462,7 @@ msgstr "பட்டியலையும் நீக்கவும்"
 msgid "Clear History?"
 msgstr "வரலாற்றை அழிக்கவா?"
 
-#: ../data/ui/dialogs.ui:77 ../data/ui/history.ui:26
+#: ../data/ui/history.ui:27 ../data/ui/dialogs.ui:77
 msgid "Clear History"
 msgstr "வரலாற்றை அழிக்கவும்"
 
@@ -487,11 +478,11 @@ msgstr "சீரற்ற கட்டுரை"
 msgid "New Tab"
 msgstr "புதிய தாவல்"
 
-#: ../data/ui/headerbar.ui:46 ../data/ui/actionbar.ui:34
+#: ../data/ui/actionbar.ui:34 ../data/ui/headerbar.ui:46
 msgid "View"
 msgstr "பார்வை"
 
-#: ../data/ui/headerbar.ui:52 ../data/ui/actionbar.ui:27
+#: ../data/ui/actionbar.ui:27 ../data/ui/headerbar.ui:52
 msgid "Sidebar"
 msgstr "பக்கப்பட்டி"
 
@@ -499,11 +490,11 @@ msgstr "பக்கப்பட்டி"
 msgid "Search text"
 msgstr "உரையைத் தேடுங்கள்"
 
-#: ../data/ui/page.ui:58
+#: ../data/ui/page.ui:54
 msgid "Start typing to search Wikipedia articles"
 msgstr "விக்கிபீடியா கட்டுரைகளைத் தேட தட்டச்சு செய்யத் தொடங்குங்கள்"
 
-#: ../data/ui/page.ui:68 ../data/ui/menu-main.ui:25
+#: ../data/ui/menu-main.ui:25 ../data/ui/page.ui:64
 msgid "Main Page"
 msgstr "முதன்மை பக்கம்"
 
@@ -527,27 +518,27 @@ msgstr "மொழிக் கொடிகள்"
 msgid "Link Previews"
 msgstr "இணைப்பு முன்னோட்டங்கள்"
 
-#: ../data/ui/history.ui:49
+#: ../data/ui/history.ui:50
 msgid "Empty History"
 msgstr "வெற்று வரலாறு"
 
-#: ../data/ui/history.ui:50
+#: ../data/ui/history.ui:51
 msgid "There are no recent articles in the history"
 msgstr "வரலாற்றில் சமீபத்திய கட்டுரைகள் எதுவும் இல்லை"
 
-#: ../data/ui/bookmarks.ui:55
+#: ../data/ui/bookmarks.ui:56
 msgid "No Bookmarks"
 msgstr "புத்தகக்குறிகள் இல்லை"
 
-#: ../data/ui/bookmarks.ui:56
+#: ../data/ui/bookmarks.ui:57
 msgid "Use the Add Bookmark button or press Ctrl+D to add the current article to the list"
 msgstr "தற்போதைய கட்டுரையை பட்டியலில் சேர்க்க புத்தகக்குறி சேர் பொத்தானைப் பயன்படுத்தவும் அல்லது Ctrl+D ஐ அழுத்தவும்"
 
-#: ../data/ui/window.ui:78
+#: ../data/ui/window.ui:93
 msgid "Contents"
 msgstr "உள்ளடக்கம்"
 
-#: ../data/ui/window.ui:110
+#: ../data/ui/window.ui:122
 msgid "History"
 msgstr "வரலாறு"
 
@@ -579,7 +570,7 @@ msgstr "பட்டியலை அழிக்கவும்…"
 msgid "It supports more than 300 languages and integrates with desktop searches, providing suggestions that make it easier to find any content. Other features are: bookmarks with multiple lists, article table of contents, history, text searches and much more…"
 msgstr "இது 300 க்கும் மேற்பட்ட மொழிகளை ஆதரிக்கிறது மற்றும் டெஸ்க்டாப் தேடல்களுடன் ஒருங்கிணைக்கிறது, எந்த உள்ளடக்கத்தையும் எளிதாகக் கண்டறியும் பரிந்துரைகளை வழங்குகிறது. மற்ற அம்சங்கள்: பல பட்டியல்கள் கொண்ட புத்தகக்குறிகள், கட்டுரை உள்ளடக்க அட்டவணை, வரலாறு, உரை தேடல்கள் மற்றும் பல..."
 
-#: ../data/ui/window.ui:55
+#: ../data/ui/window.ui:66
 msgid "Pin Sidebar"
 msgstr "பக்கப்பட்டியைப் பின் செய்யவும்"
 
@@ -594,4 +585,25 @@ msgstr "முன்னோக்கி"
 #: ../data/ui/headerbar.ui:39
 msgid "Main Menu"
 msgstr "முதன்மை பட்டியல்"
+
+#: ../data/ui/shortcuts.ui:125
+msgctxt "shortcut window"
+msgid "View open tabs"
+msgstr "திறந்த தாவல்களைக் காண்க"
+
+#: ../data/ui/prefs.ui:29
+msgid "Restore open articles"
+msgstr "திறந்த கட்டுரைகளை மீட்டெடுக்கவும்"
+
+#: ../data/ui/prefs.ui:77
+msgid "Clear Personal Data on Close"
+msgstr "மூடும் போது தனிப்பட்ட தரவை அழி"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:31
+msgid "Encyclopedia"
+msgstr "கலைக்களஞ்சியம்"
+
+#: 
+msgid "Article Menu"
+msgstr "கட்டுரை பட்டியல்"
 

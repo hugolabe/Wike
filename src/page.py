@@ -79,7 +79,7 @@ class PageBox(Gtk.Box):
         tabpage.set_title(_('Loading'))
         tabpage.set_loading(True)
         if tabpage.get_selected():
-          self._window.headerbar.search_box.reset()
+          self._window.search_box.reset()
           wikiview.grab_focus()
 
       case WebKit.LoadEvent.COMMITTED:

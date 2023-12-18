@@ -9,10 +9,11 @@ from gi.repository import GLib, GObject, Gio, Gdk, Gtk, Adw, WebKit
 
 from wike.data import settings
 from wike.bookmarks import BookmarksPanel
-from wike.header import HeaderBar, ActionBar
 from wike.history import HistoryPanel
 from wike.langlinks import LanglinksPanel
+from wike.menu import MainMenuPopover, ViewMenuPopover
 from wike.page import PageBox
+from wike.search import SearchBox
 from wike.toc import TocPanel
 
 
@@ -23,11 +24,16 @@ class Window(Adw.ApplicationWindow):
 
   __gtype_name__ = 'Window'
 
+  break_point = Gtk.Template.Child()
   window_box = Gtk.Template.Child()
+  headerbar = Gtk.Template.Child()
+  actionbar = Gtk.Template.Child()
+  menu_button = Gtk.Template.Child()
+  view_button = Gtk.Template.Child()
+  view_button_mob = Gtk.Template.Child()
   toast_overlay = Gtk.Template.Child()
   flap = Gtk.Template.Child()
   flap_stack = Gtk.Template.Child()
-  flap_pin_revealer = Gtk.Template.Child()
   flap_pin_button = Gtk.Template.Child()
   flap_toc_button = Gtk.Template.Child()
   flap_langlinks_button = Gtk.Template.Child()
@@ -37,8 +43,6 @@ class Window(Adw.ApplicationWindow):
   tabview = Gtk.Template.Child()
   taboverview = Gtk.Template.Child()
   
-  mobile_layout = False
-  
   # Initialize window, set actions and connect signals
 
   def __init__(self, app, launch_uri):
@@ -47,20 +51,20 @@ class Window(Adw.ApplicationWindow):
     width = settings.get_int('window-width')
     height = settings.get_int('window-height')
 
-    if width < 720:
-      self.mobile_layout = True
-
     self.set_default_size(width, height)
     if settings.get_boolean('window-max'):
       self.maximize()
 
     self._print_settings = Gtk.PrintSettings()
 
-    self.actionbar = ActionBar()
-    self.window_box.append(self.actionbar)
-    
-    self.headerbar = HeaderBar(self)
-    self.window_box.prepend(self.headerbar)
+    self.main_menu_popover = MainMenuPopover()
+    self.menu_button.set_popover(self.main_menu_popover)
+
+    self.view_menu_popover = ViewMenuPopover(self)
+    self.view_button.set_popover(self.view_menu_popover)
+
+    self.search_box = SearchBox(self)
+    self.headerbar.set_title_widget(self.search_box)
 
     self.toc_panel = TocPanel(self)
     toc_stack_page = self.flap_stack.add_named(self.toc_panel, 'toc')
@@ -131,7 +135,9 @@ class Window(Adw.ApplicationWindow):
     settings.bind('flap-page', self.flap_stack, 'visible-child-name', Gio.SettingsBindFlags.DEFAULT)
 
     self._set_actions(app)
-    self._set_layout()
+
+    self.break_point.connect('apply', self._breakpoint_apply_cb)
+    self.break_point.connect('unapply', self._breakpoint_unapply_cb)
 
     self.handler_selpage = self.tabview.connect('notify::selected-page', self._tabview_selected_page_cb)
     self.tabview.connect('close-page', self._tabview_close_page_cb)
@@ -184,13 +190,32 @@ class Window(Adw.ApplicationWindow):
 
     pin_sidebar_action = Gio.SimpleAction.new_stateful('pin-sidebar', None, GLib.Variant.new_boolean(False))
     pin_sidebar_action.connect('change-state', self._pin_sidebar_cb)
-    pin_sidebar_action.bind_property('enabled', self.flap_pin_revealer, 'reveal-child',  GObject.BindingFlags.SYNC_CREATE)
     self.add_action(pin_sidebar_action)
     
     self.flap.connect('notify::reveal-flap', self._flap_reveal_cb)
     
     if settings.get_boolean('flap-pinned'):
       pin_sidebar_action.change_state(GLib.Variant.new_boolean(True))
+
+  # On breakpoint apply
+
+  def _breakpoint_apply_cb(self, break_point):
+    pin_sidebar_action = self.lookup_action('pin-sidebar')
+    if pin_sidebar_action.get_state():
+      self.flap.set_fold_policy(Adw.FlapFoldPolicy.ALWAYS)
+
+    self.view_button.set_popover(None)
+    self.view_button_mob.set_popover(self.view_menu_popover)
+
+  # On breakpoint unapply
+
+  def _breakpoint_unapply_cb(self, break_point):
+    pin_sidebar_action = self.lookup_action('pin-sidebar')
+    if pin_sidebar_action.get_state():
+      self.flap.set_fold_policy(Adw.FlapFoldPolicy.NEVER)
+
+    self.view_button_mob.set_popover(None)
+    self.view_button.set_popover(self.view_menu_popover)
 
   # Handle mouse clicks with buttons 8 and 9
 
@@ -206,30 +231,6 @@ class Window(Adw.ApplicationWindow):
       case 9:
         gesture.set_state(Gtk.EventSequenceState.CLAIMED)
         next_page_action.activate()
-
-  # If window size changed set layout
-
-  def do_size_allocate(self, width, height, baseline):
-    if width < 720:
-      if self.mobile_layout == False:
-        self.mobile_layout = True
-        self._set_layout()
-    else:
-      if self.mobile_layout == True:
-        self.mobile_layout = False
-        self._set_layout()
-
-    Adw.ApplicationWindow.do_size_allocate(self, width, height, baseline)
-
-  # Set layout for mobile or desktop
-  
-  def _set_layout (self):
-    pin_sidebar_action = self.lookup_action('pin-sidebar')
-
-    self.headerbar.set_mobile(self.mobile_layout)
-    pin_sidebar_action.set_enabled(not self.mobile_layout)
-
-    self._update_sidebar_policy(pin_sidebar_action)
 
   # Create new tab with a page
 
@@ -396,13 +397,7 @@ class Window(Adw.ApplicationWindow):
   
   def _pin_sidebar_cb(self, action, parameter):
     action.set_state(parameter)
-    self._update_sidebar_policy(action)
-
-  # Update sidebar policy
-
-  def _update_sidebar_policy(self, action):
-    prefer_pinned = action.get_state().get_boolean()
-    if prefer_pinned and not self.mobile_layout:
+    if parameter:
       self.flap.set_fold_policy(Adw.FlapFoldPolicy.NEVER)
     else:
       self.flap.set_fold_policy(Adw.FlapFoldPolicy.ALWAYS)

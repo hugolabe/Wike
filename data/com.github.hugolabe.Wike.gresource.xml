@@ -9,12 +9,10 @@
     <file>styles/sepia.min.css</file>
     
     <file>ui/about.ui</file>
-    <file>ui/actionbar.ui</file>
     <file>ui/bookmarks.ui</file>
     <file>ui/bookmarks-menu.ui</file>
     <file>ui/bookmarks-row.ui</file>
     <file>ui/dialogs.ui</file>
-    <file>ui/headerbar.ui</file>
     <file>ui/history.ui</file>
     <file>ui/history-row.ui</file>
     <file>ui/langlinks.ui</file>

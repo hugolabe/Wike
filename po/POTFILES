@@ -4,12 +4,10 @@ data/com.github.hugolabe.Wike.metainfo.xml.in
 # UI
 
 data/ui/about.ui
-data/ui/actionbar.ui
 data/ui/bookmarks.ui
 data/ui/bookmarks-menu.ui
 data/ui/bookmarks-row.ui
 data/ui/dialogs.ui
-data/ui/headerbar.ui
 data/ui/history.ui
 data/ui/history-row.ui
 data/ui/langlinks.ui
@@ -36,7 +34,6 @@ data/ui/zoom-level.ui
 src/application.py
 src/bookmarks.py
 src/data.py
-src/header.py
 src/history.py
 src/langlinks.py
 src/languages.py

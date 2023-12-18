@@ -10,6 +10,24 @@ SPDX-License-Identifier: GPL-3.0-or-later
   <template class="Window" parent="AdwApplicationWindow">
     <property name="title">Wike</property>
     <property name="icon-name">com.github.hugolabe.Wike</property>
+    <property name="width-request">360</property>
+    <property name="height-request">480</property>
+
+    <!-- Breakpoint -->
+    <child>
+      <object class="AdwBreakpoint" id="break_point">
+        <condition>max-width: 720px</condition>
+        <setter object="prev_button" property="visible">false</setter>
+        <setter object="next_button" property="visible">false</setter>
+        <setter object="newtab_button" property="visible">false</setter>
+        <setter object="tabs_button" property="visible">true</setter>
+        <setter object="flap_button" property="visible">false</setter>
+        <setter object="view_button" property="visible">false</setter>
+        <setter object="actionbar" property="visible">true</setter>
+        <setter object="tabbar" property="visible">false</setter>
+        <setter object="flap_pin_button" property="visible">false</setter>
+      </object>
+    </child>
 
     <!-- Tab overview -->
     <property name="content">
@@ -21,6 +39,75 @@ SPDX-License-Identifier: GPL-3.0-or-later
         <property name="child">
           <object class="GtkBox" id="window_box">
             <property name="orientation">vertical</property>
+
+            <!-- Headerbar -->
+            <child>
+              <object class="AdwHeaderBar" id="headerbar">
+
+                <!-- Prev navigation button -->
+                <child type="start">
+                  <object class="GtkButton" id="prev_button">
+                    <property name="icon-name">go-previous-symbolic</property>
+                    <property name="tooltip-text" translatable="yes">Back</property>
+                    <property name="action-name">win.prev-page</property>
+                  </object>
+                </child>
+
+                <!-- Next navigation button -->
+                <child type="start">
+                  <object class="GtkButton" id="next_button">
+                    <property name="icon-name">go-next-symbolic</property>
+                    <property name="tooltip-text" translatable="yes">Forward</property>
+                    <property name="action-name">win.next-page</property>
+                  </object>
+                </child>
+
+                <!-- New tab button -->
+                <child type="start">
+                  <object class="GtkButton" id="newtab_button">
+                    <property name="icon-name">tab-new-symbolic</property>
+                    <property name="tooltip-text" translatable="yes">New Tab</property>
+                    <property name="action-name">win.new-tab</property>
+                  </object>
+                </child>
+
+                <!-- Tab overview button -->
+                <child type="start">
+                  <object class="AdwTabButton" id="tabs_button">
+                    <property name="action-name">win.toggle-overview</property>
+                    <property name="view">tabview</property>
+                    <property name="visible">false</property>
+                  </object>
+                </child>
+
+                <!-- Main menu button -->
+                <child type="end">
+                  <object class="GtkMenuButton" id="menu_button">
+                    <property name="icon-name">open-menu-symbolic</property>
+                    <property name="tooltip-text" translatable="yes">Main Menu</property>
+                    <property name="primary">true</property>
+                  </object>
+                </child>
+
+                <!-- View menu button -->
+                <child type="end">
+                  <object class="GtkMenuButton" id="view_button">
+                    <property name="icon-name">view-reveal-symbolic</property>
+                    <property name="tooltip-text" translatable="yes">View</property>
+                  </object>
+                </child>
+
+                <!-- Toggle sidebar button -->
+                <child type="end">
+                  <object class="GtkToggleButton" id="flap_button">
+                    <property name="icon-name">sidebar-show-right-symbolic</property>
+                    <property name="tooltip-text" translatable="yes">Sidebar</property>
+                    <property name="action-name">win.toggle-sidebar</property>
+                  </object>
+                </child>
+
+              </object>
+            </child>
 
             <!-- Toast overlay -->
             <child>
@@ -81,31 +168,23 @@ SPDX-License-Identifier: GPL-3.0-or-later
                         <!-- Sidebar header -->
                         <child>
                           <object class="GtkBox">
-                            <property name="hexpand">False</property>
+                            <property name="hexpand">false</property>
 
-                            <!-- Revealer -->
+                            <!-- Pin button -->
                             <child>
-                              <object class="GtkRevealer" id="flap_pin_revealer">
-                                <property name="transition-type">slide-left</property>
-
-                                <!-- Pin button -->
-                                <child>
-                                  <object class="GtkToggleButton" id="flap_pin_button">
-                                    <property name="icon-name">view-pin-symbolic</property>
-                                    <property name="tooltip-text" translatable="yes">Pin Sidebar</property>
-                                    <property name="margin-start">6</property>
-                                    <property name="margin-end">6</property>
-                                    <property name="margin-top">6</property>
-                                    <property name="margin-bottom">6</property>
-                                    <property name="valign">center</property>
-                                    <property name="action-name">win.pin-sidebar</property>
-                                    <style>
-                                      <class name="circular"/>
-                                      <class name="pin-button"/>
-                                    </style>
-                                  </object>
-                                </child>
-
+                              <object class="GtkToggleButton" id="flap_pin_button">
+                                <property name="icon-name">view-pin-symbolic</property>
+                                <property name="tooltip-text" translatable="yes">Pin Sidebar</property>
+                                <property name="margin-start">6</property>
+                                <property name="margin-end">6</property>
+                                <property name="margin-top">6</property>
+                                <property name="margin-bottom">6</property>
+                                <property name="valign">center</property>
+                                <property name="action-name">win.pin-sidebar</property>
+                                <style>
+                                  <class name="circular"/>
+                                  <class name="pin-button"/>
+                                </style>
                               </object>
                             </child>
 
@@ -117,8 +196,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
                                 <property name="margin-top">6</property>
                                 <property name="margin-bottom">6</property>
                                 <property name="spacing">6</property>
-                                <property name="hexpand">True</property>
-                                <property name="homogeneous">True</property>
+                                <property name="hexpand">true</property>
+                                <property name="homogeneous">true</property>
 
                                 <!-- TOC button -->
                                 <child>
@@ -188,6 +267,47 @@ SPDX-License-Identifier: GPL-3.0-or-later
                       </object>
                     </property>
 
+                  </object>
+                </child>
+
+              </object>
+            </child>
+
+            <!-- Actionbar -->
+            <child>
+              <object class="GtkActionBar" id="actionbar">
+                <property name="visible">false</property>
+
+                <!-- Prev navigation button -->
+                <child type="start">
+                  <object class="GtkButton">
+                    <property name="icon-name">go-previous-symbolic</property>
+                    <property name="action-name">win.prev-page</property>
+                  </object>
+                </child>
+
+                <!-- Next navigation button -->
+                <child type="start">
+                  <object class="GtkButton">
+                    <property name="icon-name">go-next-symbolic</property>
+                    <property name="action-name">win.next-page</property>
+                  </object>
+                </child>
+
+                <!-- Toggle sidebar button -->
+                <child type="end">
+                  <object class="GtkToggleButton">
+                    <property name="icon-name">sidebar-show-right-symbolic</property>
+                    <property name="tooltip-text" translatable="yes">Sidebar</property>
+                    <property name="action-name">win.toggle-sidebar</property>
+                  </object>
+                </child>
+
+                <!-- View menu button -->
+                <child type="end">
+                  <object class="GtkMenuButton" id="view_button_mob">
+                    <property name="icon-name">view-reveal-symbolic</property>
+                    <property name="tooltip-text" translatable="yes">View</property>
                   </object>
                 </child>
 

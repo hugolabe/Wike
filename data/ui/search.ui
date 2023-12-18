@@ -24,7 +24,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
       <object class="GtkMenuButton" id="settings_button">
         <property name="label">en</property>
         <property name="tooltip-text">English</property>
-        <property name="width_request">60</property>
+        <property name="width-request">60</property>
       </object>
     </child>
 

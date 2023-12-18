@@ -171,7 +171,7 @@ class BookmarksPanel(Adw.Bin):
       return False
 
   # Remove bookmark from current list
-  
+
   def remove_bookmark(self, uri):
     if bookmarks.remove(uri, self._booklist):
       i = 0
@@ -289,7 +289,7 @@ class BookmarksPanel(Adw.Bin):
     clear_booklist_dialog.show()
 
   # On response clear all bookmarks of current list
-  
+
   def _clear_booklist_response_cb(self, dialog, response, delete_booklist_check):
     if response == 'clear':
       if delete_booklist_check.get_active():
@@ -332,7 +332,7 @@ class BookmarksPanel(Adw.Bin):
     self._window.page.wikiview.load_wiki(row.uri)
 
   # On row button remove bookmark and refresh buttons state
-  
+
   def _row_remove_button_cb(self, remove_button, row):
     if bookmarks.remove(row.uri, self._booklist):
       self.bookmarks_list.remove(row)

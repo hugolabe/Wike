@@ -29,12 +29,12 @@ class LanglinksPanel(Adw.Bin):
 
     self.langlinks_list.set_filter_func(self._filter_list, self.filter_entry)
     self.langlinks_list.set_sort_func(self._sort_list)
-    
+
     settings.connect('changed::show-flags', self._settings_show_flags_changed_cb)
 
     self.filter_entry.connect('search-changed', self._filter_entry_changed_cb)
     self.langlinks_list.connect('row-activated', self._list_activated_cb)
-    
+
   # Filter list for entry content
 
   def _filter_list(self, row, filter_entry):

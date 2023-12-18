@@ -42,7 +42,7 @@ class Window(Adw.ApplicationWindow):
   tabbar = Gtk.Template.Child()
   tabview = Gtk.Template.Child()
   taboverview = Gtk.Template.Child()
-  
+
   # Initialize window, set actions and connect signals
 
   def __init__(self, app, launch_uri):
@@ -68,10 +68,10 @@ class Window(Adw.ApplicationWindow):
 
     self.toc_panel = TocPanel(self)
     toc_stack_page = self.flap_stack.add_named(self.toc_panel, 'toc')
-    
+
     self.langlinks_panel = LanglinksPanel(self)
     langlinks_stack_page = self.flap_stack.add_named(self.langlinks_panel, 'langlinks')
-    
+
     self.bookmarks_panel = BookmarksPanel(self)
     bookmarks_stack_page = self.flap_stack.add_named(self.bookmarks_panel, 'bookmarks')
     
@@ -153,7 +153,7 @@ class Window(Adw.ApplicationWindow):
     gesture.connect('pressed', self._gesture_click_cb)
 
   # Set actions for window
-  
+
   def _set_actions(self, app):
     actions = [ ('prev-page', self._prev_page_cb, ('<Alt>Left',)),
                 ('next-page', self._next_page_cb, ('<Alt>Right',)),
@@ -191,9 +191,9 @@ class Window(Adw.ApplicationWindow):
     pin_sidebar_action = Gio.SimpleAction.new_stateful('pin-sidebar', None, GLib.Variant.new_boolean(False))
     pin_sidebar_action.connect('change-state', self._pin_sidebar_cb)
     self.add_action(pin_sidebar_action)
-    
+
     self.flap.connect('notify::reveal-flap', self._flap_reveal_cb)
-    
+
     if settings.get_boolean('flap-pinned'):
       pin_sidebar_action.change_state(GLib.Variant.new_boolean(True))
 
@@ -387,14 +387,14 @@ class Window(Adw.ApplicationWindow):
 
   def _toggle_sidebar_cb(self, action, parameter):
     action.set_state(parameter)
-    
+
     if parameter:
       self.flap.set_reveal_flap(True)
     else:
       self.flap.set_reveal_flap(False)
-  
+
   # On pin sidebar action set state and update sidebar
-  
+
   def _pin_sidebar_cb(self, action, parameter):
     action.set_state(parameter)
     if parameter:
@@ -403,14 +403,14 @@ class Window(Adw.ApplicationWindow):
       self.flap.set_fold_policy(Adw.FlapFoldPolicy.ALWAYS)
 
   # On flap reveal changed set action state
-  
+
   def _flap_reveal_cb(self, flap, parameter):
     reveal_state = GLib.Variant.new_boolean(flap.get_reveal_flap())
     toggle_sidebar_action = self.lookup_action('toggle-sidebar')
     
     if toggle_sidebar_action.get_state() != reveal_state:
       toggle_sidebar_action.set_state(reveal_state)
-    
+
   # Show toc in sidebar
 
   def _show_toc_cb(self, action, parameter):
@@ -513,7 +513,7 @@ class Window(Adw.ApplicationWindow):
     uri = self.page.wikiview.get_base_uri()
     clipboard = Gdk.Display.get_default().get_clipboard()
     clipboard.set(uri)
-    
+
     self.send_notification(_('Link copied to clipboard'))
 
   # Refresh navigation actions state

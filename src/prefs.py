@@ -49,7 +49,7 @@ class PrefsWindow(Adw.PreferencesWindow):
     clear_history_dialog.show()
 
   # On response clear history
-  
+
   def _clear_history_response_cb(self, dialog, response):
     if response == 'clear':
       window = self.get_transient_for()
@@ -68,7 +68,7 @@ class PrefsWindow(Adw.PreferencesWindow):
     clear_data_dialog.show()
 
   # On response clear personal data
-  
+
   def _clear_data_response_cb(self, dialog, response):
     if response == 'clear':
       data_manager = network_session.get_website_data_manager()

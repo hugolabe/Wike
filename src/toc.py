@@ -17,7 +17,7 @@ class TocPanel(Adw.Bin):
 
   title_label = Gtk.Template.Child()
   toc_list = Gtk.Template.Child()
-  
+
   # Initialize widgets and connect signals
 
   def __init__(self, window):

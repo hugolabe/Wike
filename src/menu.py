@@ -11,9 +11,9 @@ from wike.data import settings
 # Popover for main menu
 
 class MainMenuPopover(Gtk.PopoverMenu):
-  
+
   # Set menu model
-  
+
   def __init__(self):
     super().__init__()
 
@@ -144,14 +144,14 @@ class ThemeSwitcher(Gtk.Box):
         self.sepia_button.set_active(True)
       case 3:
         self.system_button.set_active(True)
-      
+
     self.system_button.connect('toggled', self._system_button_toggled_cb)
     self.light_button.connect('toggled', self._light_button_toggled_cb)
     self.sepia_button.connect('toggled', self._sepia_button_toggled_cb)
     self.dark_button.connect('toggled', self._dark_button_toggled_cb)
-  
+
   # On button toggle change to system theme
-  
+
   def _system_button_toggled_cb(self, button):
     if button.get_active():
       app = self._window.get_application()
@@ -159,7 +159,7 @@ class ThemeSwitcher(Gtk.Box):
       theme_action.activate()
 
   # On button toggle change to light theme
-  
+
   def _light_button_toggled_cb(self, button):
     if button.get_active():
       app = self._window.get_application()
@@ -167,7 +167,7 @@ class ThemeSwitcher(Gtk.Box):
       theme_action.activate()
 
   # On button toggle change to sepia theme
-  
+
   def _sepia_button_toggled_cb(self, button):
     if button.get_active():
       app = self._window.get_application()
@@ -175,7 +175,7 @@ class ThemeSwitcher(Gtk.Box):
       theme_action.activate()
 
   # On button toggle change to dark theme
-  
+
   def _dark_button_toggled_cb(self, button):
     if button.get_active():
       app = self._window.get_application()

@@ -18,10 +18,10 @@ from wike.languages import LanguagesWindow
 class SearchBox(Gtk.Box):
 
   __gtype_name__ = 'SearchBox'
-  
+
   search_entry = Gtk.Template.Child()
   settings_button = Gtk.Template.Child()
-  
+
   # Create suggestions list and connect search entry events
 
   def __init__(self, window):
@@ -40,7 +40,7 @@ class SearchBox(Gtk.Box):
 
     event_controller = Gtk.EventControllerKey()
     self._delegate.add_controller(event_controller)
-    
+
     event_controller.connect('key-pressed', self._search_key_pressed_cb)
     self._delegate.connect('notify::has-focus', self._search_has_focus_cb)
     self.search_entry.connect('search-changed', self._search_changed_cb)
@@ -59,14 +59,14 @@ class SearchBox(Gtk.Box):
     self._results_changed = True
 
   # When down key pressed set focus to suggestions popover
-  
+
   def _search_key_pressed_cb(self, event_controller, keyval, keycode, modifier):
     if keyval == 65364:
       if self.suggestions_popover.is_visible():
         self.suggestions_popover.set_can_focus(True)
-        
+
     return False
-    
+
   # When entry is focused add timeout function
 
   def _search_has_focus_cb(self, delegate, parameter):
@@ -150,7 +150,7 @@ class SearchBox(Gtk.Box):
           self.window.page.wikiview.load_message('notfound')
 
   # Close suggestions and empty search entry
-  
+
   def reset(self):
     if self.suggestions_popover.is_visible():
       self.suggestions_popover.hide()
@@ -197,9 +197,9 @@ class SuggestionsPopover(Gtk.PopoverMenu):
     index = int(parameter.unpack())
     uri = self._search_box.results_list[1][index]
     self._window.page.wikiview.load_wiki(uri)
-    
+
   # On popover closed set focus to search entry
-  
+
   def do_closed(self):
     self._search_box.search_entry.grab_focus()
 
@@ -262,7 +262,7 @@ class SettingsPopover(Gtk.Popover):
     self.populate_list()
 
   # On button clicked open languages window
-  
+
   def _languages_button_clicked_cb(self, languages_button):
     self.hide()
     languages_window = LanguagesWindow()

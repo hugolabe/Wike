@@ -1,0 +1,609 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Wike\n"
+"Language: hi\n"
+
+#: ../src/view.py:253
+msgid "Article not found"
+msgstr "लेख नहीं मिला"
+
+#: ../src/page.py:108
+msgid "Can't find any results for requested query"
+msgstr "अनुरोधित क्वेरी के लिए कोई परिणाम नहीं मिला"
+
+#: ../src/view.py:255
+msgid "Can't access Wikipedia"
+msgstr "विकिपीडिया तक नहीं पहुंच सकता"
+
+#: ../src/page.py:116
+msgid "Check your Internet connection and try again"
+msgstr "अपना इंटरनेट कनेक्शन जांचें और पुनः प्रयास करें"
+
+#: ../data/ui/dialogs.ui:53
+msgid "Clear Bookmarks List?"
+msgstr "बुकमार्क साफ़ करें?"
+
+#: ../data/ui/dialogs.ui:54
+msgid "All bookmarks in the list will be removed permanently."
+msgstr "सूची में सभी बुकमार्क्स स्थायी रूप से हटा दिए जाएंगे"
+
+#: ../data/ui/dialogs.ui:65
+msgid "Clear List"
+msgstr "सूची साफ़ करें"
+
+#: ../data/ui/search-settings.ui:58
+msgid "Search Suggestions"
+msgstr "सुझाव खोजें"
+
+#. Add your name like this:
+#. 
+#. Hugo Olabera <hugolabe@gmail.com>
+#: ../data/ui/about.ui:16
+msgid "translator-credits"
+msgstr "Marc Pevaz Boocha <mboocha@sudomsg.xyz>"
+
+#: ../src/view.py:366 ../data/ui/bookmarks.ui:27
+msgid "Add Bookmark"
+msgstr "नाया बुकमार्क"
+
+#: ../data/ui/shortcuts.ui:16
+msgctxt "shortcut window"
+msgid "General"
+msgstr "सामान्य"
+
+#: ../data/ui/shortcuts.ui:31
+msgctxt "shortcut window"
+msgid "Table of contents"
+msgstr "विषयसूची"
+
+#: ../data/ui/shortcuts.ui:61
+msgctxt "shortcut window"
+msgid "Preferences"
+msgstr "पसंद"
+
+#: ../data/ui/shortcuts.ui:73
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "बंद"
+
+#: ../data/ui/shortcuts.ui:67
+msgctxt "shortcut window"
+msgid "Keyboard shortcuts"
+msgstr "कुंजीपटल अल्प मार्ग"
+
+#: ../data/ui/shortcuts.ui:133
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "मार्गदर्शन"
+
+#: ../data/ui/shortcuts.ui:136
+msgctxt "shortcut window"
+msgid "Search articles"
+msgstr "लेख खोजें"
+
+#: ../data/ui/shortcuts.ui:160
+msgctxt "shortcut window"
+msgid "Previous page"
+msgstr "पिछला पृष्ठ"
+
+#: ../data/ui/shortcuts.ui:166
+msgctxt "shortcut window"
+msgid "Next page"
+msgstr "अगला पृष्ठ"
+
+#: ../data/ui/shortcuts.ui:81 ../data/ui/shortcuts.ui:84
+msgctxt "shortcut window"
+msgid "Bookmarks"
+msgstr "बुकमार्क"
+
+#: ../data/ui/shortcuts.ui:90
+msgctxt "shortcut window"
+msgid "Add bookmark"
+msgstr "बुकमार्क में जोड़ें"
+
+#: ../data/ui/menu-main.ui:45
+msgid "Preferences"
+msgstr "पसंद"
+
+#: ../data/ui/menu-main.ui:49
+msgid "Keyboard Shortcuts"
+msgstr "कुंजीपटल अल्प मार्ग"
+
+#: ../data/ui/menu-main.ui:53
+msgid "About Wike"
+msgstr "विक का परिचय"
+
+#: ../data/ui/prefs.ui:18
+msgid "Behavior"
+msgstr "व्यवहार"
+
+#: ../data/ui/prefs.ui:59
+msgid "Keep a List of Recent Articles"
+msgstr "हाल के लेखों की एक सूची रखें"
+
+#: ../data/ui/window.ui:102
+msgid "Languages"
+msgstr "भाषा"
+
+#. Don't translate app name!
+#: ../data/com.github.hugolabe.Wike.desktop.in:3
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:7
+msgid "Wike"
+msgstr "विक"
+
+#: ../data/ui/about.ui:14 ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
+msgid "Search and read Wikipedia articles"
+msgstr "विकिपीडिया लेख खोजें और पढ़ें"
+
+#. Don't remove semicolons!
+#: ../data/com.github.hugolabe.Wike.desktop.in:12
+msgid "Wikipedia;Encyclopedia;"
+msgstr "विकिपीडिया;विश्वज्ञानकोश;"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:11
+msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
+msgstr "वाइक गनोम डेस्कटॉप के लिए एक विकिपीडिया रीडर है। लेखों के सरल और विचलित-मुक्त दृश्य के साथ, इस ऑनलाइन विश्वकोश की सभी सामग्री को एक मूल एप्लिकेशन में पहुंच प्रदान करता है।"
+
+#: ../data/ui/dialogs.ui:71
+msgid "The history of visited articles will be deleted permanently."
+msgstr "विज़िट किए गए लेखों का इतिहास स्थायी रूप से हटा दिया जाएगा।"
+
+#: ../data/ui/dialogs.ui:82
+msgid "Clear Personal Data?"
+msgstr "व्यक्तिगत डेटा साफ़ करें?"
+
+#: ../data/ui/dialogs.ui:83
+msgid "Cookies and cache data will be deleted permanently."
+msgstr "कुकीज़ और कैशे डेटा स्थायी रूप से हटा दिए जाएंगे."
+
+#: ../data/ui/dialogs.ui:89
+msgid "Clear Data"
+msgstr "स्पष्ट डेटा"
+
+#. Don't remove %s tag!
+#: ../src/wike-sp.in:69
+msgid "Search “%s” on Wikipedia"
+msgstr "%s खोजें विकिपीडिया पर"
+
+#: ../data/ui/prefs.ui:21
+msgid "Home Page"
+msgstr "घर  पृष्ठ"
+
+#: ../data/ui/prefs.ui:22
+msgid "The page that will be displayed when Wike starts"
+msgstr "वह पृष्ठ जो वाइक प्रारंभ होने पर प्रदर्शित होगा"
+
+#: ../data/ui/prefs.ui:39
+msgid "Privacy"
+msgstr "गोपनीयता"
+
+#: ../data/ui/prefs.ui:42
+msgid "Allow Live Search on Desktop"
+msgstr "डेस्कटॉप पर लाइव खोज की अनुमति दें"
+
+#: ../data/ui/prefs.ui:43
+msgid "Warning: all desktop searches will be sent to Wikipedia"
+msgstr "चेतावनी: सभी डेस्कटॉप खोजें विकिपीडिया पर भेजी जाएंगी"
+
+#: ../data/ui/prefs.ui:60
+msgid "Wike will remember the history of visited articles"
+msgstr "विके को विज़िट किए गए लेखों का इतिहास याद रहेगा"
+
+#: ../data/ui/prefs.ui:69 ../data/ui/prefs.ui:87
+msgid "Clear"
+msgstr "स्पष्ट"
+
+#: ../data/ui/prefs.ui:78
+msgid "Cookies and cache data will be deleted"
+msgstr "कुकीज़ और कैश डेटा हटा दिया जाएगा"
+
+#: ../data/ui/page.ui:83
+msgid "Try Again"
+msgstr "पुनः प्रयास करें"
+
+#: ../data/ui/menu-main.ui:29 ../data/ui/page.ui:74
+msgid "Random Article"
+msgstr "यादृच्छिक लेख"
+
+#: ../data/ui/prefs.ui:28
+msgid "Last article"
+msgstr "पिछला लेख"
+
+#: ../data/ui/window.ui:112
+msgid "Bookmarks"
+msgstr "बुकमार्क"
+
+#: ../data/ui/languages.ui:56
+msgid "Select All"
+msgstr "सबका चयन करें"
+
+#: ../data/ui/languages.ui:61
+msgid "Select None"
+msgstr "कुछ मत चुनिए"
+
+#: ../data/ui/shortcuts.ui:19
+msgctxt "shortcut window"
+msgid "Main menu"
+msgstr "मुख्य मेन्यू"
+
+#: ../data/ui/shortcuts.ui:98
+msgctxt "shortcut window"
+msgid "Tabs"
+msgstr "टैबे"
+
+#: ../data/ui/shortcuts.ui:101
+msgctxt "shortcut window"
+msgid "New tab"
+msgstr "नाया टैब"
+
+#: ../data/ui/shortcuts.ui:107
+msgctxt "shortcut window"
+msgid "Close current tab"
+msgstr "मौजूदा टैब बंद करें"
+
+#: ../data/ui/shortcuts.ui:113
+msgctxt "shortcut window"
+msgid "Next tab"
+msgstr "अगला टैब"
+
+#: ../data/ui/shortcuts.ui:119
+msgctxt "shortcut window"
+msgid "Previous tab"
+msgstr "पिछला टैब"
+
+#: ../src/view.py:378
+msgid "Open Link in New Tab"
+msgstr "नाया टैब मैं कड़ि खोंले"
+
+#: ../src/view.py:384
+msgid "Add Link to Bookmarks"
+msgstr "बुकमार्क में लिंक जोड़ें"
+
+#: ../src/view.py:380
+msgid "Open Link in Browser"
+msgstr "ब्राउज़र मैं कड़ि खोंले"
+
+#: ../src/view.py:386 ../data/ui/menu-main.ui:39
+msgid "Copy Link to Clipboard"
+msgstr "कड़ि नकल करें"
+
+#: ../data/ui/prefs.ui:51
+msgid "Desktop searches are performed in the default language"
+msgstr "डेस्कटॉप खोजें डिफ़ॉल्ट भाषा में की जाती हैं"
+
+#: ../data/ui/prefs.ui:52
+msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
+msgstr "आप उपसर्ग का उपयोग करके अन्य भाषाओं में खोज कर सकते हैं। जैसे. -स्पेनिश में खोजने के लिए"
+
+#: ../data/ui/shortcuts.ui:148
+msgctxt "shortcut window"
+msgid "Random article"
+msgstr "यादृच्छिक लेख"
+
+#: ../src/menu.py:86
+msgid "Pick a Font"
+msgstr "एक फ़ॉन्ट चुनें"
+
+#: ../src/menu.py:115
+msgid "Font"
+msgstr "फ़ॉन्ट"
+
+#: ../src/history.py:33
+msgid "Today"
+msgstr "आज"
+
+#: ../src/history.py:33
+msgid "Last 7 days"
+msgstr "पिछले 7 दिन"
+
+#: ../src/history.py:33
+msgid "Last 30 days"
+msgstr "पिछले 30 दिनों में"
+
+#: ../src/history.py:33
+msgid "Show full history"
+msgstr "पूरा इतिहास दिखाओ"
+
+#: ../src/page.py:143 ../src/window.py:381
+msgid "Bookmark added: "
+msgstr "बुकमार्क जोड़ा गया: "
+
+#: ../src/window.py:500
+msgid "Print operation completed"
+msgstr "मुद्रण कार्य पूरा हुआ"
+
+#: ../src/window.py:506
+msgid "Print operation failed"
+msgstr "मुद्रण कार्रवाई विफल रही"
+
+#: ../src/window.py:521
+msgid "Link copied to clipboard"
+msgstr "लिंक को क्लिपबोर्ड पर कॉपी किया गया"
+
+#: ../src/application.py:157
+msgid "Source Code"
+msgstr "सोर्स कोड"
+
+#: ../src/application.py:158
+msgid "Report an Issue"
+msgstr "मामले की रिपोर्ट करें"
+
+#: ../src/application.py:159
+msgid "Help Translating"
+msgstr "अनुवाद करने में सहायता करें"
+
+#: ../src/application.py:160
+msgid "Contributors"
+msgstr "योगदानकर्ताओं"
+
+#: ../src/application.py:161
+msgid "Flag Icons"
+msgstr "ध्वज चिह्न"
+
+#: ../src/application.py:162
+msgid "All content from Wikipedia.org and available under CC BY-SA 3.0 unless otherwise noted.\n"
+"\n"
+"Wike is an independent development not endorsed by or affiliated with the Wikimedia Foundation."
+msgstr "सभी सामग्री विकिपीडिया.ओआरजी से है और CC BY-SA 3.0 के अंतर्गत उपलब्ध है जब तक कि अन्यथा उल्लेख न किया गया हो।\n"
+"\n"
+"वाइक एक स्वतंत्र विकास है जो विकिमीडिया फाउंडेशन द्वारा समर्थित या संबद्ध नहीं है।"
+
+#: ../src/page.py:79
+msgid "Loading"
+msgstr "लोड हो रहा है"
+
+#: ../src/page.py:107
+msgid "Article not Found"
+msgstr "आलेख नहीं मिला"
+
+#: ../src/page.py:115
+msgid "Can't Access Wikipedia"
+msgstr "विकिपीडिया तक नहीं पहुंच सकते"
+
+#: ../src/bookmarks.py:31
+msgid "Reading list"
+msgstr "पढ़ने की सूची"
+
+#: ../data/ui/toc.ui:42
+msgid "No Contents"
+msgstr "कोई सामग्री नहीं"
+
+#: ../data/ui/toc.ui:43
+msgid "There is no table of contents for this page"
+msgstr "इस पृष्ठ के लिए कोई सामग्री तालिका नहीं है"
+
+#: ../data/ui/search-settings.ui:16 ../data/ui/languages.ui:10
+msgid "Pick your Languages"
+msgstr "अपनी भाषाएँ चुनें"
+
+#: ../data/ui/langlinks.ui:17 ../data/ui/languages.ui:33
+msgid "Filter languages"
+msgstr "भाषाएँ फ़िल्टर करें"
+
+#: ../data/ui/shortcuts.ui:25
+msgctxt "shortcut window"
+msgid "Sidebar"
+msgstr "साइड बार"
+
+#: ../data/ui/shortcuts.ui:37
+msgctxt "shortcut window"
+msgid "Languages"
+msgstr "बोली"
+
+#: ../data/ui/shortcuts.ui:43
+msgctxt "shortcut window"
+msgid "Search text"
+msgstr "पाठ खोजें"
+
+#: ../data/ui/shortcuts.ui:49
+msgctxt "shortcut window"
+msgid "Print"
+msgstr "छाप"
+
+#: ../data/ui/shortcuts.ui:55
+msgctxt "shortcut window"
+msgid "Copy link to clipboard"
+msgstr "लिंक को क्लिपबोर्ड पर कॉपी करें"
+
+#: ../data/ui/shortcuts.ui:142
+msgctxt "shortcut window"
+msgid "Main page"
+msgstr "मुख्य पृष्ठ"
+
+#: ../data/ui/shortcuts.ui:154
+msgctxt "shortcut window"
+msgid "History of recent articles"
+msgstr "हाल के लेखों का इतिहास"
+
+#: ../data/ui/shortcuts.ui:172
+msgctxt "shortcut window"
+msgid "Reload current page"
+msgstr "वर्तमान पृष्ठ पुनः लोड करें"
+
+#: ../data/ui/page.ui:53 ../data/ui/search.ui:15
+msgid "Search Wikipedia"
+msgstr "विकिपीडिया खोजें"
+
+#: ../data/ui/dialogs.ui:11
+msgid "New Bookmarks List"
+msgstr "नई बुकमार्क सूची"
+
+#: ../data/ui/dialogs.ui:18 ../data/ui/dialogs.ui:39
+msgid "List Name"
+msgstr "नाम की सूचि"
+
+#: ../data/ui/dialogs.ui:26 ../data/ui/dialogs.ui:47 ../data/ui/dialogs.ui:64
+#: ../data/ui/dialogs.ui:76 ../data/ui/dialogs.ui:88
+msgid "Cancel"
+msgstr "रद्द करना"
+
+#: ../data/ui/dialogs.ui:27
+msgid "Create List"
+msgstr "सूची बनाएं"
+
+#: ../data/ui/dialogs.ui:32
+msgid "Rename Bookmarks List"
+msgstr "बुकमार्क सूची का नाम बदलें"
+
+#: ../data/ui/dialogs.ui:48
+msgid "Rename List"
+msgstr "सूची का नाम बदलें"
+
+#: ../data/ui/dialogs.ui:60
+msgid "Also delete the list"
+msgstr "साथ ही सूची भी हटा दें"
+
+#: ../data/ui/dialogs.ui:70
+msgid "Clear History?"
+msgstr "इतिहास मिटा दें?"
+
+#: ../data/ui/history.ui:27 ../data/ui/dialogs.ui:77
+msgid "Clear History"
+msgstr "इतिहास मिटा दें"
+
+#: ../data/ui/prefs.ui:26
+msgid "Wikipedia main page"
+msgstr "विकिपीडिया मुख्य पृष्ठ"
+
+#: ../data/ui/prefs.ui:27
+msgid "Random article"
+msgstr "यादृच्छिक लेख"
+
+#: ../data/ui/headerbar.ui:27
+msgid "New Tab"
+msgstr "नया टैब"
+
+#: ../data/ui/actionbar.ui:34 ../data/ui/headerbar.ui:46
+msgid "View"
+msgstr "देखना"
+
+#: ../data/ui/actionbar.ui:27 ../data/ui/headerbar.ui:52
+msgid "Sidebar"
+msgstr "साइड बार"
+
+#: ../data/ui/page.ui:20
+msgid "Search text"
+msgstr "पाठ खोजें"
+
+#: ../data/ui/page.ui:54
+msgid "Start typing to search Wikipedia articles"
+msgstr "विकिपीडिया लेख खोजने के लिए टाइप करना प्रारंभ करें"
+
+#: ../data/ui/menu-main.ui:25 ../data/ui/page.ui:64
+msgid "Main Page"
+msgstr "मुख्य पृष्ठ"
+
+#: ../data/ui/langlinks.ui:38
+msgid "No Languages"
+msgstr "कोई भाषा नहीं"
+
+#: ../data/ui/langlinks.ui:39
+msgid "This page is not available in other languages"
+msgstr "यह पेज अन्य भाषाओं में उपलब्ध नहीं है"
+
+#: ../data/ui/menu-view.ui:21
+msgid "Show"
+msgstr "दिखाओ"
+
+#: ../data/ui/menu-view.ui:23
+msgid "Language Flags"
+msgstr "भाषा झंडे"
+
+#: ../data/ui/menu-view.ui:27
+msgid "Link Previews"
+msgstr "लिंक पूर्वावलोकन"
+
+#: ../data/ui/history.ui:50
+msgid "Empty History"
+msgstr "खाली इतिहास"
+
+#: ../data/ui/history.ui:51
+msgid "There are no recent articles in the history"
+msgstr "इतिहास में कोई नवीनतम लेख नहीं हैं"
+
+#: ../data/ui/bookmarks.ui:56
+msgid "No Bookmarks"
+msgstr "कोई बुकमार्क नहीं"
+
+#: ../data/ui/bookmarks.ui:57
+msgid "Use the Add Bookmark button or press Ctrl+D to add the current article to the list"
+msgstr "वर्तमान आलेख को सूची में जोड़ने के लिए बुकमार्क जोड़ें बटन का उपयोग करें या Ctrl+D दबाएँ"
+
+#: ../data/ui/window.ui:93
+msgid "Contents"
+msgstr "अंतर्वस्तु"
+
+#: ../data/ui/window.ui:122
+msgid "History"
+msgstr "इतिहास"
+
+#: ../data/ui/menu-main.ui:13
+msgid "Print"
+msgstr "छाप"
+
+#: ../data/ui/menu-main.ui:18
+msgid "Search Text"
+msgstr "पाठ खोजें"
+
+#: ../data/ui/menu-main.ui:35
+msgid "Open in Browser"
+msgstr "ब्राउज़र में खोलें"
+
+#: ../data/ui/bookmarks-menu.ui:12
+msgid "Create New List…"
+msgstr "नई सूची बनाएं..."
+
+#: ../data/ui/bookmarks-menu.ui:18
+msgid "Rename List…"
+msgstr "सूची का नाम बदलें..."
+
+#: ../data/ui/bookmarks-menu.ui:22
+msgid "Clear List…"
+msgstr "स्पष्ट सूची…"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
+msgid "It supports more than 300 languages and integrates with desktop searches, providing suggestions that make it easier to find any content. Other features are: bookmarks with multiple lists, article table of contents, history, text searches and much more…"
+msgstr "यह 300 से अधिक भाषाओं का समर्थन करता है और डेस्कटॉप खोजों के साथ एकीकृत होता है, सुझाव प्रदान करता है जिससे किसी भी सामग्री को ढूंढना आसान हो जाता है। अन्य विशेषताएं हैं: एकाधिक सूचियों वाले बुकमार्क, लेख सामग्री तालिका, इतिहास, पाठ खोज और बहुत कुछ..."
+
+#: ../data/ui/window.ui:66
+msgid "Pin Sidebar"
+msgstr "साइडबार पिन करें"
+
+#: ../data/ui/headerbar.ui:13
+msgid "Back"
+msgstr "पीछे"
+
+#: ../data/ui/headerbar.ui:20
+msgid "Forward"
+msgstr "आगे"
+
+#: ../data/ui/headerbar.ui:39
+msgid "Main Menu"
+msgstr "मुख्य मेन्यू"
+
+#: ../data/ui/shortcuts.ui:125
+msgctxt "shortcut window"
+msgid "View open tabs"
+msgstr "खुले हुए टैब देखें"
+
+#: ../data/ui/prefs.ui:29
+msgid "Restore open articles"
+msgstr "खुले आलेख पुनर्स्थापित करें"
+
+#: ../data/ui/prefs.ui:77
+msgid "Clear Personal Data on Close"
+msgstr "बंद करने पर व्यक्तिगत डेटा साफ़ करें"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:31
+msgid "Encyclopedia"
+msgstr "विश्वकोश"
+
+#: 
+msgid "Article Menu"
+msgstr "आलेख मेनू"
+

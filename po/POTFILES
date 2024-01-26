@@ -14,6 +14,7 @@ data/ui/langlinks.ui
 data/ui/langlinks-row.ui
 data/ui/languages.ui
 data/ui/languages-row.ui
+data/ui/menu-article.ui
 data/ui/menu-main.ui
 data/ui/menu-view.ui
 data/ui/page.ui

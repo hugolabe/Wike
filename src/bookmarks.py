@@ -326,8 +326,8 @@ class BookmarksPanel(Adw.Bin):
   # On list activated load article in view
 
   def _list_activated_cb(self, bookmarks_list, row):
-    if self._window.flap.get_fold_policy() == Adw.FlapFoldPolicy.ALWAYS:
-      self._window.flap.set_reveal_flap(False)
+    if self._window.panel_split.get_collapsed():
+      self._window.panel_split.set_show_sidebar(False)
 
     self._window.page.wikiview.load_wiki(row.uri)
 

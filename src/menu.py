@@ -23,6 +23,21 @@ class MainMenuPopover(Gtk.PopoverMenu):
     self.set_menu_model(main_menu)
 
 
+# Popover for article menu
+
+class ArticleMenuPopover(Gtk.PopoverMenu):
+
+  # Set menu model
+
+  def __init__(self):
+    super().__init__()
+
+    builder_menu = Gtk.Builder()
+    builder_menu.add_from_resource('/com/github/hugolabe/Wike/ui/menu-article.ui')
+    article_menu = builder_menu.get_object('article_menu')
+    self.set_menu_model(article_menu)
+
+
 # Popover for view menu
 
 class ViewMenuPopover(Gtk.PopoverMenu):

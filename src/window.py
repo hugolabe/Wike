@@ -5,41 +5,45 @@
 
 import os
 
-from gi.repository import GLib, GObject, Gio, Gdk, Gtk, Adw, WebKit
+from gi.repository import GLib, Gio, Gdk, Gtk, Adw, WebKit
 
 from wike.data import settings
 from wike.bookmarks import BookmarksPanel
 from wike.history import HistoryPanel
 from wike.langlinks import LanglinksPanel
-from wike.menu import MainMenuPopover, ViewMenuPopover
+from wike.menu import ArticleMenuPopover, MainMenuPopover, ViewMenuPopover
 from wike.page import PageBox
 from wike.search import SearchBox
 from wike.toc import TocPanel
 
 
-# Main window with a flap a headerbar and an actionbar
+# Main window
 
 @Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/window.ui')
 class Window(Adw.ApplicationWindow):
 
   __gtype_name__ = 'Window'
 
-  break_point = Gtk.Template.Child()
-  window_box = Gtk.Template.Child()
-  headerbar = Gtk.Template.Child()
-  actionbar = Gtk.Template.Child()
-  menu_button = Gtk.Template.Child()
-  view_button = Gtk.Template.Child()
-  view_button_mob = Gtk.Template.Child()
+  breakpoint_window_medium = Gtk.Template.Child()
+  breakpoint_window_small = Gtk.Template.Child()
+  breakpoint_content = Gtk.Template.Child()
   toast_overlay = Gtk.Template.Child()
-  flap = Gtk.Template.Child()
-  flap_stack = Gtk.Template.Child()
-  flap_pin_button = Gtk.Template.Child()
-  flap_toc_button = Gtk.Template.Child()
-  flap_langlinks_button = Gtk.Template.Child()
-  flap_bookmarks_button = Gtk.Template.Child()
-  flap_history_button = Gtk.Template.Child()
-  tabbar = Gtk.Template.Child()
+  main_button = Gtk.Template.Child()
+  toc_button = Gtk.Template.Child()
+  langlinks_button = Gtk.Template.Child()
+  bookmarks_button = Gtk.Template.Child()
+  history_button = Gtk.Template.Child()
+  panel_button = Gtk.Template.Child()
+  panel_split = Gtk.Template.Child()
+  panel_stack = Gtk.Template.Child()
+  main_button_mob = Gtk.Template.Child()
+  close_panel_button_mob = Gtk.Template.Child()
+  headerbar = Gtk.Template.Child()
+  article_button = Gtk.Template.Child()
+  view_button = Gtk.Template.Child()
+  panel_button_mob = Gtk.Template.Child()
+  article_button_mob = Gtk.Template.Child()
+  view_button_mob = Gtk.Template.Child()
   tabview = Gtk.Template.Child()
   taboverview = Gtk.Template.Child()
 
@@ -58,7 +62,10 @@ class Window(Adw.ApplicationWindow):
     self._print_settings = Gtk.PrintSettings()
 
     self.main_menu_popover = MainMenuPopover()
-    self.menu_button.set_popover(self.main_menu_popover)
+    self.main_button.set_popover(self.main_menu_popover)
+
+    self.article_menu_popover = ArticleMenuPopover()
+    self.article_button.set_popover(self.article_menu_popover)
 
     self.view_menu_popover = ViewMenuPopover(self)
     self.view_button.set_popover(self.view_menu_popover)
@@ -67,27 +74,16 @@ class Window(Adw.ApplicationWindow):
     self.headerbar.set_title_widget(self.search_box)
 
     self.toc_panel = TocPanel(self)
-    toc_stack_page = self.flap_stack.add_named(self.toc_panel, 'toc')
+    toc_stack_page = self.panel_stack.add_named(self.toc_panel, 'toc')
 
     self.langlinks_panel = LanglinksPanel(self)
-    langlinks_stack_page = self.flap_stack.add_named(self.langlinks_panel, 'langlinks')
+    langlinks_stack_page = self.panel_stack.add_named(self.langlinks_panel, 'langlinks')
 
     self.bookmarks_panel = BookmarksPanel(self)
-    bookmarks_stack_page = self.flap_stack.add_named(self.bookmarks_panel, 'bookmarks')
+    bookmarks_stack_page = self.panel_stack.add_named(self.bookmarks_panel, 'bookmarks')
     
     self.history_panel = HistoryPanel(self)
-    history_stack_page = self.flap_stack.add_named(self.history_panel, 'history')
-
-    flap_page = settings.get_string('flap-page')
-    match flap_page:
-      case 'langlinks':
-        self.flap_langlinks_button.set_active(True)
-      case 'bookmarks':
-        self.flap_bookmarks_button.set_active(True)
-      case 'history':
-        self.flap_history_button.set_active(True)
-      case _:
-        self.flap_toc_button.set_active(True)
+    history_stack_page = self.panel_stack.add_named(self.history_panel, 'history')
 
     self.page = PageBox(self, None)
 
@@ -131,22 +127,28 @@ class Window(Adw.ApplicationWindow):
           tabpage = self.tabview.append(self.page)
           self.page.wikiview.load_message('blank')
 
-    settings.bind('flap-pinned', self.flap_pin_button, 'active', Gio.SettingsBindFlags.DEFAULT)
-    settings.bind('flap-page', self.flap_stack, 'visible-child-name', Gio.SettingsBindFlags.DEFAULT)
+    settings.bind('panel-pinned', self.panel_button, 'active', Gio.SettingsBindFlags.DEFAULT)
+    settings.bind('panel-page', self.panel_stack, 'visible-child-name', Gio.SettingsBindFlags.DEFAULT)
 
     self._set_actions(app)
 
-    self.break_point.connect('apply', self._breakpoint_apply_cb)
-    self.break_point.connect('unapply', self._breakpoint_unapply_cb)
+    self.breakpoint_window_medium.connect('apply', self._breakpoint_medium_apply_cb)
+    self.breakpoint_window_medium.connect('unapply', self._breakpoint_medium_unapply_cb)
+    self.breakpoint_window_small.connect('apply', self._breakpoint_small_apply_cb)
+    self.breakpoint_window_small.connect('unapply', self._breakpoint_small_unapply_cb)
+    self.breakpoint_content.connect('apply', self._breakpoint_content_apply_cb)
+    self.breakpoint_content.connect('unapply', self._breakpoint_content_unapply_cb)
 
     self.handler_selpage = self.tabview.connect('notify::selected-page', self._tabview_selected_page_cb)
     self.tabview.connect('close-page', self._tabview_close_page_cb)
     self.taboverview.connect('create-tab', self._taboverview_create_tab_cb)
 
-    self.flap_toc_button.connect('toggled', self._flap_switcher_button_cb, 'toc')
-    self.flap_langlinks_button.connect('toggled', self._flap_switcher_button_cb, 'langlinks')
-    self.flap_bookmarks_button.connect('toggled', self._flap_switcher_button_cb, 'bookmarks')
-    self.flap_history_button.connect('toggled', self._flap_switcher_button_cb, 'history')
+    self.toc_button.connect('toggled', self._bar_selector_button_toggled_cb, 'toc')
+    self.langlinks_button.connect('toggled', self._bar_selector_button_toggled_cb, 'langlinks')
+    self.bookmarks_button.connect('toggled', self._bar_selector_button_toggled_cb, 'bookmarks')
+    self.history_button.connect('toggled', self._bar_selector_button_toggled_cb, 'history')
+    self.panel_split.connect('notify::show-sidebar', self._panel_split_show_cb)
+    self.close_panel_button_mob.connect('clicked', self._close_panel_button_mob_cb)
 
     gesture = Gtk.GestureClick(button=0, propagation_phase=Gtk.PropagationPhase.CAPTURE)
     self.add_controller(gesture)
@@ -183,39 +185,126 @@ class Window(Adw.ApplicationWindow):
       if accel:
         app.set_accels_for_action('win.' + action, accel)
 
-    toggle_sidebar_action = Gio.SimpleAction.new_stateful('toggle-sidebar', None, GLib.Variant.new_boolean(False))
-    toggle_sidebar_action.connect('change-state', self._toggle_sidebar_cb)
-    self.add_action(toggle_sidebar_action)
-    app.set_accels_for_action('win.toggle-sidebar', ('F9',))
+    pin_panel_action = Gio.SimpleAction.new_stateful('pin-panel', None, GLib.Variant.new_boolean(False))
+    pin_panel_action.connect('change-state', self._pin_panel_cb)
+    self.add_action(pin_panel_action)
+    app.set_accels_for_action('win.pin-panel', ('F9',))
 
-    pin_sidebar_action = Gio.SimpleAction.new_stateful('pin-sidebar', None, GLib.Variant.new_boolean(False))
-    pin_sidebar_action.connect('change-state', self._pin_sidebar_cb)
-    self.add_action(pin_sidebar_action)
+    if settings.get_boolean('panel-pinned'):
+      pin_panel_action.change_state(GLib.Variant.new_boolean(True))
 
-    self.flap.connect('notify::reveal-flap', self._flap_reveal_cb)
+  # On breakpoint window medium apply
 
-    if settings.get_boolean('flap-pinned'):
-      pin_sidebar_action.change_state(GLib.Variant.new_boolean(True))
+  def _breakpoint_medium_apply_cb(self, break_point):
+    self.panel_split.set_collapsed(True)
 
-  # On breakpoint apply
+    pin_panel_action = self.lookup_action('pin-panel')
+    pin_panel_action.set_enabled(False)
 
-  def _breakpoint_apply_cb(self, break_point):
-    pin_sidebar_action = self.lookup_action('pin-sidebar')
-    if pin_sidebar_action.get_state():
-      self.flap.set_fold_policy(Adw.FlapFoldPolicy.ALWAYS)
+  # On breakpoint window medium unapply
 
+  def _breakpoint_medium_unapply_cb(self, break_point):
+    pin_panel_action = self.lookup_action('pin-panel')
+    pin_panel_action.set_enabled(True)
+
+    if self.panel_button.get_active():
+      self.panel_split.set_collapsed(False)
+
+  # On breakpoint window small apply
+
+  def _breakpoint_small_apply_cb(self, break_point):
+    self.main_button.set_popover(None)
+    self.main_button_mob.set_popover(self.main_menu_popover)
+
+    pin_panel_action = self.lookup_action('pin-panel')
+    pin_panel_action.set_enabled(False)
+
+  # On breakpoint window small unapply
+
+  def _breakpoint_small_unapply_cb(self, break_point):
+    self.main_button_mob.set_popover(None)
+    self.main_button.set_popover(self.main_menu_popover)
+
+    pin_panel_action = self.lookup_action('pin-panel')
+    pin_panel_action.set_enabled(True)
+
+  # On breakpoint content apply
+
+  def _breakpoint_content_apply_cb(self, break_point):
+    self.article_button.set_popover(None)
+    self.article_button_mob.set_popover(self.article_menu_popover)
     self.view_button.set_popover(None)
     self.view_button_mob.set_popover(self.view_menu_popover)
 
-  # On breakpoint unapply
+  # On breakpoint content unapply
 
-  def _breakpoint_unapply_cb(self, break_point):
-    pin_sidebar_action = self.lookup_action('pin-sidebar')
-    if pin_sidebar_action.get_state():
-      self.flap.set_fold_policy(Adw.FlapFoldPolicy.NEVER)
-
+  def _breakpoint_content_unapply_cb(self, break_point):
+    self.article_button_mob.set_popover(None)
+    self.article_button.set_popover(self.article_menu_popover)
     self.view_button_mob.set_popover(None)
     self.view_button.set_popover(self.view_menu_popover)
+
+  # On selector button toggled change panel view
+
+  def _bar_selector_button_toggled_cb(self, button, name):
+    if button.get_active():
+      self.panel_stack.set_visible_child_name(name)
+      if not self.panel_split.get_show_sidebar():
+        self.panel_split.set_show_sidebar(True)
+
+  # Panel show state changed
+
+  def _panel_split_show_cb(self, panel_split, param):
+    if panel_split.get_show_sidebar():
+      panel_page = self.panel_stack.get_visible_child_name()
+      match panel_page:
+        case 'toc':
+          self.toc_button.set_active(True)
+        case 'langlinks':
+          self.langlinks_button.set_active(True)
+        case 'bookmarks':
+          self.bookmarks_button.set_active(True)
+        case 'history':
+          self.history_button.set_active(True)
+    else:
+      self.toc_button.set_active(False)
+      self.langlinks_button.set_active(False)
+      self.bookmarks_button.set_active(False)
+      self.history_button.set_active(False)
+
+  # On close panel button clicked hide panel
+
+  def _close_panel_button_mob_cb(self, button):
+    self.panel_button_mob.set_active(False)
+
+  # Select toc in panel
+
+  def _show_toc_cb(self, action, parameter):
+    self.toc_button.set_active(True)
+
+  # Select langlinks in panel
+
+  def _show_langlinks_cb(self, action, parameter):
+    self.langlinks_button.set_active(True)
+
+  # Select bookmarks in panel
+
+  def _show_bookmarks_cb(self, action, parameter):
+    self.bookmarks_button.set_active(True)
+
+  # Select history in panel
+
+  def _show_history_cb(self, action, parameter):
+    self.history_button.set_active(True)
+
+  # On pin panel action set collapsed state
+
+  def _pin_panel_cb(self, action, parameter):
+    action.set_state(parameter)
+    if parameter:
+      self.panel_split.set_collapsed(False)
+    else:
+      self.panel_split.set_collapsed(True)
 
   # Handle mouse clicks with buttons 8 and 9
 
@@ -349,12 +438,6 @@ class Window(Adw.ApplicationWindow):
     tabpage = self.new_page('blank', None, True)
     return tabpage
 
-  # On flap switcher button toggled change panel view
-
-  def _flap_switcher_button_cb(self, button, name):
-    if button.get_active():
-      self.flap_stack.set_visible_child_name(name)
-
   # Go to previous page
 
   def _prev_page_cb(self, action, parameter):
@@ -370,7 +453,7 @@ class Window(Adw.ApplicationWindow):
   # Go to search entry
 
   def _go_search_cb(self, action, parameter):
-    self.headerbar.search_box.search_entry.grab_focus()
+    self.search_box.search_entry.grab_focus()
 
   # Add page to bookmarks
 
@@ -382,62 +465,6 @@ class Window(Adw.ApplicationWindow):
       if self.bookmarks_panel.add_bookmark(uri, title, lang):
         message = _('Bookmark added: ') + title
         self.send_notification(message)
-
-  # Show/hide sidebar (flap)
-
-  def _toggle_sidebar_cb(self, action, parameter):
-    action.set_state(parameter)
-
-    if parameter:
-      self.flap.set_reveal_flap(True)
-    else:
-      self.flap.set_reveal_flap(False)
-
-  # On pin sidebar action set state and update sidebar
-
-  def _pin_sidebar_cb(self, action, parameter):
-    action.set_state(parameter)
-    if parameter:
-      self.flap.set_fold_policy(Adw.FlapFoldPolicy.NEVER)
-    else:
-      self.flap.set_fold_policy(Adw.FlapFoldPolicy.ALWAYS)
-
-  # On flap reveal changed set action state
-
-  def _flap_reveal_cb(self, flap, parameter):
-    reveal_state = GLib.Variant.new_boolean(flap.get_reveal_flap())
-    toggle_sidebar_action = self.lookup_action('toggle-sidebar')
-    
-    if toggle_sidebar_action.get_state() != reveal_state:
-      toggle_sidebar_action.set_state(reveal_state)
-
-  # Show toc in sidebar
-
-  def _show_toc_cb(self, action, parameter):
-    self.flap_toc_button.set_active(True)
-    if self.flap.get_fold_policy() == Adw.FlapFoldPolicy.ALWAYS:
-      self.flap.set_reveal_flap(True)
-
-  # Show langlinks in sidebar
-
-  def _show_langlinks_cb(self, action, parameter):
-    self.flap_langlinks_button.set_active(True)
-    if self.flap.get_fold_policy() == Adw.FlapFoldPolicy.ALWAYS:
-      self.flap.set_reveal_flap(True)
-
-  # Show bookmarks in sidebar
-
-  def _show_bookmarks_cb(self, action, parameter):
-    self.flap_bookmarks_button.set_active(True)
-    if self.flap.get_fold_policy() == Adw.FlapFoldPolicy.ALWAYS:
-      self.flap.set_reveal_flap(True)
-
-  # Show history in sidebar
-
-  def _show_history_cb(self, action, parameter):
-    self.flap_history_button.set_active(True)
-    if self.flap.get_fold_policy() == Adw.FlapFoldPolicy.ALWAYS:
-      self.flap.set_reveal_flap(True)
 
   # Show Wikipedia main page
 

@@ -87,8 +87,8 @@ class LanglinksPanel(Adw.Bin):
   # On list activated load page in choosen language
 
   def _list_activated_cb(self, langs_list, row):
-    if self._window.flap.get_fold_policy() == Adw.FlapFoldPolicy.ALWAYS:
-      self._window.flap.set_reveal_flap(False)
+    if self._window.panel_split.get_collapsed():
+      self._window.panel_split.set_show_sidebar(False)
 
     self._window.page.wikiview.load_wiki(row.uri)
 

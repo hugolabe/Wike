@@ -77,14 +77,14 @@
       <summary>Base font size in pixels</summary>
     </key>
 
-    <key name="flap-pinned" type="b">
+    <key name="panel-pinned" type="b">
       <default>false</default>
-      <summary>Flap sidebar is pinned</summary>
+      <summary>Sidepanel is pinned</summary>
     </key>
 
-    <key name="flap-page" type="s">
+    <key name="panel-page" type="s">
       <default>"toc"</default>
-      <summary>Last flap sidebar page selected</summary>
+      <summary>Last sidepanel page selected</summary>
     </key>
 
     <key name="filter-history" type="i">

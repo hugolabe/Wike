@@ -11,14 +11,21 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <child>
       <object class="AdwToolbarView">
 
-        <!-- Filter entry -->
+        <!-- Header -->
         <child type="top">
-          <object class="GtkSearchEntry" id="filter_entry">
-            <property name="margin-start">6</property>
-            <property name="margin-end">6</property>
-            <property name="margin-top">6</property>
-            <property name="margin-bottom">6</property>
-            <property name="placeholder-text" translatable="yes">Filter languages</property>
+          <object class="GtkBox">
+            <style>
+              <class name="toolbar"/>
+            </style>
+
+            <!-- Filter entry -->
+            <child>
+              <object class="GtkSearchEntry" id="filter_entry">
+                <property name="placeholder-text" translatable="yes">Filter languages</property>
+                <property name="hexpand">true</property>
+              </object>
+            </child>
+
           </object>
         </child>
 
@@ -54,10 +61,10 @@ SPDX-License-Identifier: GPL-3.0-or-later
                   </object>
                 </child>
 
+              </object>
+            </child>
           </object>
-        </child>
-      </object>
-    </property>
+        </property>
 
       </object>
     </child>

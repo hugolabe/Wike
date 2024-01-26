@@ -13,19 +13,23 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <property name="width-request">360</property>
     <property name="height-request">480</property>
 
-    <!-- Breakpoint -->
+    <!-- Breakpoint for medium window size-->
     <child>
-      <object class="AdwBreakpoint" id="break_point">
-        <condition>max-width: 720px</condition>
-        <setter object="prev_button" property="visible">false</setter>
-        <setter object="next_button" property="visible">false</setter>
-        <setter object="newtab_button" property="visible">false</setter>
-        <setter object="tabs_button" property="visible">true</setter>
-        <setter object="flap_button" property="visible">false</setter>
-        <setter object="view_button" property="visible">false</setter>
-        <setter object="actionbar" property="visible">true</setter>
-        <setter object="tabbar" property="visible">false</setter>
-        <setter object="flap_pin_button" property="visible">false</setter>
+      <object class="AdwBreakpoint" id="breakpoint_window_medium">
+        <condition>max-width: 750px</condition>
+        <setter object="panel_button" property="visible">false</setter>
+      </object>
+    </child>
+
+    <!-- Breakpoint for small window size-->
+    <child>
+      <object class="AdwBreakpoint" id="breakpoint_window_small">
+        <condition>max-width: 450px</condition>
+        <setter object="bar_split" property="collapsed">true</setter>
+        <setter object="panel_split" property="collapsed">true</setter>
+        <setter object="panel_split" property="max-sidebar-width">450</setter>
+        <setter object="panel_button_mob" property="visible">true</setter>
+        <setter object="panel_actionbar" property="revealed">true</setter>
       </object>
     </child>
 
@@ -35,214 +39,362 @@ SPDX-License-Identifier: GPL-3.0-or-later
         <property name="view">tabview</property>
         <property name="enable-new-tab">true</property>
 
-        <!-- Window content box -->
-        <property name="child">
-          <object class="GtkBox" id="window_box">
-            <property name="orientation">vertical</property>
+        <!-- Toast overlay -->
+        <child>
+          <object class="AdwToastOverlay" id="toast_overlay">
 
-            <!-- Headerbar -->
+            <!-- First split view for left bar -->
             <child>
-              <object class="AdwHeaderBar" id="headerbar">
+              <object class="AdwOverlaySplitView" id="bar_split">
+                <property name="min-sidebar-width">46</property>
+                <property name="max-sidebar-width">46</property>
 
-                <!-- Prev navigation button -->
-                <child type="start">
-                  <object class="GtkButton" id="prev_button">
-                    <property name="icon-name">go-previous-symbolic</property>
-                    <property name="tooltip-text" translatable="yes">Back</property>
-                    <property name="action-name">win.prev-page</property>
-                  </object>
-                </child>
+                <!-- LEFT BAR -->
+                <property name="sidebar">
+                  <object class="AdwToolbarView">
 
-                <!-- Next navigation button -->
-                <child type="start">
-                  <object class="GtkButton" id="next_button">
-                    <property name="icon-name">go-next-symbolic</property>
-                    <property name="tooltip-text" translatable="yes">Forward</property>
-                    <property name="action-name">win.next-page</property>
-                  </object>
-                </child>
+                    <!-- LEFT BAR: Main menu button -->
+                    <child type="top">
+                      <object class="GtkMenuButton" id="main_button">
+                        <property name="icon-name">open-menu-symbolic</property>
+                        <property name="tooltip-text" translatable="yes">Main Menu</property>
+                        <property name="margin-top">6</property>
+                        <property name="margin-bottom">6</property>
+                        <property name="margin-start">6</property>
+                        <property name="margin-end">6</property>
+                        <property name="primary">true</property>
+                        <style>
+                          <class name="flat"/>
+                        </style>
+                      </object>
+                    </child>
 
-                <!-- New tab button -->
-                <child type="start">
-                  <object class="GtkButton" id="newtab_button">
-                    <property name="icon-name">tab-new-symbolic</property>
-                    <property name="tooltip-text" translatable="yes">New Tab</property>
-                    <property name="action-name">win.new-tab</property>
-                  </object>
-                </child>
-
-                <!-- Tab overview button -->
-                <child type="start">
-                  <object class="AdwTabButton" id="tabs_button">
-                    <property name="action-name">win.toggle-overview</property>
-                    <property name="view">tabview</property>
-                    <property name="visible">false</property>
-                  </object>
-                </child>
-
-                <!-- Main menu button -->
-                <child type="end">
-                  <object class="GtkMenuButton" id="menu_button">
-                    <property name="icon-name">open-menu-symbolic</property>
-                    <property name="tooltip-text" translatable="yes">Main Menu</property>
-                    <property name="primary">true</property>
-                  </object>
-                </child>
-
-                <!-- View menu button -->
-                <child type="end">
-                  <object class="GtkMenuButton" id="view_button">
-                    <property name="icon-name">view-reveal-symbolic</property>
-                    <property name="tooltip-text" translatable="yes">View</property>
-                  </object>
-                </child>
-
-                <!-- Toggle sidebar button -->
-                <child type="end">
-                  <object class="GtkToggleButton" id="flap_button">
-                    <property name="icon-name">sidebar-show-right-symbolic</property>
-                    <property name="tooltip-text" translatable="yes">Sidebar</property>
-                    <property name="action-name">win.toggle-sidebar</property>
-                  </object>
-                </child>
-
-              </object>
-            </child>
-
-            <!-- Toast overlay -->
-            <child>
-              <object class="AdwToastOverlay" id="toast_overlay">
-
-                <!-- Flap -->
-                <child>
-                  <object class="AdwFlap" id="flap">
-                    <property name="flap-position">end</property>
-                    <property name="reveal-flap">false</property>
-                    <property name="fold-policy">always</property>
-
-                    <!-- Flap content -->
+                    <!-- LEFT BAR: Selector buttons box -->
                     <property name="content">
                       <object class="GtkBox">
                         <property name="orientation">vertical</property>
+                        <property name="vexpand">true</property>
+                        <property name="margin-top">38</property>
+                        <property name="margin-start">6</property>
+                        <property name="margin-end">6</property>
+                        <property name="spacing">6</property>
 
-                        <!-- Tab bar -->
+                        <!-- TOC button -->
                         <child>
-                          <object class="AdwTabBar" id="tabbar">
-                            <property name="view">tabview</property>
+                          <object class="GtkToggleButton" id="toc_button">
+                            <property name="icon-name">view-list-symbolic</property>
+                            <property name="tooltip-text" translatable="yes">Contents</property>
+                            <property name="active" bind-source="toc_button_mob" bind-property="active" bind-flags="sync-create"/>
+                            <style>
+                              <class name="flat"/>
+                            </style>
+                          </object>
+                        </child>
 
-                            <!-- Tab overview button -->
-                            <property name="start-action-widget">
-                              <object class="AdwTabButton">
+                        <!-- Langlinks button -->
+                        <child>
+                          <object class="GtkToggleButton" id="langlinks_button">
+                            <property name="icon-name">language-symbolic</property>
+                            <property name="tooltip-text" translatable="yes">Languages</property>
+                            <property name="group">toc_button</property>
+                            <property name="active" bind-source="langlinks_button_mob" bind-property="active" bind-flags="sync-create"/>
+                            <style>
+                              <class name="flat"/>
+                            </style>
+                          </object>
+                        </child>
+
+                        <!-- Bookmarks button -->
+                        <child>
+                          <object class="GtkToggleButton" id="bookmarks_button">
+                            <property name="icon-name">user-bookmarks-symbolic</property>
+                            <property name="tooltip-text" translatable="yes">Bookmarks</property>
+                            <property name="group">toc_button</property>
+                            <property name="active" bind-source="bookmarks_button_mob" bind-property="active" bind-flags="sync-create"/>
+                            <style>
+                              <class name="flat"/>
+                            </style>
+                          </object>
+                        </child>
+
+                        <!-- History button -->
+                        <child>
+                          <object class="GtkToggleButton" id="history_button">
+                            <property name="icon-name">document-open-recent-symbolic</property>
+                            <property name="tooltip-text" translatable="yes">History</property>
+                            <property name="group">toc_button</property>
+                            <property name="active" bind-source="history_button_mob" bind-property="active" bind-flags="sync-create"/>
+                            <style>
+                              <class name="flat"/>
+                            </style>
+                          </object>
+                        </child>
+
+                      </object>
+                    </property>
+
+                    <!-- LEFT BAR: Sidebar button -->
+                    <child type="bottom">
+                      <object class="GtkToggleButton" id="panel_button">
+                        <property name="icon-name">sidebar-show-symbolic</property>
+                        <property name="tooltip-text" translatable="yes">Sidebar</property>
+                        <property name="margin-top">6</property>
+                        <property name="margin-bottom">6</property>
+                        <property name="margin-start">6</property>
+                        <property name="margin-end">6</property>
+                        <property name="action-name">win.pin-panel</property>
+                        <style>
+                          <class name="flat"/>
+                        </style>
+                      </object>
+                    </child>
+
+                  </object>
+                </property>
+
+                <!-- Second split view for left panel -->
+                <property name="content">
+                  <object class="AdwOverlaySplitView" id="panel_split">
+                    <property name="min-sidebar-width">280</property>
+                    <property name="max-sidebar-width">320</property>
+                    <property name="collapsed">true</property>
+                    <property name="show-sidebar" bind-source="panel_button_mob" bind-property="active" bind-flags="sync-create"/>
+
+                    <!-- LEFT PANEL -->
+                    <property name="sidebar">
+                      <object class="AdwToolbarView">
+
+                        <!-- LEFT PANEL: Gtk stack for TOC, langlinks, bookmarks and history -->
+                        <property name="content">
+                          <object class="GtkStack" id="panel_stack">
+                          </object>
+                        </property>
+
+                        <!-- LEFT PANEL: Actionbar for mobile mode -->
+                        <child type="bottom">
+                          <object class="GtkActionBar" id="panel_actionbar">
+                            <property name="revealed">false</property>
+
+                            <!-- Close sidebar button for mobile mode -->
+                            <child type="start">
+                              <object class="GtkButton" id="close_panel_button_mob">
+                                <property name="icon-name">go-previous-symbolic</property>
+                                <property name="tooltip-text" translatable="yes">Close</property>
+                              </object>
+                            </child>
+
+                            <!-- Selector buttons box -->
+                            <child type="center">
+                              <object class="GtkBox">
+                                <property name="spacing">6</property>
+
+                                <!-- TOC button for mobile mode -->
+                                <child>
+                                  <object class="GtkToggleButton" id="toc_button_mob">
+                                    <property name="icon-name">view-list-symbolic</property>
+                                    <property name="tooltip-text" translatable="yes">Contents</property>
+                                    <property name="active" bind-source="toc_button" bind-property="active" bind-flags="sync-create"/>
+                                  </object>
+                                </child>
+
+                                <!-- Langlinks button for mobile mode -->
+                                <child>
+                                  <object class="GtkToggleButton" id="langlinks_button_mob">
+                                    <property name="icon-name">language-symbolic</property>
+                                    <property name="tooltip-text" translatable="yes">Languages</property>
+                                    <property name="group">toc_button_mob</property>
+                                    <property name="active" bind-source="langlinks_button" bind-property="active" bind-flags="sync-create"/>
+                                  </object>
+                                </child>
+
+                                <!-- Bookmarks button for mobile mode -->
+                                <child>
+                                  <object class="GtkToggleButton" id="bookmarks_button_mob">
+                                    <property name="icon-name">user-bookmarks-symbolic</property>
+                                    <property name="tooltip-text" translatable="yes">Bookmarks</property>
+                                    <property name="group">toc_button_mob</property>
+                                    <property name="active" bind-source="bookmarks_button" bind-property="active" bind-flags="sync-create"/>
+                                  </object>
+                                </child>
+
+                                <!-- History button for mobile mode -->
+                                <child>
+                                  <object class="GtkToggleButton" id="history_button_mob">
+                                    <property name="icon-name">document-open-recent-symbolic</property>
+                                    <property name="tooltip-text" translatable="yes">History</property>
+                                    <property name="group">toc_button_mob</property>
+                                    <property name="active" bind-source="history_button" bind-property="active" bind-flags="sync-create"/>
+                                  </object>
+                                </child>
+
+                              </object>
+                            </child>
+
+                            <!-- Main menu button for mobile mode -->
+                            <child type="end">
+                              <object class="GtkMenuButton" id="main_button_mob">
+                                <property name="icon-name">open-menu-symbolic</property>
+                                <property name="tooltip-text" translatable="yes">Main Menu</property>
+                              </object>
+                            </child>
+
+                          </object>
+                        </child>
+
+                      </object>
+                    </property>
+
+                    <!-- MAIN -->
+                    <property name="content">
+                      <object class="AdwBreakpointBin">
+                        <property name="width-request">360</property>
+                        <property name="height-request">480</property>
+
+                        <!-- MAIN: Breakpoint for content -->
+                        <child>
+                          <object class="AdwBreakpoint" id="breakpoint_content">
+                            <condition>max-width: 550px</condition>
+                            <setter object="prev_button" property="visible">false</setter>
+                            <setter object="next_button" property="visible">false</setter>
+                            <setter object="newtab_button" property="visible">false</setter>
+                            <setter object="tabs_button" property="visible">true</setter>
+                            <setter object="article_button" property="visible">false</setter>
+                            <setter object="view_button" property="visible">false</setter>
+                            <setter object="content_actionbar" property="revealed">true</setter>
+                            <setter object="tabbar" property="visible">false</setter>
+                          </object>
+                        </child>
+
+                        <!-- MAIN: ToolbarView -->
+                        <child>
+                          <object class="AdwToolbarView">
+                            <property name="top-bar-style">raised</property>
+                            <property name="bottom-bar-style">raised</property>
+
+                            <!-- MAIN: Headerbar -->
+                            <child type="top">
+                              <object class="AdwHeaderBar" id="headerbar">
+
+                                <!-- Prev navigation button -->
+                                <child type="start">
+                                  <object class="GtkButton" id="prev_button">
+                                    <property name="icon-name">go-previous-symbolic</property>
+                                    <property name="tooltip-text" translatable="yes">Back</property>
+                                    <property name="action-name">win.prev-page</property>
+                                  </object>
+                                </child>
+
+                                <!-- Next navigation button -->
+                                <child type="start">
+                                  <object class="GtkButton" id="next_button">
+                                    <property name="icon-name">go-next-symbolic</property>
+                                    <property name="tooltip-text" translatable="yes">Forward</property>
+                                    <property name="action-name">win.next-page</property>
+                                  </object>
+                                </child>
+
+                                <!-- New tab button -->
+                                <child type="start">
+                                  <object class="GtkButton" id="newtab_button">
+                                    <property name="icon-name">tab-new-symbolic</property>
+                                    <property name="tooltip-text" translatable="yes">New Tab</property>
+                                    <property name="action-name">win.new-tab</property>
+                                  </object>
+                                </child>
+
+                                <!-- Tab overview button -->
+                                <child type="start">
+                                  <object class="AdwTabButton" id="tabs_button">
+                                    <property name="action-name">win.toggle-overview</property>
+                                    <property name="view">tabview</property>
+                                    <property name="visible">false</property>
+                                  </object>
+                                </child>
+
+                                <!-- Main menu button -->
+                                <child type="end">
+                                  <object class="GtkMenuButton" id="article_button">
+                                    <property name="icon-name">view-more-symbolic</property>
+                                    <property name="tooltip-text" translatable="yes">Article Menu</property>
+                                  </object>
+                                </child>
+
+                                <!-- View menu button -->
+                                <child type="end">
+                                  <object class="GtkMenuButton" id="view_button">
+                                    <property name="icon-name">view-reveal-symbolic</property>
+                                    <property name="tooltip-text" translatable="yes">View</property>
+                                  </object>
+                                </child>
+
+                              </object>
+                            </child>
+
+                            <!-- MAIN: Tabbar -->
+                            <child type="top">
+                              <object class="AdwTabBar" id="tabbar">
                                 <property name="view">tabview</property>
-                                <property name="action-name">win.toggle-overview</property>
+
+                                <!-- Tab overview button -->
+                                <property name="start-action-widget">
+                                  <object class="AdwTabButton">
+                                    <property name="view">tabview</property>
+                                    <property name="action-name">win.toggle-overview</property>
+                                  </object>
+                                </property>
+
+                              </object>
+                            </child>
+
+                            <!-- MAIN: Tabview -->
+                            <property name="content">
+                              <object class="AdwTabView" id="tabview">
                               </object>
                             </property>
 
-                          </object>
-                        </child>
+                            <!-- MAIN: Actionbar for mobile mode -->
+                            <child type="bottom">
+                              <object class="GtkActionBar" id="content_actionbar">
+                                <property name="revealed">false</property>
 
-                        <!-- Tab view -->
-                        <child>
-                          <object class="AdwTabView" id="tabview">
-                          </object>
-                        </child>
-
-                      </object>
-                    </property>
-
-                    <!-- Flap separator -->
-                    <property name="separator">
-                      <object class="GtkSeparator">
-                      </object>
-                    </property>
-
-                    <!-- Flap sidebar -->
-                    <property name="flap">
-                      <object class="GtkBox">
-                        <property name="orientation">vertical</property>
-                        <property name="width-request">325</property>
-                        <style>
-                          <class name="background"/>
-                        </style>
-
-                        <!-- Sidebar header -->
-                        <child>
-                          <object class="GtkBox">
-                            <property name="hexpand">false</property>
-
-                            <!-- Pin button -->
-                            <child>
-                              <object class="GtkToggleButton" id="flap_pin_button">
-                                <property name="icon-name">view-pin-symbolic</property>
-                                <property name="tooltip-text" translatable="yes">Pin Sidebar</property>
-                                <property name="margin-start">6</property>
-                                <property name="margin-end">6</property>
-                                <property name="margin-top">6</property>
-                                <property name="margin-bottom">6</property>
-                                <property name="valign">center</property>
-                                <property name="action-name">win.pin-sidebar</property>
-                                <style>
-                                  <class name="circular"/>
-                                  <class name="pin-button"/>
-                                </style>
-                              </object>
-                            </child>
-
-                            <!-- Buttons box -->
-                            <child>
-                              <object class="GtkBox">
-                                <property name="margin-start">6</property>
-                                <property name="margin-end">6</property>
-                                <property name="margin-top">6</property>
-                                <property name="margin-bottom">6</property>
-                                <property name="spacing">6</property>
-                                <property name="hexpand">true</property>
-                                <property name="homogeneous">true</property>
-
-                                <!-- TOC button -->
-                                <child>
-                                  <object class="GtkToggleButton" id="flap_toc_button">
-                                    <property name="icon-name">view-list-symbolic</property>
-                                    <property name="tooltip-text" translatable="yes">Contents</property>
-                                    <style>
-                                      <class name="flat"/>
-                                    </style>
+                                <!-- Prev navigation button -->
+                                <child type="start">
+                                  <object class="GtkButton">
+                                    <property name="icon-name">go-previous-symbolic</property>
+                                    <property name="action-name">win.prev-page</property>
                                   </object>
                                 </child>
 
-                                <!-- Langlinks button -->
-                                <child>
-                                  <object class="GtkToggleButton" id="flap_langlinks_button">
-                                    <property name="icon-name">language-symbolic</property>
-                                    <property name="tooltip-text" translatable="yes">Languages</property>
-                                    <property name="group">flap_toc_button</property>
-                                    <style>
-                                      <class name="flat"/>
-                                    </style>
+                                <!-- Next navigation button -->
+                                <child type="start">
+                                  <object class="GtkButton">
+                                    <property name="icon-name">go-next-symbolic</property>
+                                    <property name="action-name">win.next-page</property>
                                   </object>
                                 </child>
 
-                                <!-- Bookmarks button -->
-                                <child>
-                                  <object class="GtkToggleButton" id="flap_bookmarks_button">
-                                    <property name="icon-name">user-bookmarks-symbolic</property>
-                                    <property name="tooltip-text" translatable="yes">Bookmarks</property>
-                                    <property name="group">flap_toc_button</property>
-                                    <style>
-                                      <class name="flat"/>
-                                    </style>
+                                <!-- Sidebar mobile button -->
+                                <child type="start">
+                                  <object class="GtkToggleButton" id="panel_button_mob">
+                                    <property name="icon-name">sidebar-show-symbolic</property>
+                                    <property name="visible">false</property>
+                                    <property name="active" bind-source="panel_split" bind-property="show-sidebar" bind-flags="sync-create"/>
                                   </object>
                                 </child>
 
-                                <!-- History button -->
-                                <child>
-                                  <object class="GtkToggleButton" id="flap_history_button">
-                                    <property name="icon-name">document-open-recent-symbolic</property>
-                                    <property name="tooltip-text" translatable="yes">History</property>
-                                    <property name="group">flap_toc_button</property>
-                                    <style>
-                                      <class name="flat"/>
-                                    </style>
+                                <!-- Article menu button -->
+                                <child type="end">
+                                  <object class="GtkMenuButton" id="article_button_mob">
+                                    <property name="icon-name">view-more-symbolic</property>
+                                    <property name="tooltip-text" translatable="yes">Article Menu</property>
+                                  </object>
+                                </child>
+
+                                <!-- View menu button -->
+                                <child type="end">
+                                  <object class="GtkMenuButton" id="view_button_mob">
+                                    <property name="icon-name">view-reveal-symbolic</property>
+                                    <property name="tooltip-text" translatable="yes">View</property>
                                   </object>
                                 </child>
 
@@ -252,70 +404,17 @@ SPDX-License-Identifier: GPL-3.0-or-later
                           </object>
                         </child>
 
-                        <!-- Separator -->
-                        <child>
-                          <object class="GtkSeparator">
-                          </object>
-                        </child>
-
-                        <!-- Stack for sidebar content -->
-                        <child>
-                          <object class="GtkStack" id="flap_stack">
-                          </object>
-                        </child>
-
                       </object>
                     </property>
 
                   </object>
-                </child>
-
-              </object>
-            </child>
-
-            <!-- Actionbar -->
-            <child>
-              <object class="GtkActionBar" id="actionbar">
-                <property name="visible">false</property>
-
-                <!-- Prev navigation button -->
-                <child type="start">
-                  <object class="GtkButton">
-                    <property name="icon-name">go-previous-symbolic</property>
-                    <property name="action-name">win.prev-page</property>
-                  </object>
-                </child>
-
-                <!-- Next navigation button -->
-                <child type="start">
-                  <object class="GtkButton">
-                    <property name="icon-name">go-next-symbolic</property>
-                    <property name="action-name">win.next-page</property>
-                  </object>
-                </child>
-
-                <!-- Toggle sidebar button -->
-                <child type="end">
-                  <object class="GtkToggleButton">
-                    <property name="icon-name">sidebar-show-right-symbolic</property>
-                    <property name="tooltip-text" translatable="yes">Sidebar</property>
-                    <property name="action-name">win.toggle-sidebar</property>
-                  </object>
-                </child>
-
-                <!-- View menu button -->
-                <child type="end">
-                  <object class="GtkMenuButton" id="view_button_mob">
-                    <property name="icon-name">view-reveal-symbolic</property>
-                    <property name="tooltip-text" translatable="yes">View</property>
-                  </object>
-                </child>
+                </property>
 
               </object>
             </child>
 
           </object>
-        </property>
+        </child>
 
       </object>
     </property>

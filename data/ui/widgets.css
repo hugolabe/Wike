@@ -68,23 +68,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
 /* Sidebar */
 
-.pin-button {
-  transform: scale(0.8);
-}
-
-.pin-button:checked {
-  color: @accent_fg_color;
-  background-color: @accent_bg_color;
-}
-
-.pin-button:checked:hover {
-  background-color: @accent_color;
-}
-
-.pin-button:checked:active {
-  background-color: @accent_bg_color;
-}
-
 .navigation-sidebar > row {
   min-height: 28px;
 }

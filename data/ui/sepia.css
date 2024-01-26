@@ -6,8 +6,12 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
 /* Sepia theme */
 
-@define-color headerbar_bg_color #f0ead8;
 @define-color window_bg_color #fdf8e8;
+@define-color headerbar_bg_color #fdf6e3;
+@define-color sidebar_bg_color #e9e3d1;
+@define-color sidebar_backdrop_color #e9e3d1;
+@define-color secondary_sidebar_bg_color #f1ead8;
+@define-color secondary_sidebar_backdrop_color #f1ead8;
 @define-color view_bg_color #fefdf6;
 @define-color card_bg_color #fefdf6;
 @define-color dialog_bg_color #fdf8e8;

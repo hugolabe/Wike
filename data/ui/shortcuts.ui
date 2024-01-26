@@ -30,7 +30,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="title" translatable="yes" context="shortcut window">Sidebar</property>
-                <property name="action-name">win.toggle-sidebar</property>
+                <property name="action-name">win.pin-panel</property>
               </object>
             </child>
 

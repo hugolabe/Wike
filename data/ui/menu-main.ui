@@ -9,45 +9,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
 <interface>
   <menu id="main_menu">
 
-    <!-- Buttons section -->
-    <section>
-      <attribute name="display-hint">horizontal-buttons</attribute>
-      <item>
-        <attribute name="label" translatable="yes">Print</attribute>
-        <attribute name="verb-icon">printer-symbolic</attribute>
-        <attribute name="action">win.print-page</attribute>
-      </item>
-      <item>
-        <attribute name="label" translatable="yes">Search Text</attribute>
-        <attribute name="verb-icon">system-search-symbolic</attribute>
-        <attribute name="action">win.search-text</attribute>
-      </item>
-    </section>
-
-    <!-- Go to section -->
-    <section>
-      <item>
-        <attribute name="label" translatable="yes">Main Page</attribute>
-        <attribute name="action">win.main-page</attribute>
-      </item>
-      <item>
-        <attribute name="label" translatable="yes">Random Article</attribute>
-        <attribute name="action">win.random-article</attribute>
-      </item>
-    </section>
-
-    <!-- Share section -->
-    <section>
-      <item>
-        <attribute name="label" translatable="yes">Open in Browser</attribute>
-        <attribute name="action">win.open-browser</attribute>
-      </item>
-      <item>
-        <attribute name="label" translatable="yes">Copy Link to Clipboard</attribute>
-        <attribute name="action">win.copy-link</attribute>
-      </item>
-    </section>
-
     <!-- App section -->
     <section>
       <item>

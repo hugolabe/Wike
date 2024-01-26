@@ -122,7 +122,7 @@ class LanguagesWindow(Adw.Window):
         languages.items['en'] = 'English'
 
       window = self.get_transient_for()
-      window.headerbar.search_box.settings_popover.populate_list()
+      window.search_box.settings_popover.populate_list()
       window.langlinks_panel.populate(window.page.wikiview.langlinks)
 
     return False

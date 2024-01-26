@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/com/github/hugolabe/Wike">
-    
+
     <file>languages/languages.min.json</file>
-    
+
     <file>styles/view.min.css</file>
     <file>styles/dark.min.css</file>
     <file>styles/sepia.min.css</file>
-    
+
     <file>ui/about.ui</file>
     <file>ui/bookmarks.ui</file>
     <file>ui/bookmarks-menu.ui</file>
@@ -19,6 +19,7 @@
     <file>ui/langlinks-row.ui</file>
     <file>ui/languages.ui</file>
     <file>ui/languages-row.ui</file>
+    <file>ui/menu-article.ui</file>
     <file>ui/menu-main.ui</file>
     <file>ui/menu-view.ui</file>
     <file>ui/page.ui</file>
@@ -44,12 +45,10 @@
     <file preprocess="xml-stripblanks">icons/scalable/actions/list-remove-all-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/actions/network-error-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/actions/printer-symbolic.svg</file>
-    <file preprocess="xml-stripblanks">icons/scalable/actions/sidebar-show-right-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/actions/system-search-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/actions/tab-new-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/actions/user-bookmarks-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/actions/view-list-symbolic.svg</file>
-    <file preprocess="xml-stripblanks">icons/scalable/actions/view-pin-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/actions/view-reveal-symbolic.svg</file>
 
     <file preprocess="xml-stripblanks">icons/scalable/emblems/af.svg</file>

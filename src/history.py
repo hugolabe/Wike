@@ -12,7 +12,7 @@ from wike.data import settings, languages, history
 
 # History panel for sidebar
 
-@Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/history.ui')
+@Gtk.Template(resource_path='/com/github/hugolabe/Wike/gtk/history.ui')
 class HistoryPanel(Adw.Bin):
 
   __gtype_name__ = 'HistoryPanel'
@@ -138,7 +138,7 @@ class HistoryPanel(Adw.Bin):
 
   def _clear_button_cb(self, clear_button):
     builder = Gtk.Builder()
-    builder.add_from_resource('/com/github/hugolabe/Wike/ui/dialogs.ui')
+    builder.add_from_resource('/com/github/hugolabe/Wike/gtk/dialogs.ui')
     clear_history_dialog = builder.get_object('clear_history_dialog')
     clear_history_dialog.set_transient_for(self._window)
 
@@ -202,7 +202,7 @@ class HistoryFilter(GObject.Object):
 
 # Row on history list
 
-@Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/history-row.ui')
+@Gtk.Template(resource_path='/com/github/hugolabe/Wike/gtk/history-row.ui')
 class HistoryRow(Gtk.ListBoxRow):
 
   __gtype_name__ = 'HistoryRow'

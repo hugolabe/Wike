@@ -11,7 +11,7 @@ from wike.view import network_session
 
 # Preferences window
 
-@Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/prefs.ui')
+@Gtk.Template(resource_path='/com/github/hugolabe/Wike/gtk/prefs.ui')
 class PrefsWindow(Adw.PreferencesWindow):
 
   __gtype_name__ = 'PrefsWindow'
@@ -40,7 +40,7 @@ class PrefsWindow(Adw.PreferencesWindow):
 
   def _clear_history_button_cb(self, clear_history_button):
     builder = Gtk.Builder()
-    builder.add_from_resource('/com/github/hugolabe/Wike/ui/dialogs.ui')
+    builder.add_from_resource('/com/github/hugolabe/Wike/gtk/dialogs.ui')
     clear_history_dialog = builder.get_object('clear_history_dialog')
     clear_history_dialog.set_transient_for(self)
 
@@ -59,7 +59,7 @@ class PrefsWindow(Adw.PreferencesWindow):
 
   def _clear_data_button_cb(self, clear_data_button):
     builder = Gtk.Builder()
-    builder.add_from_resource('/com/github/hugolabe/Wike/ui/dialogs.ui')
+    builder.add_from_resource('/com/github/hugolabe/Wike/gtk/dialogs.ui')
     clear_data_dialog = builder.get_object('clear_data_dialog')
     clear_data_dialog.set_transient_for(self)
 

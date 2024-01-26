@@ -19,7 +19,7 @@ from wike.toc import TocPanel
 
 # Main window
 
-@Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/window.ui')
+@Gtk.Template(resource_path='/com/github/hugolabe/Wike/gtk/window.ui')
 class Window(Adw.ApplicationWindow):
 
   __gtype_name__ = 'Window'

@@ -12,7 +12,7 @@ from wike.data import settings, languages
 
 # Language links panel for sidebar
 
-@Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/langlinks.ui')
+@Gtk.Template(resource_path='/com/github/hugolabe/Wike/gtk/langlinks.ui')
 class LanglinksPanel(Adw.Bin):
 
   __gtype_name__ = 'LanglinksPanel'
@@ -95,7 +95,7 @@ class LanglinksPanel(Adw.Bin):
 
 # Row on langlinks list
 
-@Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/langlinks-row.ui')
+@Gtk.Template(resource_path='/com/github/hugolabe/Wike/gtk/langlinks-row.ui')
 class LanglinksRow(Gtk.ListBoxRow):
 
   __gtype_name__ = 'LanglinksRow'

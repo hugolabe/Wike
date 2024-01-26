@@ -10,7 +10,7 @@ from gi.repository import GLib, Gtk, Adw
 
 # TOC (table of contents) panel for sidebar
 
-@Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/toc.ui')
+@Gtk.Template(resource_path='/com/github/hugolabe/Wike/gtk/toc.ui')
 class TocPanel(Adw.Bin):
 
   __gtype_name__ = 'TocPanel'
@@ -58,7 +58,7 @@ class TocPanel(Adw.Bin):
 
 # Section row in toc list
 
-@Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/toc-row.ui')
+@Gtk.Template(resource_path='/com/github/hugolabe/Wike/gtk/toc-row.ui')
 class TocBoxRow(Gtk.ListBoxRow):
 
   __gtype_name__ = 'TocBoxRow'

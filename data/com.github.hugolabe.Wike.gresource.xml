@@ -8,34 +8,34 @@
     <file>styles/dark.min.css</file>
     <file>styles/sepia.min.css</file>
 
-    <file>ui/about.ui</file>
-    <file>ui/bookmarks.ui</file>
-    <file>ui/bookmarks-menu.ui</file>
-    <file>ui/bookmarks-row.ui</file>
-    <file>ui/dialogs.ui</file>
-    <file>ui/history.ui</file>
-    <file>ui/history-row.ui</file>
-    <file>ui/langlinks.ui</file>
-    <file>ui/langlinks-row.ui</file>
-    <file>ui/languages.ui</file>
-    <file>ui/languages-row.ui</file>
-    <file>ui/menu-article.ui</file>
-    <file>ui/menu-main.ui</file>
-    <file>ui/menu-view.ui</file>
-    <file>ui/page.ui</file>
-    <file>ui/prefs.ui</file>
-    <file>ui/search.ui</file>
-    <file>ui/search-settings.ui</file>
-    <file>ui/search-settings-row.ui</file>
-    <file>ui/sepia.css</file>
-    <file alias="gtk/help-overlay.ui">ui/shortcuts.ui</file>
-    <file>ui/suggestions.ui</file>
-    <file>ui/theme-switcher.ui</file>
-    <file>ui/toc.ui</file>
-    <file>ui/toc-row.ui</file>
-    <file>ui/widgets.css</file>
-    <file>ui/window.ui</file>
-    <file>ui/zoom-level.ui</file>
+    <file>gtk/about.ui</file>
+    <file>gtk/bookmarks.ui</file>
+    <file>gtk/bookmarks-menu.ui</file>
+    <file>gtk/bookmarks-row.ui</file>
+    <file>gtk/dialogs.ui</file>
+    <file>gtk/history.ui</file>
+    <file>gtk/history-row.ui</file>
+    <file>gtk/langlinks.ui</file>
+    <file>gtk/langlinks-row.ui</file>
+    <file>gtk/languages.ui</file>
+    <file>gtk/languages-row.ui</file>
+    <file>gtk/menu-article.ui</file>
+    <file>gtk/menu-main.ui</file>
+    <file>gtk/menu-view.ui</file>
+    <file>gtk/page.ui</file>
+    <file>gtk/prefs.ui</file>
+    <file>gtk/search.ui</file>
+    <file>gtk/search-settings.ui</file>
+    <file>gtk/search-settings-row.ui</file>
+    <file>gtk/sepia.css</file>
+    <file>gtk/help-overlay.ui</file>
+    <file>gtk/suggestions.ui</file>
+    <file>gtk/theme-switcher.ui</file>
+    <file>gtk/toc.ui</file>
+    <file>gtk/toc-row.ui</file>
+    <file>gtk/widgets.css</file>
+    <file>gtk/window.ui</file>
+    <file>gtk/zoom-level.ui</file>
 
     <file preprocess="xml-stripblanks">icons/scalable/actions/bookmark-new-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/actions/checkmark-symbolic.svg</file>

@@ -18,7 +18,7 @@ class MainMenuPopover(Gtk.PopoverMenu):
     super().__init__()
 
     builder_menu = Gtk.Builder()
-    builder_menu.add_from_resource('/com/github/hugolabe/Wike/ui/menu-main.ui')
+    builder_menu.add_from_resource('/com/github/hugolabe/Wike/gtk/menu-main.ui')
     main_menu = builder_menu.get_object('main_menu')
     self.set_menu_model(main_menu)
 
@@ -33,7 +33,7 @@ class ArticleMenuPopover(Gtk.PopoverMenu):
     super().__init__()
 
     builder_menu = Gtk.Builder()
-    builder_menu.add_from_resource('/com/github/hugolabe/Wike/ui/menu-article.ui')
+    builder_menu.add_from_resource('/com/github/hugolabe/Wike/gtk/menu-article.ui')
     article_menu = builder_menu.get_object('article_menu')
     self.set_menu_model(article_menu)
 
@@ -50,7 +50,7 @@ class ViewMenuPopover(Gtk.PopoverMenu):
     self._window = window
 
     builder_menu = Gtk.Builder()
-    builder_menu.add_from_resource('/com/github/hugolabe/Wike/ui/menu-view.ui')
+    builder_menu.add_from_resource('/com/github/hugolabe/Wike/gtk/menu-view.ui')
     self.view_menu = builder_menu.get_object('view_menu')
     self.set_menu_model(self.view_menu)
     
@@ -132,7 +132,7 @@ class ViewMenuPopover(Gtk.PopoverMenu):
 
 # Theme switcher widget for view menu
 
-@Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/theme-switcher.ui')
+@Gtk.Template(resource_path='/com/github/hugolabe/Wike/gtk/theme-switcher.ui')
 class ThemeSwitcher(Gtk.Box):
 
   __gtype_name__ = 'ThemeSwitcher'
@@ -200,7 +200,7 @@ class ThemeSwitcher(Gtk.Box):
 
 # Zoom level widget for view menu
 
-@Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/zoom-level.ui')
+@Gtk.Template(resource_path='/com/github/hugolabe/Wike/gtk/zoom-level.ui')
 class ZoomLevel(Gtk.Box):
 
   __gtype_name__ = 'ZoomLevel'

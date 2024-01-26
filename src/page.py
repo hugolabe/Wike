@@ -11,7 +11,7 @@ from wike.view import WikiView
 
 # Page box for each tab with webview and search bar
 
-@Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/page.ui')
+@Gtk.Template(resource_path='/com/github/hugolabe/Wike/gtk/page.ui')
 class PageBox(Gtk.Box):
 
   __gtype_name__ = 'PageBox'

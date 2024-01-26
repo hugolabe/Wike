@@ -14,7 +14,7 @@ from wike.languages import LanguagesWindow
 
 # Box with entry for manage searchs in Wikipedia
 
-@Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/search.ui')
+@Gtk.Template(resource_path='/com/github/hugolabe/Wike/gtk/search.ui')
 class SearchBox(Gtk.Box):
 
   __gtype_name__ = 'SearchBox'
@@ -159,7 +159,7 @@ class SearchBox(Gtk.Box):
 
 # Popover for search suggestions
 
-@Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/suggestions.ui')
+@Gtk.Template(resource_path='/com/github/hugolabe/Wike/gtk/suggestions.ui')
 class SuggestionsPopover(Gtk.PopoverMenu):
 
   __gtype_name__ = 'SuggestionsPopover'
@@ -206,7 +206,7 @@ class SuggestionsPopover(Gtk.PopoverMenu):
 
 # Popover for search settings
 
-@Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/search-settings.ui')
+@Gtk.Template(resource_path='/com/github/hugolabe/Wike/gtk/search-settings.ui')
 class SettingsPopover(Gtk.Popover):
 
   __gtype_name__ = 'SettingsPopover'
@@ -294,7 +294,7 @@ class SettingsPopover(Gtk.Popover):
 
 # Language row in search settings
 
-@Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/search-settings-row.ui')
+@Gtk.Template(resource_path='/com/github/hugolabe/Wike/gtk/search-settings-row.ui')
 class SettingsLangsRow(Gtk.ListBoxRow):
 
   __gtype_name__ = 'SettingsLangsRow'

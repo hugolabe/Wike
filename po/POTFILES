@@ -1,34 +1,34 @@
 data/com.github.hugolabe.Wike.desktop.in
 data/com.github.hugolabe.Wike.metainfo.xml.in
 
-# UI
+# GTK UI
 
-data/ui/about.ui
-data/ui/bookmarks.ui
-data/ui/bookmarks-menu.ui
-data/ui/bookmarks-row.ui
-data/ui/dialogs.ui
-data/ui/history.ui
-data/ui/history-row.ui
-data/ui/langlinks.ui
-data/ui/langlinks-row.ui
-data/ui/languages.ui
-data/ui/languages-row.ui
-data/ui/menu-article.ui
-data/ui/menu-main.ui
-data/ui/menu-view.ui
-data/ui/page.ui
-data/ui/prefs.ui
-data/ui/search.ui
-data/ui/search-settings.ui
-data/ui/search-settings-row.ui
-data/ui/shortcuts.ui
-data/ui/suggestions.ui
-data/ui/theme-switcher.ui
-data/ui/toc.ui
-data/ui/toc-row.ui
-data/ui/window.ui
-data/ui/zoom-level.ui
+data/gtk/about.ui
+data/gtk/bookmarks.ui
+data/gtk/bookmarks-menu.ui
+data/gtk/bookmarks-row.ui
+data/gtk/dialogs.ui
+data/gtk/history.ui
+data/gtk/history-row.ui
+data/gtk/langlinks.ui
+data/gtk/langlinks-row.ui
+data/gtk/languages.ui
+data/gtk/languages-row.ui
+data/gtk/menu-article.ui
+data/gtk/menu-main.ui
+data/gtk/menu-view.ui
+data/gtk/page.ui
+data/gtk/prefs.ui
+data/gtk/search.ui
+data/gtk/search-settings.ui
+data/gtk/search-settings-row.ui
+data/gtk/shortcuts.ui
+data/gtk/suggestions.ui
+data/gtk/theme-switcher.ui
+data/gtk/toc.ui
+data/gtk/toc-row.ui
+data/gtk/window.ui
+data/gtk/zoom-level.ui
 
 # Source
 

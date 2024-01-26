@@ -38,9 +38,9 @@ class Application(Adw.Application):
     Adw.Application.do_startup(self)
 
     css_widgets = Gtk.CssProvider()
-    css_widgets.load_from_resource('/com/github/hugolabe/Wike/ui/widgets.css')
+    css_widgets.load_from_resource('/com/github/hugolabe/Wike/gtk/widgets.css')
     self._css_sepia = Gtk.CssProvider()
-    self._css_sepia.load_from_resource('/com/github/hugolabe/Wike/ui/sepia.css')
+    self._css_sepia.load_from_resource('/com/github/hugolabe/Wike/gtk/sepia.css')
     Gtk.StyleContext.add_provider_for_display(Gdk.Display.get_default(), css_widgets, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
 
     self._style_manager = Adw.StyleManager.get_default()
@@ -150,7 +150,7 @@ class Application(Adw.Application):
 
   def _about_cb(self, action, parameter):
     builder = Gtk.Builder()
-    builder.add_from_resource('/com/github/hugolabe/Wike/ui/about.ui')
+    builder.add_from_resource('/com/github/hugolabe/Wike/gtk/about.ui')
     about_window = builder.get_object('about_window')
     about_window.set_transient_for(self._window)
 

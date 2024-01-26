@@ -10,7 +10,7 @@ from wike.data import languages, bookmarks
 
 # Box bookmarks in sidebar
 
-@Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/bookmarks.ui')
+@Gtk.Template(resource_path='/com/github/hugolabe/Wike/gtk/bookmarks.ui')
 class BookmarksPanel(Adw.Bin):
 
   __gtype_name__ = 'BookmarksPanel'
@@ -191,7 +191,7 @@ class BookmarksPanel(Adw.Bin):
 
   def _create_booklist_cb(self, action, parameter):
     builder = Gtk.Builder()
-    builder.add_from_resource('/com/github/hugolabe/Wike/ui/dialogs.ui')
+    builder.add_from_resource('/com/github/hugolabe/Wike/gtk/dialogs.ui')
     new_booklist_dialog = builder.get_object('new_booklist_dialog')
     name_entry = builder.get_object('name_entry')
     new_booklist_dialog.set_transient_for(self._window)
@@ -230,7 +230,7 @@ class BookmarksPanel(Adw.Bin):
 
   def _rename_booklist_cb(self, action, parameter):
     builder = Gtk.Builder()
-    builder.add_from_resource('/com/github/hugolabe/Wike/ui/dialogs.ui')
+    builder.add_from_resource('/com/github/hugolabe/Wike/gtk/dialogs.ui')
     rename_booklist_dialog = builder.get_object('rename_booklist_dialog')
     rename_entry = builder.get_object('rename_entry')
     rename_booklist_dialog.set_transient_for(self._window)
@@ -276,7 +276,7 @@ class BookmarksPanel(Adw.Bin):
 
   def _clear_booklist_cb(self, action, parameter):
     builder = Gtk.Builder()
-    builder.add_from_resource('/com/github/hugolabe/Wike/ui/dialogs.ui')
+    builder.add_from_resource('/com/github/hugolabe/Wike/gtk/dialogs.ui')
     clear_booklist_dialog = builder.get_object('clear_booklist_dialog')
     delete_booklist_check = builder.get_object('delete_booklist_check')
     clear_booklist_dialog.set_transient_for(self._window)
@@ -361,7 +361,7 @@ class Booklist(GObject.Object):
 
 # Row on bookmarks list
 
-@Gtk.Template(resource_path='/com/github/hugolabe/Wike/ui/bookmarks-row.ui')
+@Gtk.Template(resource_path='/com/github/hugolabe/Wike/gtk/bookmarks-row.ui')
 class BookmarksRow(Gtk.ListBoxRow):
 
   __gtype_name__ = 'BookmarksRow'
@@ -398,7 +398,7 @@ class BookmarksMenuPopover(Gtk.PopoverMenu):
     super().__init__()
 
     builder_menu = Gtk.Builder()
-    builder_menu.add_from_resource('/com/github/hugolabe/Wike/ui/bookmarks-menu.ui')
+    builder_menu.add_from_resource('/com/github/hugolabe/Wike/gtk/bookmarks-menu.ui')
     menu = builder_menu.get_object('bookmarks_menu')
     self.set_menu_model(menu)
 

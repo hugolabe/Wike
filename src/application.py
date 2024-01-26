@@ -37,11 +37,8 @@ class Application(Adw.Application):
   def do_startup(self):
     Adw.Application.do_startup(self)
 
-    css_widgets = Gtk.CssProvider()
-    css_widgets.load_from_resource('/com/github/hugolabe/Wike/gtk/widgets.css')
     self._css_sepia = Gtk.CssProvider()
-    self._css_sepia.load_from_resource('/com/github/hugolabe/Wike/gtk/sepia.css')
-    Gtk.StyleContext.add_provider_for_display(Gdk.Display.get_default(), css_widgets, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
+    self._css_sepia.load_from_resource('/com/github/hugolabe/Wike/style-sepia.css')
 
     self._style_manager = Adw.StyleManager.get_default()
     theme = settings.get_int('theme')

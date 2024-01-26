@@ -13,6 +13,7 @@
     <file>gtk/bookmarks-menu.ui</file>
     <file>gtk/bookmarks-row.ui</file>
     <file>gtk/dialogs.ui</file>
+    <file>gtk/help-overlay.ui</file>
     <file>gtk/history.ui</file>
     <file>gtk/history-row.ui</file>
     <file>gtk/langlinks.ui</file>
@@ -27,15 +28,15 @@
     <file>gtk/search.ui</file>
     <file>gtk/search-settings.ui</file>
     <file>gtk/search-settings-row.ui</file>
-    <file>gtk/sepia.css</file>
-    <file>gtk/help-overlay.ui</file>
     <file>gtk/suggestions.ui</file>
     <file>gtk/theme-switcher.ui</file>
     <file>gtk/toc.ui</file>
     <file>gtk/toc-row.ui</file>
-    <file>gtk/widgets.css</file>
     <file>gtk/window.ui</file>
     <file>gtk/zoom-level.ui</file>
+
+    <file alias="style.css">gtk/style.css</file>
+    <file alias="style-sepia.css">gtk/style-sepia.css</file>
 
     <file preprocess="xml-stripblanks">icons/scalable/actions/bookmark-new-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/actions/checkmark-symbolic.svg</file>

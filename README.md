@@ -69,7 +69,7 @@ You can help translate *Wike* on the [POEditor](https://poeditor.com/join/projec
 
 *Wike* is released under the terms of the [GNU General Public License V3](https://www.gnu.org/licenses/gpl-3.0.html).
 
-All content provided by the app comes from [Wikipedia.org](https://www.wikipedia.org/) and is available under [Creative Commons Attribution-ShareAlike License 3.0](https://creativecommons.org/licenses/by-sa/3.0/) unless otherwise noted.
+All content provided by the app comes from [Wikipedia.org](https://www.wikipedia.org/) and is available under [Creative Commons Attribution-ShareAlike License 4.0](https://creativecommons.org/licenses/by-sa/4.0/) unless otherwise noted.
 *Wike* is an independent development not endorsed by or affiliated with the [Wikimedia Foundation](https://wikimediafoundation.org/).
 
 *Wike* uses a subset of [circle-flags](https://github.com/HatScripts/circle-flags) icons, copyright by [HatScripts](https://github.com/HatScripts), and released under the [MIT license](https://opensource.org/license/mit/).

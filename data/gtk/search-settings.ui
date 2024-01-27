@@ -9,31 +9,29 @@ SPDX-License-Identifier: GPL-3.0-or-later
 <interface>
   <template class="SettingsPopover" parent="GtkPopover">
     <property name="width-request">240</property>
+    <style>
+      <class name="menu"/>
+    </style>
 
-    <!-- Content box -->
+    <!-- Toolbar view -->
     <child>
-      <object class="GtkBox">
-        <property name="orientation">vertical</property>
+      <object class="AdwToolbarView">
 
         <!-- Pick languages button -->
-        <child>
+        <child type="top">
           <object class="GtkButton" id="languages_button">
             <property name="label" translatable="yes">Pick your Languages</property>
             <property name="hexpand">true</property>
+            <property name="margin-top">6</property>
             <property name="margin-bottom">6</property>
-          </object>
-        </child>
-
-        <!-- Separator -->
-        <child>
-          <object class="GtkSeparator" id="languages_separator">
-            <property name="visible">false</property>
+            <property name="margin-start">6</property>
+            <property name="margin-end">6</property>
           </object>
         </child>
 
         <!-- Languages scroller -->
-        <child>
-          <object class="GtkScrolledWindow" id="languages_scroller">
+        <property name="content">
+          <object class="GtkScrolledWindow">
             <property name="max-content-height">320</property>
             <property name="propagate-natural-height">True</property>
             <property name="propagate-natural-width">True</property>
@@ -43,31 +41,21 @@ SPDX-License-Identifier: GPL-3.0-or-later
                 <!-- Languages list -->
                 <child>
                   <object class="GtkListBox" id="languages_list">
-                    <property name="margin-bottom">6</property>
-                    <style>
-                      <class name="language-list"/>
-                    </style>
                   </object>
                 </child>
 
               </object>
             </child>
           </object>
-        </child>
-
-        <!-- Separator -->
-        <child>
-          <object class="GtkSeparator">
-          </object>
-        </child>
+        </property>
 
         <!-- Search suggestions box -->
-        <child>
+        <child type="bottom">
           <object class="GtkBox">
-            <property name="margin-top">12</property>
-            <property name="margin-bottom">6</property>
-            <property name="margin-start">6</property>
-            <property name="margin-end">6</property>
+            <property name="margin-top">9</property>
+            <property name="margin-bottom">9</property>
+            <property name="margin-start">12</property>
+            <property name="margin-end">12</property>
             <property name="spacing">12</property>
 
             <!-- Search suggestions label -->

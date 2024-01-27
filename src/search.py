@@ -213,8 +213,6 @@ class SettingsPopover(Gtk.Popover):
 
   languages_button = Gtk.Template.Child()
   languages_list = Gtk.Template.Child()
-  languages_scroller = Gtk.Template.Child()
-  languages_separator = Gtk.Template.Child()
   suggestions_switch = Gtk.Template.Child()
 
   # Populate search languages list and connect signals and bindings
@@ -232,7 +230,6 @@ class SettingsPopover(Gtk.Popover):
     
     self.languages_button.connect('clicked', self._languages_button_clicked_cb)
     self.languages_list.connect('row-activated', self._languages_list_activated_cb)
-    self.languages_scroller.get_vadjustment().connect('value-changed', self._languages_scrolled_cb)
     self.connect('show', self._popover_show_cb)
 
   # Populate languages list
@@ -276,20 +273,11 @@ class SettingsPopover(Gtk.Popover):
     self.hide()
     self.populate_list()
 
-  # Show/hide separator on scroll
-
-  def _languages_scrolled_cb(self, adjustment):
-    if adjustment.get_value() > 0:
-      self.languages_separator.set_visible(True)
-    else:
-      self.languages_separator.set_visible(False)
-
   # On popover show unselect items and hide suggestions
 
   def _popover_show_cb(self, settings_popover):
     self.languages_list.unselect_all()
     self._search_box.suggestions_popover.hide()
-    self.languages_scroller.get_vadjustment().set_value(0)
 
 
 # Language row in search settings

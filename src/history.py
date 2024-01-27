@@ -79,7 +79,8 @@ class HistoryPanel(Adw.Bin):
         break
 
       date_label = Gtk.Label()
-      date_label.set_markup('<b>' + date + '</b>')
+      date_label.set_label(date)
+      date_label.add_css_class('heading')
       date_label.set_xalign(0)
       date_label.set_margin_start(3)
       date_label.set_margin_end(3)
@@ -229,5 +230,5 @@ class HistoryRow(Gtk.ListBoxRow):
       lang_name = lang
 
     self.title_label.set_label(title)
-    self.lang_label.set_markup('<small>' + lang_name + '</small>')
-    self.time_label.set_markup('<small>' + self.time + '</small>')
+    self.lang_label.set_label(lang_name)
+    self.time_label.set_label(self.time)

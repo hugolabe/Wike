@@ -5,7 +5,7 @@
 
 import json
 
-from gi.repository import GLib, Gio, Gtk, Adw
+from gi.repository import Gio, Gtk, Adw
 
 from wike.data import settings, languages
 
@@ -114,7 +114,7 @@ class LanglinksRow(Gtk.ListBoxRow):
     self.lang_name = lang_name
 
     self.lang_label.set_label(lang_name)
-    self.title_label.set_markup('<small>' + GLib.markup_escape_text(title, -1) + '</small>')
+    self.title_label.set_label(title)
 
     if settings.get_boolean('show-flags'):
       gfile = Gio.File.new_for_uri('resource:///com/github/hugolabe/Wike/icons/scalable/emblems/' + lang + '.svg')

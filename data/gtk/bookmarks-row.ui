@@ -37,8 +37,11 @@ SPDX-License-Identifier: GPL-3.0-or-later
             <child>
               <object class="GtkLabel" id="lang_label">
                 <property name="halign">start</property>
-                <property name="use-markup">true</property>
                 <property name="ellipsize">end</property>
+                <style>
+                  <class name="caption"/>
+                  <class name="dim-label"/>
+                </style>
               </object>
             </child>
 

@@ -21,7 +21,9 @@ SPDX-License-Identifier: GPL-3.0-or-later
             <property name="width-chars">30</property>
             <property name="max-width-chars">30</property>
             <property name="ellipsize">end</property>
-            <property name="use-markup">true</property>
+            <style>
+              <class name="heading"/>
+            </style>
           </object>
         </child>
 

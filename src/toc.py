@@ -5,7 +5,7 @@
 
 import json, urllib.parse
 
-from gi.repository import GLib, Gtk, Adw
+from gi.repository import Gtk, Adw
 
 
 # TOC (table of contents) panel for sidebar
@@ -30,7 +30,7 @@ class TocPanel(Adw.Bin):
   # Populate toc list
 
   def populate(self, title, sections):
-    self.title_label.set_markup('<b>' + GLib.markup_escape_text(title, -1) + '</b>')
+    self.title_label.set_label(title)
 
     while True:
       row = self.toc_list.get_row_at_index(0)
@@ -71,9 +71,8 @@ class TocBoxRow(Gtk.ListBoxRow):
     super().__init__()
     
     self.anchor = anchor
-    section_markup = GLib.markup_escape_text(section, -1)
 
     if level > 1:
-      section_markup = '<small>' + section_markup + '</small>'
-    self.section_label.set_markup(section_markup)
+      self.section_label.add_css_class('caption')
+    self.section_label.set_label(section)
     self.section_label.set_margin_start(3 + (level - 1) * 15)

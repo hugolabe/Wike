@@ -385,7 +385,7 @@ class BookmarksRow(Gtk.ListBoxRow):
       lang_name = lang
 
     self.title_label.set_label(title)
-    self.lang_label.set_markup('<small>' + lang_name + '</small>')
+    self.lang_label.set_label(lang_name)
 
 
 # Popover menu for bookmarks options

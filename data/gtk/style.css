@@ -56,16 +56,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
   background-color: @dark_3;
 }
 
-/* Search settings popover */
-
-.language-list {
-  background-color: transparent;
-}
-
-.language-list > row {
-  border-radius: 6px;
-}
-
 /* Sidebar */
 
 .navigation-sidebar > row {

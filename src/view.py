@@ -153,7 +153,7 @@ class WikiView(WebKit.WebView):
     theme = settings.get_int('theme')
     match theme:
       case 1:
-        self.set_background_color(Gdk.RGBA(0.1, 0.1, 0.1, 1))
+        self.set_background_color(Gdk.RGBA(0.141, 0.141, 0.141, 1))
       case 2:
         self.set_background_color(Gdk.RGBA(0.976, 0.953, 0.914, 1))
       case _:

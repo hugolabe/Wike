@@ -36,6 +36,7 @@
     <file>gtk/zoom-level.ui</file>
 
     <file alias="style.css">gtk/style.css</file>
+    <file alias="style-dark.css">gtk/style-dark.css</file>
     <file alias="style-sepia.css">gtk/style-sepia.css</file>
 
     <file preprocess="xml-stripblanks">icons/scalable/actions/bookmark-new-symbolic.svg</file>

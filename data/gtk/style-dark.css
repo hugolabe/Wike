@@ -1,0 +1,10 @@
+/* This file is part of Wike (com.github.hugolabe.Wike)
+SPDX-FileCopyrightText: 2021-24 Hugo Olabera <hugolabe@gmail.com>
+SPDX-License-Identifier: GPL-3.0-or-later
+*/
+
+
+/* Dark theme */
+
+@define-color window_bg_color #242424;
+@define-color headerbar_bg_color #242424;

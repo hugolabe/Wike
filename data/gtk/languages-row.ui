@@ -12,37 +12,45 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <!-- Language row box -->
     <child>
       <object class="GtkBox">
-        <property name="margin-top">3</property>
-        <property name="margin-bottom">3</property>
-
-        <!-- Language name label -->
-        <child>
-          <object class="GtkLabel" id="name_label">
-            <property name="margin-start">6</property>
-            <property name="margin-end">6</property>
-            <property name="halign">start</property>
-            <property name="valign">center</property>
-            <property name="hexpand">true</property>
-          </object>
-        </child>
-
-        <!-- Language id label -->
-        <child>
-          <object class="GtkLabel" id="id_label">
-            <property name="margin-start">6</property>
-            <property name="margin-end">6</property>
-            <property name="halign">end</property>
-            <property name="valign">center</property>
-          </object>
-        </child>
+        <property name="margin-top">6</property>
+        <property name="margin-bottom">6</property>
+        <property name="margin-start">3</property>
+        <property name="spacing">12</property>
 
         <!-- Language selected check button -->
         <child>
           <object class="GtkCheckButton" id="lang_check">
-            <property name="margin-start">12</property>
-            <property name="margin-end">6</property>
-            <property name="halign">end</property>
             <property name="valign">center</property>
+            <style>
+              <class name="selection-mode"/>
+            </style>
+          </object>
+        </child>
+
+        <!-- Labels box -->
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">vertical</property>
+            <property name="hexpand">true</property>
+            <property name="valign">center</property>
+
+            <!-- Language name label -->
+            <child>
+              <object class="GtkLabel" id="name_label">
+                <property name="halign">start</property>
+              </object>
+            </child>
+
+            <!-- Language id label -->
+            <child>
+              <object class="GtkLabel" id="id_label">
+                <property name="halign">start</property>
+                <style>
+                  <class name="dim-label"/>
+                </style>
+              </object>
+            </child>
+
           </object>
         </child>
 

@@ -42,6 +42,8 @@
     <file preprocess="xml-stripblanks">icons/scalable/actions/bookmark-new-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/actions/checkmark-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/actions/document-open-recent-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/edit-select-all-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/edit-select-none-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/actions/find-location-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/actions/language-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/actions/list-remove-all-symbolic.svg</file>

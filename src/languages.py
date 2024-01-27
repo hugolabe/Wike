@@ -20,6 +20,7 @@ class LanguagesWindow(Adw.Window):
   languages_list = Gtk.Template.Child()
   select_all_button = Gtk.Template.Child()
   select_none_button = Gtk.Template.Child()
+  selected_label = Gtk.Template.Child()
 
   # Initialize and connect signals
 
@@ -27,6 +28,7 @@ class LanguagesWindow(Adw.Window):
     super().__init__()
 
     self._languages_changed = False
+    self._languages_selected = 0
     
     self.search_bar.set_key_capture_widget(self)
     self.languages_list.set_filter_func(self._filter_list)
@@ -57,10 +59,13 @@ class LanguagesWindow(Adw.Window):
       lang_name = languages.wikilangs[lang_id].capitalize()
       if lang_id in languages.items:
         row = LanguagesRow(lang_name, lang_id, True)
+        self._languages_selected += 1
       else:
         row = LanguagesRow(lang_name, lang_id, False)
       self.languages_list.append(row)
       row.lang_check.connect('toggled', self._language_checkbutton_cb)
+
+    self._set_selected_label()
 
   # Refresh languages list on languages entry changed
 
@@ -72,9 +77,15 @@ class LanguagesWindow(Adw.Window):
   def _languages_list_selected_cb(self, languages_list, row):
     row.lang_check.set_active(not row.lang_check.get_active())
 
-  # Set languages changed variable on check button changed
+  # On check button changed update variables
 
   def _language_checkbutton_cb(self, check_button):
+    if check_button.get_active():
+      self._languages_selected += 1
+    else:
+      self._languages_selected -= 1
+    self._set_selected_label()
+
     if not self._languages_changed:
       self._languages_changed = True
 
@@ -101,6 +112,14 @@ class LanguagesWindow(Adw.Window):
         i += 1
       else:
         break
+
+  # Update selected languages label
+  
+  def _set_selected_label(self):
+    if self._languages_selected == 1:
+      self.selected_label.set_label(_('1 language selected'))
+    else:
+      self.selected_label.set_label(_('%s languages selected') % self._languages_selected)
 
   # On window close refresh languages list (if changed)
 

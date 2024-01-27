@@ -9,8 +9,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
 <interface>
   <template class="LanguagesWindow" parent="AdwWindow">
     <property name="title" translatable="yes">Pick your Languages</property>
-    <property name="default-height">475</property>
-    <property name="default-width">420</property>
+    <property name="default-height">500</property>
+    <property name="default-width">380</property>
     <property name="modal">true</property>
 
     <!-- Window content -->
@@ -25,7 +25,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
             <child type="start">
               <object class="GtkToggleButton" id="search_button">
                 <property name="icon-name">system-search-symbolic</property>
-                <property name="tooltip-text" translatable="yes">Filter Languages</property>
+                <property name="tooltip-text" translatable="yes">Search Languages</property>
                 <property name="active" bind-source="search_bar" bind-property="search-mode-enabled" bind-flags="sync-create"/>
               </object>
             </child>
@@ -40,8 +40,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
             <child>
               <object class="GtkSearchEntry" id="languages_entry">
-                <property name="placeholder_text" translatable="yes">Filter languages</property>
-                <property name="max-width-chars">25</property>
+                <property name="placeholder_text" translatable="yes">Search languages</property>
+                <property name="max-width-chars">20</property>
               </object>
             </child>
 
@@ -53,8 +53,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
           <object class="GtkScrolledWindow">
             <child>
               <object class="GtkViewport">
-                <property name="margin-start">6</property>
-                <property name="margin-end">6</property>
 
                 <!-- Languages list -->
                 <child>
@@ -71,27 +69,30 @@ SPDX-License-Identifier: GPL-3.0-or-later
           </object>
         </property>
 
-        <!-- Buttons box -->
+        <!-- Actionbar -->
         <child type="bottom">
-          <object class="GtkBox">
-            <property name="margin-start">6</property>
-            <property name="margin-end">6</property>
-            <property name="margin-top">6</property>
-            <property name="margin-bottom">6</property>
-            <property name="spacing">6</property>
-            <property name="homogeneous">true</property>
+          <object class="GtkActionBar">
 
             <!-- Select all languages button -->
-            <child>
+            <child type="start">
               <object class="GtkButton" id="select_all_button">
-                <property name="label" translatable="yes">Select All</property>
+                <property name="icon-name">edit-select-all-symbolic</property>
+                <property name="tooltip-text" translatable="yes">Select All</property>
               </object>
             </child>
 
             <!-- Select none languages button -->
-            <child>
+            <child type="start">
               <object class="GtkButton" id="select_none_button">
-                <property name="label" translatable="yes">Select None</property>
+                <property name="icon-name">edit-select-none-symbolic</property>
+                <property name="tooltip-text" translatable="yes">Select None</property>
+              </object>
+            </child>
+
+            <!-- Selected languages label -->
+            <child type="end">
+              <object class="GtkLabel" id="selected_label">
+                <property name="margin-end">9</property>
               </object>
             </child>
 

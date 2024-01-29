@@ -25,6 +25,14 @@ SPDX-License-Identifier: GPL-3.0-or-later
               </object>
             </child>
 
+            <!-- Selection mode button -->
+            <child>
+              <object class="GtkToggleButton" id="selection_button">
+                <property name="icon-name">selection-mode-symbolic</property>
+                <property name="tooltip-text" translatable="yes">Select</property>
+              </object>
+            </child>
+
             <!-- Clear history button -->
             <child>
               <object class="GtkButton" id="clear_button">
@@ -72,6 +80,42 @@ SPDX-License-Identifier: GPL-3.0-or-later
             </child>
           </object>
         </property>
+
+        <!-- Actionbar -->
+        <child type="bottom">
+          <object class="GtkActionBar">
+            <property name="revealed">false</property>
+            <property name="revealed" bind-source="selection_button" bind-property="active" bind-flags="sync-create"/>
+
+            <!-- Select all languages button -->
+            <child type="start">
+              <object class="GtkButton" id="select_all_button">
+                <property name="icon-name">edit-select-all-symbolic</property>
+                <property name="tooltip-text" translatable="yes">Select All</property>
+              </object>
+            </child>
+
+            <!-- Select none languages button -->
+            <child type="start">
+              <object class="GtkButton" id="select_none_button">
+                <property name="icon-name">edit-select-none-symbolic</property>
+                <property name="tooltip-text" translatable="yes">Select None</property>
+              </object>
+            </child>
+
+            <!-- Remove selected button -->
+            <child type="end">
+              <object class="GtkButton" id="remove_button">
+                <property name="icon-name">app-remove-symbolic</property>
+                <property name="tooltip-text" translatable="yes">Remove Selected</property>
+                <style>
+                  <class name="button-remove"/>
+                </style>
+              </object>
+            </child>
+
+          </object>
+        </child>
 
       </object>
     </child>

@@ -39,6 +39,7 @@
     <file alias="style-dark.css">gtk/style-dark.css</file>
     <file alias="style-sepia.css">gtk/style-sepia.css</file>
 
+    <file preprocess="xml-stripblanks">icons/scalable/actions/app-remove-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/actions/bookmark-new-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/actions/checkmark-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/actions/document-open-recent-symbolic.svg</file>
@@ -49,6 +50,7 @@
     <file preprocess="xml-stripblanks">icons/scalable/actions/list-remove-all-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/actions/network-error-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/actions/printer-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/selection-mode-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/actions/system-search-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/actions/tab-new-symbolic.svg</file>
     <file preprocess="xml-stripblanks">icons/scalable/actions/user-bookmarks-symbolic.svg</file>

@@ -18,7 +18,11 @@ class HistoryPanel(Adw.Bin):
   __gtype_name__ = 'HistoryPanel'
 
   filter_dropdown = Gtk.Template.Child()
+  selection_button = Gtk.Template.Child()
   clear_button = Gtk.Template.Child()
+  select_all_button = Gtk.Template.Child()
+  select_none_button = Gtk.Template.Child()
+  remove_button = Gtk.Template.Child()
   history_list = Gtk.Template.Child()
 
   # Initialize widgets and connect signals and bindings
@@ -47,6 +51,9 @@ class HistoryPanel(Adw.Bin):
     self._populate()
 
     self.clear_button.connect('clicked', self._clear_button_cb)
+    self.select_all_button.connect('clicked', self._select_buttons_cb, True)
+    self.select_none_button.connect('clicked', self._select_buttons_cb, False)
+    self.remove_button.connect('clicked', self._remove_button_cb)
     self.history_list.connect('row-activated', self._list_activated_cb)
 
   # Setup filter item with a label
@@ -97,11 +104,13 @@ class HistoryPanel(Adw.Bin):
         lang = history_item[uri][2]
         row = HistoryRow(uri, title, lang, date, time)
         self.history_list.append(row)
-        row.remove_button.connect('clicked', self._row_remove_button_cb, row)
+        self.selection_button.bind_property('active', row.select_check, 'visible', Gio.SettingsBindFlags.DEFAULT)
 
   # Clear history list
 
   def _clear_list(self):
+    self.selection_button.set_active(False)
+
     while True:
       row = self.history_list.get_row_at_index(0)
       if row:
@@ -153,17 +162,41 @@ class HistoryPanel(Adw.Bin):
     if response == 'clear':
       self.clear_history()
 
-  # On list activated load article in view
+  # On select all or select none buttons do selection
+  
+  def _select_buttons_cb(self, button, select_mode):
+    i = 0
+    while True:
+      row = self.history_list.get_row_at_index(i)
+      if row:
+        if row.get_activatable():
+          row.select_check.set_active(select_mode)
+        i += 1
+      else:
+        break
 
-  def _list_activated_cb(self, history_list, row):
-    if self._window.panel_split.get_collapsed():
-      self._window.panel_split.set_show_sidebar(False)
+  # On button clicked remove selected items
 
-    self._window.page.wikiview.load_wiki(row.uri)
+  def _remove_button_cb(self, button):
+    selected_rows = []
+    i = 0
+    while True:
+      row = self.history_list.get_row_at_index(i)
+      if row:
+        if row.get_activatable():
+          if row.select_check.get_active():
+            selected_rows.append(row)
+        i += 1
+      else:
+        break
+        
+    if len(selected_rows) > 0:
+      for row in selected_rows:
+        self._remove_row(row)
 
-  # On row button remove article from history
+  # Remove row from history and list
 
-  def _row_remove_button_cb(self, remove_button, row):
+  def _remove_row(self, row):
     item_deleted, date_deleted = history.remove(row.date, row.uri)
     row_index = row.get_index()
 
@@ -173,6 +206,18 @@ class HistoryPanel(Adw.Bin):
     if date_deleted:
       date_row = self.history_list.get_row_at_index(row_index-1)
       self.history_list.remove(date_row)
+
+  # On list activated load article in view
+
+  def _list_activated_cb(self, history_list, row):
+    if self.selection_button.get_active():
+      row.select_check.set_active(not row.select_check.get_active())
+      return
+
+    if self._window.panel_split.get_collapsed():
+      self._window.panel_split.set_show_sidebar(False)
+
+    self._window.page.wikiview.load_wiki(row.uri)
 
 
 # This object represent an history filter in dropdown
@@ -211,7 +256,7 @@ class HistoryRow(Gtk.ListBoxRow):
   title_label = Gtk.Template.Child()
   lang_label = Gtk.Template.Child()
   time_label = Gtk.Template.Child()
-  remove_button = Gtk.Template.Child()
+  select_check = Gtk.Template.Child()
 
   # Set values and widgets
 

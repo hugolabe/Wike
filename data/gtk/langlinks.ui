@@ -13,19 +13,13 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
         <!-- Header -->
         <child type="top">
-          <object class="GtkBox">
-            <style>
-              <class name="toolbar"/>
-            </style>
-
-            <!-- Filter entry -->
-            <child>
+          <object class="AdwHeaderBar">
+            <property name="title-widget">
               <object class="GtkSearchEntry" id="filter_entry">
                 <property name="placeholder-text" translatable="yes">Filter languages</property>
                 <property name="hexpand">true</property>
               </object>
-            </child>
-
+            </property>
           </object>
         </child>
 

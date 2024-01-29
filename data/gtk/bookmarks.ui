@@ -13,34 +13,34 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
         <!-- Header -->
         <child type="top">
-          <object class="GtkBox">
-            <style>
-              <class name="toolbar"/>
-            </style>
+          <object class="AdwHeaderBar">
+            <property name="title-widget">
+              <object class="GtkBox">
+                <!-- Bookmark list selector -->
+                <child>
+                  <object class="GtkDropDown" id="booklists_dropdown">
+                    <property name="hexpand">true</property>
+                  </object>
+                </child>
 
-            <!-- Bookmark list selector -->
-            <child>
-              <object class="GtkDropDown" id="booklists_dropdown">
-                <property name="hexpand">true</property>
+                <!-- Add bookmark button -->
+                <child>
+                  <object class="GtkButton" id="add_button">
+                    <property name="icon-name">bookmark-new-symbolic</property>
+                    <property name="tooltip-text" translatable="yes">Add Bookmark</property>
+                    <property name="action-name">win.add-bookmark</property>
+                  </object>
+                </child>
+
+                <!-- Menu button -->
+                <child>
+                  <object class="GtkMenuButton" id="menu_button">
+                    <property name="icon-name">view-more-symbolic</property>
+                  </object>
+                </child>
+
               </object>
-            </child>
-
-            <!-- Add bookmark button -->
-            <child>
-              <object class="GtkButton" id="add_button">
-                <property name="icon-name">bookmark-new-symbolic</property>
-                <property name="tooltip-text" translatable="yes">Add Bookmark</property>
-                <property name="action-name">win.add-bookmark</property>
-              </object>
-            </child>
-
-            <!-- Menu button -->
-            <child>
-              <object class="GtkMenuButton" id="menu_button">
-                <property name="icon-name">view-more-symbolic</property>
-              </object>
-            </child>
-
+            </property>
           </object>
         </child>
 

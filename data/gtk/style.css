@@ -76,3 +76,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
   color: @destructive_fg_color;
   background-color: @destructive_color;
 }
+
+windowcontrols.floating-window-controls.empty {
+  margin: 0;
+}

@@ -51,10 +51,26 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
                 <!-- LEFT BAR -->
                 <property name="sidebar">
-                  <object class="AdwToolbarView">
+                  <object class="GtkBox">
+
+                    <property name="orientation">vertical</property>
+
+                    <child>
+                      <object class="GtkWindowControls">
+                        <property name="halign">center</property>
+                        <property name="side">start</property>
+                        <property name="margin-top">6</property>
+                        <property name="margin-bottom">6</property>
+                        <property name="margin-start">6</property>
+                        <property name="margin-end">6</property>
+                        <style>
+                          <class name="floating-window-controls"/>
+                        </style>
+                      </object>
+                    </child>
 
                     <!-- LEFT BAR: Main menu button -->
-                    <child type="top">
+                    <child>
                       <object class="GtkMenuButton" id="main_button">
                         <property name="icon-name">open-menu-symbolic</property>
                         <property name="tooltip-text" translatable="yes">Main Menu</property>
@@ -70,7 +86,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                     </child>
 
                     <!-- LEFT BAR: Selector buttons box -->
-                    <property name="content">
+                    <child>
                       <object class="GtkBox">
                         <property name="orientation">vertical</property>
                         <property name="vexpand">true</property>
@@ -131,10 +147,10 @@ SPDX-License-Identifier: GPL-3.0-or-later
                         </child>
 
                       </object>
-                    </property>
+                    </child>
 
                     <!-- LEFT BAR: Sidebar button -->
-                    <child type="bottom">
+                    <child>
                       <object class="GtkToggleButton" id="panel_button">
                         <property name="icon-name">sidebar-show-symbolic</property>
                         <property name="tooltip-text" translatable="yes">Sidebar</property>

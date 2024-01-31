@@ -15,7 +15,19 @@ SPDX-License-Identifier: GPL-3.0-or-later
         <property name="margin-top">6</property>
         <property name="margin-bottom">6</property>
         <property name="margin-start">3</property>
-        <property name="spacing">12</property>
+        <property name="margin-end">3</property>
+        <property name="spacing">9</property>
+
+        <!-- Select button -->
+        <child>
+          <object class="GtkCheckButton" id="select_check">
+            <property name="valign">center</property>
+            <property name="visible">false</property>
+            <style>
+              <class name="selection-mode"/>
+            </style>
+          </object>
+        </child>
 
         <!-- Labels box -->
         <child>
@@ -45,19 +57,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
               </object>
             </child>
 
-          </object>
-        </child>
-
-        <!-- Bookmark remove button -->
-        <child>
-          <object class="GtkButton" id="remove_button">
-            <property name="icon-name">window-close-symbolic</property>
-            <property name="valign">center</property>
-            <style>
-              <class name="flat"/>
-              <class name="circular"/>
-              <class name="button-remove"/>
-            </style>
           </object>
         </child>
 

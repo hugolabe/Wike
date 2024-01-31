@@ -16,7 +16,11 @@ class BookmarksPanel(Adw.Bin):
   __gtype_name__ = 'BookmarksPanel'
 
   booklists_dropdown = Gtk.Template.Child()
+  selection_button = Gtk.Template.Child()
   menu_button = Gtk.Template.Child()
+  select_all_button = Gtk.Template.Child()
+  select_none_button = Gtk.Template.Child()
+  remove_button = Gtk.Template.Child()
   bookmarks_list = Gtk.Template.Child()
 
   # Initialize widgets and connect signals
@@ -52,6 +56,9 @@ class BookmarksPanel(Adw.Bin):
 
     self.booklists_dropdown.connect('notify::selected', self._booklists_dropdown_selected_cb)
     self.booklists_model.connect('items-changed', self._booklists_model_changed_cb)
+    self.select_all_button.connect('clicked', self._select_buttons_cb, True)
+    self.select_none_button.connect('clicked', self._select_buttons_cb, False)
+    self.remove_button.connect('clicked', self._remove_button_cb)
     self.bookmarks_list.connect('row-activated', self._list_activated_cb)
 
   # Set actions for bookmarks menu
@@ -117,6 +124,8 @@ class BookmarksPanel(Adw.Bin):
   # Populate bookmarks list
 
   def _populate(self, list_name):
+    self._clear_list()
+
     if list_name:
       bookmarks_items = bookmarks.lists[list_name]
     else:
@@ -127,11 +136,13 @@ class BookmarksPanel(Adw.Bin):
       lang = bookmarks_items[bookmark][1]
       row = BookmarksRow(bookmark, title, lang)
       self.bookmarks_list.append(row)
-      row.remove_button.connect('clicked', self._row_remove_button_cb, row)
+      self.selection_button.bind_property('active', row.select_check, 'visible', Gio.SettingsBindFlags.DEFAULT)
 
   # Clear bookmarks list
 
-  def _clear(self):
+  def _clear_list(self):
+    self.selection_button.set_active(False)
+
     while True:
       row = self.bookmarks_list.get_row_at_index(0)
       if row:
@@ -162,9 +173,10 @@ class BookmarksPanel(Adw.Bin):
 
   def add_bookmark(self, uri, title, lang):
     if bookmarks.add(uri, title, lang, self._booklist):
+      self.selection_button.set_active(False)
       row = BookmarksRow(uri, title, lang)
       self.bookmarks_list.append(row)
-      row.remove_button.connect('clicked', self._row_remove_button_cb, row)
+      self.selection_button.bind_property('active', row.select_check, 'visible', Gio.SettingsBindFlags.DEFAULT)
       self.refresh_buttons()
       return True
     else:
@@ -297,7 +309,7 @@ class BookmarksPanel(Adw.Bin):
           self.booklists_model.remove(self.booklists_dropdown.get_selected())
       else:
         bookmarks.clear_list(self._booklist)
-        self._clear()
+        self._clear_list()
         self.refresh_buttons()
 
   # Dropdown list selected changed
@@ -310,7 +322,6 @@ class BookmarksPanel(Adw.Bin):
     else:
       self._booklist = list_name
 
-    self._clear()
     self._populate(self._booklist)
     self.refresh_buttons()
 
@@ -323,21 +334,56 @@ class BookmarksPanel(Adw.Bin):
       if removed == 1:
         self.booklists_dropdown.set_selected(0)
 
-  # On list activated load article in view
+  # On select all or select none buttons do selection
+  
+  def _select_buttons_cb(self, button, select_mode):
+    i = 0
+    while True:
+      row = self.bookmarks_list.get_row_at_index(i)
+      if row:
+        if row.get_activatable():
+          row.select_check.set_active(select_mode)
+        i += 1
+      else:
+        break
 
-  def _list_activated_cb(self, bookmarks_list, row):
-    if self._window.panel_split.get_collapsed():
-      self._window.panel_split.set_show_sidebar(False)
+  # On button clicked remove selected items
 
-    self._window.page.wikiview.load_wiki(row.uri)
+  def _remove_button_cb(self, button):
+    selected_rows = []
+    i = 0
+    while True:
+      row = self.bookmarks_list.get_row_at_index(i)
+      if row:
+        if row.select_check.get_active():
+          selected_rows.append(row)
+        i += 1
+      else:
+        break
+        
+    if len(selected_rows) > 0:
+      for row in selected_rows:
+        self._remove_row(row)
 
-  # On row button remove bookmark and refresh buttons state
+  # Remove row from bookmarks and list
 
-  def _row_remove_button_cb(self, remove_button, row):
+  def _remove_row(self, row):
     if bookmarks.remove(row.uri, self._booklist):
       self.bookmarks_list.remove(row)
 
     self.refresh_buttons()
+
+  # On list activated load article in view
+
+  def _list_activated_cb(self, bookmarks_list, row):
+    if self.selection_button.get_active():
+      row.select_check.set_active(not row.select_check.get_active())
+      return
+
+    if self._window.panel_split.get_collapsed():
+      self._window.panel_split.set_show_sidebar(False)
+
+    self._window.page.wikiview.load_wiki(row.uri)
 
 
 # This object represent a bookmarks list in dropdown
@@ -368,7 +414,7 @@ class BookmarksRow(Gtk.ListBoxRow):
   
   title_label = Gtk.Template.Child()
   lang_label = Gtk.Template.Child()
-  remove_button = Gtk.Template.Child()
+  select_check = Gtk.Template.Child()
 
   # Set values and connect signals
 

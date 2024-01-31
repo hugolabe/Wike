@@ -5,7 +5,7 @@
 
 from datetime import datetime
 
-from gi.repository import GObject, Gio, Gtk, Adw
+from gi.repository import GObject, Gio, Gtk, Adw, Pango
 
 from wike.data import settings, languages, history
 
@@ -61,6 +61,7 @@ class HistoryPanel(Adw.Bin):
   def _filter_factory_setup(self, factory, list_item):
     label = Gtk.Label()
     label.set_xalign(0)
+    label.set_ellipsize(Pango.EllipsizeMode.END)
     list_item.set_child(label)
 
   # Bind label property for filter item

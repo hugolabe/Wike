@@ -82,7 +82,6 @@ class BookmarksPanel(Adw.Bin):
   def _booklists_factory_setup(self, factory, list_item):
     label = Gtk.Label()
     label.set_xalign(0)
-    label.set_max_width_chars(15)
     label.set_ellipsize(Pango.EllipsizeMode.END)
     list_item.set_child(label)
 

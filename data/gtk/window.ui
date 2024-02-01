@@ -273,7 +273,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
                             <!-- MAIN: Headerbar -->
                             <child type="top">
-                              <object class="AdwHeaderBar" id="headerbar">
+                              <object class="GtkHeaderBar" id="headerbar">
 
                                 <!-- Prev navigation button -->
                                 <child type="start">

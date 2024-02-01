@@ -30,8 +30,6 @@ class TocPanel(Adw.Bin):
   # Populate toc list
 
   def populate(self, title, sections):
-    self.title_label.set_label(title)
-
     while True:
       row = self.toc_list.get_row_at_index(0)
       if row:
@@ -40,12 +38,12 @@ class TocPanel(Adw.Bin):
         break
 
     if sections:
-      self.title_label.set_visible(True)
+      self.title_label.set_label(title)
       for section in sections:
         row = TocBoxRow(section['anchor'].replace('_', ' '), section['anchor'], section['toclevel'])
         self.toc_list.append(row)
     else:
-      self.title_label.set_visible(False)
+      self.title_label.set_label('')
 
   # On list activated load section
 

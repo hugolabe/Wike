@@ -5,7 +5,7 @@
 
 import json
 
-from gi.repository import Gio, Gtk, Adw
+from gi.repository import GObject, Gio, Gtk, Adw, Pango
 
 from wike.data import settings, languages
 
@@ -17,7 +17,8 @@ class LanglinksPanel(Adw.Bin):
 
   __gtype_name__ = 'LanglinksPanel'
 
-  filter_entry = Gtk.Template.Child()
+  filter_dropdown = Gtk.Template.Child()
+  search_entry = Gtk.Template.Child()
   langlinks_list = Gtk.Template.Child()
 
   # Initialize widgets and connect signals
@@ -27,40 +28,59 @@ class LanglinksPanel(Adw.Bin):
 
     self._window = window
 
-    self.langlinks_list.set_filter_func(self._filter_list, self.filter_entry)
-    self.langlinks_list.set_sort_func(self._sort_list)
+    self.filter_model = Gio.ListStore(item_type=LanguagesFilter)
+    self.filter_model.append(LanguagesFilter(_('Your languages'), 0))
+    self.filter_model.append(LanguagesFilter(_('All languages'), 1))
 
+    filter_factory = Gtk.SignalListItemFactory()
+    filter_factory.connect('setup', self._filter_factory_setup)
+    filter_factory.connect('bind', self._filter_factory_bind)
+
+    self.filter_dropdown.set_model(self.filter_model)
+    self.filter_dropdown.set_factory(filter_factory)
+
+    self.langlinks_list.set_filter_func(self._filter_list, self.search_entry)
+
+    settings.bind('filter-langlinks', self.filter_dropdown, 'selected', Gio.SettingsBindFlags.DEFAULT)
+    settings.connect('changed::filter-langlinks', self._filter_langlinks_changed_cb)
     settings.connect('changed::show-flags', self._settings_show_flags_changed_cb)
 
-    self.filter_entry.connect('search-changed', self._filter_entry_changed_cb)
+    self.search_entry.connect('search-changed', self._search_entry_changed_cb)
     self.langlinks_list.connect('row-activated', self._list_activated_cb)
+
+  # Setup filter item with a label
+
+  def _filter_factory_setup(self, factory, list_item):
+    label = Gtk.Label()
+    label.set_xalign(0)
+    label.set_ellipsize(Pango.EllipsizeMode.END)
+    list_item.set_child(label)
+
+  # Bind label property for filter item
+
+  def _filter_factory_bind(self, factory, list_item):
+    label = list_item.get_child()
+    history_filter = list_item.get_item()
+    history_filter.bind_property('name', label, 'label', GObject.BindingFlags.SYNC_CREATE)
 
   # Filter list for entry content
 
-  def _filter_list(self, row, filter_entry):
-    text = filter_entry.get_text()
+  def _filter_list(self, row, search_entry):
+    text = search_entry.get_text()
     if text == '':
       return True
+
+    if not row.get_activatable():
+      return False
 
     if row.lang_name.lower().startswith(text.lower()) or row.lang.lower().startswith(text.lower()):
       return True
     else:
       return False
 
-  # Sort list alphabetically
-
-  def _sort_list(self, row1, row2):
-    if row1.lang > row2.lang:
-      return 1
-    elif row1.lang < row2.lang:
-      return -1
-    else:
-      return 0
-
   # Populate langlinks list
 
   def populate(self, langlinks):
-
     while True:
       row = self.langlinks_list.get_row_at_index(0)
       if row:
@@ -68,11 +88,42 @@ class LanglinksPanel(Adw.Bin):
       else:
         break
 
-    if langlinks:
-      for langlink in langlinks:
-        if langlink['lang'] in languages.items:
-          row = LanglinksRow(langlink['url'], langlink['lang'], langlink['autonym'].capitalize(), langlink['*'])
-          self.langlinks_list.append(row)
+    if not langlinks:
+      return
+
+    user_langlinks = []
+    other_langlinks = []
+    for langlink in langlinks:
+      if langlink['lang'] in languages.items:
+        user_langlinks.append(langlink)
+      else:
+        other_langlinks.append(langlink)
+
+    if user_langlinks:
+      for langlink in sorted(user_langlinks, key=lambda x: x['lang']):
+        row = LanglinksRow(langlink['url'], langlink['lang'], langlink['autonym'].capitalize(), langlink['*'])
+        self.langlinks_list.append(row)
+
+    if other_langlinks and settings.get_int('filter-langlinks') == 1:
+      section_label = Gtk.Label()
+      section_label.set_label(_('Other languages'))
+      section_label.add_css_class('heading')
+      section_label.set_xalign(0)
+      section_label.set_margin_start(3)
+      section_label.set_margin_end(3)
+      row = Gtk.ListBoxRow()
+      row.set_child(section_label)
+      row.set_activatable(False)
+      row.set_selectable(False)
+      self.langlinks_list.append(row)
+      for langlink in sorted(other_langlinks, key=lambda x: x['lang']):
+        row = LanglinksRow(langlink['url'], langlink['lang'], langlink['autonym'].capitalize(), langlink['*'])
+        self.langlinks_list.append(row)
+
+  # Settings filter langlinks changed event
+
+  def _filter_langlinks_changed_cb(self, settings, key):
+    self.populate(self._window.page.wikiview.langlinks)
 
   # Settings show flags changed event
 
@@ -81,7 +132,7 @@ class LanglinksPanel(Adw.Bin):
 
   # Refresh list on filter entry changed
 
-  def _filter_entry_changed_cb(self, filter_entry):
+  def _search_entry_changed_cb(self, search_entry):
     self.langlinks_list.invalidate_filter()
 
   # On list activated load page in choosen language
@@ -91,6 +142,32 @@ class LanglinksPanel(Adw.Bin):
       self._window.panel_split.set_show_sidebar(False)
 
     self._window.page.wikiview.load_wiki(row.uri)
+
+
+# This object represent a language filter in dropdown
+
+class LanguagesFilter(GObject.Object):
+  __gtype_name__ = 'LanguagesFilter'
+
+  # Set values
+
+  def __init__(self, name, level):
+    super().__init__()
+
+    self._name = name
+    self._level = level
+
+  # Name of filter property
+
+  @GObject.Property(type=str)
+  def name(self):
+    return self._name
+
+  # Id property
+
+  @GObject.Property(type=int)
+  def level(self):
+    return self._level
 
 
 # Row on langlinks list

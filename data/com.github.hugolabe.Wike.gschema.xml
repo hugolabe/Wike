@@ -87,6 +87,11 @@
       <summary>Last sidepanel page selected</summary>
     </key>
 
+    <key name="filter-langlinks" type="i">
+      <default>0</default>
+      <summary>Language links to show (0-User, 1-All)</summary>
+    </key>
+
     <key name="filter-history" type="i">
       <default>0</default>
       <summary>Days to show in history (0-Today, 1-Week, 2-Month, 3-All)</summary>

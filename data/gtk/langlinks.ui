@@ -18,10 +18,34 @@ SPDX-License-Identifier: GPL-3.0-or-later
               <class name="toolbar"/>
             </style>
 
-            <!-- Filter entry -->
+            <!-- Filter selector for user or all languages -->
             <child>
-              <object class="GtkSearchEntry" id="filter_entry">
-                <property name="placeholder-text" translatable="yes">Filter languages</property>
+              <object class="GtkDropDown" id="filter_dropdown">
+                <property name="hexpand">true</property>
+              </object>
+            </child>
+
+            <!-- Search button -->
+            <child>
+              <object class="GtkToggleButton" id="search_button">
+                <property name="icon-name">system-search-symbolic</property>
+                <property name="tooltip-text" translatable="yes">Search Languages</property>
+                <property name="active" bind-source="search_bar" bind-property="search-mode-enabled" bind-flags="sync-create"/>
+              </object>
+            </child>
+
+          </object>
+        </child>
+
+        <!-- Search bar -->
+        <child type="top">
+          <object class="GtkSearchBar" id="search_bar">
+            <property name="search-mode-enabled" bind-source="search_button" bind-property="active" bind-flags="sync-create"/>
+
+            <!-- search entry -->
+            <child>
+              <object class="GtkSearchEntry" id="search_entry">
+                <property name="placeholder-text" translatable="yes">Search languages</property>
                 <property name="hexpand">true</property>
               </object>
             </child>

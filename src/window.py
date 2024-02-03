@@ -487,7 +487,7 @@ class Window(Adw.ApplicationWindow):
     if not self.page.search_bar.get_search_mode():
       self.page.search_bar.set_search_mode(True)
     else:
-      self.page.textsearch_entry.grab_focus()
+      self.page.search_entry.grab_focus()
 
   # Print current page
 

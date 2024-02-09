@@ -18,6 +18,7 @@ data/gtk/menu-article.ui
 data/gtk/menu-main.ui
 data/gtk/menu-view.ui
 data/gtk/page.ui
+data/gtk/page-status.ui
 data/gtk/prefs.ui
 data/gtk/search.ui
 data/gtk/search-settings.ui

@@ -3,13 +3,13 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 
-from gi.repository import Gtk, WebKit
+from gi.repository import Gtk, Adw, WebKit
 
 from wike.data import settings
 from wike.view import WikiView
 
 
-# Page box for each tab with webview and search bar
+# Page box for each tab
 
 @Gtk.Template(resource_path='/com/github/hugolabe/Wike/gtk/page.ui')
 class PageBox(Gtk.Box):
@@ -22,12 +22,8 @@ class PageBox(Gtk.Box):
   search_next_button = Gtk.Template.Child()
   search_matches_label = Gtk.Template.Child()
   view_stack = Gtk.Template.Child()
-  status_page = Gtk.Template.Child()
-  main_page_button = Gtk.Template.Child()
-  random_article_button = Gtk.Template.Child()
-  try_again_button = Gtk.Template.Child()
 
-  # Add wikiview, initialize find controller and connect signals
+  # Add stack pages, initialize find controller and connect signals
 
   def __init__(self, window, lazy_load):
     super().__init__()
@@ -40,6 +36,9 @@ class PageBox(Gtk.Box):
     self.view_stack.add_named(self.wikiview, 'wikiview')
     self.view_stack.set_visible_child_name('wikiview')
 
+    self.status = PageStatus(self)
+    self.view_stack.add_named(self.status, 'status')
+
     find_controller = self.wikiview.get_find_controller()
     nav_list = self.wikiview.get_back_forward_list()
     self.search_bar.connect_entry(self.search_entry)
@@ -47,7 +46,6 @@ class PageBox(Gtk.Box):
     self.wikiview.connect('load-changed', self._wikiview_load_changed_cb)
     self.wikiview.connect('new-page', self._wikiview_new_page_cb)
     self.wikiview.connect('add_bookmark', self._wikiview_add_bookmark_cb)
-    self.try_again_button.connect('clicked', self._try_again_button_cb)
     self.search_entry.connect('search-changed', self._search_entry_changed_cb, find_controller)
     self.search_entry.connect('activate', self._search_entry_activate_cb, find_controller)
     self.search_prev_button.connect('clicked', self._search_prev_button_cb, find_controller)
@@ -96,41 +94,10 @@ class PageBox(Gtk.Box):
       case WebKit.LoadEvent.FINISHED:
         tabpage.set_loading(False)
         if wikiview.is_local():
-          self._show_status_page(wikiview.get_uri())
+          self.status.show(wikiview.get_uri())
         if settings.get_boolean('keep-history'):
           if not self._is_main and not wikiview.is_local():
             self._window.history_panel.add_item(wikiview.get_base_uri(), wikiview.title, wikiview.get_lang())
-
-  # If wikiview is local show status page
-
-  def _show_status_page(self, uri):
-    match uri:
-      case 'about:notfound':
-        self.status_page.set_title(_('Article not Found'))
-        self.status_page.set_description(_('Can\'t find any results for requested query'))
-        self.status_page.set_icon_name('find-location-symbolic')
-        self.main_page_button.set_visible(True)
-        self.random_article_button.set_visible(False)
-        self.try_again_button.set_visible(False)
-        self.main_page_button.grab_focus()
-      case 'about:error':
-        self.status_page.set_title(_('Can\'t Access Wikipedia'))
-        self.status_page.set_description(_('Check your Internet connection and try again'))
-        self.status_page.set_icon_name('network-error-symbolic')
-        self.main_page_button.set_visible(False)
-        self.random_article_button.set_visible(False)
-        self.try_again_button.set_visible(True)
-        self.try_again_button.grab_focus()
-      case _:
-        self.main_page_button.grab_focus()
-
-    self.view_stack.set_visible_child_name('status')
-
-  # Try again button clicked
-
-  def _try_again_button_cb(self, try_again_button):
-    if self.wikiview.fail_uri:
-      self.wikiview.load_wiki(self.wikiview.fail_uri)
 
   # On webview event create new page
 
@@ -204,3 +171,56 @@ class PageBox(Gtk.Box):
     tabpage = self._window.tabview.get_page(self)
     if tabpage.get_selected():
       self._window.refresh_nav_actions(self.wikiview)
+
+
+# Status page for view stack
+
+@Gtk.Template(resource_path='/com/github/hugolabe/Wike/gtk/page-status.ui')
+class PageStatus(Adw.Bin):
+
+  __gtype_name__ = 'PageStatus'
+
+  status_page = Gtk.Template.Child()
+  main_page_button = Gtk.Template.Child()
+  random_article_button = Gtk.Template.Child()
+  try_again_button = Gtk.Template.Child()
+
+  # Initialize and connect signals
+
+  def __init__(self, page):
+    super().__init__()
+
+    self._page = page
+
+    self.try_again_button.connect('clicked', self._try_again_button_cb)
+
+  # Show status for provided uri
+
+  def show(self, uri):
+    match uri:
+      case 'about:notfound':
+        self.status_page.set_title(_('Article not Found'))
+        self.status_page.set_description(_('Can\'t find any results for requested query'))
+        self.status_page.set_icon_name('find-location-symbolic')
+        self.main_page_button.set_visible(True)
+        self.random_article_button.set_visible(False)
+        self.try_again_button.set_visible(False)
+        self.main_page_button.grab_focus()
+      case 'about:error':
+        self.status_page.set_title(_('Can\'t Access Wikipedia'))
+        self.status_page.set_description(_('Check your Internet connection and try again'))
+        self.status_page.set_icon_name('network-error-symbolic')
+        self.main_page_button.set_visible(False)
+        self.random_article_button.set_visible(False)
+        self.try_again_button.set_visible(True)
+        self.try_again_button.grab_focus()
+      case _:
+        self.main_page_button.grab_focus()
+
+    self._page.view_stack.set_visible_child_name('status')
+
+  # Try again button clicked
+
+  def _try_again_button_cb(self, try_again_button):
+    if self._page.wikiview.fail_uri:
+      self._page.wikiview.load_wiki(self._page.wikiview.fail_uri)

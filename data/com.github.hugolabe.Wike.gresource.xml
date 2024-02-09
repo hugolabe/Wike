@@ -24,6 +24,7 @@
     <file>gtk/menu-main.ui</file>
     <file>gtk/menu-view.ui</file>
     <file>gtk/page.ui</file>
+    <file>gtk/page-status.ui</file>
     <file>gtk/prefs.ui</file>
     <file>gtk/search.ui</file>
     <file>gtk/search-settings.ui</file>

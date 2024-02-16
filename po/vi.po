@@ -184,7 +184,7 @@ msgstr "Riêng tư"
 
 #: ../data/ui/prefs.ui:42
 msgid "Allow Live Search on Desktop"
-msgstr "Cho phép Live Search trên desktop"
+msgstr "Cho phép tìm kiếm trực tiếp desktop"
 
 #: ../data/ui/prefs.ui:43
 msgid "Warning: all desktop searches will be sent to Wikipedia"
@@ -331,7 +331,7 @@ msgstr "Mã nguồn"
 
 #: ../src/application.py:158
 msgid "Report an Issue"
-msgstr "Báo cáo vấn đề"
+msgstr "Báo cáo lỗi"
 
 #: ../src/application.py:159
 msgid "Help Translating"
@@ -480,7 +480,7 @@ msgstr "Tab mới"
 
 #: ../data/ui/actionbar.ui:34 ../data/ui/headerbar.ui:46
 msgid "View"
-msgstr "Xem"
+msgstr "Diện mạo"
 
 #: ../data/ui/actionbar.ui:27 ../data/ui/headerbar.ui:52
 msgid "Sidebar"
@@ -512,7 +512,7 @@ msgstr "Hiển thị"
 
 #: ../data/ui/menu-view.ui:23
 msgid "Language Flags"
-msgstr "Flag ngôn ngữ"
+msgstr "Cờ cho ngôn ngữ"
 
 #: ../data/ui/menu-view.ui:27
 msgid "Link Previews"

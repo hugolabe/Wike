@@ -61,13 +61,3 @@ SPDX-License-Identifier: GPL-3.0-or-later
 .navigation-sidebar > row {
   min-height: 28px;
 }
-
-.button-remove:hover {
-  color: @destructive_fg_color;
-  background-color: @destructive_bg_color;
-}
-
-.button-remove:active {
-  color: @destructive_fg_color;
-  background-color: @destructive_color;
-}

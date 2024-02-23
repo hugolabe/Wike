@@ -136,7 +136,8 @@ view_settings = ViewSettings()
 
 class WikiView(WebKit.WebView):
 
-  __gsignals__ = { 'new-page': (GObject.SIGNAL_RUN_FIRST, None, (str,)),
+  __gsignals__ = { 'load-props': (GObject.SIGNAL_RUN_FIRST, None, ()),
+                   'new-page': (GObject.SIGNAL_RUN_FIRST, None, (str,)),
                    'add-bookmark': (GObject.SIGNAL_RUN_FIRST, None, (str, str, str,)) }
 
   title = 'Wike'
@@ -193,14 +194,23 @@ class WikiView(WebKit.WebView):
     uri = 'https://' + settings.get_string('search-language') + '.m.wikipedia.org'
     self.load_wiki(uri)
 
-  # Load Wikipedia random article
+  # Get Wikipedia random article async
 
   def load_random(self):
+    wikipedia.get_random(settings.get_string('search-language'), self._on_random_finished)
+
+  # On random finished get results
+
+  def _on_random_finished(self, session, async_result, user_data):
     try:
-      uri = wikipedia.get_random(settings.get_string('search-language'))
-      self.load_wiki(uri)
+      uri = wikipedia.random_result(async_result)
     except:
       self.load_message('error')
+    else:
+      if uri:
+        self.load_wiki(uri)
+      else:
+        self.load_message('notfound')
 
   # Load void html for status page
 
@@ -234,42 +244,6 @@ class WikiView(WebKit.WebView):
       lang = uri_netloc.split('.', 1)[0]
       return lang
 
-  # Set toc, langlinks and title for current article
-
-  def set_props(self):
-    uri = self.get_uri()
-    uri_elements = urllib.parse.urlparse(uri)
-    uri_scheme = uri_elements[0]
-    uri_netloc = uri_elements[1]
-    uri_path = uri_elements[2]
-
-    props = None
-    self.title = 'Wike'
-    self.sections = None
-    self.langlinks = None
-
-    if uri_scheme == 'about':
-      if uri_path == 'notfound':
-        self.title = _('Article not found')
-      elif uri_path == 'error':
-        self.title = _('Can\'t access Wikipedia')
-      return
-    else:
-      page = uri_path.replace('/wiki/', '', 1)
-      lang = uri_netloc.split('.', 1)[0]
-      try:
-        props = wikipedia.get_properties(page, lang)
-      except:
-        props = None
-
-    if props:
-      self.title = props['title']
-      self.sections = props['sections']
-      self.langlinks = props['langlinks']
-    else:
-      title_raw = page.replace('_', ' ')
-      self.title = urllib.parse.unquote(title_raw)
-
   # Check if current page is local (status page)
 
   def is_local(self):
@@ -296,6 +270,52 @@ class WikiView(WebKit.WebView):
       return base_uri
     else:
       return ''
+
+  # Set toc, langlinks and title for current article
+
+  def do_load_changed(self, event):
+    if event != WebKit.LoadEvent.COMMITTED:
+      return
+
+    uri = self.get_uri()
+    uri_elements = urllib.parse.urlparse(uri)
+    uri_scheme = uri_elements[0]
+    uri_netloc = uri_elements[1]
+    uri_path = uri_elements[2]
+
+    props = None
+    self.title = 'Wike'
+    self.sections = None
+    self.langlinks = None
+
+    if uri_scheme == 'about':
+      if uri_path == 'notfound':
+        self.title = _('Article not found')
+      elif uri_path == 'error':
+        self.title = _('Can\'t access Wikipedia')
+      self.emit('load-props')
+      return
+    else:
+      page = uri_path.replace('/wiki/', '', 1)
+      lang = uri_netloc.split('.', 1)[0]
+      wikipedia.get_properties(page, lang, self._on_properties_finished, page)
+
+  # On properties finished get results
+
+  def _on_properties_finished(self, session, async_result, page):
+    try:
+      props = wikipedia.properties_result(async_result)
+    except:
+      self.emit('load-props')
+    else:
+      if props:
+        self.title = props['title']
+        self.sections = props['sections']
+        self.langlinks = props['langlinks']
+      else:
+        title_raw = page.replace('_', ' ')
+        self.title = urllib.parse.unquote(title_raw)
+      self.emit('load-props')
 
   # Webview load error event
 

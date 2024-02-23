@@ -8,7 +8,6 @@
 import os
 import sys
 import gettext
-from threading import Thread
 
 from gi.repository import GLib, Gio
 
@@ -63,7 +62,6 @@ class WikeSearchService:
 
   def __init__(self):
     self._results = dict()
-    self._search_thread = None
     self._lang = settings.get_string('search-language')
 
     settings.connect('changed::search-language', self._search_lang_changed_cb)
@@ -132,21 +130,11 @@ class WikeSearchService:
   def LaunchSearch(self, terms, timestamp):
     GLib.spawn_async_with_pipes( None, ['@BIN@'], None, GLib.SpawnFlags.SEARCH_PATH, None )
 
-  # Run Wikipedia search in new thread
+  # Run Wikipedia search and load results dict
 
   def _get_results(self, text, lang):
-    if self._search_thread:
-      self._search_thread.join()
-    self._search_thread = Thread(target=self._search_wikipedia, args=(text, lang, ))
-    self._search_thread.start()
-    self._search_thread.join()
-    self._search_thread = None
-
-  # Search text in Wikipedia and load results dict
-
-  def _search_wikipedia(self, text, lang):
     try:
-      found = wikipedia.search(text.lower(), lang, 5)
+      found = wikipedia.search(text.lower(), lang, 5, None, None)
     except:
       found = None
     if found:

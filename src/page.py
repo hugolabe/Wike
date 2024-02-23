@@ -44,6 +44,7 @@ class PageBox(Gtk.Box):
     self.search_bar.connect_entry(self.search_entry)
 
     self.wikiview.connect('load-changed', self._wikiview_load_changed_cb)
+    self.wikiview.connect('load-props', self._wikiview_load_props_cb)
     self.wikiview.connect('new-page', self._wikiview_new_page_cb)
     self.wikiview.connect('add_bookmark', self._wikiview_add_bookmark_cb)
     self.search_entry.connect('search-changed', self._search_entry_changed_cb, find_controller)
@@ -83,11 +84,6 @@ class PageBox(Gtk.Box):
           wikiview.grab_focus()
 
       case WebKit.LoadEvent.COMMITTED:
-        wikiview.set_props()
-        tabpage.set_title(wikiview.title)
-        if tabpage.get_selected():
-          self._window.toc_panel.populate(wikiview.title, wikiview.sections)
-          self._window.langlinks_panel.populate(wikiview.langlinks)
         self._window.bookmarks_panel.refresh_buttons()
         self._window.refresh_menu_actions(wikiview.is_local())
 
@@ -95,9 +91,20 @@ class PageBox(Gtk.Box):
         tabpage.set_loading(False)
         if wikiview.is_local():
           self.status.show(wikiview.get_uri())
-        if settings.get_boolean('keep-history'):
-          if not self._is_main and not wikiview.is_local():
-            self._window.history_panel.add_item(wikiview.get_base_uri(), wikiview.title, wikiview.get_lang())
+
+  # On wikiview load page properties populate toc and langlinks
+  
+  def _wikiview_load_props_cb(self, wikiview):
+    tabpage = self._window.tabview.get_page(self)
+
+    tabpage.set_title(wikiview.title)
+    if tabpage.get_selected():
+      self._window.toc_panel.populate(wikiview.title, wikiview.sections)
+      self._window.langlinks_panel.populate(wikiview.langlinks)
+
+    if settings.get_boolean('keep-history'):
+      if not self._is_main and not wikiview.is_local():
+        self._window.history_panel.add_item(wikiview.get_base_uri(), wikiview.title, wikiview.get_lang())
 
   # On webview event create new page
 

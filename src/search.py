@@ -3,8 +3,6 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 
-from threading import Thread
-
 from gi.repository import GLib, Gio, Gtk
 
 from wike import wikipedia
@@ -31,8 +29,6 @@ class SearchBox(Gtk.Box):
     self._delegate = self.search_entry.get_delegate()
 
     self.results_list = None
-    self._results_changed = False
-    lang_id = settings.get_string('search-language')
 
     self.settings_popover = SettingsPopover(self)
     self.suggestions_popover = SuggestionsPopover(self)
@@ -49,15 +45,6 @@ class SearchBox(Gtk.Box):
 
     self.search_entry.set_key_capture_widget(window)
 
-  # Search text in Wikipedia and load results list
-
-  def _search_wikipedia(self, text, lang):
-    try:
-      self.results_list = wikipedia.search(text, lang, 10)
-    except:
-      self.results_list = None
-    self._results_changed = True
-
   # When down key pressed set focus to suggestions popover
 
   def _search_key_pressed_cb(self, event_controller, keyval, keycode, modifier):
@@ -72,21 +59,34 @@ class SearchBox(Gtk.Box):
   def _search_has_focus_cb(self, delegate, parameter):
     if delegate.has_focus():
       self.suggestions_popover.set_can_focus(False)
-      if settings.get_boolean('search-suggestions'):
-        GLib.timeout_add(250, self._timeout_cb)
 
-  # When text changes run search in new thread
+  # When text changes run search async
 
   def _search_changed_cb(self, search_entry):
     search_entry.grab_focus()
     if settings.get_boolean('search-suggestions'):
       text, lang = self._get_search_terms(search_entry.get_text())
       if len(text) > 2:
-        t = Thread(target=self._search_wikipedia, args=(text, lang, ))
-        t.start()
+        wikipedia.search(text.lower(), lang, 10, self._on_search_finished)
       else:
         self.results_list = None
-        self._results_changed = True
+        self.suggestions_popover.hide()
+
+  # On search finished get results
+
+  def _on_search_finished(self, session, async_result, user_data):
+    try:
+      self.results_list = wikipedia.search_result(async_result)
+    except:
+      self.suggestions_popover.hide()
+    else:
+      if self.results_list != None:
+        self.suggestions_popover.populate(self.results_list)
+        if not self.suggestions_popover.is_visible():
+          self.suggestions_popover.show()
+      else:
+        self.suggestions_popover.hide()
+
 
   # Split search terms to get language prefix
 
@@ -115,39 +115,29 @@ class SearchBox(Gtk.Box):
       else:
         self.window.page.wikiview.grab_focus()
 
-  # Timeout function which show search results in popover
-
-  def _timeout_cb(self):
-    if not self._delegate.has_focus():
-      return False
-
-    if self._results_changed:
-      if self.results_list != None:
-        self.suggestions_popover.populate(self.results_list)
-        if not self.suggestions_popover.is_visible():
-          self.suggestions_popover.show()
-      else:
-        self.suggestions_popover.hide()
-      self._results_changed = False
-    return True
-
-  # On entry activated search for text in Wikipedia and load result
+  # On entry activated search for text async
 
   def _search_activate_cb(self, search_entry):
     text, lang = self._get_search_terms(search_entry.get_text())
     self.suggestions_popover.hide()
     search_entry.delete_text(0, -1)
+
     if text != '':
-      try:
-        result = wikipedia.search(text, lang, 1)
-      except:
-        self.window.page.wikiview.load_message('notfound')
+      wikipedia.search(text.lower(), lang, 1, self._on_activate_result)
+
+  # On search activate finished get result and load article
+  
+  def _on_activate_result(self, session, async_result, user_data):
+    try:
+      results = wikipedia.search_result(async_result)
+    except:
+      self.window.page.wikiview.load_message('error')
+    else:
+      if results:
+        uri = results[1][0]
+        self.window.page.wikiview.load_wiki(uri)
       else:
-        if result != None:
-          uri = result[1][0]
-          self.window.page.wikiview.load_wiki(uri)
-        else:
-          self.window.page.wikiview.load_message('notfound')
+        self.window.page.wikiview.load_message('notfound')
 
   # Close suggestions and empty search entry
 

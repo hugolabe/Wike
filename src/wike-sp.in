@@ -134,7 +134,7 @@ class WikeSearchService:
 
   def _get_results(self, text, lang):
     try:
-      found = wikipedia.search(text.lower(), lang, 5, None, None)
+      found = wikipedia.search(text.lower(), lang, 5, None)
     except:
       found = None
     if found:

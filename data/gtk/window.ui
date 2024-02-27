@@ -30,6 +30,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
         <setter object="panel_split" property="max-sidebar-width">450</setter>
         <setter object="panel_button_mob" property="visible">true</setter>
         <setter object="panel_actionbar" property="revealed">true</setter>
+        <setter object="search_button_header" property="visible">true</setter>
       </object>
     </child>
 
@@ -79,11 +80,25 @@ SPDX-License-Identifier: GPL-3.0-or-later
                         <property name="margin-end">6</property>
                         <property name="spacing">6</property>
 
+                        <!-- Search button -->
+                        <child>
+                          <object class="GtkToggleButton" id="search_button">
+                            <property name="icon-name">system-search-symbolic</property>
+                            <property name="tooltip-text" translatable="yes">Search Wikipedia</property>
+                            <property name="active" bind-source="search_button_mob" bind-property="active" bind-flags="sync-create"/>
+                            <property name="active" bind-source="search_button_header" bind-property="active" bind-flags="sync-create"/>
+                            <style>
+                              <class name="flat"/>
+                            </style>
+                          </object>
+                        </child>
+
                         <!-- TOC button -->
                         <child>
                           <object class="GtkToggleButton" id="toc_button">
                             <property name="icon-name">view-list-symbolic</property>
                             <property name="tooltip-text" translatable="yes">Contents</property>
+                            <property name="group">search_button</property>
                             <property name="active" bind-source="toc_button_mob" bind-property="active" bind-flags="sync-create"/>
                             <style>
                               <class name="flat"/>
@@ -96,7 +111,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                           <object class="GtkToggleButton" id="langlinks_button">
                             <property name="icon-name">language-symbolic</property>
                             <property name="tooltip-text" translatable="yes">Languages</property>
-                            <property name="group">toc_button</property>
+                            <property name="group">search_button</property>
                             <property name="active" bind-source="langlinks_button_mob" bind-property="active" bind-flags="sync-create"/>
                             <style>
                               <class name="flat"/>
@@ -109,7 +124,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                           <object class="GtkToggleButton" id="bookmarks_button">
                             <property name="icon-name">user-bookmarks-symbolic</property>
                             <property name="tooltip-text" translatable="yes">Bookmarks</property>
-                            <property name="group">toc_button</property>
+                            <property name="group">search_button</property>
                             <property name="active" bind-source="bookmarks_button_mob" bind-property="active" bind-flags="sync-create"/>
                             <style>
                               <class name="flat"/>
@@ -122,7 +137,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                           <object class="GtkToggleButton" id="history_button">
                             <property name="icon-name">document-open-recent-symbolic</property>
                             <property name="tooltip-text" translatable="yes">History</property>
-                            <property name="group">toc_button</property>
+                            <property name="group">search_button</property>
                             <property name="active" bind-source="history_button_mob" bind-property="active" bind-flags="sync-create"/>
                             <style>
                               <class name="flat"/>
@@ -188,11 +203,21 @@ SPDX-License-Identifier: GPL-3.0-or-later
                               <object class="GtkBox">
                                 <property name="spacing">6</property>
 
+                                <!-- Search button for mobile mode -->
+                                <child>
+                                  <object class="GtkToggleButton" id="search_button_mob">
+                                    <property name="icon-name">system-search-symbolic</property>
+                                    <property name="tooltip-text" translatable="yes">Search Wikipedia</property>
+                                    <property name="active" bind-source="search_button" bind-property="active" bind-flags="sync-create"/>
+                                  </object>
+                                </child>
+
                                 <!-- TOC button for mobile mode -->
                                 <child>
                                   <object class="GtkToggleButton" id="toc_button_mob">
                                     <property name="icon-name">view-list-symbolic</property>
                                     <property name="tooltip-text" translatable="yes">Contents</property>
+                                    <property name="group">search_button_mob</property>
                                     <property name="active" bind-source="toc_button" bind-property="active" bind-flags="sync-create"/>
                                   </object>
                                 </child>
@@ -202,7 +227,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                                   <object class="GtkToggleButton" id="langlinks_button_mob">
                                     <property name="icon-name">language-symbolic</property>
                                     <property name="tooltip-text" translatable="yes">Languages</property>
-                                    <property name="group">toc_button_mob</property>
+                                    <property name="group">search_button_mob</property>
                                     <property name="active" bind-source="langlinks_button" bind-property="active" bind-flags="sync-create"/>
                                   </object>
                                 </child>
@@ -212,7 +237,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                                   <object class="GtkToggleButton" id="bookmarks_button_mob">
                                     <property name="icon-name">user-bookmarks-symbolic</property>
                                     <property name="tooltip-text" translatable="yes">Bookmarks</property>
-                                    <property name="group">toc_button_mob</property>
+                                    <property name="group">search_button_mob</property>
                                     <property name="active" bind-source="bookmarks_button" bind-property="active" bind-flags="sync-create"/>
                                   </object>
                                 </child>
@@ -222,7 +247,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
                                   <object class="GtkToggleButton" id="history_button_mob">
                                     <property name="icon-name">document-open-recent-symbolic</property>
                                     <property name="tooltip-text" translatable="yes">History</property>
-                                    <property name="group">toc_button_mob</property>
+                                    <property name="group">search_button_mob</property>
                                     <property name="active" bind-source="history_button" bind-property="active" bind-flags="sync-create"/>
                                   </object>
                                 </child>
@@ -324,6 +349,16 @@ SPDX-License-Identifier: GPL-3.0-or-later
                                   <object class="GtkMenuButton" id="view_button">
                                     <property name="icon-name">view-reveal-symbolic</property>
                                     <property name="tooltip-text" translatable="yes">View</property>
+                                  </object>
+                                </child>
+
+                                <!-- Search button -->
+                                <child type="end">
+                                  <object class="GtkToggleButton" id="search_button_header">
+                                    <property name="icon-name">system-search-symbolic</property>
+                                    <property name="tooltip-text" translatable="yes">Search Wikipedia</property>
+                                    <property name="visible">false</property>
+                                    <property name="active" bind-source="search_button" bind-property="active" bind-flags="sync-create"/>
                                   </object>
                                 </child>
 

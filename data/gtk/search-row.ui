@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of Wike (com.github.hugolabe.Wike)
+SPDX-FileCopyrightText: 2021-24 Hugo Olabera <hugolabe@gmail.com>
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<!-- Row for search suggestions list -->
+<interface>
+  <template class="SearchRow" parent="GtkListBoxRow">
+
+    <!-- Article section label -->
+    <child>
+      <object class="GtkLabel" id="suggestion_label">
+        <property name="margin-start">3</property>
+        <property name="margin-end">3</property>
+        <property name="halign">start</property>
+        <property name="ellipsize">end</property>
+      </object>
+    </child>
+
+  </template>
+</interface>

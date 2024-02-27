@@ -13,7 +13,7 @@ from wike.history import HistoryPanel
 from wike.langlinks import LanglinksPanel
 from wike.menu import ArticleMenuPopover, MainMenuPopover, ViewMenuPopover
 from wike.page import PageBox
-from wike.search import SearchBox
+from wike.search import SearchPanel
 from wike.toc import TocPanel
 
 
@@ -29,6 +29,7 @@ class Window(Adw.ApplicationWindow):
   breakpoint_content = Gtk.Template.Child()
   toast_overlay = Gtk.Template.Child()
   main_button = Gtk.Template.Child()
+  search_button = Gtk.Template.Child()
   toc_button = Gtk.Template.Child()
   langlinks_button = Gtk.Template.Child()
   bookmarks_button = Gtk.Template.Child()
@@ -70,8 +71,8 @@ class Window(Adw.ApplicationWindow):
     self.view_menu_popover = ViewMenuPopover(self)
     self.view_button.set_popover(self.view_menu_popover)
 
-    self.search_box = SearchBox(self)
-    self.headerbar.set_title_widget(self.search_box)
+    self.search_panel = SearchPanel(self)
+    search_stack_page = self.panel_stack.add_named(self.search_panel, 'search')
 
     self.toc_panel = TocPanel(self)
     toc_stack_page = self.panel_stack.add_named(self.toc_panel, 'toc')
@@ -144,6 +145,7 @@ class Window(Adw.ApplicationWindow):
     self.taboverview.connect('create-tab', self._taboverview_create_tab_cb)
 
     self.toc_button.connect('toggled', self._bar_selector_button_toggled_cb, 'toc')
+    self.search_button.connect('toggled', self._bar_selector_button_toggled_cb, 'search')
     self.langlinks_button.connect('toggled', self._bar_selector_button_toggled_cb, 'langlinks')
     self.bookmarks_button.connect('toggled', self._bar_selector_button_toggled_cb, 'bookmarks')
     self.history_button.connect('toggled', self._bar_selector_button_toggled_cb, 'history')
@@ -153,6 +155,8 @@ class Window(Adw.ApplicationWindow):
     gesture = Gtk.GestureClick(button=0, propagation_phase=Gtk.PropagationPhase.CAPTURE)
     self.add_controller(gesture)
     gesture.connect('pressed', self._gesture_click_cb)
+
+    self._panel_split_show_cb(self.panel_split, None)
 
   # Set actions for window
 
@@ -164,8 +168,8 @@ class Window(Adw.ApplicationWindow):
                 ('next-tab', self._next_tab_cb, ('<Ctrl>Tab',)),
                 ('prev-tab', self._prev_tab_cb, ('<Shift><Ctrl>Tab',)),
                 ('toggle-overview', self._toggle_overview_cb, ('F4', '<Alt>T',)),
-                ('go-search', self._go_search_cb, ('F2', '<Ctrl>K',)),
                 ('add-bookmark', self._add_bookmark_cb, ('<Ctrl>D',)),
+                ('show-search', self._show_search_cb, ('F2', '<Ctrl>K',)),
                 ('show-toc', self._show_toc_cb, ('<Ctrl>I',)),
                 ('show-langlinks', self._show_langlinks_cb, ('<Ctrl>L',)),
                 ('show-bookmarks', self._show_bookmarks_cb, ('<Ctrl>B',)),
@@ -251,6 +255,8 @@ class Window(Adw.ApplicationWindow):
       self.panel_stack.set_visible_child_name(name)
       if not self.panel_split.get_show_sidebar():
         self.panel_split.set_show_sidebar(True)
+      if name=='search':
+        self.search_panel.search_entry.grab_focus()
 
   # Panel show state changed
 
@@ -258,6 +264,8 @@ class Window(Adw.ApplicationWindow):
     if panel_split.get_show_sidebar():
       panel_page = self.panel_stack.get_visible_child_name()
       match panel_page:
+        case 'search':
+          self.search_button.set_active(True)
         case 'toc':
           self.toc_button.set_active(True)
         case 'langlinks':
@@ -267,15 +275,22 @@ class Window(Adw.ApplicationWindow):
         case 'history':
           self.history_button.set_active(True)
     else:
+      self.search_button.set_active(False)
       self.toc_button.set_active(False)
       self.langlinks_button.set_active(False)
       self.bookmarks_button.set_active(False)
       self.history_button.set_active(False)
+      self.page.set_focus()
 
   # On close panel button clicked hide panel
 
   def _close_panel_button_mob_cb(self, button):
     self.panel_button_mob.set_active(False)
+
+  # Select search in panel
+
+  def _show_search_cb(self, action, parameter):
+    self.search_button.set_active(True)
 
   # Select toc in panel
 
@@ -410,6 +425,7 @@ class Window(Adw.ApplicationWindow):
     else:
       self.refresh_nav_actions(self.page.wikiview)
       self.refresh_menu_actions(self.page.wikiview.is_local())
+      self.set_title(self.page.wikiview.title)
       self.toc_panel.populate(self.page.wikiview.title, self.page.wikiview.sections)
       self.langlinks_panel.populate(self.page.wikiview.langlinks)
       self.bookmarks_panel.refresh_buttons()
@@ -449,11 +465,6 @@ class Window(Adw.ApplicationWindow):
   def _next_page_cb(self, action, parameter):
     if self.page.wikiview.can_go_forward():
       self.page.wikiview.go_forward()
-
-  # Go to search entry
-
-  def _go_search_cb(self, action, parameter):
-    self.search_box.search_entry.grab_focus()
 
   # Add page to bookmarks
 

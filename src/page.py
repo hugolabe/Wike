@@ -56,6 +56,14 @@ class PageBox(Gtk.Box):
     find_controller.connect('counted-matches', self._find_controller_matches_cb)
     nav_list.connect('changed', self._nav_list_changed_cb)
 
+  # Set focus to visible stack page
+
+  def set_focus(self):
+    if self.view_stack.get_visible_child_name() == 'status':
+      self.status.main_page_button.grab_focus()
+    else:
+      self.wikiview.grab_focus()
+
   # Load a non-loaded page, for example when the user selects the tab
 
   def load_now(self):
@@ -80,7 +88,6 @@ class PageBox(Gtk.Box):
         tabpage.set_title(_('Loading'))
         tabpage.set_loading(True)
         if tabpage.get_selected():
-          self._window.search_box.reset()
           wikiview.grab_focus()
 
       case WebKit.LoadEvent.COMMITTED:
@@ -99,6 +106,7 @@ class PageBox(Gtk.Box):
 
     tabpage.set_title(wikiview.title)
     if tabpage.get_selected():
+      self._window.set_title(wikiview.title)
       self._window.toc_panel.populate(wikiview.title, wikiview.sections)
       self._window.langlinks_panel.populate(wikiview.langlinks)
 

@@ -5,28 +5,77 @@ SPDX-FileCopyrightText: 2021-24 Hugo Olabera <hugolabe@gmail.com>
 SPDX-License-Identifier: GPL-3.0-or-later
 -->
 
-<!-- Search box for headerbar -->
+<!-- Search panel for sidebar -->
 <interface>
-  <template class="SearchBox" parent="GtkBox">
-    <style>
-      <class name="linked"/>
-    </style>
-
-    <!-- Search entry -->
+  <template class="SearchPanel" parent="AdwBin">
     <child>
-      <object class="GtkSearchEntry" id="search_entry">
-        <property name="placeholder-text" translatable="yes">Search Wikipedia</property>
+      <object class="AdwToolbarView">
+
+        <!-- Header -->
+        <child type="top">
+          <object class="GtkBox">
+            <style>
+              <class name="toolbar"/>
+            </style>
+
+            <!-- Search entry -->
+            <child>
+              <object class="GtkSearchEntry" id="search_entry">
+                <property name="placeholder-text" translatable="yes">Search Wikipedia</property>
+                <property name="hexpand">true</property>
+              </object>
+            </child>
+
+            <!-- Search settings button -->
+            <child>
+              <object class="GtkMenuButton" id="settings_button">
+                <property name="label">en</property>
+                <property name="tooltip-text">English</property>
+                <property name="width-request">60</property>
+              </object>
+            </child>
+
+          </object>
+        </child>
+
+        <!-- Search suggestions scroller -->
+        <property name="content">
+          <object class="GtkScrolledWindow">
+            <child>
+              <object class="GtkViewport">
+
+                <!-- Search suggestions list -->
+                <child>
+                  <object class="GtkListBox" id="suggestions_list">
+                    <property name="vexpand">true</property>
+                    <property name="selection-mode">none</property>
+                    <style>
+                      <class name="navigation-sidebar"/>
+                    </style>
+
+                    <!-- Placeholder -->
+                    <child type="placeholder">
+                      <object class="AdwStatusPage">
+                        <property name="title" translatable="yes">No Results</property>
+                        <property name="description" translatable="yes">Enter at least three characters to get search suggestions</property>
+                        <property name="icon-name">find-location-symbolic</property>
+                        <property name="margin-start">50</property>
+                        <property name="margin-end">50</property>
+                        <style>
+                          <class name="compact"/>
+                        </style>
+                      </object>
+                    </child>
+
+                  </object>
+                </child>
+
+              </object>
+            </child>
+          </object>
+        </property>
+
       </object>
     </child>
-
-    <!-- Search settings button -->
-    <child>
-      <object class="GtkMenuButton" id="settings_button">
-        <property name="label">en</property>
-        <property name="tooltip-text">English</property>
-        <property name="width-request">60</property>
-      </object>
-    </child>
-
   </template>
 </interface>

@@ -8,6 +8,7 @@ data/gtk/bookmarks.ui
 data/gtk/bookmarks-menu.ui
 data/gtk/bookmarks-row.ui
 data/gtk/dialogs.ui
+data/gtk/help-overlay.ui
 data/gtk/history.ui
 data/gtk/history-row.ui
 data/gtk/langlinks.ui
@@ -21,10 +22,9 @@ data/gtk/page.ui
 data/gtk/page-status.ui
 data/gtk/prefs.ui
 data/gtk/search.ui
+data/gtk/search-row.ui
 data/gtk/search-settings.ui
 data/gtk/search-settings-row.ui
-data/gtk/shortcuts.ui
-data/gtk/suggestions.ui
 data/gtk/theme-switcher.ui
 data/gtk/toc.ui
 data/gtk/toc-row.ui

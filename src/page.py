@@ -46,7 +46,7 @@ class PageBox(Gtk.Box):
     self.wikiview.connect('load-changed', self._wikiview_load_changed_cb)
     self.wikiview.connect('load-props', self._wikiview_load_props_cb)
     self.wikiview.connect('new-page', self._wikiview_new_page_cb)
-    self.wikiview.connect('add_bookmark', self._wikiview_add_bookmark_cb)
+    self.wikiview.connect('add-bookmark', self._wikiview_add_bookmark_cb)
     self.search_entry.connect('search-changed', self._search_entry_changed_cb, find_controller)
     self.search_entry.connect('activate', self._search_entry_activate_cb, find_controller)
     self.search_prev_button.connect('clicked', self._search_prev_button_cb, find_controller)
@@ -230,6 +230,12 @@ class PageStatus(Adw.Bin):
         self.try_again_button.set_visible(True)
         self.try_again_button.grab_focus()
       case _:
+        self.status_page.set_title(_('Search Wikipedia'))
+        self.status_page.set_description(_('Start typing to search Wikipedia articles'))
+        self.status_page.set_icon_name('com.github.hugolabe.Wike')
+        self.main_page_button.set_visible(True)
+        self.random_article_button.set_visible(True)
+        self.try_again_button.set_visible(False)
         self.main_page_button.grab_focus()
 
     self._page.view_stack.set_visible_child_name('status')

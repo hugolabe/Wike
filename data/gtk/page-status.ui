@@ -12,9 +12,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <!-- Status page -->
     <property name="child">
       <object class="AdwStatusPage" id="status_page">
-        <property name="title" translatable="yes">Search Wikipedia</property>
-        <property name="description" translatable="yes">Start typing to search Wikipedia articles</property>
-        <property name="icon-name">com.github.hugolabe.Wike</property>
 
         <!-- Buttons box -->
         <property name="child">

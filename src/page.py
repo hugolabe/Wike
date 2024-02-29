@@ -90,10 +90,6 @@ class PageBox(Gtk.Box):
         if tabpage.get_selected():
           wikiview.grab_focus()
 
-      case WebKit.LoadEvent.COMMITTED:
-        self._window.bookmarks_panel.refresh_buttons()
-        self._window.refresh_menu_actions(wikiview.is_local())
-
       case WebKit.LoadEvent.FINISHED:
         tabpage.set_loading(False)
         if wikiview.is_local():
@@ -109,6 +105,8 @@ class PageBox(Gtk.Box):
       self._window.set_title(wikiview.title)
       self._window.toc_panel.populate(wikiview.title, wikiview.sections)
       self._window.langlinks_panel.populate(wikiview.langlinks)
+      self._window.bookmarks_panel.refresh_buttons()
+      self._window.refresh_menu_actions(wikiview.is_local())
 
     if settings.get_boolean('keep-history'):
       if not self._is_main and not wikiview.is_local():

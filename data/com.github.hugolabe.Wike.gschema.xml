@@ -42,6 +42,11 @@
       <summary>Last open tabs with Wikipedia uri and title</summary>
     </key>
 
+    <key name="hide-tabs" type="b">
+      <default>false</default>
+      <summary>Hide tabbar also in desktop mode</summary>
+    </key>
+
     <key name="theme" type="i">
       <default>3</default>
       <summary>Choose theme (0-Light, 1-Dark, 2-Sepia, 3-System)</summary>

@@ -281,12 +281,9 @@ SPDX-License-Identifier: GPL-3.0-or-later
                             <condition>max-width: 550px</condition>
                             <setter object="prev_button" property="visible">false</setter>
                             <setter object="next_button" property="visible">false</setter>
-                            <setter object="newtab_button" property="visible">false</setter>
-                            <setter object="tabs_button" property="visible">true</setter>
                             <setter object="article_button" property="visible">false</setter>
                             <setter object="view_button" property="visible">false</setter>
                             <setter object="content_actionbar" property="revealed">true</setter>
-                            <setter object="tabbar" property="visible">false</setter>
                           </object>
                         </child>
 
@@ -369,15 +366,6 @@ SPDX-License-Identifier: GPL-3.0-or-later
                             <child type="top">
                               <object class="AdwTabBar" id="tabbar">
                                 <property name="view">tabview</property>
-
-                                <!-- Tab overview button -->
-                                <property name="start-action-widget">
-                                  <object class="AdwTabButton">
-                                    <property name="view">tabview</property>
-                                    <property name="action-name">win.toggle-overview</property>
-                                  </object>
-                                </property>
-
                               </object>
                             </child>
 

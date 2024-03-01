@@ -40,11 +40,14 @@ class Window(Adw.ApplicationWindow):
   main_button_mob = Gtk.Template.Child()
   close_panel_button_mob = Gtk.Template.Child()
   headerbar = Gtk.Template.Child()
+  newtab_button = Gtk.Template.Child()
+  tabs_button = Gtk.Template.Child()
   article_button = Gtk.Template.Child()
   view_button = Gtk.Template.Child()
   panel_button_mob = Gtk.Template.Child()
   article_button_mob = Gtk.Template.Child()
   view_button_mob = Gtk.Template.Child()
+  tabbar = Gtk.Template.Child()
   tabview = Gtk.Template.Child()
   taboverview = Gtk.Template.Child()
 
@@ -139,6 +142,7 @@ class Window(Adw.ApplicationWindow):
     self.breakpoint_window_small.connect('unapply', self._breakpoint_small_unapply_cb)
     self.breakpoint_content.connect('apply', self._breakpoint_content_apply_cb)
     self.breakpoint_content.connect('unapply', self._breakpoint_content_unapply_cb)
+    settings.connect('changed::hide-tabs', self._settings_hide_tabs_changed_cb)
 
     self.handler_selpage = self.tabview.connect('notify::selected-page', self._tabview_selected_page_cb)
     self.tabview.connect('close-page', self._tabview_close_page_cb)
@@ -157,6 +161,8 @@ class Window(Adw.ApplicationWindow):
     gesture.connect('pressed', self._gesture_click_cb)
 
     self._panel_split_show_cb(self.panel_split, None)
+    if settings.get_boolean('hide-tabs'):
+      self._hide_tabs(True)
 
   # Set actions for window
 
@@ -235,6 +241,8 @@ class Window(Adw.ApplicationWindow):
   # On breakpoint content apply
 
   def _breakpoint_content_apply_cb(self, break_point):
+    self._hide_tabs(True)
+
     self.article_button.set_popover(None)
     self.article_button_mob.set_popover(self.article_menu_popover)
     self.view_button.set_popover(None)
@@ -243,10 +251,34 @@ class Window(Adw.ApplicationWindow):
   # On breakpoint content unapply
 
   def _breakpoint_content_unapply_cb(self, break_point):
+    if not settings.get_boolean('hide-tabs'):
+      self._hide_tabs(False)
+
     self.article_button_mob.set_popover(None)
     self.article_button.set_popover(self.article_menu_popover)
     self.view_button_mob.set_popover(None)
     self.view_button.set_popover(self.view_menu_popover)
+
+  # Settings hide tabs changed event
+
+  def _settings_hide_tabs_changed_cb(self, settings, key):
+    if settings.get_boolean('hide-tabs'):
+      self._hide_tabs(True)
+    else:
+      if self.main_button.get_visible():
+        self._hide_tabs(False)
+
+  # Hide or show tabbar and related buttons
+
+  def _hide_tabs(self, hide):
+    if hide:
+      self.tabbar.set_visible(False)
+      self.newtab_button.set_visible(False)
+      self.tabs_button.set_visible(True)
+    else:
+      self.tabbar.set_visible(True)
+      self.newtab_button.set_visible(True)
+      self.tabs_button.set_visible(False)
 
   # On selector button toggled change panel view
 

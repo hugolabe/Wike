@@ -9,7 +9,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
 <interface>
   <template class="PrefsWindow" parent="AdwPreferencesWindow">
     <property name="modal">true</property>
-    <property name="default-height">460</property>
+    <property name="default-height">480</property>
     <property name="default-width">580</property>
     <property name="search-enabled">false</property>
 
@@ -37,6 +37,14 @@ SPDX-License-Identifier: GPL-3.0-or-later
                     </items>
                   </object>
                 </property>
+              </object>
+            </child>
+
+            <!-- Hide tabs switch -->
+            <child>
+              <object class="AdwSwitchRow" id="tabs_switch">
+                <property name="title" translatable="yes">Hide Tabs</property>
+                <property name="subtitle" translatable="yes">Hide the tab bar also in desktop mode</property>
               </object>
             </child>
 

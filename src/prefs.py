@@ -17,6 +17,7 @@ class PrefsWindow(Adw.PreferencesWindow):
   __gtype_name__ = 'PrefsWindow'
 
   start_combo = Gtk.Template.Child()
+  tabs_switch = Gtk.Template.Child()
   desktop_switch = Gtk.Template.Child()
   history_switch = Gtk.Template.Child()
   clear_history_button = Gtk.Template.Child()
@@ -29,6 +30,7 @@ class PrefsWindow(Adw.PreferencesWindow):
     super().__init__()
 
     settings.bind('on-start-load', self.start_combo, 'selected', Gio.SettingsBindFlags.DEFAULT)
+    settings.bind('hide-tabs', self.tabs_switch, 'active', Gio.SettingsBindFlags.DEFAULT)
     settings.bind('search-desktop', self.desktop_switch, 'active', Gio.SettingsBindFlags.DEFAULT)
     settings.bind('keep-history', self.history_switch, 'active', Gio.SettingsBindFlags.DEFAULT)
     settings.bind('clear-data', self.data_switch, 'active', Gio.SettingsBindFlags.DEFAULT)

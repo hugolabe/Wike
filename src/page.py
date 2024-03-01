@@ -85,10 +85,10 @@ class PageBox(Gtk.Box):
         if self.search_bar.get_search_mode():
           self.search_bar.set_search_mode(False)
         self.view_stack.set_visible_child_name('wikiview')
-        self._window.set_title(_('Loading…'))
         tabpage.set_title(_('Loading…'))
         tabpage.set_loading(True)
         if tabpage.get_selected():
+          self._window.set_title(_('Loading…'))
           wikiview.grab_focus()
 
       case WebKit.LoadEvent.FINISHED:

@@ -12,7 +12,6 @@ from gi.repository import Soup
 
 session = Soup.Session.new()
 session.set_user_agent('Wike/2.1.0 (https://github.com/hugolabe)')
-session.set_timeout(3)
 
 # Get Wikipedia random page
 

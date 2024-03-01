@@ -320,8 +320,10 @@ class WikiView(WebKit.WebView):
   # Webview load error event
 
   def do_load_failed(self, event, uri, error):
-    self.fail_uri = uri
-    self.load_message('error')
+    if error.code != 302:
+      self.fail_uri = uri
+      self.load_message('error')
+
     return True
 
   # Webview decision policy event

@@ -43,8 +43,8 @@ SPDX-License-Identifier: GPL-3.0-or-later
             <!-- Hide tabs switch -->
             <child>
               <object class="AdwSwitchRow" id="tabs_switch">
-                <property name="title" translatable="yes">Hide Tabs</property>
-                <property name="subtitle" translatable="yes">Hide the tab bar also in desktop mode</property>
+                <property name="title" translatable="yes">Always Hide Tabs</property>
+                <property name="subtitle" translatable="yes">The tab bar will also be hidden in desktop mode</property>
               </object>
             </child>
 

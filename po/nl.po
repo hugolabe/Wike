@@ -349,16 +349,14 @@ msgid "Flag Icons"
 msgstr "Vlagpictogrammen door"
 
 #: ../src/application.py:159
-#, fuzzy
 msgid "All content from Wikipedia.org and available under CC BY-SA 4.0 unless otherwise noted.\n"
 "\n"
 "Wike is an independent development not endorsed by or affiliated with the Wikimedia Foundation."
-msgstr "Alle inhoud is afkomstig van Wikipedia.org en is vrijgegeven onder de voorwaarden van de CC BY-SA 3.0-licentie, tenzij anders aangegeven.\n"
+msgstr "Alle inhoud is afkomstig van Wikipedia.org en is vrijgegeven onder de voorwaarden van de CC BY-SA 4.0-licentie, tenzij anders aangegeven.\n"
 "\n"
 "Wike is geen onderdeel van of verbonden aan de Wikimedia Foundation."
 
 #: ../src/page.py:88 ../src/page.py:91
-#, fuzzy
 msgid "Loading…"
 msgstr "Bezig met laden…"
 

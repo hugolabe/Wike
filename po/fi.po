@@ -356,9 +356,8 @@ msgstr "Kaikki sisältö on Wikipedia.org-sivustolta ja julkaistu CC BY-SA 4.0 -
 "Wike on itsenäinen kehitysprojekti. Se ei saa tukea eikä sillä ole yhteyttä Wikimedia Foundationiin."
 
 #: ../src/page.py:88 ../src/page.py:91
-#, fuzzy
 msgid "Loading…"
-msgstr "Ladataan"
+msgstr "Ladataan…"
 
 #: ../src/page.py:216
 msgid "Article not Found"

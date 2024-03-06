@@ -351,7 +351,7 @@ msgstr "Ikone zastava"
 msgid "All content from Wikipedia.org and available under CC BY-SA 4.0 unless otherwise noted.\n"
 "\n"
 "Wike is an independent development not endorsed by or affiliated with the Wikimedia Foundation."
-msgstr "Sav sadržaj s Wikipedia.org, dostupan pod CC BY-SA 4.0 licencom ukoliko nije drugačije navedeno.\n"
+msgstr "Izvor svog sadržaja je Wikipedia.org. Sadržaj je dostupan pod licencom CC BY-SA 4.0 ukoliko nije drugačije navedeno.\n"
 "\n"
 "Wike se razvija neovisno, bez podrške ili veze sa zakladom Wikimedia Foundation."
 
@@ -568,7 +568,7 @@ msgstr "Izbriši popis …"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
 msgid "It supports more than 300 languages and integrates with desktop searches, providing suggestions that make it easier to find any content. Other features are: bookmarks with multiple lists, article table of contents, history, text searches and much more…"
-msgstr "Podržava više od 300 jezika i integrira se s pretragama na radnoj površini, pružajući prijedloge koji olakšavaju pronalaženje bilo kojeg sadržaja. Ostale značajke su: višebrojni popisi zabilješki, kazalo članaka, povijest, traženje teksta i još mnogo toga …"
+msgstr "Podržava više od 300 jezika i integrira se s pretragama na radnoj površini, pružajući prijedloge koji olakšavaju pronalaženje bilo kojeg sadržaja. Ostale značajke su: višebrojni popisi zabilješki, kazalo članka, povijest, traženje teksta i još mnogo toga …"
 
 #: ../data/gtk/window.ui:304
 msgid "Back"
@@ -642,7 +642,7 @@ msgstr "Uvijek sakrij kartice"
 
 #: ../data/gtk/prefs.ui:47
 msgid "The tab bar will also be hidden in desktop mode"
-msgstr "Ova traka kartica će se sakriti i u desktop modusu"
+msgstr "Ova traka kartica će se sakriti i u modusu radne površine"
 
 #: ../data/gtk/search.ui:59
 msgid "No Results"

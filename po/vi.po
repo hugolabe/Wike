@@ -348,18 +348,16 @@ msgid "Flag Icons"
 msgstr "Biểu tượng cờ"
 
 #: ../src/application.py:159
-#, fuzzy
 msgid "All content from Wikipedia.org and available under CC BY-SA 4.0 unless otherwise noted.\n"
 "\n"
 "Wike is an independent development not endorsed by or affiliated with the Wikimedia Foundation."
-msgstr "Tất cả nội dung được lấy từ Wikipedia và khả dụng thông qua giấy phép CC BY-SA 3.0 trừ khi được ghi khác.\n"
+msgstr "Tất cả nội dung được lấy từ Wikipedia và khả dụng thông qua giấy phép CC BY-SA 4.0 trừ khi được ghi khác.\n"
 "\n"
 "Wike được phát triển độc lập và không được công nhận bởi hay liên kết với Quỹ Wikimedia."
 
 #: ../src/page.py:88 ../src/page.py:91
-#, fuzzy
 msgid "Loading…"
-msgstr "Đang nạp"
+msgstr "Đang nạp…"
 
 #: ../src/page.py:216
 msgid "Article not Found"

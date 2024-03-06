@@ -348,18 +348,16 @@ msgid "Flag Icons"
 msgstr "Icônes des drapeaux"
 
 #: ../src/application.py:159
-#, fuzzy
 msgid "All content from Wikipedia.org and available under CC BY-SA 4.0 unless otherwise noted.\n"
 "\n"
 "Wike is an independent development not endorsed by or affiliated with the Wikimedia Foundation."
-msgstr "Tout le contenu provient de Wikipédia.org et est disponible sous licence CC BY-SA 3.0, sauf indication contraire.\n"
+msgstr "Tout le contenu provient de Wikipédia.org et est disponible sous licence CC BY-SA 4.0, sauf indication contraire.\n"
 "\n"
 "Wike est un projet indépendant non affilié à la Wikimedia Foundation."
 
 #: ../src/page.py:88 ../src/page.py:91
-#, fuzzy
 msgid "Loading…"
-msgstr "Chargement"
+msgstr "Chargement…"
 
 #: ../src/page.py:216
 msgid "Article not Found"
@@ -620,15 +618,15 @@ msgstr "1 langue sélectionnée"
 #. Don't remove %s tag!
 #: ../src/languages.py:122
 msgid "%s languages selected"
-msgstr ""
+msgstr "%s langues sélectionnées"
 
 #: ../data/gtk/languages.ui:28 ../data/gtk/langlinks.ui:32
 msgid "Search Languages"
-msgstr ""
+msgstr "Rechercher des langues"
 
 #: ../data/gtk/languages.ui:43 ../data/gtk/langlinks.ui:48
 msgid "Search languages"
-msgstr ""
+msgstr "Rechercher des langues"
 
 #: ../data/gtk/bookmarks.ui:41 ../data/gtk/history.ui:32
 msgid "Select"
@@ -636,15 +634,15 @@ msgstr "Sélectionner"
 
 #: ../data/gtk/bookmarks.ui:118 ../data/gtk/history.ui:110
 msgid "Remove Selected"
-msgstr ""
+msgstr "Supprimer la sélection"
 
 #: ../data/gtk/prefs.ui:46
 msgid "Always Hide Tabs"
-msgstr ""
+msgstr "Toujours masquer les onglets"
 
 #: ../data/gtk/prefs.ui:47
 msgid "The tab bar will also be hidden in desktop mode"
-msgstr ""
+msgstr "La barre des onglets sera également masquée en mode bureau"
 
 #: ../data/gtk/search.ui:59
 msgid "No Results"
@@ -652,7 +650,7 @@ msgstr "Aucun résultat"
 
 #: ../data/gtk/search.ui:60
 msgid "Enter at least three characters to get search suggestions"
-msgstr ""
+msgstr "Entrez au moins 3 caractères pour obtenir des suggestions de recherche"
 
 #: ../data/gtk/window.ui:197
 msgid "Close"

@@ -49,6 +49,25 @@
   </branding>
 
   <releases>
+    <release version="3.0.0" date="2024-03-08">
+      <description translatable="no">
+        <ul>
+          <li>Revamped UI to fit new libadwaita design styles.</li>
+          <li>Side panel redesign that is now located on the left.</li>
+          <li>New left bar that provides quick access to all side panel elements.</li>
+          <li>Search moves to side panel.</li>
+          <li>New design for the languages selection window.</li>
+          <li>Selection mode added to the bookmarks and history lists.</li>
+          <li>New option to hide the tab bar in desktop mode.</li>
+          <li>New option to show all languages in the side panel.</li>
+          <li>Added match counter for text searches.</li>
+          <li>Switching to libsoup for Wikipedia queries.</li>
+          <li>Various improvements and fixes.</li>
+          <li>New translations: Arabic, Hindi, Interlingua, Vietnamese.</li>
+          <li>Updated translations: Croatian, Dutch, Finnish, French, German, Hebrew, Occitan, Spanish, Swedish, Tamil, Turkish.</li>
+        </ul>
+      </description>
+    </release>
     <release version="2.1.0" date="2023-12-04">
       <description translatable="no">
         <ul>

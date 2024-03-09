@@ -309,7 +309,7 @@ msgstr "Les 30 derniers jours"
 
 #: ../src/history.py:35
 msgid "Show full history"
-msgstr "Afficher l’historique complet"
+msgstr "Historique complet"
 
 #: ../src/page.py:126 ../src/window.py:509
 msgid "Bookmark added: "
@@ -468,7 +468,7 @@ msgstr "Effacer l’historique"
 
 #: ../data/gtk/prefs.ui:33
 msgid "Wikipedia main page"
-msgstr "Page d’accueil de Wikipédia"
+msgstr "Page d’accueil Wikipédia"
 
 #: ../data/gtk/prefs.ui:34
 msgid "Random article"

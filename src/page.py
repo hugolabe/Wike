@@ -43,6 +43,11 @@ class PageBox(Gtk.Box):
     nav_list = self.wikiview.get_back_forward_list()
     self.search_bar.connect_entry(self.search_entry)
 
+    event_controller_key = Gtk.EventControllerKey.new()
+    self.wikiview.add_controller(event_controller_key)
+    webkit_allow_keys = (0xff09, 0xff0d, 0xff50, 0xff51, 0xff52, 0xff53, 0xff54, 0xff55, 0xff56, 0xff57)
+    event_controller_key.connect('key-pressed', self._event_controller_key_pressed_cb, webkit_allow_keys)
+    
     self.wikiview.connect('load-changed', self._wikiview_load_changed_cb)
     self.wikiview.connect('load-props', self._wikiview_load_props_cb)
     self.wikiview.connect('new-page', self._wikiview_new_page_cb)
@@ -70,6 +75,15 @@ class PageBox(Gtk.Box):
     uri, title = self.lazy_load
     self.wikiview.load_wiki(uri)
     self.lazy_load = False
+
+  # Manage webkit key pressed and redirect to window
+
+  def _event_controller_key_pressed_cb(self, event_controller, keyval, keycode, state, allow_keys):
+    if keyval in allow_keys:
+      return False
+    else:
+      event_controller.forward(self._window)
+      return True
 
   # Manage wikiview load page events
 

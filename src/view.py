@@ -216,7 +216,7 @@ class WikiView(WebKit.WebView):
 
   def load_message(self, message_type):
     uri = 'about:' + message_type
-    self.load_html('', uri)
+    self.load_alternate_html('', uri, None)
 
   # Get base uri for current article
 

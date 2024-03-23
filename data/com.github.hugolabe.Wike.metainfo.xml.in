@@ -49,6 +49,14 @@
   </branding>
 
   <releases>
+    <release version="3.0.1" date="2024-03-23">
+      <description translatable="no">
+        <ul>
+          <li>Updated translations: French, Italian.</li>
+          <li>Fixes.</li>
+        </ul>
+      </description>
+    </release>
     <release version="3.0.0" date="2024-03-08">
       <description translatable="no">
         <ul>

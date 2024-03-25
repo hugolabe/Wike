@@ -1,7 +1,7 @@
 project('wike',
   version: '3.0.1',
   license: 'GPL3+',
-  meson_version: '>= 0.50.0',
+  meson_version: '>= 0.60',
   default_options: [ 'warning_level=2', ],
 )
 
@@ -13,7 +13,7 @@ pkgdatadir = join_paths(get_option('prefix'), get_option('datadir'), meson.proje
 moduledir = join_paths(pkgdatadir, meson.project_name())
 
 conf = configuration_data()
-conf.set('PYTHON', python.find_installation().path())
+conf.set('PYTHON', python.find_installation().full_path())
 conf.set('VERSION', meson.project_version())
 conf.set('BIN', join_paths(get_option('prefix'), get_option('bindir'), meson.project_name()))
 conf.set('pkgdatadir', pkgdatadir)
@@ -23,4 +23,8 @@ subdir('data')
 subdir('src')
 subdir('po')
 
-meson.add_install_script('build-aux/meson/postinstall.py')
+gnome.post_install(
+  glib_compile_schemas: true,
+  gtk_update_icon_cache: true,
+  update_desktop_database: true,
+)

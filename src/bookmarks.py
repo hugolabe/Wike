@@ -205,12 +205,11 @@ class BookmarksPanel(Adw.Bin):
     builder.add_from_resource('/com/github/hugolabe/Wike/gtk/dialogs.ui')
     new_booklist_dialog = builder.get_object('new_booklist_dialog')
     name_entry = builder.get_object('name_entry')
-    new_booklist_dialog.set_transient_for(self._window)
 
     new_booklist_dialog.connect('response', self._create_booklist_response_cb, name_entry)
     name_entry.connect('changed', self._create_entry_changed_cb, new_booklist_dialog)
 
-    new_booklist_dialog.show()
+    new_booklist_dialog.present(self._window)
 
   # On response create bookmarks list
 
@@ -244,14 +243,13 @@ class BookmarksPanel(Adw.Bin):
     builder.add_from_resource('/com/github/hugolabe/Wike/gtk/dialogs.ui')
     rename_booklist_dialog = builder.get_object('rename_booklist_dialog')
     rename_entry = builder.get_object('rename_entry')
-    rename_booklist_dialog.set_transient_for(self._window)
 
     rename_entry.set_text(self._booklist)
 
     rename_booklist_dialog.connect('response', self._rename_booklist_response_cb, rename_entry)
     rename_entry.connect('changed', self._rename_entry_changed_cb, rename_booklist_dialog)
 
-    rename_booklist_dialog.show()
+    rename_booklist_dialog.present(self._window)
 
   # On response rename bookmarks list
 
@@ -290,14 +288,13 @@ class BookmarksPanel(Adw.Bin):
     builder.add_from_resource('/com/github/hugolabe/Wike/gtk/dialogs.ui')
     clear_booklist_dialog = builder.get_object('clear_booklist_dialog')
     delete_booklist_check = builder.get_object('delete_booklist_check')
-    clear_booklist_dialog.set_transient_for(self._window)
 
     if self.booklists_dropdown.get_selected() == 0:
       delete_booklist_check.set_sensitive(False)
 
     clear_booklist_dialog.connect('response', self._clear_booklist_response_cb, delete_booklist_check)
 
-    clear_booklist_dialog.show()
+    clear_booklist_dialog.present(self._window)
 
   # On response clear all bookmarks of current list
 

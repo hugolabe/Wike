@@ -151,11 +151,10 @@ class HistoryPanel(Adw.Bin):
     builder = Gtk.Builder()
     builder.add_from_resource('/com/github/hugolabe/Wike/gtk/dialogs.ui')
     clear_history_dialog = builder.get_object('clear_history_dialog')
-    clear_history_dialog.set_transient_for(self._window)
 
     clear_history_dialog.connect('response', self._clear_history_response_cb)
 
-    clear_history_dialog.show()
+    clear_history_dialog.present(self._window)
 
   # On response clear history
 

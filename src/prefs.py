@@ -44,11 +44,10 @@ class PrefsWindow(Adw.PreferencesWindow):
     builder = Gtk.Builder()
     builder.add_from_resource('/com/github/hugolabe/Wike/gtk/dialogs.ui')
     clear_history_dialog = builder.get_object('clear_history_dialog')
-    clear_history_dialog.set_transient_for(self)
 
     clear_history_dialog.connect('response', self._clear_history_response_cb)
 
-    clear_history_dialog.show()
+    clear_history_dialog.present(self)
 
   # On response clear history
 
@@ -63,11 +62,10 @@ class PrefsWindow(Adw.PreferencesWindow):
     builder = Gtk.Builder()
     builder.add_from_resource('/com/github/hugolabe/Wike/gtk/dialogs.ui')
     clear_data_dialog = builder.get_object('clear_data_dialog')
-    clear_data_dialog.set_transient_for(self)
 
     clear_data_dialog.connect('response', self._clear_data_response_cb)
 
-    clear_data_dialog.show()
+    clear_data_dialog.present(self)
 
   # On response clear personal data
 

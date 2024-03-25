@@ -143,23 +143,22 @@ class Application(Adw.Application):
 
     prefs_window.show()
 
-  # Show about window
+  # Show about dialog
 
   def _about_cb(self, action, parameter):
     builder = Gtk.Builder()
     builder.add_from_resource('/com/github/hugolabe/Wike/gtk/about.ui')
-    about_window = builder.get_object('about_window')
-    about_window.set_transient_for(self._window)
+    about_dialog = builder.get_object('about_dialog')
 
-    about_window.add_link(_('Source Code'), 'https://github.com/hugolabe/Wike')
-    about_window.add_link(_('Report an Issue'), 'https://github.com/hugolabe/Wike/issues')
-    about_window.add_link(_('Help Translating'), 'https://poeditor.com/join/project?hash=kNgJu4MAum')
-    about_window.set_developers(['Hugo Olabera <hugolabe@gmail.com>', _('Contributors') + ' https://github.com/hugolabe/Wike/graphs/contributors',])
-    about_window.add_credit_section(_('Flag Icons'), ['HatScripts https://github.com/HatScripts/',])
-    about_window.add_legal_section('Wikipedia', _('All content from Wikipedia.org and available under CC BY-SA 4.0 unless otherwise noted.\n\nWike is an independent development not endorsed by or affiliated with the Wikimedia Foundation.'), Gtk.License.UNKNOWN, None)
-    about_window.add_legal_section('Circle Flags', 'Copyright © 2022 HatScripts', Gtk.License.MIT_X11, None)
+    about_dialog.add_link(_('Source Code'), 'https://github.com/hugolabe/Wike')
+    about_dialog.add_link(_('Report an Issue'), 'https://github.com/hugolabe/Wike/issues')
+    about_dialog.add_link(_('Help Translating'), 'https://poeditor.com/join/project?hash=kNgJu4MAum')
+    about_dialog.set_developers(['Hugo Olabera <hugolabe@gmail.com>', _('Contributors') + ' https://github.com/hugolabe/Wike/graphs/contributors',])
+    about_dialog.add_credit_section(_('Flag Icons'), ['HatScripts https://github.com/HatScripts/',])
+    about_dialog.add_legal_section('Wikipedia', _('All content from Wikipedia.org and available under CC BY-SA 4.0 unless otherwise noted.\n\nWike is an independent development not endorsed by or affiliated with the Wikimedia Foundation.'), Gtk.License.UNKNOWN, None)
+    about_dialog.add_legal_section('Circle Flags', 'Copyright © 2022 HatScripts', Gtk.License.MIT_X11, None)
 
-    about_window.show()
+    about_dialog.present(self._window)
 
   # On window close quit app
 

@@ -5,16 +5,15 @@ SPDX-FileCopyrightText: 2021-24 Hugo Olabera <hugolabe@gmail.com>
 SPDX-License-Identifier: GPL-3.0-or-later
 -->
 
-<!-- Window for select user languages -->
+<!-- Dialog for select user languages -->
 <interface>
-  <template class="LanguagesWindow" parent="AdwWindow">
+  <template class="LanguagesDialog" parent="AdwDialog">
     <property name="title" translatable="yes">Pick your Languages</property>
-    <property name="default-height">500</property>
-    <property name="default-width">380</property>
-    <property name="modal">true</property>
+    <property name="content-height">500</property>
+    <property name="content-width">380</property>
 
-    <!-- Window content -->
-    <property name="content">
+    <!-- Dialog content -->
+    <property name="child">
       <object class="AdwToolbarView">
 
         <!-- Headerbar -->

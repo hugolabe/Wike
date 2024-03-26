@@ -7,7 +7,7 @@ from gi.repository import Gio, Gtk, Adw
 
 from wike import wikipedia
 from wike.data import settings, languages
-from wike.languages import LanguagesWindow
+from wike.languages import LanguagesDialog
 
 
 # Search panel for sidebar
@@ -230,9 +230,8 @@ class SettingsPopover(Gtk.Popover):
 
   def _languages_button_clicked_cb(self, languages_button):
     self.hide()
-    languages_window = LanguagesWindow()
-    languages_window.set_transient_for(self._window)
-    languages_window.show()
+    languages_dialog = LanguagesDialog(self._window)
+    languages_dialog.present(self._window)
 
   # On list activated change search language
 

@@ -8,12 +8,12 @@ from gi.repository import Gtk, Adw
 from wike.data import languages
 
 
-# Languages window to choose user languages
+# Languages dialog to choose user languages
 
 @Gtk.Template(resource_path='/com/github/hugolabe/Wike/gtk/languages.ui')
-class LanguagesWindow(Adw.Window):
+class LanguagesDialog(Adw.Dialog):
 
-  __gtype_name__ = 'LanguagesWindow'
+  __gtype_name__ = 'LanguagesDialog'
 
   search_bar = Gtk.Template.Child()
   languages_entry = Gtk.Template.Child()
@@ -24,8 +24,10 @@ class LanguagesWindow(Adw.Window):
 
   # Initialize and connect signals
 
-  def __init__(self):
+  def __init__(self, window):
     super().__init__()
+
+    self._window = window
 
     self._languages_changed = False
     self._languages_selected = 0
@@ -38,7 +40,7 @@ class LanguagesWindow(Adw.Window):
     self.languages_list.connect('row-activated', self._languages_list_selected_cb)
     self.select_all_button.connect('clicked', self._select_all_button_cb)
     self.select_none_button.connect('clicked', self._select_none_button_cb)
-    self.connect('close-request', self._window_close_cb)
+    self.connect('closed', self._dialog_closed_cb)
 
   # Filter languages list for languages entry content
 
@@ -121,9 +123,9 @@ class LanguagesWindow(Adw.Window):
     else:
       self.selected_label.set_label(_('%s languages selected') % self._languages_selected)
 
-  # On window close refresh languages list (if changed)
+  # On dialog closed refresh languages list (if changed)
 
-  def _window_close_cb(self, prefs_window):
+  def _dialog_closed_cb(self, languages_dialog):
     if self._languages_changed:
       languages.clear()
 
@@ -140,9 +142,8 @@ class LanguagesWindow(Adw.Window):
       if len(languages.items) == 0:
         languages.items['en'] = 'English'
 
-      window = self.get_transient_for()
-      window.search_panel.settings_popover.populate_list()
-      window.langlinks_panel.populate(window.page.wikiview.langlinks)
+      self._window.search_panel.settings_popover.populate_list()
+      self._window.langlinks_panel.populate(self._window.page.wikiview.langlinks)
 
     return False
 

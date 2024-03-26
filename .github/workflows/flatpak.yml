@@ -28,6 +28,6 @@ jobs:
     - uses: flatpak/flatpak-github-actions/flatpak-builder@v6.3
       with:
         bundle: com.github.hugolabe.Wike.flatpak
-        manifest-path: build-aux/flatpak/com.github.hugolabe.Wike.json
+        manifest-path: com.github.hugolabe.Wike.json
         cache-key: flatpak-builder-${{ github.sha }}
         arch: ${{ matrix.arch }}

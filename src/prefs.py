@@ -9,10 +9,10 @@ from wike.data import settings
 from wike.view import network_session
 
 
-# Preferences window
+# Preferences dialog
 
 @Gtk.Template(resource_path='/com/github/hugolabe/Wike/gtk/prefs.ui')
-class PrefsWindow(Adw.PreferencesWindow):
+class PrefsDialog(Adw.PreferencesDialog):
 
   __gtype_name__ = 'PrefsWindow'
 
@@ -26,8 +26,10 @@ class PrefsWindow(Adw.PreferencesWindow):
 
   # Connect signals and bindings
 
-  def __init__(self):
+  def __init__(self, window):
     super().__init__()
+
+    self._window = window
 
     settings.bind('on-start-load', self.start_combo, 'selected', Gio.SettingsBindFlags.DEFAULT)
     settings.bind('hide-tabs', self.tabs_switch, 'active', Gio.SettingsBindFlags.DEFAULT)
@@ -46,15 +48,13 @@ class PrefsWindow(Adw.PreferencesWindow):
     clear_history_dialog = builder.get_object('clear_history_dialog')
 
     clear_history_dialog.connect('response', self._clear_history_response_cb)
-
     clear_history_dialog.present(self)
 
   # On response clear history
 
   def _clear_history_response_cb(self, dialog, response):
     if response == 'clear':
-      window = self.get_transient_for()
-      window.history_panel.clear_history()
+      self._window.history_panel.clear_history()
 
   # Show clear personal data dialog
 
@@ -64,7 +64,6 @@ class PrefsWindow(Adw.PreferencesWindow):
     clear_data_dialog = builder.get_object('clear_data_dialog')
 
     clear_data_dialog.connect('response', self._clear_data_response_cb)
-
     clear_data_dialog.present(self)
 
   # On response clear personal data

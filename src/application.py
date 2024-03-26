@@ -13,7 +13,7 @@ gi.require_version('WebKit', '6.0')
 from gi.repository import GLib, Gio, Gdk, Gtk, Adw, WebKit
 
 from wike.data import settings, languages, history, bookmarks
-from wike.prefs import PrefsWindow
+from wike.prefs import PrefsDialog
 from wike.window import Window
 from wike.view import network_session
 
@@ -135,13 +135,11 @@ class Application(Adw.Application):
     Gtk.StyleContext.remove_provider_for_display(Gdk.Display.get_default(), self._css_sepia)
     settings.set_int('theme', 1)
 
-  # Show preferences window
+  # Show preferences dialog
 
   def _prefs_cb(self, action, parameter):
-    prefs_window = PrefsWindow()
-    prefs_window.set_transient_for(self._window)
-
-    prefs_window.show()
+    prefs_dialog = PrefsDialog(self._window)
+    prefs_dialog.present(self._window)
 
   # Show about dialog
 

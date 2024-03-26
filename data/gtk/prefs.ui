@@ -5,13 +5,11 @@ SPDX-FileCopyrightText: 2021-24 Hugo Olabera <hugolabe@gmail.com>
 SPDX-License-Identifier: GPL-3.0-or-later
 -->
 
-<!-- Preferences window -->
+<!-- Preferences dialog -->
 <interface>
-  <template class="PrefsWindow" parent="AdwPreferencesWindow">
-    <property name="modal">true</property>
-    <property name="default-height">480</property>
-    <property name="default-width">580</property>
-    <property name="search-enabled">false</property>
+  <template class="PrefsWindow" parent="AdwPreferencesDialog">
+    <property name="content-height">480</property>
+    <property name="content-width">580</property>
 
     <!-- Preferences page -->
     <child>

@@ -7,125 +7,125 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: ar\n"
 
-#: ../src/view.py:253
+#: ../src/view.py:293
 msgid "Article not found"
 msgstr "المقالة غير موجودة"
 
-#: ../src/page.py:108
+#: ../src/page.py:217
 msgid "Can't find any results for requested query"
 msgstr "لم يتم العثور على أي نتائج للاستعلام المطلوب"
 
-#: ../src/view.py:255
+#: ../src/view.py:295
 msgid "Can't access Wikipedia"
 msgstr "لا يمكن الوصول إلى ويكيبيديا"
 
-#: ../src/page.py:116
+#: ../src/page.py:225
 msgid "Check your Internet connection and try again"
 msgstr "تحقق من اتصالك بالإنترنت وحاول مرة أخرى"
 
-#: ../data/ui/dialogs.ui:53
+#: ../data/gtk/dialogs.ui:56
 msgid "Clear Bookmarks List?"
 msgstr "مسح قائمة الإشارات المرجعية؟"
 
-#: ../data/ui/dialogs.ui:54
+#: ../data/gtk/dialogs.ui:57
 msgid "All bookmarks in the list will be removed permanently."
 msgstr "جميع الإشارات المرجعية في القائمة ستحذف نهائيا."
 
-#: ../data/ui/dialogs.ui:65
+#: ../data/gtk/dialogs.ui:68
 msgid "Clear List"
 msgstr "مسح القائمة"
 
-#: ../data/ui/search-settings.ui:58
+#: ../data/gtk/search-settings.ui:64
 msgid "Search Suggestions"
 msgstr "إقتراحات البحث"
 
 #. Add your name like this:
 #. 
 #. Hugo Olabera <hugolabe@gmail.com>
-#: ../data/ui/about.ui:16
+#: ../data/gtk/about.ui:17
 msgid "translator-credits"
 msgstr "Omar Ibrahim <guideddrone@protonmail.com> "
 
-#: ../src/view.py:366 ../data/ui/bookmarks.ui:27
+#: ../src/view.py:388 ../data/gtk/bookmarks.ui:32
 msgid "Add Bookmark"
 msgstr "إضافة إشارة مرجعية"
 
-#: ../data/ui/shortcuts.ui:16
+#: ../data/gtk/help-overlay.ui:21
 msgctxt "shortcut window"
 msgid "General"
 msgstr "عام"
 
-#: ../data/ui/shortcuts.ui:31
+#: ../data/gtk/help-overlay.ui:39
 msgctxt "shortcut window"
 msgid "Table of contents"
 msgstr "قائمة المحتويات"
 
-#: ../data/ui/shortcuts.ui:61
+#: ../data/gtk/help-overlay.ui:74
 msgctxt "shortcut window"
 msgid "Preferences"
 msgstr "التفضيلات"
 
-#: ../data/ui/shortcuts.ui:73
+#: ../data/gtk/help-overlay.ui:88
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "الخروج"
 
-#: ../data/ui/shortcuts.ui:67
+#: ../data/gtk/help-overlay.ui:81
 msgctxt "shortcut window"
 msgid "Keyboard shortcuts"
 msgstr "اختصارات لوحة المفاتيح"
 
-#: ../data/ui/shortcuts.ui:133
+#: ../data/gtk/help-overlay.ui:164
 msgctxt "shortcut window"
 msgid "Navigation"
 msgstr "التنقل"
 
-#: ../data/ui/shortcuts.ui:136
+#: ../data/gtk/help-overlay.ui:168
 msgctxt "shortcut window"
 msgid "Search articles"
 msgstr "البحث عن مقالات"
 
-#: ../data/ui/shortcuts.ui:160
+#: ../data/gtk/help-overlay.ui:196
 msgctxt "shortcut window"
 msgid "Previous page"
 msgstr "الصفحة السابقة"
 
-#: ../data/ui/shortcuts.ui:166
+#: ../data/gtk/help-overlay.ui:203
 msgctxt "shortcut window"
 msgid "Next page"
 msgstr "الصفحة التالية"
 
-#: ../data/ui/shortcuts.ui:81 ../data/ui/shortcuts.ui:84
+#: ../data/gtk/help-overlay.ui:99 ../data/gtk/help-overlay.ui:103
 msgctxt "shortcut window"
 msgid "Bookmarks"
 msgstr "الإشارات المرجعية"
 
-#: ../data/ui/shortcuts.ui:90
+#: ../data/gtk/help-overlay.ui:110
 msgctxt "shortcut window"
 msgid "Add bookmark"
 msgstr "إضافة إشارة مرجعية"
 
-#: ../data/ui/menu-main.ui:45
+#: ../data/gtk/menu-main.ui:15
 msgid "Preferences"
 msgstr "التفضيلات"
 
-#: ../data/ui/menu-main.ui:49
+#: ../data/gtk/menu-main.ui:19
 msgid "Keyboard Shortcuts"
 msgstr "إختصارات لوحة المفاتيح"
 
-#: ../data/ui/menu-main.ui:53
+#: ../data/gtk/menu-main.ui:23
 msgid "About Wike"
 msgstr "حول Wike"
 
-#: ../data/ui/prefs.ui:18
+#: ../data/gtk/prefs.ui:23
 msgid "Behavior"
 msgstr "السلوك"
 
-#: ../data/ui/prefs.ui:59
+#: ../data/gtk/prefs.ui:84
 msgid "Keep a List of Recent Articles"
 msgstr "إبقاء قائمة للمقالات الحديثة"
 
-#: ../data/ui/window.ui:102
+#: ../data/gtk/window.ui:113 ../data/gtk/window.ui:229
 msgid "Languages"
 msgstr "اللغات"
 
@@ -135,7 +135,7 @@ msgstr "اللغات"
 msgid "Wike"
 msgstr "وايك"
 
-#: ../data/ui/about.ui:14 ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../data/gtk/about.ui:15 ../data/com.github.hugolabe.Wike.desktop.in:4
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
 msgid "Search and read Wikipedia articles"
 msgstr "بحث وقراءة مقالات ويكيبيديا"
@@ -149,423 +149,425 @@ msgstr "ويكيبيديا;موسوعة;"
 msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
 msgstr "Wike هو قارئ ويكيبيديا لسطح مكتب جنوم. يوفر الوصول إلى جميع محتويات هذه الموسوعة عبر الإنترنت في تطبيق أصلي، مع عرض أبسط وخالي من التشتيت للمقالات."
 
-#: ../data/ui/dialogs.ui:71
+#: ../data/gtk/dialogs.ui:75
 msgid "The history of visited articles will be deleted permanently."
 msgstr "سيتم حذف سجل المقالات التي تمت زيارتها نهائيًا."
 
-#: ../data/ui/dialogs.ui:82
+#: ../data/gtk/dialogs.ui:87
 msgid "Clear Personal Data?"
 msgstr "هل تريد مسح البيانات الشخصية؟"
 
-#: ../data/ui/dialogs.ui:83
+#: ../data/gtk/dialogs.ui:88
 msgid "Cookies and cache data will be deleted permanently."
 msgstr "سيتم حذف ملفات تعريف الارتباط وبيانات ذاكرة التخزين المؤقت نهائيًا."
 
-#: ../data/ui/dialogs.ui:89
+#: ../data/gtk/dialogs.ui:94
 msgid "Clear Data"
 msgstr "امسح البيانات"
 
 #. Don't remove %s tag!
-#: ../src/wike-sp.in:69
+#: ../src/wike-sp.in:90
 msgid "Search “%s” on Wikipedia"
 msgstr "ابحث عن '%s' في ويكيبيديا"
 
-#: ../data/ui/prefs.ui:21
+#: ../data/gtk/prefs.ui:28
 msgid "Home Page"
 msgstr "الصفحة الرئيسية"
 
-#: ../data/ui/prefs.ui:22
+#: ../data/gtk/prefs.ui:29
 msgid "The page that will be displayed when Wike starts"
 msgstr "الصفحة التى سيتم عرضها عندما يبدأ وايك"
 
-#: ../data/ui/prefs.ui:39
+#: ../data/gtk/prefs.ui:57
 msgid "Privacy"
 msgstr "الخصوصية"
 
-#: ../data/ui/prefs.ui:42
+#: ../data/gtk/prefs.ui:62
 msgid "Allow Live Search on Desktop"
 msgstr "السماح بالبحث المباشر على سطح المكتب"
 
-#: ../data/ui/prefs.ui:43
+#: ../data/gtk/prefs.ui:63
 msgid "Warning: all desktop searches will be sent to Wikipedia"
 msgstr "تحذير: سيتم إرسال جميع عمليات البحث على سطح المكتب إلى ويكيبيديا"
 
-#: ../data/ui/prefs.ui:60
+#: ../data/gtk/prefs.ui:85
 msgid "Wike will remember the history of visited articles"
 msgstr "سوف يتذكر Wike تاريخ المقالات التي تمت زيارتها"
 
-#: ../data/ui/prefs.ui:69 ../data/ui/prefs.ui:87
+#: ../data/gtk/prefs.ui:96 ../data/gtk/prefs.ui:119
 msgid "Clear"
 msgstr "مسح"
 
-#: ../data/ui/prefs.ui:78
+#: ../data/gtk/prefs.ui:108
 msgid "Cookies and cache data will be deleted"
 msgstr "سيتم حذف ملفات تعريف الارتباط وبيانات ذاكرة التخزين المؤقت"
 
-#: ../data/ui/page.ui:83
+#: ../data/gtk/page-status.ui:50
 msgid "Try Again"
 msgstr "حاول مجددًا"
 
-#: ../data/ui/menu-main.ui:29 ../data/ui/page.ui:74
+#: ../data/gtk/menu-article.ui:34 ../data/gtk/page-status.ui:39
 msgid "Random Article"
 msgstr "مقالات عشوائية"
 
-#: ../data/ui/prefs.ui:28
+#: ../data/gtk/prefs.ui:35
 msgid "Last article"
 msgstr "آخر مقالة"
 
-#: ../data/ui/window.ui:112
+#: ../data/gtk/window.ui:126 ../data/gtk/window.ui:239
 msgid "Bookmarks"
 msgstr "الإشارات المرجعية"
 
-#: ../data/ui/languages.ui:56
+#: ../data/gtk/languages.ui:80 ../data/gtk/bookmarks.ui:102
+#: ../data/gtk/history.ui:94
 msgid "Select All"
-msgstr "إختيار الكل"
+msgstr "اختيار الكل"
 
-#: ../data/ui/languages.ui:61
+#: ../data/gtk/languages.ui:88 ../data/gtk/bookmarks.ui:110
+#: ../data/gtk/history.ui:102
 msgid "Select None"
 msgstr "لا تختر شيء"
 
-#: ../data/ui/shortcuts.ui:19
+#: ../data/gtk/help-overlay.ui:25
 msgctxt "shortcut window"
 msgid "Main menu"
-msgstr "الصفة الرئيسية"
+msgstr "الصفحة الرئيسية"
 
-#: ../data/ui/shortcuts.ui:98
+#: ../data/gtk/help-overlay.ui:121
 msgctxt "shortcut window"
 msgid "Tabs"
 msgstr "نوافذ التبويب"
 
-#: ../data/ui/shortcuts.ui:101
+#: ../data/gtk/help-overlay.ui:125
 msgctxt "shortcut window"
 msgid "New tab"
 msgstr "علامة تبويب جديدة"
 
-#: ../data/ui/shortcuts.ui:107
+#: ../data/gtk/help-overlay.ui:132
 msgctxt "shortcut window"
 msgid "Close current tab"
-msgstr "اغلق التبويب الحالي"
+msgstr "أغلق التبويب الحالي"
 
-#: ../data/ui/shortcuts.ui:113
+#: ../data/gtk/help-overlay.ui:139
 msgctxt "shortcut window"
 msgid "Next tab"
 msgstr "علامة التبويب التالية"
 
-#: ../data/ui/shortcuts.ui:119
+#: ../data/gtk/help-overlay.ui:146
 msgctxt "shortcut window"
 msgid "Previous tab"
 msgstr "علامة التبويب السابقة"
 
-#: ../src/view.py:378
+#: ../src/view.py:400
 msgid "Open Link in New Tab"
 msgstr "افتح الرابط في نافذة جديدة"
 
-#: ../src/view.py:384
+#: ../src/view.py:406
 msgid "Add Link to Bookmarks"
-msgstr "إضافة رابط إلى الإشارات المرجعية"
+msgstr "أضف الرابط إلى الإشارات المرجعية"
 
-#: ../src/view.py:380
+#: ../src/view.py:402
 msgid "Open Link in Browser"
 msgstr "فتح الرابط في المتصفح"
 
-#: ../src/view.py:386 ../data/ui/menu-main.ui:39
+#: ../src/view.py:408 ../data/gtk/menu-article.ui:46
 msgid "Copy Link to Clipboard"
 msgstr "نسخ الرابط إلى الحافظة"
 
-#: ../data/ui/prefs.ui:51
+#: ../data/gtk/prefs.ui:73
 msgid "Desktop searches are performed in the default language"
 msgstr "يتم إجراء عمليات البحث على سطح المكتب باللغة الافتراضية"
 
-#: ../data/ui/prefs.ui:52
+#: ../data/gtk/prefs.ui:74
 msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
 msgstr "يمكنك البحث بلغات أخرى باستخدام البادئة. على سبيل المثال. -es للبحث باللغة الاسبانية"
 
-#: ../data/ui/shortcuts.ui:148
+#: ../data/gtk/help-overlay.ui:182
 msgctxt "shortcut window"
 msgid "Random article"
 msgstr "مقالة عشوائية"
 
-#: ../src/menu.py:86
+#: ../src/menu.py:101
 msgid "Pick a Font"
 msgstr "اختر الخظ"
 
-#: ../src/menu.py:115
+#: ../src/menu.py:130
 msgid "Font"
 msgstr "الخط"
 
-#: ../src/history.py:33
+#: ../src/history.py:35
 msgid "Today"
 msgstr "اليوم"
 
-#: ../src/history.py:33
+#: ../src/history.py:35
 msgid "Last 7 days"
 msgstr "آخر 7 أيام"
 
-#: ../src/history.py:33
+#: ../src/history.py:35
 msgid "Last 30 days"
-msgstr "آخر 7 أيام"
+msgstr "آخر 30 يوم"
 
-#: ../src/history.py:33
+#: ../src/history.py:35
 msgid "Show full history"
-msgstr "عرض التاريخ الكامل"
+msgstr "عرض التاريخ بالكامل"
 
 #. • Trailing whitespaces don't match (source: 1, target: 0).
 #. • Special chars don't match (1 ␣ extra).
 #. I don't know how to fix this...
-#: ../src/page.py:143 ../src/window.py:381
+#: ../src/page.py:126 ../src/window.py:509
 msgid "Bookmark added: "
 msgstr "تمت إضافة الإشارة المرجعية:␣"
 
-#: ../src/window.py:500
+#: ../src/window.py:566
 msgid "Print operation completed"
 msgstr "نجحت الطباعة"
 
-#: ../src/window.py:506
+#: ../src/window.py:572
 msgid "Print operation failed"
 msgstr "فشلت الطباعة"
 
-#: ../src/window.py:521
+#: ../src/window.py:587
 msgid "Link copied to clipboard"
 msgstr "تم النسخ إلى الحافظة"
 
-#: ../src/application.py:157
+#: ../src/application.py:154
 msgid "Source Code"
 msgstr "مصدر البرنامج"
 
-#: ../src/application.py:158
+#: ../src/application.py:155
 msgid "Report an Issue"
 msgstr "بلغ عن مشكلة"
 
-#: ../src/application.py:159
+#: ../src/application.py:156
 msgid "Help Translating"
 msgstr "ساعد فى الترجمة"
 
-#: ../src/application.py:160
+#: ../src/application.py:157
 msgid "Contributors"
 msgstr "المساهمون"
 
-#: ../src/application.py:161
+#: ../src/application.py:158
 msgid "Flag Icons"
 msgstr "أيقونات العلم"
 
-#: ../src/application.py:162
-msgid "All content from Wikipedia.org and available under CC BY-SA 3.0 unless otherwise noted.\n"
+#: ../src/application.py:159
+#, fuzzy
+msgid "All content from Wikipedia.org and available under CC BY-SA 4.0 unless otherwise noted.\n"
 "\n"
 "Wike is an independent development not endorsed by or affiliated with the Wikimedia Foundation."
-msgstr "جميع المحتويات من Wikipedia.org ومتاحة بموجب CC BY-SA 3.0 ما لم يُذكر خلاف ذلك.\n"
+msgstr "جميع المحتويات من Wikipedia.org ومتاحة بموجب CC BY-SA 4.0 ما لم يُذكر خلاف ذلك.\n"
 "\n"
 "Wiki هو تطوير مستقل غير معتمد من قبل مؤسسة ويكيميديا أو تابع لها."
 
-#: ../src/page.py:79
-msgid "Loading"
+#: ../src/page.py:88 ../src/page.py:91
+#, fuzzy
+msgid "Loading…"
 msgstr "جارى التحميل"
 
-#: ../src/page.py:107
+#: ../src/page.py:216
 msgid "Article not Found"
 msgstr "لم يتم العثور على المقالة"
 
-#: ../src/page.py:115
+#: ../src/page.py:224
 msgid "Can't Access Wikipedia"
 msgstr "لا يمكن الوصول إلى ويكيبيديا"
 
-#: ../src/bookmarks.py:31
+#: ../src/bookmarks.py:33
 msgid "Reading list"
 msgstr "قائمة القراءة"
 
-#: ../data/ui/toc.ui:42
+#: ../data/gtk/toc.ui:48
 msgid "No Contents"
 msgstr "لا محتويات"
 
-#: ../data/ui/toc.ui:43
+#: ../data/gtk/toc.ui:49
 msgid "There is no table of contents for this page"
 msgstr "لا يوجد جدول محتويات لهذه الصفحة"
 
-#: ../data/ui/search-settings.ui:16 ../data/ui/languages.ui:10
+#: ../data/gtk/languages.ui:11 ../data/gtk/search-settings.ui:23
 msgid "Pick your Languages"
 msgstr "اختر لغاتك"
 
-#: ../data/ui/langlinks.ui:17 ../data/ui/languages.ui:33
-msgid "Filter languages"
-msgstr "تصفية اللغات"
-
-#: ../data/ui/shortcuts.ui:25
+#: ../data/gtk/help-overlay.ui:32
 msgctxt "shortcut window"
 msgid "Sidebar"
 msgstr "الشريط الجانبي"
 
-#: ../data/ui/shortcuts.ui:37
+#: ../data/gtk/help-overlay.ui:46
 msgctxt "shortcut window"
 msgid "Languages"
 msgstr "اللغات"
 
-#: ../data/ui/shortcuts.ui:43
+#: ../data/gtk/help-overlay.ui:53
 msgctxt "shortcut window"
 msgid "Search text"
-msgstr "بحث في النص"
+msgstr "ابحث في النص"
 
-#: ../data/ui/shortcuts.ui:49
+#: ../data/gtk/help-overlay.ui:60
 msgctxt "shortcut window"
 msgid "Print"
 msgstr "طباعة"
 
-#: ../data/ui/shortcuts.ui:55
+#: ../data/gtk/help-overlay.ui:67
 msgctxt "shortcut window"
 msgid "Copy link to clipboard"
 msgstr "انسخ الرابط إلى الحافظة"
 
-#: ../data/ui/shortcuts.ui:142
+#: ../data/gtk/help-overlay.ui:175
 msgctxt "shortcut window"
 msgid "Main page"
 msgstr "الصفحة الرئيسية"
 
-#: ../data/ui/shortcuts.ui:154
+#: ../data/gtk/help-overlay.ui:189
 msgctxt "shortcut window"
 msgid "History of recent articles"
 msgstr "تاريخ المقالات الأخيرة"
 
-#: ../data/ui/shortcuts.ui:172
+#: ../data/gtk/help-overlay.ui:210
 msgctxt "shortcut window"
 msgid "Reload current page"
 msgstr "إعادة تحميل الصفحة الحالية"
 
-#: ../data/ui/page.ui:53 ../data/ui/search.ui:15
+#: ../src/page.py:232 ../data/gtk/search.ui:24 ../data/gtk/window.ui:87
+#: ../data/gtk/window.ui:210 ../data/gtk/window.ui:356
 msgid "Search Wikipedia"
 msgstr "ابحث في ويكيبيديا"
 
-#: ../data/ui/dialogs.ui:11
+#: ../data/gtk/dialogs.ui:12
 msgid "New Bookmarks List"
-msgstr "قائمة الإشارات المرجعية الجديدة"
+msgstr "قائمة إشارات مرجعية جديدة"
 
-#: ../data/ui/dialogs.ui:18 ../data/ui/dialogs.ui:39
+#: ../data/gtk/dialogs.ui:19 ../data/gtk/dialogs.ui:41
 msgid "List Name"
 msgstr "اسم القائمة"
 
-#: ../data/ui/dialogs.ui:26 ../data/ui/dialogs.ui:47 ../data/ui/dialogs.ui:64
-#: ../data/ui/dialogs.ui:76 ../data/ui/dialogs.ui:88
+#: ../data/gtk/dialogs.ui:27 ../data/gtk/dialogs.ui:49
+#: ../data/gtk/dialogs.ui:67 ../data/gtk/dialogs.ui:80
+#: ../data/gtk/dialogs.ui:93
 msgid "Cancel"
-msgstr "يلغي"
+msgstr "إلعاء"
 
-#: ../data/ui/dialogs.ui:27
+#: ../data/gtk/dialogs.ui:28
 msgid "Create List"
 msgstr "إنشاء قائمة"
 
-#: ../data/ui/dialogs.ui:32
+#: ../data/gtk/dialogs.ui:34
 msgid "Rename Bookmarks List"
 msgstr "إعادة تسمية قائمة الإشارات المرجعية"
 
-#: ../data/ui/dialogs.ui:48
+#: ../data/gtk/dialogs.ui:50
 msgid "Rename List"
 msgstr "إعادة تسمية القائمة"
 
-#: ../data/ui/dialogs.ui:60
+#: ../data/gtk/dialogs.ui:63
 msgid "Also delete the list"
 msgstr "احذف القائمة أيضًا"
 
-#: ../data/ui/dialogs.ui:70
+#: ../data/gtk/dialogs.ui:74
 msgid "Clear History?"
 msgstr "مسح التاريخ؟"
 
-#: ../data/ui/history.ui:27 ../data/ui/dialogs.ui:77
+#: ../data/gtk/dialogs.ui:81 ../data/gtk/history.ui:40
 msgid "Clear History"
 msgstr "امسح التاريخ"
 
-#: ../data/ui/prefs.ui:26
+#: ../data/gtk/prefs.ui:33
 msgid "Wikipedia main page"
 msgstr "صفحة ويكيبيديا الرئيسية"
 
-#: ../data/ui/prefs.ui:27
+#: ../data/gtk/prefs.ui:34
 msgid "Random article"
 msgstr "مقالة عشوائية"
 
-#: ../data/ui/headerbar.ui:27
+#: ../data/gtk/window.ui:322
 msgid "New Tab"
 msgstr "علامة تبويب جديدة"
 
-#: ../data/ui/actionbar.ui:34 ../data/ui/headerbar.ui:46
+#: ../data/gtk/window.ui:348 ../data/gtk/window.ui:420
 msgid "View"
-msgstr "منظر"
+msgstr "عرض"
 
-#: ../data/ui/actionbar.ui:27 ../data/ui/headerbar.ui:52
+#: ../data/gtk/window.ui:155
 msgid "Sidebar"
 msgstr "الشريط الجانبي"
 
-#: ../data/ui/page.ui:20
+#: ../data/gtk/page.ui:27
 msgid "Search text"
 msgstr "بحث في النص"
 
-#: ../data/ui/page.ui:54
+#: ../src/page.py:233
 msgid "Start typing to search Wikipedia articles"
 msgstr "ابدأ الكتابة للبحث في مقالات ويكيبيديا"
 
-#: ../data/ui/menu-main.ui:25 ../data/ui/page.ui:64
+#: ../data/gtk/menu-article.ui:30 ../data/gtk/page-status.ui:27
 msgid "Main Page"
 msgstr "الصفحة الرئيسية"
 
-#: ../data/ui/langlinks.ui:38
+#: ../data/gtk/langlinks.ui:74
 msgid "No Languages"
 msgstr "لا توجد لغات"
 
-#: ../data/ui/langlinks.ui:39
+#: ../data/gtk/langlinks.ui:75
 msgid "This page is not available in other languages"
 msgstr "هذه الصفحة غير متوفرة بلغات أخرى"
 
-#: ../data/ui/menu-view.ui:21
+#: ../data/gtk/menu-view.ui:28
 msgid "Show"
-msgstr "عرض"
+msgstr "إعرض"
 
-#: ../data/ui/menu-view.ui:23
+#: ../data/gtk/menu-view.ui:30
 msgid "Language Flags"
 msgstr "أعلام اللغة"
 
-#: ../data/ui/menu-view.ui:27
+#: ../data/gtk/menu-view.ui:34
 msgid "Link Previews"
 msgstr "معاينات الارتباط"
 
-#: ../data/ui/history.ui:50
+#: ../data/gtk/history.ui:65
 msgid "Empty History"
 msgstr "تاريخ فارغ"
 
-#: ../data/ui/history.ui:51
+#: ../data/gtk/history.ui:66
 msgid "There are no recent articles in the history"
 msgstr "لا توجد مقالات حديثة في التاريخ"
 
-#: ../data/ui/bookmarks.ui:56
+#: ../data/gtk/bookmarks.ui:73
 msgid "No Bookmarks"
-msgstr "لا الإشارات المرجعية"
+msgstr "لا توجد إشارات مرجعية"
 
-#: ../data/ui/bookmarks.ui:57
+#: ../data/gtk/bookmarks.ui:74
 msgid "Use the Add Bookmark button or press Ctrl+D to add the current article to the list"
 msgstr "استخدم زر 'إضافة إشارة مرجعية' أو اضغط على Ctrl+D لإضافة المقالة الحالية إلى القائمة"
 
-#: ../data/ui/window.ui:93
+#: ../data/gtk/window.ui:100 ../data/gtk/window.ui:219
 msgid "Contents"
 msgstr "محتويات"
 
-#: ../data/ui/window.ui:122
+#: ../data/gtk/window.ui:139 ../data/gtk/window.ui:249
 msgid "History"
 msgstr "تاريخ"
 
-#: ../data/ui/menu-main.ui:13
+#: ../data/gtk/menu-article.ui:16
 msgid "Print"
 msgstr "طباعة"
 
-#: ../data/ui/menu-main.ui:18
+#: ../data/gtk/menu-article.ui:21
 msgid "Search Text"
 msgstr "بحث في النص"
 
-#: ../data/ui/menu-main.ui:35
+#: ../data/gtk/menu-article.ui:42
 msgid "Open in Browser"
 msgstr "فتح في المتصفح"
 
-#: ../data/ui/bookmarks-menu.ui:12
+#: ../data/gtk/bookmarks-menu.ui:14
 msgid "Create New List…"
 msgstr "إنشاء قائمة جديدة…"
 
-#: ../data/ui/bookmarks-menu.ui:18
+#: ../data/gtk/bookmarks-menu.ui:21
 msgid "Rename List…"
 msgstr "إعادة تسمية القائمة"
 
-#: ../data/ui/bookmarks-menu.ui:22
+#: ../data/gtk/bookmarks-menu.ui:25
 msgid "Clear List…"
 msgstr "لائحة خالية…"
 
@@ -573,40 +575,89 @@ msgstr "لائحة خالية…"
 msgid "It supports more than 300 languages and integrates with desktop searches, providing suggestions that make it easier to find any content. Other features are: bookmarks with multiple lists, article table of contents, history, text searches and much more…"
 msgstr "وهو يدعم أكثر من 300 لغة ويتكامل مع عمليات البحث على سطح المكتب، مقدمًا اقتراحات تسهل العثور على أي محتوى. الميزات الأخرى هي: الإشارات المرجعية ذات القوائم المتعددة، وجدول محتويات المقالة، والتاريخ، وعمليات البحث النصية، وغير ذلك الكثير"
 
-#: ../data/ui/window.ui:66
-msgid "Pin Sidebar"
-msgstr "تثبيت الشريط الجانبي"
-
-#: ../data/ui/headerbar.ui:13
+#: ../data/gtk/window.ui:304
 msgid "Back"
 msgstr "رجوع"
 
-#: ../data/ui/headerbar.ui:20
+#: ../data/gtk/window.ui:313
 msgid "Forward"
 msgstr "إلى الأمام"
 
-#: ../data/ui/headerbar.ui:39
+#: ../data/gtk/window.ui:61 ../data/gtk/window.ui:262
 msgid "Main Menu"
 msgstr "القائمة الرئيسية"
 
-#: ../data/ui/shortcuts.ui:125
+#: ../data/gtk/help-overlay.ui:153
 msgctxt "shortcut window"
 msgid "View open tabs"
 msgstr "عرض علامات التبويب المفتوحة"
 
-#: ../data/ui/prefs.ui:29
+#: ../data/gtk/prefs.ui:36
 msgid "Restore open articles"
 msgstr "استعادة المقالات المفتوحة"
 
-#: ../data/ui/prefs.ui:77
+#: ../data/gtk/prefs.ui:107
 msgid "Clear Personal Data on Close"
 msgstr "مسح البيانات الشخصية عند الإغلاق"
 
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:31
-msgid "Encyclopedia"
-msgstr "موسوعة"
-
-#: 
+#: ../data/gtk/window.ui:340 ../data/gtk/window.ui:412
 msgid "Article Menu"
 msgstr "قائمة المقالات"
+
+#: ../src/langlinks.py:32
+msgid "Your languages"
+msgstr "لغاتك"
+
+#: ../src/langlinks.py:33
+msgid "All languages"
+msgstr "كل اللغات"
+
+#: ../src/langlinks.py:109
+msgid "Other languages"
+msgstr "لغات أخرى"
+
+#: ../src/languages.py:120
+msgid "1 language selected"
+msgstr "لغة واحدة مختارة"
+
+#. Don't remove %s tag!
+#: ../src/languages.py:122
+msgid "%s languages selected"
+msgstr "%s لغة/لغات مختارة"
+
+#: ../data/gtk/languages.ui:28 ../data/gtk/langlinks.ui:32
+msgid "Search Languages"
+msgstr "ابحث فى اللغات"
+
+#: ../data/gtk/languages.ui:43 ../data/gtk/langlinks.ui:48
+msgid "Search languages"
+msgstr "ابحث فى اللغات"
+
+#: ../data/gtk/bookmarks.ui:41 ../data/gtk/history.ui:32
+msgid "Select"
+msgstr "اختيار"
+
+#: ../data/gtk/bookmarks.ui:118 ../data/gtk/history.ui:110
+msgid "Remove Selected"
+msgstr "احذف الاختيار"
+
+#: ../data/gtk/prefs.ui:46
+msgid "Always Hide Tabs"
+msgstr "إخفاء علامات التبويب دائمًا"
+
+#: ../data/gtk/prefs.ui:47
+msgid "The tab bar will also be hidden in desktop mode"
+msgstr "سيتم أيضًا إخفاء شريط علامات التبويب فى وضع سطخ المكتب"
+
+#: ../data/gtk/search.ui:59
+msgid "No Results"
+msgstr "لا توجد نتائج"
+
+#: ../data/gtk/search.ui:60
+msgid "Enter at least three characters to get search suggestions"
+msgstr "أدخل ثلاث أحرف على الأقل للحصول على اقتراحات بحث"
+
+#: ../data/gtk/window.ui:197
+msgid "Close"
+msgstr "إغلاق"
 

@@ -7,125 +7,125 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: uk\n"
 
-#: ../src/view.py:248
+#: ../src/view.py:293
 msgid "Article not found"
 msgstr "Статтю не знайдено"
 
-#: ../src/page.py:100
+#: ../src/page.py:231
 msgid "Can't find any results for requested query"
 msgstr "Не знайдено жодного результату за запитом"
 
-#: ../src/view.py:250
+#: ../src/view.py:295
 msgid "Can't access Wikipedia"
 msgstr "Не вдається отримати доступ до Вікіпедії"
 
-#: ../src/page.py:108
+#: ../src/page.py:239
 msgid "Check your Internet connection and try again"
 msgstr "Перевірте підключення до інтернету та спробуйте ще раз"
 
-#: ../data/ui/dialogs.ui:53
+#: ../data/gtk/dialogs.ui:56
 msgid "Clear Bookmarks List?"
 msgstr "Очистити список закладок?"
 
-#: ../data/ui/dialogs.ui:54
+#: ../data/gtk/dialogs.ui:57
 msgid "All bookmarks in the list will be removed permanently."
 msgstr "Усі закладки з списку будуть видалені назавжди."
 
-#: ../data/ui/dialogs.ui:65
+#: ../data/gtk/dialogs.ui:67
 msgid "Clear List"
 msgstr "Очистити список"
 
-#: ../data/ui/search-settings.ui:69
+#: ../data/gtk/search-settings.ui:64
 msgid "Search Suggestions"
 msgstr "Пошукові пропозиції"
 
 #. Add your name like this:
 #. 
 #. Hugo Olabera <hugolabe@gmail.com>
-#: ../data/ui/about.ui:16
+#: ../data/gtk/about.ui:17
 msgid "translator-credits"
 msgstr "Іван Ткачук"
 
-#: ../src/view.py:360 ../data/ui/bookmarks.ui:26
+#: ../src/view.py:388 ../data/gtk/bookmarks.ui:32
 msgid "Add Bookmark"
 msgstr "Додати закладку"
 
-#: ../data/ui/shortcuts.ui:16
+#: ../data/gtk/help-overlay.ui:21
 msgctxt "shortcut window"
 msgid "General"
 msgstr "Загальні"
 
-#: ../data/ui/shortcuts.ui:31
+#: ../data/gtk/help-overlay.ui:39
 msgctxt "shortcut window"
 msgid "Table of contents"
 msgstr "Зміст"
 
-#: ../data/ui/shortcuts.ui:61
+#: ../data/gtk/help-overlay.ui:74
 msgctxt "shortcut window"
 msgid "Preferences"
 msgstr "Налаштування"
 
-#: ../data/ui/shortcuts.ui:73
+#: ../data/gtk/help-overlay.ui:88
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Вийти"
 
-#: ../data/ui/shortcuts.ui:67
+#: ../data/gtk/help-overlay.ui:81
 msgctxt "shortcut window"
 msgid "Keyboard shortcuts"
-msgstr "Сполучення клавіш"
+msgstr "Клавіатурні скорочення"
 
-#: ../data/ui/shortcuts.ui:127
+#: ../data/gtk/help-overlay.ui:164
 msgctxt "shortcut window"
 msgid "Navigation"
 msgstr "Навігація"
 
-#: ../data/ui/shortcuts.ui:130
+#: ../data/gtk/help-overlay.ui:168
 msgctxt "shortcut window"
 msgid "Search articles"
 msgstr "Пошук статей"
 
-#: ../data/ui/shortcuts.ui:154
+#: ../data/gtk/help-overlay.ui:196
 msgctxt "shortcut window"
 msgid "Previous page"
 msgstr "Попередня сторінка"
 
-#: ../data/ui/shortcuts.ui:160
+#: ../data/gtk/help-overlay.ui:203
 msgctxt "shortcut window"
 msgid "Next page"
 msgstr "Наступна сторінка"
 
-#: ../data/ui/shortcuts.ui:81 ../data/ui/shortcuts.ui:84
+#: ../data/gtk/help-overlay.ui:99 ../data/gtk/help-overlay.ui:103
 msgctxt "shortcut window"
 msgid "Bookmarks"
 msgstr "Закладки"
 
-#: ../data/ui/shortcuts.ui:90
+#: ../data/gtk/help-overlay.ui:110
 msgctxt "shortcut window"
 msgid "Add bookmark"
 msgstr "Додати закладку"
 
-#: ../data/ui/menu-main.ui:45
+#: ../data/gtk/menu-main.ui:15
 msgid "Preferences"
 msgstr "Налаштування"
 
-#: ../data/ui/menu-main.ui:49
+#: ../data/gtk/menu-main.ui:19
 msgid "Keyboard Shortcuts"
-msgstr "Сполучення клавіш"
+msgstr "Клавіатурні скорочення"
 
-#: ../data/ui/menu-main.ui:53
+#: ../data/gtk/menu-main.ui:23
 msgid "About Wike"
 msgstr "Про Wike"
 
-#: ../data/ui/prefs.ui:18
+#: ../data/gtk/prefs.ui:21
 msgid "Behavior"
 msgstr "Поведінка"
 
-#: ../data/ui/prefs.ui:58
+#: ../data/gtk/prefs.ui:82
 msgid "Keep a List of Recent Articles"
 msgstr "Зберігати список нещодавніх статей"
 
-#: ../data/ui/window.ui:88
+#: ../data/gtk/window.ui:113 ../data/gtk/window.ui:229
 msgid "Languages"
 msgstr "Мови"
 
@@ -135,7 +135,7 @@ msgstr "Мови"
 msgid "Wike"
 msgstr "Wike"
 
-#: ../data/ui/about.ui:14 ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../data/gtk/about.ui:15 ../data/com.github.hugolabe.Wike.desktop.in:4
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
 msgid "Search and read Wikipedia articles"
 msgstr "Шукайте та читайте статті Вікіпедії"
@@ -149,429 +149,422 @@ msgstr "Вікіпедія;Енциклопедія;"
 msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
 msgstr "Wike — це програма, що дозволяє читати статті Вікіпедії для стільниці GNOME. Забезпечує доступ до всього вмісту онлайн-енциклопедії з простішим і не відволікаючим переглядом статей."
 
-#: ../data/ui/dialogs.ui:71
+#: ../data/gtk/dialogs.ui:74
 msgid "The history of visited articles will be deleted permanently."
 msgstr "Історія відвіданих статей буде видалена назавжди."
 
-#: ../data/ui/dialogs.ui:82
+#: ../data/gtk/dialogs.ui:85
 msgid "Clear Personal Data?"
 msgstr "Очистити особисті дані?"
 
-#: ../data/ui/dialogs.ui:83
+#: ../data/gtk/dialogs.ui:86
 msgid "Cookies and cache data will be deleted permanently."
 msgstr "Файли cookie та дані кешу будуть видалені назавжди."
 
-#: ../data/ui/dialogs.ui:89
+#: ../data/gtk/dialogs.ui:91
 msgid "Clear Data"
 msgstr "Очистити дані"
 
 #. Don't remove %s tag!
-#: ../src/wike-sp.in:69
+#: ../src/wike-sp.in:90
 msgid "Search “%s” on Wikipedia"
 msgstr "Шукати “%s” у Вікіпедії"
 
-#: ../data/ui/prefs.ui:21
+#: ../data/gtk/prefs.ui:26
 msgid "Home Page"
 msgstr "Головна сторінка"
 
-#: ../data/ui/prefs.ui:22
+#: ../data/gtk/prefs.ui:27
 msgid "The page that will be displayed when Wike starts"
 msgstr "Сторінка, відображена при запуску Wike"
 
-#: ../data/ui/prefs.ui:38
+#: ../data/gtk/prefs.ui:55
 msgid "Privacy"
 msgstr "Приватність"
 
-#: ../data/ui/prefs.ui:41
+#: ../data/gtk/prefs.ui:60
 msgid "Allow Live Search on Desktop"
 msgstr "Дозволити інтерактивний пошук на стільниці"
 
-#: ../data/ui/prefs.ui:42
+#: ../data/gtk/prefs.ui:61
 msgid "Warning: all desktop searches will be sent to Wikipedia"
 msgstr "Попередження: усі пошукові запити на стільниці будуть перенаправлені до Вікіпедії"
 
-#: ../data/ui/prefs.ui:59
+#: ../data/gtk/prefs.ui:83
 msgid "Wike will remember the history of visited articles"
 msgstr "Wike запам'ятає історію відвіданих статей"
 
-#: ../data/ui/prefs.ui:68 ../data/ui/prefs.ui:80
+#: ../data/gtk/prefs.ui:94 ../data/gtk/prefs.ui:117
 msgid "Clear"
 msgstr "Очистити"
 
-#: ../data/ui/prefs.ui:76
-msgid "Clear Personal Data"
-msgstr "Очистити особисті дані"
-
-#: ../data/ui/prefs.ui:77
+#: ../data/gtk/prefs.ui:106
 msgid "Cookies and cache data will be deleted"
 msgstr "Файли cookie і дані кешу будуть видалені"
 
-#: ../data/ui/page.ui:87
+#: ../data/gtk/page-status.ui:50
 msgid "Try Again"
 msgstr "Спробуйте ще раз"
 
-#: ../data/ui/page.ui:78 ../data/ui/menu-main.ui:29
+#: ../data/gtk/menu-article.ui:34 ../data/gtk/page-status.ui:39
 msgid "Random Article"
 msgstr "Випадкова стаття"
 
-#: ../data/ui/prefs.ui:28
+#: ../data/gtk/prefs.ui:33
 msgid "Last article"
 msgstr "Остання стаття"
 
-#: ../data/ui/window.ui:99
+#: ../data/gtk/window.ui:126 ../data/gtk/window.ui:239
 msgid "Bookmarks"
 msgstr "Закладки"
 
-#: ../data/ui/languages.ui:56
+#: ../data/gtk/bookmarks.ui:102 ../data/gtk/history.ui:94
+#: ../data/gtk/languages.ui:79
 msgid "Select All"
 msgstr "Вибрати все"
 
-#: ../data/ui/languages.ui:61
+#: ../data/gtk/bookmarks.ui:110 ../data/gtk/history.ui:102
+#: ../data/gtk/languages.ui:87
 msgid "Select None"
 msgstr "Скасувати вибір"
 
-#: ../data/ui/shortcuts.ui:19
+#: ../data/gtk/help-overlay.ui:25
 msgctxt "shortcut window"
 msgid "Main menu"
 msgstr "Головне меню"
 
-#: ../data/ui/shortcuts.ui:98
+#: ../data/gtk/help-overlay.ui:121
 msgctxt "shortcut window"
 msgid "Tabs"
 msgstr "Вкладки"
 
-#: ../data/ui/shortcuts.ui:101
+#: ../data/gtk/help-overlay.ui:125
 msgctxt "shortcut window"
 msgid "New tab"
 msgstr "Нова вкладка"
 
-#: ../data/ui/shortcuts.ui:107
+#: ../data/gtk/help-overlay.ui:132
 msgctxt "shortcut window"
 msgid "Close current tab"
 msgstr "Закрити поточну вкладку"
 
-#: ../data/ui/shortcuts.ui:113
+#: ../data/gtk/help-overlay.ui:139
 msgctxt "shortcut window"
 msgid "Next tab"
 msgstr "Наступна вкладка"
 
-#: ../data/ui/shortcuts.ui:119
+#: ../data/gtk/help-overlay.ui:146
 msgctxt "shortcut window"
 msgid "Previous tab"
 msgstr "Попередня вкладка"
 
-#: ../src/view.py:375
+#: ../src/view.py:400
 msgid "Open Link in New Tab"
 msgstr "Відкрити посилання у новій вкладці"
 
-#: ../src/view.py:381
+#: ../src/view.py:406
 msgid "Add Link to Bookmarks"
 msgstr "Додати посилання до закладок"
 
-#: ../src/view.py:377
+#: ../src/view.py:402
 msgid "Open Link in Browser"
 msgstr "Відкрити посилання в браузері"
 
-#: ../src/view.py:383 ../data/ui/menu-main.ui:39
+#: ../src/view.py:408 ../data/gtk/menu-article.ui:46
 msgid "Copy Link to Clipboard"
 msgstr "Копіювати посилання до буферу обміну"
 
-#: ../data/ui/prefs.ui:50
+#: ../data/gtk/prefs.ui:71
 msgid "Desktop searches are performed in the default language"
 msgstr "Пошук на стільниці виконується мовою за замовчуванням"
 
-#: ../data/ui/prefs.ui:51
+#: ../data/gtk/prefs.ui:72
 msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
 msgstr "Ви можете шукати іншими мовами за допомогою префіска. Наприклад, -es для пошуку іспанською мовою."
 
-#: ../data/ui/shortcuts.ui:142
+#: ../data/gtk/help-overlay.ui:182
 msgctxt "shortcut window"
 msgid "Random article"
 msgstr "Випадкова стаття"
 
-#: ../src/menu.py:86
+#: ../src/menu.py:101
 msgid "Pick a Font"
 msgstr "Оберіть шрифт"
 
-#: ../src/menu.py:115
+#: ../src/menu.py:130
 msgid "Font"
 msgstr "Шрифт"
 
-#: ../src/history.py:33
+#: ../src/history.py:35
 msgid "Today"
 msgstr "Сьогодні"
 
-#: ../src/history.py:33
+#: ../src/history.py:35
 msgid "Last 7 days"
 msgstr "За останні 7 днів"
 
-#: ../src/history.py:33
+#: ../src/history.py:35
 msgid "Last 30 days"
 msgstr "Протягом останніх 30 днів"
 
-#: ../src/history.py:33
+#: ../src/history.py:35
 msgid "Show full history"
 msgstr "Показати повну історію"
 
-#: ../src/window.py:312 ../src/page.py:135
+#: ../src/window.py:509 ../src/page.py:140
 msgid "Bookmark added: "
 msgstr "Додано в закладки:␣"
 
-#: ../src/window.py:426
+#: ../src/window.py:566
 msgid "Print operation completed"
 msgstr "Друк завершено"
 
-#: ../src/window.py:432
+#: ../src/window.py:572
 msgid "Print operation failed"
 msgstr "Не вдалося надрукувати"
 
-#: ../src/window.py:447
+#: ../src/window.py:587
 msgid "Link copied to clipboard"
 msgstr "Посилання скопійовано до буферу обміну"
 
-#: ../src/application.py:154
+#: ../src/application.py:151
 msgid "Source Code"
 msgstr "Програмний код"
 
-#: ../src/application.py:155
+#: ../src/application.py:152
 msgid "Report an Issue"
 msgstr "Повідомити про помилку"
 
-#: ../src/application.py:156
+#: ../src/application.py:153
 msgid "Help Translating"
 msgstr "Допомогти з перекладом"
 
-#: ../src/application.py:157
+#: ../src/application.py:154
 msgid "Contributors"
 msgstr "Учасники"
 
-#: ../src/application.py:158
+#: ../src/application.py:155
 msgid "Flag Icons"
 msgstr "Значки прапора"
 
-#: ../src/application.py:159
-msgid "All content from Wikipedia.org and available under CC BY-SA 3.0 unless otherwise noted.\n"
+#: ../src/application.py:156
+#, fuzzy
+msgid "All content from Wikipedia.org and available under CC BY-SA 4.0 unless otherwise noted.\n"
 "\n"
 "Wike is an independent development not endorsed by or affiliated with the Wikimedia Foundation."
 msgstr "Весь вміст з Wikipedia.org доступний за ліцензією CC BY-SA 3.0, якщо не заначено іншого.\n"
 "\n"
 "Wike — це незалежна розробка, яка не схвалена Фондом Вікімедіа і не пов'язана з ним."
 
-#: ../src/page.py:72
-msgid "Loading"
+#: ../src/page.py:102 ../src/page.py:105
+#, fuzzy
+msgid "Loading…"
 msgstr "Завантаження"
 
-#: ../src/page.py:99
+#: ../src/page.py:230
 msgid "Article not Found"
 msgstr "Статтю не знайдено"
 
-#: ../src/page.py:107
+#: ../src/page.py:238
 msgid "Can't Access Wikipedia"
 msgstr "Не вдається отримати доступ до Вікіпедії"
 
-#: ../src/bookmarks.py:31
+#: ../src/bookmarks.py:33
 msgid "Reading list"
 msgstr "Список читання"
 
-#: ../data/ui/toc.ui:42
+#: ../data/gtk/toc.ui:48
 msgid "No Contents"
 msgstr "Без змісту"
 
-#: ../data/ui/toc.ui:43
+#: ../data/gtk/toc.ui:49
 msgid "There is no table of contents for this page"
 msgstr "Для цієї сторінки немає змісту"
 
-#: ../data/ui/languages.ui:10 ../data/ui/search-settings.ui:26
+#: ../data/gtk/search-settings.ui:23 ../data/gtk/languages.ui:11
 msgid "Pick your Languages"
 msgstr "Оберіть мову"
 
-#: ../data/ui/languages.ui:33 ../data/ui/search-settings.ui:20
-#: ../data/ui/langlinks.ui:17
-msgid "Filter languages"
-msgstr "Фільтр мов"
-
-#: ../data/ui/shortcuts.ui:25
+#: ../data/gtk/help-overlay.ui:32
 msgctxt "shortcut window"
 msgid "Sidebar"
 msgstr "Бічна панель"
 
-#: ../data/ui/shortcuts.ui:37
+#: ../data/gtk/help-overlay.ui:46
 msgctxt "shortcut window"
 msgid "Languages"
 msgstr "Мови"
 
-#: ../data/ui/shortcuts.ui:43
+#: ../data/gtk/help-overlay.ui:53
 msgctxt "shortcut window"
 msgid "Search text"
 msgstr "Пошук тексту"
 
-#: ../data/ui/shortcuts.ui:49
+#: ../data/gtk/help-overlay.ui:60
 msgctxt "shortcut window"
 msgid "Print"
 msgstr "Друкувати"
 
-#: ../data/ui/shortcuts.ui:55
+#: ../data/gtk/help-overlay.ui:67
 msgctxt "shortcut window"
 msgid "Copy link to clipboard"
 msgstr "Копіювати посилання до буферу обміну"
 
-#: ../data/ui/shortcuts.ui:136
+#: ../data/gtk/help-overlay.ui:175
 msgctxt "shortcut window"
 msgid "Main page"
 msgstr "Головна сторінка"
 
-#: ../data/ui/shortcuts.ui:148
+#: ../data/gtk/help-overlay.ui:189
 msgctxt "shortcut window"
 msgid "History of recent articles"
 msgstr "Історія останніх переглянутих статей"
 
-#: ../data/ui/shortcuts.ui:166
+#: ../data/gtk/help-overlay.ui:210
 msgctxt "shortcut window"
 msgid "Reload current page"
 msgstr "Перезавантажити сторінку"
 
-#: ../data/ui/search.ui:15 ../data/ui/page.ui:57
+#: ../src/page.py:246 ../data/gtk/search.ui:24 ../data/gtk/window.ui:87
+#: ../data/gtk/window.ui:210 ../data/gtk/window.ui:356
 msgid "Search Wikipedia"
 msgstr "Пошук у Вікіпедії"
 
-#: ../data/ui/search.ui:26
-msgid "Search Settings"
-msgstr "Параметри пошуку"
-
-#: ../data/ui/dialogs.ui:11
+#: ../data/gtk/dialogs.ui:12
 msgid "New Bookmarks List"
 msgstr "Новий список закладок"
 
-#: ../data/ui/dialogs.ui:18 ../data/ui/dialogs.ui:39
+#: ../data/gtk/dialogs.ui:20 ../data/gtk/dialogs.ui:42
 msgid "List Name"
 msgstr "Назва списку"
 
-#: ../data/ui/dialogs.ui:26 ../data/ui/dialogs.ui:47 ../data/ui/dialogs.ui:64
-#: ../data/ui/dialogs.ui:76 ../data/ui/dialogs.ui:88
+#: ../data/gtk/dialogs.ui:27 ../data/gtk/dialogs.ui:49
+#: ../data/gtk/dialogs.ui:66 ../data/gtk/dialogs.ui:78
+#: ../data/gtk/dialogs.ui:90
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: ../data/ui/dialogs.ui:27
+#: ../data/gtk/dialogs.ui:28
 msgid "Create List"
 msgstr "Створити список"
 
-#: ../data/ui/dialogs.ui:32
+#: ../data/gtk/dialogs.ui:34
 msgid "Rename Bookmarks List"
 msgstr "Перейменувати список закладок"
 
-#: ../data/ui/dialogs.ui:48
+#: ../data/gtk/dialogs.ui:50
 msgid "Rename List"
 msgstr "Перейменувати список"
 
-#: ../data/ui/dialogs.ui:60
+#: ../data/gtk/dialogs.ui:62
 msgid "Also delete the list"
 msgstr "Видалити також список"
 
-#: ../data/ui/dialogs.ui:70
+#: ../data/gtk/dialogs.ui:73
 msgid "Clear History?"
 msgstr "Видалити історію?"
 
-#: ../data/ui/dialogs.ui:77 ../data/ui/history.ui:26
+#: ../data/gtk/history.ui:40 ../data/gtk/dialogs.ui:79
 msgid "Clear History"
 msgstr "Видалити історію"
 
-#: ../data/ui/prefs.ui:26
+#: ../data/gtk/prefs.ui:31
 msgid "Wikipedia main page"
 msgstr "Головна сторінка Вікіпедії"
 
-#: ../data/ui/prefs.ui:27
+#: ../data/gtk/prefs.ui:32
 msgid "Random article"
 msgstr "Випадкова стаття"
 
-#: ../data/ui/headerbar.ui:27
+#: ../data/gtk/window.ui:322
 msgid "New Tab"
 msgstr "Нова вкладка"
 
-#: ../data/ui/headerbar.ui:46 ../data/ui/actionbar.ui:34
+#: ../data/gtk/window.ui:348 ../data/gtk/window.ui:420
 msgid "View"
 msgstr "Вигляд"
 
-#: ../data/ui/headerbar.ui:52 ../data/ui/actionbar.ui:27
+#: ../data/gtk/window.ui:155
 msgid "Sidebar"
 msgstr "Бічна панель"
 
-#: ../data/ui/page.ui:20
+#: ../data/gtk/page.ui:27
 msgid "Search text"
 msgstr "Пошук тексту"
 
-#: ../data/ui/page.ui:58
+#: ../src/page.py:247
 msgid "Start typing to search Wikipedia articles"
 msgstr "Почніть набирати текст для пошуку статей у Вікіпедії"
 
-#: ../data/ui/page.ui:68 ../data/ui/menu-main.ui:25
+#: ../data/gtk/menu-article.ui:30 ../data/gtk/page-status.ui:27
 msgid "Main Page"
 msgstr "Головна сторінка"
 
-#: ../data/ui/langlinks.ui:38
+#: ../data/gtk/langlinks.ui:74
 msgid "No Languages"
 msgstr "Без перекладу"
 
-#: ../data/ui/langlinks.ui:39
+#: ../data/gtk/langlinks.ui:75
 msgid "This page is not available in other languages"
 msgstr "Ця сторінка недоступна іншими мовами"
 
-#: ../data/ui/menu-view.ui:21
+#: ../data/gtk/menu-view.ui:28
 msgid "Show"
 msgstr "Показати"
 
-#: ../data/ui/menu-view.ui:23
+#: ../data/gtk/menu-view.ui:30
 msgid "Language Flags"
 msgstr "Прапори мов"
 
-#: ../data/ui/menu-view.ui:27
+#: ../data/gtk/menu-view.ui:34
 msgid "Link Previews"
 msgstr "Попередній перегляд посилань"
 
-#: ../data/ui/history.ui:49
+#: ../data/gtk/history.ui:65
 msgid "Empty History"
 msgstr "Відсутня історія"
 
-#: ../data/ui/history.ui:50
+#: ../data/gtk/history.ui:66
 msgid "There are no recent articles in the history"
 msgstr "Немає останніх переглянутих статей в історії"
 
-#: ../data/ui/bookmarks.ui:55
+#: ../data/gtk/bookmarks.ui:73
 msgid "No Bookmarks"
 msgstr "Немає закладок"
 
-#: ../data/ui/bookmarks.ui:56
+#: ../data/gtk/bookmarks.ui:74
 msgid "Use the Add Bookmark button or press Ctrl+D to add the current article to the list"
 msgstr "Використовуйте кнопку Додати закладку або натисніть Ctrl+D, щоб додати статтю до списку"
 
-#: ../data/ui/window.ui:78
+#: ../data/gtk/window.ui:100 ../data/gtk/window.ui:219
 msgid "Contents"
 msgstr "Зміст"
 
-#: ../data/ui/window.ui:110
+#: ../data/gtk/window.ui:139 ../data/gtk/window.ui:249
 msgid "History"
 msgstr "Історія"
 
-#: ../data/ui/menu-main.ui:13
+#: ../data/gtk/menu-article.ui:16
 msgid "Print"
 msgstr "Друкувати"
 
-#: ../data/ui/menu-main.ui:18
+#: ../data/gtk/menu-article.ui:21
 msgid "Search Text"
 msgstr "Пошук тексту"
 
-#: ../data/ui/menu-main.ui:35
+#: ../data/gtk/menu-article.ui:42
 msgid "Open in Browser"
 msgstr "Відкрити в браузері"
 
-#: ../data/ui/bookmarks-menu.ui:12
+#: ../data/gtk/bookmarks-menu.ui:14
 msgid "Create New List…"
 msgstr "Створити новий список…"
 
-#: ../data/ui/bookmarks-menu.ui:18
+#: ../data/gtk/bookmarks-menu.ui:21
 msgid "Rename List…"
 msgstr "Перейменувати список…"
 
-#: ../data/ui/bookmarks-menu.ui:22
+#: ../data/gtk/bookmarks-menu.ui:25
 msgid "Clear List…"
 msgstr "Очистити список…"
 
@@ -579,19 +572,97 @@ msgstr "Очистити список…"
 msgid "It supports more than 300 languages and integrates with desktop searches, providing suggestions that make it easier to find any content. Other features are: bookmarks with multiple lists, article table of contents, history, text searches and much more…"
 msgstr "Застосунок підтримує понад 300 мов та інтегрується з пошуком на стільниці, надаючи пропозиції, які полегшують пошук будь-якого контенту. Інші функції: закладки з декількома списками, зміст статті, історія, пошук тексту та багато іншого…"
 
-#: ../data/ui/window.ui:55
-msgid "Pin Sidebar"
-msgstr "Закріпити бічну панель"
-
-#: ../data/ui/headerbar.ui:13
+#: ../data/gtk/window.ui:304
 msgid "Back"
 msgstr "Назад"
 
-#: ../data/ui/headerbar.ui:20
+#: ../data/gtk/window.ui:313
 msgid "Forward"
 msgstr "Вперед"
 
-#: ../data/ui/headerbar.ui:39
+#: ../data/gtk/window.ui:61 ../data/gtk/window.ui:262
 msgid "Main Menu"
 msgstr "Головне меню"
+
+#: ../data/gtk/help-overlay.ui:153
+msgctxt "shortcut window"
+msgid "View open tabs"
+msgstr "Переглянути відкриті вкладки"
+
+#: ../data/gtk/prefs.ui:34
+msgid "Restore open articles"
+msgstr "Відновлювати відкриті статті"
+
+#: ../data/gtk/prefs.ui:105
+msgid "Clear Personal Data on Close"
+msgstr "Очищати персональні даті при закритті"
+
+#: ../data/gtk/window.ui:340 ../data/gtk/window.ui:412
+msgid "Article Menu"
+msgstr "Меню статті"
+
+#: ../src/langlinks.py:32
+msgid "Your languages"
+msgstr "Ваші мови"
+
+#: ../src/langlinks.py:33
+msgid "All languages"
+msgstr "Усі мови"
+
+#: ../src/langlinks.py:109
+msgid "Other languages"
+msgstr "Інші мови"
+
+#: ../src/languages.py:122
+msgid "1 language selected"
+msgstr "Обрано 1 мову"
+
+#. Don't remove %s tag!
+#: ../src/languages.py:124
+msgid "%s languages selected"
+msgstr "Обрано %s мов(и)"
+
+#: ../data/gtk/langlinks.ui:32 ../data/gtk/languages.ui:27
+msgid "Search Languages"
+msgstr "Шукати мови"
+
+#: ../data/gtk/langlinks.ui:48 ../data/gtk/languages.ui:42
+msgid "Search languages"
+msgstr "Шукати мови"
+
+#: ../data/gtk/bookmarks.ui:41 ../data/gtk/history.ui:32
+msgid "Select"
+msgstr "Обрати"
+
+#: ../data/gtk/bookmarks.ui:118 ../data/gtk/history.ui:110
+msgid "Remove Selected"
+msgstr "Прибрати обране"
+
+#: ../data/gtk/prefs.ui:44
+msgid "Always Hide Tabs"
+msgstr "Завжди ховати вкладки"
+
+#: ../data/gtk/prefs.ui:45
+msgid "The tab bar will also be hidden in desktop mode"
+msgstr "Вкладки також будуть сховані у режимі десктопу"
+
+#: ../data/gtk/search.ui:59
+msgid "No Results"
+msgstr "Немає результатів"
+
+#: ../data/gtk/search.ui:60
+msgid "Enter at least three characters to get search suggestions"
+msgstr "Введіть хоча б 3 символи для пошуку"
+
+#: ../data/gtk/window.ui:197
+msgid "Close"
+msgstr "Закрити"
+
+#: ../data/gtk/page.ui:35
+msgid "Previous Result"
+msgstr "Попередній результат"
+
+#: ../data/gtk/page.ui:44
+msgid "Next Result"
+msgstr "Наступний результат"
 

@@ -11,7 +11,7 @@ msgstr ""
 msgid "Article not found"
 msgstr "Makale bulunamadı"
 
-#: ../src/page.py:217
+#: ../src/page.py:231
 msgid "Can't find any results for requested query"
 msgstr "İstenen arama için herhangi bir sonuç bulamadı"
 
@@ -19,7 +19,7 @@ msgstr "İstenen arama için herhangi bir sonuç bulamadı"
 msgid "Can't access Wikipedia"
 msgstr "Wikipedia'ya erişilemiyor"
 
-#: ../src/page.py:225
+#: ../src/page.py:239
 msgid "Check your Internet connection and try again"
 msgstr "İnternet bağlantınızı denetleyip tekrar deneyin"
 
@@ -31,7 +31,7 @@ msgstr "Yer İmleri Listesi Temizlensin Mi?"
 msgid "All bookmarks in the list will be removed permanently."
 msgstr "Listedeki tüm yer imleri kalıcı olarak kaldırılacak."
 
-#: ../data/gtk/dialogs.ui:68
+#: ../data/gtk/dialogs.ui:67
 msgid "Clear List"
 msgstr "Listeyi Temizle"
 
@@ -118,11 +118,11 @@ msgstr "Klavye Kısayolları"
 msgid "About Wike"
 msgstr "Wike Hakkında"
 
-#: ../data/gtk/prefs.ui:23
+#: ../data/gtk/prefs.ui:21
 msgid "Behavior"
 msgstr "Davranış"
 
-#: ../data/gtk/prefs.ui:84
+#: ../data/gtk/prefs.ui:82
 msgid "Keep a List of Recent Articles"
 msgstr "Son Makalelerin Listesini Tut"
 
@@ -150,19 +150,19 @@ msgstr "Wikipedia;Wikipedi;Vikipedi;Ansiklopedi;"
 msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
 msgstr "Wike, GNOME Masaüstü için Wikipedia okuyucusudur. Çevrimiçi ansiklopedinin tüm içeriğine, makalelerin daha basit ve dikkat dağıtıcı olmayan görünümü ile yerel uygulama ile erişimeyi sağlar."
 
-#: ../data/gtk/dialogs.ui:75
+#: ../data/gtk/dialogs.ui:74
 msgid "The history of visited articles will be deleted permanently."
 msgstr "Ziyaret edilen makalelerin geçmişi kalıcı olarak silinir."
 
-#: ../data/gtk/dialogs.ui:87
+#: ../data/gtk/dialogs.ui:85
 msgid "Clear Personal Data?"
 msgstr "Kişisel Veriler Temizlensin Mi?"
 
-#: ../data/gtk/dialogs.ui:88
+#: ../data/gtk/dialogs.ui:86
 msgid "Cookies and cache data will be deleted permanently."
 msgstr "Çerezler ve önbellek verileri kalıcı olarak silinir."
 
-#: ../data/gtk/dialogs.ui:94
+#: ../data/gtk/dialogs.ui:91
 msgid "Clear Data"
 msgstr "Verileri Temizle"
 
@@ -171,35 +171,35 @@ msgstr "Verileri Temizle"
 msgid "Search “%s” on Wikipedia"
 msgstr "Wikipedia içinde “%s” ara"
 
-#: ../data/gtk/prefs.ui:28
+#: ../data/gtk/prefs.ui:26
 msgid "Home Page"
 msgstr "Ana sayfa"
 
-#: ../data/gtk/prefs.ui:29
+#: ../data/gtk/prefs.ui:27
 msgid "The page that will be displayed when Wike starts"
 msgstr "Wike başladığında görüntülenecek sayfa"
 
-#: ../data/gtk/prefs.ui:57
+#: ../data/gtk/prefs.ui:55
 msgid "Privacy"
 msgstr "Gizlilik"
 
-#: ../data/gtk/prefs.ui:62
+#: ../data/gtk/prefs.ui:60
 msgid "Allow Live Search on Desktop"
 msgstr "Masaüstünde Canlı Arama Yapmaya İzin Ver"
 
-#: ../data/gtk/prefs.ui:63
+#: ../data/gtk/prefs.ui:61
 msgid "Warning: all desktop searches will be sent to Wikipedia"
 msgstr "Uyarı: Tüm masaüstü aramaları Wikipediaʼya gönderilecek"
 
-#: ../data/gtk/prefs.ui:85
+#: ../data/gtk/prefs.ui:83
 msgid "Wike will remember the history of visited articles"
 msgstr "Wike, ziyaret edilen makalelerin geçmişini hatırlayacak"
 
-#: ../data/gtk/prefs.ui:96 ../data/gtk/prefs.ui:119
+#: ../data/gtk/prefs.ui:94 ../data/gtk/prefs.ui:117
 msgid "Clear"
 msgstr "Temizle"
 
-#: ../data/gtk/prefs.ui:108
+#: ../data/gtk/prefs.ui:106
 msgid "Cookies and cache data will be deleted"
 msgstr "Çerezler ve önbellek verileri silinecek"
 
@@ -211,7 +211,7 @@ msgstr "Tekrar Dene"
 msgid "Random Article"
 msgstr "Rastgele Makale"
 
-#: ../data/gtk/prefs.ui:35
+#: ../data/gtk/prefs.ui:33
 msgid "Last article"
 msgstr "Son makale"
 
@@ -219,13 +219,13 @@ msgstr "Son makale"
 msgid "Bookmarks"
 msgstr "Yer imleri"
 
-#: ../data/gtk/languages.ui:80 ../data/gtk/bookmarks.ui:102
-#: ../data/gtk/history.ui:94
+#: ../data/gtk/bookmarks.ui:102 ../data/gtk/history.ui:94
+#: ../data/gtk/languages.ui:79
 msgid "Select All"
 msgstr "Tümünü Seç"
 
-#: ../data/gtk/languages.ui:88 ../data/gtk/bookmarks.ui:110
-#: ../data/gtk/history.ui:102
+#: ../data/gtk/bookmarks.ui:110 ../data/gtk/history.ui:102
+#: ../data/gtk/languages.ui:87
 msgid "Select None"
 msgstr "Hiçbirini Seçme"
 
@@ -275,11 +275,11 @@ msgstr "Bağlantıyı Tarayıcıda Aç"
 msgid "Copy Link to Clipboard"
 msgstr "Bağlantıyı Panoya Kopyala"
 
-#: ../data/gtk/prefs.ui:73
+#: ../data/gtk/prefs.ui:71
 msgid "Desktop searches are performed in the default language"
 msgstr "Masaüstü aramalarını öntanımlı dilde gerçekleştirilir"
 
-#: ../data/gtk/prefs.ui:74
+#: ../data/gtk/prefs.ui:72
 msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
 msgstr "Ön ek kullanarak diğer dillerde arama yapabilirsiniz. Ör. İngilizce aramak için -en kullanabilirsiniz"
 
@@ -312,7 +312,7 @@ msgstr "Son 30 gün"
 msgid "Show full history"
 msgstr "Tam geçmişi göster"
 
-#: ../src/page.py:126 ../src/window.py:509
+#: ../src/window.py:509 ../src/page.py:140
 msgid "Bookmark added: "
 msgstr "Yer imi eklendi:␣"
 
@@ -328,27 +328,27 @@ msgstr "Yazdırma işlemi başarısız"
 msgid "Link copied to clipboard"
 msgstr "Bağlantı panoya kopyalandı"
 
-#: ../src/application.py:154
+#: ../src/application.py:151
 msgid "Source Code"
 msgstr "Kaynak Kodu"
 
-#: ../src/application.py:155
+#: ../src/application.py:152
 msgid "Report an Issue"
 msgstr "Hata Bildir"
 
-#: ../src/application.py:156
+#: ../src/application.py:153
 msgid "Help Translating"
 msgstr "Çeviriye Yardım Et"
 
-#: ../src/application.py:157
+#: ../src/application.py:154
 msgid "Contributors"
 msgstr "Katkıcılar"
 
-#: ../src/application.py:158
+#: ../src/application.py:155
 msgid "Flag Icons"
 msgstr "Bayrak Simgeleri"
 
-#: ../src/application.py:159
+#: ../src/application.py:156
 #, fuzzy
 msgid "All content from Wikipedia.org and available under CC BY-SA 4.0 unless otherwise noted.\n"
 "\n"
@@ -357,16 +357,16 @@ msgstr "Tüm içerik Wikipedia.org sitesinden alınmıştır ve aksi belirtilmed
 "\n"
 "Wike, Wikimedia Vakfı tarafından onaylanmayan veya onunla bağlantılı olmayan bağımsız bir çalışmadır."
 
-#: ../src/page.py:88 ../src/page.py:91
+#: ../src/page.py:102 ../src/page.py:105
 #, fuzzy
 msgid "Loading…"
 msgstr "Yükleniyor"
 
-#: ../src/page.py:216
+#: ../src/page.py:230
 msgid "Article not Found"
 msgstr "Makale Bulunamadı"
 
-#: ../src/page.py:224
+#: ../src/page.py:238
 msgid "Can't Access Wikipedia"
 msgstr "Wikipedia Sitesine Erişilemedi"
 
@@ -382,7 +382,7 @@ msgstr "İçindekiler Yok"
 msgid "There is no table of contents for this page"
 msgstr "Bu sayfa için içindekiler tablosu yok"
 
-#: ../data/gtk/languages.ui:11 ../data/gtk/search-settings.ui:23
+#: ../data/gtk/search-settings.ui:23 ../data/gtk/languages.ui:11
 msgid "Pick your Languages"
 msgstr "Dillerinizi Seçin"
 
@@ -426,7 +426,7 @@ msgctxt "shortcut window"
 msgid "Reload current page"
 msgstr "Geçerli sayfayı yeniden yükle"
 
-#: ../src/page.py:232 ../data/gtk/search.ui:24 ../data/gtk/window.ui:87
+#: ../src/page.py:246 ../data/gtk/search.ui:24 ../data/gtk/window.ui:87
 #: ../data/gtk/window.ui:210 ../data/gtk/window.ui:356
 msgid "Search Wikipedia"
 msgstr "Wikipediaʼda Ara"
@@ -435,13 +435,13 @@ msgstr "Wikipediaʼda Ara"
 msgid "New Bookmarks List"
 msgstr "Yeni Yer İmi Listesi"
 
-#: ../data/gtk/dialogs.ui:19 ../data/gtk/dialogs.ui:41
+#: ../data/gtk/dialogs.ui:20 ../data/gtk/dialogs.ui:42
 msgid "List Name"
 msgstr "Liste Adı"
 
 #: ../data/gtk/dialogs.ui:27 ../data/gtk/dialogs.ui:49
-#: ../data/gtk/dialogs.ui:67 ../data/gtk/dialogs.ui:80
-#: ../data/gtk/dialogs.ui:93
+#: ../data/gtk/dialogs.ui:66 ../data/gtk/dialogs.ui:78
+#: ../data/gtk/dialogs.ui:90
 msgid "Cancel"
 msgstr "İptal"
 
@@ -457,23 +457,23 @@ msgstr "Yer İmi Listesini Yeniden Adlandır"
 msgid "Rename List"
 msgstr "Listeyi Yeniden Adlandır"
 
-#: ../data/gtk/dialogs.ui:63
+#: ../data/gtk/dialogs.ui:62
 msgid "Also delete the list"
 msgstr "Ayrıca listeyi de sil"
 
-#: ../data/gtk/dialogs.ui:74
+#: ../data/gtk/dialogs.ui:73
 msgid "Clear History?"
 msgstr "Geçmiş Temizlensin Mi?"
 
-#: ../data/gtk/dialogs.ui:81 ../data/gtk/history.ui:40
+#: ../data/gtk/history.ui:40 ../data/gtk/dialogs.ui:79
 msgid "Clear History"
 msgstr "Geçmişi Temizle"
 
-#: ../data/gtk/prefs.ui:33
+#: ../data/gtk/prefs.ui:31
 msgid "Wikipedia main page"
 msgstr "Wikipedia ana sayfası"
 
-#: ../data/gtk/prefs.ui:34
+#: ../data/gtk/prefs.ui:32
 msgid "Random article"
 msgstr "Rastgele makale"
 
@@ -493,7 +493,7 @@ msgstr "Kenar çubuğu"
 msgid "Search text"
 msgstr "Arama metni"
 
-#: ../src/page.py:233
+#: ../src/page.py:247
 msgid "Start typing to search Wikipedia articles"
 msgstr "Wikipedia makalelerini aramak için yazmaya başlayın"
 
@@ -590,11 +590,11 @@ msgctxt "shortcut window"
 msgid "View open tabs"
 msgstr "Açık sekmeleri göster"
 
-#: ../data/gtk/prefs.ui:36
+#: ../data/gtk/prefs.ui:34
 msgid "Restore open articles"
 msgstr "Açık makaleleri geri yükle"
 
-#: ../data/gtk/prefs.ui:107
+#: ../data/gtk/prefs.ui:105
 msgid "Clear Personal Data on Close"
 msgstr "Kapatılınca Kişisel Verileri Temizle"
 
@@ -614,20 +614,20 @@ msgstr "Tüm diller"
 msgid "Other languages"
 msgstr "Diğer diller"
 
-#: ../src/languages.py:120
+#: ../src/languages.py:122
 msgid "1 language selected"
 msgstr "1 dil seçildi"
 
 #. Don't remove %s tag!
-#: ../src/languages.py:122
+#: ../src/languages.py:124
 msgid "%s languages selected"
 msgstr "%s dil seçildi"
 
-#: ../data/gtk/languages.ui:28 ../data/gtk/langlinks.ui:32
+#: ../data/gtk/langlinks.ui:32 ../data/gtk/languages.ui:27
 msgid "Search Languages"
 msgstr "Dilleri Ara"
 
-#: ../data/gtk/languages.ui:43 ../data/gtk/langlinks.ui:48
+#: ../data/gtk/langlinks.ui:48 ../data/gtk/languages.ui:42
 msgid "Search languages"
 msgstr "Dilleri ara"
 
@@ -639,11 +639,11 @@ msgstr "Seç"
 msgid "Remove Selected"
 msgstr "Seçileni Kaldır"
 
-#: ../data/gtk/prefs.ui:46
+#: ../data/gtk/prefs.ui:44
 msgid "Always Hide Tabs"
 msgstr "Sekmeleri Daima Gizle"
 
-#: ../data/gtk/prefs.ui:47
+#: ../data/gtk/prefs.ui:45
 msgid "The tab bar will also be hidden in desktop mode"
 msgstr "Sekme çubuğu masaüstü kipinde de gizlenecek"
 
@@ -658,4 +658,12 @@ msgstr "Arama önerisi için en az 3 karakter girin"
 #: ../data/gtk/window.ui:197
 msgid "Close"
 msgstr "Kapat"
+
+#: ../data/gtk/page.ui:35
+msgid "Previous Result"
+msgstr "Önceki Sonuç"
+
+#: ../data/gtk/page.ui:44
+msgid "Next Result"
+msgstr "Sonraki Sonuç"
 

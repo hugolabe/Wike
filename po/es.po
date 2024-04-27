@@ -11,7 +11,7 @@ msgstr ""
 msgid "Article not found"
 msgstr "Artículo no encontrado"
 
-#: ../src/page.py:217
+#: ../src/page.py:231
 msgid "Can't find any results for requested query"
 msgstr "No se han encontrado resultados para la búsqueda solicitada"
 
@@ -19,7 +19,7 @@ msgstr "No se han encontrado resultados para la búsqueda solicitada"
 msgid "Can't access Wikipedia"
 msgstr "No se puede acceder a Wikipedia"
 
-#: ../src/page.py:225
+#: ../src/page.py:239
 msgid "Check your Internet connection and try again"
 msgstr "Compruebe su conexión a Internet e inténtelo de nuevo"
 
@@ -31,7 +31,7 @@ msgstr "¿Vaciar lista de marcadores?"
 msgid "All bookmarks in the list will be removed permanently."
 msgstr "Todos los marcadores de la lista se eliminarán de forma permanente."
 
-#: ../data/gtk/dialogs.ui:68
+#: ../data/gtk/dialogs.ui:67
 msgid "Clear List"
 msgstr "Vaciar lista"
 
@@ -117,11 +117,11 @@ msgstr "Atajos de teclado"
 msgid "About Wike"
 msgstr "Acerca de Wike"
 
-#: ../data/gtk/prefs.ui:23
+#: ../data/gtk/prefs.ui:21
 msgid "Behavior"
 msgstr "Comportamiento"
 
-#: ../data/gtk/prefs.ui:84
+#: ../data/gtk/prefs.ui:82
 msgid "Keep a List of Recent Articles"
 msgstr "Mantener una lista de artículos recientes"
 
@@ -149,19 +149,19 @@ msgstr "Wikipedia;Enciclopedia;"
 msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
 msgstr "Wike es un lector de Wikipedia para GNOME. Proporciona acceso a todo el contenido de esta enciclopedia online, con una vista de artículos más limpia y libre de distracciones."
 
-#: ../data/gtk/dialogs.ui:75
+#: ../data/gtk/dialogs.ui:74
 msgid "The history of visited articles will be deleted permanently."
 msgstr "Se borrará el historial de artículos visitados de forma permanente."
 
-#: ../data/gtk/dialogs.ui:87
+#: ../data/gtk/dialogs.ui:85
 msgid "Clear Personal Data?"
 msgstr "¿Borrar datos personales?"
 
-#: ../data/gtk/dialogs.ui:88
+#: ../data/gtk/dialogs.ui:86
 msgid "Cookies and cache data will be deleted permanently."
 msgstr "Se borrarán las cookies y datos de la caché de forma permanente."
 
-#: ../data/gtk/dialogs.ui:94
+#: ../data/gtk/dialogs.ui:91
 msgid "Clear Data"
 msgstr "Borrar datos"
 
@@ -170,35 +170,35 @@ msgstr "Borrar datos"
 msgid "Search “%s” on Wikipedia"
 msgstr "Buscar «%s» en Wikipedia"
 
-#: ../data/gtk/prefs.ui:28
+#: ../data/gtk/prefs.ui:26
 msgid "Home Page"
 msgstr "Página de inicio"
 
-#: ../data/gtk/prefs.ui:29
+#: ../data/gtk/prefs.ui:27
 msgid "The page that will be displayed when Wike starts"
 msgstr "La página que se mostrará al iniciar Wike"
 
-#: ../data/gtk/prefs.ui:57
+#: ../data/gtk/prefs.ui:55
 msgid "Privacy"
 msgstr "Privacidad"
 
-#: ../data/gtk/prefs.ui:62
+#: ../data/gtk/prefs.ui:60
 msgid "Allow Live Search on Desktop"
 msgstr "Permitir búsqueda en vivo en el escritorio"
 
-#: ../data/gtk/prefs.ui:63
+#: ../data/gtk/prefs.ui:61
 msgid "Warning: all desktop searches will be sent to Wikipedia"
 msgstr "Aviso: todas las búsquedas del escritorio se enviarán a Wikipedia"
 
-#: ../data/gtk/prefs.ui:85
+#: ../data/gtk/prefs.ui:83
 msgid "Wike will remember the history of visited articles"
 msgstr "Wike recordará el historial de artículos visitados"
 
-#: ../data/gtk/prefs.ui:96 ../data/gtk/prefs.ui:119
+#: ../data/gtk/prefs.ui:94 ../data/gtk/prefs.ui:117
 msgid "Clear"
 msgstr "Borrar"
 
-#: ../data/gtk/prefs.ui:108
+#: ../data/gtk/prefs.ui:106
 msgid "Cookies and cache data will be deleted"
 msgstr "Se borrarán las cookies y los datos de la caché"
 
@@ -210,7 +210,7 @@ msgstr "Intentar de nuevo"
 msgid "Random Article"
 msgstr "Artículo aleatorio"
 
-#: ../data/gtk/prefs.ui:35
+#: ../data/gtk/prefs.ui:33
 msgid "Last article"
 msgstr "Último artículo"
 
@@ -218,13 +218,13 @@ msgstr "Último artículo"
 msgid "Bookmarks"
 msgstr "Marcadores"
 
-#: ../data/gtk/languages.ui:80 ../data/gtk/bookmarks.ui:102
-#: ../data/gtk/history.ui:94
+#: ../data/gtk/bookmarks.ui:102 ../data/gtk/history.ui:94
+#: ../data/gtk/languages.ui:79
 msgid "Select All"
 msgstr "Seleccionar todo"
 
-#: ../data/gtk/languages.ui:88 ../data/gtk/bookmarks.ui:110
-#: ../data/gtk/history.ui:102
+#: ../data/gtk/bookmarks.ui:110 ../data/gtk/history.ui:102
+#: ../data/gtk/languages.ui:87
 msgid "Select None"
 msgstr "Seleccionar nada"
 
@@ -274,11 +274,11 @@ msgstr "Abrir enlace en el navegador"
 msgid "Copy Link to Clipboard"
 msgstr "Copiar la dirección del enlace"
 
-#: ../data/gtk/prefs.ui:73
+#: ../data/gtk/prefs.ui:71
 msgid "Desktop searches are performed in the default language"
 msgstr "Las búsquedas del escritorio se realizan en el idioma predeterminado"
 
-#: ../data/gtk/prefs.ui:74
+#: ../data/gtk/prefs.ui:72
 msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
 msgstr "Puede buscar en otros idiomas utilizando un prefijo. Ej. -es para buscar en español"
 
@@ -311,7 +311,7 @@ msgstr "Últimos 30 días"
 msgid "Show full history"
 msgstr "Mostrar el historial completo"
 
-#: ../src/page.py:126 ../src/window.py:509
+#: ../src/window.py:509 ../src/page.py:140
 msgid "Bookmark added: "
 msgstr "Marcador añadido: "
 
@@ -327,27 +327,27 @@ msgstr "Ha fallado la operación de impresión"
 msgid "Link copied to clipboard"
 msgstr "Enlace copiado al portapapeles"
 
-#: ../src/application.py:154
+#: ../src/application.py:151
 msgid "Source Code"
 msgstr "Código fuente"
 
-#: ../src/application.py:155
+#: ../src/application.py:152
 msgid "Report an Issue"
 msgstr "Informar de un problema"
 
-#: ../src/application.py:156
+#: ../src/application.py:153
 msgid "Help Translating"
 msgstr "Ayudar con las traducciones"
 
-#: ../src/application.py:157
+#: ../src/application.py:154
 msgid "Contributors"
 msgstr "Colaboradores"
 
-#: ../src/application.py:158
+#: ../src/application.py:155
 msgid "Flag Icons"
 msgstr "Iconos de banderas"
 
-#: ../src/application.py:159
+#: ../src/application.py:156
 msgid "All content from Wikipedia.org and available under CC BY-SA 4.0 unless otherwise noted.\n"
 "\n"
 "Wike is an independent development not endorsed by or affiliated with the Wikimedia Foundation."
@@ -355,15 +355,15 @@ msgstr "Todo el contenido de Wikipedia.org y disponible bajo licencia CC BY-SA 4
 "\n"
 "Wike es un desarrollo independiente no respaldado ni afiliado a la Fundación Wikimedia."
 
-#: ../src/page.py:88 ../src/page.py:91
+#: ../src/page.py:102 ../src/page.py:105
 msgid "Loading…"
 msgstr "Cargando…"
 
-#: ../src/page.py:216
+#: ../src/page.py:230
 msgid "Article not Found"
 msgstr "Artículo no encontrado"
 
-#: ../src/page.py:224
+#: ../src/page.py:238
 msgid "Can't Access Wikipedia"
 msgstr "No se puede acceder a Wikipedia"
 
@@ -379,7 +379,7 @@ msgstr "Sin índice"
 msgid "There is no table of contents for this page"
 msgstr "No existe un índice de contenidos para esta página"
 
-#: ../data/gtk/languages.ui:11 ../data/gtk/search-settings.ui:23
+#: ../data/gtk/search-settings.ui:23 ../data/gtk/languages.ui:11
 msgid "Pick your Languages"
 msgstr "Escojer idiomas"
 
@@ -423,7 +423,7 @@ msgctxt "shortcut window"
 msgid "Reload current page"
 msgstr "Recargar página"
 
-#: ../src/page.py:232 ../data/gtk/search.ui:24 ../data/gtk/window.ui:87
+#: ../src/page.py:246 ../data/gtk/search.ui:24 ../data/gtk/window.ui:87
 #: ../data/gtk/window.ui:210 ../data/gtk/window.ui:356
 msgid "Search Wikipedia"
 msgstr "Buscar en Wikipedia"
@@ -432,13 +432,13 @@ msgstr "Buscar en Wikipedia"
 msgid "New Bookmarks List"
 msgstr "Nueva lista de marcadores"
 
-#: ../data/gtk/dialogs.ui:19 ../data/gtk/dialogs.ui:41
+#: ../data/gtk/dialogs.ui:20 ../data/gtk/dialogs.ui:42
 msgid "List Name"
 msgstr "Nombre de la lista"
 
 #: ../data/gtk/dialogs.ui:27 ../data/gtk/dialogs.ui:49
-#: ../data/gtk/dialogs.ui:67 ../data/gtk/dialogs.ui:80
-#: ../data/gtk/dialogs.ui:93
+#: ../data/gtk/dialogs.ui:66 ../data/gtk/dialogs.ui:78
+#: ../data/gtk/dialogs.ui:90
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -454,23 +454,23 @@ msgstr "Renombrar lista de marcadores"
 msgid "Rename List"
 msgstr "Renombrar lista"
 
-#: ../data/gtk/dialogs.ui:63
+#: ../data/gtk/dialogs.ui:62
 msgid "Also delete the list"
 msgstr "Borrar también la lista"
 
-#: ../data/gtk/dialogs.ui:74
+#: ../data/gtk/dialogs.ui:73
 msgid "Clear History?"
 msgstr "¿Borrar historial?"
 
-#: ../data/gtk/dialogs.ui:81 ../data/gtk/history.ui:40
+#: ../data/gtk/history.ui:40 ../data/gtk/dialogs.ui:79
 msgid "Clear History"
 msgstr "Borrar historial"
 
-#: ../data/gtk/prefs.ui:33
+#: ../data/gtk/prefs.ui:31
 msgid "Wikipedia main page"
 msgstr "Portada de Wikipedia"
 
-#: ../data/gtk/prefs.ui:34
+#: ../data/gtk/prefs.ui:32
 msgid "Random article"
 msgstr "Artículo aleatorio"
 
@@ -490,7 +490,7 @@ msgstr "Panel lateral"
 msgid "Search text"
 msgstr "Buscar texto"
 
-#: ../src/page.py:233
+#: ../src/page.py:247
 msgid "Start typing to search Wikipedia articles"
 msgstr "Comenzar a teclear para buscar artículos en Wikipedia"
 
@@ -587,11 +587,11 @@ msgctxt "shortcut window"
 msgid "View open tabs"
 msgstr "Ver pestañas abiertas"
 
-#: ../data/gtk/prefs.ui:36
+#: ../data/gtk/prefs.ui:34
 msgid "Restore open articles"
 msgstr "Restaurar artículos abiertos"
 
-#: ../data/gtk/prefs.ui:107
+#: ../data/gtk/prefs.ui:105
 msgid "Clear Personal Data on Close"
 msgstr "Borrar datos personales al salir"
 
@@ -611,20 +611,20 @@ msgstr "Todos los idomas"
 msgid "Other languages"
 msgstr "Otros idiomas"
 
-#: ../src/languages.py:120
+#: ../src/languages.py:122
 msgid "1 language selected"
 msgstr "1 idioma seleccionado"
 
 #. Don't remove %s tag!
-#: ../src/languages.py:122
+#: ../src/languages.py:124
 msgid "%s languages selected"
 msgstr "%s idiomas seleccionados"
 
-#: ../data/gtk/languages.ui:28 ../data/gtk/langlinks.ui:32
+#: ../data/gtk/langlinks.ui:32 ../data/gtk/languages.ui:27
 msgid "Search Languages"
 msgstr "Buscar idiomas"
 
-#: ../data/gtk/languages.ui:43 ../data/gtk/langlinks.ui:48
+#: ../data/gtk/langlinks.ui:48 ../data/gtk/languages.ui:42
 msgid "Search languages"
 msgstr "Buscar idiomas"
 
@@ -636,11 +636,11 @@ msgstr "Seleccionar"
 msgid "Remove Selected"
 msgstr "Eliminar seleccionados"
 
-#: ../data/gtk/prefs.ui:46
+#: ../data/gtk/prefs.ui:44
 msgid "Always Hide Tabs"
 msgstr "Ocultar siempre las pestañas"
 
-#: ../data/gtk/prefs.ui:47
+#: ../data/gtk/prefs.ui:45
 msgid "The tab bar will also be hidden in desktop mode"
 msgstr "La barra de pestañas estará oculta también en modo escritorio"
 
@@ -655,4 +655,12 @@ msgstr "Introduzca al menos tres caracteres para obtener sugerencias de búsqued
 #: ../data/gtk/window.ui:197
 msgid "Close"
 msgstr "Cerrar"
+
+#: ../data/gtk/page.ui:35
+msgid "Previous Result"
+msgstr "Resultado anterior"
+
+#: ../data/gtk/page.ui:44
+msgid "Next Result"
+msgstr "Siguiente resultado"
 

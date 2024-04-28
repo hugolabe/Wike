@@ -11,7 +11,7 @@ msgstr ""
 msgid "Article not found"
 msgstr "הערך לא נמצא"
 
-#: ../src/page.py:217
+#: ../src/page.py:231
 msgid "Can't find any results for requested query"
 msgstr "לא נמצאו תוצאות לשאילתה המבוקשת"
 
@@ -19,7 +19,7 @@ msgstr "לא נמצאו תוצאות לשאילתה המבוקשת"
 msgid "Can't access Wikipedia"
 msgstr "לא ניתן לגשת לוויקיפדיה"
 
-#: ../src/page.py:225
+#: ../src/page.py:239
 msgid "Check your Internet connection and try again"
 msgstr "נא לבדוק את החיבור שלך לאינטרנט ולנסות שוב"
 
@@ -31,7 +31,7 @@ msgstr "לפנות את רשימת הסימניות?"
 msgid "All bookmarks in the list will be removed permanently."
 msgstr "כל הסימניות ברשימה יימחקו לצמיתות."
 
-#: ../data/gtk/dialogs.ui:68
+#: ../data/gtk/dialogs.ui:67
 msgid "Clear List"
 msgstr "לפנות את הרשימה"
 
@@ -117,11 +117,11 @@ msgstr "צירופי מקשים"
 msgid "About Wike"
 msgstr "על Wike"
 
-#: ../data/gtk/prefs.ui:23
+#: ../data/gtk/prefs.ui:21
 msgid "Behavior"
 msgstr "התנהגות"
 
-#: ../data/gtk/prefs.ui:84
+#: ../data/gtk/prefs.ui:82
 msgid "Keep a List of Recent Articles"
 msgstr "לשמור רשימה של ערכים אחרונים"
 
@@ -149,19 +149,19 @@ msgstr "ויקיפדיה;אנציקלופדיה;"
 msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
 msgstr "Wike הוא מציג ויקיפדיה לשולחן העבודה GNOME. מספק גישה לכל התוכן של האנציקלופדיה המקוונת הזאת ביישום מותאם, והצגת ערכים פשוטה ונטולת הסחות דעת."
 
-#: ../data/gtk/dialogs.ui:75
+#: ../data/gtk/dialogs.ui:74
 msgid "The history of visited articles will be deleted permanently."
 msgstr "היסטוריית הערכים בהם ביקרת תימחק לצמיתות."
 
-#: ../data/gtk/dialogs.ui:87
+#: ../data/gtk/dialogs.ui:85
 msgid "Clear Personal Data?"
 msgstr "לפנות נתונים אישיים?"
 
-#: ../data/gtk/dialogs.ui:88
+#: ../data/gtk/dialogs.ui:86
 msgid "Cookies and cache data will be deleted permanently."
 msgstr "עוגיות ונתוני מטמון יימחקו לצמיתות."
 
-#: ../data/gtk/dialogs.ui:94
+#: ../data/gtk/dialogs.ui:91
 msgid "Clear Data"
 msgstr "פינוי נתונים"
 
@@ -170,35 +170,35 @@ msgstr "פינוי נתונים"
 msgid "Search “%s” on Wikipedia"
 msgstr "חיפוש אחר „%s” בוויקיפדיה"
 
-#: ../data/gtk/prefs.ui:28
+#: ../data/gtk/prefs.ui:26
 msgid "Home Page"
 msgstr "עמוד הבית"
 
-#: ../data/gtk/prefs.ui:29
+#: ../data/gtk/prefs.ui:27
 msgid "The page that will be displayed when Wike starts"
 msgstr "העמוד שיוצג עם פתיחת Wike"
 
-#: ../data/gtk/prefs.ui:57
+#: ../data/gtk/prefs.ui:55
 msgid "Privacy"
 msgstr "פרטיות"
 
-#: ../data/gtk/prefs.ui:62
+#: ../data/gtk/prefs.ui:60
 msgid "Allow Live Search on Desktop"
 msgstr "לאפשר חיפוש חי בשולחן העבודה"
 
-#: ../data/gtk/prefs.ui:63
+#: ../data/gtk/prefs.ui:61
 msgid "Warning: all desktop searches will be sent to Wikipedia"
 msgstr "אזהרה: כל החיפוש משולחן העבודה נשלחים לוויקיפדיה"
 
-#: ../data/gtk/prefs.ui:85
+#: ../data/gtk/prefs.ui:83
 msgid "Wike will remember the history of visited articles"
 msgstr "Wike יזכור את היסטוריית הערכים בהם ביקרת"
 
-#: ../data/gtk/prefs.ui:96 ../data/gtk/prefs.ui:119
+#: ../data/gtk/prefs.ui:94 ../data/gtk/prefs.ui:117
 msgid "Clear"
 msgstr "פינוי"
 
-#: ../data/gtk/prefs.ui:108
+#: ../data/gtk/prefs.ui:106
 msgid "Cookies and cache data will be deleted"
 msgstr "העוגיות ונתוני המטמון יימחקו"
 
@@ -210,7 +210,7 @@ msgstr "לנסות שוב"
 msgid "Random Article"
 msgstr "ערך אקראי"
 
-#: ../data/gtk/prefs.ui:35
+#: ../data/gtk/prefs.ui:33
 msgid "Last article"
 msgstr "הערך האחרון"
 
@@ -218,13 +218,13 @@ msgstr "הערך האחרון"
 msgid "Bookmarks"
 msgstr "סימניות"
 
-#: ../data/gtk/languages.ui:80 ../data/gtk/bookmarks.ui:102
-#: ../data/gtk/history.ui:94
+#: ../data/gtk/bookmarks.ui:102 ../data/gtk/history.ui:94
+#: ../data/gtk/languages.ui:79
 msgid "Select All"
 msgstr "בחירה בהכול"
 
-#: ../data/gtk/languages.ui:88 ../data/gtk/bookmarks.ui:110
-#: ../data/gtk/history.ui:102
+#: ../data/gtk/bookmarks.ui:110 ../data/gtk/history.ui:102
+#: ../data/gtk/languages.ui:87
 msgid "Select None"
 msgstr "בחירה בכלום"
 
@@ -274,11 +274,11 @@ msgstr "פתיחת קישור בדפדפן"
 msgid "Copy Link to Clipboard"
 msgstr "העתקת קישור ללוח הגזירים"
 
-#: ../data/gtk/prefs.ui:73
+#: ../data/gtk/prefs.ui:71
 msgid "Desktop searches are performed in the default language"
 msgstr "חיפושים בשולחן העבודה נערכים בשפת ברירת המחדל"
 
-#: ../data/gtk/prefs.ui:74
+#: ../data/gtk/prefs.ui:72
 msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
 msgstr "ניתן לחפש בשפות אחרות באמצעות קידומת. למשל: ‎-en כדי לחפש באנגלית"
 
@@ -311,7 +311,7 @@ msgstr "30 הימים האחרונים"
 msgid "Show full history"
 msgstr "הצגת ההיסטוריה המלאה"
 
-#: ../src/page.py:126 ../src/window.py:509
+#: ../src/window.py:509 ../src/page.py:140
 msgid "Bookmark added: "
 msgstr "נוספה סימנייה: "
 
@@ -327,27 +327,27 @@ msgstr "פעולת ההדפסה נכשלה"
 msgid "Link copied to clipboard"
 msgstr "הקישור הועתק ללוח הגזירים"
 
-#: ../src/application.py:154
+#: ../src/application.py:151
 msgid "Source Code"
 msgstr "קוד מקור"
 
-#: ../src/application.py:155
+#: ../src/application.py:152
 msgid "Report an Issue"
 msgstr "דיווח על תקלה"
 
-#: ../src/application.py:156
+#: ../src/application.py:153
 msgid "Help Translating"
 msgstr "עזרה בתרגום"
 
-#: ../src/application.py:157
+#: ../src/application.py:154
 msgid "Contributors"
 msgstr "תורמים"
 
-#: ../src/application.py:158
+#: ../src/application.py:155
 msgid "Flag Icons"
 msgstr "סמלי דגלים"
 
-#: ../src/application.py:159
+#: ../src/application.py:156
 msgid "All content from Wikipedia.org and available under CC BY-SA 4.0 unless otherwise noted.\n"
 "\n"
 "Wike is an independent development not endorsed by or affiliated with the Wikimedia Foundation."
@@ -355,15 +355,15 @@ msgstr "כל התוכן מ־Wikipedia.org זמין בכפוף לרישיון CC 
 "\n"
 "Wike מפותח עצמאית ללא עידוד או זיקה לקרן ויקימדיה."
 
-#: ../src/page.py:88 ../src/page.py:91
+#: ../src/page.py:102 ../src/page.py:105
 msgid "Loading…"
 msgstr "בטעינה…"
 
-#: ../src/page.py:216
+#: ../src/page.py:230
 msgid "Article not Found"
 msgstr "הערך לא נמצא"
 
-#: ../src/page.py:224
+#: ../src/page.py:238
 msgid "Can't Access Wikipedia"
 msgstr "לא ניתן לגשת לוויקיפדיה"
 
@@ -379,7 +379,7 @@ msgstr "אין תוכן"
 msgid "There is no table of contents for this page"
 msgstr "אין מפתח עניינים לדף הזה"
 
-#: ../data/gtk/languages.ui:11 ../data/gtk/search-settings.ui:23
+#: ../data/gtk/search-settings.ui:23 ../data/gtk/languages.ui:11
 msgid "Pick your Languages"
 msgstr "נא לבחור את השפות שלך"
 
@@ -423,7 +423,7 @@ msgctxt "shortcut window"
 msgid "Reload current page"
 msgstr "רענון הדף הנוכחי"
 
-#: ../src/page.py:232 ../data/gtk/search.ui:24 ../data/gtk/window.ui:87
+#: ../src/page.py:246 ../data/gtk/search.ui:24 ../data/gtk/window.ui:87
 #: ../data/gtk/window.ui:210 ../data/gtk/window.ui:356
 msgid "Search Wikipedia"
 msgstr "חיפוש בוויקיפדיה"
@@ -432,13 +432,13 @@ msgstr "חיפוש בוויקיפדיה"
 msgid "New Bookmarks List"
 msgstr "רשימת סימניות חדשה"
 
-#: ../data/gtk/dialogs.ui:19 ../data/gtk/dialogs.ui:41
+#: ../data/gtk/dialogs.ui:20 ../data/gtk/dialogs.ui:42
 msgid "List Name"
 msgstr "שם הרשימה"
 
 #: ../data/gtk/dialogs.ui:27 ../data/gtk/dialogs.ui:49
-#: ../data/gtk/dialogs.ui:67 ../data/gtk/dialogs.ui:80
-#: ../data/gtk/dialogs.ui:93
+#: ../data/gtk/dialogs.ui:66 ../data/gtk/dialogs.ui:78
+#: ../data/gtk/dialogs.ui:90
 msgid "Cancel"
 msgstr "ביטול"
 
@@ -454,23 +454,23 @@ msgstr "שינוי שם רשימת הסימניות"
 msgid "Rename List"
 msgstr "שינוי שם רשימה"
 
-#: ../data/gtk/dialogs.ui:63
+#: ../data/gtk/dialogs.ui:62
 msgid "Also delete the list"
 msgstr "גם למחוק את הרשימה"
 
-#: ../data/gtk/dialogs.ui:74
+#: ../data/gtk/dialogs.ui:73
 msgid "Clear History?"
 msgstr "למחוק את ההיסטוריה?"
 
-#: ../data/gtk/dialogs.ui:81 ../data/gtk/history.ui:40
+#: ../data/gtk/history.ui:40 ../data/gtk/dialogs.ui:79
 msgid "Clear History"
 msgstr "למחוק את ההיסטוריה"
 
-#: ../data/gtk/prefs.ui:33
+#: ../data/gtk/prefs.ui:31
 msgid "Wikipedia main page"
 msgstr "העמוד הראשי של ויקיפדיה"
 
-#: ../data/gtk/prefs.ui:34
+#: ../data/gtk/prefs.ui:32
 msgid "Random article"
 msgstr "ערך אקראי"
 
@@ -490,7 +490,7 @@ msgstr "סרגל צד"
 msgid "Search text"
 msgstr "חיפוש טקסט"
 
-#: ../src/page.py:233
+#: ../src/page.py:247
 msgid "Start typing to search Wikipedia articles"
 msgstr "הקלדה תתחיל לחפש בערכים של ויקיפדיה"
 
@@ -587,11 +587,11 @@ msgctxt "shortcut window"
 msgid "View open tabs"
 msgstr "הצגת הלשוניות הפתוחות"
 
-#: ../data/gtk/prefs.ui:36
+#: ../data/gtk/prefs.ui:34
 msgid "Restore open articles"
 msgstr "שחזור ערכים פתוחים"
 
-#: ../data/gtk/prefs.ui:107
+#: ../data/gtk/prefs.ui:105
 msgid "Clear Personal Data on Close"
 msgstr "פינוי הנתונים האישיים בעת הסגירה"
 
@@ -611,20 +611,20 @@ msgstr "כל השפות"
 msgid "Other languages"
 msgstr "שפות אחרות"
 
-#: ../src/languages.py:120
+#: ../src/languages.py:122
 msgid "1 language selected"
 msgstr "שפה נבחרה"
 
 #. Don't remove %s tag!
-#: ../src/languages.py:122
+#: ../src/languages.py:124
 msgid "%s languages selected"
 msgstr "%s שפות נבחרו"
 
-#: ../data/gtk/languages.ui:28 ../data/gtk/langlinks.ui:32
+#: ../data/gtk/langlinks.ui:32 ../data/gtk/languages.ui:27
 msgid "Search Languages"
 msgstr "חיפוש בין השפות"
 
-#: ../data/gtk/languages.ui:43 ../data/gtk/langlinks.ui:48
+#: ../data/gtk/langlinks.ui:48 ../data/gtk/languages.ui:42
 msgid "Search languages"
 msgstr "חיפוש בין השפות"
 
@@ -636,11 +636,11 @@ msgstr "בחירה"
 msgid "Remove Selected"
 msgstr "הסרת הנבחרות"
 
-#: ../data/gtk/prefs.ui:46
+#: ../data/gtk/prefs.ui:44
 msgid "Always Hide Tabs"
 msgstr "תמיד להסתיר לשוניות"
 
-#: ../data/gtk/prefs.ui:47
+#: ../data/gtk/prefs.ui:45
 msgid "The tab bar will also be hidden in desktop mode"
 msgstr "סרגל הלשוניות תמיד יוסתר במצב שולחן עבודה"
 
@@ -655,4 +655,12 @@ msgstr "נא למלא לפחות שלושה תווים כדי לקבל הצעו�
 #: ../data/gtk/window.ui:197
 msgid "Close"
 msgstr "סגירה"
+
+#: ../data/gtk/page.ui:35
+msgid "Previous Result"
+msgstr "התוצאה הקודמת"
+
+#: ../data/gtk/page.ui:44
+msgid "Next Result"
+msgstr "התוצאה הבאה"
 

@@ -62,10 +62,6 @@ h1 {
   font-family: inherit !important;
 }
 
-.section-heading .mw-ui-icon {
-  display: none !important;
-}
-
 .hatnote, .rellink, .dablink {
   background-color: transparent !important;
   padding-left: 0 !important;

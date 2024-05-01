@@ -575,7 +575,9 @@ class Window(Adw.ApplicationWindow):
 
   def _open_browser_cb(self, action, parameter):
     uri = self.page.wikiview.get_base_uri()
-    Gtk.show_uri(None, uri, Gdk.CURRENT_TIME)
+
+    uri_launcher = Gtk.UriLauncher.new(uri)
+    uri_launcher.launch(self, None, None, None)
 
   # Copy article URL to clipboard
 

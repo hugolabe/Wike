@@ -155,7 +155,7 @@ msgstr "L'istoric dels articles vistalhats serà definitivament escafat."
 
 #: ../data/gtk/dialogs.ui:85
 msgid "Clear Personal Data?"
-msgstr "Escafar las donadas personalas"
+msgstr "Escafar las donadas personalas ?"
 
 #: ../data/gtk/dialogs.ui:86
 msgid "Cookies and cache data will be deleted permanently."
@@ -200,7 +200,7 @@ msgstr "Escafar"
 
 #: ../data/gtk/prefs.ui:106
 msgid "Cookies and cache data will be deleted"
-msgstr "Los cookies e las donadas de cache seràn definitivament escafats."
+msgstr "Los cookies e las donadas de cache seràn definitivament escafats"
 
 #: ../data/gtk/page-status.ui:50
 msgid "Try Again"
@@ -313,7 +313,7 @@ msgstr "Mostrar l'istoric complet"
 
 #: ../src/window.py:509 ../src/page.py:140
 msgid "Bookmark added: "
-msgstr "Signet apondut :"
+msgstr "Signet apondut : "
 
 #: ../src/window.py:566
 msgid "Print operation completed"
@@ -352,14 +352,14 @@ msgstr "Icònas de drapèl"
 msgid "All content from Wikipedia.org and available under CC BY-SA 4.0 unless otherwise noted.\n"
 "\n"
 "Wike is an independent development not endorsed by or affiliated with the Wikimedia Foundation."
-msgstr "Tot lo contengut de Wikipedia.org es disponible jos la licéncia CC BY-SA 3.0 levat indica contrària otherwise noted.\n"
+msgstr "Tot lo contengut de Wikipedia.org es disponible jos la licéncia CC BY-SA 3.0 levat indicacion contrària.\n"
 "\n"
-"Wike es un desvelopment independent, pas aprovat o afiliat a la Foundation Wikimedia."
+"Wike es un desvelopament independent, pas aprovat o afiliat a la Foundation Wikimedia."
 
 #: ../src/page.py:102 ../src/page.py:105
 #, fuzzy
 msgid "Loading…"
-msgstr "Cargament"
+msgstr "Cargament…"
 
 #: ../src/page.py:230
 msgid "Article not Found"
@@ -558,19 +558,19 @@ msgstr "Dobrir dins lo navigador"
 
 #: ../data/gtk/bookmarks-menu.ui:14
 msgid "Create New List…"
-msgstr "Crear una tièra novèla..."
+msgstr "Crear una tièra novèla…"
 
 #: ../data/gtk/bookmarks-menu.ui:21
 msgid "Rename List…"
-msgstr "Tornar nomenar la lista..."
+msgstr "Tornar nomenar la lista…"
 
 #: ../data/gtk/bookmarks-menu.ui:25
 msgid "Clear List…"
-msgstr "Escafar la lista..."
+msgstr "Escafar la lista…"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
 msgid "It supports more than 300 languages and integrates with desktop searches, providing suggestions that make it easier to find any content. Other features are: bookmarks with multiple lists, article table of contents, history, text searches and much more…"
-msgstr "Supòrta mai de 300 lengas e s'intègra a la cercas dins l'environa de burèu, porgissent de proposicions qu'ajudan de trobar tot contengut. Las autras foncions son : signets amb mantuna tièra, ensenhador d'articles, istoric,cerca de tèxte e fòrça mai..."
+msgstr "Supòrta mai de 300 lengas e s'intègra a la cercas dins l'environa de burèu, porgissent de proposicions qu'ajudan de trobar tot contengut. Las autras foncions son : signets amb mantuna tièra, ensenhador d'articles, istoric,cerca de tèxte e fòrça mai…"
 
 #: ../data/gtk/window.ui:304
 msgid "Back"

@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 
-from gi.repository import Gtk, Adw, WebKit
+from gi.repository import Gdk, Gtk, Adw, WebKit
 
 from wike.data import settings
 from wike.view import WikiView
@@ -79,7 +79,7 @@ class PageBox(Gtk.Box):
   # Manage webkit key pressed and redirect to window
 
   def _event_controller_key_pressed_cb(self, event_controller, keyval, keycode, state, allow_keys):
-    if keyval in allow_keys:
+    if keyval in allow_keys or state is Gdk.ModifierType.CONTROL_MASK:
       return False
     else:
       event_controller.forward(self._window)

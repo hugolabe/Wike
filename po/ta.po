@@ -11,7 +11,7 @@ msgstr ""
 msgid "Article not found"
 msgstr "கட்டுரை கிடைக்கவில்லை"
 
-#: ../src/page.py:217
+#: ../src/page.py:231
 msgid "Can't find any results for requested query"
 msgstr "கோரப்பட்ட வினவலுக்கு எந்த முடிவும் கிடைக்கவில்லை"
 
@@ -19,7 +19,7 @@ msgstr "கோரப்பட்ட வினவலுக்கு எந்த 
 msgid "Can't access Wikipedia"
 msgstr "விக்கிபீடியாவை அணுக முடியவில்லை"
 
-#: ../src/page.py:225
+#: ../src/page.py:239
 msgid "Check your Internet connection and try again"
 msgstr "உங்கள் இணைய இணைப்பைச் சரிபார்த்து மீண்டும் முயலவும்"
 
@@ -31,7 +31,7 @@ msgstr "புத்தகக்குறிகள் பட்டியலை �
 msgid "All bookmarks in the list will be removed permanently."
 msgstr "பட்டியலில் உள்ள அனைத்து புத்தகக்குறிகளும் நிரந்தரமாக அகற்றப்படும்."
 
-#: ../data/gtk/dialogs.ui:68
+#: ../data/gtk/dialogs.ui:67
 msgid "Clear List"
 msgstr "பட்டியலை அழி"
 
@@ -117,11 +117,11 @@ msgstr "கீபோர்டு ஷார்ட்கட்கள்"
 msgid "About Wike"
 msgstr "வைக்கைப் பற்றி"
 
-#: ../data/gtk/prefs.ui:23
+#: ../data/gtk/prefs.ui:21
 msgid "Behavior"
 msgstr "நடத்தை"
 
-#: ../data/gtk/prefs.ui:84
+#: ../data/gtk/prefs.ui:82
 msgid "Keep a List of Recent Articles"
 msgstr "சமீபத்திய கட்டுரைகளின் பட்டியலை வைத்திருங்கள்"
 
@@ -149,19 +149,19 @@ msgstr "விக்கிபீடியா;என்சைக்ளோபீ�
 msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
 msgstr "வைக் என்பது க்னோம் டெஸ்க்டாப்பிற்கான விக்கிபீடியா ரீடர். கட்டுரைகளின் எளிமையான மற்றும் கவனச்சிதறல் இல்லாத பார்வையுடன், இந்த ஆன்லைன் கலைக்களஞ்சியத்தின் அனைத்து உள்ளடக்கங்களுக்கும் சொந்த பயன்பாட்டில் அணுகலை வழங்குகிறது."
 
-#: ../data/gtk/dialogs.ui:75
+#: ../data/gtk/dialogs.ui:74
 msgid "The history of visited articles will be deleted permanently."
 msgstr "பார்வையிட்ட கட்டுரைகளின் வரலாறு நிரந்தரமாக நீக்கப்படும்."
 
-#: ../data/gtk/dialogs.ui:87
+#: ../data/gtk/dialogs.ui:85
 msgid "Clear Personal Data?"
 msgstr "தனிப்பட்ட தரவை அழிக்கவா?"
 
-#: ../data/gtk/dialogs.ui:88
+#: ../data/gtk/dialogs.ui:86
 msgid "Cookies and cache data will be deleted permanently."
 msgstr "குக்கீகள் மற்றும் கேச் தரவு நிரந்தரமாக நீக்கப்படும்."
 
-#: ../data/gtk/dialogs.ui:94
+#: ../data/gtk/dialogs.ui:91
 msgid "Clear Data"
 msgstr "தரவை அழிக்கவும்"
 
@@ -170,35 +170,35 @@ msgstr "தரவை அழிக்கவும்"
 msgid "Search “%s” on Wikipedia"
 msgstr "விக்கிபீடியாவில் “%s” ஐ தேடவும்"
 
-#: ../data/gtk/prefs.ui:28
+#: ../data/gtk/prefs.ui:26
 msgid "Home Page"
 msgstr "முகப்பு பக்கம்"
 
-#: ../data/gtk/prefs.ui:29
+#: ../data/gtk/prefs.ui:27
 msgid "The page that will be displayed when Wike starts"
 msgstr "வைக் தொடங்கும் போது காட்டப்படும் பக்கம்"
 
-#: ../data/gtk/prefs.ui:57
+#: ../data/gtk/prefs.ui:55
 msgid "Privacy"
 msgstr "தனியுரிமை"
 
-#: ../data/gtk/prefs.ui:62
+#: ../data/gtk/prefs.ui:60
 msgid "Allow Live Search on Desktop"
 msgstr "டெஸ்க்டாப்பில் நேரடி தேடலை அனுமதிக்கவும்"
 
-#: ../data/gtk/prefs.ui:63
+#: ../data/gtk/prefs.ui:61
 msgid "Warning: all desktop searches will be sent to Wikipedia"
 msgstr "எச்சரிக்கை: அனைத்து டெஸ்க்டாப் தேடல்களும் விக்கிபீடியாவிற்கு அனுப்பப்படும்"
 
-#: ../data/gtk/prefs.ui:85
+#: ../data/gtk/prefs.ui:83
 msgid "Wike will remember the history of visited articles"
 msgstr "பார்வையிட்ட கட்டுரைகளின் வரலாற்றை வைக் நினைவில் வைத்திருப்பார்"
 
-#: ../data/gtk/prefs.ui:96 ../data/gtk/prefs.ui:119
+#: ../data/gtk/prefs.ui:94 ../data/gtk/prefs.ui:117
 msgid "Clear"
 msgstr "அழி"
 
-#: ../data/gtk/prefs.ui:108
+#: ../data/gtk/prefs.ui:106
 msgid "Cookies and cache data will be deleted"
 msgstr "குக்கீகள் மற்றும் கேச் தரவு நீக்கப்படும்"
 
@@ -210,7 +210,7 @@ msgstr "மீண்டும் முயற்சி செய்"
 msgid "Random Article"
 msgstr "சீரற்ற கட்டுரை"
 
-#: ../data/gtk/prefs.ui:35
+#: ../data/gtk/prefs.ui:33
 msgid "Last article"
 msgstr "கடைசி கட்டுரை"
 
@@ -218,13 +218,13 @@ msgstr "கடைசி கட்டுரை"
 msgid "Bookmarks"
 msgstr "புத்தகக்குறிகள்"
 
-#: ../data/gtk/languages.ui:80 ../data/gtk/bookmarks.ui:102
-#: ../data/gtk/history.ui:94
+#: ../data/gtk/bookmarks.ui:102 ../data/gtk/history.ui:94
+#: ../data/gtk/languages.ui:79
 msgid "Select All"
 msgstr "அனைத்தையும் தெரிவுசெய்"
 
-#: ../data/gtk/languages.ui:88 ../data/gtk/bookmarks.ui:110
-#: ../data/gtk/history.ui:102
+#: ../data/gtk/bookmarks.ui:110 ../data/gtk/history.ui:102
+#: ../data/gtk/languages.ui:87
 msgid "Select None"
 msgstr "எதுவுமில்லை என்பதைத் தேர்ந்தெடுக்கவும்"
 
@@ -274,11 +274,11 @@ msgstr "உலாவியில் இணைப்பைத் திறக்�
 msgid "Copy Link to Clipboard"
 msgstr "கிளிப்போர்டுக்கு இணைப்பை நகலெடுக்கவும்"
 
-#: ../data/gtk/prefs.ui:73
+#: ../data/gtk/prefs.ui:71
 msgid "Desktop searches are performed in the default language"
 msgstr "டெஸ்க்டாப் தேடல்கள் இயல்பு மொழியில் செய்யப்படுகின்றன"
 
-#: ../data/gtk/prefs.ui:74
+#: ../data/gtk/prefs.ui:72
 msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
 msgstr "முன்னொட்டைப் பயன்படுத்தி பிற மொழிகளில் தேடலாம். எ.கா. ஸ்பானிஷ் மொழியில் தேட வேண்டும்"
 
@@ -311,7 +311,7 @@ msgstr "கடந்த 30 நாட்கள்"
 msgid "Show full history"
 msgstr "முழு வரலாற்றைக் காட்டு"
 
-#: ../src/page.py:126 ../src/window.py:509
+#: ../src/window.py:509 ../src/page.py:140
 msgid "Bookmark added: "
 msgstr "புக்மார்க் சேர்க்கப்பட்டது:␣"
 
@@ -327,27 +327,27 @@ msgstr "அச்சு செயல்பாடு தோல்வியடை�
 msgid "Link copied to clipboard"
 msgstr "இணைப்பு கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது"
 
-#: ../src/application.py:154
+#: ../src/application.py:151
 msgid "Source Code"
 msgstr "மூல குறியீடு"
 
-#: ../src/application.py:155
+#: ../src/application.py:152
 msgid "Report an Issue"
 msgstr "ஒரு சிக்கலைப் புகாரளிக்கவும்"
 
-#: ../src/application.py:156
+#: ../src/application.py:153
 msgid "Help Translating"
 msgstr "மொழிபெயர்க்க உதவுங்கள்"
 
-#: ../src/application.py:157
+#: ../src/application.py:154
 msgid "Contributors"
 msgstr "பங்களிப்பாளர்கள்"
 
-#: ../src/application.py:158
+#: ../src/application.py:155
 msgid "Flag Icons"
 msgstr "கொடி சின்னங்கள்"
 
-#: ../src/application.py:159
+#: ../src/application.py:156
 #, fuzzy
 msgid "All content from Wikipedia.org and available under CC BY-SA 4.0 unless otherwise noted.\n"
 "\n"
@@ -356,16 +356,16 @@ msgstr "Wikipedia.org இலிருந்து அனைத்து உள�
 "\n"
 "வைக் என்பது விக்கிமீடியா அறக்கட்டளையால் அங்கீகரிக்கப்படாத அல்லது இணைக்கப்படாத ஒரு சுயாதீனமான வளர்ச்சியாகும்."
 
-#: ../src/page.py:88 ../src/page.py:91
+#: ../src/page.py:102 ../src/page.py:105
 #, fuzzy
 msgid "Loading…"
 msgstr "ஏற்றுகிறது"
 
-#: ../src/page.py:216
+#: ../src/page.py:230
 msgid "Article not Found"
 msgstr "கட்டுரை கிடைக்கவில்லை"
 
-#: ../src/page.py:224
+#: ../src/page.py:238
 msgid "Can't Access Wikipedia"
 msgstr "விக்கிபீடியாவை அணுக முடியவில்லை"
 
@@ -381,7 +381,7 @@ msgstr "உள்ளடக்கங்கள் இல்லை"
 msgid "There is no table of contents for this page"
 msgstr "இந்தப் பக்கத்திற்கான உள்ளடக்க அட்டவணை எதுவும் இல்லை"
 
-#: ../data/gtk/languages.ui:11 ../data/gtk/search-settings.ui:23
+#: ../data/gtk/search-settings.ui:23 ../data/gtk/languages.ui:11
 msgid "Pick your Languages"
 msgstr "உங்கள் மொழிகளைத் தேர்ந்தெடுங்கள்"
 
@@ -425,7 +425,7 @@ msgctxt "shortcut window"
 msgid "Reload current page"
 msgstr "தற்போதைய பக்கத்தை மீண்டும் ஏற்றவும்"
 
-#: ../src/page.py:232 ../data/gtk/search.ui:24 ../data/gtk/window.ui:87
+#: ../src/page.py:246 ../data/gtk/search.ui:24 ../data/gtk/window.ui:87
 #: ../data/gtk/window.ui:210 ../data/gtk/window.ui:356
 msgid "Search Wikipedia"
 msgstr "விக்கிபீடியாவில் தேடவும்"
@@ -434,13 +434,13 @@ msgstr "விக்கிபீடியாவில் தேடவும்"
 msgid "New Bookmarks List"
 msgstr "புதிய புத்தகக்குறிகள் பட்டியல்"
 
-#: ../data/gtk/dialogs.ui:19 ../data/gtk/dialogs.ui:41
+#: ../data/gtk/dialogs.ui:20 ../data/gtk/dialogs.ui:42
 msgid "List Name"
 msgstr "பட்டியல் பெயர்"
 
 #: ../data/gtk/dialogs.ui:27 ../data/gtk/dialogs.ui:49
-#: ../data/gtk/dialogs.ui:67 ../data/gtk/dialogs.ui:80
-#: ../data/gtk/dialogs.ui:93
+#: ../data/gtk/dialogs.ui:66 ../data/gtk/dialogs.ui:78
+#: ../data/gtk/dialogs.ui:90
 msgid "Cancel"
 msgstr "ரத்துசெய்"
 
@@ -456,23 +456,23 @@ msgstr "புத்தகக்குறிகள் பட்டியலை �
 msgid "Rename List"
 msgstr "பட்டியலை மறுபெயரிடவும்"
 
-#: ../data/gtk/dialogs.ui:63
+#: ../data/gtk/dialogs.ui:62
 msgid "Also delete the list"
 msgstr "பட்டியலையும் நீக்கவும்"
 
-#: ../data/gtk/dialogs.ui:74
+#: ../data/gtk/dialogs.ui:73
 msgid "Clear History?"
 msgstr "வரலாற்றை அழிக்கவா?"
 
-#: ../data/gtk/dialogs.ui:81 ../data/gtk/history.ui:40
+#: ../data/gtk/history.ui:40 ../data/gtk/dialogs.ui:79
 msgid "Clear History"
 msgstr "வரலாற்றை அழிக்கவும்"
 
-#: ../data/gtk/prefs.ui:33
+#: ../data/gtk/prefs.ui:31
 msgid "Wikipedia main page"
 msgstr "விக்கிபீடியாவின் முதன்மைப் பக்கம்"
 
-#: ../data/gtk/prefs.ui:34
+#: ../data/gtk/prefs.ui:32
 msgid "Random article"
 msgstr "சீரற்ற கட்டுரை"
 
@@ -492,7 +492,7 @@ msgstr "பக்கப்பட்டி"
 msgid "Search text"
 msgstr "உரையைத் தேடுங்கள்"
 
-#: ../src/page.py:233
+#: ../src/page.py:247
 msgid "Start typing to search Wikipedia articles"
 msgstr "விக்கிபீடியா கட்டுரைகளைத் தேட தட்டச்சு செய்யத் தொடங்குங்கள்"
 
@@ -589,11 +589,11 @@ msgctxt "shortcut window"
 msgid "View open tabs"
 msgstr "திறந்த தாவல்களைக் காண்க"
 
-#: ../data/gtk/prefs.ui:36
+#: ../data/gtk/prefs.ui:34
 msgid "Restore open articles"
 msgstr "திறந்த கட்டுரைகளை மீட்டெடுக்கவும்"
 
-#: ../data/gtk/prefs.ui:107
+#: ../data/gtk/prefs.ui:105
 msgid "Clear Personal Data on Close"
 msgstr "மூடும் போது தனிப்பட்ட தரவை அழி"
 
@@ -613,20 +613,20 @@ msgstr "அனைத்து மொழிகள்"
 msgid "Other languages"
 msgstr "பிற மொழிகள்"
 
-#: ../src/languages.py:120
+#: ../src/languages.py:122
 msgid "1 language selected"
 msgstr "1 மொழி தேர்ந்தெடுக்கப்பட்டது"
 
 #. Don't remove %s tag!
-#: ../src/languages.py:122
+#: ../src/languages.py:124
 msgid "%s languages selected"
 msgstr "%s மொழிகள் தேர்ந்தெடுக்கப்பட்டன"
 
-#: ../data/gtk/languages.ui:28 ../data/gtk/langlinks.ui:32
+#: ../data/gtk/langlinks.ui:32 ../data/gtk/languages.ui:27
 msgid "Search Languages"
 msgstr "தேடல் மொழிகள்"
 
-#: ../data/gtk/languages.ui:43 ../data/gtk/langlinks.ui:48
+#: ../data/gtk/langlinks.ui:48 ../data/gtk/languages.ui:42
 msgid "Search languages"
 msgstr "தேடல் மொழிகள்"
 
@@ -638,11 +638,11 @@ msgstr "தேர்ந்தெடு"
 msgid "Remove Selected"
 msgstr "தேர்ந்தெடுக்கப்பட்டதை அகற்று"
 
-#: ../data/gtk/prefs.ui:46
+#: ../data/gtk/prefs.ui:44
 msgid "Always Hide Tabs"
 msgstr "எப்போதும் தாவல்களை மறை"
 
-#: ../data/gtk/prefs.ui:47
+#: ../data/gtk/prefs.ui:45
 msgid "The tab bar will also be hidden in desktop mode"
 msgstr "தாவல் பட்டை டெஸ்க்டாப் பயன்முறையிலும் மறைக்கப்படும்"
 
@@ -657,4 +657,12 @@ msgstr "தேடல் பரிந்துரைகளைப் பெற க
 #: ../data/gtk/window.ui:197
 msgid "Close"
 msgstr "மூடுங்கள்"
+
+#: ../data/gtk/page.ui:35
+msgid "Previous Result"
+msgstr "முந்தைய முடிவு"
+
+#: ../data/gtk/page.ui:44
+msgid "Next Result"
+msgstr "அடுத்த முடிவு"
 

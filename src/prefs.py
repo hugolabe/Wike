@@ -14,7 +14,7 @@ from wike.view import network_session
 @Gtk.Template(resource_path='/com/github/hugolabe/Wike/gtk/prefs.ui')
 class PrefsDialog(Adw.PreferencesDialog):
 
-  __gtype_name__ = 'PrefsWindow'
+  __gtype_name__ = 'PrefsDialog'
 
   start_combo = Gtk.Template.Child()
   tabs_switch = Gtk.Template.Child()

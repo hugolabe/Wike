@@ -7,7 +7,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
 <!-- Preferences dialog -->
 <interface>
-  <template class="PrefsWindow" parent="AdwPreferencesDialog">
+  <template class="PrefsDialog" parent="AdwPreferencesDialog">
     <property name="content-height">480</property>
     <property name="content-width">580</property>
 

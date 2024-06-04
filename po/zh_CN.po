@@ -1,0 +1,666 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Wike\n"
+"Language: zh-Hans\n"
+
+#: ../src/view.py:293
+msgid "Article not found"
+msgstr "文章未找到"
+
+#: ../src/page.py:231
+msgid "Can't find any results for requested query"
+msgstr "找不到该请求查询的任何结果"
+
+#: ../src/view.py:295
+msgid "Can't access Wikipedia"
+msgstr "不能访问 Wikipedia"
+
+#: ../src/page.py:239
+msgid "Check your Internet connection and try again"
+msgstr "检查你的网络连接并重试"
+
+#: ../data/gtk/dialogs.ui:56
+msgid "Clear Bookmarks List?"
+msgstr "是否清空书签列表？"
+
+#: ../data/gtk/dialogs.ui:57
+msgid "All bookmarks in the list will be removed permanently."
+msgstr "在此列表中的所有书签将被永久移除。"
+
+#: ../data/gtk/dialogs.ui:67
+msgid "Clear List"
+msgstr "清空列表"
+
+#: ../data/gtk/search-settings.ui:64
+msgid "Search Suggestions"
+msgstr "搜索建议"
+
+#. Add your name like this:
+#. 
+#. Hugo Olabera <hugolabe@gmail.com>
+#: ../data/gtk/about.ui:17
+msgid "translator-credits"
+msgstr ""
+
+#: ../src/view.py:388 ../data/gtk/bookmarks.ui:32
+msgid "Add Bookmark"
+msgstr "添加书签"
+
+#: ../data/gtk/help-overlay.ui:21
+msgctxt "shortcut window"
+msgid "General"
+msgstr "一般"
+
+#: ../data/gtk/help-overlay.ui:39
+msgctxt "shortcut window"
+msgid "Table of contents"
+msgstr "目录"
+
+#: ../data/gtk/help-overlay.ui:74
+msgctxt "shortcut window"
+msgid "Preferences"
+msgstr "首选项"
+
+#: ../data/gtk/help-overlay.ui:88
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "退出"
+
+#: ../data/gtk/help-overlay.ui:81
+msgctxt "shortcut window"
+msgid "Keyboard shortcuts"
+msgstr "快捷键"
+
+#: ../data/gtk/help-overlay.ui:164
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "导航"
+
+#: ../data/gtk/help-overlay.ui:168
+msgctxt "shortcut window"
+msgid "Search articles"
+msgstr "搜索文章"
+
+#: ../data/gtk/help-overlay.ui:196
+msgctxt "shortcut window"
+msgid "Previous page"
+msgstr "上一页"
+
+#: ../data/gtk/help-overlay.ui:203
+msgctxt "shortcut window"
+msgid "Next page"
+msgstr "下一页"
+
+#: ../data/gtk/help-overlay.ui:99 ../data/gtk/help-overlay.ui:103
+msgctxt "shortcut window"
+msgid "Bookmarks"
+msgstr "书签"
+
+#: ../data/gtk/help-overlay.ui:110
+msgctxt "shortcut window"
+msgid "Add bookmark"
+msgstr "添加书签"
+
+#: ../data/gtk/menu-main.ui:15
+msgid "Preferences"
+msgstr "首选项"
+
+#: ../data/gtk/menu-main.ui:19
+msgid "Keyboard Shortcuts"
+msgstr "快捷键"
+
+#: ../data/gtk/menu-main.ui:23
+msgid "About Wike"
+msgstr "关于 Wike"
+
+#: ../data/gtk/prefs.ui:21
+msgid "Behavior"
+msgstr "行为"
+
+#: ../data/gtk/prefs.ui:82
+msgid "Keep a List of Recent Articles"
+msgstr "保留最近文章列表"
+
+#: ../data/gtk/window.ui:113 ../data/gtk/window.ui:229
+msgid "Languages"
+msgstr "语言"
+
+#. Don't translate app name!
+#: ../data/com.github.hugolabe.Wike.desktop.in:3
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:7
+msgid "Wike"
+msgstr "Wike"
+
+#: ../data/gtk/about.ui:15 ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
+msgid "Search and read Wikipedia articles"
+msgstr "搜索和阅读维基百科文章"
+
+#. Don't remove semicolons!
+#: ../data/com.github.hugolabe.Wike.desktop.in:12
+msgid "Wikipedia;Encyclopedia;"
+msgstr "维基百科;百科全书;"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:11
+msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
+msgstr "Wike 是 GNOME 桌面的维基百科阅读器。可以在本机应用程序中在线访问维基百科的所有内容，并有更清爽且无干扰的文章视图。"
+
+#: ../data/gtk/dialogs.ui:74
+msgid "The history of visited articles will be deleted permanently."
+msgstr "访问过的文章的历史记录将被永久删除。"
+
+#: ../data/gtk/dialogs.ui:85
+msgid "Clear Personal Data?"
+msgstr "是否清除个人数据？"
+
+#: ../data/gtk/dialogs.ui:86
+msgid "Cookies and cache data will be deleted permanently."
+msgstr "Cookie和缓存数据将被永久删除"
+
+#: ../data/gtk/dialogs.ui:91
+msgid "Clear Data"
+msgstr "清除数据"
+
+#. Don't remove %s tag!
+#: ../src/wike-sp.in:90
+msgid "Search “%s” on Wikipedia"
+msgstr ""
+
+#: ../data/gtk/prefs.ui:26
+msgid "Home Page"
+msgstr "首页"
+
+#: ../data/gtk/prefs.ui:27
+msgid "The page that will be displayed when Wike starts"
+msgstr "当Wike启动时将会显示的页面"
+
+#: ../data/gtk/prefs.ui:55
+msgid "Privacy"
+msgstr "隐私"
+
+#: ../data/gtk/prefs.ui:60
+msgid "Allow Live Search on Desktop"
+msgstr "允许在桌面上实时搜索"
+
+#: ../data/gtk/prefs.ui:61
+msgid "Warning: all desktop searches will be sent to Wikipedia"
+msgstr "警告：所有的搜索将被发送到维基百科"
+
+#: ../data/gtk/prefs.ui:83
+msgid "Wike will remember the history of visited articles"
+msgstr "Wike 将会记住已访问过的文章历史"
+
+#: ../data/gtk/prefs.ui:94 ../data/gtk/prefs.ui:117
+msgid "Clear"
+msgstr "清除"
+
+#: ../data/gtk/prefs.ui:106
+msgid "Cookies and cache data will be deleted"
+msgstr "Cookies 和缓存将被删除"
+
+#: ../data/gtk/page-status.ui:50
+msgid "Try Again"
+msgstr "重试"
+
+#: ../data/gtk/menu-article.ui:34 ../data/gtk/page-status.ui:39
+msgid "Random Article"
+msgstr "随机文章"
+
+#: ../data/gtk/prefs.ui:33
+msgid "Last article"
+msgstr "上一篇文章"
+
+#: ../data/gtk/window.ui:126 ../data/gtk/window.ui:239
+msgid "Bookmarks"
+msgstr "书签"
+
+#: ../data/gtk/bookmarks.ui:102 ../data/gtk/history.ui:94
+#: ../data/gtk/languages.ui:79
+msgid "Select All"
+msgstr "全选"
+
+#: ../data/gtk/bookmarks.ui:110 ../data/gtk/history.ui:102
+#: ../data/gtk/languages.ui:87
+msgid "Select None"
+msgstr "全不选"
+
+#: ../data/gtk/help-overlay.ui:25
+msgctxt "shortcut window"
+msgid "Main menu"
+msgstr "主菜单"
+
+#: ../data/gtk/help-overlay.ui:121
+msgctxt "shortcut window"
+msgid "Tabs"
+msgstr "标签页"
+
+#: ../data/gtk/help-overlay.ui:125
+msgctxt "shortcut window"
+msgid "New tab"
+msgstr "新标签页"
+
+#: ../data/gtk/help-overlay.ui:132
+msgctxt "shortcut window"
+msgid "Close current tab"
+msgstr "关闭当前标签页"
+
+#: ../data/gtk/help-overlay.ui:139
+msgctxt "shortcut window"
+msgid "Next tab"
+msgstr "下一标签"
+
+#: ../data/gtk/help-overlay.ui:146
+msgctxt "shortcut window"
+msgid "Previous tab"
+msgstr "上一标签"
+
+#: ../src/view.py:400
+msgid "Open Link in New Tab"
+msgstr "在新标签页打开链接"
+
+#: ../src/view.py:406
+msgid "Add Link to Bookmarks"
+msgstr "添加链接到书签"
+
+#: ../src/view.py:402
+msgid "Open Link in Browser"
+msgstr "在浏览器打开链接"
+
+#: ../src/view.py:408 ../data/gtk/menu-article.ui:46
+msgid "Copy Link to Clipboard"
+msgstr "复制链接到剪切板"
+
+#: ../data/gtk/prefs.ui:71
+msgid "Desktop searches are performed in the default language"
+msgstr "以默认语言执行桌面搜索"
+
+#: ../data/gtk/prefs.ui:72
+msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
+msgstr "您可以使用前缀搜索其他语言。例如: -es 以使用西班牙语搜索"
+
+#: ../data/gtk/help-overlay.ui:182
+msgctxt "shortcut window"
+msgid "Random article"
+msgstr "随机文章"
+
+#: ../src/menu.py:101
+msgid "Pick a Font"
+msgstr "选择字体"
+
+#: ../src/menu.py:130
+msgid "Font"
+msgstr "字体"
+
+#: ../src/history.py:35
+msgid "Today"
+msgstr "今日"
+
+#: ../src/history.py:35
+msgid "Last 7 days"
+msgstr "过去 7 天"
+
+#: ../src/history.py:35
+msgid "Last 30 days"
+msgstr "过去 30 天"
+
+#: ../src/history.py:35
+msgid "Show full history"
+msgstr "展示所有历史"
+
+#: ../src/window.py:509 ../src/page.py:140
+msgid "Bookmark added: "
+msgstr "书签已添加:␣"
+
+#: ../src/window.py:566
+msgid "Print operation completed"
+msgstr "打印已完成"
+
+#: ../src/window.py:572
+msgid "Print operation failed"
+msgstr "打印失败"
+
+#: ../src/window.py:587
+msgid "Link copied to clipboard"
+msgstr "链接已复制到剪切板"
+
+#: ../src/application.py:151
+msgid "Source Code"
+msgstr "源代码"
+
+#: ../src/application.py:152
+msgid "Report an Issue"
+msgstr "报告问题"
+
+#: ../src/application.py:153
+msgid "Help Translating"
+msgstr "帮助翻译"
+
+#: ../src/application.py:154
+msgid "Contributors"
+msgstr "合作者"
+
+#: ../src/application.py:155
+msgid "Flag Icons"
+msgstr "标志图标"
+
+#: ../src/application.py:156
+msgid "All content from Wikipedia.org and available under CC BY-SA 4.0 unless otherwise noted.\n"
+"\n"
+"Wike is an independent development not endorsed by or affiliated with the Wikimedia Foundation."
+msgstr "除非另有说明，所有内容均来自 Wikipedia.org，并根据 CC BY-SA 4.0 提供。\n"
+"\n"
+"Wike 是一个独立开发项目，未得到维基媒体基金会的认可或附属。"
+
+#: ../src/page.py:102 ../src/page.py:105
+msgid "Loading…"
+msgstr "加载中"
+
+#: ../src/page.py:230
+msgid "Article not Found"
+msgstr "文章未找到"
+
+#: ../src/page.py:238
+msgid "Can't Access Wikipedia"
+msgstr "不能访问维基百科"
+
+#: ../src/bookmarks.py:33
+msgid "Reading list"
+msgstr "阅读清单"
+
+#: ../data/gtk/toc.ui:48
+msgid "No Contents"
+msgstr "无内容"
+
+#: ../data/gtk/toc.ui:49
+msgid "There is no table of contents for this page"
+msgstr "该页没有目录"
+
+#: ../data/gtk/search-settings.ui:23 ../data/gtk/languages.ui:11
+msgid "Pick your Languages"
+msgstr "选择您的语言"
+
+#: ../data/gtk/help-overlay.ui:32
+msgctxt "shortcut window"
+msgid "Sidebar"
+msgstr "侧栏"
+
+#: ../data/gtk/help-overlay.ui:46
+msgctxt "shortcut window"
+msgid "Languages"
+msgstr "语言"
+
+#: ../data/gtk/help-overlay.ui:53
+msgctxt "shortcut window"
+msgid "Search text"
+msgstr "搜索"
+
+#: ../data/gtk/help-overlay.ui:60
+msgctxt "shortcut window"
+msgid "Print"
+msgstr "打印"
+
+#: ../data/gtk/help-overlay.ui:67
+msgctxt "shortcut window"
+msgid "Copy link to clipboard"
+msgstr "复制链接到剪切板"
+
+#: ../data/gtk/help-overlay.ui:175
+msgctxt "shortcut window"
+msgid "Main page"
+msgstr "主页"
+
+#: ../data/gtk/help-overlay.ui:189
+msgctxt "shortcut window"
+msgid "History of recent articles"
+msgstr "最近文章历史"
+
+#: ../data/gtk/help-overlay.ui:210
+msgctxt "shortcut window"
+msgid "Reload current page"
+msgstr "重载当前页"
+
+#: ../src/page.py:246 ../data/gtk/search.ui:24 ../data/gtk/window.ui:87
+#: ../data/gtk/window.ui:210 ../data/gtk/window.ui:356
+msgid "Search Wikipedia"
+msgstr "搜索维基百科"
+
+#: ../data/gtk/dialogs.ui:12
+msgid "New Bookmarks List"
+msgstr "新建书签清单"
+
+#: ../data/gtk/dialogs.ui:20 ../data/gtk/dialogs.ui:42
+msgid "List Name"
+msgstr "清单名称"
+
+#: ../data/gtk/dialogs.ui:27 ../data/gtk/dialogs.ui:49
+#: ../data/gtk/dialogs.ui:66 ../data/gtk/dialogs.ui:78
+#: ../data/gtk/dialogs.ui:90
+msgid "Cancel"
+msgstr "取消"
+
+#: ../data/gtk/dialogs.ui:28
+msgid "Create List"
+msgstr "创建清单"
+
+#: ../data/gtk/dialogs.ui:34
+msgid "Rename Bookmarks List"
+msgstr "重命名书签清单"
+
+#: ../data/gtk/dialogs.ui:50
+msgid "Rename List"
+msgstr "重命名清单"
+
+#: ../data/gtk/dialogs.ui:62
+msgid "Also delete the list"
+msgstr "同时删除该清单"
+
+#: ../data/gtk/dialogs.ui:73
+msgid "Clear History?"
+msgstr "清除历史?"
+
+#: ../data/gtk/history.ui:40 ../data/gtk/dialogs.ui:79
+msgid "Clear History"
+msgstr "清除历史"
+
+#: ../data/gtk/prefs.ui:31
+msgid "Wikipedia main page"
+msgstr "维基百科主页面"
+
+#: ../data/gtk/prefs.ui:32
+msgid "Random article"
+msgstr "随机文章"
+
+#: ../data/gtk/window.ui:322
+msgid "New Tab"
+msgstr "新建标签页"
+
+#: ../data/gtk/window.ui:348 ../data/gtk/window.ui:420
+msgid "View"
+msgstr "视图"
+
+#: ../data/gtk/window.ui:155
+msgid "Sidebar"
+msgstr "侧栏"
+
+#: ../data/gtk/page.ui:27
+msgid "Search text"
+msgstr "搜索文字"
+
+#: ../src/page.py:247
+msgid "Start typing to search Wikipedia articles"
+msgstr "开始输入以搜索维基百科文章"
+
+#: ../data/gtk/menu-article.ui:30 ../data/gtk/page-status.ui:27
+msgid "Main Page"
+msgstr "主页"
+
+#: ../data/gtk/langlinks.ui:74
+msgid "No Languages"
+msgstr "无语言"
+
+#: ../data/gtk/langlinks.ui:75
+msgid "This page is not available in other languages"
+msgstr "该页面在其他语言不可用"
+
+#: ../data/gtk/menu-view.ui:28
+msgid "Show"
+msgstr "显示"
+
+#: ../data/gtk/menu-view.ui:30
+msgid "Language Flags"
+msgstr "语言标志"
+
+#: ../data/gtk/menu-view.ui:34
+msgid "Link Previews"
+msgstr "预览链接"
+
+#: ../data/gtk/history.ui:65
+msgid "Empty History"
+msgstr "空历史"
+
+#: ../data/gtk/history.ui:66
+msgid "There are no recent articles in the history"
+msgstr "在历史记录中没有最近的文章"
+
+#: ../data/gtk/bookmarks.ui:73
+msgid "No Bookmarks"
+msgstr "无书签"
+
+#: ../data/gtk/bookmarks.ui:74
+msgid "Use the Add Bookmark button or press Ctrl+D to add the current article to the list"
+msgstr "使用 添加书签 按钮或按下 Ctrl+D 添加当前文章到书签清单"
+
+#: ../data/gtk/window.ui:100 ../data/gtk/window.ui:219
+msgid "Contents"
+msgstr "内容"
+
+#: ../data/gtk/window.ui:139 ../data/gtk/window.ui:249
+msgid "History"
+msgstr "历史"
+
+#: ../data/gtk/menu-article.ui:16
+msgid "Print"
+msgstr "打印"
+
+#: ../data/gtk/menu-article.ui:21
+msgid "Search Text"
+msgstr "搜索"
+
+#: ../data/gtk/menu-article.ui:42
+msgid "Open in Browser"
+msgstr "在浏览器打开"
+
+#: ../data/gtk/bookmarks-menu.ui:14
+msgid "Create New List…"
+msgstr "创建新清单"
+
+#: ../data/gtk/bookmarks-menu.ui:21
+msgid "Rename List…"
+msgstr "重命名清单"
+
+#: ../data/gtk/bookmarks-menu.ui:25
+msgid "Clear List…"
+msgstr "清空清单"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
+msgid "It supports more than 300 languages and integrates with desktop searches, providing suggestions that make it easier to find any content. Other features are: bookmarks with multiple lists, article table of contents, history, text searches and much more…"
+msgstr "它支持 300 多种语言，并与桌面搜索集成，提供建议，让您更轻松地查找任何内容。其他功能包括：具有多个列表的书签、文章目录、历史记录、文本搜索等等……"
+
+#: ../data/gtk/window.ui:304
+msgid "Back"
+msgstr "回退"
+
+#: ../data/gtk/window.ui:313
+msgid "Forward"
+msgstr "前进"
+
+#: ../data/gtk/window.ui:61 ../data/gtk/window.ui:262
+msgid "Main Menu"
+msgstr "主菜单"
+
+#: ../data/gtk/help-overlay.ui:153
+msgctxt "shortcut window"
+msgid "View open tabs"
+msgstr "查看打开的标签页"
+
+#: ../data/gtk/prefs.ui:34
+msgid "Restore open articles"
+msgstr "恢复打开的文章"
+
+#: ../data/gtk/prefs.ui:105
+msgid "Clear Personal Data on Close"
+msgstr "关闭时清空个人数据"
+
+#: ../data/gtk/window.ui:340 ../data/gtk/window.ui:412
+msgid "Article Menu"
+msgstr "文章菜单"
+
+#: ../src/langlinks.py:32
+msgid "Your languages"
+msgstr "你的语言"
+
+#: ../src/langlinks.py:33
+msgid "All languages"
+msgstr "所有语言"
+
+#: ../src/langlinks.py:109
+msgid "Other languages"
+msgstr "其他语言"
+
+#: ../src/languages.py:122
+msgid "1 language selected"
+msgstr "已选中一个语言"
+
+#. Don't remove %s tag!
+#: ../src/languages.py:124
+msgid "%s languages selected"
+msgstr "已选中 %s 语言"
+
+#: ../data/gtk/langlinks.ui:32 ../data/gtk/languages.ui:27
+msgid "Search Languages"
+msgstr "搜索语言"
+
+#: ../data/gtk/langlinks.ui:48 ../data/gtk/languages.ui:42
+msgid "Search languages"
+msgstr "搜索语言"
+
+#: ../data/gtk/bookmarks.ui:41 ../data/gtk/history.ui:32
+msgid "Select"
+msgstr "选择"
+
+#: ../data/gtk/bookmarks.ui:118 ../data/gtk/history.ui:110
+msgid "Remove Selected"
+msgstr "移除已选"
+
+#: ../data/gtk/prefs.ui:44
+msgid "Always Hide Tabs"
+msgstr "总是隐藏标签页"
+
+#: ../data/gtk/prefs.ui:45
+msgid "The tab bar will also be hidden in desktop mode"
+msgstr "桌面模式下标签栏将会隐藏"
+
+#: ../data/gtk/search.ui:59
+msgid "No Results"
+msgstr "无结果"
+
+#: ../data/gtk/search.ui:60
+msgid "Enter at least three characters to get search suggestions"
+msgstr "至少输入三个字符以获取搜索结果"
+
+#: ../data/gtk/window.ui:197
+msgid "Close"
+msgstr "关闭"
+
+#: ../data/gtk/page.ui:35
+msgid "Previous Result"
+msgstr "上一条结果"
+
+#: ../data/gtk/page.ui:44
+msgid "Next Result"
+msgstr "下一条结果"
+

@@ -168,7 +168,7 @@ msgstr "Adatok Törlése"
 #. Don't remove %s tag!
 #: ../src/wike-sp.in:90
 msgid "Search “%s” on Wikipedia"
-msgstr "Keressen az “%s”-re a Wikipédián"
+msgstr "Keressen a(z) “%s” kifejezésre a Wikipédián"
 
 #: ../data/gtk/prefs.ui:26
 msgid "Home Page"

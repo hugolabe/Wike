@@ -348,18 +348,16 @@ msgid "Flag Icons"
 msgstr "கொடி சின்னங்கள்"
 
 #: ../src/application.py:156
-#, fuzzy
 msgid "All content from Wikipedia.org and available under CC BY-SA 4.0 unless otherwise noted.\n"
 "\n"
 "Wike is an independent development not endorsed by or affiliated with the Wikimedia Foundation."
-msgstr "Wikipedia.org இலிருந்து அனைத்து உள்ளடக்கங்களும் CC BY-SA 3.0 இன் கீழ் கிடைக்கும்.\n"
+msgstr "Wikipedia.org இலிருந்து அனைத்து உள்ளடக்கங்களும் CC BY-SA 4.0 இன் கீழ் கிடைக்கும்.\n"
 "\n"
 "வைக் என்பது விக்கிமீடியா அறக்கட்டளையால் அங்கீகரிக்கப்படாத அல்லது இணைக்கப்படாத ஒரு சுயாதீனமான வளர்ச்சியாகும்."
 
 #: ../src/page.py:102 ../src/page.py:105
-#, fuzzy
 msgid "Loading…"
-msgstr "ஏற்றுகிறது"
+msgstr "ஏற்றுகிறது…"
 
 #: ../src/page.py:230
 msgid "Article not Found"

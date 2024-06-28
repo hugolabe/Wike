@@ -340,9 +340,10 @@ msgstr "Hata Bildir"
 msgid "Help Translating"
 msgstr "Çeviriye Yardım Et"
 
+#. Katkıcılar doğru olsa da Türkçe genel kullanımında bu kullanım yayğın değildir. Bunun yerine Katkı sağlayanlar, Katkıda Bulunanlar daha genel kullanım ve anlaşılırlık sağlamaktadır.
 #: ../src/application.py:154
 msgid "Contributors"
-msgstr "Katkıcılar"
+msgstr "Katkı Sağlayanlar"
 
 #: ../src/application.py:155
 msgid "Flag Icons"

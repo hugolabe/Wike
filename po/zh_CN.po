@@ -44,7 +44,7 @@ msgstr "搜索建议"
 #. Hugo Olabera <hugolabe@gmail.com>
 #: ../data/gtk/about.ui:17
 msgid "translator-credits"
-msgstr ""
+msgstr "Yesionio <yesionio@outlook.com>"
 
 #: ../src/view.py:388 ../data/gtk/bookmarks.ui:32
 msgid "Add Bookmark"
@@ -168,7 +168,7 @@ msgstr "清除数据"
 #. Don't remove %s tag!
 #: ../src/wike-sp.in:90
 msgid "Search “%s” on Wikipedia"
-msgstr ""
+msgstr "在 Wikipedia 中搜索 “%s”"
 
 #: ../data/gtk/prefs.ui:26
 msgid "Home Page"

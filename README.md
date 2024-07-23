@@ -34,7 +34,7 @@ Provides access to all the content of this online encyclopedia in a native appli
 
 This is the official package. You can install it from Flathub.
 
-<a href="https://flathub.org/apps/details/com.github.hugolabe.Wike"><img src="https://flathub.org/assets/badges/flathub-badge-en.svg" alt="Download on Flathub" width="200"/></a>
+<a href="https://flathub.org/apps/details/com.github.hugolabe.Wike"><img src="https://flathub.org/api/badge?svg&locale=en" alt="Download on Flathub" width="240"/></a>
 
 ### Snap
 

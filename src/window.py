@@ -550,7 +550,7 @@ class Window(Adw.ApplicationWindow):
     if output_uri:
       output_dir = os.path.dirname(output_uri)
     else:
-      output_dir = 'file://' + GLib.get_user_special_dir(GLib.UserDirectory.DIRECTORY_DOWNLOAD)
+      output_dir = 'file://' + os.path.expanduser('~')
 
     output_name = self.page.wikiview.title + '.pdf'
     output_name = output_name.replace('/', '-')

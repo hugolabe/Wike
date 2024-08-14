@@ -49,6 +49,19 @@
   </branding>
 
   <releases>
+    <release version="3.1.0" date="2024-08-14">
+      <description translate="no">
+        <ul>
+          <li>About, Preferences and Languages ​​windows have been migrated to the new adaptive dialogs.</li>
+          <li>All message dialogs have been migrated to the new alert dialogs.</li>
+          <li>New tooltips have been added to the text search bar.</li>
+          <li>Added translations: Hungarian, Chinese (simplified).</li>
+          <li>Updated translations: Arabic, Croatian, Dutch, Finnish, French, German, Hebrew, Hungarian, Italian, Occitan, Portuguese (BR), Russian, Spanish, Tamil, Turkish, Ukrainian.</li>
+          <li>Removed access permission to the user folder in the Flatpak sandbox.</li>
+          <li>Minor code adjustments and fixes.</li>
+        </ul>
+      </description>
+    </release>
     <release version="3.0.1" date="2024-03-23">
       <description translate="no">
         <ul>

@@ -1,11 +1,18 @@
+#
+# twlvnn kraftwerk <kraft_werk@tutanota.com>, 2024.
+#
 msgid ""
 msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: POEditor.com\n"
+"X-Generator: Gtranslator 46.1\n"
 "Project-Id-Version: Wike\n"
 "Language: bg\n"
+"Last-Translator: twlvnn kraftwerk <kraft_werk@tutanota.com>\n"
+"Language-Team: Bulgarian <dict-notifications@fsa-bg.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"PO-Revision-Date: 2024-09-22 18:16+0200\n"
 
 #: ../src/view.py:252
 msgid "Article not found"
@@ -25,7 +32,7 @@ msgstr "Проверете интернет връзката си и опита�
 
 #: ../data/ui/dialogs.ui:53
 msgid "Clear Bookmarks List?"
-msgstr "Изчистване на "
+msgstr "Да бъде ли изчистен списъка с отметки?"
 
 #: ../data/ui/dialogs.ui:54
 msgid "All bookmarks in the list will be removed permanently."
@@ -33,18 +40,20 @@ msgstr "Всички отметки в списъка ще бъдат према
 
 #: ../data/ui/dialogs.ui:65
 msgid "Clear List"
-msgstr "Изчистване на списък"
+msgstr "Изчистване на списъка"
 
 #: ../data/ui/search-settings.ui:69
 msgid "Search Suggestions"
 msgstr "Предложения за търсене"
 
 #. Add your name like this:
-#. 
+#.
 #. Hugo Olabera <hugolabe@gmail.com>
 #: ../data/ui/about.ui:16
 msgid "translator-credits"
-msgstr "Николай Георгиев <nikogen06@gmail.com>"
+msgstr ""
+"Николай Георгиев <nikogen06@gmail.com>,\n"
+"twlvnn kraftwerk <kraft_werk@tutanota.com>"
 
 #: ../src/view.py:364 ../data/ui/bookmarks.ui:26
 msgid "Add Bookmark"
@@ -68,7 +77,7 @@ msgstr "Настройки"
 #: ../data/ui/shortcuts.ui:73
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr "Затваряне"
+msgstr "Спиране на програмата"
 
 #: ../data/ui/shortcuts.ui:67
 msgctxt "shortcut window"
@@ -115,7 +124,7 @@ msgstr "Клавишни комбинации"
 
 #: ../data/ui/menu-main.ui:53
 msgid "About Wike"
-msgstr "Относно Wike"
+msgstr "Относно „Wike“"
 
 #: ../data/ui/prefs.ui:18
 msgid "Behavior"
@@ -146,8 +155,14 @@ msgid "Wikipedia;Encyclopedia;"
 msgstr "Уикипедия;Енциклопедия;"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:11
-msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
-msgstr "Wike е програма, която представя статии от Уикипедия в GNOME. Осигурява достъп до цялото съдържание на тази енциклопедия в опростено и  приложение."
+msgid ""
+"Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the "
+"content of this online encyclopedia in a native application, with a simpler "
+"and distraction-free view of articles."
+msgstr ""
+"Wike е програма, която представя статии от Уикипедия в GNOME. Осигурява "
+"достъп до цялото съдържание на тази енциклопедия в опростено и оптимизирано "
+"за средата приложение, с опростен и против разсейване изглед на статиите."
 
 #: ../data/ui/dialogs.ui:71
 msgid "The history of visited articles will be deleted permanently."
@@ -155,20 +170,20 @@ msgstr "Историята на посещаваните статии ще бъ�
 
 #: ../data/ui/dialogs.ui:82
 msgid "Clear Personal Data?"
-msgstr "Да бъдат ли изчистени лични данни?"
+msgstr "Да бъдат ли изчистени личните данни?"
 
 #: ../data/ui/dialogs.ui:83
 msgid "Cookies and cache data will be deleted permanently."
-msgstr "Бисквитки и кешът ще бъдат изтрити завинаги."
+msgstr "Бисквитките и кешът ще бъдат изтрити завинаги."
 
 #: ../data/ui/dialogs.ui:89
 msgid "Clear Data"
-msgstr "Изчистване на данни"
+msgstr "Изчистване на данните"
 
 #. Don't remove %s tag!
 #: ../src/wike-sp.in:69
 msgid "Search “%s” on Wikipedia"
-msgstr "Търсене на \"%s\" в Уикипедия"
+msgstr "Търсене на „%s“ в Уикипедия"
 
 #: ../data/ui/prefs.ui:21
 msgid "Home Page"
@@ -184,11 +199,12 @@ msgstr "Поверителност"
 
 #: ../data/ui/prefs.ui:41
 msgid "Allow Live Search on Desktop"
-msgstr "Разрешаване на 'Live Search' на работния плот"
+msgstr "Разрешаване на „Live Search“ на работния плот"
 
 #: ../data/ui/prefs.ui:42
 msgid "Warning: all desktop searches will be sent to Wikipedia"
-msgstr "Внимание: всички търсения от работния плот ще бъдат изпратени към Уикипедия"
+msgstr ""
+"Внимание: всички търсения от работния плот ще бъдат изпратени към Уикипедия"
 
 #: ../data/ui/prefs.ui:59
 msgid "Wike will remember the history of visited articles"
@@ -200,7 +216,7 @@ msgstr "Изчистване"
 
 #: ../data/ui/prefs.ui:76
 msgid "Clear Personal Data"
-msgstr "Изчистване на лични данни"
+msgstr "Изчистване на личните данни"
 
 #: ../data/ui/prefs.ui:77
 msgid "Cookies and cache data will be deleted"
@@ -212,7 +228,7 @@ msgstr "Опитай отново"
 
 #: ../data/ui/page.ui:78 ../data/ui/menu-main.ui:29
 msgid "Random Article"
-msgstr "Произволна статия"
+msgstr "Случайна статия"
 
 #: ../data/ui/prefs.ui:28
 msgid "Last article"
@@ -227,7 +243,6 @@ msgid "Select All"
 msgstr "Избиране на всички"
 
 #: ../data/ui/languages.ui:61
-#, fuzzy
 msgid "Select None"
 msgstr "Избиране на нищо"
 
@@ -282,13 +297,17 @@ msgid "Desktop searches are performed in the default language"
 msgstr "Търсенията на работния плот се извършват на избраният език"
 
 #: ../data/ui/prefs.ui:51
-msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
-msgstr "Можете да търсите на други езици, използвайки представка. Напр. -es, за да търсите на испански"
+msgid ""
+"You can search in other languages ​​using a prefix. Eg. -es to search in "
+"Spanish"
+msgstr ""
+"Можете да търсите на други езици, използвайки представка. Напр. -es, за да "
+"търсите на испански"
 
 #: ../data/ui/shortcuts.ui:142
 msgctxt "shortcut window"
 msgid "Random article"
-msgstr "Произволна статия"
+msgstr "Случайна статия"
 
 #: ../src/menu.py:88
 msgid "Pick a Font"
@@ -320,265 +339,284 @@ msgstr "Добавена е отметка: "
 
 #: ../src/window.py:435
 msgid "Print operation completed"
-msgstr ""
+msgstr "Операцията за печат завърши"
 
 #: ../src/window.py:441
 msgid "Print operation failed"
-msgstr ""
+msgstr "Операцията за печат е неуспешна"
 
 #: ../src/window.py:456
 msgid "Link copied to clipboard"
-msgstr ""
+msgstr "Връзката е копирана в буфера за обмен"
 
 #: ../src/application.py:153
 msgid "Source Code"
-msgstr ""
+msgstr "Изходен код"
 
 #: ../src/application.py:154
 msgid "Report an Issue"
-msgstr ""
+msgstr "Докладвайте за проблем"
 
 #: ../src/application.py:155
 msgid "Help Translating"
-msgstr ""
+msgstr "Помогнете с превода"
 
 #: ../src/application.py:156
 msgid "Contributors"
-msgstr ""
+msgstr "Сътрудници"
 
 #: ../src/application.py:157
 msgid "Flag Icons"
-msgstr ""
+msgstr "Иконки на флаговете"
 
 #: ../src/application.py:158
-msgid "All content from Wikipedia.org and available under CC BY-SA 3.0 unless otherwise noted.\n"
+msgid ""
+"All content from Wikipedia.org and available under CC BY-SA 3.0 unless "
+"otherwise noted.\n"
 "\n"
-"Wike is an independent development not endorsed by or affiliated with the Wikimedia Foundation."
+"Wike is an independent development not endorsed by or affiliated with the "
+"Wikimedia Foundation."
 msgstr ""
+"Цялото съдържание е от Wikipedia.org и е достъпно под CC BY-SA 3.0, освен "
+"ако не е посочено друго.\n"
+"\n"
+"Wike е независима разработка, която не е подкрепена от или свързана с "
+"Фондация Уикимедия."
 
 #: ../src/page.py:75
 msgid "Loading"
-msgstr ""
+msgstr "Зареждане"
 
 #: ../src/page.py:102
 msgid "Article not Found"
-msgstr ""
+msgstr "Статията не беше намерена"
 
 #: ../src/page.py:110
 msgid "Can't Access Wikipedia"
-msgstr ""
+msgstr "Няма достъп до Уикипедия"
 
 #: ../src/bookmarks.py:34
 msgid "Reading list"
-msgstr ""
+msgstr "Списък за четене"
 
 #: ../data/ui/toc.ui:42
 msgid "No Contents"
-msgstr ""
+msgstr "Без съдържание"
 
 #: ../data/ui/toc.ui:43
 msgid "There is no table of contents for this page"
-msgstr ""
+msgstr "Няма съдържание за тази страница"
 
 #: ../data/ui/languages.ui:10 ../data/ui/search-settings.ui:26
 msgid "Pick your Languages"
-msgstr ""
+msgstr "Избиране на езици"
 
 #: ../data/ui/languages.ui:33 ../data/ui/search-settings.ui:20
 #: ../data/ui/langlinks.ui:17
 msgid "Filter languages"
-msgstr ""
+msgstr "Филтриране на езици"
 
 #: ../data/ui/shortcuts.ui:25
 msgctxt "shortcut window"
 msgid "Sidebar"
-msgstr ""
+msgstr "Странична лента"
 
 #: ../data/ui/shortcuts.ui:37
 msgctxt "shortcut window"
 msgid "Languages"
-msgstr ""
+msgstr "Езици"
 
 #: ../data/ui/shortcuts.ui:43
 msgctxt "shortcut window"
 msgid "Search text"
-msgstr ""
+msgstr "Търсене на текст"
 
 #: ../data/ui/shortcuts.ui:49
 msgctxt "shortcut window"
 msgid "Print"
-msgstr ""
+msgstr "Печат"
 
 #: ../data/ui/shortcuts.ui:55
 msgctxt "shortcut window"
 msgid "Copy link to clipboard"
-msgstr ""
+msgstr "Копиране на връзката в буфера за обмен"
 
 #: ../data/ui/shortcuts.ui:136
 msgctxt "shortcut window"
 msgid "Main page"
-msgstr ""
+msgstr "Основна страница"
 
 #: ../data/ui/shortcuts.ui:148
 msgctxt "shortcut window"
 msgid "History of recent articles"
-msgstr ""
+msgstr "История на скорошните статии"
 
 #: ../data/ui/shortcuts.ui:166
 msgctxt "shortcut window"
 msgid "Reload current page"
-msgstr ""
+msgstr "Презареждане на текущата страница"
 
 #: ../data/ui/search.ui:15 ../data/ui/page.ui:57
 msgid "Search Wikipedia"
-msgstr ""
+msgstr "Търсете в Уикипедия"
 
 #: ../data/ui/search.ui:26
 msgid "Search Settings"
-msgstr ""
+msgstr "Настройки за търсене"
 
 #: ../data/ui/dialogs.ui:11
 msgid "New Bookmarks List"
-msgstr ""
+msgstr "Нов списък с отметки"
 
 #: ../data/ui/dialogs.ui:18 ../data/ui/dialogs.ui:39
 msgid "List Name"
-msgstr ""
+msgstr "Име на списъка"
 
 #: ../data/ui/dialogs.ui:26 ../data/ui/dialogs.ui:47 ../data/ui/dialogs.ui:64
 #: ../data/ui/dialogs.ui:76 ../data/ui/dialogs.ui:88
 msgid "Cancel"
-msgstr ""
+msgstr "Отказване"
 
 #: ../data/ui/dialogs.ui:27
 msgid "Create List"
-msgstr ""
+msgstr "Създаване на списък"
 
 #: ../data/ui/dialogs.ui:32
 msgid "Rename Bookmarks List"
-msgstr ""
+msgstr "Преименуване на списъка с отметки"
 
 #: ../data/ui/dialogs.ui:48
 msgid "Rename List"
-msgstr ""
+msgstr "Преименуване на списъка"
 
 #: ../data/ui/dialogs.ui:60
 msgid "Also delete the list"
-msgstr ""
+msgstr "Също така да се изтрие списъка"
 
 #: ../data/ui/dialogs.ui:70
 msgid "Clear History?"
-msgstr ""
+msgstr "Да бъде ли изчистена историята?"
 
 #: ../data/ui/dialogs.ui:77 ../data/ui/history.ui:26
 msgid "Clear History"
-msgstr ""
+msgstr "Изчистване на историята"
 
 #: ../data/ui/prefs.ui:26
 msgid "Wikipedia main page"
-msgstr ""
+msgstr "Основна страница на Уикипедия"
 
 #: ../data/ui/prefs.ui:27
 msgid "Random article"
-msgstr ""
+msgstr "Случайна статия"
 
 #: ../data/ui/headerbar.ui:25
 msgid "New Tab"
-msgstr ""
+msgstr "Нов раздел"
 
 #: ../data/ui/headerbar.ui:43 ../data/ui/actionbar.ui:34
 msgid "View"
-msgstr ""
+msgstr "Изглед"
 
 #: ../data/ui/headerbar.ui:49 ../data/ui/actionbar.ui:27
 msgid "Sidebar"
-msgstr ""
+msgstr "Странична лента"
 
 #: ../data/ui/page.ui:20
 msgid "Search text"
-msgstr ""
+msgstr "Търсене на текст"
 
 #: ../data/ui/page.ui:58
 msgid "Start typing to search Wikipedia articles"
-msgstr ""
+msgstr "Започнете да пишете, за да търсите статии в Уикипедия"
 
 #: ../data/ui/page.ui:68 ../data/ui/menu-main.ui:25
 msgid "Main Page"
-msgstr ""
+msgstr "Основна страница"
 
 #: ../data/ui/langlinks.ui:38
 msgid "No Languages"
-msgstr ""
+msgstr "Няма езици"
 
 #: ../data/ui/langlinks.ui:39
 msgid "This page is not available in other languages"
-msgstr ""
+msgstr "Тази страница не е достъпна на други езици"
 
 #: ../data/ui/menu-view.ui:21
 msgid "Show"
-msgstr ""
+msgstr "Показване"
 
 #: ../data/ui/menu-view.ui:23
 msgid "Language Flags"
-msgstr ""
+msgstr "Флагове на езиците"
 
 #: ../data/ui/menu-view.ui:27
 msgid "Link Previews"
-msgstr ""
+msgstr "Предварителен преглед на връзките"
 
 #: ../data/ui/history.ui:49
 msgid "Empty History"
-msgstr ""
+msgstr "Празна история"
 
 #: ../data/ui/history.ui:50
 msgid "There are no recent articles in the history"
-msgstr ""
+msgstr "Няма скорошни статии в историята"
 
 #: ../data/ui/bookmarks.ui:55
 msgid "No Bookmarks"
-msgstr ""
+msgstr "Няма отметки"
 
 #: ../data/ui/bookmarks.ui:56
-msgid "Use the Add Bookmark button or press Ctrl+D to add the current article to the list"
+msgid ""
+"Use the Add Bookmark button or press Ctrl+D to add the current article to "
+"the list"
 msgstr ""
+"Използвайте бутона „Добавяне на отметка“ или натиснете Ctrl+D, за да "
+"добавите текущата статия в списъка"
 
 #: ../data/ui/window.ui:78
 msgid "Contents"
-msgstr ""
+msgstr "Съдържание"
 
 #: ../data/ui/window.ui:110
 msgid "History"
-msgstr ""
+msgstr "История"
 
 #: ../data/ui/menu-main.ui:13
 msgid "Print"
-msgstr ""
+msgstr "Печат"
 
 #: ../data/ui/menu-main.ui:18
 msgid "Search Text"
-msgstr ""
+msgstr "Търсене на текст"
 
 #: ../data/ui/menu-main.ui:35
 msgid "Open in Browser"
-msgstr ""
+msgstr "Отваряне в Интернет браузър"
 
 #: ../data/ui/bookmarks-menu.ui:12
 msgid "Create New List…"
-msgstr ""
+msgstr "Създаване на нов списък…"
 
 #: ../data/ui/bookmarks-menu.ui:18
 msgid "Rename List…"
-msgstr ""
+msgstr "Преименуване на списъка…"
 
 #: ../data/ui/bookmarks-menu.ui:22
 msgid "Clear List…"
-msgstr ""
+msgstr "Изчистване на списъка…"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
-msgid "It supports more than 300 languages and integrates with desktop searches, providing suggestions that make it easier to find any content. Other features are: bookmarks with multiple lists, article table of contents, history, text searches and much more…"
+msgid ""
+"It supports more than 300 languages and integrates with desktop searches, "
+"providing suggestions that make it easier to find any content. Other "
+"features are: bookmarks with multiple lists, article table of contents, "
+"history, text searches and much more…"
 msgstr ""
+"Поддържа повече от 300 езика и се интегрира с търсачките в работните среди, "
+"като предоставя предложения, които улесняват намирането на всяко съдържание. "
+"Други функции са: отметки с множество списъци, съдържание на статиите, "
+"история, търсене на текст и много други…"
 
 #: ../data/ui/window.ui:55
 msgid "Pin Sidebar"
-msgstr ""
-
+msgstr "Прикачване на страничната лента"

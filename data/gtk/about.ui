@@ -11,7 +11,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <property name="application-icon">com.github.hugolabe.Wike</property>
     <property name="application-name">Wike</property>
     <property name="developer-name">Hugo Olabera</property>
-    <property name="version">3.1.0</property>
+    <property name="version">3.1.1</property>
     <property name="comments" translatable="yes">Search and read Wikipedia articles</property>
     <property name="website">https://hugolabe.github.io/Wike/</property>
     <property name="translator-credits" translatable="yes">translator-credits</property>

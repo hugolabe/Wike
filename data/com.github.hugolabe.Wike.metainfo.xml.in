@@ -49,6 +49,14 @@
   </branding>
 
   <releases>
+    <release version="3.1.1" date="2025-01-28">
+      <description translate="no">
+        <ul>
+          <li>Bumped to GNOME 47 runtime.</li>
+          <li>Updated translations: Bulgarian.</li>
+        </ul>
+      </description>
+    </release>
     <release version="3.1.0" date="2024-08-14">
       <description translate="no">
         <ul>

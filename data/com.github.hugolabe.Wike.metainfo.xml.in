@@ -43,6 +43,15 @@
     </screenshot>
   </screenshots>
 
+  <requires>
+    <display_length compare="ge">360</display_length>
+  </requires>
+  <recommends>
+    <control>keyboard</control>
+    <control>pointing</control>
+    <control>touch</control>
+  </recommends>
+
   <branding>
     <color type="primary" scheme_preference="light">#dbeede</color>
     <color type="primary" scheme_preference="dark">#3b608c</color>

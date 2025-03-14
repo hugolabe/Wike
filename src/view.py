@@ -38,7 +38,7 @@ class ViewSettings:
     try:
       gfile_contents = gfile.load_contents(None)
     except:
-      print('Can\'t load view css file from resources')
+      print('Can’t load view css file from resources')
       self._css_view = ''
     else:
       self._css_view = gfile_contents[1].decode('utf-8')
@@ -47,7 +47,7 @@ class ViewSettings:
     try:
       gfile_contents = gfile.load_contents(None)
     except:
-      print('Can\'t load dark css file from resources')
+      print('Can’t load dark css file from resources')
       self._css_dark = ''
     else:
       self._css_dark = gfile_contents[1].decode('utf-8')
@@ -56,7 +56,7 @@ class ViewSettings:
     try:
       gfile_contents = gfile.load_contents(None)
     except:
-      print('Can\'t load sepia css file from resources')
+      print('Can’t load sepia css file from resources')
       self._css_sepia = ''
     else:
       self._css_sepia = gfile_contents[1].decode('utf-8')
@@ -292,7 +292,7 @@ class WikiView(WebKit.WebView):
       if uri_path == 'notfound':
         self.title = _('Article not found')
       elif uri_path == 'error':
-        self.title = _('Can\'t access Wikipedia')
+        self.title = _('Can’t access Wikipedia')
       self.emit('load-props')
       return
     else:

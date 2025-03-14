@@ -30,7 +30,7 @@ class Languages:
     try:
       gfile_contents = gfile.load_contents(None)
     except:
-      print('Can\'t load languages file from resources')
+      print('Can’t load languages file from resources')
       return
     else:
       content = gfile_contents[1].decode('utf-8')

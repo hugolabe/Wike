@@ -92,12 +92,8 @@ class PageBox(Gtk.Box):
 
     match event:
       case WebKit.LoadEvent.STARTED:
-        if wikiview.get_uri().endswith('.wikipedia.org/'):
-          self._is_main = True
-        else:
-          self._is_main = False
-        if self.search_bar.get_search_mode():
-          self.search_bar.set_search_mode(False)
+        self._is_main = wikiview.get_uri().endswith('.wikipedia.org/')
+        self.search_bar.set_search_mode(False)
         self.view_stack.set_visible_child_name('wikiview')
         tabpage.set_title(_('Loading…'))
         tabpage.set_loading(True)

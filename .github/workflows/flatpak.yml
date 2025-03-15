@@ -6,28 +6,23 @@ name: CI
 jobs:
   flatpak:
     name: "Flatpak"
-    runs-on: ubuntu-latest
     container:
-      image: bilelmoussaoui/flatpak-github-actions:gnome-44
+      image: ghcr.io/flathub-infra/flatpak-github-actions:gnome-47
       options: --privileged
     strategy:
       matrix:
-        arch: [x86_64, aarch64]
-      fail-fast: false
+        variant:
+          - arch: x86_64
+            runner: ubuntu-24.04
+          - arch: aarch64
+            runner: ubuntu-24.04-arm
+    runs-on: ${{ matrix.variant.runner }}
     steps:
-    - uses: actions/checkout@v4
-    # Docker is required by the docker/setup-qemu-action which enables emulation
-    - name: Install deps
-      run: |
-        dnf -y install docker
-    - name: Set up QEMU
-      id: qemu
-      uses: docker/setup-qemu-action@v3
-      with:
-        platforms: arm64
-    - uses: flatpak/flatpak-github-actions/flatpak-builder@v6.3
-      with:
-        bundle: com.github.hugolabe.Wike.flatpak
-        manifest-path: com.github.hugolabe.Wike.json
-        cache-key: flatpak-builder-${{ github.sha }}
-        arch: ${{ matrix.arch }}
+      - uses: actions/checkout@v4
+      - uses: flathub-infra/flatpak-github-actions/flatpak-builder@master
+        with:
+          bundle: com.github.hugolabe.Wike.flatpak
+          manifest-path: com.github.hugolabe.Wike.json
+          cache-key: flatpak-builder-${{ github.sha }}
+          arch: ${{ matrix.variant.arch }}
+          verbose: true

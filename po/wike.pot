@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Wike\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-27 12:12+0200\n"
+"POT-Creation-Date: 2025-03-18 12:50+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,79 +29,6 @@ msgstr ""
 
 #: ../src/langlinks.py:109
 msgid "Other languages"
-msgstr ""
-
-#: ../src/window.py:509 ../src/page.py:140
-msgid "Bookmark added: "
-msgstr ""
-
-#: ../src/window.py:566
-msgid "Print operation completed"
-msgstr ""
-
-#: ../src/window.py:572
-msgid "Print operation failed"
-msgstr ""
-
-#: ../src/window.py:587
-msgid "Link copied to clipboard"
-msgstr ""
-
-#: ../src/page.py:102 ../src/page.py:105
-msgid "Loading…"
-msgstr ""
-
-#: ../src/page.py:230
-msgid "Article not Found"
-msgstr ""
-
-#: ../src/page.py:231
-msgid "Can't find any results for requested query"
-msgstr ""
-
-#: ../src/page.py:238
-msgid "Can't Access Wikipedia"
-msgstr ""
-
-#: ../src/page.py:239
-msgid "Check your Internet connection and try again"
-msgstr ""
-
-#: ../src/page.py:246 ../data/gtk/search.ui:24 ../data/gtk/window.ui:87
-#: ../data/gtk/window.ui:210 ../data/gtk/window.ui:356
-msgid "Search Wikipedia"
-msgstr ""
-
-#: ../src/page.py:247
-msgid "Start typing to search Wikipedia articles"
-msgstr ""
-
-#: ../src/view.py:293
-msgid "Article not found"
-msgstr ""
-
-#: ../src/view.py:295
-msgid "Can't access Wikipedia"
-msgstr ""
-
-#: ../src/view.py:388 ../data/gtk/bookmarks.ui:32
-msgid "Add Bookmark"
-msgstr ""
-
-#: ../src/view.py:400
-msgid "Open Link in New Tab"
-msgstr ""
-
-#: ../src/view.py:402
-msgid "Open Link in Browser"
-msgstr ""
-
-#: ../src/view.py:406
-msgid "Add Link to Bookmarks"
-msgstr ""
-
-#: ../src/view.py:408 ../data/gtk/menu-article.ui:46
-msgid "Copy Link to Clipboard"
 msgstr ""
 
 #: ../src/application.py:151
@@ -158,6 +85,79 @@ msgstr ""
 #: ../src/languages.py:124
 #, python-format
 msgid "%s languages selected"
+msgstr ""
+
+#: ../src/window.py:509 ../src/page.py:136
+msgid "Bookmark added: "
+msgstr ""
+
+#: ../src/window.py:566
+msgid "Print operation completed"
+msgstr ""
+
+#: ../src/window.py:572
+msgid "Print operation failed"
+msgstr ""
+
+#: ../src/window.py:589
+msgid "Link copied to clipboard"
+msgstr ""
+
+#: ../src/page.py:98 ../src/page.py:101
+msgid "Loading…"
+msgstr ""
+
+#: ../src/page.py:226
+msgid "Article not Found"
+msgstr ""
+
+#: ../src/page.py:227
+msgid "Can’t find any results for requested query"
+msgstr ""
+
+#: ../src/page.py:234
+msgid "Can’t Access Wikipedia"
+msgstr ""
+
+#: ../src/page.py:235
+msgid "Check your Internet connection and try again"
+msgstr ""
+
+#: ../src/page.py:242 ../data/gtk/search.ui:24 ../data/gtk/window.ui:87
+#: ../data/gtk/window.ui:210 ../data/gtk/window.ui:356
+msgid "Search Wikipedia"
+msgstr ""
+
+#: ../src/page.py:243
+msgid "Start typing to search Wikipedia articles"
+msgstr ""
+
+#: ../src/view.py:293
+msgid "Article not found"
+msgstr ""
+
+#: ../src/view.py:295
+msgid "Can’t access Wikipedia"
+msgstr ""
+
+#: ../src/view.py:388 ../data/gtk/bookmarks.ui:32
+msgid "Add Bookmark"
+msgstr ""
+
+#: ../src/view.py:400
+msgid "Open Link in New Tab"
+msgstr ""
+
+#: ../src/view.py:402
+msgid "Open Link in Browser"
+msgstr ""
+
+#: ../src/view.py:406
+msgid "Add Link to Bookmarks"
+msgstr ""
+
+#: ../src/view.py:408 ../data/gtk/menu-article.ui:46
+msgid "Copy Link to Clipboard"
 msgstr ""
 
 #: ../src/wike-sp.in:90
@@ -406,24 +406,12 @@ msgstr ""
 msgid "There are no recent articles in the history"
 msgstr ""
 
-#: ../data/gtk/menu-article.ui:16
-msgid "Print"
-msgstr ""
-
-#: ../data/gtk/menu-article.ui:21
-msgid "Search Text"
-msgstr ""
-
-#: ../data/gtk/menu-article.ui:30 ../data/gtk/page-status.ui:27
+#: ../data/gtk/page-status.ui:27 ../data/gtk/menu-article.ui:30
 msgid "Main Page"
 msgstr ""
 
-#: ../data/gtk/menu-article.ui:34 ../data/gtk/page-status.ui:39
+#: ../data/gtk/page-status.ui:39 ../data/gtk/menu-article.ui:34
 msgid "Random Article"
-msgstr ""
-
-#: ../data/gtk/menu-article.ui:42
-msgid "Open in Browser"
 msgstr ""
 
 #: ../data/gtk/page-status.ui:50
@@ -486,15 +474,6 @@ msgstr ""
 msgid "View"
 msgstr ""
 
-#: ../data/gtk/about.ui:15 ../data/com.github.hugolabe.Wike.desktop.in:4
-#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
-msgid "Search and read Wikipedia articles"
-msgstr ""
-
-#: ../data/gtk/about.ui:17
-msgid "translator-credits"
-msgstr ""
-
 #: ../data/gtk/dialogs.ui:12
 msgid "New Bookmarks List"
 msgstr ""
@@ -555,6 +534,30 @@ msgstr ""
 
 #: ../data/gtk/dialogs.ui:91
 msgid "Clear Data"
+msgstr ""
+
+#: ../data/gtk/page.ui:27
+msgid "Search text"
+msgstr ""
+
+#: ../data/gtk/page.ui:35
+msgid "Previous Result"
+msgstr ""
+
+#: ../data/gtk/page.ui:44
+msgid "Next Result"
+msgstr ""
+
+#: ../data/gtk/menu-article.ui:16
+msgid "Print"
+msgstr ""
+
+#: ../data/gtk/menu-article.ui:21
+msgid "Search Text"
+msgstr ""
+
+#: ../data/gtk/menu-article.ui:42
+msgid "Open in Browser"
 msgstr ""
 
 #: ../data/gtk/prefs.ui:21
@@ -633,16 +636,13 @@ msgstr ""
 msgid "Cookies and cache data will be deleted"
 msgstr ""
 
-#: ../data/gtk/page.ui:27
-msgid "Search text"
+#: ../data/gtk/about.ui:15 ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
+msgid "Search and read Wikipedia articles"
 msgstr ""
 
-#: ../data/gtk/page.ui:35
-msgid "Previous Result"
-msgstr ""
-
-#: ../data/gtk/page.ui:44
-msgid "Next Result"
+#: ../data/gtk/about.ui:17
+msgid "translator-credits"
 msgstr ""
 
 #: ../data/com.github.hugolabe.Wike.desktop.in:3

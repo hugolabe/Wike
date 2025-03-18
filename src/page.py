@@ -224,14 +224,14 @@ class PageStatus(Adw.Bin):
     match uri:
       case 'about:notfound':
         self.status_page.set_title(_('Article not Found'))
-        self.status_page.set_description(_('Can\'t find any results for requested query'))
+        self.status_page.set_description(_('Can’t find any results for requested query'))
         self.status_page.set_icon_name('find-location-symbolic')
         self.main_page_button.set_visible(True)
         self.random_article_button.set_visible(False)
         self.try_again_button.set_visible(False)
         self.main_page_button.grab_focus()
       case 'about:error':
-        self.status_page.set_title(_('Can\'t Access Wikipedia'))
+        self.status_page.set_title(_('Can’t Access Wikipedia'))
         self.status_page.set_description(_('Check your Internet connection and try again'))
         self.status_page.set_icon_name('network-error-symbolic')
         self.main_page_button.set_visible(False)

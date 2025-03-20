@@ -43,12 +43,7 @@ class SearchPanel(Adw.Bin):
   # Populate search suggestions list
 
   def _populate(self, suggestions):
-    while True:
-      row = self.suggestions_list.get_row_at_index(0)
-      if row:
-        self.suggestions_list.remove(row)
-      else:
-        break
+    self.suggestions_list.remove_all()
 
     if suggestions:
       for title, uri in zip(suggestions[0], suggestions[1]):

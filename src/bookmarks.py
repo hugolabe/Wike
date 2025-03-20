@@ -141,13 +141,7 @@ class BookmarksPanel(Adw.Bin):
 
   def _clear_list(self):
     self.selection_button.set_active(False)
-
-    while True:
-      row = self.bookmarks_list.get_row_at_index(0)
-      if row:
-        self.bookmarks_list.remove(row)
-      else:
-        break
+    self.bookmarks_list.remove_all()
 
   # Refresh status of headerbar bookmark buttons
 

@@ -30,12 +30,7 @@ class TocPanel(Adw.Bin):
   # Populate toc list
 
   def populate(self, title, sections):
-    while True:
-      row = self.toc_list.get_row_at_index(0)
-      if row:
-        self.toc_list.remove(row)
-      else:
-        break
+    self.toc_list.remove_all()
 
     if sections:
       self.title_label.set_label(title)

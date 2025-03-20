@@ -201,13 +201,7 @@ class SettingsPopover(Gtk.Popover):
     lang_id = settings.get_string('search-language')
     self._search_panel.settings_button.set_label(lang_id)
     self._search_panel.settings_button.set_tooltip_text(languages.wikilangs[lang_id].capitalize())
-
-    while True:
-      row = self.languages_list.get_row_at_index(0)
-      if row:
-        self.languages_list.remove(row)
-      else:
-        break
+    self.languages_list.remove_all()
 
     if len(languages.items) > 0:
       for lang_id in sorted(languages.items):

@@ -81,7 +81,12 @@ class LanglinksPanel(Adw.Bin):
   # Populate langlinks list
 
   def populate(self, langlinks):
-    self.langlinks_list.remove_all()
+    while True:
+      row = self.langlinks_list.get_row_at_index(0)
+      if row:
+        self.langlinks_list.remove(row)
+      else:
+        break
 
     if not langlinks:
       return

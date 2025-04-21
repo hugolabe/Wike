@@ -111,7 +111,13 @@ class HistoryPanel(Adw.Bin):
 
   def _clear_list(self):
     self.selection_button.set_active(False)
-    self.history_list.remove_all()
+
+    while True:
+      row = self.history_list.get_row_at_index(0)
+      if row:
+        self.history_list.remove(row)
+      else:
+        break
 
   # Add article to history
 

@@ -263,7 +263,7 @@ class SettingsLangsRow(Gtk.ListBoxRow):
 
     self.name_label.set_label(lang_name)
     if check_mark:
-      self.check_image.set_from_icon_name('emblem-ok-symbolic')
+      self.check_image.set_from_icon_name('checkmark-symbolic')
     self.id_label.set_label(lang_id)
     if settings.get_boolean('show-flags'):
       gfile = Gio.File.new_for_uri('resource:///com/github/hugolabe/Wike/icons/scalable/emblems/' + lang_id + '.svg')

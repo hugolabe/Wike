@@ -3,8 +3,8 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 
-import json, urllib.parse
-
+import json, urllib.parse, gi
+gi.require_version('Soup', '3.0')
 from gi.repository import Soup
 
 

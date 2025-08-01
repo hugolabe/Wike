@@ -115,7 +115,8 @@ class WikeSearchService:
       self._results.clear()
       text = id.replace('search:', '', 1)
       params = text.split(':', 1)
-      self._get_results(params[1], params[0])
+      if (len(params) > 1):
+         self._get_results(params[1], params[0])
       if len(self._results) > 0:
         uri = list(self._results.keys())[0]
       else:

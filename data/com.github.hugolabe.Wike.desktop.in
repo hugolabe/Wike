@@ -11,3 +11,8 @@ Categories=Network;GTK;
 Keywords=Wikipedia;Encyclopedia;
 # Translators: Do not translate or transliterate this text
 X-Purism-FormFactor=Workstation;Mobile;
+Actions=new-tab;
+
+[Desktop Action new-tab]
+Exec=wike --new-tab
+Name=New Tab

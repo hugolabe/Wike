@@ -31,6 +31,7 @@ class Application(Adw.Application):
     self._launch_uri = ''
 
     self.add_main_option('url', b'u', GLib.OptionFlags.NONE, GLib.OptionArg.STRING, 'Open Wikipedia URL', None)
+    self.add_main_option('new-tab', b'n', GLib.OptionFlags.NONE, GLib.OptionArg.NONE, 'Open new tab', None)
 
   # Load custom css and set actions
 
@@ -52,6 +53,10 @@ class Application(Adw.Application):
         Gtk.StyleContext.add_provider_for_display(Gdk.Display.get_default(), self._css_sepia, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
       case 3:
         self._style_manager.set_color_scheme(Adw.ColorScheme.PREFER_LIGHT)
+
+    action = Gio.SimpleAction.new('new-tab', None)
+    action.connect('activate', self._new_tab)
+    self.add_action(action)
 
     action = Gio.SimpleAction.new('prefs', None)
     action.connect('activate', self._prefs_cb)
@@ -90,12 +95,13 @@ class Application(Adw.Application):
 
     if 'url' in options:
       self._launch_uri = options['url']
+      self.activate_action("new-tab")
+    elif 'new-tab' in options:
+      self._launch_uri = ''
+      self.activate_action("new-tab")
+    else:
+      self.activate()
 
-    if self._window:
-      self._window.new_page(self._launch_uri, None, True)
-      return 0
-
-    self.activate()
     return 0
 
   # Create main window and connect close event
@@ -105,7 +111,16 @@ class Application(Adw.Application):
       self._window = Window(self, self._launch_uri)
       self._window.connect('close-request',self._window_close_cb)
 
+    self._window.present()
+
+  # Open new tab
+
+  def _new_tab(self, action, parameter):
+    if self._window:
+      self._window.new_page(self._launch_uri, None, True)
       self._window.present()
+    else:
+      self.activate()
 
   # Set theme system
 

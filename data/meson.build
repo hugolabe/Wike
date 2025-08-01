@@ -63,6 +63,14 @@ configure_file(
   install_dir: join_paths(get_option('prefix'), get_option('datadir'), 'dbus-1', 'services')
 )
 
+configure_file(
+  input: 'com.github.hugolabe.Wike.service.in',
+  output: 'com.github.hugolabe.Wike.service',
+  configuration: conf,
+  install: true,
+  install_dir: join_paths(get_option('prefix'), get_option('datadir'), 'dbus-1', 'services')
+)
+
 icondir = join_paths(get_option('prefix'), get_option('datadir'), 'icons', 'hicolor')
 install_data('icons/com.github.hugolabe.Wike.svg', install_dir: join_paths(icondir, 'scalable/apps'))
 install_data('icons/com.github.hugolabe.Wike-symbolic.svg', install_dir: join_paths(icondir, 'symbolic/apps'))

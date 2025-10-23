@@ -19,11 +19,11 @@ a.new:not(.image-details a, .wikitable a, .infobox a, .infobox_v2 a, .infobox_v3
 }
 
 #mw-mf-page-center {
-  background-color: #242424 !important;
+  background-color: #222226 !important;
 }
 
 .mw-body {
-  background-color: #dbdbdb !important;
+  background-color: #ddddd9 !important;
   filter: invert(100%);
 }
 
@@ -34,11 +34,11 @@ a.new:not(.image-details a, .wikitable a, .infobox a, .infobox_v2 a, .infobox_v3
 /* Images */
 
 .thumb img, .mwe-popups-thumbnail {
-  background-color: #ccc !important;
+  background-color: #cfcfc9 !important;
 }
 
 .gallerybox .thumb {
-  background-color: #333 !important;
+  background-color: #303036 !important;
   border-color: #111 !important;
 }
 
@@ -49,7 +49,7 @@ img:not(.mwe-math-fallback-image-inline, .mwe-math-fallback-image-display, .leaf
 /* Tables and Infobox */
 
 .wikitable, .infobox, .infobox_v2, .infobox_v3 {
-  background-color: #ccc !important;
+  background-color: #cfcfc9 !important;
   filter: invert(100%);
 }
 

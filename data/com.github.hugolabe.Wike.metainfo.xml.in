@@ -58,6 +58,16 @@
   </branding>
 
   <releases>
+    <release version="3.1.2" date="2025-10-23">
+      <description translate="no">
+        <ul>
+          <li>Bumped to GNOME 49 runtime.</li>
+          <li>Small UI tweaks.</li>
+          <li>Code optimizations.</li>
+          <li>Updated translations: Arabic, Basque, Czech, Interlingua.</li>
+        </ul>
+      </description>
+    </release>
     <release version="3.1.1" date="2025-01-28">
       <description translate="no">
         <ul>

@@ -2,12 +2,27 @@
 # SPDX-FileCopyrightText: 2021-24 Hugo Olabera <hugolabe@gmail.com>
 # SPDX-License-Identifier: GPL-3.0-or-later
 
+from urllib.parse import urlparse
 
 from gi.repository import Gio, Gtk, Adw
 
 from wike import wikipedia
 from wike.data import settings, languages
 from wike.languages import LanguagesDialog
+
+def is_external_link(text):
+  """ runs urlparse to find out if text is an external link """
+  params = urlparse(text)
+
+  cond = []
+  c = (params.scheme in ["https", "http", ""])
+  cond.append(c)
+  c = (params.netloc[-14:] == ".wikipedia.org")
+  cond.append(c)
+  c = (params.path[:6] == "/wiki/")
+  cond.append(c)
+
+  return all(cond)
 
 
 # Search panel for sidebar
@@ -120,6 +135,12 @@ class SearchPanel(Adw.Bin):
       self.window.panel_split.set_show_sidebar(False)
 
     text, lang = self._get_search_terms(search_entry.get_text())
+
+    if is_external_link(search_entry.get_text()):
+      uri = search_entry.get_text()
+      self.window.page.wikiview.load_wiki(uri)
+      return
+    
     if text != '':
       wikipedia.search(text.lower(), lang, 1, self._on_activate_result)
 

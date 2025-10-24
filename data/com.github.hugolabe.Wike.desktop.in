@@ -6,6 +6,7 @@ Exec=wike
 Terminal=false
 Type=Application
 StartupNotify=true
+DBusActivatable=true
 Categories=Network;GTK;
 # Translators: Do not translate or localize the semicolons
 Keywords=Wikipedia;Encyclopedia;

@@ -58,6 +58,13 @@
   </branding>
 
   <releases>
+    <release version="3.1.3" date="2025-10-24">
+      <description translate="no">
+        <ul>
+          <li>Fixes issue caused by changes made to the way Wikipedia handles mobile view.</li>
+        </ul>
+      </description>
+    </release>
     <release version="3.1.2" date="2025-10-23">
       <description translate="no">
         <ul>

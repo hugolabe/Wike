@@ -31,6 +31,7 @@ class ViewSettings:
   # Load custom css and connect view settings signals
 
   def __init__(self):
+    self.web_settings.set_user_agent('Mozilla/5.0 (Linux; Android; Mobile) AppleWebKit/537.36 (KHTML, like Gecko)')
     self.web_settings.set_default_font_size(settings.get_int('font-size'))
     self.web_settings.set_enable_back_forward_navigation_gestures(True)
 

@@ -92,9 +92,8 @@ class Application(Adw.Application):
     if 'url' in options:
       self._launch_uri = options['url']
 
-    if self._window:
-      self._window.new_page(self._launch_uri, None, True)
-      return 0
+      if self._window:
+        self._window.new_page(self._launch_uri, None, True)
 
     self.activate()
     return 0
@@ -106,7 +105,7 @@ class Application(Adw.Application):
       self._window = Window(self, self._launch_uri)
       self._window.connect('close-request',self._window_close_cb)
 
-      self._window.present()
+    self._window.present()
 
   # Set theme system
 

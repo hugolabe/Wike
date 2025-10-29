@@ -152,7 +152,7 @@ class Application(Adw.Application):
     about_dialog.add_link(_('Source Code'), 'https://github.com/hugolabe/Wike')
     about_dialog.add_link(_('Report an Issue'), 'https://github.com/hugolabe/Wike/issues')
     about_dialog.add_link(_('Help Translating'), 'https://poeditor.com/join/project?hash=kNgJu4MAum')
-    about_dialog.set_developers(['Hugo Olabera <hugolabe@gmail.com>', _('Contributors') + ' https://github.com/hugolabe/Wike/graphs/contributors',])
+    about_dialog.set_developers(['Hugo Olabera <hugolabe@proton.me>', _('Contributors') + ' https://github.com/hugolabe/Wike/graphs/contributors',])
     about_dialog.add_credit_section(_('Flag Icons'), ['HatScripts https://github.com/HatScripts/',])
     about_dialog.add_legal_section('Wikipedia', _('All content from Wikipedia.org and available under CC BY-SA 4.0 unless otherwise noted.\n\nWike is an independent development not endorsed by or affiliated with the Wikimedia Foundation.'), Gtk.License.UNKNOWN, None)
     about_dialog.add_legal_section('Circle Flags', 'Copyright © 2022 HatScripts', Gtk.License.MIT_X11, None)

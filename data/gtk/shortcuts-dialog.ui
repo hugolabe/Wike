@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of Wike (com.github.hugolabe.Wike)
+SPDX-FileCopyrightText: 2021-25 Hugo Olabera
+SPDX-License-Identifier: GPL-3.0-or-later
+-->
+
+<!-- Shortcuts dialog -->
+<interface>
+  <object class="AdwShortcutsDialog" id="shortcuts_dialog">
+
+    <!-- Section general -->
+    <child>
+      <object class="AdwShortcutsSection">
+        <property name="title" translatable="yes" context="shortcuts dialog">General</property>
+
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes" context="shortcuts dialog">Main menu</property>
+            <property name="accelerator">F10</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes" context="shortcuts dialog">Sidebar</property>
+            <property name="action-name">win.pin-panel</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes" context="shortcuts dialog">Table of contents</property>
+            <property name="action-name">win.show-toc</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes" context="shortcuts dialog">Languages</property>
+            <property name="action-name">win.show-langlinks</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes" context="shortcuts dialog">Search text</property>
+            <property name="action-name">win.search-text</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes" context="shortcuts dialog">Print</property>
+            <property name="action-name">win.print-page</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes" context="shortcuts dialog">Copy link to clipboard</property>
+            <property name="action-name">win.copy-link</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes" context="shortcuts dialog">Preferences</property>
+            <property name="action-name">app.prefs</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes" context="shortcuts dialog">Keyboard shortcuts</property>
+            <property name="action-name">app.shortcuts</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes" context="shortcuts dialog">Quit</property>
+            <property name="action-name">app.quit</property>
+          </object>
+        </child>
+
+      </object>
+    </child>
+
+    <!-- Section bookmarks -->
+    <child>
+      <object class="AdwShortcutsSection">
+        <property name="title" translatable="yes" context="shortcuts dialog">Bookmarks</property>
+
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes" context="shortcuts dialog">Bookmarks</property>
+            <property name="action-name">win.show-bookmarks</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes" context="shortcuts dialog">Add bookmark</property>
+            <property name="action-name">win.add-bookmark</property>
+          </object>
+        </child>
+
+      </object>
+    </child>
+
+    <!-- Section tabs -->
+    <child>
+      <object class="AdwShortcutsSection">
+        <property name="title" translatable="yes" context="shortcuts dialog">Tabs</property>
+
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes" context="shortcuts dialog">New tab</property>
+            <property name="action-name">win.new-tab</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes" context="shortcuts dialog">Close current tab</property>
+            <property name="action-name">win.close-tab</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes" context="shortcuts dialog">Next tab</property>
+            <property name="action-name">win.next-tab</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes" context="shortcuts dialog">Previous tab</property>
+            <property name="action-name">win.prev-tab</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes" context="shortcuts dialog">View open tabs</property>
+            <property name="action-name">win.toggle-overview</property>
+          </object>
+        </child>
+
+      </object>
+    </child>
+
+    <!-- Section navigation -->
+    <child>
+      <object class="AdwShortcutsSection">
+        <property name="title" translatable="yes" context="shortcuts dialog">Navigation</property>
+
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes" context="shortcuts dialog">Search articles</property>
+            <property name="action-name">win.show-search</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes" context="shortcuts dialog">Main page</property>
+            <property name="action-name">win.main-page</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes" context="shortcuts dialog">Random article</property>
+            <property name="action-name">win.random-article</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes" context="shortcuts dialog">History of recent articles</property>
+            <property name="action-name">win.show-history</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes" context="shortcuts dialog">Previous page</property>
+            <property name="action-name">win.prev-page</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes" context="shortcuts dialog">Next page</property>
+            <property name="action-name">win.next-page</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes" context="shortcuts dialog">Reload current page</property>
+            <property name="action-name">win.reload-page</property>
+          </object>
+        </child>
+
+      </object>
+    </child>
+
+  </object>
+</interface>

@@ -174,8 +174,6 @@ class WikiView(WebKit.WebView):
 
   def load_wiki(self, uri):
     self.stop_loading()
-    if uri.find('.m.') == -1:
-      uri = uri.replace('.wikipedia.org', '.m.wikipedia.org')
     self.load_uri(uri)
 
   # Go to section in page
@@ -192,7 +190,7 @@ class WikiView(WebKit.WebView):
   # Load Wikipedia main page
 
   def load_main(self):
-    uri = 'https://' + settings.get_string('search-language') + '.m.wikipedia.org'
+    uri = 'https://' + settings.get_string('search-language') + '.wikipedia.org'
     self.load_wiki(uri)
 
   # Get Wikipedia random article async
@@ -222,7 +220,7 @@ class WikiView(WebKit.WebView):
   # Get base uri for current article
 
   def get_base_uri(self):
-    uri = self.get_uri().replace('.m.', '.')
+    uri = self.get_uri()
     uri_elements = urllib.parse.urlparse(uri)
     if uri_elements[5]:
       base_uri_elements = (uri_elements[0], uri_elements[1], uri_elements[2], '', '', '')
@@ -266,7 +264,7 @@ class WikiView(WebKit.WebView):
     uri_path = uri_elements[2]
 
     if uri_netloc.endswith('.wikipedia.org') and (uri_path.startswith('/wiki/') or uri_path == '/'):
-      base_uri_elements = (uri_scheme, uri_netloc.replace('.m.', '.'), uri_path, '', '', '')
+      base_uri_elements = (uri_scheme, uri_netloc, uri_path, '', '', '')
       base_uri = urllib.parse.urlunparse(base_uri_elements)
       return base_uri
     else:
@@ -343,7 +341,7 @@ class WikiView(WebKit.WebView):
       match nav_type:
         case WebKit.NavigationType.LINK_CLICKED:
           if uri_netloc.endswith('.wikipedia.org') and (uri_path.startswith('/wiki/') or uri_path == '/'):
-            base_uri_elements = (uri_elements[0], uri_elements[1].replace('.m.', '.'), uri_elements[2], '', '', '')
+            base_uri_elements = (uri_scheme, uri_netloc, uri_path, '', '', '')
             base_uri = urllib.parse.urlunparse(base_uri_elements)
             if mouse_button == 2:
               decision.ignore()

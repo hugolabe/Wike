@@ -535,13 +535,15 @@ class Window(Adw.ApplicationWindow):
   # Print current page
 
   def _print_page_cb(self, action, parameter):
-    print_operation = WebKit.PrintOperation.new(self.page.wikiview)
-    self._print_set_settings(print_operation)
-
-    result = print_operation.run_dialog(self)
-    if result == WebKit.PrintOperationResponse.PRINT:
-      handler_finished = print_operation.connect('finished', self._print_operation_finished)
-      print_operation.connect('failed', self._print_operation_failed, handler_finished)
+      # Get current style manager and theme
+      style_manager = Adw.StyleManager.get_default()
+      self._original_color_scheme = style_manager.get_color_scheme()
+      
+      # Force light theme
+      style_manager.set_color_scheme(Adw.ColorScheme.FORCE_LIGHT)
+      
+      # Wait a moment for theme to fully apply
+      GLib.timeout_add(200, self._show_print_dialog)
 
   # Set print operation settings
 
@@ -564,6 +566,21 @@ class Window(Adw.ApplicationWindow):
   def _print_operation_finished(self, print_operation):
     self._print_settings = print_operation.get_print_settings()
     self.send_notification(_('Print operation completed'))
+    
+    
+  def _show_print_dialog(self):
+      print_operation = WebKit.PrintOperation.new(self.page.wikiview)
+      self._print_set_settings(print_operation)
+  
+      result = print_operation.run_dialog(self)
+      if result == WebKit.PrintOperationResponse.PRINT:
+        handler_finished = print_operation.connect('finished', self._print_operation_finished)
+        print_operation.connect('failed', self._print_operation_failed, handler_finished)
+      else:
+        # Restore original theme if print was cancelled
+        self._restore_theme()
+      
+      return False
 
   # Show a notification when print operation failed
 

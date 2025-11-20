@@ -180,6 +180,13 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
         <child>
           <object class="AdwShortcutsItem">
+            <property name="title" translatable="yes" context="shortcuts dialog">Open Wikipedia link</property>
+            <property name="action-name">win.open-link</property>
+          </object>
+        </child>
+
+        <child>
+          <object class="AdwShortcutsItem">
             <property name="title" translatable="yes" context="shortcuts dialog">History of recent articles</property>
             <property name="action-name">win.show-history</property>
           </object>

@@ -92,4 +92,50 @@ SPDX-License-Identifier: GPL-3.0-or-later
     </responses>
   </object>
 
+  <!-- Open Wikipedia link dialog -->
+  <object class="AdwDialog" id="open_link_dialog">
+    <property name="title" translatable="yes">Open Wikipedia Link</property>
+    <property name="child">
+      <object class="AdwToolbarView">
+        <child type="top">
+          <object class="AdwHeaderBar">
+          </object>
+        </child>
+        <property name="content">
+          <object class="GtkBox">
+            <property name="orientation">vertical</property>
+            <property name="margin-top">8</property>
+            <property name="margin-bottom">24</property>
+            <property name="margin-start">24</property>
+            <property name="margin-end">24</property>
+            <property name="spacing">16</property>
+            <child>
+              <object class="AdwPreferencesGroup">
+                <child>
+                  <object class="AdwEntryRow" id="link_entry">
+                    <property name="title" translatable="yes">Wikipedia Link</property>
+                    <property name="show-apply-button">true</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="label">https://&lt;i&gt;lang&lt;/i&gt;.wikipedia.org/wiki/&lt;i&gt;Article&lt;/i&gt;</property>
+                <property name="margin_start">24</property>
+                <property name="margin_end">24</property>
+                <property name="use-markup">true</property>
+                <property name="ellipsize">end</property>
+                <style>
+                  <class name="monospace"/>
+                  <class name="dimmed"/>
+                </style>
+              </object>
+            </child>
+          </object>
+        </property>
+      </object>
+    </property>
+  </object>
+
 </interface>

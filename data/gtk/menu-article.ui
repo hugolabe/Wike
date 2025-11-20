@@ -34,6 +34,10 @@ SPDX-License-Identifier: GPL-3.0-or-later
         <attribute name="label" translatable="yes">Random Article</attribute>
         <attribute name="action">win.random-article</attribute>
       </item>
+      <item>
+        <attribute name="label" translatable="yes">Open Wikipedia Link</attribute>
+        <attribute name="action">win.open-link</attribute>
+      </item>
     </section>
 
     <!-- Share section -->

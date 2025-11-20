@@ -182,6 +182,7 @@ class Window(Adw.ApplicationWindow):
                 ('show-history', self._show_history_cb, ('<Ctrl>H',)),
                 ('main-page', self._main_page_cb, ('<Alt>Home',)),
                 ('random-article', self._random_article_cb, ('<Alt>R',)),
+                ('open-link', self._open_link_cb, ('<Alt>L',)),
                 ('reload-page', self._reload_page_cb, ('F5', '<Ctrl>R',)),
                 ('search-text', self._search_text_cb, ('<Ctrl>F',)),
                 ('print-page', self._print_page_cb, ('<Ctrl>P',)),
@@ -518,6 +519,46 @@ class Window(Adw.ApplicationWindow):
 
   def _random_article_cb(self, action, parameter):
     self.page.wikiview.load_random()
+
+  # Show open link dialog
+
+  def _open_link_cb(self, action, parameter):
+    builder = Gtk.Builder()
+    builder.add_from_resource('/com/github/hugolabe/Wike/gtk/dialogs.ui')
+    open_link_dialog = builder.get_object('open_link_dialog')
+    link_entry = builder.get_object('link_entry')
+
+    link_entry.connect('apply', self._link_entry_apply_cb, open_link_dialog)
+    link_entry.connect('changed', self._link_entry_changed_cb, open_link_dialog)
+
+    open_link_dialog.present(self)
+
+  # On entry apply load link if valid
+
+  def _link_entry_apply_cb(self, link_entry, open_link_dialog):
+    text = link_entry.get_text()
+    link = self.page.wikiview.is_wiki_uri(text)
+
+    if link != '':
+      open_link_dialog.close()
+      self.page.wikiview.load_wiki(link)
+    else:
+      link_entry.set_show_apply_button(False)
+      link_entry.set_show_apply_button(True)
+      link_entry.add_css_class('error')
+
+
+  # On entry changes check input
+
+  def _link_entry_changed_cb(self, link_entry, open_link_dialog):
+    text = link_entry.get_text()
+
+    if len(text) == 0:
+      link_entry.set_show_apply_button(False)
+      link_entry.set_show_apply_button(True)
+
+    if link_entry.has_css_class('error'):
+      link_entry.remove_css_class('error')
 
   # Reload article view
 

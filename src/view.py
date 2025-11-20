@@ -257,16 +257,23 @@ class WikiView(WebKit.WebView):
 
   # Check if uri is a valid Wikipedia URL
 
-  def _is_wiki_uri(self, uri):
+  def is_wiki_uri(self, uri):
     uri_elements = urllib.parse.urlparse(uri)
     uri_scheme = uri_elements[0]
     uri_netloc = uri_elements[1]
     uri_path = uri_elements[2]
 
-    if uri_netloc.endswith('.wikipedia.org') and (uri_path.startswith('/wiki/') or uri_path == '/'):
-      base_uri_elements = (uri_scheme, uri_netloc, uri_path, '', '', '')
-      base_uri = urllib.parse.urlunparse(base_uri_elements)
-      return base_uri
+    if uri_netloc.endswith('.wikipedia.org'):
+      if uri_scheme == '':
+        uri_scheme = 'https'
+      if uri_path == '':
+        uri_path = '/'
+      if uri_path.startswith('/wiki/') or uri_path == '/':
+        base_uri_elements = (uri_scheme, uri_netloc, uri_path, '', '', '')
+        base_uri = urllib.parse.urlunparse(base_uri_elements)
+        return base_uri
+      else:
+        return ''
     else:
       return ''
 
@@ -378,7 +385,7 @@ class WikiView(WebKit.WebView):
 
     if hit_test.get_context() == WebKit.HitTestResultContext.DOCUMENT:
       base_uri = self.get_base_uri()
-      uri = self._is_wiki_uri(base_uri)
+      uri = self.is_wiki_uri(base_uri)
       if uri == '':
         action_bookmark.set_enabled(False)
 
@@ -389,7 +396,7 @@ class WikiView(WebKit.WebView):
 
     if hit_test.context_is_link() and not hit_test.context_is_image():
       link = hit_test.get_link_uri()
-      uri = self._is_wiki_uri(link)
+      uri = self.is_wiki_uri(link)
       if uri == '':
         action_bookmark.set_enabled(False)
         action_tab.set_enabled(False)

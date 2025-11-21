@@ -64,6 +64,9 @@ class Window(Adw.ApplicationWindow):
       self.maximize()
 
     self._print_settings = Gtk.PrintSettings()
+    self._original_color_scheme = None
+    self._is_printing = False
+    self._webkit_original_schemes = []
 
     self.main_menu_popover = MainMenuPopover()
     self.main_button.set_popover(self.main_menu_popover)
@@ -85,7 +88,7 @@ class Window(Adw.ApplicationWindow):
 
     self.bookmarks_panel = BookmarksPanel(self)
     bookmarks_stack_page = self.panel_stack.add_named(self.bookmarks_panel, 'bookmarks')
-    
+
     self.history_panel = HistoryPanel(self)
     history_stack_page = self.panel_stack.add_named(self.history_panel, 'history')
 
@@ -573,16 +576,73 @@ class Window(Adw.ApplicationWindow):
     else:
       self.page.search_entry.grab_focus()
 
+  # Switch to light theme for printing
+
+  def _switch_to_light_theme(self):
+    """Switch both app and WebView to light theme for printing"""
+    if self._is_printing:
+      return
+
+    self._is_printing = True
+    style_manager = Adw.StyleManager.get_default()
+
+    # Store original color scheme
+    self._original_color_scheme = style_manager.get_color_scheme()
+
+    # Force light theme for the app
+    style_manager.set_color_scheme(Adw.ColorScheme.FORCE_LIGHT)
+
+    # Clear any previous webkit schemes
+    self._webkit_original_schemes = []
+
+    # Force light theme for all WebViews in all tabs
+    for i in range(self.tabview.get_n_pages()):
+      tabpage = self.tabview.get_nth_page(i)
+      page = tabpage.get_child()
+      if hasattr(page, 'wikiview') and page.wikiview is not None:
+        try:
+          # WebKit 2.42+ method - force light color scheme
+          page.wikiview.set_color_scheme(WebKit.ColorScheme.LIGHT)
+          self._webkit_original_schemes.append(page.wikiview)
+        except (AttributeError, TypeError):
+          # Fallback for older WebKit versions or if method doesn't exist
+          pass
+
+  # Restore original theme after printing
+
+  def _restore_theme(self):
+    """Restore original theme for both app and WebView"""
+    if not self._is_printing:
+      return
+
+    self._is_printing = False
+
+    # Restore app theme
+    if self._original_color_scheme is not None:
+      style_manager = Adw.StyleManager.get_default()
+      style_manager.set_color_scheme(self._original_color_scheme)
+      self._original_color_scheme = None
+
+    # Restore WebKit theme for all tabs that were switched
+    for wikiview in self._webkit_original_schemes:
+      try:
+        # WebKit 2.42+ method - restore to default (follows system theme)
+        wikiview.set_color_scheme(WebKit.ColorScheme.DEFAULT)
+      except (AttributeError, TypeError):
+        # Fallback for older WebKit versions
+        pass
+
+    # Clear the list
+    self._webkit_original_schemes = []
+
   # Print current page
 
   def _print_page_cb(self, action, parameter):
-    print_operation = WebKit.PrintOperation.new(self.page.wikiview)
-    self._print_set_settings(print_operation)
+    # Switch to light theme
+    self._switch_to_light_theme()
 
-    result = print_operation.run_dialog(self)
-    if result == WebKit.PrintOperationResponse.PRINT:
-      handler_finished = print_operation.connect('finished', self._print_operation_finished)
-      print_operation.connect('failed', self._print_operation_failed, handler_finished)
+    # Wait for theme to apply before showing print dialog
+    GLib.timeout_add(300, self._show_print_dialog)
 
   # Set print operation settings
 
@@ -600,16 +660,46 @@ class Window(Adw.ApplicationWindow):
     self._print_settings.set('output-uri', output_uri)
     print_operation.set_print_settings(self._print_settings)
 
+  # Show print dialog
+
+  def _show_print_dialog(self):
+    """Show the print dialog with light theme applied"""
+    print_operation = WebKit.PrintOperation.new(self.page.wikiview)
+    self._print_set_settings(print_operation)
+
+    # Run print dialog
+    result = print_operation.run_dialog(self)
+
+    if result == WebKit.PrintOperationResponse.PRINT:
+      # Connect to finished and failed signals
+      handler_finished = print_operation.connect('finished', self._print_operation_finished)
+      print_operation.connect('failed', self._print_operation_failed, handler_finished)
+    else:
+      # User cancelled - restore theme immediately
+      self._restore_theme()
+
+    return False
+
   # Show a notification when print operation is finished
 
   def _print_operation_finished(self, print_operation):
+    """Handle successful print completion"""
     self._print_settings = print_operation.get_print_settings()
+
+    # Restore theme after successful print
+    self._restore_theme()
+
     self.send_notification(_('Print operation completed'))
 
   # Show a notification when print operation failed
 
   def _print_operation_failed(self, print_operation, error, handler_finished):
+    """Handle print failure"""
     print_operation.disconnect(handler_finished)
+
+    # Restore theme after failed print
+    self._restore_theme()
+
     self.send_notification(_('Print operation failed'))
 
   # Open article in external browser

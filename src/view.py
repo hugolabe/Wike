@@ -22,7 +22,9 @@ cookie_manager.set_persistent_storage(cookies_file_path, WebKit.CookiePersistent
 
 # Settings and user content with custom css for wikiviews
 
-class ViewSettings:
+class ViewSettings(GObject.GObject):
+
+  __gsignals__ = { 'set-skin': (GObject.SIGNAL_RUN_FIRST, None, (bool,)) }
 
   web_settings = WebKit.Settings()
   user_content = WebKit.UserContentManager()
@@ -31,6 +33,8 @@ class ViewSettings:
   # Load custom css and connect view settings signals
 
   def __init__(self):
+    super().__init__()
+
     self.web_settings.set_user_agent('Mozilla/5.0 (Linux; Android; Mobile) AppleWebKit/537.36 (KHTML, like Gecko)')
     self.web_settings.set_default_font_size(settings.get_int('font-size'))
     self.web_settings.set_enable_back_forward_navigation_gestures(True)
@@ -43,15 +47,6 @@ class ViewSettings:
       self._css_view = ''
     else:
       self._css_view = gfile_contents[1].decode('utf-8')
-
-    gfile = Gio.File.new_for_uri('resource:///com/github/hugolabe/Wike/styles/dark.min.css')
-    try:
-      gfile_contents = gfile.load_contents(None)
-    except:
-      print('Can’t load dark css file from resources')
-      self._css_dark = ''
-    else:
-      self._css_dark = gfile_contents[1].decode('utf-8')
 
     gfile = Gio.File.new_for_uri('resource:///com/github/hugolabe/Wike/styles/sepia.min.css')
     try:
@@ -93,7 +88,9 @@ class ViewSettings:
   # System theme changed event
 
   def _system_theme_changed_cb(self, style_manager, dark):
-    self.set_style()
+    theme = settings.get_int('theme')
+    if theme == 3:
+      self.set_style()
 
   # Inject stylesheets for customize article view
 
@@ -110,17 +107,17 @@ class ViewSettings:
     self.user_content.add_style_sheet(style_font)
 
     theme = settings.get_int('theme')
+    is_dark = False
     match theme:
       case 1:
-        style_dark = WebKit.UserStyleSheet(self._css_dark, WebKit.UserContentInjectedFrames.ALL_FRAMES, WebKit.UserStyleLevel.USER, None, None)
-        self.user_content.add_style_sheet(style_dark)
+        is_dark = True
       case 2:
         style_sepia = WebKit.UserStyleSheet(self._css_sepia, WebKit.UserContentInjectedFrames.ALL_FRAMES, WebKit.UserStyleLevel.USER, None, None)
         self.user_content.add_style_sheet(style_sepia)
       case 3:
         if self._style_manager.get_dark():
-          style_dark = WebKit.UserStyleSheet(self._css_dark, WebKit.UserContentInjectedFrames.ALL_FRAMES, WebKit.UserStyleLevel.USER, None, None)
-          self.user_content.add_style_sheet(style_dark)
+          is_dark = True
+    self.emit('set-skin', is_dark)
 
     if not settings.get_boolean('preview-popups'):
       css_previews = '.mwe-popups{display:none!important}'
@@ -152,23 +149,37 @@ class WikiView(WebKit.WebView):
   def __init__(self):
     super().__init__(settings=view_settings.web_settings, user_content_manager=view_settings.user_content)
 
-    theme = settings.get_int('theme')
-    match theme:
-      case 1:
-        self.set_background_color(Gdk.RGBA(0.141, 0.141, 0.141, 1))
-      case 2:
-        self.set_background_color(Gdk.RGBA(0.976, 0.953, 0.914, 1))
-      case _:
-        self.set_background_color(Gdk.RGBA(1, 1, 1, 1))
-
+    self.set_background_color(Gdk.RGBA(1, 1, 1, 0))
     self.set_zoom_level(settings.get_int('zoom-level') / 100)
 
     settings.connect('changed::zoom-level', self._zoom_level_changed_cb)
+    view_settings.connect('set-skin', self._set_skin_cb)
+
+  # Set Wikipedia light or dark skin
+
+  def set_wikipedia_skin(self, is_dark):
+    if is_dark:
+      script = '''
+      document.documentElement.classList.remove("skin-theme-clientpref-day");
+      document.documentElement.classList.add("skin-theme-clientpref-night");
+      '''
+    else:
+      script = '''
+      document.documentElement.classList.remove("skin-theme-clientpref-night");
+      document.documentElement.classList.add("skin-theme-clientpref-day");
+      '''
+
+    self.evaluate_javascript(script, -1, None, None, None)
 
   # Settings zoom level changed event
 
   def _zoom_level_changed_cb(self, settings, key):
     self.set_zoom_level(settings.get_int('zoom-level') / 100)
+
+  # Set dark skin signal emitted
+
+  def _set_skin_cb(self, view_settings, is_dark):
+    self.set_wikipedia_skin(is_dark)
 
   # Load Wikipedia article by URI
 

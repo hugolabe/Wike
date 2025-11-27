@@ -6,16 +6,19 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
 /* Sepia theme */
 
-@define-color window_bg_color #fdf8e8;
-@define-color headerbar_bg_color #fdf6e3;
-@define-color sidebar_bg_color #e9e3d1;
-@define-color sidebar_backdrop_color #e9e3d1;
-@define-color secondary_sidebar_bg_color #f1ead8;
-@define-color secondary_sidebar_backdrop_color #f1ead8;
-@define-color view_bg_color #fefdf6;
-@define-color card_bg_color #fefdf6;
-@define-color dialog_bg_color #fdf8e8;
-@define-color popover_bg_color #fdf8e8;
-
-@define-color accent_bg_color @orange_4;
-@define-color accent_color @orange_5;
+:root {
+  --window-bg-color: #fdf8e8;
+  --headerbar-bg-color: #fdf6e3;
+  --headerbar-backdrop-color: #e9e3d1;
+  --sidebar-bg-color: #e9e3d1;
+  --sidebar-backdrop-color: #e9e3d1;
+  --secondary-sidebar-bg-color: #f1ead8;
+  --secondary-sidebar-backdrop-color: #f1ead8;
+  --overview-bg-color: #e9e3d1;
+  --view-bg-color: #fefdf6;
+  --card-bg-color: #fefdf6;
+  --dialog-bg-color: #fdf8e8;
+  --popover-bg-color: #fdf8e8;
+  --accent-bg-color: var(--orange-4);
+  --accent-color: var(--orange-5);
+}

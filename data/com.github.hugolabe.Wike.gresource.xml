@@ -5,7 +5,6 @@
     <file>languages/languages.min.json</file>
 
     <file>styles/view.min.css</file>
-    <file>styles/dark.min.css</file>
     <file>styles/sepia.min.css</file>
 
     <file>gtk/about.ui</file>

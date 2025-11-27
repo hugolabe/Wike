@@ -12,6 +12,9 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <!-- Status page -->
     <property name="child">
       <object class="AdwStatusPage" id="status_page">
+        <style>
+          <class name="wikiview-status"/>
+        </style>
 
         <!-- Buttons box -->
         <property name="child">

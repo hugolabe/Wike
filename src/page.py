@@ -91,6 +91,7 @@ class PageBox(Gtk.Box):
     tabpage = self._window.tabview.get_page(self)
 
     match event:
+
       case WebKit.LoadEvent.STARTED:
         self._is_main = wikiview.get_uri().endswith('.wikipedia.org/')
         self.search_bar.set_search_mode(False)
@@ -100,6 +101,16 @@ class PageBox(Gtk.Box):
         if tabpage.get_selected():
           self._window.set_title(_('Loading…'))
           wikiview.grab_focus()
+
+      case WebKit.LoadEvent.COMMITTED:
+        theme = settings.get_int('theme')
+        match theme:
+          case 1:
+            wikiview.set_wikipedia_skin(True)
+          case 3:
+            style_manager = Adw.StyleManager.get_default()
+            if style_manager.get_dark():
+              wikiview.set_wikipedia_skin(True)
 
       case WebKit.LoadEvent.FINISHED:
         tabpage.set_loading(False)

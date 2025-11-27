@@ -7,19 +7,19 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: fi\n"
 
-#: ../src/view.py:293
+#: ../src/view.py:310
 msgid "Article not found"
 msgstr "Artikkelia ei löydy"
 
-#: ../src/page.py:231
+#: ../src/page.py:238
 msgid "Can’t find any results for requested query"
 msgstr "Hakuehdoilla ei löytynyt tuloksia"
 
-#: ../src/view.py:295
+#: ../src/view.py:312
 msgid "Can’t access Wikipedia"
 msgstr "Ei pääsyä Wikipediaan"
 
-#: ../src/page.py:239
+#: ../src/page.py:246
 msgid "Check your Internet connection and try again"
 msgstr "Tarkista internetyhteys ja yritä uudelleen"
 
@@ -46,63 +46,8 @@ msgstr "Hakuehdotukset"
 msgid "translator-credits"
 msgstr "Jiri Grönroos"
 
-#: ../src/view.py:388 ../data/gtk/bookmarks.ui:32
+#: ../src/view.py:405 ../data/gtk/bookmarks.ui:32
 msgid "Add Bookmark"
-msgstr "Lisää kirjanmerkki"
-
-#: ../data/gtk/help-overlay.ui:21
-msgctxt "shortcuts dialog"
-msgid "General"
-msgstr "Yleiset"
-
-#: ../data/gtk/help-overlay.ui:39
-msgctxt "shortcuts dialog"
-msgid "Table of contents"
-msgstr "Sisällysluettelo"
-
-#: ../data/gtk/help-overlay.ui:74
-msgctxt "shortcuts dialog"
-msgid "Preferences"
-msgstr "Asetukset"
-
-#: ../data/gtk/help-overlay.ui:88
-msgctxt "shortcuts dialog"
-msgid "Quit"
-msgstr "Lopeta"
-
-#: ../data/gtk/help-overlay.ui:81
-msgctxt "shortcuts dialog"
-msgid "Keyboard shortcuts"
-msgstr "Pikanäppäimet"
-
-#: ../data/gtk/help-overlay.ui:164
-msgctxt "shortcuts dialog"
-msgid "Navigation"
-msgstr "Liikkuminen"
-
-#: ../data/gtk/help-overlay.ui:168
-msgctxt "shortcuts dialog"
-msgid "Search articles"
-msgstr "Etsi artikkeleja"
-
-#: ../data/gtk/help-overlay.ui:196
-msgctxt "shortcuts dialog"
-msgid "Previous page"
-msgstr "Edellinen sivu"
-
-#: ../data/gtk/help-overlay.ui:203
-msgctxt "shortcuts dialog"
-msgid "Next page"
-msgstr "Seuraava sivu"
-
-#: ../data/gtk/help-overlay.ui:99 ../data/gtk/help-overlay.ui:103
-msgctxt "shortcuts dialog"
-msgid "Bookmarks"
-msgstr "Kirjanmerkit"
-
-#: ../data/gtk/help-overlay.ui:110
-msgctxt "shortcuts dialog"
-msgid "Add bookmark"
 msgstr "Lisää kirjanmerkki"
 
 #: ../data/gtk/menu-main.ui:15
@@ -130,12 +75,12 @@ msgid "Languages"
 msgstr "Kielet"
 
 #. Don't translate app name!
-#: ../data/com.github.hugolabe.Wike.desktop.in:3
+#: ../data/com.github.hugolabe.Wike.desktop.in:2
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:7
 msgid "Wike"
 msgstr "Wike"
 
-#: ../data/gtk/about.ui:15 ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../data/gtk/about.ui:15 ../data/com.github.hugolabe.Wike.desktop.in:3
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
 msgid "Search and read Wikipedia articles"
 msgstr "Hae ja lue Wikipedia-artikkeleita"
@@ -202,11 +147,11 @@ msgstr "Tyhjennä"
 msgid "Cookies and cache data will be deleted"
 msgstr "Evästeet ja välimuisti tyhjennetään"
 
-#: ../data/gtk/page-status.ui:50
+#: ../data/gtk/page-status.ui:53
 msgid "Try Again"
 msgstr "Yritä uudelleen"
 
-#: ../data/gtk/menu-article.ui:34 ../data/gtk/page-status.ui:39
+#: ../data/gtk/menu-article.ui:34 ../data/gtk/page-status.ui:42
 msgid "Random Article"
 msgstr "Satunnainen artikkeli"
 
@@ -228,49 +173,19 @@ msgstr "Valitse kaikki"
 msgid "Select None"
 msgstr "Älä valitse mitään"
 
-#: ../data/gtk/help-overlay.ui:25
-msgctxt "shortcuts dialog"
-msgid "Main menu"
-msgstr "Päävalikko"
-
-#: ../data/gtk/help-overlay.ui:121
-msgctxt "shortcuts dialog"
-msgid "Tabs"
-msgstr "Välilehdet"
-
-#: ../data/gtk/help-overlay.ui:125
-msgctxt "shortcuts dialog"
-msgid "New tab"
-msgstr "Uusi välilehti"
-
-#: ../data/gtk/help-overlay.ui:132
-msgctxt "shortcuts dialog"
-msgid "Close current tab"
-msgstr "Sulje nykyinen välilehti"
-
-#: ../data/gtk/help-overlay.ui:139
-msgctxt "shortcuts dialog"
-msgid "Next tab"
-msgstr "Seuraava välilehti"
-
-#: ../data/gtk/help-overlay.ui:146
-msgctxt "shortcuts dialog"
-msgid "Previous tab"
-msgstr "Edellinen välilehti"
-
-#: ../src/view.py:400
+#: ../src/view.py:417
 msgid "Open Link in New Tab"
 msgstr "Avaa linkki uudessa välilehdessä"
 
-#: ../src/view.py:406
+#: ../src/view.py:423
 msgid "Add Link to Bookmarks"
 msgstr "Lisää linkki kirjanmerkkeihin"
 
-#: ../src/view.py:402
+#: ../src/view.py:419
 msgid "Open Link in Browser"
 msgstr "Avaa linkki selaimessa"
 
-#: ../src/view.py:408 ../data/gtk/menu-article.ui:46
+#: ../src/view.py:425 ../data/gtk/menu-article.ui:50
 msgid "Copy Link to Clipboard"
 msgstr "Kopioi linkki leikepöydälle"
 
@@ -281,11 +196,6 @@ msgstr "Työpöytähaut suoritetaan oletuskielellä"
 #: ../data/gtk/prefs.ui:72
 msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
 msgstr "Voit etsiä muilla kielillä käyttämällä etuliitettä. Esimerkiksi -en etsii englanniksi"
-
-#: ../data/gtk/help-overlay.ui:182
-msgctxt "shortcuts dialog"
-msgid "Random article"
-msgstr "Satunnainen artikkeli"
 
 #: ../src/menu.py:101
 msgid "Pick a Font"
@@ -311,19 +221,19 @@ msgstr "Viimeiset 30 päivää"
 msgid "Show full history"
 msgstr "Näytä koko historia"
 
-#: ../src/window.py:509 ../src/page.py:140
+#: ../src/window.py:510 ../src/page.py:147
 msgid "Bookmark added: "
 msgstr "Kirjanmerkki lisätty: "
 
-#: ../src/window.py:566
+#: ../src/window.py:607
 msgid "Print operation completed"
 msgstr "Tulostus valmistui"
 
-#: ../src/window.py:572
+#: ../src/window.py:613
 msgid "Print operation failed"
 msgstr "Tulostus epäonnistui"
 
-#: ../src/window.py:587
+#: ../src/window.py:630
 msgid "Link copied to clipboard"
 msgstr "Linkki kopioitu leikepöydälle"
 
@@ -355,15 +265,15 @@ msgstr "Kaikki sisältö on Wikipedia.org-sivustolta ja julkaistu CC BY-SA 4.0 -
 "\n"
 "Wike on itsenäinen kehitysprojekti. Se ei saa tukea eikä sillä ole yhteyttä Wikimedia Foundationiin."
 
-#: ../src/page.py:102 ../src/page.py:105
+#: ../src/page.py:99 ../src/page.py:102
 msgid "Loading…"
 msgstr "Ladataan…"
 
-#: ../src/page.py:230
+#: ../src/page.py:237
 msgid "Article not Found"
 msgstr "Artikkelia ei löydy"
 
-#: ../src/page.py:238
+#: ../src/page.py:245
 msgid "Can’t Access Wikipedia"
 msgstr "Pääsy Wikipediaan ei onnistu"
 
@@ -379,51 +289,46 @@ msgstr "Ei sisältöä"
 msgid "There is no table of contents for this page"
 msgstr "Tällä sivulla ei ole sisällysluetteloa"
 
-#: ../data/gtk/search-settings.ui:23 ../data/gtk/languages.ui:11
+#: ../data/gtk/languages.ui:11 ../data/gtk/search-settings.ui:23
 msgid "Pick your Languages"
 msgstr "Valitse kielet"
 
-#: ../data/gtk/help-overlay.ui:32
-msgctxt "shortcuts dialog"
-msgid "Sidebar"
-msgstr "Sivupalkki"
-
-#: ../data/gtk/help-overlay.ui:46
+#: ../data/gtk/shortcuts-dialog.ui:40
 msgctxt "shortcut window"
 msgid "Languages"
 msgstr "Kielet"
 
-#: ../data/gtk/help-overlay.ui:53
+#: ../data/gtk/shortcuts-dialog.ui:47
 msgctxt "shortcut window"
 msgid "Search text"
 msgstr "Etsi tekstiä"
 
-#: ../data/gtk/help-overlay.ui:60
+#: ../data/gtk/shortcuts-dialog.ui:54
 msgctxt "shortcut window"
 msgid "Print"
 msgstr "Tulosta"
 
-#: ../data/gtk/help-overlay.ui:67
+#: ../data/gtk/shortcuts-dialog.ui:61
 msgctxt "shortcut window"
 msgid "Copy link to clipboard"
 msgstr "Kopioi linkki leikepöydälle"
 
-#: ../data/gtk/help-overlay.ui:175
+#: ../data/gtk/shortcuts-dialog.ui:169
 msgctxt "shortcut window"
 msgid "Main page"
 msgstr "Pääsivu"
 
-#: ../data/gtk/help-overlay.ui:189
+#: ../data/gtk/shortcuts-dialog.ui:190
 msgctxt "shortcut window"
 msgid "History of recent articles"
 msgstr "Viimeisimpien artikkelien historia"
 
-#: ../data/gtk/help-overlay.ui:210
+#: ../data/gtk/shortcuts-dialog.ui:211
 msgctxt "shortcut window"
 msgid "Reload current page"
 msgstr "Lataa nykyinen sivu uudelleen"
 
-#: ../src/page.py:246 ../data/gtk/search.ui:24 ../data/gtk/window.ui:87
+#: ../src/page.py:253 ../data/gtk/search.ui:24 ../data/gtk/window.ui:87
 #: ../data/gtk/window.ui:210 ../data/gtk/window.ui:356
 msgid "Search Wikipedia"
 msgstr "Etsi Wikipediasta"
@@ -490,11 +395,11 @@ msgstr "Sivupalkki"
 msgid "Search text"
 msgstr "Etsi tekstiä"
 
-#: ../src/page.py:247
+#: ../src/page.py:254
 msgid "Start typing to search Wikipedia articles"
 msgstr "Aloita kirjoittaminen etsiäksesi Wikipedia-artikkeleita"
 
-#: ../data/gtk/menu-article.ui:30 ../data/gtk/page-status.ui:27
+#: ../data/gtk/menu-article.ui:30 ../data/gtk/page-status.ui:30
 msgid "Main Page"
 msgstr "Etusivu"
 
@@ -550,7 +455,7 @@ msgstr "Tulosta"
 msgid "Search Text"
 msgstr "Etsi tekstiä"
 
-#: ../data/gtk/menu-article.ui:42
+#: ../data/gtk/menu-article.ui:46
 msgid "Open in Browser"
 msgstr "Avaa selaimessa"
 
@@ -582,7 +487,7 @@ msgstr "Eteenpäin"
 msgid "Main Menu"
 msgstr "Päävalikko"
 
-#: ../data/gtk/help-overlay.ui:153
+#: ../data/gtk/shortcuts-dialog.ui:147
 msgctxt "shortcut window"
 msgid "View open tabs"
 msgstr "Näytä avoimet välilehdet"
@@ -663,4 +568,112 @@ msgstr "Edellinen tulos"
 #: ../data/gtk/page.ui:44
 msgid "Next Result"
 msgstr "Seuraava tulos"
+
+#: ../data/gtk/dialogs.ui:116
+msgid "Wikipedia Link"
+msgstr "Wikipedia-linkki"
+
+#: ../data/gtk/shortcuts-dialog.ui:15
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Yleiset"
+
+#: ../data/gtk/shortcuts-dialog.ui:19
+msgctxt "shortcut window"
+msgid "Main menu"
+msgstr "Päävalikko"
+
+#: ../data/gtk/shortcuts-dialog.ui:26
+msgctxt "shortcut window"
+msgid "Sidebar"
+msgstr "Sivupalkki"
+
+#: ../data/gtk/shortcuts-dialog.ui:33
+msgctxt "shortcut window"
+msgid "Table of contents"
+msgstr "Sisällysluettelo"
+
+#: ../data/gtk/shortcuts-dialog.ui:68
+msgctxt "shortcut window"
+msgid "Preferences"
+msgstr "Asetukset"
+
+#: ../data/gtk/shortcuts-dialog.ui:75
+msgctxt "shortcut window"
+msgid "Keyboard shortcuts"
+msgstr "Pikanäppäimet"
+
+#: ../data/gtk/shortcuts-dialog.ui:82
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Lopeta"
+
+#: ../data/gtk/shortcuts-dialog.ui:93 ../data/gtk/shortcuts-dialog.ui:97
+msgctxt "shortcut window"
+msgid "Bookmarks"
+msgstr "Kirjanmerkit"
+
+#: ../data/gtk/shortcuts-dialog.ui:104
+msgctxt "shortcut window"
+msgid "Add bookmark"
+msgstr "Lisää kirjanmerkki"
+
+#: ../data/gtk/shortcuts-dialog.ui:115
+msgctxt "shortcut window"
+msgid "Tabs"
+msgstr "Välilehdet"
+
+#: ../data/gtk/shortcuts-dialog.ui:119
+msgctxt "shortcut window"
+msgid "New tab"
+msgstr "Uusi välilehti"
+
+#: ../data/gtk/shortcuts-dialog.ui:126
+msgctxt "shortcut window"
+msgid "Close current tab"
+msgstr "Sulje nykyinen välilehti"
+
+#: ../data/gtk/shortcuts-dialog.ui:133
+msgctxt "shortcut window"
+msgid "Next tab"
+msgstr "Seuraava välilehti"
+
+#: ../data/gtk/shortcuts-dialog.ui:140
+msgctxt "shortcut window"
+msgid "Previous tab"
+msgstr "Edellinen välilehti"
+
+#: ../data/gtk/shortcuts-dialog.ui:158
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Liikkuminen"
+
+#: ../data/gtk/shortcuts-dialog.ui:162
+msgctxt "shortcut window"
+msgid "Search articles"
+msgstr "Etsi artikkeleita"
+
+#: ../data/gtk/shortcuts-dialog.ui:176
+msgctxt "shortcut window"
+msgid "Random article"
+msgstr "Satunnainen artikkeli"
+
+#: ../data/gtk/shortcuts-dialog.ui:197
+msgctxt "shortcut window"
+msgid "Previous page"
+msgstr "Edellinen sivu"
+
+#: ../data/gtk/shortcuts-dialog.ui:204
+msgctxt "shortcut window"
+msgid "Next page"
+msgstr "Seuraava sivu"
+
+#: ../data/gtk/dialogs.ui:97 ../data/gtk/menu-article.ui:38
+msgid "Open Wikipedia Link"
+msgstr "Avaa Wikipedia-linkki"
+
+#: ../data/gtk/shortcuts-dialog.ui:183
+msgctxt "shortcut window"
+msgid "Open Wikipedia link"
+msgstr "Avaa Wikipedia-linkki"
 

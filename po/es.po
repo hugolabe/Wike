@@ -7,19 +7,19 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: es\n"
 
-#: ../src/view.py:293
+#: ../src/view.py:310
 msgid "Article not found"
 msgstr "Artículo no encontrado"
 
-#: ../src/page.py:231
-msgid "Can't find any results for requested query"
+#: ../src/page.py:238
+msgid "Can’t find any results for requested query"
 msgstr "No se han encontrado resultados para la búsqueda solicitada"
 
-#: ../src/view.py:295
-msgid "Can't access Wikipedia"
+#: ../src/view.py:312
+msgid "Can’t access Wikipedia"
 msgstr "No se puede acceder a Wikipedia"
 
-#: ../src/page.py:239
+#: ../src/page.py:246
 msgid "Check your Internet connection and try again"
 msgstr "Compruebe su conexión a Internet e inténtelo de nuevo"
 
@@ -46,63 +46,8 @@ msgstr "Sugerencias de búsqueda"
 msgid "translator-credits"
 msgstr "Hugo Olabera <hugolabe@gmail.com>"
 
-#: ../src/view.py:388 ../data/gtk/bookmarks.ui:32
+#: ../src/view.py:405 ../data/gtk/bookmarks.ui:32
 msgid "Add Bookmark"
-msgstr "Añadir marcador"
-
-#: ../data/gtk/help-overlay.ui:21
-msgctxt "shortcut window"
-msgid "General"
-msgstr "General"
-
-#: ../data/gtk/help-overlay.ui:39
-msgctxt "shortcut window"
-msgid "Table of contents"
-msgstr "Índice de contenidos"
-
-#: ../data/gtk/help-overlay.ui:74
-msgctxt "shortcut window"
-msgid "Preferences"
-msgstr "Preferencias"
-
-#: ../data/gtk/help-overlay.ui:88
-msgctxt "shortcut window"
-msgid "Quit"
-msgstr "Salir"
-
-#: ../data/gtk/help-overlay.ui:81
-msgctxt "shortcut window"
-msgid "Keyboard shortcuts"
-msgstr "Atajos de teclado"
-
-#: ../data/gtk/help-overlay.ui:164
-msgctxt "shortcut window"
-msgid "Navigation"
-msgstr "Navegación"
-
-#: ../data/gtk/help-overlay.ui:168
-msgctxt "shortcut window"
-msgid "Search articles"
-msgstr "Buscar artículos"
-
-#: ../data/gtk/help-overlay.ui:196
-msgctxt "shortcut window"
-msgid "Previous page"
-msgstr "Atrás"
-
-#: ../data/gtk/help-overlay.ui:203
-msgctxt "shortcut window"
-msgid "Next page"
-msgstr "Adelante"
-
-#: ../data/gtk/help-overlay.ui:99 ../data/gtk/help-overlay.ui:103
-msgctxt "shortcut window"
-msgid "Bookmarks"
-msgstr "Marcadores"
-
-#: ../data/gtk/help-overlay.ui:110
-msgctxt "shortcut window"
-msgid "Add bookmark"
 msgstr "Añadir marcador"
 
 #: ../data/gtk/menu-main.ui:15
@@ -130,12 +75,12 @@ msgid "Languages"
 msgstr "Idiomas"
 
 #. Don't translate app name!
-#: ../data/com.github.hugolabe.Wike.desktop.in:3
+#: ../data/com.github.hugolabe.Wike.desktop.in:2
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:7
 msgid "Wike"
 msgstr "Wike"
 
-#: ../data/gtk/about.ui:15 ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../data/gtk/about.ui:15 ../data/com.github.hugolabe.Wike.desktop.in:3
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
 msgid "Search and read Wikipedia articles"
 msgstr "Buscar y leer artículos de Wikipedia"
@@ -202,11 +147,11 @@ msgstr "Borrar"
 msgid "Cookies and cache data will be deleted"
 msgstr "Se borrarán las cookies y los datos de la caché"
 
-#: ../data/gtk/page-status.ui:50
+#: ../data/gtk/page-status.ui:53
 msgid "Try Again"
 msgstr "Intentar de nuevo"
 
-#: ../data/gtk/menu-article.ui:34 ../data/gtk/page-status.ui:39
+#: ../data/gtk/menu-article.ui:34 ../data/gtk/page-status.ui:42
 msgid "Random Article"
 msgstr "Artículo aleatorio"
 
@@ -228,49 +173,19 @@ msgstr "Seleccionar todo"
 msgid "Select None"
 msgstr "Seleccionar nada"
 
-#: ../data/gtk/help-overlay.ui:25
-msgctxt "shortcut window"
-msgid "Main menu"
-msgstr "Menú principal"
-
-#: ../data/gtk/help-overlay.ui:121
-msgctxt "shortcut window"
-msgid "Tabs"
-msgstr "Pestañas"
-
-#: ../data/gtk/help-overlay.ui:125
-msgctxt "shortcut window"
-msgid "New tab"
-msgstr "Nueva pestaña"
-
-#: ../data/gtk/help-overlay.ui:132
-msgctxt "shortcut window"
-msgid "Close current tab"
-msgstr "Cerrar la pestaña actual"
-
-#: ../data/gtk/help-overlay.ui:139
-msgctxt "shortcut window"
-msgid "Next tab"
-msgstr "Pestaña siguiente"
-
-#: ../data/gtk/help-overlay.ui:146
-msgctxt "shortcut window"
-msgid "Previous tab"
-msgstr "Pestaña anterior"
-
-#: ../src/view.py:400
+#: ../src/view.py:417
 msgid "Open Link in New Tab"
 msgstr "Abrir enlace en una pestaña nueva"
 
-#: ../src/view.py:406
+#: ../src/view.py:423
 msgid "Add Link to Bookmarks"
 msgstr "Añadir enlace a los marcadores"
 
-#: ../src/view.py:402
+#: ../src/view.py:419
 msgid "Open Link in Browser"
 msgstr "Abrir enlace en el navegador"
 
-#: ../src/view.py:408 ../data/gtk/menu-article.ui:46
+#: ../src/view.py:425 ../data/gtk/menu-article.ui:50
 msgid "Copy Link to Clipboard"
 msgstr "Copiar la dirección del enlace"
 
@@ -281,11 +196,6 @@ msgstr "Las búsquedas del escritorio se realizan en el idioma predeterminado"
 #: ../data/gtk/prefs.ui:72
 msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
 msgstr "Puede buscar en otros idiomas utilizando un prefijo. Ej. -es para buscar en español"
-
-#: ../data/gtk/help-overlay.ui:182
-msgctxt "shortcut window"
-msgid "Random article"
-msgstr "Artículo aleatorio"
 
 #: ../src/menu.py:101
 msgid "Pick a Font"
@@ -311,19 +221,19 @@ msgstr "Últimos 30 días"
 msgid "Show full history"
 msgstr "Mostrar el historial completo"
 
-#: ../src/window.py:509 ../src/page.py:140
+#: ../src/window.py:510 ../src/page.py:147
 msgid "Bookmark added: "
 msgstr "Marcador añadido: "
 
-#: ../src/window.py:566
+#: ../src/window.py:607
 msgid "Print operation completed"
 msgstr "Operación de impresión completada"
 
-#: ../src/window.py:572
+#: ../src/window.py:613
 msgid "Print operation failed"
 msgstr "Ha fallado la operación de impresión"
 
-#: ../src/window.py:587
+#: ../src/window.py:630
 msgid "Link copied to clipboard"
 msgstr "Enlace copiado al portapapeles"
 
@@ -355,16 +265,16 @@ msgstr "Todo el contenido de Wikipedia.org y disponible bajo licencia CC BY-SA 4
 "\n"
 "Wike es un desarrollo independiente no respaldado ni afiliado a la Fundación Wikimedia."
 
-#: ../src/page.py:102 ../src/page.py:105
+#: ../src/page.py:99 ../src/page.py:102
 msgid "Loading…"
 msgstr "Cargando…"
 
-#: ../src/page.py:230
+#: ../src/page.py:237
 msgid "Article not Found"
 msgstr "Artículo no encontrado"
 
-#: ../src/page.py:238
-msgid "Can't Access Wikipedia"
+#: ../src/page.py:245
+msgid "Can’t Access Wikipedia"
 msgstr "No se puede acceder a Wikipedia"
 
 #: ../src/bookmarks.py:33
@@ -379,51 +289,46 @@ msgstr "Sin índice"
 msgid "There is no table of contents for this page"
 msgstr "No existe un índice de contenidos para esta página"
 
-#: ../data/gtk/search-settings.ui:23 ../data/gtk/languages.ui:11
+#: ../data/gtk/languages.ui:11 ../data/gtk/search-settings.ui:23
 msgid "Pick your Languages"
 msgstr "Escojer idiomas"
 
-#: ../data/gtk/help-overlay.ui:32
-msgctxt "shortcut window"
-msgid "Sidebar"
-msgstr "Panel lateral"
-
-#: ../data/gtk/help-overlay.ui:46
+#: ../data/gtk/shortcuts-dialog.ui:40
 msgctxt "shortcut window"
 msgid "Languages"
 msgstr "Idiomas"
 
-#: ../data/gtk/help-overlay.ui:53
+#: ../data/gtk/shortcuts-dialog.ui:47
 msgctxt "shortcut window"
 msgid "Search text"
 msgstr "Buscar texto"
 
-#: ../data/gtk/help-overlay.ui:60
+#: ../data/gtk/shortcuts-dialog.ui:54
 msgctxt "shortcut window"
 msgid "Print"
 msgstr "Imprimir"
 
-#: ../data/gtk/help-overlay.ui:67
+#: ../data/gtk/shortcuts-dialog.ui:61
 msgctxt "shortcut window"
 msgid "Copy link to clipboard"
 msgstr "Copiar la dirección del enlace"
 
-#: ../data/gtk/help-overlay.ui:175
+#: ../data/gtk/shortcuts-dialog.ui:169
 msgctxt "shortcut window"
 msgid "Main page"
 msgstr "Portada"
 
-#: ../data/gtk/help-overlay.ui:189
+#: ../data/gtk/shortcuts-dialog.ui:190
 msgctxt "shortcut window"
 msgid "History of recent articles"
 msgstr "Historial de artículos recientes"
 
-#: ../data/gtk/help-overlay.ui:210
+#: ../data/gtk/shortcuts-dialog.ui:211
 msgctxt "shortcut window"
 msgid "Reload current page"
 msgstr "Recargar página"
 
-#: ../src/page.py:246 ../data/gtk/search.ui:24 ../data/gtk/window.ui:87
+#: ../src/page.py:253 ../data/gtk/search.ui:24 ../data/gtk/window.ui:87
 #: ../data/gtk/window.ui:210 ../data/gtk/window.ui:356
 msgid "Search Wikipedia"
 msgstr "Buscar en Wikipedia"
@@ -490,11 +395,11 @@ msgstr "Panel lateral"
 msgid "Search text"
 msgstr "Buscar texto"
 
-#: ../src/page.py:247
+#: ../src/page.py:254
 msgid "Start typing to search Wikipedia articles"
 msgstr "Comenzar a teclear para buscar artículos en Wikipedia"
 
-#: ../data/gtk/menu-article.ui:30 ../data/gtk/page-status.ui:27
+#: ../data/gtk/menu-article.ui:30 ../data/gtk/page-status.ui:30
 msgid "Main Page"
 msgstr "Portada"
 
@@ -550,7 +455,7 @@ msgstr "Imprimir"
 msgid "Search Text"
 msgstr "Buscar texto"
 
-#: ../data/gtk/menu-article.ui:42
+#: ../data/gtk/menu-article.ui:46
 msgid "Open in Browser"
 msgstr "Abrir en el navegador"
 
@@ -582,7 +487,7 @@ msgstr "Adelante"
 msgid "Main Menu"
 msgstr "Menú principal"
 
-#: ../data/gtk/help-overlay.ui:153
+#: ../data/gtk/shortcuts-dialog.ui:147
 msgctxt "shortcut window"
 msgid "View open tabs"
 msgstr "Ver pestañas abiertas"
@@ -663,4 +568,112 @@ msgstr "Resultado anterior"
 #: ../data/gtk/page.ui:44
 msgid "Next Result"
 msgstr "Siguiente resultado"
+
+#: ../data/gtk/dialogs.ui:116
+msgid "Wikipedia Link"
+msgstr "Enlace de Wikipedia"
+
+#: ../data/gtk/shortcuts-dialog.ui:15
+msgctxt "shortcut window"
+msgid "General"
+msgstr "General"
+
+#: ../data/gtk/shortcuts-dialog.ui:19
+msgctxt "shortcut window"
+msgid "Main menu"
+msgstr "Menú principal"
+
+#: ../data/gtk/shortcuts-dialog.ui:26
+msgctxt "shortcut window"
+msgid "Sidebar"
+msgstr "Panel lateral"
+
+#: ../data/gtk/shortcuts-dialog.ui:33
+msgctxt "shortcut window"
+msgid "Table of contents"
+msgstr "Índice de contenidos"
+
+#: ../data/gtk/shortcuts-dialog.ui:68
+msgctxt "shortcut window"
+msgid "Preferences"
+msgstr "Preferencias"
+
+#: ../data/gtk/shortcuts-dialog.ui:75
+msgctxt "shortcut window"
+msgid "Keyboard shortcuts"
+msgstr "Atajos de teclado"
+
+#: ../data/gtk/shortcuts-dialog.ui:82
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Salir"
+
+#: ../data/gtk/shortcuts-dialog.ui:93 ../data/gtk/shortcuts-dialog.ui:97
+msgctxt "shortcut window"
+msgid "Bookmarks"
+msgstr "Marcadores"
+
+#: ../data/gtk/shortcuts-dialog.ui:104
+msgctxt "shortcut window"
+msgid "Add bookmark"
+msgstr "Añadir marcador"
+
+#: ../data/gtk/shortcuts-dialog.ui:115
+msgctxt "shortcut window"
+msgid "Tabs"
+msgstr "Pestañas"
+
+#: ../data/gtk/shortcuts-dialog.ui:119
+msgctxt "shortcut window"
+msgid "New tab"
+msgstr "Nueva pestaña"
+
+#: ../data/gtk/shortcuts-dialog.ui:126
+msgctxt "shortcut window"
+msgid "Close current tab"
+msgstr "Cerrar la pestaña actual"
+
+#: ../data/gtk/shortcuts-dialog.ui:133
+msgctxt "shortcut window"
+msgid "Next tab"
+msgstr "Pestaña siguiente"
+
+#: ../data/gtk/shortcuts-dialog.ui:140
+msgctxt "shortcut window"
+msgid "Previous tab"
+msgstr "Pestaña anterior"
+
+#: ../data/gtk/shortcuts-dialog.ui:158
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Navegación"
+
+#: ../data/gtk/shortcuts-dialog.ui:162
+msgctxt "shortcut window"
+msgid "Search articles"
+msgstr "Buscar artículos"
+
+#: ../data/gtk/shortcuts-dialog.ui:176
+msgctxt "shortcut window"
+msgid "Random article"
+msgstr "Artículo aleatorio"
+
+#: ../data/gtk/shortcuts-dialog.ui:197
+msgctxt "shortcut window"
+msgid "Previous page"
+msgstr "Atrás"
+
+#: ../data/gtk/shortcuts-dialog.ui:204
+msgctxt "shortcut window"
+msgid "Next page"
+msgstr "Adelante"
+
+#: ../data/gtk/dialogs.ui:97 ../data/gtk/menu-article.ui:38
+msgid "Open Wikipedia Link"
+msgstr "Abrir enlace de Wikipedia"
+
+#: ../data/gtk/shortcuts-dialog.ui:183
+msgctxt "shortcut window"
+msgid "Open Wikipedia link"
+msgstr "Abrir enlace de Wikipedia"
 

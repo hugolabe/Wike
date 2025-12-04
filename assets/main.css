@@ -56,10 +56,10 @@ header .image-pc {
 
 header .video-pc {
 	position: absolute;
-	top: 50%;
+	top: 70%;
 	left: 50%;
-	width: 85%;
-	transform: translateX(-50%) translateY(-50%);
+	width: 76%;
+	transform: translateX(-50%) translateY(-70%);
 }
 
 footer {
@@ -139,7 +139,7 @@ footer img {
 }
 
 #languages .tile img {
-  border-radius: 10px
+  border-radius: 14px
 }
 
 #features {

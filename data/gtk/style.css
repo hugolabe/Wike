@@ -61,3 +61,17 @@ SPDX-License-Identifier: GPL-3.0-or-later
 .navigation-sidebar > row {
   min-height: 28px;
 }
+
+/* Dark theme */
+
+@media (prefers-color-scheme: dark) {
+
+  :root {
+    --headerbar-bg-color: #101418;
+  }
+
+  .wikiview-status {
+    background-color: #101418;
+  }
+
+}

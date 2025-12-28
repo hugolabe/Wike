@@ -51,7 +51,7 @@ Get it from the Snap Store.
 | Ubuntu (PPA) | [`wike`](https://code.launchpad.net/~apandada1/+archive/ubuntu/wike) | [Archisman Panigrahi](https://github.com/archisman-panigrahi) |
 | Debian Linux (bookworm and later) | [`wike`](https://tracker.debian.org/pkg/wike) | [Matthias Geiger](https://github.com/werdahias) |
 | Fedora Linux | [`wike`](https://src.fedoraproject.org/rpms/wike) | [Gustavo Costa](https://github.com/xfgusta) |
-|OpenMandriva| [`wike`](https://abf.openmandriva.org/openmandriva/wike/build_lists) | [Nekothegamer](https://github.com/Nekothegamer) |https://github.com/OpenMandrivaAssociation/wikehttps://github.com/OpenMandrivaAssociation/wikehttps://github.com/OpenMandrivaAssociation/wike
+| OpenMandriva | [`wike`](https://abf.openmandriva.org/openmandriva/wike/build_lists) | [Nekothegamer](https://github.com/Nekothegamer) |
 
 ## Build
 

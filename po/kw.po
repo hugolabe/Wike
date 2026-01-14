@@ -1,0 +1,679 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Wike\n"
+"Language: kw\n"
+
+#: ../src/view.py:310
+msgid "Article not found"
+msgstr "Artikel na kavosys"
+
+#: ../src/page.py:238
+msgid "Can’t find any results for requested query"
+msgstr "Y fyllis dhe kavos neb sewyansow rag an govyn"
+
+#: ../src/view.py:312
+msgid "Can’t access Wikipedia"
+msgstr "Y fyllis dhe drehedhes Wikipedya"
+
+#: ../src/page.py:246
+msgid "Check your Internet connection and try again"
+msgstr "Checkya dha junyans kesrosweyth hag assaya arta"
+
+#: ../data/gtk/dialogs.ui:56
+msgid "Clear Bookmarks List?"
+msgstr "Dilea Rol Lyververkys?"
+
+#: ../data/gtk/dialogs.ui:57
+msgid "All bookmarks in the list will be removed permanently."
+msgstr "Oll lyververkys yn an rol a wra removys yn andileadow."
+
+#: ../data/gtk/dialogs.ui:67
+msgid "Clear List"
+msgstr "Dilea Rol"
+
+#: ../data/gtk/search-settings.ui:64
+msgid "Search Suggestions"
+msgstr "Kussulyow Hwithrans"
+
+#. Add your name like this:
+#. 
+#. Hugo Olabera <hugolabe@gmail.com>
+#: ../data/gtk/about.ui:17
+msgid "translator-credits"
+msgstr "Flynn"
+
+#: ../src/view.py:405 ../data/gtk/bookmarks.ui:32
+msgid "Add Bookmark"
+msgstr "Addya Lyververk"
+
+#: ../data/gtk/menu-main.ui:15
+msgid "Preferences"
+msgstr "Settyansyow"
+
+#: ../data/gtk/menu-main.ui:19
+msgid "Keyboard Shortcuts"
+msgstr "Kesunyansow Bysowek"
+
+#: ../data/gtk/menu-main.ui:23
+msgid "About Wike"
+msgstr "A-dro Wike"
+
+#: ../data/gtk/prefs.ui:21
+msgid "Behavior"
+msgstr "Fara"
+
+#: ../data/gtk/prefs.ui:82
+msgid "Keep a List of Recent Articles"
+msgstr "Gwitha unn rol a Artiklow A-dhiwedhes"
+
+#: ../data/gtk/window.ui:113 ../data/gtk/window.ui:229
+msgid "Languages"
+msgstr "Yethow"
+
+#. Don't translate app name!
+#: ../data/com.github.hugolabe.Wike.desktop.in:2
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:7
+msgid "Wike"
+msgstr "Wike"
+
+#: ../data/gtk/about.ui:15 ../data/com.github.hugolabe.Wike.desktop.in:3
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
+msgid "Search and read Wikipedia articles"
+msgstr "Hwilas ha redya artiklow Wikipedya"
+
+#. Don't remove semicolons!
+#: ../data/com.github.hugolabe.Wike.desktop.in:12
+msgid "Wikipedia;Encyclopedia;"
+msgstr "Wikipedya;Encyklopedia;"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:11
+msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
+msgstr "Wike yw unn redyer Wikipedya rag an Desktop GNOME. Y'n provia hedhes dhe oll dalgh a an encyklopedia warlinen yn unn app teythiek, gans unn gwel sempel ha fogellys a artiklow."
+
+#: ../data/gtk/dialogs.ui:74
+msgid "The history of visited articles will be deleted permanently."
+msgstr "An istori a artiklow omwelesys gwelys a wra dileys yn andileadow."
+
+#: ../data/gtk/dialogs.ui:85
+msgid "Clear Personal Data?"
+msgstr "Dilea Data Personel?"
+
+#: ../data/gtk/dialogs.ui:86
+msgid "Cookies and cache data will be deleted permanently."
+msgstr "Cookies ha data cache a wra dileys yn andileadow."
+
+#: ../data/gtk/dialogs.ui:91
+msgid "Clear Data"
+msgstr "Dilea Data"
+
+#. Don't remove %s tag!
+#: ../src/wike-sp.in:90
+msgid "Search “%s” on Wikipedia"
+msgstr "Hwilas “%s” war Wikipedya"
+
+#: ../data/gtk/prefs.ui:26
+msgid "Home Page"
+msgstr "Folen Tre"
+
+#: ../data/gtk/prefs.ui:27
+msgid "The page that will be displayed when Wike starts"
+msgstr "An folen rag displetyans pan Wike dalleth"
+
+#: ../data/gtk/prefs.ui:55
+msgid "Privacy"
+msgstr "Privetter"
+
+#: ../data/gtk/prefs.ui:60
+msgid "Allow Live Search on Desktop"
+msgstr "Alowa Hwithrans Byw war Desktop"
+
+#: ../data/gtk/prefs.ui:61
+msgid "Warning: all desktop searches will be sent to Wikipedia"
+msgstr "Gwarnyans: oll hwithransow desktop a wra danvonys dhe Wikipedya"
+
+#: ../data/gtk/prefs.ui:83
+msgid "Wike will remember the history of visited articles"
+msgstr "Wike a vydh kova an istori artiklow omwelesys"
+
+#: ../data/gtk/prefs.ui:94 ../data/gtk/prefs.ui:117
+msgid "Clear"
+msgstr "Dilea"
+
+#: ../data/gtk/prefs.ui:106
+msgid "Cookies and cache data will be deleted"
+msgstr "Cookies ha data cache a wra dileys"
+
+#: ../data/gtk/page-status.ui:53
+msgid "Try Again"
+msgstr "Assaya Arta"
+
+#: ../data/gtk/menu-article.ui:34 ../data/gtk/page-status.ui:42
+msgid "Random Article"
+msgstr "Artikel Chonsus"
+
+#: ../data/gtk/prefs.ui:33
+msgid "Last article"
+msgstr "Artikel diwettha"
+
+#: ../data/gtk/window.ui:126 ../data/gtk/window.ui:239
+msgid "Bookmarks"
+msgstr "Lyververkys"
+
+#: ../data/gtk/bookmarks.ui:102 ../data/gtk/history.ui:94
+#: ../data/gtk/languages.ui:79
+msgid "Select All"
+msgstr "Dewis Oll"
+
+#: ../data/gtk/bookmarks.ui:110 ../data/gtk/history.ui:102
+#: ../data/gtk/languages.ui:87
+msgid "Select None"
+msgstr "Dewis Vyth"
+
+#: ../src/view.py:417
+msgid "Open Link in New Tab"
+msgstr "Ygeri Gorgevren yn Tabb Nowydh"
+
+#: ../src/view.py:423
+msgid "Add Link to Bookmarks"
+msgstr "Addya Gorgevren dhe Lyververkys"
+
+#: ../src/view.py:419
+msgid "Open Link in Browser"
+msgstr "Ygeri Gorgevren yn Peurell"
+
+#: ../src/view.py:425 ../data/gtk/menu-article.ui:50
+msgid "Copy Link to Clipboard"
+msgstr "Kopia Gorgevren war Astel Glypp"
+
+#: ../data/gtk/prefs.ui:71
+msgid "Desktop searches are performed in the default language"
+msgstr "Hwithransow desktop yw yn an yeth defowt"
+
+#: ../data/gtk/prefs.ui:72
+msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
+msgstr "Ty gallos hwilas yn yethow aral gans devnydhya unn ragelven. R.e. -es rag hwilas yn Spaynek"
+
+#: ../src/menu.py:101
+msgid "Pick a Font"
+msgstr "Dewis unn Font"
+
+#: ../src/menu.py:130
+msgid "Font"
+msgstr "Font"
+
+#: ../src/history.py:35
+msgid "Today"
+msgstr "Hedhyw"
+
+#: ../src/history.py:35
+msgid "Last 7 days"
+msgstr "7 dedhyow diwettha"
+
+#: ../src/history.py:35
+msgid "Last 30 days"
+msgstr "30 dedhyow diwettha"
+
+#: ../src/history.py:35
+msgid "Show full history"
+msgstr "Diskwedhes istori leun"
+
+#: ../src/window.py:510 ../src/page.py:147
+msgid "Bookmark added: "
+msgstr "Lyververk addys: "
+
+#: ../src/window.py:607
+msgid "Print operation completed"
+msgstr "Pryntyans deu"
+
+#: ../src/window.py:613
+msgid "Print operation failed"
+msgstr "Pryntyans fyllis"
+
+#: ../src/window.py:630
+msgid "Link copied to clipboard"
+msgstr "Gorgevren kopys war astel glypp"
+
+#: ../src/application.py:151
+msgid "Source Code"
+msgstr "Kod"
+
+#: ../src/application.py:152
+msgid "Report an Issue"
+msgstr "Derivas unn Kudyn"
+
+#: ../src/application.py:153
+msgid "Help Translating"
+msgstr "Gweres Treylya"
+
+#: ../src/application.py:154
+msgid "Contributors"
+msgstr "Kevriysi"
+
+#: ../src/application.py:155
+msgid "Flag Icons"
+msgstr "Arwodhigow baneryow"
+
+#: ../src/application.py:156
+msgid "All content from Wikipedia.org and available under CC BY-SA 4.0 unless otherwise noted.\n"
+"\n"
+"Wike is an independent development not endorsed by or affiliated with the Wikimedia Foundation."
+msgstr "Oll dalgh dhyworth Wikipedia.org ha kavadow yn CC BY-SA 4.0 marnas notys ken.\n"
+"\n"
+"Wike yw unn app anserghek ankeynskrifys hag anomgelmys gans an Fondacyon Wikimedia."
+
+#: ../src/page.py:99 ../src/page.py:102
+msgid "Loading…"
+msgstr "Karga…"
+
+#: ../src/page.py:237
+msgid "Article not Found"
+msgstr "Artikel na Kavosys"
+
+#: ../src/page.py:245
+msgid "Can’t Access Wikipedia"
+msgstr "Y fyllis dhe drehedhes Wikipedya"
+
+#: ../src/bookmarks.py:33
+msgid "Reading list"
+msgstr "Rol Redyans"
+
+#: ../data/gtk/toc.ui:48
+msgid "No Contents"
+msgstr "Dalghow Vyth"
+
+#: ../data/gtk/toc.ui:49
+msgid "There is no table of contents for this page"
+msgstr "Yma dalghow vyth rag an folen ma"
+
+#: ../data/gtk/languages.ui:11 ../data/gtk/search-settings.ui:23
+msgid "Pick your Languages"
+msgstr "Dewis dha Yethow"
+
+#: ../data/gtk/shortcuts-dialog.ui:40
+msgctxt "shortcut window"
+msgid "Languages"
+msgstr "Yethow"
+
+#: ../data/gtk/shortcuts-dialog.ui:47
+msgctxt "shortcut window"
+msgid "Search text"
+msgstr "Hwilas tekst"
+
+#: ../data/gtk/shortcuts-dialog.ui:54
+msgctxt "shortcut window"
+msgid "Print"
+msgstr "Pryntya"
+
+#: ../data/gtk/shortcuts-dialog.ui:61
+msgctxt "shortcut window"
+msgid "Copy link to clipboard"
+msgstr "Kopia gorgevren war astel glypp"
+
+#: ../data/gtk/shortcuts-dialog.ui:169
+msgctxt "shortcut window"
+msgid "Main page"
+msgstr "Folen chif"
+
+#: ../data/gtk/shortcuts-dialog.ui:190
+msgctxt "shortcut window"
+msgid "History of recent articles"
+msgstr "Istori artiklow a-dhiwedhes"
+
+#: ../data/gtk/shortcuts-dialog.ui:211
+msgctxt "shortcut window"
+msgid "Reload current page"
+msgstr "Daskarga folen a'n jydh"
+
+#: ../src/page.py:253 ../data/gtk/search.ui:24 ../data/gtk/window.ui:87
+#: ../data/gtk/window.ui:210 ../data/gtk/window.ui:356
+msgid "Search Wikipedia"
+msgstr "Hwilas Wikipedya"
+
+#: ../data/gtk/dialogs.ui:12
+msgid "New Bookmarks List"
+msgstr "Rol Nowydh Lyververkys"
+
+#: ../data/gtk/dialogs.ui:20 ../data/gtk/dialogs.ui:42
+msgid "List Name"
+msgstr "Hanow Rol"
+
+#: ../data/gtk/dialogs.ui:27 ../data/gtk/dialogs.ui:49
+#: ../data/gtk/dialogs.ui:66 ../data/gtk/dialogs.ui:78
+#: ../data/gtk/dialogs.ui:90
+msgid "Cancel"
+msgstr "Hedhi"
+
+#: ../data/gtk/dialogs.ui:28
+msgid "Create List"
+msgstr "Gul Rol"
+
+#: ../data/gtk/dialogs.ui:34
+msgid "Rename Bookmarks List"
+msgstr "Dashenwel Rol Lyververkys"
+
+#: ../data/gtk/dialogs.ui:50
+msgid "Rename List"
+msgstr "Dashenwel Rol"
+
+#: ../data/gtk/dialogs.ui:62
+msgid "Also delete the list"
+msgstr "Maga ta dilea an rol"
+
+#: ../data/gtk/dialogs.ui:73
+msgid "Clear History?"
+msgstr "Dilea Istori?"
+
+#: ../data/gtk/history.ui:40 ../data/gtk/dialogs.ui:79
+msgid "Clear History"
+msgstr "Dilea Istori"
+
+#: ../data/gtk/prefs.ui:31
+msgid "Wikipedia main page"
+msgstr "Folen chif Wikipedya"
+
+#: ../data/gtk/prefs.ui:32
+msgid "Random article"
+msgstr "Artikel chonsus"
+
+#: ../data/gtk/window.ui:322
+msgid "New Tab"
+msgstr "Tabb Nowydh"
+
+#: ../data/gtk/window.ui:348 ../data/gtk/window.ui:420
+msgid "View"
+msgstr "Gweles"
+
+#: ../data/gtk/window.ui:155
+msgid "Sidebar"
+msgstr "Bord Lestri"
+
+#: ../data/gtk/page.ui:27
+msgid "Search text"
+msgstr "Hwilas tekst"
+
+#: ../src/page.py:254
+msgid "Start typing to search Wikipedia articles"
+msgstr "Dalleth jynnskrifa rag hwilas artiklow Wikipedya"
+
+#: ../data/gtk/menu-article.ui:30 ../data/gtk/page-status.ui:30
+msgid "Main Page"
+msgstr "Folen Chif"
+
+#: ../data/gtk/langlinks.ui:74
+msgid "No Languages"
+msgstr "Yethow Vyth"
+
+#: ../data/gtk/langlinks.ui:75
+msgid "This page is not available in other languages"
+msgstr "An folen ma yw ankavadow yn neb yethow aral"
+
+#: ../data/gtk/menu-view.ui:28
+msgid "Show"
+msgstr "Diskwedhes"
+
+#: ../data/gtk/menu-view.ui:30
+msgid "Language Flags"
+msgstr "Baneryow Yethow"
+
+#: ../data/gtk/menu-view.ui:34
+msgid "Link Previews"
+msgstr "Ragwologow Gorgevren"
+
+#: ../data/gtk/history.ui:65
+msgid "Empty History"
+msgstr "Gwakhe Istori"
+
+#: ../data/gtk/history.ui:66
+msgid "There are no recent articles in the history"
+msgstr "Yma artiklow a-dhiwedhes vyth yn an istori"
+
+#: ../data/gtk/bookmarks.ui:73
+msgid "No Bookmarks"
+msgstr "Lyververkys Vyth"
+
+#: ../data/gtk/bookmarks.ui:74
+msgid "Use the Add Bookmark button or press Ctrl+D to add the current article to the list"
+msgstr "Devnydhya an boton \"Addya Lyververk\" po levna Ctrl+D rag addya an artikel a'n jydh dhe an rol"
+
+#: ../data/gtk/window.ui:100 ../data/gtk/window.ui:219
+msgid "Contents"
+msgstr "Dalgh"
+
+#: ../data/gtk/window.ui:139 ../data/gtk/window.ui:249
+msgid "History"
+msgstr "Istori"
+
+#: ../data/gtk/menu-article.ui:16
+msgid "Print"
+msgstr "Pryntya"
+
+#: ../data/gtk/menu-article.ui:21
+msgid "Search Text"
+msgstr "Hwilas Tekst"
+
+#: ../data/gtk/menu-article.ui:46
+msgid "Open in Browser"
+msgstr "Ygeri yn Peurell"
+
+#: ../data/gtk/bookmarks-menu.ui:14
+msgid "Create New List…"
+msgstr "Gul Rol Nowydh…"
+
+#: ../data/gtk/bookmarks-menu.ui:21
+msgid "Rename List…"
+msgstr "Dashenwel Rol…"
+
+#: ../data/gtk/bookmarks-menu.ui:25
+msgid "Clear List…"
+msgstr "Dilea Rol…"
+
+#: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
+msgid "It supports more than 300 languages and integrates with desktop searches, providing suggestions that make it easier to find any content. Other features are: bookmarks with multiple lists, article table of contents, history, text searches and much more…"
+msgstr "Y'n skoodhya moy es 300 yethow hag oberi gans hwithransow desktop, provia kussulyow rag gul kavos neb dalgh. Nasyow aral yw: lyververkys gans rolyow liesek, dalghow artikel, istori, hwithransow tekst, ha tra moy…"
+
+#: ../data/gtk/window.ui:304
+msgid "Back"
+msgstr "War Gamm"
+
+#: ../data/gtk/window.ui:313
+msgid "Forward"
+msgstr "War-rag"
+
+#: ../data/gtk/window.ui:61 ../data/gtk/window.ui:262
+msgid "Main Menu"
+msgstr "Rol Chif"
+
+#: ../data/gtk/shortcuts-dialog.ui:147
+msgctxt "shortcut window"
+msgid "View open tabs"
+msgstr "Gweles tabbow ygor"
+
+#: ../data/gtk/prefs.ui:34
+msgid "Restore open articles"
+msgstr "Restorya artiklow ygor"
+
+#: ../data/gtk/prefs.ui:105
+msgid "Clear Personal Data on Close"
+msgstr "Dilea Data Personel dres Kwytyans"
+
+#: ../data/gtk/window.ui:340 ../data/gtk/window.ui:412
+msgid "Article Menu"
+msgstr "Rol Artikel"
+
+#: ../src/langlinks.py:32
+msgid "Your languages"
+msgstr "Dha yethow"
+
+#: ../src/langlinks.py:33
+msgid "All languages"
+msgstr "Oll yethow"
+
+#: ../src/langlinks.py:109
+msgid "Other languages"
+msgstr "Yethow aral"
+
+#: ../src/languages.py:122
+msgid "1 language selected"
+msgstr "1 yeth dewisys"
+
+#. Don't remove %s tag!
+#: ../src/languages.py:124
+msgid "%s languages selected"
+msgstr "%s yethow dewisys"
+
+#: ../data/gtk/langlinks.ui:32 ../data/gtk/languages.ui:27
+msgid "Search Languages"
+msgstr "Hwilas Yethow"
+
+#: ../data/gtk/langlinks.ui:48 ../data/gtk/languages.ui:42
+msgid "Search languages"
+msgstr "Hwilas yethow"
+
+#: ../data/gtk/bookmarks.ui:41 ../data/gtk/history.ui:32
+msgid "Select"
+msgstr "Dewis"
+
+#: ../data/gtk/bookmarks.ui:118 ../data/gtk/history.ui:110
+msgid "Remove Selected"
+msgstr "Remova Dewisys"
+
+#: ../data/gtk/prefs.ui:44
+msgid "Always Hide Tabs"
+msgstr "Kudha Tabbys Prest"
+
+#: ../data/gtk/prefs.ui:45
+msgid "The tab bar will also be hidden in desktop mode"
+msgstr "An barr tabb a wra kudh maga ta yn fordh desktop"
+
+#: ../data/gtk/search.ui:59
+msgid "No Results"
+msgstr "Sewyansow Vyth"
+
+#: ../data/gtk/search.ui:60
+msgid "Enter at least three characters to get search suggestions"
+msgstr "Ynworra dhe'n lyha teyr lytherennow rag kussulyow hwithrans"
+
+#: ../data/gtk/window.ui:197
+msgid "Close"
+msgstr "Degea"
+
+#: ../data/gtk/page.ui:35
+msgid "Previous Result"
+msgstr "Sewyans Kynsa"
+
+#: ../data/gtk/page.ui:44
+msgid "Next Result"
+msgstr "Sewyans Nessa"
+
+#: ../data/gtk/dialogs.ui:116
+msgid "Wikipedia Link"
+msgstr "Gorgevren Wikipedya"
+
+#: ../data/gtk/shortcuts-dialog.ui:15
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Ollgemmyn"
+
+#: ../data/gtk/shortcuts-dialog.ui:19
+msgctxt "shortcut window"
+msgid "Main menu"
+msgstr "Rol chif"
+
+#: ../data/gtk/shortcuts-dialog.ui:26
+msgctxt "shortcut window"
+msgid "Sidebar"
+msgstr "Bord lestri"
+
+#: ../data/gtk/shortcuts-dialog.ui:33
+msgctxt "shortcut window"
+msgid "Table of contents"
+msgstr "Dalghow"
+
+#: ../data/gtk/shortcuts-dialog.ui:68
+msgctxt "shortcut window"
+msgid "Preferences"
+msgstr "Settyansow"
+
+#: ../data/gtk/shortcuts-dialog.ui:75
+msgctxt "shortcut window"
+msgid "Keyboard shortcuts"
+msgstr "Kesunyansow Bysowek"
+
+#: ../data/gtk/shortcuts-dialog.ui:82
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Kwytya"
+
+#: ../data/gtk/shortcuts-dialog.ui:93 ../data/gtk/shortcuts-dialog.ui:97
+msgctxt "shortcut window"
+msgid "Bookmarks"
+msgstr "Lyververkys"
+
+#: ../data/gtk/shortcuts-dialog.ui:104
+msgctxt "shortcut window"
+msgid "Add bookmark"
+msgstr "Addya lyververk"
+
+#: ../data/gtk/shortcuts-dialog.ui:115
+msgctxt "shortcut window"
+msgid "Tabs"
+msgstr "Tabbow"
+
+#: ../data/gtk/shortcuts-dialog.ui:119
+msgctxt "shortcut window"
+msgid "New tab"
+msgstr "Tabb nowydh"
+
+#: ../data/gtk/shortcuts-dialog.ui:126
+msgctxt "shortcut window"
+msgid "Close current tab"
+msgstr "Degea tabb a'n jydh"
+
+#: ../data/gtk/shortcuts-dialog.ui:133
+msgctxt "shortcut window"
+msgid "Next tab"
+msgstr "Tabb nessa"
+
+#: ../data/gtk/shortcuts-dialog.ui:140
+msgctxt "shortcut window"
+msgid "Previous tab"
+msgstr "Tabb kynsa"
+
+#: ../data/gtk/shortcuts-dialog.ui:158
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Navigacyon"
+
+#: ../data/gtk/shortcuts-dialog.ui:162
+msgctxt "shortcut window"
+msgid "Search articles"
+msgstr "Hwilas artiklow"
+
+#: ../data/gtk/shortcuts-dialog.ui:176
+msgctxt "shortcut window"
+msgid "Random article"
+msgstr "Artikel chonsus"
+
+#: ../data/gtk/shortcuts-dialog.ui:197
+msgctxt "shortcut window"
+msgid "Previous page"
+msgstr "Folen kynsa"
+
+#: ../data/gtk/shortcuts-dialog.ui:204
+msgctxt "shortcut window"
+msgid "Next page"
+msgstr "Folen nessa"
+
+#: ../data/gtk/dialogs.ui:97 ../data/gtk/menu-article.ui:38
+msgid "Open Wikipedia Link"
+msgstr "Ygeri Gorgevren Wikipedya"
+
+#: ../data/gtk/shortcuts-dialog.ui:183
+msgctxt "shortcut window"
+msgid "Open Wikipedia link"
+msgstr "Ygeri gorgevren Wikipedya"
+

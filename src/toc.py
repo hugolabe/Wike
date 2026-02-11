@@ -40,7 +40,7 @@ class TocPanel(Adw.Bin):
     if sections:
       self.title_label.set_label(title)
       for section in sections:
-        row = TocBoxRow(section['anchor'].replace('_', ' '), section['anchor'], section['toclevel'])
+        row = TocBoxRow(section['line'], section['anchor'], section['toclevel'])
         self.toc_list.append(row)
     else:
       self.title_label.set_label('')

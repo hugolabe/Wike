@@ -16,6 +16,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
         <property name="margin-end">3</property>
         <property name="halign">start</property>
         <property name="ellipsize">end</property>
+        <property name="use-markup">true</property>
       </object>
     </child>
 

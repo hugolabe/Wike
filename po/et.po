@@ -13,7 +13,7 @@ msgstr "Artiklit ei leidu"
 
 #: ../src/page.py:238
 msgid "Can’t find any results for requested query"
-msgstr "Soovitud päringule poel vastuseid"
+msgstr "Soovitud päringule pole vastuseid"
 
 #: ../src/view.py:312
 msgid "Can’t access Wikipedia"
@@ -261,7 +261,7 @@ msgstr "Lippude ikoonid"
 msgid "All content from Wikipedia.org and available under CC BY-SA 4.0 unless otherwise noted.\n"
 "\n"
 "Wike is an independent development not endorsed by or affiliated with the Wikimedia Foundation."
-msgstr "Kui eraldi pole märgitud, sisi kogu Vikipeedia sisu on avaldatud CC BY-SA 4.0 litsentsi alusel.\n"
+msgstr "Kui eraldi pole märgitud, siis kogu Vikipeedia sisu on avaldatud CC BY-SA 4.0 litsentsi alusel.\n"
 "\n"
 "Wike on eraldi arendusprojekt, mis pole Wikimedia Foundationi poolt heaks kiidetud ega temaga seotud."
 
@@ -543,7 +543,7 @@ msgstr "Eemalda valitu"
 
 #: ../data/gtk/prefs.ui:44
 msgid "Always Hide Tabs"
-msgstr "Peida alati kaardid"
+msgstr "Alati peida vahekaardid"
 
 #: ../data/gtk/prefs.ui:45
 msgid "The tab bar will also be hidden in desktop mode"

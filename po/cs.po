@@ -7,107 +7,53 @@ msgstr ""
 "Project-Id-Version: Wike\n"
 "Language: cs\n"
 
-#: ../src/view.py:293
+#: ../src/view.py:310
 msgid "Article not found"
 msgstr "Článek nenalezen"
 
-#: ../src/page.py:231
+#: ../src/page.py:238
 msgid "Can’t find any results for requested query"
 msgstr "Pro zadaný dotaz nebyly nalezeny žádné výsledky"
 
-#: ../src/view.py:295
+#: ../src/view.py:312
 msgid "Can’t access Wikipedia"
-msgstr "Nezdařilo se připojit k serveru Wikipedie"
+msgstr "Nepodařilo se připojit k serverům Wikipedie"
 
-#: ../src/page.py:239
+#: ../src/page.py:246
 msgid "Check your Internet connection and try again"
-msgstr "Zkontrolujte své připojení k internetu a zkuste to znovu"
+msgstr "Zkontrolujte své připojení k Internetu a zkuste to znovu"
 
 #: ../data/gtk/dialogs.ui:56
 msgid "Clear Bookmarks List?"
-msgstr "Smazat všechny záložky?"
+msgstr "Smazat veškeré záložky?"
 
 #: ../data/gtk/dialogs.ui:57
 msgid "All bookmarks in the list will be removed permanently."
-msgstr "Všechny záložky budou trvale smazány."
+msgstr "Všechny záložky budou nevratně smazány."
 
 #: ../data/gtk/dialogs.ui:67
 msgid "Clear List"
-msgstr "Vyprázdnit"
+msgstr "Vyprázdnit seznam"
 
 #: ../data/gtk/search-settings.ui:64
 msgid "Search Suggestions"
-msgstr "Návrhy při hledání"
+msgstr "Návrhy vyhledávání"
 
 #. Add your name like this:
 #. 
 #. Hugo Olabera <hugolabe@gmail.com>
 #: ../data/gtk/about.ui:17
 msgid "translator-credits"
-msgstr "Šimon Rataj <ratajs@ratajs.cz>"
+msgstr "Šimon Rataj <ratajs@ratajs.cz>\n"
+"Pavel Borecki <pavel@borecki.cz>"
 
-#: ../src/view.py:388 ../data/gtk/bookmarks.ui:32
+#: ../src/view.py:405 ../data/gtk/bookmarks.ui:32
 msgid "Add Bookmark"
-msgstr "Přidat do záložek"
-
-#: ../data/gtk/help-overlay.ui:21
-msgctxt "shortcut window"
-msgid "General"
-msgstr "Obecné"
-
-#: ../data/gtk/help-overlay.ui:39
-msgctxt "shortcut window"
-msgid "Table of contents"
-msgstr "Obsah"
-
-#: ../data/gtk/help-overlay.ui:74
-msgctxt "shortcut window"
-msgid "Preferences"
-msgstr "Nastavení"
-
-#: ../data/gtk/help-overlay.ui:88
-msgctxt "shortcut window"
-msgid "Quit"
-msgstr "Ukončit"
-
-#: ../data/gtk/help-overlay.ui:81
-msgctxt "shortcut window"
-msgid "Keyboard shortcuts"
-msgstr "Klávesové zkratky"
-
-#: ../data/gtk/help-overlay.ui:164
-msgctxt "shortcut window"
-msgid "Navigation"
-msgstr "Navigace"
-
-#: ../data/gtk/help-overlay.ui:168
-msgctxt "shortcut window"
-msgid "Search articles"
-msgstr "Prohledat články"
-
-#: ../data/gtk/help-overlay.ui:196
-msgctxt "shortcut window"
-msgid "Previous page"
-msgstr "Předchozí stránka"
-
-#: ../data/gtk/help-overlay.ui:203
-msgctxt "shortcut window"
-msgid "Next page"
-msgstr "Následující stránka"
-
-#: ../data/gtk/help-overlay.ui:99 ../data/gtk/help-overlay.ui:103
-msgctxt "shortcut window"
-msgid "Bookmarks"
-msgstr "Záložky"
-
-#: ../data/gtk/help-overlay.ui:110
-msgctxt "shortcut window"
-msgid "Add bookmark"
 msgstr "Přidat do záložek"
 
 #: ../data/gtk/menu-main.ui:15
 msgid "Preferences"
-msgstr "Nastavení"
+msgstr "Předvolby"
 
 #: ../data/gtk/menu-main.ui:19
 msgid "Keyboard Shortcuts"
@@ -123,36 +69,35 @@ msgstr "Chování"
 
 #: ../data/gtk/prefs.ui:82
 msgid "Keep a List of Recent Articles"
-msgstr "Uchovat poslední články"
+msgstr "Uchovávat seznam nedávno navštívených článků"
 
 #: ../data/gtk/window.ui:113 ../data/gtk/window.ui:229
 msgid "Languages"
 msgstr "Jazyky"
 
 #. Don't translate app name!
-#: ../data/com.github.hugolabe.Wike.desktop.in:3
+#: ../data/com.github.hugolabe.Wike.desktop.in:2
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:7
 msgid "Wike"
 msgstr "Wike"
 
-#: ../data/gtk/about.ui:15 ../data/com.github.hugolabe.Wike.desktop.in:4
+#: ../data/gtk/about.ui:15 ../data/com.github.hugolabe.Wike.desktop.in:3
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:8
-#, fuzzy
 msgid "Search and read Wikipedia articles"
 msgstr "Vyhledávejte a čtěte články na Wikipedii"
 
 #. Don't remove semicolons!
 #: ../data/com.github.hugolabe.Wike.desktop.in:12
 msgid "Wikipedia;Encyclopedia;"
-msgstr "Wikipedia;Encyclopedia;Wikipedie;Encyklopedie;"
+msgstr "Wikipedia;Wikipedie;Encyklopedie;"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:11
 msgid "Wike is a Wikipedia reader for the GNOME Desktop. Provides access to all the content of this online encyclopedia in a native application, with a simpler and distraction-free view of articles."
-msgstr "Wike je čtečka Wikipedie pro prostření GNOME Desktop. Umožňuje čtení veškerého obsahu této online encyklopedie v samostatné aplikaci, s jednodušším a nerušivým zobrazením článků."
+msgstr "Wike je čtečka Wikipedie pro prostředí GNOME. Poskytuje přístup k veškerému obsahu této online encyklopedie v samostatné aplikaci, s jednodušším a nerušivým zobrazením článků."
 
 #: ../data/gtk/dialogs.ui:74
 msgid "The history of visited articles will be deleted permanently."
-msgstr "Historie navštívených článků bude trvale smazána."
+msgstr "Historie navštívených článků bude nevratně smazána."
 
 #: ../data/gtk/dialogs.ui:85
 msgid "Clear Personal Data?"
@@ -160,7 +105,7 @@ msgstr "Vymazat osobní data?"
 
 #: ../data/gtk/dialogs.ui:86
 msgid "Cookies and cache data will be deleted permanently."
-msgstr "Cookies a cache budou trvale smazány."
+msgstr "Cookies a mezipaměť budou nevratně smazány."
 
 #: ../data/gtk/dialogs.ui:91
 msgid "Clear Data"
@@ -169,7 +114,7 @@ msgstr "Smazat data"
 #. Don't remove %s tag!
 #: ../src/wike-sp.in:90
 msgid "Search “%s” on Wikipedia"
-msgstr "Hledat »%s« na Wikipedii"
+msgstr "Hledat „%s“ na Wikipedii"
 
 #: ../data/gtk/prefs.ui:26
 msgid "Home Page"
@@ -177,7 +122,7 @@ msgstr "Domovská stránka"
 
 #: ../data/gtk/prefs.ui:27
 msgid "The page that will be displayed when Wike starts"
-msgstr "Stránka, která bude načtena po stuštění Wike"
+msgstr "Stránka, kterou zobrazit po spuštění Wike"
 
 #: ../data/gtk/prefs.ui:55
 msgid "Privacy"
@@ -185,15 +130,15 @@ msgstr "Soukromí"
 
 #: ../data/gtk/prefs.ui:60
 msgid "Allow Live Search on Desktop"
-msgstr "Povolit živé vyhledávání"
+msgstr "Napojit do centrálního vyhledávání v desktopovém prostředí"
 
 #: ../data/gtk/prefs.ui:61
 msgid "Warning: all desktop searches will be sent to Wikipedia"
-msgstr "Varování: veškeré hledání bude odesláno Wikipedii"
+msgstr "Varování: obecně, napojování sjednoceného vyhledávání na online služby (v tomto případě Wikipedii) může vést k tomu, že na ně budou odesílána i ta vyhledávání, která si potenciálně nemusíte přát, aby jejich provozovatelé mohli vidět"
 
 #: ../data/gtk/prefs.ui:83
 msgid "Wike will remember the history of visited articles"
-msgstr "Wike si zapamatuje historii navštívených článků"
+msgstr "Wike si bude pamatovat historii navštívených článků"
 
 #: ../data/gtk/prefs.ui:94 ../data/gtk/prefs.ui:117
 msgid "Clear"
@@ -201,19 +146,19 @@ msgstr "Smazat"
 
 #: ../data/gtk/prefs.ui:106
 msgid "Cookies and cache data will be deleted"
-msgstr "Cookies a cache budou odstraněny"
+msgstr "Cookies a mezipaměť budou smazány"
 
-#: ../data/gtk/page-status.ui:50
+#: ../data/gtk/page-status.ui:53
 msgid "Try Again"
 msgstr "Zkusit znovu"
 
-#: ../data/gtk/menu-article.ui:34 ../data/gtk/page-status.ui:39
+#: ../data/gtk/menu-article.ui:34 ../data/gtk/page-status.ui:42
 msgid "Random Article"
 msgstr "Náhodný článek"
 
 #: ../data/gtk/prefs.ui:33
 msgid "Last article"
-msgstr "Poslední článek"
+msgstr "Poslední zobraz. článek"
 
 #: ../data/gtk/window.ui:126 ../data/gtk/window.ui:239
 msgid "Bookmarks"
@@ -229,72 +174,37 @@ msgstr "Vybrat vše"
 msgid "Select None"
 msgstr "Zrušit výběr"
 
-#: ../data/gtk/help-overlay.ui:25
-msgctxt "shortcut window"
-msgid "Main menu"
-msgstr "Hlavní nabídka"
-
-#: ../data/gtk/help-overlay.ui:121
-msgctxt "shortcut window"
-msgid "Tabs"
-msgstr "Karty"
-
-#: ../data/gtk/help-overlay.ui:125
-msgctxt "shortcut window"
-msgid "New tab"
-msgstr "Nová karta"
-
-#: ../data/gtk/help-overlay.ui:132
-msgctxt "shortcut window"
-msgid "Close current tab"
-msgstr "Zavřít otevřenou kartu"
-
-#: ../data/gtk/help-overlay.ui:139
-msgctxt "shortcut window"
-msgid "Next tab"
-msgstr "Další karta"
-
-#: ../data/gtk/help-overlay.ui:146
-msgctxt "shortcut window"
-msgid "Previous tab"
-msgstr "Předchozí karta"
-
-#: ../src/view.py:400
+#: ../src/view.py:417
 msgid "Open Link in New Tab"
-msgstr "Otevřít odkaz v nové kartě"
+msgstr "Otevřít odkaz v novém panelu"
 
-#: ../src/view.py:406
+#: ../src/view.py:423
 msgid "Add Link to Bookmarks"
 msgstr "Přidat odkaz do záložek"
 
-#: ../src/view.py:402
+#: ../src/view.py:419
 msgid "Open Link in Browser"
-msgstr "Otevřít odkaz v prohlížeči"
+msgstr "Otevřít odkaz ve webovém prohlížeči"
 
-#: ../src/view.py:408 ../data/gtk/menu-article.ui:46
+#: ../src/view.py:425 ../data/gtk/menu-article.ui:50
 msgid "Copy Link to Clipboard"
 msgstr "Zkopírovat odkaz do schránky"
 
 #: ../data/gtk/prefs.ui:71
 msgid "Desktop searches are performed in the default language"
-msgstr "Toto hledání bude prováděno ve výchozím jazyce"
+msgstr "Tato hledání budou prováděna ve výchozím jazyce"
 
 #: ../data/gtk/prefs.ui:72
 msgid "You can search in other languages ​​using a prefix. Eg. -es to search in Spanish"
-msgstr "Můžete hledat i v jiných jazycích pomocí prefixů. Např. -es pro hledání ve španělštině"
-
-#: ../data/gtk/help-overlay.ui:182
-msgctxt "shortcut window"
-msgid "Random article"
-msgstr "Náhodný článek"
+msgstr "Je možné hledat i v jiných jazycích a to pomocí prefixu kódem jazyka (následovaného mezerou). Např. -es pro hledání ve španělštině"
 
 #: ../src/menu.py:101
 msgid "Pick a Font"
-msgstr "Vyberte Font"
+msgstr "Vyberte písmo"
 
 #: ../src/menu.py:130
 msgid "Font"
-msgstr "Font"
+msgstr "Písmo"
 
 #: ../src/history.py:35
 msgid "Today"
@@ -302,35 +212,35 @@ msgstr "Dnes"
 
 #: ../src/history.py:35
 msgid "Last 7 days"
-msgstr "V posledních 7 dnech"
+msgstr "V uplynulých 7 dnech"
 
 #: ../src/history.py:35
 msgid "Last 30 days"
-msgstr "V posledních 30 dnech"
+msgstr "V uplynulých 30 dnech"
 
 #: ../src/history.py:35
 msgid "Show full history"
 msgstr "Zobrazit celou historii"
 
-#: ../src/window.py:509 ../src/page.py:140
+#: ../src/window.py:510 ../src/page.py:147
 msgid "Bookmark added: "
 msgstr "Záložka přidána: "
 
-#: ../src/window.py:566
+#: ../src/window.py:607
 msgid "Print operation completed"
 msgstr "Tisková operace dokončena"
 
-#: ../src/window.py:572
+#: ../src/window.py:613
 msgid "Print operation failed"
 msgstr "Tisková operace se nezdařila"
 
-#: ../src/window.py:587
+#: ../src/window.py:630
 msgid "Link copied to clipboard"
 msgstr "Odkaz zkopírován do schránky"
 
 #: ../src/application.py:151
 msgid "Source Code"
-msgstr "Zdrojový kód"
+msgstr "Zdrojové kódy"
 
 #: ../src/application.py:152
 msgid "Report an Issue"
@@ -338,7 +248,7 @@ msgstr "Nahlásit chybu"
 
 #: ../src/application.py:153
 msgid "Help Translating"
-msgstr "Pomozte s překladem"
+msgstr "Pomozte s překládáním"
 
 #: ../src/application.py:154
 msgid "Contributors"
@@ -349,26 +259,24 @@ msgid "Flag Icons"
 msgstr "Ikony vlajek"
 
 #: ../src/application.py:156
-#, fuzzy
 msgid "All content from Wikipedia.org and available under CC BY-SA 4.0 unless otherwise noted.\n"
 "\n"
 "Wike is an independent development not endorsed by or affiliated with the Wikimedia Foundation."
-msgstr "Veškerý obsah je z Wikipedia.org a dostupný pod licencí CC BY-SA 3.0, pokud není uvedeno jinak.\n"
+msgstr "Veškerý obsah pochází z Wikipedia.org a je dostupný pod licencí CC BY-SA 4.0 (pokud není uvedeno jinak).\n"
 "\n"
-"Wike je nezávislá aplikace a vývoj není spojen s Wikimedia Foundation."
+"Wike je vyvíjeno nezávisle – bez návaznosti na nebo podpory Wikimedia Foundation."
 
-#: ../src/page.py:102 ../src/page.py:105
-#, fuzzy
+#: ../src/page.py:99 ../src/page.py:102
 msgid "Loading…"
-msgstr "Načítání"
+msgstr "Načítání…"
 
-#: ../src/page.py:230
+#: ../src/page.py:237
 msgid "Article not Found"
 msgstr "Článek nenalezen"
 
-#: ../src/page.py:238
+#: ../src/page.py:245
 msgid "Can’t Access Wikipedia"
-msgstr "Nelze přistoupit na Wikipedii"
+msgstr "Nedaří se přistupovat k Wikipedii"
 
 #: ../src/bookmarks.py:33
 msgid "Reading list"
@@ -382,51 +290,46 @@ msgstr "Žádný obsah"
 msgid "There is no table of contents for this page"
 msgstr "Pro tuto stránku neexistuje tabulka obsahu"
 
-#: ../data/gtk/search-settings.ui:23 ../data/gtk/languages.ui:11
+#: ../data/gtk/languages.ui:11 ../data/gtk/search-settings.ui:23
 msgid "Pick your Languages"
 msgstr "Vyberte své jazyky"
 
-#: ../data/gtk/help-overlay.ui:32
-msgctxt "shortcut window"
-msgid "Sidebar"
-msgstr "Postranní panel"
-
-#: ../data/gtk/help-overlay.ui:46
+#: ../data/gtk/shortcuts-dialog.ui:40
 msgctxt "shortcut window"
 msgid "Languages"
 msgstr "Jazyky"
 
-#: ../data/gtk/help-overlay.ui:53
+#: ../data/gtk/shortcuts-dialog.ui:47
 msgctxt "shortcut window"
 msgid "Search text"
 msgstr "Hledat text"
 
-#: ../data/gtk/help-overlay.ui:60
+#: ../data/gtk/shortcuts-dialog.ui:54
 msgctxt "shortcut window"
 msgid "Print"
-msgstr "Tisknout"
+msgstr "Vytisknout"
 
-#: ../data/gtk/help-overlay.ui:67
+#: ../data/gtk/shortcuts-dialog.ui:61
 msgctxt "shortcut window"
 msgid "Copy link to clipboard"
 msgstr "Zkopírovat odkaz do schránky"
 
-#: ../data/gtk/help-overlay.ui:175
+#: ../data/gtk/shortcuts-dialog.ui:169
 msgctxt "shortcut window"
 msgid "Main page"
 msgstr "Hlavní stránka"
 
-#: ../data/gtk/help-overlay.ui:189
+#: ../data/gtk/shortcuts-dialog.ui:190
 msgctxt "shortcut window"
 msgid "History of recent articles"
 msgstr "Historie nedávných článků"
 
-#: ../data/gtk/help-overlay.ui:210
+#: ../data/gtk/shortcuts-dialog.ui:211
 msgctxt "shortcut window"
 msgid "Reload current page"
-msgstr "Znovu načíst stránku"
+msgstr "Znovu načíst stávající stránku"
 
-#: ../src/page.py:246 ../data/gtk/search.ui:24 ../data/gtk/window.ui:87
+#: ../src/page.py:253 ../data/gtk/search.ui:24 ../data/gtk/window.ui:87
 #: ../data/gtk/window.ui:210 ../data/gtk/window.ui:356
 msgid "Search Wikipedia"
 msgstr "Hledat na Wikipedii"
@@ -479,11 +382,11 @@ msgstr "Náhodný článek"
 
 #: ../data/gtk/window.ui:322
 msgid "New Tab"
-msgstr "Nová Karta"
+msgstr "Nový panel"
 
 #: ../data/gtk/window.ui:348 ../data/gtk/window.ui:420
 msgid "View"
-msgstr "Prohlížet"
+msgstr "Zobrazení"
 
 #: ../data/gtk/window.ui:155
 msgid "Sidebar"
@@ -493,17 +396,17 @@ msgstr "Postranní panel"
 msgid "Search text"
 msgstr "Hledat text"
 
-#: ../src/page.py:247
+#: ../src/page.py:254
 msgid "Start typing to search Wikipedia articles"
-msgstr "Začněte psát pro vyhledávání Wikipedia článků"
+msgstr "Psaním vyhledávejte články z Wikipedie"
 
-#: ../data/gtk/menu-article.ui:30 ../data/gtk/page-status.ui:27
+#: ../data/gtk/menu-article.ui:30 ../data/gtk/page-status.ui:30
 msgid "Main Page"
 msgstr "Hlavní stránka"
 
 #: ../data/gtk/langlinks.ui:74
 msgid "No Languages"
-msgstr "Žádné Jazyky"
+msgstr "Žádné jazyky"
 
 #: ../data/gtk/langlinks.ui:75
 msgid "This page is not available in other languages"
@@ -511,23 +414,23 @@ msgstr "Tato stránka není k dispozici v jiných jazycích"
 
 #: ../data/gtk/menu-view.ui:28
 msgid "Show"
-msgstr "Ukázat"
+msgstr "Zobrazovat"
 
 #: ../data/gtk/menu-view.ui:30
 msgid "Language Flags"
-msgstr "Vlajky Jazyků"
+msgstr "Vlajky jazyků"
 
 #: ../data/gtk/menu-view.ui:34
 msgid "Link Previews"
-msgstr "Náhledy Odkazů"
+msgstr "Náhledy odkazů"
 
 #: ../data/gtk/history.ui:65
 msgid "Empty History"
-msgstr "Prázdná Historie"
+msgstr "Prázdná historie"
 
 #: ../data/gtk/history.ui:66
 msgid "There are no recent articles in the history"
-msgstr "Nemáte v historii žádné poslední články"
+msgstr "V historii nemáte žádné nedávné články"
 
 #: ../data/gtk/bookmarks.ui:73
 msgid "No Bookmarks"
@@ -535,7 +438,7 @@ msgstr "Žádné záložky"
 
 #: ../data/gtk/bookmarks.ui:74
 msgid "Use the Add Bookmark button or press Ctrl+D to add the current article to the list"
-msgstr "Použijte tlačítko Přidat Záložku nebo stiskněte Ctrl+D pro přidání aktuálního článku do seznamu"
+msgstr "Použijte tlačítko „Přidat záložku“, případně stávající článek přidáte na seznam i stisknutím Ctrl+D"
 
 #: ../data/gtk/window.ui:100 ../data/gtk/window.ui:219
 msgid "Contents"
@@ -551,27 +454,27 @@ msgstr "Tisk"
 
 #: ../data/gtk/menu-article.ui:21
 msgid "Search Text"
-msgstr "Hledat Text"
+msgstr "Hledat text"
 
-#: ../data/gtk/menu-article.ui:42
+#: ../data/gtk/menu-article.ui:46
 msgid "Open in Browser"
-msgstr "Otevřít v Prohlížeči"
+msgstr "Otevřít ve webovém prohlížeči"
 
 #: ../data/gtk/bookmarks-menu.ui:14
 msgid "Create New List…"
-msgstr "Vytvořit Nový Seznam..."
+msgstr "Vytvořit nový seznam…"
 
 #: ../data/gtk/bookmarks-menu.ui:21
 msgid "Rename List…"
-msgstr "Přejmenovat Seznam..."
+msgstr "Přejmenovat seznam…"
 
 #: ../data/gtk/bookmarks-menu.ui:25
 msgid "Clear List…"
-msgstr "Vyprázdnit Seznam..."
+msgstr "Vyprázdnit seznam…"
 
 #: ../data/com.github.hugolabe.Wike.metainfo.xml.in:16
 msgid "It supports more than 300 languages and integrates with desktop searches, providing suggestions that make it easier to find any content. Other features are: bookmarks with multiple lists, article table of contents, history, text searches and much more…"
-msgstr "Podporuje více než 300 jazyků, integruje se s vyhledáváním na počítači. Další vlastnosti jsou: záložky s více seznamy, obsah článků, historie, vyhledávání v textu a mnohem více..."
+msgstr "Podporuje více než 300 jazyků, napojuje se do vyhledávání v desktopovém prostředí a předkládáním návrhů usnadňuje vyhledávání jakéhokoli obsahu. Dalšími vlastnostmi jsou: záložky s vícero seznamy, obsahy v článcích, historie procházení, vyhledávání v textu a mnoho dalšího…"
 
 #: ../data/gtk/window.ui:304
 msgid "Back"
@@ -585,23 +488,22 @@ msgstr "Vpřed"
 msgid "Main Menu"
 msgstr "Hlavní nabídka"
 
-#: ../data/gtk/help-overlay.ui:153
+#: ../data/gtk/shortcuts-dialog.ui:147
 msgctxt "shortcut window"
 msgid "View open tabs"
-msgstr "Zobrazit otevřené záložky"
+msgstr "Zobrazit otevřené panely"
 
 #: ../data/gtk/prefs.ui:34
 msgid "Restore open articles"
-msgstr "Obnovit otevřené články"
+msgstr "Předtím otevřené články"
 
 #: ../data/gtk/prefs.ui:105
 msgid "Clear Personal Data on Close"
-msgstr "Smazat osobní data při ukončení"
+msgstr "Při ukončování smazat osobní data"
 
 #: ../data/gtk/window.ui:340 ../data/gtk/window.ui:412
-#, fuzzy
 msgid "Article Menu"
-msgstr "Menu článku"
+msgstr "Nabídka článků"
 
 #: ../src/langlinks.py:32
 msgid "Your languages"
@@ -642,12 +544,11 @@ msgstr "Odstranit vybrané"
 
 #: ../data/gtk/prefs.ui:44
 msgid "Always Hide Tabs"
-msgstr "Vždy skrýt záložky"
+msgstr "Vždy skrýt panely"
 
 #: ../data/gtk/prefs.ui:45
-#, fuzzy
 msgid "The tab bar will also be hidden in desktop mode"
-msgstr "Lišta záložek bude skryta také v desktopovém režimu"
+msgstr "Lišta panelů bude skryta i v desktopovém režimu"
 
 #: ../data/gtk/search.ui:59
 msgid "No Results"
@@ -667,5 +568,113 @@ msgstr "Předchozí výsledek"
 
 #: ../data/gtk/page.ui:44
 msgid "Next Result"
-msgstr "Další výsledek"
+msgstr "Následující výsledek"
+
+#: ../data/gtk/dialogs.ui:116
+msgid "Wikipedia Link"
+msgstr "Odkaz na Wikipedii"
+
+#: ../data/gtk/shortcuts-dialog.ui:15
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Obecné"
+
+#: ../data/gtk/shortcuts-dialog.ui:19
+msgctxt "shortcut window"
+msgid "Main menu"
+msgstr "Hlavní nabídka"
+
+#: ../data/gtk/shortcuts-dialog.ui:26
+msgctxt "shortcut window"
+msgid "Sidebar"
+msgstr "Postranní panel"
+
+#: ../data/gtk/shortcuts-dialog.ui:33
+msgctxt "shortcut window"
+msgid "Table of contents"
+msgstr "Obsah"
+
+#: ../data/gtk/shortcuts-dialog.ui:68
+msgctxt "shortcut window"
+msgid "Preferences"
+msgstr "Předvolby"
+
+#: ../data/gtk/shortcuts-dialog.ui:75
+msgctxt "shortcut window"
+msgid "Keyboard shortcuts"
+msgstr "Klávesové zkratky"
+
+#: ../data/gtk/shortcuts-dialog.ui:82
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Ukončit"
+
+#: ../data/gtk/shortcuts-dialog.ui:93 ../data/gtk/shortcuts-dialog.ui:97
+msgctxt "shortcut window"
+msgid "Bookmarks"
+msgstr "Záložky"
+
+#: ../data/gtk/shortcuts-dialog.ui:104
+msgctxt "shortcut window"
+msgid "Add bookmark"
+msgstr "Přidat do záložek"
+
+#: ../data/gtk/shortcuts-dialog.ui:115
+msgctxt "shortcut window"
+msgid "Tabs"
+msgstr "Panely"
+
+#: ../data/gtk/shortcuts-dialog.ui:119
+msgctxt "shortcut window"
+msgid "New tab"
+msgstr "Nový panel"
+
+#: ../data/gtk/shortcuts-dialog.ui:126
+msgctxt "shortcut window"
+msgid "Close current tab"
+msgstr "Zavřít stávající panel"
+
+#: ../data/gtk/shortcuts-dialog.ui:133
+msgctxt "shortcut window"
+msgid "Next tab"
+msgstr "Následující panel"
+
+#: ../data/gtk/shortcuts-dialog.ui:140
+msgctxt "shortcut window"
+msgid "Previous tab"
+msgstr "Předchozí panel"
+
+#: ../data/gtk/shortcuts-dialog.ui:158
+msgctxt "shortcut window"
+msgid "Navigation"
+msgstr "Navigace"
+
+#: ../data/gtk/shortcuts-dialog.ui:162
+msgctxt "shortcut window"
+msgid "Search articles"
+msgstr "Hledat články"
+
+#: ../data/gtk/shortcuts-dialog.ui:176
+msgctxt "shortcut window"
+msgid "Random article"
+msgstr "Náhodný článek"
+
+#: ../data/gtk/shortcuts-dialog.ui:197
+msgctxt "shortcut window"
+msgid "Previous page"
+msgstr "Předchozí stránka"
+
+#: ../data/gtk/shortcuts-dialog.ui:204
+msgctxt "shortcut window"
+msgid "Next page"
+msgstr "Následující stránka"
+
+#: ../data/gtk/dialogs.ui:97 ../data/gtk/menu-article.ui:38
+msgid "Open Wikipedia Link"
+msgstr "Otevřít odkaz na Wikipedii"
+
+#: ../data/gtk/shortcuts-dialog.ui:183
+msgctxt "shortcut window"
+msgid "Open Wikipedia link"
+msgstr "Otevřít odkaz na Wikipedii"
 

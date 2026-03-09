@@ -58,6 +58,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
             <child>
               <object class="AdwExpanderRow">
                 <property name="title" translatable="yes">Allow Live Search on Desktop</property>
+                <property name="subtitle" translatable="yes">(Note: In case of installation as Flatpak, please manualy set also permission for Search in: (System) Settings → Apps → Wike)</property>
                 <property name="subtitle" translatable="yes">Warning: all desktop searches will be sent to Wikipedia</property>
 
                 <child type="prefix">

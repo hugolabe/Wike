@@ -17,6 +17,7 @@ from wike.data import settings, languages, history, bookmarks
 from wike.prefs import PrefsDialog
 from wike.window import Window
 from wike.view import network_session
+from wike import wikipedia
 
 
 # Main application class for Wike
@@ -30,8 +31,10 @@ class Application(Adw.Application):
 
     self._window = None
     self._launch_uri = ''
+    self._search_query = ''
 
     self.add_main_option('url', b'u', GLib.OptionFlags.NONE, GLib.OptionArg.STRING, 'Open Wikipedia URL', None)
+    self.add_main_option('search', b's', GLib.OptionFlags.NONE, GLib.OptionArg.STRING, 'Search Wikipedia', None)
 
   # Load custom css and set actions
 
@@ -95,6 +98,16 @@ class Application(Adw.Application):
       if self._window:
         self._window.new_page(self._launch_uri, None, True)
 
+
+    if 'search' in options:
+      self._search_query = options['search']
+
+      if self._window:
+        launch_uri = wikipedia.search(self._search_query.lower(), 'en', 1, False)[1][0]
+        self._window.new_page(launch_uri, None, True)
+        self._window.search_panel.search_entry.set_text(self._search_query)
+
+    
     self.activate()
     return 0
 
@@ -102,7 +115,7 @@ class Application(Adw.Application):
 
   def do_activate(self):
     if not self._window:
-      self._window = Window(self, self._launch_uri)
+      self._window = Window(self, self._launch_uri, self._search_query)
       self._window.connect('close-request',self._window_close_cb)
 
     self._window.present()

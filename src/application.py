@@ -33,6 +33,9 @@ class Application(Adw.Application):
 
     self.add_main_option('url', b'u', GLib.OptionFlags.NONE, GLib.OptionArg.STRING, 'Open Wikipedia URL', None)
 
+    data_dir = GLib.get_user_data_dir()
+    GLib.chdir(data_dir)
+
   # Load custom css and set actions
 
   def do_startup(self):

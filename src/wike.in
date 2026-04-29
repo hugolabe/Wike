@@ -25,8 +25,9 @@ gettext.install('wike', localedir)
 
 if __name__ == '__main__':
   import gi
-  from gi.repository import Gio
+  from gi.repository import GLib, Gio
 
+  GLib.set_prgname('com.github.hugolabe.Wike')
   resource = Gio.Resource.load(os.path.join(pkgdatadir, 'wike.gresource'))
   resource._register()
 

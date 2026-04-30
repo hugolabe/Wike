@@ -58,6 +58,17 @@
   </branding>
 
   <releases>
+    <release version="3.2.1" date="2026-04-30">
+      <description translate="no">
+        <ul>
+          <li>Fixed fails to start for Flatpak version.</li>
+          <li>Improved table of contents of articles.</li>
+          <li>Bumped to GNOME 50 runtime.</li>
+          <li>Added translations: Cornish, Estonian, Georgian, Kazahk.</li>
+          <li>Updated translations: Czech, French, Hungarian.</li>
+        </ul>
+      </description>
+    </release>
     <release version="3.2.0" date="2025-12-04">
       <description translate="no">
         <ul>

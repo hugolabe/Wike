@@ -15,6 +15,7 @@ from wike.menu import ArticleMenuPopover, MainMenuPopover, ViewMenuPopover
 from wike.page import PageBox
 from wike.search import SearchPanel
 from wike.toc import TocPanel
+from wike import wikipedia
 
 
 # Main window
@@ -53,7 +54,7 @@ class Window(Adw.ApplicationWindow):
 
   # Initialize window, set actions and connect signals
 
-  def __init__(self, app, launch_uri):
+  def __init__(self, app, launch_uri, search_query):
     super().__init__(application=app)
 
     width = settings.get_int('window-width')
@@ -90,6 +91,8 @@ class Window(Adw.ApplicationWindow):
     history_stack_page = self.panel_stack.add_named(self.history_panel, 'history')
 
     self.page = PageBox(self, None)
+    if search_query != '':
+      launch_uri = wikipedia.search(search_query.lower(), 'en', 1, False)[1][0]
 
     if launch_uri != '':
       tabpage = self.tabview.append(self.page)
@@ -163,6 +166,9 @@ class Window(Adw.ApplicationWindow):
     self._panel_split_show_cb(self.panel_split, None)
     if settings.get_boolean('hide-tabs'):
       self._hide_tabs(True)
+
+    if search_query != '':
+      self.search_panel.search_entry.set_text(search_query)
 
   # Set actions for window
 
